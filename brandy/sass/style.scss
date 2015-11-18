@@ -1,0 +1,596 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300&subset=latin,cyrillic);
+@import "compass/reset";
+@import "compass/css3.scss";
+@import "compass/layout/grid-background";
+@import "compass/utilities/general/clearfix";
+@import "compass/typography";
+@import "variabels";
+
+body,
+input, button, textarea {
+	font-family: $main-font;
+	font-weight: 400;
+	font-size: $main-size;
+}
+b {
+	font-weight: 700;
+}
+.text-center {
+	text-align: center;
+}
+
+*, *:before, *:after {
+   @include box-sizing(border-box);
+}
+section {
+	overflow: hidden;
+}
+/**********прелоадер***********/
+.preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 1000;
+	background: {
+      image: image-url("preloader.gif");
+      repeat: no-repeat;
+      position: center center;
+      color: #fff;
+    };
+}
+/*****header******/
+.header {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	background: rgba(#101636, 0.2);
+	min-height: 70px;
+	z-index: 1000;
+	@include transition(all,0.3s);
+	.head-logo {
+		margin-top: 20px;
+		display: inline-block;
+		@include transition(all,0.3s);
+		a {
+			@include float(left);
+		}
+	}
+
+	.tag {
+		display: inline-block;
+		vertical-align: top;
+		white-space: nowrap;
+		margin: 27px 0 0 15px;
+		font-size: 13px;
+		color: rgba(#fff, 0.3);
+		border-left: 1px #17526e solid;
+		padding: 4px 0 4px 10px;
+		opacity: 0.8;
+		@include transition(all,0.3s);
+	}
+
+	.head-nav {
+		@include float(right);
+
+		li {
+			display: inline-block;
+			a {
+				font-size: $small-size;
+				text-decoration: none;
+				@include link-colors($white, $green);
+				@include transition(all,0.3s);
+				display: block;
+				padding: 27px 17px;
+				border-top: 2px transparent solid;
+				&.active {
+					color: $green;
+					border-top:2px $green solid;
+				}
+			}
+
+		}
+	}
+	.nav-toggler {
+		@include float(right);
+		@include border-radius(4px);
+		width: 30px;
+		height: 30px;
+		border: 1px $white solid;
+		margin-top: 10px;
+		padding-top: 3px;
+		cursor: pointer;
+		display: none;
+		span {
+			display: block;
+			height: 2px;
+			background: $white;
+			margin: 4px 5px;
+		}
+		&:hover {
+			border-color: $green;
+			span {
+				background: $green;
+			}
+		}
+	}
+}
+/***********фикс хедер*************/
+.header.fixed {
+	background: rgba(#101636, 0.8);
+	min-height: 50px;
+	.head-logo {
+		margin-top: 10px;
+	}
+	.tag {
+		margin-top: 15px;
+		color: rgba(#fff, 1);
+	}
+	.head-nav li a {
+		padding: 17px 17px;
+	}
+}
+/***********колапс хедер*************/
+.header.colapsed {
+	background: rgba(#101636, 0.8);
+	min-height: 50px;
+	.nav-toggler {
+		display: block;
+	}
+	.head-logo {
+		margin-top: 10px;
+	}
+	.tag {
+		margin-top: 15px;
+		color: rgba(#fff, 1);
+	}
+	.head-nav {
+		display: none;
+		position: absolute;
+		left: 0px;
+		top: 100%;
+		background: rgba(#101636, 0.8);
+		width: 100%;
+		li {
+			width: 100%;
+			a {
+				padding: 10px 15px;
+				&.active {
+					border-color: transparent;
+					color: $white;
+					background: $green;
+				}
+			}
+		}
+	}
+}
+/**************первая секция***********/
+.v-aligner {
+	display: table;
+	width: 100%;
+	height: 100%;
+	.v-aligner-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+.first-section {
+	background: {
+      image: image-url("bg.png");
+      repeat: no-repeat;
+      position: center center;
+      size:cover;
+    };
+
+	h1 {
+		font-size: 61px;
+		font-weight: 300;
+		color: $white;
+		span {
+			font-size: 38px;
+
+			i {
+				color: $green;
+			}
+		} 
+	}
+
+	.deviz {
+		color: $white;
+		font-size: 18px;
+		margin-top: 30px;
+
+		&::after,&::before {
+			content: "\2014";
+			color: $green;
+		}
+	}
+	.social {
+		margin-top: 50px;
+		a {
+			color: $white;
+			opacity: 0.5;
+			text-decoration: none;
+			font-size: 25px;
+			display: inline-block;
+			margin: 0 10px;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+/********вторая секция**********/
+.paddings {
+	padding: 70px 0;
+}
+.section-head {
+	margin-bottom: 50px;
+	h2 {
+		color: $green;
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 28px;
+	}
+	.hearth {
+		margin-top: 30px;
+		color: #cccccc;
+		&:after,&:before {
+			display: inline-block;
+			content: "";
+			width: 90px;
+			border-top: 1px #ccc solid;
+			vertical-align: super;
+		}
+		i {
+			margin: 0 10px;
+		}
+	}
+	p {
+		font-size: 18px;
+		opacity: 0.8;
+		margin-top: 30px;
+		line-height: 24px;
+		font-weight: 600;
+	}
+}
+.features {
+	background: #f4f7f9;
+}
+.our-features {
+	.fa {
+		@include ring-ico($green,$green);
+		@include float(left);
+	}
+}
+.features-info {
+	margin-left: 55px;
+
+	h4 {
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: 20px;
+		margin-top: 5px;
+	}
+
+	p {
+		color: rgba($second-color, 0.7);
+		font-size: $small-size;
+		line-height: 25px;
+	}
+}
+/***********works*************/
+.filter-btn {
+	margin: 0px 0 40px;
+	.filter {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 400;
+		padding: 7px 12px;
+		margin: 0 10px;
+		@include border-radius(5px);
+		cursor: pointer;
+
+		&.active {
+			color: $white;
+			background: $green
+		}
+	}
+}
+.works-blocks {
+	.mix {
+		padding: 0px;
+		position: relative;
+		font-size: 0px;
+		display: none;
+		img {
+			width: 100%;
+			min-height: 100%;
+		}
+		&:hover {
+			figcaption {
+				@include hideoverley (1,0,1);
+			}
+		}
+	}
+	figcaption {
+		font-size: $main-size;
+		color: $white;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		background: rgba($green,0.8);
+		padding-top: 25%;
+		@include hideoverley (0.5,180, 0);
+		@include transition(all,0.45s);
+		.fa {
+			@include ring-ico($white,$white);
+		}
+		h5 {
+			font-size: 18px;
+			font-weight: 700;
+			margin: 20px 0;
+		}
+	}
+}
+/************team************/
+.out-team {
+	figure {
+		position: relative;
+		font-size: 0px;
+		max-width: 270px;
+		margin: 0 auto;
+		img {
+			width: 100%;
+		}
+		&:hover {
+			figcaption {
+				@include hideoverley (1,0,1);
+			}
+		}
+		figcaption {
+			font-size: $main-size;
+			color: $white;
+			line-height: 24px; 
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			background: rgba($green,0.8);
+			padding: 20px;
+			@include hideoverley (0.5,180, 0);
+			@include transition(all,0.45s);
+			h6 {
+				font-weight: 600;
+				margin-bottom: 15px;
+			}
+			.team-soc {
+				position: absolute;
+				left: 0px;
+				bottom: 20px;
+				width: 100%;
+				a {
+					display: inline-block;
+					width: 42px;
+					height: 42px;
+					font-size: 25px;
+					text-align: center;
+					line-height: 39px;
+					color: $white;
+					margin: 0 5px;
+					background: #0a7e67;
+					&:hover {
+						color: #0a7e67;
+						background: $white;
+					}
+				}
+			}
+		}
+	}
+	.member-info {
+		margin-top: 20px;
+		a {
+			font-size: 18px;
+			font-weight: 600;
+			text-decoration: none;
+			display: block;
+			@include link-colors($black, $green);
+			margin-bottom: 7px
+		}
+		span {
+			font-size: $small-size;
+			color: rgba($black,0.53);
+		}
+	}
+}
+/***********facts*********/
+.facts {
+	background: {
+      image: image-url("city.jpg");
+      repeat: no-repeat;
+      position: center center;
+      size:cover;
+      attachment: fixed;
+    };
+    .facts-overlay {
+    	background: rgba(#062033,0.8);
+    }
+}
+.fact-item {
+	color: $white;
+	margin: 20px 0;
+	.fa {
+		display: block;
+		width: 130px;
+		height: 130px;
+		margin: auto;
+		@include border-radius(50%);
+		border:1px rgba($white, 0.5) solid;
+		line-height: 130px;
+		font-size: 40px;
+	}
+	b {
+		font-size: 60px;
+		display: block;
+		margin:35px 0 10px;
+	}
+}
+/*********feedback***********/
+.text-field {
+	input,textarea {
+		width: 100%;
+		font-size: 13px;
+		line-height: 16px;
+		border: none;
+		height: 60px;
+		border-bottom: 1px #cccccc solid;
+	}
+	textarea {
+		max-width: 100%;
+		min-width: 100%;
+		padding: 20px 0;
+		height: 60px;
+		margin-top: 20px;
+	}
+}
+.address-info {
+	h5 {
+		font-size: 22px;
+		line-height: 32px;
+		margin-bottom: 25px;
+	}
+	p {
+		font-size: $small-size;
+		color: rgba($black, 0.6);
+		line-height: 24px;
+	}
+}
+.feedback-form {
+	h3 {
+		font-size: 24px;
+		line-height: 32px;
+	}
+}
+
+.sed-msg {
+	background: none;
+	border: none;
+	@include float(right);
+	margin-top: 15px;
+	cursor: pointer;
+	&:hover {
+		color: $green;
+	}
+	.fa {
+		color: $green;
+		font-size: 18px;
+		margin-right: 7px;
+	}
+}
+.feedback-social {
+	a {
+		display: block;
+		text-decoration: none;
+		font-size: 22px;
+		margin: 15px 0;
+		@include link-colors(rgba($black,0.3), $green);
+	}
+}
+/*********map*********/
+.map {
+	font-size: 0px;
+}
+/******footer*********/
+.main-footer {
+	border-top: 5px #000 solid;
+	background: $green;
+	color: #fff;
+	font-size: $small-size;
+
+	p {
+		line-height: 24px;
+	}
+	h5 {
+		font-weight: 700;
+		font-size: $main-size;
+		line-height: 27px;
+		margin-bottom: 40px;
+		padding-top: 8px;
+	}
+
+	.footer-logo a {
+		margin-bottom: 38px;
+		display: inline-block;
+	}
+
+	.subscribe-field {
+		height: 45px;
+		border: 2px rgba($white, 0.6) solid;
+		@include border-radius(2px);
+		position: relative;
+		margin-bottom: 22px;
+
+		input {
+			background: no-repeat;
+			width: 100%;
+			height: 100%;
+			border:none;
+			font-size: 20px;
+			color: $white;
+			padding: 0 40px 0 10px;
+		}
+		button {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			color: #fff;
+			height: 100%;
+			background: none;
+			border: none;
+			font-size: 20px;
+			cursor: pointer;
+			padding-right: 5px;
+		}
+	}
+	.footer-nav li {
+		@include float(left);
+		width: 50%;
+		margin-bottom: 20px;
+		a {
+			text-decoration: none;
+			@include link-colors($white, $black);
+		}
+	}
+	.created-by {
+		margin-top: 70px;
+		a {
+			text-decoration: none;
+			@include link-colors($black,$white);
+		}
+		i {
+			color: rgba($black,0.4);
+			font-size: 16px;
+			margin: 0 6px;
+		}
+		.copy {
+			color: $black;
+			margin-top: 45px;
+		}
+	}
+}
+
+
+@import "response";
+
+
+
+
+
+
+

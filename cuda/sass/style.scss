@@ -1,0 +1,459 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/typography";
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700);
+
+/******* vars ********/
+
+$violet:#87509c;
+$green:#17c2a4;
+$grey:#e7f1f8;
+$yellow:#ffdd99;
+$white:#fff;
+$dark:#3c4761;
+$pink:#d74680;
+$blue:#3c5499;
+
+/**** btns ****/
+$orange: #eb7d4b;
+$bluebtn:#30bae7;
+
+
+/********mixins *****/
+@mixin trs($prop) {
+	transition: $prop;
+	-webkit-transition: $prop;
+}
+@mixin trf($prop) {
+	-webkit-transform: $prop;
+	-moz-transform: $prop;
+	-ms-transform: $prop;
+	-o-transform: $prop;
+	transform: $prop;
+}
+
+* {
+	@include box-sizing(border-box);
+}
+
+html {
+	overflow-x:hidden
+}
+body, input, textarea, button {
+	color: $white;
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: normal;
+	a {
+		color: $white;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+.section {
+	padding: 100px 0px;
+}
+
+.btn {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1.2px;
+	color: $white;
+	cursor: pointer;
+	width: 100%;
+	padding: 20px 0 16px;
+	max-width: 295px;
+	border: none;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	@include border-radius (3px);
+	@include trs(all 0.1s);
+	&:hover {
+		@include trf(translate(3px, 3px));
+	}  
+	&.orange {
+		background: $orange;
+		border-bottom-color: darken($orange, 30%)
+	}
+	&.green {
+		background: $green;
+		border-bottom-color: darken($green, 10%)
+	}
+	&.blue {
+		background: $bluebtn;
+		border-bottom-color: darken($bluebtn, 10%)
+	}
+}
+.section-head {
+	margin-bottom: 70px;
+	h2 {
+		font-size: 40px;
+		font-weight: 700;
+	}
+	.divider {
+		width: 90px;
+		margin: 15px auto 20px;
+		border: none;
+		height: 5px;
+		background: rgba(#000,0.2);
+	}
+	p {
+		font-size: 18px;
+	}
+}
+/****** header *****/
+.main-head {
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	background: #ccc;
+	padding: 37px 0 5px;
+	background: $violet;
+	@include trs(all 0.2s);
+	.logo {
+		@include float (left); 
+	}
+	.main-nav {
+		margin-top: 5px;
+		@include float (right); 
+		li {
+			display: inline-block;
+			a {
+				text-decoration: none;
+				@include link-colors($white);
+				display: block;
+				padding: 3px 10px;
+				@include border-radius (4px);
+				&:hover, &.current {
+					background: darken( $violet, 10% )
+				}
+			}
+		}
+	}
+	.nav-toggle {
+		width: 37px;
+		height: 37px;
+		padding-top: 5px;
+		margin-top: 2px;
+		@include float (right);
+		border: 1px $white solid;
+		@include border-radius (4px);
+		cursor: pointer;
+		display: none;
+		span {
+			height: 3px;
+			display: block;
+			margin: 4px 7px 0;
+			background: $white;
+		}
+	}
+	&.fixed {
+		padding-top: 7px;
+	}
+	&.colapsed {
+		padding-top: 7px;
+		.nav-toggle{
+			display: block;
+		}
+		.main-nav {
+			display: none;
+			background: $violet;
+			position: absolute;
+			top: 100%;
+			left: 0px;
+			right: 0px;
+			width: 100%;
+			margin-top: 0px;
+			padding:0px 15px;
+			li {
+				display: block;
+				margin: 10px 0;
+			}
+		}
+	}
+}
+/******intro*****/
+.intro {
+	background: $violet;
+	padding: 230px 0 160px;
+	h3 {
+		font-size: 42px;
+		font-weight: 600;
+		line-height: 50px;
+		margin-bottom: 50px;
+	}
+}
+/******service********/
+.service {
+	background: $green;
+}
+.provide-item {
+	margin: 0 auto;
+	max-width: 200px;
+	img {
+		margin-bottom: 50px;
+		max-height: 124px;
+	}
+	h4 {
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+	p {
+		font-size: 16px;
+	}
+}
+/*********team********/
+.team {
+	color: $dark;
+	background: $grey;
+}
+.team-item {
+	max-width: 200px;
+	margin: 0 auto;
+	.rounder {
+		overflow: hidden;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		margin-bottom: 30px;
+	}
+	h4 {
+		font-size: 24px;
+		font-weight: 700;
+	}
+	span {
+		color: #30bae7;
+	}
+	p {
+		margin: 20px 0;
+	}
+}
+.social {
+	a {
+		display: inline-block;
+		margin: 0 2px;
+		width: 32px;
+		height: 32px;
+		background: #bdd1df;
+		@include border-radius (50%);
+		img {
+			width: 15px;
+			vertical-align: middle;
+		}
+		&:hover {
+			background: $green;
+		}
+	}	
+}
+/***********skils**************/
+.skills {
+	color: $dark;
+}
+.skill-item {
+	h4 {
+		font-size: 24px;
+	    font-weight: 700;
+	}
+}
+.progress {
+	position: relative;
+	margin-bottom: 30px;
+	.percents {
+		position: absolute;
+		top: 40px;
+		width: 100%;
+		text-align: center;
+		font-size: 32px;
+		font-weight: 300;
+		span {
+			font-size: 50px;
+		}
+	}
+}
+/************portfolio**********/
+.portfolio {
+	color: $dark;
+	background: $yellow;
+}
+#MixContainer {
+	.mix {
+		display: none;
+		margin-bottom: 60px;
+		a {
+			color: $dark;
+			display: block;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:hover img {
+				@include trf (scale(0.9))
+			}
+		}
+		img {
+			width: 100%;
+			max-width: 90%;
+			margin-bottom: 15px;
+			@include trs (all 0.2s)
+		}
+		figcaption {
+			font-size: 18px;
+		}
+	}
+} 
+.filters {
+	margin-bottom: 70px;
+	li {
+		font-size: 18px;
+		display: inline-block;
+		padding: 3px 15px;
+		margin: 0 5px 10px;
+		text-transform: uppercase;
+		background: rgba(#000,0.3);
+		@include border-radius (3px);
+		cursor: pointer;
+		&.active {
+			background: rgba(#fff,0.8);
+		}
+	}
+}
+/******feedback***********/
+.about-us {
+	background: $pink;
+}
+.feedback-item {
+	margin: 70px 0;
+	.avatar {
+		width: 100px;
+		height: 100px;
+		overflow: hidden;
+		@include border-radius (50%);
+		@include float(left);
+		img {
+			width: 100%;
+		}
+
+	}
+	.feedaback {
+		text-align: left;
+		margin-left: 150px;
+		q {
+			font-size: 21px;
+			font-style: italic;
+			margin-bottom: 20px;
+			display: inline-block;
+			max-width: 330px;
+			quotes: "\201c" "\201d";
+			content: inherit;
+			&::before {
+				content: open-quote;
+			}
+			&::after {
+				content: close-quote;
+			}
+		}
+		h4 {
+			font-size: 24px;
+		}
+		span {
+			font-size: 18px;
+			color: #ffdd99;
+		}
+	}
+}
+/********form*************/
+.touch {
+	background: $blue;
+}
+form {
+	.btn {
+		margin-top: 70px;
+	}
+}
+.field {
+	background: darken($blue, 10%);
+	@include border-radius(5px);
+	position: relative;
+	margin-bottom: 35px;
+	font-size: 0px;
+	label {
+		@include trs(all 0.3s);
+		font-size: 18px;
+		position: absolute;
+		left: 20px;
+		top: 15px;
+		z-index: 1;
+		&.active {
+			top: -30px;
+			font-size: 16px;
+		}
+		span {
+			color: $pink;
+		}
+	}
+	input, textarea {
+		position: relative;
+		z-index: 2;
+		border: none;
+		width: 100%;
+		min-height: 57px;
+		background: transparent;
+		color: $white;
+		font-size: 18px;
+		padding: 0 20px;
+	}
+	textarea {
+		height: 200px;
+		padding-top: 14px;
+		resize:vertical;
+	}
+	
+}
+/****footer********/
+.main-footer {
+	background: darken($blue, 5%);
+	border-top: 2px darken($blue, 50%);
+}
+.footer-links {
+	padding: 30px 0;
+	li {
+		display: inline-block;
+		a {
+			text-decoration: none;
+			font-size: 24px;
+			padding:0px 30px;
+			@include link-colors($white, $bluebtn);
+		}
+	}
+}
+/******move top*********/
+#MoveTop {
+	position: fixed;
+	color: $dark;
+	right: 40px;
+	bottom: 40px;
+	padding: 5px 10px;
+	background: lighten($green,20%);
+	text-align: center;
+	font-size: 14px;
+	line-height: 17px;
+	cursor: pointer;
+	@include border-radius (15px);
+	@include trf (scale(0.5));
+	@include trs (all 0.3s);
+	opacity:0;
+	visibility: hidden;
+	&.active {
+		@include trf (scale(1));
+		opacity:1;
+		visibility: visible;
+	}
+}
+@import "response";

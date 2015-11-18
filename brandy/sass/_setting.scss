@@ -1,0 +1,35 @@
+// import gridle
+@import "gridle/gridle";
+
+// setting up the grid
+@include gridle_setup( (
+	context : 12,
+	gutter-width : 30px,
+) );
+
+$gridle-grid-name-pattern : ('col','%-','%state','%-','%count');
+$gridle-parent-name-pattern : ('row','%-','%state');
+$gridle-prefix-name-pattern : ('col','%-','%state','%-','offset','%-','%count');
+$gridle-push-name-pattern : ('col','%-','%state','%-','push','%-','%count');
+$gridle-pull-name-pattern : ('col','%-','%state','%-','pull','%-','%count');
+$gridle-show-name-pattern : ('visible','%-','%state');
+$gridle-hide-name-pattern : ('hidden','%-','%state');
+
+[class*="col-"] {
+	width:100%; // 100% by default
+}
+
+@include gridle_register_state( xs, (
+    max-width : 768px
+) );
+@include gridle_register_state( sm , (
+    min-width : 768px
+) );
+@include gridle_register_state( md, (
+    min-width : 992px
+) );
+@include gridle_register_state( lg, (
+    min-width : 1200px
+) );
+
+

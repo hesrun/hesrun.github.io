@@ -1,0 +1,45 @@
+$main-font: 'Open Sans', sans-serif;
+$main-size: 16px;
+$small-size: 13px;
+$main-height : 20px;
+$black: #000;
+$white: #fff;
+$second-color: #062033;
+$green: #0eb493;
+
+
+@mixin float($dir) {
+    float: $dir;
+}
+@mixin ring-ico($ring-color,$icon-color) {
+    width: 40px;
+	height: 40px;
+	@include border-radius(50%);
+	border: 1px $ring-color solid;
+	color: $icon-color;
+	font-size: 20px;
+	text-align: center;
+	line-height: 38px;
+}
+@mixin transition($trs-prop,$trs-time) {
+	-webkit-transition: $trs-prop $trs-time ease-out 0s;
+	-o-transition: $trs-prop $trs-time ease-out 0s;
+	transition: $trs-prop $trs-time ease-out 0s;
+}
+@mixin hideoverley ($scale, $degre, $opacity) {
+	-webkit-transform: scale($scale) rotateY(#{$degre}deg);
+	-moz-transform: scale($scale) rotateY(#{$degre}deg);
+	-ms-transform: scale($scale) rotateY(#{$degre}deg);
+	-o-transform: scale($scale) rotateY(#{$degre}deg);
+	transform: scale($scale) rotateY(#{$degre}deg);
+	opacity: ($opacity);
+}
+@mixin showoverley ($scale, $degre, $opacity) {
+	-webkit-transform: scale($scale) rotateY(#{$degre}deg);
+	-moz-transform: scale($scale) rotateY(#{$degre}deg);
+	-ms-transform: scale($scale) rotateY(#{$degre}deg);
+	-o-transform: scale($scale) rotateY(#{$degre}deg);
+	transform: scale($scale) rotateY(#{$degre}deg);
+	opacity: ($opacity);
+}
+
