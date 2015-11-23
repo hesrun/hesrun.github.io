@@ -1,0 +1,560 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: 'social';
+  src: url("../font/social.eot?48240022");
+  src: url("../font/social.eot?48240022#iefix") format("embedded-opentype"), url("../font/social.woff?48240022") format("woff"), url("../font/social.ttf?48240022") format("truetype"), url("../font/social.svg?48240022#social") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'social';
+    src: url('../font/social.svg?48240022#social') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "social";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-twitter-bird:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-vimeo:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-facebook:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-pinterest:before {
+  content: '\e804';
+}
+
+/* '' */
+body {
+  font-family: 'PT Sans', sans-serif;
+  background: #ea714f;
+  font-size: 14px;
+  color: #444;
+  line-height: normal;
+  padding: 20px 0 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input, textarea {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.box {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 10px -3px rgba(0, 0, 0, 0.3);
+}
+
+b {
+  font-weight: 700;
+}
+
+.img-response {
+  width: 100%;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+}
+
+/********header*********/
+.main-head .logo {
+  float: left;
+  line-height: 0px;
+}
+.main-head .menue-btn {
+  position: relative;
+  height: 20px;
+  width: 30px;
+  float: right;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.main-head .menue-btn.close .line-2 {
+  opacity: 0;
+}
+.main-head .menue-btn.close .line-1 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 9px;
+}
+.main-head .menue-btn.close .line-3 {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+.main-head .menue-btn span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ea714f;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.main-head .menue-btn .line-1 {
+  top: 0px;
+}
+.main-head .menue-btn .line-2 {
+  top: 50%;
+  margin-top: -1px;
+}
+.main-head .menue-btn .line-3 {
+  bottom: 0px;
+}
+.main-head .nav-wrap {
+  clear: left;
+  padding-top: 20px;
+  display: none;
+}
+.main-head .nav-wrap a {
+  color: #444;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
+  padding: 8px 0px 8px 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.main-head .nav-wrap a:hover, .main-head .nav-wrap a.active {
+  background: #ea714f;
+  color: #fff;
+}
+.main-head .nav-wrap .search {
+  margin-top: 20px;
+}
+.main-head .nav-wrap .search img {
+  float: left;
+  margin-top: 12px;
+}
+.main-head .nav-wrap .search .input {
+  height: 40px;
+  border-left: 1px #b6b6b6 solid;
+  margin-left: 26px;
+}
+.main-head .nav-wrap .search .input input {
+  height: 100%;
+  border: none;
+  padding: 0 10px;
+  width: 100%;
+}
+
+/********banner*********/
+.banner-bg {
+  background-image: url(../img/banner.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: auto 100%;
+}
+
+.banner .prod-logo {
+  margin-bottom: 40px;
+}
+.banner h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.banner p {
+  line-height: 28px;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+/***********product*******/
+.product {
+  padding: 0px;
+}
+.product .product-descr {
+  padding: 20px;
+}
+.product .product-descr .name {
+  font-size: 21px;
+}
+.product .product-descr .series {
+  font-size: 12px;
+}
+.product .product-descr .size {
+  font-size: 12px;
+  margin-top: 4px;
+}
+.product .nav {
+  margin-top: 15px;
+}
+.product .nav .price {
+  font-size: 28px;
+  line-height: 30px;
+}
+.product .nav .btn {
+  float: right;
+}
+
+/**********graph*******/
+.sales-graph {
+  padding: 0px;
+}
+.sales-graph .chart {
+  background: #fec158;
+}
+.sales-graph .scores {
+  padding: 20px 0;
+}
+.sales-graph .scores li {
+  float: left;
+  width: 33.3333%;
+  text-align: center;
+  border-right: 1px #fec157 solid;
+  font-size: 12px;
+}
+.sales-graph .scores li:last-child {
+  border-right: none;
+}
+.sales-graph .scores li b {
+  font-size: 30px;
+}
+
+/*********bag************/
+.shop-bag > b {
+  font-size: 21px;
+}
+.shop-bag .bag-table-wrap {
+  overflow: auto;
+  margin: 11px 0;
+}
+.shop-bag .bag-table {
+  min-width: 400px;
+  width: 100%;
+}
+.shop-bag .bag-table tr:last-child td {
+  border-bottom: none;
+}
+.shop-bag .bag-table tr td:first-child {
+  line-height: 0px;
+}
+.shop-bag .bag-table td {
+  border-bottom: 1px #ccc solid;
+  padding: 10px 0;
+  vertical-align: middle;
+}
+.shop-bag .bag-table td h2 {
+  font-size: 16px;
+  padding: 0 10px;
+}
+.shop-bag .bag-table td input {
+  width: 30px;
+  height: 30px;
+  border: 1px #ccc solid;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+.shop-bag .bag-table td .price {
+  font-size: 21px;
+  padding-left: 20px;
+  display: block;
+  text-align: right;
+}
+.shop-bag .bag-table td img {
+  min-width: 70px;
+}
+.shop-bag .nav b {
+  font-size: 28px;
+  line-height: 30px;
+}
+.shop-bag .nav .btn {
+  float: right;
+}
+
+/*********adress*********/
+.adress .map {
+  margin: -20px -20px 19px -20px;
+}
+.adress adress span {
+  font-size: 12px;
+}
+.adress adress b {
+  font-size: 21px;
+}
+
+/********footer*********/
+.main-footer {
+  text-align: center;
+}
+.main-footer .social {
+  margin-top: 8px;
+}
+.main-footer .social li {
+  display: inline-block;
+}
+.main-footer .social a {
+  color: #ccc;
+  display: block;
+  font-size: 20px;
+}
+.main-footer .social a:hover {
+  color: #ea714f;
+}
+
+/***********ui********/
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 6px 15px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  border-width: 1px;
+  border-style: solid;
+}
+.btn.big {
+  font-size: 14px;
+  padding: 9px 20px;
+}
+.btn.blue {
+  border: 1px #65a0b8 solid;
+  background: linear-gradient(to bottom, #cee1e8 0%, #99c0d0 1px, #65a0b8 100%);
+}
+.btn.blue:hover {
+  background: linear-gradient(to top, #cee1e8 0%, #99c0d0 1px, #65a0b8 100%);
+}
+.btn.green {
+  border: 1px #4ca15b solid;
+  background: linear-gradient(to bottom, #add9b5 0%, #7ac086 1px, #4ca15b 100%);
+}
+.btn.green:hover {
+  background: linear-gradient(to top, #add9b5 0%, #7ac086 1px, #4ca15b 100%);
+}
+.btn.yellow {
+  border: 1px #ef8a00 solid;
+  background: linear-gradient(to bottom, #ffcd89 0%, #ffad3d 1px, #ef8a00 100%);
+}
+.btn.yellow:hover {
+  background: linear-gradient(to top, #ffcd89 0%, #ffad3d 1px, #ef8a00 100%);
+}
+
+.sub-btn {
+  font-size: 10px;
+  color: #65a0b8;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .main-footer {
+    text-align: left;
+  }
+  .main-footer .logo {
+    float: left;
+  }
+  .main-footer .social {
+    float: right;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    padding-top: 40px;
+  }
+
+  .box {
+    margin-bottom: 40px;
+  }
+
+  .main-head .menue-btn {
+    display: none;
+  }
+  .main-head .nav-wrap {
+    clear: none;
+    margin-left: 282px;
+    padding-top: 0px;
+    display: block;
+  }
+  .main-head .nav-wrap a {
+    color: #444;
+    font-size: 14px;
+    display: block;
+    padding: 10px 15px 11px 15px;
+    position: relative;
+  }
+  .main-head .nav-wrap a:before, .main-head .nav-wrap a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    left: 10px;
+    right: 10px;
+    background: #ea714f;
+    opacity: 0;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .main-head .nav-wrap a:before {
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 5px;
+  }
+  .main-head .nav-wrap a:after {
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+    bottom: 5px;
+  }
+  .main-head .nav-wrap a:hover, .main-head .nav-wrap a.active {
+    background: transparent;
+    color: #ea714f;
+  }
+  .main-head .nav-wrap a:hover:before {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .main-head .nav-wrap a:hover:after {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .main-head .nav-wrap nav {
+    float: left;
+  }
+  .main-head .nav-wrap li {
+    display: inline-block;
+  }
+  .main-head .nav-wrap .search {
+    float: right;
+    margin: 0px;
+  }
+}

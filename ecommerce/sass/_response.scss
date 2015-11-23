@@ -1,0 +1,84 @@
+@media (min-width: 768px) {
+	.main-footer {
+		text-align: left;
+		.logo {
+			float: left;
+		}
+		.social {
+			float: right;
+		}
+	}
+}
+@media (min-width: 992px) {
+	body {
+		padding-top: 40px;
+	}
+	.box {
+		margin-bottom: 40px;
+	}
+	.main-head {
+		.menue-btn {
+			display: none;
+		}
+		.nav-wrap {
+			clear: none;
+			margin-left: 282px;
+			padding-top: 0px;
+			display: block;
+			a {
+				color: $main;
+				font-size: 14px;
+				display: block;
+				padding: 10px 15px 11px 15px;
+				position: relative;
+				&:before, &:after  {
+					content: "";
+					position: absolute;
+					display: block;
+					height: 1px;
+					left: 10px;
+					right: 10px;
+					background: #ea714f;
+					opacity: 0;
+					@include transition(all 0.4s);
+				}
+				&:before {
+					@include transform(translateX(-50%));
+					top: 5px;
+				}
+				&:after {
+					@include transform(translateX(50%));
+					bottom: 5px;
+				}
+				&:hover,&.active {
+					background: transparent;
+					color: $orange;
+				}
+				&:hover {
+					&:before {
+						@include transform(translateX(0));
+						opacity: 1;
+					}
+					&:after {
+						@include transform(translateX(0));
+						opacity: 1;
+					}
+				}
+			}
+			nav {
+				float: left;
+			}
+			li {
+				display: inline-block;
+			}
+			.search {
+				float: right;
+				margin: 0px;
+			}
+		}
+	}
+
+}
+@media (min-width: 1200px) {
+
+}
