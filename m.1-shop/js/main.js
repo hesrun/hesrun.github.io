@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
 	$('.menue-btn').click(function(){
+		$('.burger-btn').toggleClass('close');
 		var menue = $('.main-nav');
 		if (menue.is(":hidden")) {
 			$('.menue-btn > span').text('скрыть меню');

@@ -26,13 +26,31 @@ i {
 	color: $green;
 	border-color: $green;
 }
-
+@font-face {
+    font-family: "lightRub";
+    src: url('rub/RUBL.eot');
+    src: url('rub/RUBL.eot?#iefix') format('embedded-opentype'),
+    url('rub/RUBL.svg') format('svg'),
+    url('rub/RUBL.woff') format('woff'),
+    url('rub/RUBL.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.rub {
+	font-family: 'lightRub';
+	font-style: normal;
+	line-height: 1px;
+}
+html {
+	height: 100%;
+}
 body {
 	font-family: Helvetica Neue, Helvetica, 'PT Sans', sans-serif;
 	font-size: 20px;
 	line-height: 30px;
 	font-weight: 400;
 	color: $black;
+	height: 100%;
 }
 .overflow {
 	overflow: hidden;
@@ -77,6 +95,8 @@ select {
 
 /****header*****/
 .main-header {
+	position: absolute;
+	width: 100%;
 }
 .main-nav {
 	position: fixed;
@@ -163,6 +183,35 @@ select {
 				height: 4px;
 				margin: 10px 0;
 				background: #fff;
+				position: relative;
+				&:nth-child(2) {
+					@include transition(all 1s);
+					opacity: 1;
+				}
+				&:nth-child(1) {
+					@include transition(all 0.5s);
+				}
+				&:nth-child(3) {
+					@include transition(all 0.5s);
+				}
+			}
+			&.close {
+				span:nth-child(2) {
+					opacity: 0;
+					@include transition(all 0.1s);
+				}
+				span:nth-child(1) {
+					@include transform(rotate(45deg));
+					top: 14px;
+					background: #0099f1;
+					@include transition(all 0.5s);
+				}
+				span:nth-child(3) {
+					@include transform(rotate(-45deg));
+					bottom: 14px;
+					background: #0099f1;
+					@include transition(all 0.5s);
+				}
 			}
 		}
 	}
@@ -177,6 +226,7 @@ select {
 	.currency {
 		padding: 0px 0px 0px 30px;
 		position: relative;
+		overflow: hidden;
 		&:after {
 			content: "";
 			position: absolute;
@@ -386,10 +436,15 @@ select {
 }
 /********основной******/
 .main {
-	padding-top: 30px;
+	padding-top: 210px;
 	padding-bottom: 60px;
+	min-height: 100%;
 	& > h1 {
 		margin-bottom: 30px;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 }
 h1,h2,h3,h4 {
@@ -574,10 +629,10 @@ h4 {
 		vertical-align: middle;
 		padding-left: 30px;
 		.brand {
-			font-size: 30px;
+			font-size: 34px;
 			color: $black;
 			display: block;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 			font-weight: 700;
 		}
 		a {
@@ -586,7 +641,7 @@ h4 {
 			border: 2px $blue solid;
 			font-size: 25px;
 			text-align: center;
-			margin-top: 10px;
+			margin-top: 15px;
 			padding: 10px 0;
 		}
 	}
@@ -657,6 +712,10 @@ h3.reference {
 		font-weight: 700;
 		color: $black;
 	}
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 }
 .prod-status {
 	color: #f26522;
@@ -674,6 +733,7 @@ h3.reference {
 	.photo {
 		line-height: 0px;
 		margin-bottom: 10px;
+		border: 1px solid #ccc;
 	}
 	ul a {
 		display: block;
@@ -794,6 +854,9 @@ h3.reference {
 }
 .video-container {
 	margin-bottom: 30px;
+	iframe {
+		width: 100%;
+	}
 }
 /*************окна************/
 .modal-show {
@@ -828,7 +891,6 @@ h3.reference {
 		margin: 0 -20px 20px;
 	}
 	& > p {
-		text-align: center;
 		margin-bottom: 30px;
 	}
 }
@@ -847,8 +909,8 @@ h3.reference {
 		font-size: 30px;
 		margin-bottom: 10px;
 	}
-	.row .btn {
-		width: 100%;
+	.nav {
+		margin: 0 -20px;
 	}
 }
 
@@ -870,30 +932,22 @@ textarea {
 	resize: vertical;	
 }
 .btn {
-	display: inline-block;
-	vertical-align: top;
-	height: 65px;
-	padding: 0 20px;
-	border: none;
-	background: none;
-	text-decoration: none;
-	font-size: 30px;
-	font-weight: 700;
-	cursor: pointer;
+	border: medium none;
+    color: #fff;
+    float: left;
+    font-size: 30px;
+    font-weight: 600;
+    height: 100px;
+    line-height: 30px;
+    width: 50%;
 	&.btn-blue {
-		background: $blue;
-		color: #fff;
+		background: #0099f1;
 		&:hover, &:active {
-			color: darken(#fff,10%);
-			background: darken($blue, 10%);
 		}
 	}
 	&.btn-grey {
-		background: #e7e7e7;
-		color: #999999;
+		background: #363636;
 		&:hover, &:active {
-			color: darken(#999999,10%);
-			background: darken(#e7e7e7, 10%);
 		}
 	}
 }
@@ -941,6 +995,34 @@ textarea {
 		img {
 			vertical-align: middle;
 		}
+	}
+}
+/*************vlad style************/
+.filter-header {
+    font-weight: 700;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 40px;
+}
+
+.tech-params .filter-header, .tech-params + .filter-header, article + .filter-header, h3 + .filter-header {
+    padding-bottom: 30px;
+    border-bottom: none;
+}
+.search-result {
+    display: none;
+}
+.digest-article img {
+    max-width: 100%;
+}
+.empty {
+	text-align: center;
+	padding: 50px 0;
+	p {
+		font-size: 25px;
 	}
 }
 /******сетка******/
