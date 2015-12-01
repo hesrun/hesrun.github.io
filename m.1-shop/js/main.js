@@ -3,11 +3,6 @@ $(document).ready(function () {
 	$('.menue-btn').click(function(){
 		$('.burger-btn').toggleClass('close');
 		var menue = $('.main-nav');
-		if (menue.is(":hidden")) {
-			$('.menue-btn > span').text('скрыть меню');
-		} else {
-			$('.menue-btn > span').text('Меню');
-		}
 		menue.slideToggle(200);
 		$('body').toggleClass('overflow');
 	})
