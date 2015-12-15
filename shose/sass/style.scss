@@ -7,12 +7,17 @@
 * {
 	@include box-sizing(border-box);
 }
+html {
+	height: 100%;
+}
 body {
 	font-size: $mainFont;
 	line-height: normal;
 	color: $mainColor;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
+	background: $green;
+	min-height: 100%
 }
 .cf {
 	@include clearfix();
@@ -34,6 +39,12 @@ input, textarea {
 .container {
 	position: relative;
 }
+i {
+	font-style: italic;
+}
+.justify {
+	text-align: justify;
+}
 h1 {font-size: 40px};
 h2 {font-size: 35px};
 h3 {font-size: 30px};
@@ -53,7 +64,7 @@ h5 {font-size: 20px};
 		font-size: 12px;
 		border-right: 1px rgba(#fff, 0.2) solid;
 		border-left: 1px rgba(#fff, 0.2) solid;
-		padding: 12px 20px;
+		padding: 12px 10px;
 		a {
 			text-transform: uppercase;
 			font-size: 11px;
@@ -63,22 +74,12 @@ h5 {font-size: 20px};
 				text-decoration: underline;
 			} 
 		}
-	}
-	.search {
-		float: right;
-		padding-right: 20px;
-		button {
-			background: none;
-			border: none;
-			color: $grey;
-			font-size: 15px;
-			margin-top: 8px;
-			cursor: pointer;
-			&:hover {
-				color: $green;
-			}
+		i {
+			font-size: 16px;
+			margin: 0 5px;
 		}
 	}
+	
 }
 /*********subnav********/
 .sub-nav {
@@ -161,14 +162,29 @@ h5 {font-size: 20px};
 			}
 		}
 	}
+	.search {
+		float: right;
+		padding-right: 16px;
+		margin-top: 8px;
+		button {
+			background: none;
+			border: none;
+			color: $grey;
+			font-size: 15px;
+			cursor: pointer;
+			&:hover {
+				color: $green;
+			}
+		}
+	}
 }
 /*********banner*****/
-.slide {
-	background-position: center center ;
+.banner-slider .slide {
+	background-position: 20% center ;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.slide-1 {
+.banner-slider .slide-1 {
 	background-image: url(../img/banner.png);
 }
 .banner-text {
@@ -261,10 +277,10 @@ h5 {font-size: 20px};
 /*********special********/
 .specials {
 	background: $dark;
-	padding: 25px 0 0;
+	padding: 20px 0 0;
 	figure {
 		position: relative;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 		&:hover {
 			figcaption {
 				@include transform (translate(-50%,-50%) rotateX(0deg));
@@ -285,6 +301,373 @@ h5 {font-size: 20px};
 		@include transition (all 0.3s);
 	}
 }
+/*********catalog********/
+.catalog {
+	padding: 30px 0;
+	background: #ebe7df;
+	hr {
+		height: 0px;
+		border: none;
+		border-top: 1px #bcb5a7 solid;
+		margin-bottom: 20px;
+	}
+	.catalog-head {
+		margin-bottom: 30px;
+		position: relative;
+		& ~ .catalog-head {
+			margin-top: 30px;
+		}
+		h4 {
+			padding-right: 100px;
+		}
+		a {
+			display: block;
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			font-size: 14px;
+			color: #bcb5a7;
+			border: 1px #bcb5a7 solid;
+			padding: 5px 20px;
+			font-weight: 400;
+			&:hover {
+				background: #bcb5a7;
+				color: #fff;
+			}
+		}
+	}
+	.item {
+		background: #fff;
+		display: block;
+		position: relative;
+		margin-bottom: 20px;
+		&:hover .share {
+			@include transform(translateY(0));
+		}
+		.product-descr {
+			border-top: 1px #ccc solid;
+			padding: 10px 0;
+			position: relative;
+			overflow: hidden;
+			font-weight: 500;
+			h5 {
+				font-size: 18px;
+				padding-left: 90px;
+			}
+		}
+		.price {
+			display: block;
+			position: absolute;
+			font-size: 13px;
+			bottom: 0px;
+			left: 10px;
+			color: #fff;
+			padding: 24px 10px;
+			background: $green;
+			font-weight: 500;
+		}
+		.badge {
+			display: block;
+			position: absolute;
+			font-size: 13px;
+			top: 0px;
+			right: 10px;
+			color: #fff;
+			padding: 24px 10px;
+			font-weight: 500;
+			min-width: 75px;
+			text-transform: uppercase;
+			text-align: center;
+			&.sale {
+				background: #242424;
+			}
+			&.stock {
+				background: $orange;
+				padding: 16px 0;
+			}
+		}
+		.share {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			right: 0px;
+			bottom: 0px;
+			background:#fff;
+			padding-left: 77px;
+			@include transform(translateY(100%));
+			@include transition (all 0.3s);
+			a {
+				display:block;
+				font-size: 18px;
+				float: left;
+				width: 25%;
+				text-align: center;
+				line-height: 42px;
+				color: $grey;
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+	}
+}
+/*********addon********/
+.addon {
+	.box {
+		background:#dfdbd4;
+		padding: 20px 15px;
+		margin-bottom: 20px;
+		h5 {
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 12px;
+			font-weight: 400;
+		}
+	}
+	.blog-posts {
+		padding: 4px 0;
+		li {
+			margin-bottom: 10px;
+			&:last-child {
+				margin: 0px;
+			}
+		}
+		.date {
+			float: left;
+			background: $green;
+			color: #fff;
+			font-size: 10px;
+			text-align: center;
+			padding: 5px 12px;
+		}
+		.post-info {
+			margin-left: 50px;
+			padding-top: 2px;
+			h5 {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}
+/********pre-footer*****/
+.pre-footer {
+	padding: 30px 0 0;
+	background: #242424;
+	color: #a4a4a4;
+	font-size: 12px;
+	hr {
+		height: 0px;
+		border: none;
+		border-top: 1px #1c1c1c solid;
+		margin-bottom: 30px;
+	}
+	.widget {
+		padding: 0 30px;
+		margin-bottom: 30px;
+		h5 {
+			margin-bottom: 15px;
+			font-size: 14px;
+			color: #7d7d7d;
+			font-weight: 500;
+		}
+		i {
+			display: block;
+		}
+		.twiter-widget {
+			li {
+				margin-bottom: 13px;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+			}
+			.tw-date {
+				margin-top: 10px;
+				color: #fff;
+			}
+		}
+		.search {
+			height: 35px;
+			background: #2e2e2e;
+			position: relative;
+			input {
+				border: none;
+				background: none;
+				width: 100%;
+				height: 100%;
+				font-size: 12px;
+				color: #7d7d7d;
+				padding: 0 45px 0 20px;
+				&:focus {
+					background: #fff;
+					color: #000;
+				}
+				&:focus + button {
+					background: $green;
+					color: #fff;
+				}
+			}
+			button {
+				border: none;
+				position: absolute;
+				height: 100%;
+				width: 35px;
+				top: 0px;
+				right: 0px;
+				text-align: center;
+				background: #7d7d7d;
+				color: #242424;
+				font-size: 17px;
+				cursor: pointer;
+				&:hover {
+					background: $green;
+					color: #fff;
+				}
+			}
+		}
+		.social {
+			text-align: right;
+			a {
+				display: inline-block;
+				width: 35px;
+				text-align: center;
+				font-size: 20px;
+				background: #2e2e2e;
+				margin-left: 4px;
+				color: #7d7d7d;
+				i {
+					line-height: 35px;
+				}
+				&:hover {
+					color: $green;
+				} 
+			}
+		}
+	}
+}
+/*********footer*******/
+.main-footer {
+	background: #2e2e2e;
+	color: #ffffff;
+	font-size: 12px;
+	padding-top: 20px;
+	.copy {
+		margin-bottom: 20px;
+	}
+	.footer-links {
+		margin: 7px 0 20px;
+		text-align: right;
+		li {
+			display: inline-block;
+		}
+		a {
+			color: #fff;
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+}
+/********search******/
+.perspect-wrapper {
+	@include perspective (2000px);
+}
+.page-wrap {
+	@include transform-style(preserve-3d);
+	@include transform-origin(0px,50%);
+	@include transition(transform 0.2s);
+	&.show-search {
+		@include transform(rotateY(3deg));
+	}
+}
+.search-layout {
+	@include transform-style(preserve-3d);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	color: #fff;
+	background: rgba(#000,0.9);
+	z-index: 1000;
+	@include display-flex();
+	@include flex-direction(column);
+	@include align-items(center);
+    @include justify-content(center);  
+    &.search-in {
+		@include animation(2s SearchIn both);
+    }
+    &.search-out {
+		@include animation(2s SearchOut both 0.2s);
+    }
+    &.hidden {
+    	display: none;
+    }
+    span {
+    	display: block;
+    	font-size: 20px;
+    	text-transform: uppercase;
+    	font-weight: 400;
+    }
+    .field {
+    	width: 100%;
+    	max-width: 250px;
+    	height: 33px;
+    	margin-top: 20px;
+    	input {
+    		@include transition(all 0.3s);
+    		width: 100%;
+	    	border: 1px #fff solid;
+    		height: 100%;
+    		background: none;
+    		color: #fff;
+    		font-size: 12px;
+    		padding: 0 10px;
+    		&:focus {
+    			border-radius: 30px;
+    			border-color: $green;
+    			color: $green;
+    		}
+    	}
+    }
+    i.fa {
+    	cursor: pointer;
+	    font-size: 30px;
+	    opacity: 0.5;
+	    position: absolute;
+	    right: 30px;
+	    top: 30px;
+	    @include transition(all 0.3s);
+	    &:hover {
+	    	color: $green;
+	    	opacity: 0.8;
+	    }
+    }
+}
 
-
+@include keyframes(SearchIn) {
+	0% {
+		@include transform(translateX(100%) scale(0.2) rotateY(15deg));
+	}
+	50% {
+		@include transform(translateX(0%) scale(0.8) rotateY(8deg));
+	}
+	100% {
+		@include transform(translateX(0%) scale(1) rotateY(0deg));
+	}
+}
+@include keyframes(SearchOut) {
+	0% {
+		@include transform(translateX(0%) scale(1) rotateY(0deg));
+	}
+	50% {
+		@include transform(translateX(0%) scale(0.8) rotateY(8deg));
+	}
+	100% {
+		@include transform(translateX(100%) scale(0.2) rotateY(15deg));
+	}	
+}
 @import "response.scss";
