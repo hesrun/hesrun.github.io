@@ -198,6 +198,7 @@ h5 {
   top: 100%;
   left: 0px;
   width: 100%;
+  display: none;
 }
 .sub-nav .links a {
   display: block;
@@ -407,6 +408,67 @@ h5 {
   transition: all 0.3s;
 }
 
+/*********shop filters*******/
+.shop-by {
+  background: #2e2e2e;
+  color: #fff;
+}
+.shop-by .shop-labl {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  padding: 31px 0 30px;
+}
+.shop-by .filter-select {
+  margin: 15px 0;
+  height: 60px;
+  background: #242424;
+  position: relative;
+  cursor: pointer;
+}
+.shop-by .filter-select p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 18px 0;
+}
+.shop-by .filter-select i.fa {
+  position: absolute;
+  right: 15px;
+  top: 23px;
+}
+.shop-by .filter-select > ul {
+  display: none;
+  position: absolute;
+  top: 140%;
+  width: 100%;
+  background: #242424;
+  z-index: 10;
+  padding: 10px 0;
+}
+.shop-by .filter-select > ul:after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0px;
+  width: 0px;
+  border-bottom: 5px #242424 solid;
+  border-left: 4px transparent solid;
+  border-right: 4px transparent solid;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -3px;
+}
+.shop-by .filter-select > ul a {
+  display: block;
+  color: #fff;
+  padding: 10px 25px;
+  font-weight: 400;
+}
+.shop-by .filter-select > ul a:hover {
+  background: #57c5a0;
+}
+
 /*********catalog********/
 .catalog {
   padding: 30px 0;
@@ -425,10 +487,14 @@ h5 {
 .catalog .catalog-head ~ .catalog-head {
   margin-top: 30px;
 }
+.catalog .catalog-head.inside h4 {
+  padding-right: 20px;
+}
 .catalog .catalog-head h4 {
   padding-right: 100px;
+  display: inline-block;
 }
-.catalog .catalog-head a {
+.catalog .catalog-head .show-all {
   display: block;
   position: absolute;
   right: 0px;
@@ -439,15 +505,107 @@ h5 {
   padding: 5px 20px;
   font-weight: 400;
 }
-.catalog .catalog-head a:hover {
+.catalog .catalog-head .show-all:hover {
   background: #bcb5a7;
   color: #fff;
+}
+.catalog .catalog-head .crumbs {
+  display: inline-block;
+  font-size: 12px;
+  color: #bcb5a7;
+  font-weight: 500;
+}
+.catalog .catalog-head .crumbs li {
+  display: inline-block;
+}
+.catalog .catalog-head .crumbs a {
+  color: #bcb5a7;
+}
+.catalog .catalog-head .catalog-option {
+  text-align: left;
+  margin-top: 20px;
+}
+.catalog .catalog-head .change-layout {
+  display: inline-block;
+  font-size: 12px;
+  color: #bcb5a7;
+  font-weight: 500;
+  vertical-align: top;
+}
+.catalog .catalog-head .change-layout input {
+  display: none;
+}
+.catalog .catalog-head .change-layout input:checked + label {
+  color: #57c5a0;
+  border-color: #57c5a0;
+  background: #fff;
+}
+.catalog .catalog-head .change-layout .layout-btn {
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #bcb5a7;
+  color: #bcb5a7;
+  background: no-repeat;
+  height: 30px;
+  width: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 26px;
+}
+.catalog .catalog-head .sorting {
+  display: inline-block;
+  margin-left: 20px;
+  border: 1px solid #bcb5a7;
+  color: #bcb5a7;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+}
+.catalog .catalog-head .sorting p {
+  padding: 5px 30px 5px 10px;
+}
+.catalog .catalog-head .sorting i {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+.catalog .catalog-head .sorting ul {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  border: 1px solid #bcb5a7;
+  background: #ebe7df;
+  z-index: 10;
+  padding: 5px 0;
+  display: none;
+}
+.catalog .catalog-head .sorting ul a {
+  color: #bcb5a7;
+  display: block;
+  padding: 5px 10px;
+}
+.catalog .catalog-head .sorting ul a:hover {
+  color: #57c5a0;
 }
 .catalog .item {
   background: #fff;
   display: block;
   position: relative;
   margin-bottom: 20px;
+}
+.catalog .item > * {
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.catalog .item > a {
+  display: block;
 }
 .catalog .item:hover .share {
   -moz-transform: translateY(0);
@@ -486,7 +644,7 @@ h5 {
   color: #fff;
   padding: 24px 10px;
   font-weight: 500;
-  min-width: 75px;
+  width: 78px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -525,6 +683,51 @@ h5 {
 }
 .catalog .item .share a:hover {
   color: #57c5a0;
+}
+.catalog .item.row-layout {
+  background: none;
+}
+.catalog .item.row-layout > a {
+  float: left;
+  width: 100px;
+}
+.catalog .item.row-layout .product-descr {
+  background: #fff;
+  margin-left: 120px;
+  padding: 25px 20px;
+  border-top: none;
+}
+.catalog .item.row-layout .product-descr h5 {
+  padding: 0px;
+  float: left;
+}
+.catalog .item.row-layout .product-descr .share {
+  height: 100%;
+  z-index: 2;
+  padding: 0px;
+}
+.catalog .item.row-layout .product-descr .share a {
+  font-size: 20px;
+  line-height: 70px;
+}
+.catalog .item.row-layout .price {
+  right: 0px;
+  bottom: 0px;
+  left: auto;
+  padding: 3px 5px;
+  width: 100px;
+  text-align: center;
+}
+.catalog .item.row-layout .badge {
+  top: auto;
+  bottom: 0px;
+  right: 100px;
+  width: 100px;
+  padding: 3px 5px;
+}
+.catalog .item.row-layout .badge.stock {
+  padding: 3px 5px;
+  white-space: nowrap;
 }
 
 /*********addon********/
@@ -902,6 +1105,7 @@ h5 {
     left: auto;
     width: auto;
     float: left;
+    display: block;
   }
   .sub-nav .links li {
     float: left;
@@ -944,5 +1148,13 @@ h5 {
   }
   .search-layout i.fa {
     font-size: 50px;
+  }
+
+  .catalog .catalog-head .catalog-option {
+    text-align: right;
+    margin-top: 0px;
+  }
+  .catalog .item.row-layout .product-descr .share a {
+    font-size: 30px;
   }
 }

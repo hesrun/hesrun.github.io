@@ -17,7 +17,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	background: $green;
-	min-height: 100%
+	min-height: 100%;
 }
 .cf {
 	@include clearfix();
@@ -114,6 +114,7 @@ h5 {font-size: 20px};
 		top: 100%;
 		left: 0px;
 		width: 100%;
+		display: none;
 		a {
 			display: block;
 			padding: 9px 30px;
@@ -301,6 +302,66 @@ h5 {font-size: 20px};
 		@include transition (all 0.3s);
 	}
 }
+/*********shop filters*******/
+.shop-by {
+	background: $ldark;
+	color: #fff;
+	.shop-labl {
+		font-size: 22px;
+		font-weight: 400;
+		text-align: center;
+		padding: 31px 0 30px;
+	}
+	.filter-select {
+		margin: 15px 0;
+		height: 60px;
+		background: $dark;
+		position: relative;
+		cursor: pointer;
+		p {
+			text-align: center;
+			font-size: 18px;
+			font-weight: 500;
+			padding: 18px 0;
+		}
+		i.fa {
+			position: absolute;
+			right: 15px;
+			top: 23px;
+		}
+		> ul {
+			display: none;
+			position: absolute;
+			top: 140%;
+			width: 100%;
+			background: $dark;
+			z-index: 10;
+			padding: 10px 0;
+			&:after {
+				content: "";
+				position: absolute;
+				display: block;
+				height: 0px;
+				width: 0px;
+				border-bottom: 5px $dark solid;
+				border-left: 4px transparent solid;
+				border-right: 4px transparent solid;
+				bottom: 100%;
+				left: 50%;
+				margin-left: -3px; 
+			}
+			a {
+				display: block;
+				color: #fff;
+				padding: 10px 25px;
+				font-weight: 400;
+				&:hover {
+					background: $green;
+				}
+			}
+		} 
+	}
+}
 /*********catalog********/
 .catalog {
 	padding: 30px 0;
@@ -317,10 +378,16 @@ h5 {font-size: 20px};
 		& ~ .catalog-head {
 			margin-top: 30px;
 		}
+		&.inside {
+			h4 {
+				padding-right: 20px;
+			}
+		}
 		h4 {
 			padding-right: 100px;
+			display: inline-block;
 		}
-		a {
+		.show-all {
 			display: block;
 			position: absolute;
 			right: 0px;
@@ -335,12 +402,101 @@ h5 {font-size: 20px};
 				color: #fff;
 			}
 		}
+		.crumbs {
+			display: inline-block;
+			font-size: 12px;
+			color: #bcb5a7;
+			font-weight: 500;
+			li {
+				display: inline-block;
+			}
+			a {
+				color: #bcb5a7;
+			}
+		}
+		.catalog-option {
+			text-align: left;
+			margin-top: 20px;
+		}
+		.change-layout {
+			display: inline-block;
+			font-size: 12px;
+			color: #bcb5a7;
+			font-weight: 500;
+			vertical-align: top;
+			input {
+				display: none;
+			}
+			input:checked + label {
+				color: $green;
+				border-color: $green;
+				background: #fff;
+			}
+			.layout-btn {
+				margin-left: 5px;
+				display: inline-block;
+				vertical-align: middle;
+				border: 1px solid #bcb5a7;
+			    color: #bcb5a7;
+			    background: no-repeat;
+			    height: 30px;
+			    width: 30px;
+			    font-size: 16px;
+			    cursor: pointer;
+			    text-align: center;
+			    line-height: 26px;
+			}
+		}
+		.sorting {
+			display: inline-block;
+			margin-left: 20px;
+			border: 1px solid #bcb5a7;
+			color: #bcb5a7;
+			font-size: 14px;
+			font-weight: 500;
+			position: relative;
+			vertical-align: top;
+			cursor: pointer;
+			p {
+				padding: 5px 30px 5px 10px;
+			}
+			i {
+				position: absolute;
+				right: 10px;
+				top: 8px;
+			}
+			ul {
+				position: absolute;
+				top: 100%;
+				left: -1px;
+				right: -1px;
+				border: 1px solid #bcb5a7;
+				background: #ebe7df;
+				z-index: 10;
+				padding: 5px 0;
+				display: none;
+				a {
+					color: #bcb5a7;
+					display: block;
+					padding: 5px 10px;
+					&:hover {
+						color: $green;
+					}
+				}
+			}
+		}
 	}
 	.item {
 		background: #fff;
 		display: block;
 		position: relative;
 		margin-bottom: 20px;
+		> * {
+			@include transition(all 0.3s)
+		}
+		> a {
+			display: block;
+		}
 		&:hover .share {
 			@include transform(translateY(0));
 		}
@@ -375,7 +531,7 @@ h5 {font-size: 20px};
 			color: #fff;
 			padding: 24px 10px;
 			font-weight: 500;
-			min-width: 75px;
+			width: 78px;
 			text-transform: uppercase;
 			text-align: center;
 			&.sale {
@@ -408,6 +564,51 @@ h5 {font-size: 20px};
 					color: $green;
 				}
 			}
+		}
+	}
+	.item.row-layout {
+		background: none;
+		> a {
+			float: left;
+			width: 100px;
+		}
+		.product-descr {
+			background: #fff;
+			margin-left: 120px;
+			padding: 25px 20px;
+			border-top: none;
+			h5 {
+				padding: 0px;
+				float: left;
+			}
+			.share {
+				height: 100%;
+				z-index: 2;
+				padding: 0px;
+				a {
+					font-size: 20px;
+					line-height: 70px;
+				}
+			}
+		}
+		.price {
+			right: 0px;
+			bottom: 0px;
+			left: auto;
+			padding: 3px 5px;
+			width: 100px;
+			text-align: center;
+		}
+		.badge {
+			top: auto;
+			bottom: 0px;
+			right: 100px;
+			width: 100px;
+			padding: 3px 5px;
+			&.stock {
+				padding: 3px 5px;
+				white-space: nowrap;
+			} 
 		}
 	}
 }
