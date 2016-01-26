@@ -4,9 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Главная страница</title>
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery-1.11.2.min.js"></script>
-	<script src="js/jquery.bxslider.min.js"></script>
 </head>
 <body class="land_body">
 	<header class="landing-head">
@@ -19,22 +18,22 @@
 			</div>
 			<a href="#" class="recall">Перезвоните мне</a>
 			<span class="tel">+7 (495) 979-72-12</span>
-			<nav class="sub-nav">
+			<nav class="sub-nav" id="MainNav">
 				<ul class="section-inner">
 					<li>
-						<a href="" class="active">Преимущества</a>
+						<a href="#prior">Преимущества</a>
 					</li>
 					<li>
-						<a href="">Стоимость</a>
+						<a href="#coast">Стоимость</a>
 					</li>
 					<li>
-						<a href="">Клиенты и отзывы</a>
+						<a href="#feeds">Клиенты и отзывы</a>
 					</li>
 					<li>
-						<a href="">Консультация</a>
+						<a href="#cons">Консультация</a>
 					</li>
 					<li>
-						<a href="">Контактная информация</a>
+						<a href="#cont">Контактная информация</a>
 					</li>
 				</ul>
 			</nav>
@@ -47,7 +46,7 @@
 			<a class="land-btn otline" href="#">Бесплатная консультация</a>
 		</div>
 	</section>
-	<section class="land-priority land__section">
+	<section id="prior" class="land-priority land__section">
 		<div class="section-inner">
 			<div class="title">Преимущества</div>
 			<ul>
@@ -75,7 +74,7 @@
 			<a class="land-btn bg" href="#">Основное проеимущество — выгода</a>
 		</div>
 	</section>
-	<section class="land-price land__section">
+	<section id="coast" class="land-price land__section">
 		<div class="section-inner">
 			<div class="title">Стоимость</div>
 			<div class="calculate-form">
@@ -134,7 +133,7 @@
 			<a class="land-btn bg" href="#">Основное проеимущество — выгода</a>
 		</div>
 	</section>
-	<section class="land-feeds land__section">
+	<section id="feeds" class="land-feeds land__section">
 		<div class="section-inner">
 			<div class="left">
 				<div class="title">Клиенты</div>
@@ -188,7 +187,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="land-consultation land__section">
+	<section id="cons" class="land-consultation land__section">
 		<div class="section-inner">
 			<div class="title">Получите бесплатную консультацию и расчет цены</div>
 			<form action="">
@@ -198,7 +197,7 @@
 			</form>
 		</div>
 	</section>
-	<footer class="land-footer land__section">
+	<footer id="cont" class="land-footer land__section">
 		<div class="section-inner">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3729499442306!2d37.61531071622802!3d55.752023280553104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1453797948256" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 			<div class="title">Контактная информация</div>
@@ -214,10 +213,32 @@
 			<div class="copy">© Sybercat 2011-2015</div>
 		</div>
 	</footer>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.singlePageNav.min.js"></script>
 	<script>
-		$('.toogle-menue').click(function() {
-			$('.landing-head .sub-nav').slideToggle(300);
+		$(document).ready(function () {
+			$('.toogle-menue').click(function() {
+				$('.landing-head .sub-nav').slideToggle(300);
+			});
+
+			$(window).scroll(function () {
+		        if ($(window).scrollTop() > 400) {
+		            $('.landing-head').addClass('fixed')
+		        } else {
+		            $('.landing-head').removeClass('fixed')
+		        }
+		    });
+
+			$('#MainNav').singlePageNav({
+				offset: 0,
+				speed: 700,
+				currentClass: 'active',
+				easing: 'easeInOutExpo',
+				updateHash: true,
+			});
 		})
+		
 	</script>
 </body>
 </html>

@@ -847,6 +847,54 @@ body input, body textarea, body button, body select {
 	padding: 10px 0;
 	position: relative; 
 }
+.landing-head.fixed {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	animation: HeadShow 0.5s;
+}
+
+@keyframes HeadShow {
+    from   {
+    	-webkit-transform: translateY(-100%);
+    	-moz-transform: translateY(-100%);
+    	-ms-transform: translateY(-100%);
+    	-o-transform: translateY(-100%);
+    	transform: translateY(-100%);
+    	
+    }
+    to {
+    	-webkit-transform: translateY(0%);
+    	-moz-transform: translateY(0%);
+    	-ms-transform: translateY(0%);
+    	-o-transform: translateY(0%);
+    	transform: translateY(0%);
+    }
+}
+@-webkit-keyframes HeadShow {
+    from   {
+    	-webkit-transform: translateY(-100%);
+    	-moz-transform: translateY(-100%);
+    	-ms-transform: translateY(-100%);
+    	-o-transform: translateY(-100%);
+    	transform: translateY(-100%);
+    	
+    }
+    to {
+    	-webkit-transform: translateY(0%);
+    	-moz-transform: translateY(0%);
+    	-ms-transform: translateY(0%);
+    	-o-transform: translateY(0%);
+    	transform: translateY(0%);
+    }
+}
+
+
+
+.landing-head.fixed .sub-nav  {
+	background: rgba(0,0,0,0.6);
+}
 .landing-head .recall {
 	float: right;
 	border: 1px solid #5ccbc4;
@@ -1417,6 +1465,10 @@ body input, body textarea, body button, body select {
 	.landing-head .sub-nav {
 		display: none;
 		background: rgba(0,0,0,0.9);
+	}
+	.landing-head .recall,
+	.landing-head .tel {
+		display: none;
 	}
 	.landing-head .sub-nav .section-inner {
 		flex-direction: column;
