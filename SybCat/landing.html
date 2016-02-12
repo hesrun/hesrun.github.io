@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Главная страница</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
 </head>
 <body class="land_body">
 	<header class="landing-head">
@@ -156,23 +157,69 @@
 				<img src="img/feed-img.jpg" alt="">
 				<ul class="feed-list">
 					<li>
-						<img src="http://lorempixel.com/83/63/people/" alt="">
-						<div class="user-info">
-							<strong>Виталий Сергеев</strong>
-							<p>Прогресс не стоит на месте, и на сегодняшний день трудно представить нормальную работу организации без компьютерной техники. Своевременное и грамотное обслуживание компьютеров
-							и оргтехники — залог успешного функционирования компании.</p>
-							<hr>
-							<a href="#">microsoft.ru</a>
+						<div class="comment-item">
+							<img src="http://lorempixel.com/83/63/people/" alt="">
+							<div class="user-info">
+								<strong>Виталий Сергеев 1</strong>
+								<p>Прогресс не стоит на месте, и на сегодняшний день трудно представить нормальную работу организации без компьютерной техники. Своевременное и грамотное обслуживание компьютеров
+								и оргтехники — залог успешного функционирования компании.</p>
+								<hr>
+								<a href="#">microsoft.ru</a>
+							</div>
+						</div>
+						<div class="comment-item">
+							<img src="http://lorempixel.com/83/63/people/" alt="">
+							<div class="user-info">
+								<strong>Виталий Сергеев 2</strong>
+								<p>Прогресс не стоит на месте, и на сегодняшний день трудно представить нормальную работу организации без компьютерной техники. Своевременное и грамотное обслуживание компьютеров
+								и оргтехники — залог успешного функционирования компании.</p>
+								<hr>
+								<a href="#">microsoft.ru</a>
+							</div>
 						</div>
 					</li>
 					<li>
-						<img src="http://lorempixel.com/83/63/people/" alt="">
-						<div class="user-info">
-							<strong>Виталий Сергеев</strong>
-							<p>Прогресс не стоит на месте, и на сегодняшний день трудно представить нормальную работу организации без компьютерной техники. Своевременное и грамотное обслуживание компьютеров
-							и оргтехники — залог успешного функционирования компании.</p>
-							<hr>
-							<a href="#">microsoft.ru</a>
+						<div class="comment-item">
+							<img src="http://lorempixel.com/83/63/people/" alt="">
+							<div class="user-info">
+								<strong>Виталий Сергеев 3</strong>
+								<p>Прогресс не стоит на месте, и на сегодняшний день трудно представить нормальную работу организации без компьютерной техники. Своевременное и грамотное обслуживание компьютеров
+								и оргтехники — залог успешного функционирования компании.</p>
+								<hr>
+								<a href="#">microsoft.ru</a>
+							</div>
+						</div>
+						<div class="comment-item">
+							<img src="http://lorempixel.com/83/63/people/" alt="">
+							<div class="user-info">
+								<strong>Виталий Сергеев 4</strong>
+								<p>Прогресс не стоит на месте, и на сегодняшний день трудно представить нормальную работу организации без компьютерной техники. Своевременное и грамотное обслуживание компьютеров
+								и оргтехники — залог успешного функционирования компании.</p>
+								<hr>
+								<a href="#">microsoft.ru</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="comment-item">
+							<img src="http://lorempixel.com/83/63/people/" alt="">
+							<div class="user-info">
+								<strong>Виталий Сергеев 5</strong>
+								<p>Прогресс не стоит на месте, и на сегодняшний день трудно представить нормальную работу организации без компьютерной техники. Своевременное и грамотное обслуживание компьютеров
+								и оргтехники — залог успешного функционирования компании.</p>
+								<hr>
+								<a href="#">microsoft.ru</a>
+							</div>
+						</div>
+						<div class="comment-item">
+							<img src="http://lorempixel.com/83/63/people/" alt="">
+							<div class="user-info">
+								<strong>Виталий Сергеев 6</strong>
+								<p>Прогресс не стоит на месте, и на сегодняшний день трудно представить нормальную работу организации без компьютерной техники. Своевременное и грамотное обслуживание компьютеров
+								и оргтехники — залог успешного функционирования компании.</p>
+								<hr>
+								<a href="#">microsoft.ru</a>
+							</div>
 						</div>
 					</li>
 				</ul>
@@ -215,6 +262,7 @@
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/jquery.singlePageNav.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
 	<script>
 		$(document).ready(function () {
 			$('.toogle-menue').click(function() {
@@ -228,6 +276,10 @@
 		            $('.landing-head').removeClass('fixed')
 		        }
 		    });
+
+		    $('.feed-list').bxSlider({
+				mode: 'fade' 
+			});
 
 			$('#MainNav').singlePageNav({
 				offset: 0,

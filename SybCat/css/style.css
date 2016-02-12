@@ -852,6 +852,7 @@ body input, body textarea, body button, body select {
 	top: 0px;
 	left: 0px;
 	width: 100%;
+	z-index: 999;
 	animation: HeadShow 0.5s;
 }
 
@@ -1136,13 +1137,20 @@ body input, body textarea, body button, body select {
 .land-feeds .right {
 	padding-left: 100px;
 }
-.land-feeds .feed-list {
-	margin-left: -100px;
+.land-feeds .bx-wrapper {
+	margin: 0 0 0 -100px;
+	padding-bottom: 30px;
 }
-.land-feeds .feed-list li {
+.land-feeds .bx-wrapper .bx-viewport {
+	background: none;
+	border: none;
+	box-shadow: none;
+	left: auto;
+}
+.land-feeds .feed-list .comment-item {
 	margin-top: 40px;
 }
-.land-feeds .feed-list li img {
+.land-feeds .feed-list .comment-item img {
 	float: left;
 	border-radius: 5px;
 }
@@ -1166,23 +1174,25 @@ body input, body textarea, body button, body select {
 .land-feeds .feed-list .user-info a {
 	color: #11938e;
 }
-
-.land-feeds .pagination {
-	margin-top: 20px;
+.land-feeds .bx-wrapper .bx-pager{
+	bottom: -10px;
+	left: 96px;
+	width: auto;
 }
-.land-feeds .pagination div {
+.land-feeds .bx-wrapper .bx-pager.bx-default-pager a {
 	cursor: pointer;
 	display: inline-block;
 	margin-right: 8px;
-	width: 7px;
-	height: 7px;
+	width: 13px;
+	height: 13px;
 	border-radius: 50%;
 	background: #c8c8c8;
+	border: 3px #fff solid;
 }
-.land-feeds .pagination .active {
+.land-feeds .bx-wrapper .bx-pager.bx-default-pager a.active,
+.land-feeds .bx-wrapper .bx-pager.bx-default-pager a:hover {
 	background: #11938e;
 }
-
 .land-consultation {
 	text-align: center;
 	background-image: url(../img/calc-bg.jpg);
@@ -1387,6 +1397,13 @@ body input, body textarea, body button, body select {
 	}
 	.land-feeds .right {
 		width: 100%;
+		padding: 0px;
+	}
+	.land-feeds .right .title {
+		text-align: center;
+	}
+	.land-feeds .bx-wrapper {
+		margin: 0px;
 	}
 
 

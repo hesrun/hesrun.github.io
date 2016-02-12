@@ -1,0 +1,97 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	position: relative;
+}
+@import url(https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic);
+
+.logo {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 2;
+}
+.container {
+	position: absolute;
+	left: 80px;
+	right: 80px;
+	top: 100px;
+	bottom: 100px;
+	background-image: url(../img/island.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+.company {
+	width: 242px;
+	height: 288px;
+	background-image: url(../img/shield.png);
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+}
+
+.company h1 {
+	text-transform: uppercase;
+	font-size: 26px;
+	font-family: Georgia;
+	letter-spacing: 7px;
+	font-weight: 300;
+	margin-top: 7px;
+}
+.company img {
+	margin: 16px 0 13px;
+}
+.company p {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 14px;
+	line-height: 23px;
+}
+
+@media (max-width:768px) {
+	.logo {
+		width: 100px;
+	}
+	.container {
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		bottom: 0px;
+	}
+	.company {
+		width: 160px;
+		height: 190px;
+	}
+	.company h1 {
+		font-size: 18px;
+		letter-spacing: 4px;
+	}
+	.company img {
+		margin: 10px 0 7px;
+		height: 20px;
+	}
+	.company p {
+		font-size: 10px;
+		line-height: 14px;
+	}
+}
