@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+
+html {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    font-size: 15px;
+    height: 100%;
+    background-image: url(http://orig11.deviantart.net/20eb/f/2015/030/6/f/_minflat__dark_material_design_wallpaper__4k__by_dakoder-d8fjqzu.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.material-tabs {
+    margin: 80px auto 0;
+    max-width: 600px;
+}
+
+.material-tabs .tabs-link {
+    color: #fff;
+    background: #00897b;
+    position: relative;
+}
+
+.material-tabs .tabs-link ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.material-tabs .tabs-link ul li {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+.material-tabs .tabs-link .border {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 3px;
+    background: #ff6d00;
+    transition: 0.3s all;
+}
+
+.material-tabs .tabs-container {
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+    padding: 1rem;
+    transition: 0.3s height;
+}
+
+.material-tabs .tabs-container:after {
+    bottom: -1px;
+    box-shadow: 0 0 20px 10px #fff;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.material-tabs .tabs-container .tab {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+.material-tabs .tabs-container .tab:not(.active) {
+    display: none;
+}
+
+.has-ripple .ripple {
+    position: absolute;
+    background: #FFFFFF;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    -webkit-animation: ripple 1.6s;
+    animation: ripple 1.6s;
+}
+
+@-webkit-keyframes ripple {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.2;
+    }
+
+    100% {
+        -webkit-transform: scale(40);
+        transform: scale(40);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.2;
+    }
+
+    100% {
+        -webkit-transform: scale(40);
+        transform: scale(40);
+        opacity: 0;
+    }
+}
