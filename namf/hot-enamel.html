@@ -436,7 +436,9 @@
          slider.superslides('animate', SIndex);
       })
 
+      //if mobile
       if (DocSize < 768) {
+         //swipe slider left/right
          $("#slides").swipe( {
             swipeLeft:function(event, direction, distance, duration, fingerCount) {
                slider.superslides('animate', 'next');
@@ -445,6 +447,7 @@
                slider.superslides('animate', 'prev');
             }
          });
+         //swipe head open/close
          $(".main-header").swipe( {
             swipeLeft:function(event, direction, distance, duration, fingerCount) {
                $("body").removeClass('menue-open')
