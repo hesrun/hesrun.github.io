@@ -4,6 +4,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <link type="image/x-icon" href="/img/favicon.ico" rel="shortcut icon">
+   <link type="image/x-icon" href="/img/favicon.ico" rel="icon">
    <link rel="stylesheet" href="/css/superslides.css">
    <link rel="stylesheet" href="css/grid/bootstrap-grid.css">
    <link rel="stylesheet" href="css/normalize.css">
@@ -398,10 +400,6 @@
                </div>
             </li>
          </ul>
-         <nav class="slides-navigation">
-            <a href="#" class="next"><i class="mdi mdi-chevron-right"></i></a>
-            <a href="#" class="prev"><i class="mdi mdi-chevron-left"></i></a>
-         </nav>
       </div>
       <div class="share-links">
          <a href="#">
@@ -417,7 +415,9 @@
    </main>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
    <script src="js/jquery.superslides.min.js" charset="utf-8"></script>
+   <script src="js/jquery.touchSwipe.min.js" charset="utf-8"></script>
    <script>
+      var DocSize = $(document).width();
       $('#MenueToggle').click(function() {
          $("body").toggleClass('menue-open');
       });
@@ -435,6 +435,25 @@
          var SIndex = $(this).index();
          slider.superslides('animate', SIndex);
       })
+
+      if (DocSize < 768) {
+         $("#slides").swipe( {
+            swipeLeft:function(event, direction, distance, duration, fingerCount) {
+               slider.superslides('animate', 'next');
+            },
+            swipeRight:function(event, direction, distance, duration, fingerCount) {
+               slider.superslides('animate', 'prev');
+            }
+         });
+         $(".main-header").swipe( {
+            swipeLeft:function(event, direction, distance, duration, fingerCount) {
+               $("body").removeClass('menue-open')
+            },
+            swipeRight:function(event, direction, distance, duration, fingerCount) {
+               $("body").addClass('menue-open')
+            }
+         });
+      }
    </script>
 </body>
 </html>
