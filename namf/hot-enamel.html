@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <title>Document</title>
    <link type="image/x-icon" href="/img/favicon.ico" rel="shortcut icon">
    <link type="image/x-icon" href="/img/favicon.ico" rel="icon">
@@ -420,6 +420,9 @@
       var DocSize = $(document).width();
       $('#MenueToggle').click(function() {
          $("body").toggleClass('menue-open');
+         $(document).bind('touchmove', function(e) {
+         	e.preventDefault();
+         });
       });
       var slider = $('#slides').superslides({
          animation: 'fade',

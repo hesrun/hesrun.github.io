@@ -417,7 +417,10 @@
    <script>
       $('#MenueToggle').click(function() {
          $("body").toggleClass('menue-open');
-      })
+         $(document).bind('touchmove', function(e) {
+            e.preventDefault();
+         });
+      });
    </script>
 </body>
 </html>
