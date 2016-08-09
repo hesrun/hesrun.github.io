@@ -401,27 +401,43 @@ body.menue-open {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin: 30px 0;
     -ms-flex-align: center;
     align-items: center;
-    margin: 30px 0;
 }
 
 .page-title h2 {
     margin: 0px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
-.prod-filter input {
+.product-filters {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: 60px;
+}
+
+.filter-item {
+    margin-bottom: -5px;
+}
+
+.filter-item input {
     display: none;
 }
 
-.prod-filter input:checked + label {
+.filter-item input:checked + label {
     background: #d34aab none repeat scroll 0 0;
     border-radius: 5px;
     color: #ffffff;
     position: relative;
 }
 
-.prod-filter input:checked + label:after {
+.filter-item input:checked + label:after {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 6px solid #d34aab;
@@ -435,23 +451,23 @@ body.menue-open {
     width: 0;
 }
 
-.prod-filter input:checked + label span {
+.filter-item input:checked + label span {
     border-bottom-color: transparent;
 }
 
-.prod-filter label {
+.filter-item label {
     cursor: pointer;
-    display: block;
-    float: left;
+    display: inline-block;
     font-size: 13px;
     padding: 9px 10px;
+    margin: 8px 0;
 }
 
-.prod-filter label:hover span {
+.filter-item label:hover span {
     border-bottom-color: transparent;
 }
 
-.prod-filter span {
+.filter-item span {
     border-bottom: 1px dashed #cccccc;
 }
 
@@ -466,12 +482,22 @@ body.menue-open {
 
 .collection-filter {
     float: left;
+    width: 220px;
 }
 
 .collection-filter ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
+}
+
+.collection-filter ul ul {
+    margin-left: 20px;
+}
+
+.collection-filter ul ul a {
+    font-size: 16px;
+    padding: 3px 5px 3px 5px;
 }
 
 .collection-filter sup {
@@ -482,11 +508,10 @@ body.menue-open {
 .collection-filter a {
     text-decoration: none;
     color: #000;
-    display: block;
+    display: inline-block;
     font-size: 18px;
     margin: 0 0 5px;
-    padding: 6px 0 6px 20px;
-    width: 160px;
+    padding: 6px 10px 6px 10px;
 }
 
 .collection-filter a:hover span {
@@ -2014,20 +2039,21 @@ article > .news-date {
         margin: 0 0 30px;
     }
 
+    .product-filters {
+        display: block;
+        margin: 0px;
+        text-align: center;
+    }
+
     .collection-filter {
         float: none;
         margin-bottom: 20px;
+        width: auto;
+        text-align: center;
     }
 
-    .collection-filter ul {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-
-    .collection-filter li {
-        margin-right: 20px;
+    .collection-filter ul ul {
+        margin: 0px;
     }
 
     .collection-filter a {
