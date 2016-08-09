@@ -6,6 +6,7 @@
    <title>Document</title>
    <link rel="stylesheet" href="css/grid/bootstrap-grid.css">
    <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/smoothproducts.css">
    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -117,26 +118,20 @@
          <div class="row">
             <div class="col-xs-12 col-md-6">
                <div class="product-photo">
-                  <a href="#" class="photo">
-                     <img class="img-response" src="img/jew-photo-full.jpg" alt="">
-                  </a>
-                  <div class="photo-list">
-                     <a href="#" class="active">
-                        <img src="img/jew-photo-icon.jpg" alt="">
-                     </a>
-                     <a href="#">
-                        <img src="img/jew-photo-icon.jpg" alt="">
-                     </a>
-                     <a href="#">
-                        <img src="img/jew-photo-icon.jpg" alt="">
-                     </a>
-                     <a href="#">
-                        <img src="img/jew-photo-icon.jpg" alt="">
-                     </a>
-                     <a href="#">
-                        <img src="img/jew-photo-icon.jpg" alt="">
-                     </a>
+                  <div class="sp-loading">
+                     <img src="images/sp-loading.gif" alt="">
                   </div>
+            		<div class="sp-wrap">
+                     <a href="img/jew-photo-full.jpg">
+                        <img src="img/jew-photo-full.jpg" alt="">
+                     </a>
+            			<a href="img/jew-photo-zoom.jpg">
+                        <img src="img/jew-photo-zoom.jpg" alt="">
+                     </a>
+            			<a href="img/jew-anonce.jpg">
+                        <img src="img/jew-anonce.jpg" alt="">
+                     </a>
+            		</div>
                </div>
             </div>
             <div class="col-xs-12 col-md-6">
@@ -413,6 +408,7 @@
       </div>
    </main>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   <script src="js/smoothproducts.min.js" charset="utf-8"></script>
    <script>
       $('#MenueToggle').click(function() {
          $("body").toggleClass('menue-open');
@@ -422,6 +418,9 @@
       });
       $('.warranty-shipping .button span').click(function() {
          $(this).next().fadeIn(300);
+      });
+      $(window).load(function() {
+         $('.sp-wrap').smoothproducts();
       });
    </script>
 </body>
