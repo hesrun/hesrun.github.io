@@ -157,15 +157,30 @@ body.menue-open {
 .main-header .main-nav > ul > li {
     margin-right: 40px;
     padding: 30px 0;
+    position: relative;
 }
 
-.main-header .main-nav > ul > li:last-child {
-    margin-right: 0px;
+.main-header ul.sub-nav {
+    display: none;
+    position: absolute;
+    top: 75%;
+    background: #000;
+    background: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.36);
+    padding: 10px 20px;
+    border-top: 3px #d34aab solid;
 }
 
-.main-header .main-nav > ul > li.active ul.sub-nav {
-    display: -ms-flexbox;
-    display: flex;
+.main-header ul.sub-nav li:last-child a {
+    border-bottom: none;
+}
+
+.main-header ul.sub-nav a {
+    color: #000;
+    display: block;
+    padding: 7px 0;
+    white-space: nowrap;
+    border-bottom: 1px #e6e6e6 solid;
 }
 
 .main-header .tel {
@@ -197,28 +212,6 @@ body.menue-open {
 
 .main-header .cart .mdi {
     font-size: 20px;
-}
-
-.main-header ul.sub-nav {
-    position: absolute;
-    background: #000;
-    top: 100%;
-    left: 0px;
-    width: 100%;
-    padding: 4px 51px;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    display: none;
-}
-
-.main-header ul.sub-nav li {
-    margin-right: 20px;
-}
-
-.main-header ul.sub-nav a {
-    border-bottom: none !important;
-    display: block;
-    padding: 10px 0;
 }
 
 .main-content {
@@ -1996,19 +1989,17 @@ article > .news-date {
         padding: 10px 15px;
     }
 
-    .main-header .main-nav > ul > li.active ul.sub-nav {
-        display: block;
-    }
-
     .main-header .main-nav .sub-nav {
         position: static;
-        border-top: 1px rgba(255, 255, 255, 0.4) solid;
-        padding: 10px 0px;
+        padding: 0px;
         background: none;
+        box-shadow: none;
     }
 
     .main-header .main-nav .sub-nav a {
-        padding: 5px 10px 5px 25px;
+        color: #fff;
+        padding: 10px 10px 10px 25px;
+        border-bottom: 1px rgba(255, 255, 255, 0.4) solid;
     }
 
     .catalog-container,

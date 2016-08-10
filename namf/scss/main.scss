@@ -121,14 +121,29 @@ body {
       > ul > li {
          margin-right: 40px;
          padding: 30px 0;
-         &:last-child {
-            margin-right: 0px;
+         position: relative;
+      }
+   }
+   ul.sub-nav {
+      display: none;
+      position: absolute;
+      top: 75%;
+      background: #000;
+      background: #fff;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.36);
+      padding: 10px 20px;
+      border-top: 3px $pink solid;
+      li:last-child {
+         a {
+            border-bottom: none;
          }
-         &.active {
-            ul.sub-nav {
-               display: flex;
-            }
-         }
+      }
+      a {
+         color: #000;
+         display: block;
+         padding: 7px 0;
+         white-space: nowrap;
+         border-bottom: 1px #e6e6e6 solid;
       }
    }
    .tel {
@@ -153,24 +168,6 @@ body {
    .cart {
       .mdi {
          font-size: 20px;
-      }
-   }
-   ul.sub-nav {
-      position: absolute;
-      background: #000;
-      top: 100%;
-      left: 0px;
-      width: 100%;
-      padding: 4px 51px;
-      flex-wrap: wrap;
-      display: none;
-      li {
-         margin-right: 20px;
-      }
-      a {
-         border-bottom: none !important;
-         display: block;
-         padding: 10px 0;
       }
    }
 }

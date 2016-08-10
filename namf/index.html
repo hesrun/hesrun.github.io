@@ -15,7 +15,7 @@
             <i class="mdi mdi-menu"></i>
          </button>
          <a class="logo" href="#">
-            <img src="img/logo-w.png" alt="">
+            <img src="svg/logo-w.png" alt="">
          </a>
          <nav class="main-nav">
             <ul>
@@ -42,7 +42,7 @@
                      </li>
                   </ul>
                </li>
-					<li class="active">
+					<li>
                   <a href="#">Коллекции</a>
                   <ul class="sub-nav">
                      <li>
@@ -138,6 +138,20 @@
       $('#MenueToggle').click(function() {
          $("body").toggleClass('menue-open');
       })
+      $('.main-nav > ul > li').click(function(){
+         var list = $(this).find('.sub-nav');
+
+         $('.main-nav > ul > li').removeClass('active');
+         $(this).addClass('active');
+
+         if (list.is(":hidden")) {
+            $('.sub-nav').slideUp(200)
+            list.slideDown(200)
+         } else {
+            list.slideUp(200).parent().removeClass('active')
+         }
+         return false;
+      });
    </script>
 </body>
 </html>
