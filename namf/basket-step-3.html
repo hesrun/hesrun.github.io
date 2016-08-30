@@ -174,31 +174,35 @@
                      </div>
                   </div>
                   <div class="pay-methods">
-                     <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                           <a href="#">
+                     <ul class="row">
+                        <li class="col-xs-12 col-md-6">
+                           <label class="active">
+                              <input checked type="radio" name="pay" id="">
                               <i class="mdi mdi-credit-card"></i>
                               Банковской картой
-                           </a>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                           <a href="#">
+                           </label>
+                        </li>
+                        <li class="col-xs-12 col-md-6">
+                           <label>
+                              <input type="radio" name="pay" id="">
                               <i class="mdi mdi-file-document"></i>
                               Переводом на банковский счет
-                           </a>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                           <a href="#">
+                           </label>
+                        </li>
+                        <li class="col-xs-12 col-md-6">
+                           <label>
+                              <input type="radio" name="pay" id="">
                               <i class="mdi mdi-wallet"></i>
                               Электронными деньгами
-                           </a>
-                        </div>
-                        <div class="col-xs-12 col-md-6">
-                           <a href="#">
+                           </label>
+                        </li>
+                        <li class="col-xs-12 col-md-6">
+                           <label>
+                              <input type="radio" name="pay" id="">
                               <i class="mdi mdi-cash-multiple"></i>
                               Наличными курьеру
-                           </a>
-                        </div>
+                           </label>
+                        </li>
                      </div>
                   </div>
                   <div class="next-step">
@@ -229,6 +233,10 @@
       $('#MenueToggle').click(function() {
          $("body").toggleClass('menue-open');
       });
+      $('.pay-methods input').change(function(){
+         $('.pay-methods label').removeClass('active');
+         $('.pay-methods input:checked').parent().addClass('active');
+      })
    </script>
 </body>
 </html>
