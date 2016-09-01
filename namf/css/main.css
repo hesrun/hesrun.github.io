@@ -103,6 +103,7 @@ body.menue-open {
     flex: 0 0 auto;
     position: relative;
     z-index: 10;
+    border-bottom: 3px #d34aab solid;
 }
 
 .main-header .inner {
@@ -110,13 +111,13 @@ body.menue-open {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    border-bottom: 3px #d34aab solid;
+    position: relative;
 }
 
 .main-header .logo {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    margin-right: 110px;
+    margin-right: 40px;
 }
 
 .main-header .logo img {
@@ -126,59 +127,6 @@ body.menue-open {
 .main-header .main-nav {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-}
-
-.main-header .main-nav a {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px #fff solid;
-}
-
-.main-header .main-nav a:hover {
-    color: #d34aab;
-    border-bottom: 1px #d34aab solid;
-}
-
-.main-header .main-nav li.active > a {
-    color: #d34aab;
-    border-bottom-color: transparent;
-}
-
-.main-header .main-nav ul {
-    padding-left: 0px;
-    margin: 0px;
-    display: -ms-flexbox;
-    display: flex;
-    list-style: none;
-}
-
-.main-header .main-nav > ul > li {
-    margin-right: 40px;
-    padding: 30px 0;
-    position: relative;
-}
-
-.main-header ul.sub-nav {
-    display: none;
-    position: absolute;
-    top: 75%;
-    background: #000;
-    background: #fff;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.36);
-    padding: 10px 20px;
-    border-top: 3px #d34aab solid;
-}
-
-.main-header ul.sub-nav li:last-child a {
-    border-bottom: none;
-}
-
-.main-header ul.sub-nav a {
-    color: #000;
-    display: block;
-    padding: 7px 0;
-    white-space: nowrap;
-    border-bottom: 1px #e6e6e6 solid;
 }
 
 .main-header .tel {
@@ -210,6 +158,120 @@ body.menue-open {
 
 .main-header .cart .mdi {
     font-size: 20px;
+}
+
+.sub-nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 3px);
+    left: 0px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.main-nav-list {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.main-nav-list_item {
+    margin-right: 40px;
+}
+
+.main-nav-list_name {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 80px;
+    position: relative;
+}
+
+.main-nav-list_name:hover, .main-nav-list_name.active {
+    color: #d34aab;
+}
+
+.main-nav-list_name.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -7px;
+    border-bottom: 7px #d34aab solid;
+    border-left: 7px transparent solid;
+    border-right: 7px transparent solid;
+}
+
+.sub-nav-links-block {
+    float: left;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(100% - 400px);
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.sub-nav-links-block {
+    padding: 35px 40px;
+}
+
+.sub-nav-links {
+    margin-top: 17px;
+}
+
+.sub-nav-links:first-child {
+    margin-top: 0px;
+}
+
+.sub-nav-links strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sub-nav-links ul {
+    list-style: none;
+    padding: 0px;
+    margin: 8px 0 0 0;
+}
+
+.sub-nav-links ul a {
+    display: inline-block;
+    padding: 3px 0;
+    color: #666666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sub-nav-links ul a:hover {
+    text-decoration: underline;
+}
+
+.main_nav_product {
+    padding: 40px;
+    float: right;
+    width: 400px;
+    text-align: center;
+    border-left: 1px #ededed solid;
+}
+
+.main_nav_product .name {
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+}
+
+.main_nav_product .price {
+    margin-top: 5px;
+    display: block;
+    font-size: 18px;
 }
 
 .main-content {
@@ -1983,43 +2045,7 @@ article > .news-date {
     }
 
     .main-header .main-nav {
-        position: fixed;
-        left: -250px;
-        top: 0px;
-        bottom: 0px;
-        overflow: auto;
-        background: #212121;
-        z-index: 100;
-        width: 250px;
-    }
-
-    .main-header .main-nav > ul {
-        display: block;
-    }
-
-    .main-header .main-nav > ul > li {
-        padding: 0px;
-        margin: 0px;
-        border-bottom: 1px rgba(255, 255, 255, 0.4) solid;
-    }
-
-    .main-header .main-nav > ul > li > a {
-        display: block;
-        border-bottom: none !important;
-        padding: 10px 15px;
-    }
-
-    .main-header .main-nav .sub-nav {
-        position: static;
-        padding: 0px;
-        background: none;
-        box-shadow: none;
-    }
-
-    .main-header .main-nav .sub-nav a {
-        color: #fff;
-        padding: 10px 10px 10px 25px;
-        border-bottom: 1px rgba(255, 255, 255, 0.4) solid;
+        display: none;
     }
 
     .catalog-container,
