@@ -168,6 +168,73 @@
          </div>
       </div>
    </header>
+   <div class="mobile-menue">
+      <ul class="mobile-nav">
+         <li class="mobile-menue_item">
+            <span>
+               Меню 1
+               <i class="mdi mdi-chevron-right"></i>
+               <i class="mdi mdi-chevron-down"></i>
+            </span>
+            <ul class="mobile-sub-menue">
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-1-1</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-1-2</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-1-3</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-1-4</a>
+               </li>
+            </ul>
+         </li>
+         <li class="mobile-menue_item">
+            <span>
+               Меню 2
+               <i class="mdi mdi-chevron-right"></i>
+               <i class="mdi mdi-chevron-down"></i>
+            </span>
+            <ul class="mobile-sub-menue">
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-2-1</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-2-2</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-2-3</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-2-4</a>
+               </li>
+            </ul>
+         </li>
+         <li class="mobile-menue_item">
+            <span>
+               Меню 3
+               <i class="mdi mdi-chevron-right"></i>
+               <i class="mdi mdi-chevron-down"></i>
+            </span>
+            <ul class="mobile-sub-menue">
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-3-1</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-3-2</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-3-3</a>
+               </li>
+               <li class="mobile-sub_item">
+                  <a href="#">подменю-3-4</a>
+               </li>
+            </ul>
+         </li>
+      </ul>
+   </div>
    <main class="main-content index-bg">
       <div class="share-links">
          <a href="#">
@@ -194,10 +261,17 @@
        </div>
    </main>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   <script src="js/jquery.touchSwipe.min.js" charset="utf-8"></script>
    <script>
+      var DocSize = $(document).width();
+
       $('#MenueToggle').click(function() {
          $("body").toggleClass('menue-open');
-      })
+         $(document).bind('touchmove', function(e) {
+            e.preventDefault();
+         });
+      });
+
       $('.main-nav-list_name').click(function(){
          var submenue = $(this).next();
 
@@ -211,6 +285,44 @@
             submenue.slideUp(500).prev().removeClass('active');
          }
       });
+
+      $('.mobile-menue_item span').click(function() {
+         var submenue = $(this).next();
+
+         $('.mobile-menue_item span').removeClass('active');
+         $(this).toggleClass('active');
+
+         if (submenue.is(":hidden")) {
+            $('.mobile-sub-menue').slideUp(200);
+            submenue.slideDown(200);
+         } else {
+            submenue.slideUp(200).prev().removeClass('active');
+         }
+      })
+
+      //if mobile
+      if (DocSize < 768) {
+         //swipe slider left/right
+         $("#slides").swipe( {
+            swipeLeft:function(event, direction, distance, duration, fingerCount) {
+               slider.superslides('animate', 'next');
+            },
+            swipeRight:function(event, direction, distance, duration, fingerCount) {
+               slider.superslides('animate', 'prev');
+            }
+         });
+         //swipe head open/close
+         $(".main-header").swipe( {
+            swipeLeft:function(event, direction, distance, duration, fingerCount) {
+               $("body").removeClass('menue-open')
+            },
+            swipeRight:function(event, direction, distance, duration, fingerCount) {
+               $("body").addClass('menue-open')
+            }
+         });
+      }
+
+
    </script>
 </body>
 </html>

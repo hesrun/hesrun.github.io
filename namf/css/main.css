@@ -274,6 +274,73 @@ body.menue-open {
     font-size: 18px;
 }
 
+.mobile-menue {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    overflow: auto;
+    background: #212121;
+    color: #fff;
+    width: 250px;
+    transform: translateX(-100%);
+    transition: all 0.3;
+}
+
+.mobile-nav {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.mobile-sub-menue {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
+
+.mobile-menue_item span {
+    cursor: pointer;
+    display: block;
+    padding: 10px 10px;
+    border-bottom: 1px rgba(170, 170, 170, 0.1) solid;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.mobile-menue_item span .mdi-chevron-down {
+    display: none;
+}
+
+.mobile-menue_item span.active {
+    color: #d34aab;
+}
+
+.mobile-menue_item span.active .mdi-chevron-down {
+    display: block;
+}
+
+.mobile-menue_item span.active .mdi-chevron-right {
+    display: none;
+}
+
+.mobile-sub_item a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px 10px 30px;
+    border-bottom: 1px rgba(170, 170, 170, 0.1) solid;
+}
+
+.mobile-sub_item a:hover {
+    color: #d34aab;
+}
+
 .main-content {
     background: #fff;
     -ms-flex: 1 0 auto;
