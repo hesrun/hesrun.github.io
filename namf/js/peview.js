@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
 
 	//open the quick view panel
 	$('.cd-trigger').on('click', function(event){
-		var selectedImage = $(this).parent('.cd-item').find('img'),
+		var selectedImage = $(this).parents('.cd-item').find('img'),
 			slectedImageUrl = selectedImage.attr('src');
 
 		$('body').addClass('overlay-layer');
