@@ -570,10 +570,14 @@ body {
    .item {
       position: relative;
       margin-bottom: 20px;
+      overflow: hidden;
    }
    .item:hover {
       .cd-trigger {
          transform: translateY(0);
+      }
+      img {
+         transform: scale(1.1);
       }
    }
    .cd-trigger {
@@ -593,6 +597,7 @@ body {
       padding: 2px 6px;
       border-radius: 3px;
       text-transform: uppercase;
+      z-index: 1;
       &.is-sale {
          background: $pink;
       }
@@ -610,6 +615,7 @@ body {
       width: 100%;
       text-align: center;
       padding: 0 20px;
+      z-index: 1;
       h4 {
          margin: 12px 0 7px;
          font-size: 12px;
@@ -626,21 +632,34 @@ body {
       width: 100%;
       max-width: 100%;
       vertical-align: middle;
+      transition: all 0.2s
    }
 }
-.back-page {
-   display: inline-block;
-   text-decoration: none;
+.crumbs {
+   padding: 0px;
+   list-style: none;
    margin-bottom: 30px;
-   span {
-      text-decoration: underline;
+   li {
+      display: inline-block;
+      &:last-child {
+         .mdi {
+            display: none;
+         }
+      }
+   }
+   a {
+      color: #666;
+      font-size: 12px;
+      text-decoration: none;
    }
 }
 .jew-item {
-   margin-top:30px;
+   padding: 30px 0 40px;
+   margin-bottom: 40px;
+   background: #fff;
+   color: #666;
    .product-photo {
-      max-width: 450px;
-      margin: 0 auto 40px;
+      max-width: 550px;
    }
    .sp-wrap {
       max-width: 100%;
@@ -648,171 +667,221 @@ body {
       border: none;
       float: none;
       margin: 0px;
+      padding-left: 150px;
    }
    .sp-large {
-      border: 2px solid #f1f1f1;
+      border: none
    }
    .sp-thumbs {
-      margin: 0 -5px;
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 20px;
       a {
-         width: 74px;
-         height: 74px;
-         border: 2px solid #f1f1f1;
-         margin: 10px 5px 0;
+         display: block;
+         width: 100px;
+         height: 100px;
+         border: 1px solid #f1f1f1;
+         margin: 0 0 15px 0;
+      }
+      .sp-current {
+         border: 1px solid $pink;
       }
    }
    .product-info {
       max-width: 610px;
    }
    .jew-name {
-      margin: 15px 0;
-      font-weight: normal;
-      font-size: 26px;
+      margin: 0px;
+      font-weight: 300;
+      font-size: 25px;
    }
    .ref {
-      font-size: 14px;
-   }
-   .warranty-shipping {
-      color: $pink;
       display: flex;
-      margin: 25px 0;
-      .button {
-         cursor: pointer;
-         display: flex;
-         align-items: center;
-         margin-right: 55px;
-         position: relative;
-         &:last-child {
-            margin: 0px;
-         }
-         > .mdi {
-            font-size: 30px;
-            margin-right: 17px;
-         }
-         > span {
-            border-bottom: 1px $pink dashed;
-         }
+      align-items: center;
+      font-size: 12px;
+      margin-top: 5px;
+      span {
+         margin-right: 10px;
+         background: #f5f5f5;
+         border-radius: 2px;
+         color: #666;
+         font-size: 10px;
+         padding: 3px 7px;
+         text-transform: uppercase;
       }
-   }
-   .warrantly {
-      color: #000;
-      padding: 60px;
-      background: url(../img/warantly.png) no-repeat;
-      position: absolute;
-      width: 526px;
-      height: 740px;
-      z-index: 2;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-75px);
-      display: none;
-      h4 {
-         font-size: 21px;
-         margin-top: 0px;
-         margin-bottom: 10px;
-         text-align: center;
-      }
-      p {
-         font-size: 14px;
-         line-height: 18px;
-         margin-bottom: 10px;
-         text-indent: 10px;
-      }
-   }
-   .deliver-win {
-      background: #fff;
-      box-shadow: 0 0 25px -10px rgba(0, 0, 0, 0.8);
-      width: 406px;
-      padding: 20px;
-      position: absolute;
-      left: 50%;
-      top: 0px;
-      transform: translate(-50%,-75px);
-      z-index: 2;
-      display: none;
    }
    .jew-desc {
+      margin-top: 20px;
       font-size: 14px;
       line-height: 22px;
    }
-   .price {
-      font-size: 40px;
+   hr {
+      border: none;
+      height: 1px;
+      background: #e9e9e9;
+      margin: 30px 0 30px;
+   }
+   .price-block {
+      font-weight: 300;
+      strong {
+         font-weight: 300;
+      }
+      span {
+         font-size: 70%;
+      }
+   }
+   .current-price {
+      color: #000;
+      font-size: 50px;
+      display: inline-block;
+   }
+   .sale-price {
+      color: #aaaaaa;
+      margin-left: 50px;
+      display: inline-block;
+      font-size: 30px;
+      text-decoration: line-through;
    }
    .choise-size {
-      background: #f0f0f0;
-      border-radius: 5px;
-      margin: 30px 0;
-      padding: 15px 20px 20px;
+      margin: 30px 0 15px;
       span {
-         font-size: 14px;
+         font-size: 12px;
+         text-transform: uppercase;
+         a {
+            text-decoration: none;
+            color: inherit;
+            border-bottom: 1px #666 dotted;
+            &:hover {
+               color: $pink;
+               border-color: $pink;
+            }
+         }
       }
       .size-list {
+         font-size: 0px;
          margin: 15px 0 0;
          input {
             display: none;
             &:checked + label {
-               border-color: $pink;
-               background: $pink;
-               color: #fff;
+               border-color: #000;
+               color: #000;
+               z-index: 1;
             }
             &:disabled + label {
-               color: #cfcfcf;
-               cursor: auto;
-               border-color: #cfcfcf;
+               border: 1px solid #e9e9e9;
+               color: #999;
+               opacity: 0.5;
             }
          }
       }
       label {
-         background: #ffffff;
-         border: 1px solid #cfcfcf;
+         border: 1px solid #e9e9e9;
+         color: #999;
          cursor: pointer;
          display: inline-block;
-         font-size: 13px;
-         height: 29px;
-         line-height: 29px;
-         margin: 0 8px 15px 0;
+         font-size: 14px;
+         height: 35px;
+         line-height: 35px;
          text-align: center;
-         width: 35px;
+         width: 40px;
+         margin-left: -1px;
+         position: relative;
          &:hover {
-            border-color: $pink;
+            border-color: #000;
+            color: #000;
+            z-index: 1;
+         }
+      }
+   }
+   .to-bay {
+      .btn {
+         width: 270px;
+         display: inline-block;
+      }
+      .counts {
+         display: inline-block;
+         margin-left: 20px;
+         font-size: 12px;
+         line-height: 15px;
+         img {
+            vertical-align: middle;
+            margin-right: 2px;
          }
       }
    }
    .help-btns {
-      .btn {
-         text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .item {
+         display: flex;
+         align-items: center;
       }
-      .row > div {
-         position: relative;
-         > .btn {
-            margin-bottom: 20px;
+      a {
+         margin-left: 7px;
+         font-size: 12px;
+         color: #333;
+         border-bottom: 1px #333 dotted;
+         text-transform: uppercase;
+         text-decoration: none;
+         &:hover {
+            color: $pink;
+            border-color: $pink;
          }
       }
    }
-   .help-win {
-      width: 280px;
-      position: absolute;
-      left: 50%;
-      bottom: 0px;
-      background: #fff;
-      box-shadow: 0 0 25px -10px rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      z-index: 2;
-      transform: translate(-50%, 20px);
-      display: none;
-      .btn {
+   .to-share {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 12px;
+      a {
+         color: #b2b2b2;
+         margin-left: 10px;
+         text-decoration: none;
+         display: block;
+         border: 2px #b2b2b2 solid;
+         border-radius: 50%;
+         width: 33px;
+         height: 33px;
          text-align: center;
-      }
-      &.share {
-         a {
-            text-align: left;
-            margin-bottom: 18px;
-            &:last-child {
-               margin-bottom: 0px;
-            }
-         }
+         line-height: 28px;
+         font-size: 16px;
       }
    }
+}
+.warrantly {
+   color: #000;
+   padding: 60px;
+   background: url(../img/warantly.png) no-repeat;
+   width: 526px;
+   height: 740px;
+   z-index: 2;
+   left: 50%;
+   top: 50%;
+   h4 {
+      font-size: 21px;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      text-align: center;
+   }
+   p {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 10px;
+      text-indent: 10px;
+   }
+}
+.deliver-win {
+   background: #fff;
+   box-shadow: 0 0 25px -10px rgba(0, 0, 0, 0.8);
+   width: 406px;
+   padding: 20px;
+   left: 50%;
+   top: 0px;
+   z-index: 2;
 }
 .delivery-methods {
    .item {
@@ -858,37 +927,183 @@ body {
       display: none;
    }
 }
-.more-jews {
-   margin-top: 60px;
-   h2 {
-      font-size: 21px;
-      font-weight: normal;
-   }
-   ul {
-      list-style: none;
-      padding: 0px;
-      > li {
-         margin-bottom: 30px;
+
+.text-section {
+   color: #666;
+   &.white {
+      color: #fff;
+      .text-block {
+         h2, p, span {
+            color: #fff;
+         }
       }
    }
-   .img {
-      text-align: center;
-      border: 2px solid #f1f1f1;
-      display: block;
-      margin-bottom: 10px;
+   .nopad-l {
+      padding-left: 0px;
    }
-   .name {
-      display: block;
+   .nopad-r {
+      padding-right: 0px;
    }
-   .price {
-      border: 1px solid #c0c0c0;
-      border-radius: 3px;
-      display: inline-block;
+   .col-flex {
+      display: flex;
+      flex-direction: column;
+   }
+   .sec-img-block {
+      flex:  1 1 auto;
+   }
+   .sec-text-block-img {
+      display: flex;
+      flex: 0 0 auto;
+      > div {
+         flex: 0 0 50%;
+      }
+   }
+   .sec-text-block {
+      color: #fff;
+      background: #d981bf;
+      padding: 60px 80px;
       font-size: 14px;
-      margin: 10px 0 0;
-      padding: 3px 8px;
+      font-weight: 400;
+      flex: 0 0 auto;
+      h4 {
+         font-size: 14px;
+         font-weight: 600;
+         margin: 0 0 10px 0;
+      }
+      p {
+         margin: 0px;
+      }
+   }
+   .bg-white {
+      background: #fff;
+   }
+   .bg-sec-1 {
+      background: url(../img/enamel-prev.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+   .bg-sec-2 {
+      background: url(../img/enamel-prev-2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+   .bg-sec-3 {
+      background: url(../img/enamel-prev-3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+   }
+   &.bg-1 {
+      background: url(../img/text-sec-1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left top;
+   }
+   &.bg-2 {
+      background: url(../img/text-sec-2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left top;
+   }
+   &.bg-3 {
+      background: url(../img/text-sec-3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right top;
+   }
+   &.bg-4 {
+      background: url(../img/text-sec-4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left top;
+   }
+   &.bg-5 {
+      background: url(../img/text-sec-5.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right top;
+   }
+   &.bg-6 {
+      background: url(../img/text-sec-6.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right center;
+   }
+   &.bg-7 {
+      background: url(../img/text-sec-7.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left center;
+   }
+   &.bg-8 {
+      background: url(../img/text-sec-8.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right center;
+   }
+   &.bg-9 {
+      background: url(../img/text-sec-9.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left center;
+   }
+   &.bg-10 {
+      background: url(../img/text-sec-10.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right center;
+   }
+   .text-block {
+      padding: 60px 0 60px 30px;
+      max-width: 570px;
+      &.is-left {
+         padding-left: 60px;
+      }
+      h2 {
+         color: #000;
+         font-size: 35px;
+         font-weight: 300;
+         margin: 0 0 30px;
+         line-height: 40px;
+         letter-spacing: -1px;
+      }
+      p {
+         font-weight: 400;
+         margin: 30px 0;
+         font-size: 15px;
+         line-height: 25px;
+         &.bolder {
+            color: #000;
+            font-size: 19px;
+            line-height: 28px;
+         }
+      }
+   }
+   .cols {
+      display: flex;
+      justify-content: space-between;
+      span {
+         display: block;
+         font-size: 40px;
+         font-weight: 300;
+         color: #000;
+         & + span {
+            font-size: 12px;
+            text-transform: uppercase;
+         }
+      }
+      img + span {
+         margin-top: 10px;
+         font-size: 12px;
+         text-transform: uppercase;
+         font-weight: 400;
+         color: #000;
+      }
    }
 }
+
 /**********enamel**************/
 .img-top {
    top: 0px !important;
@@ -1401,23 +1616,6 @@ body {
       display: block;
       font-size: 31px;
       margin: 25px 0;
-   }
-}
-.crumbs {
-   display: flex;
-   flex-wrap: wrap;
-   padding: 0px;
-   margin: 0px;
-   list-style: none;
-   color: #a3a3a3;
-   li {
-      white-space: nowrap;
-   }
-   i {
-      margin: 0 15px;
-   }
-   .active {
-      color: #000;
    }
 }
 .promo {
