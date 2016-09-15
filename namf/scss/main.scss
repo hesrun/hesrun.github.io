@@ -41,6 +41,16 @@ a {
 .center {
    text-align: center;
 }
+.remodal {
+   text-align: left;
+}
+.remodal.clear-bg {
+   background: none;
+   padding: 0px;
+   margin: 0px;
+   width: auto;
+   max-width: none;
+}
 html {
    font-family: 'Roboto', sans-serif;
    font-size: 15px;
@@ -883,6 +893,10 @@ body {
    top: 0px;
    z-index: 2;
 }
+.feed-modal {
+   padding: 20px;
+   background: #fff;
+}
 .delivery-methods {
    .item {
       display: flex;
@@ -927,7 +941,35 @@ body {
       display: none;
    }
 }
-
+.about-work-section {
+   background: #fff;
+   padding: 50px 0;
+   h3 {
+      margin: 0 0 40px;
+   }
+   .item {
+      font-size: 14px;
+   }
+   .ico {
+      min-height: 60px;
+      display: flex;
+      img {
+         margin: auto;
+      }
+   }
+   strong {
+      text-transform: uppercase;
+      display: block;
+      margin-top: 20px;
+   }
+   p {
+      margin: 10px;
+      color: #666666;
+   }
+   a {
+      text-decoration: none;
+   }
+}
 .text-section {
    color: #666;
    &.white {
@@ -1060,6 +1102,17 @@ body {
       max-width: 570px;
       &.is-left {
          padding-left: 60px;
+      }
+      &.is-center {
+         text-align: center;
+         max-width: 850px;
+         margin: 0 auto;
+         .cols {
+            justify-content: center;
+            .item {
+               margin: 0 50px;
+            }
+         }
       }
       h2 {
          color: #000;
