@@ -224,7 +224,7 @@ body.menue-open {
     float: left;
     display: -ms-flexbox;
     display: flex;
-    width: calc(100% - 400px);
+    width: calc(100% - 500px);
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
@@ -265,22 +265,31 @@ body.menue-open {
 }
 
 .main_nav_product {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
     padding: 40px;
-    float: right;
-    width: 400px;
+    display: -ms-flexbox;
+    display: flex;
+    width: 500px;
     text-align: center;
     border-left: 1px #ededed solid;
 }
 
+.main_nav_product img {
+    margin: auto;
+}
+
 .main_nav_product .name {
+    display: none;
     margin-top: 10px;
-    display: block;
     font-size: 14px;
 }
 
 .main_nav_product .price {
+    display: none;
     margin-top: 5px;
-    display: block;
     font-size: 18px;
 }
 
@@ -693,14 +702,26 @@ body.menue-open {
     margin: 5px 0 15px;
 }
 
+.catalog-list .lbl h3 {
+    color: #000000;
+    font-size: 35px;
+    font-weight: 300;
+    text-transform: none;
+}
+
 .catalog-list .item {
     position: relative;
     margin-bottom: 20px;
     overflow: hidden;
 }
 
+.catalog-list .cd-trigger {
+    opacity: 0;
+}
+
 .catalog-list .item:hover .cd-trigger {
     transform: translateY(0);
+    opacity: 1;
 }
 
 .catalog-list .item:hover img {
@@ -1159,6 +1180,10 @@ body.menue-open {
     display: none;
 }
 
+.fast-view-modal .jew-item {
+    padding: 40px;
+}
+
 .about-work-section {
     background: #fff;
     padding: 50px 0;
@@ -1206,7 +1231,7 @@ body.menue-open {
 }
 
 .text-section.white .text-block h2, .text-section.white .text-block p, .text-section.white .text-block span {
-    color: #fff;
+    color: #fff !important;
 }
 
 .text-section .bg-white {
@@ -1413,8 +1438,11 @@ body.menue-open {
 .text-section .cols {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+}
+
+.text-section .cols .item {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 .text-section .cols span {
@@ -1429,6 +1457,15 @@ body.menue-open {
     text-transform: uppercase;
 }
 
+.text-section .cols .ico {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 65px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.text-section .cols .ico + span,
 .text-section .cols img + span {
     margin-top: 10px;
     font-size: 12px;
@@ -1613,7 +1650,6 @@ body.menue-open {
 }
 
 .slide-container.how-work .next-step span span {
-    text-decoration: underline;
     text-transform: uppercase;
 }
 
