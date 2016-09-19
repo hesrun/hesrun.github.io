@@ -590,10 +590,31 @@ body {
          text-transform: none;
       }
    }
+   .tr-img {
+      width: 100%;
+      vertical-align: middle;
+   }
+   .img-2-1 {
+      .tr-img {
+         width: calc(100% - 20px);
+      }
+   }
+   .img-1-2 {
+      .tr-img {
+         margin-bottom: 20px;
+      }
+   }
+   .prod-img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+   }
    .item {
       position: relative;
       margin-bottom: 20px;
       overflow: hidden;
+      background: #fff;
    }
    .cd-trigger {
       opacity: 0
@@ -602,9 +623,6 @@ body {
       .cd-trigger {
          transform: translateY(0);
          opacity: 1;
-      }
-      img {
-         transform: scale(1.1);
       }
    }
    .cd-trigger {
@@ -654,12 +672,6 @@ body {
          font-size: 18px;
          font-weight: 500;
       }
-   }
-   img {
-      width: 100%;
-      max-width: 100%;
-      vertical-align: middle;
-      transition: all 0.2s
    }
 }
 .crumbs {
