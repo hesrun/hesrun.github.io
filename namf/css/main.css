@@ -626,13 +626,13 @@ body.menue-open {
     cursor: pointer;
 }
 
-.product-filters .filter-item:hover .filter-drop {
+.product-filters .filter-item:hover .filter-drop, .product-filters .filter-item.active .filter-drop {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
 }
 
-.product-filters .filter-item:hover .mdi {
+.product-filters .filter-item:hover .mdi, .product-filters .filter-item.active .mdi {
     transform: rotateX(180deg);
 }
 
@@ -803,9 +803,9 @@ body.menue-open {
 }
 
 .crumbs {
-    padding: 0px;
+    padding: 30px 0;
     list-style: none;
-    margin-bottom: 30px;
+    margin: 0px;
 }
 
 .crumbs li {
@@ -996,7 +996,7 @@ body.menue-open {
     line-height: 35px;
     text-align: center;
     width: 40px;
-    margin-left: -1px;
+    margin: -1px 0 0 -1px;
     position: relative;
 }
 
@@ -1427,7 +1427,6 @@ body.menue-open {
 }
 
 .text-section .text-block h2 {
-    color: #000;
     font-size: 35px;
     font-weight: 300;
     margin: 0 0 30px;
@@ -1443,7 +1442,6 @@ body.menue-open {
 }
 
 .text-section .text-block p.bolder {
-    color: #000;
     font-size: 19px;
     line-height: 28px;
 }
@@ -2881,8 +2879,145 @@ article > .news-date {
 
 @media (max-width: 544px) {
   /*xs*/
+    .gp {
+        padding: 0px;
+    }
+
     .mag-list .adress-mag {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
+    }
+  /******************catalog************/
+    .catalog-container {
+        padding-top: 0px;
+    }
+
+    .catalog-banner {
+        background: #fff;
+        padding: 15px 0;
+    }
+
+    .product-filters {
+        padding-bottom: 20px;
+    }
+
+    .product-filters .container {
+        display: block;
+    }
+
+    .product-filters .filter-item {
+        margin: 0px;
+    }
+
+    .catalog-list .lbl h3 {
+        font-size: 20px;
+        margin-top: 0px;
+    }
+  /*********************jew page***********/
+    .jew-item hr {
+        margin: 20px 0;
+    }
+
+    .jew-item .to-bay .counts {
+        display: block;
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+
+    .jew-item .to-share {
+        margin: 20px 0;
+    }
+
+    .jew-item .to-share .btns {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .jew-item .info-share {
+        display: block;
+    }
+
+    .jew-item .help-btns {
+        display: block;
+        margin: 0px;
+    }
+
+    .jew-item .help-btns .item {
+        margin: 10px 0;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .about-work-section .item {
+        margin: 30px 0;
+    }
+
+    .text-section {
+        margin: 0 -10px;
+    }
+
+    .text-section.bg-4 {
+        color: #fff;
+    }
+
+    .text-section .col-flex {
+        display: block;
+    }
+
+    .text-section .nopad-l {
+        padding-left: 10px;
+    }
+
+    .text-section .nopad-r {
+        padding-right: 10px;
+    }
+
+    .text-section .cols {
+        display: block;
+    }
+
+    .text-section .cols .ico {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .text-section .cols .item {
+        margin-top: 30px !important;
+        text-align: center;
+    }
+
+    .text-section .sec-img-block {
+        min-height: 200px;
+    }
+
+    .text-section .sec-text-block {
+        padding: 20px 10px;
+    }
+
+    .text-section .text-block {
+        padding: 20px 10px;
+    }
+
+    .text-section .text-block.is-left {
+        padding-left: 10px;
+    }
+
+    .text-section .text-block h2 {
+        font-weight: 600;
+        line-height: normal;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .text-section .text-block p.bolder {
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: normal;
+    }
+
+    .text-section .text-block p {
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: normal;
     }
 }

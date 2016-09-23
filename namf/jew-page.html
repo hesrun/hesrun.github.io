@@ -402,7 +402,8 @@
                            <span class="price">9 990 ₽</span>
                         </div>
                         <div class="product-status is-sale">sale</div>
-                        <img src="img/n-cat/prod-1-1.png" alt="">
+                        <img class="tr-img" src="img/n-cat/tr-1-1.png" alt="">
+                        <img class="prod-img" src="img/n-cat/prod-1-1.png" alt="">
                      </div>
                   </div>
                   <div class="col-xs-12 col-md-6 col-xl-3">
@@ -413,7 +414,8 @@
                            <span class="price">9 990 ₽</span>
                         </div>
                         <div class="product-status is-hot">хит сезона</div>
-                        <img src="img/n-cat/prod-1-1.png" alt="">
+                        <img class="tr-img" src="img/n-cat/tr-1-1.png" alt="">
+                        <img class="prod-img" src="img/n-cat/prod-1-1.png" alt="">
                      </div>
                   </div>
                   <div class="col-xs-12 col-md-6 col-xl-3">
@@ -424,7 +426,8 @@
                            <span class="price">9 990 ₽</span>
                         </div>
                         <div class="product-status is-ammount">Осталась 1 штука</div>
-                        <img src="img/n-cat/prod-1-1.png" alt="">
+                        <img class="tr-img" src="img/n-cat/tr-1-1.png" alt="">
+                        <img class="prod-img" src="img/n-cat/prod-1-1.png" alt="">
                      </div>
                   </div>
                   <div class="col-xs-12 col-md-6 col-xl-3">
@@ -435,7 +438,8 @@
                            <span class="price">9 990 ₽</span>
                         </div>
                         <div class="product-status is-sale">sale</div>
-                        <img src="img/n-cat/prod-1-1.png" alt="">
+                        <img class="tr-img" src="img/n-cat/tr-1-1.png" alt="">
+                        <img class="prod-img" src="img/n-cat/prod-1-1.png" alt="">
                      </div>
                   </div>
                </div>
@@ -934,10 +938,6 @@
    <script>
       var DocSize = $(document).width();
 
-      skrollr.init({
-   		forceHeight: false
-   	});
-
       $('#MenueToggle').click(function() {
          $("body").toggleClass('menue-open');
          $(document).bind('touchmove', function(e) {
@@ -993,7 +993,12 @@
                $("body").addClass('menue-open')
             }
          });
-      }
+      } else {
+         skrollr.init({
+      		forceHeight: false
+      	});
+      };
+
       $('.help-btns .btn').click(function() {
          $(this).next().fadeIn(300);
       });
