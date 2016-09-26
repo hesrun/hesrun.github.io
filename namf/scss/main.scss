@@ -511,25 +511,20 @@ body {
       font-weight: 400;
       margin-right: 40px;
       cursor: pointer;
-      &:hover , &.active {
-         .filter-drop {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
-         }
+   }
+   .name {
+      padding: 15px 0;
+      &.active {
          .mdi {
             transform: rotateX(180deg);
          }
       }
-
-   }
-   .name {
-      padding: 15px 0;
       .mdi {
          transition: all 0.2s;
       }
    }
    .filter-drop {
+      display: none;
       top: calc(100% - 5px);
       position: absolute;
       width: 200px;
@@ -539,10 +534,6 @@ body {
       padding: 10px 15px;
       box-shadow: 0 10px 25px 0  rgba(#000,0.15);
       z-index: 2;
-      visibility: hidden;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.3s;
       &:before {
          content: "";
          position: absolute;
@@ -572,7 +563,7 @@ body {
       text-decoration: none;
       font-size: 13px;
       padding: 5px 0;
-      &:hover {
+      &:hover, &.active {
          color: $pink;
       }
    }
@@ -609,6 +600,7 @@ body {
       left: 50%;
       top: 50%;
       transform: translate(-50%,-50%);
+      max-width: 100%;
    }
    .item {
       position: relative;
@@ -1593,6 +1585,9 @@ body {
       padding-bottom: 50px;
       margin-bottom: 50px;
       border-bottom: 1px #eee solid;
+      &:last-child {
+         border-bottom: none;
+      }
    }
    a {
       font-size: 19px;
@@ -2054,6 +2049,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: space-around;
+   height: 100%;
    .text-box {
       width: 100%;
       max-width: 430px;
