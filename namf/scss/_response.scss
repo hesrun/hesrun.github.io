@@ -268,12 +268,22 @@
    }
 }
 @media (max-width: 544px) { /*xs*/
+   .btn {
+      width: 100%;
+   }
    .gp {
       padding: 0px;
    }
    .mag-list {
       .adress-mag {
          flex: 0 0 100%;
+      }
+   }
+   /***************news****************/
+   .news-list {
+      li {
+         margin-bottom: 15px;
+         padding-bottom: 5px;
       }
    }
    /******************catalog************/
@@ -361,6 +371,9 @@
             text-align: center;
             margin: 20px 0 0 0;
          }
+         .btn {
+            width: 100%;
+         }
       }
       .to-share {
          margin: 20px 0;
@@ -375,8 +388,13 @@
          display: block;
          margin: 0px;
          .item {
-            margin: 10px 0;
+            margin: 0px;
+            padding: 20px 0;
             justify-content: center;
+            border-bottom: 1px #e9e9e9 solid;
+            &:first-child {
+               padding-top: 0px;
+            }
          }
       }
    }
