@@ -794,8 +794,12 @@ body.menue-open {
     font-weight: 500;
 }
 
+.page-crumbs {
+    border-bottom: 1px solid #dddddd;
+}
+
 .crumbs {
-    padding: 30px 0;
+    padding: 0px;
     list-style: none;
     margin: 0px;
 }
@@ -809,18 +813,19 @@ body.menue-open {
 }
 
 .crumbs a {
+    display: block;
+    padding: 15px 0;
     color: #666;
-    font-size: 12px;
     text-decoration: none;
     transition: all 0.2s;
 }
 
-.crumbs a:hover {
+.crumbs a:hover, .crumbs a.active {
     color: #d34aab;
 }
 
 .jew-item {
-    padding: 30px 0 40px;
+    padding: 0px 0 40px;
     margin-bottom: 40px;
     background: #fff;
     color: #666;
@@ -1013,6 +1018,13 @@ body.menue-open {
 .jew-item .to-bay .counts img {
     vertical-align: middle;
     margin: -2px 2px 0 0;
+}
+
+.jew-item .return {
+    font-size: 12px;
+    font-style: italic;
+    color: #888;
+    margin-top: 30px;
 }
 
 .jew-item .info-share {
@@ -2797,11 +2809,16 @@ article > .news-date {
     }
 
     .carousel {
+        overflow-x: auto;
         height: 76px;
     }
 
     .carousel img {
         width: 76px;
+    }
+
+    .carousel .viewport {
+        left: auto !important;
     }
 
     .shipping-adress {

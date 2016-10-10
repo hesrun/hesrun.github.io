@@ -667,8 +667,11 @@ body {
       }
    }
 }
+.page-crumbs {
+   border-bottom: 1px solid #dddddd;
+}
 .crumbs {
-   padding: 30px 0;
+   padding: 0px;
    list-style: none;
    margin: 0px;
    li {
@@ -680,17 +683,18 @@ body {
       }
    }
    a {
+      display: block;
+      padding: 15px 0;
       color: #666;
-      font-size: 12px;
       text-decoration: none;
       transition: all 0.2s;
-      &:hover {
+      &:hover, &.active {
          color: $pink;
       }
    }
 }
 .jew-item {
-   padding: 30px 0 40px;
+   padding: 0px 0 40px;
    margin-bottom: 40px;
    background: #fff;
    color: #666;
@@ -851,6 +855,12 @@ body {
             margin: -2px 2px 0 0;
          }
       }
+   }
+   .return {
+      font-size: 12px;
+      font-style: italic;
+      color: #888;
+      margin-top: 30px;
    }
    .info-share {
       display: flex;
