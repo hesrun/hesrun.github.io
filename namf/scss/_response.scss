@@ -15,10 +15,6 @@
          display: none;
       }
    }
-   .catalog-container,
-   .jew-item {
-      padding-top: 30px;
-   }
    .page-container {
       padding-top: 30px;
    }
@@ -38,9 +34,17 @@
       position: static;
       display: block;
    }
-   .news-img {
-      margin: 30px 0 0 0;
-      max-width: 100%;
+   .new-item {
+      display: flex;
+      flex-direction: column;
+      .news-img {
+         margin: 0px;
+         order: -1;
+         max-width: 100%;
+      }
+      article {
+         order: 1;
+      }
    }
    .map {
       padding: 0px;
@@ -74,6 +78,18 @@
          display: none;
       }
    }
+   .jew-item {
+      .sp-wrap {
+         padding: 0px;
+      }
+      .sp-thumbs {
+         position: static;
+      }
+      .sp-thumbs a {
+         display: inline-block;
+         margin: 0 10px 10px 0;
+      }
+   }
 }
 @media (max-width: 768px) { /*sm*/
    .how-made-photo {
@@ -91,7 +107,8 @@
       }
    }
    .gp {
-      padding: 0 15px;
+      padding-left: 15px;
+      padding-right: 15px;
    }
    .page-container {
       margin-left: 0px;
@@ -276,7 +293,8 @@
       width: 100%;
    }
    .gp {
-      padding: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
    }
    .mag-list {
       .adress-mag {
@@ -289,6 +307,9 @@
          margin-bottom: 15px;
          padding-bottom: 5px;
       }
+      .news-date {
+         display: none;
+      }
    }
    /******************catalog************/
    .catalog-container {
@@ -299,10 +320,9 @@
       padding: 15px 0;
    }
    .choised-filter  {
-      margin-top: 20px;
+      margin: 20px 0;
    }
    .product-filters {
-      padding-bottom: 20px;
       .container {
          display: block;
       }

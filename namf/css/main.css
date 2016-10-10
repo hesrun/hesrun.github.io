@@ -795,6 +795,7 @@ body.menue-open {
 }
 
 .page-crumbs {
+    background: #fff;
     border-bottom: 1px solid #dddddd;
 }
 
@@ -802,6 +803,7 @@ body.menue-open {
     padding: 0px;
     list-style: none;
     margin: 0px;
+    padding: 10px 0;
 }
 
 .crumbs li {
@@ -814,7 +816,7 @@ body.menue-open {
 
 .crumbs a {
     display: block;
-    padding: 15px 0;
+    padding: 5px 0;
     color: #666;
     text-decoration: none;
     transition: all 0.2s;
@@ -825,7 +827,7 @@ body.menue-open {
 }
 
 .jew-item {
-    padding: 0px 0 40px;
+    padding: 40px 0 40px;
     margin-bottom: 40px;
     background: #fff;
     color: #666;
@@ -2595,11 +2597,6 @@ article > .news-date {
         display: none;
     }
 
-    .catalog-container,
-  .jew-item {
-        padding-top: 30px;
-    }
-
     .page-container {
         padding-top: 30px;
     }
@@ -2622,9 +2619,23 @@ article > .news-date {
         display: block;
     }
 
-    .news-img {
-        margin: 30px 0 0 0;
+    .new-item {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .new-item .news-img {
+        margin: 0px;
+        -ms-flex-order: -1;
+        order: -1;
         max-width: 100%;
+    }
+
+    .new-item article {
+        -ms-flex-order: 1;
+        order: 1;
     }
 
     .map {
@@ -2662,6 +2673,19 @@ article > .news-date {
         margin: auto;
         display: none;
     }
+
+    .jew-item .sp-wrap {
+        padding: 0px;
+    }
+
+    .jew-item .sp-thumbs {
+        position: static;
+    }
+
+    .jew-item .sp-thumbs a {
+        display: inline-block;
+        margin: 0 10px 10px 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -2683,7 +2707,8 @@ article > .news-date {
     }
 
     .gp {
-        padding: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .page-container {
@@ -2910,7 +2935,8 @@ article > .news-date {
     }
 
     .gp {
-        padding: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 
     .mag-list .adress-mag {
@@ -2921,6 +2947,10 @@ article > .news-date {
     .news-list li {
         margin-bottom: 15px;
         padding-bottom: 5px;
+    }
+
+    .news-list .news-date {
+        display: none;
     }
   /******************catalog************/
     .catalog-container {
@@ -2933,11 +2963,7 @@ article > .news-date {
     }
 
     .choised-filter {
-        margin-top: 20px;
-    }
-
-    .product-filters {
-        padding-bottom: 20px;
+        margin: 20px 0;
     }
 
     .product-filters .container {
