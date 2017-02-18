@@ -1,0 +1,590 @@
+* {
+  box-sizing: border-box;
+}
+
+a, button, input, textarea {
+  outline: none;
+}
+
+a {
+  color: #0076cd;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+p {
+  line-height: 1.2;
+}
+
+.v-pad {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.g-pad {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.img-response {
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.main-header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.register-bar {
+  background: #910b02;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.register-bar img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.register-bar .text {
+  display: inline-block;
+  font-size: 14px;
+  color: #ff6b5e;
+  padding: 14px 0;
+  margin-left: 20px;
+}
+
+.register-bar a {
+  color: #fff;
+}
+
+.register-bar i.fa {
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  margin-top: 12px;
+}
+
+.main-nav {
+  background: #000;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.main-nav li {
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.main-nav a {
+  color: #fff;
+  display: block;
+  padding: 9px 15px;
+  text-decoration: none;
+  position: relative;
+}
+
+.main-nav a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  width: 0%;
+  height: 1px;
+  background: orange;
+  transition: all 0.2s;
+}
+
+.main-nav a.current {
+  color: orange;
+}
+
+.main-nav a.current:after {
+  left: 0%;
+  width: 100%;
+}
+
+.burger-btn {
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.burger-btn span {
+  display: block;
+  background: #fff;
+  height: 2px;
+  width: 30px;
+  margin: 5px;
+  transition: all 0.3s;
+}
+
+.burger-btn.close span {
+  background: orange;
+}
+
+.burger-btn.close span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-btn.close span:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: 5px;
+}
+
+.burger-btn.close span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 5px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  vertical-align: middle;
+}
+
+.banner .logo {
+  position: absolute;
+  top: 95px;
+  left: 19%;
+  width: 21vw;
+}
+
+.priority .center {
+  max-width: 690px;
+  margin: 0 auto;
+}
+
+.priority p {
+  font-weight: 700;
+}
+
+.priority .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.priority .item {
+  margin-top: 40px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.333%;
+  flex: 0 0 33.333%;
+  font-size: 18px;
+  color: #3e9c00;
+}
+
+.priority img {
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+.about-wheel {
+  color: #fff;
+  background-color: #e49600;
+  background-image: url(../img/cars-bg.jpg);
+  background-position: center top;
+  background-repeat: repeat-y;
+}
+
+.about-wheel .center {
+  max-width: 890px;
+  margin: 0 auto;
+}
+
+.about-wheel .about-text {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  margin: 60px 0;
+}
+
+.about-wheel p {
+  max-width: 550px;
+  margin: auto;
+}
+
+.about-wheel .button {
+  margin-top: 70px;
+}
+
+.price-block {
+  position: relative;
+  margin-top: 70px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  color: #000;
+  padding: 30px 0;
+  z-index: 1;
+}
+
+.price-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.price-list .item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.333%;
+  flex: 0 0 33.333%;
+  margin: 40px 0;
+}
+
+.price-list .item:not(:last-child) {
+  border-right: 1px #e1f1ff solid;
+}
+
+.price-list .name {
+  margin: 22px 0;
+  font-size: 18px;
+  color: #5da7ff;
+}
+
+.price-list .price {
+  margin-top: -3px;
+  display: inline-block;
+  font-size: 28px;
+  color: #ff6b5e;
+  vertical-align: middle;
+}
+
+.price-list .price-property {
+  margin-top: 27px;
+  font-weight: 600;
+}
+
+.price-list .lbl {
+  color: #c2c2c2;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 3px;
+  font-weight: 300;
+}
+
+.shop {
+  color: #fff;
+  background-image: url(../img/tachka_mechta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.shop .center {
+  max-width: 630px;
+  margin: 60px auto 130px;
+}
+
+.shop p {
+  margin-top: 45px;
+  line-height: 1.4;
+}
+
+.photos {
+  color: #000;
+}
+
+.photos .more-photo {
+  display: inline-block;
+  margin: 30px 0 0 30px;
+}
+
+.photos .more-photo .fa {
+  font-size: 12px;
+}
+
+.grid {
+  margin-top: 40px;
+  margin: 0 15px;
+}
+
+.grid-item {
+  width: 170px;
+  margin: 15px;
+}
+
+.grid-item a {
+  display: block;
+  transition: all 0.3s;
+}
+
+.grid-item a:hover {
+  filter: blur(2px);
+}
+
+.grid-item--width2 {
+  width: 370px;
+}
+
+.video-about {
+  position: relative;
+  margin-top: -200px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.video-about.show-video {
+  margin-top: 0px;
+}
+
+.video-overlay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video-overlay .to-play {
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #ff0000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.video-overlay .to-play:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-left: 16px #fff solid;
+  border-top: 10px transparent solid;
+  border-bottom: 10px transparent solid;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-40%, -50%);
+  transform: translate(-40%, -50%);
+}
+
+.who-interest .center {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.kids-say {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+}
+
+.kids-say .single {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.kids-say .double {
+  width: 50%;
+  padding: 0 15px;
+}
+
+.kids-say strong {
+  display: block;
+  margin: 30px 0;
+}
+
+.kids-say p {
+  font-size: 14px;
+  color: #9c9c9c;
+  line-height: 1.5;
+}
+
+.kids-say .double .item {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.kids-say .double .item:last-child {
+  margin-top: 50px;
+}
+
+.kids-say .double .item img {
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+.kids-say .double .item strong {
+  margin-top: 0px;
+}
+
+.map {
+  height: 400px;
+}
+
+/*--------------------------ui*/
+.button {
+  font-size: 16px;
+  font-weight: 400;
+  background: none;
+  border: 2px #fff solid;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  line-height: 23px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.button.black {
+  border-color: #000;
+  color: #000;
+}
+
+.button.black:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 800px) {
+  .burger-btn {
+    display: inline-block;
+  }
+  .main-nav ul {
+    display: none;
+  }
+  .main-nav li {
+    display: block;
+    padding: 0px;
+  }
+  .main-nav a {
+    padding: 10px 20px;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  }
+  .main-nav a:after {
+    display: none;
+  }
+  .main-nav a.current {
+    background: orange;
+    color: #000;
+  }
+  .about-wheel .about-text {
+    font-size: 20px;
+  }
+  .price-list {
+    display: block;
+  }
+  .price-list .item:not(:last-child) {
+    padding-bottom: 40px;
+    border-right: none;
+    border-bottom: 1px rgba(204, 204, 204, 0.3) solid;
+  }
+  .video-about {
+    margin-top: 0px;
+  }
+  .kids-say {
+    display: block;
+  }
+  .kids-say .single, .kids-say .double {
+    width: auto;
+  }
+  .kids-say strong {
+    margin: 30px 0;
+  }
+  .kids-say .double .item {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+  }
+  .kids-say .double .item strong {
+    margin: 30px 0;
+  }
+  .kids-say .double img {
+    margin: 0px;
+  }
+  .grid-item {
+    width: 170px;
+    height: auto;
+  }
+  .grid-item--width2 {
+    width: 370px;
+  }
+  .grid-item--height2 {
+    height: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .v-pad {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .g-pad {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .register-bar {
+    display: none;
+  }
+  .banner .logo {
+    top: 50px;
+    left: 0px;
+  }
+  .grid {
+    padding: 0px;
+    margin: 0 7.5px;
+  }
+  .grid-item {
+    width: 46%;
+    margin: 2%;
+  }
+  .grid-item--width2 {
+    width: 98%;
+  }
+}
