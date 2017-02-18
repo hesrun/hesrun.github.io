@@ -12,7 +12,7 @@
    <link rel="stylesheet" href="css/main.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" charset="utf-8"></script>
-   <script src="js/jquery.nested.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js" charset="utf-8"></script>
    <script src="js/jquery.singlePageNav.min.js" charset="utf-8"></script>
    <script src="bower_components/lightbox2/dist/js/lightbox.js" charset="utf-8"></script>
    <title>hot wheels</title>
@@ -299,12 +299,11 @@
             $('.video-overlay').fadeIn(300);
          });
 
-         $(".grid").nested({
-            minWidth: 170,
-            gutter: 15,
-            animate: false,
-            minColumn: 2
-         });
+         $('.grid').masonry({
+           itemSelector: '.box',
+           columnWidth: '.size11',
+           percentPosition: true
+         })
 
       });
    </script>
