@@ -12,8 +12,8 @@
    <link rel="stylesheet" href="css/main.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" charset="utf-8"></script>
+   <script src="js/jquery.nested.js" charset="utf-8"></script>
    <script src="js/jquery.singlePageNav.min.js" charset="utf-8"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js" charset="utf-8"></script>
    <script src="bower_components/lightbox2/dist/js/lightbox.js" charset="utf-8"></script>
    <title>hot wheels</title>
 </head>
@@ -206,45 +206,36 @@
          <div class="container">
             <h3 class="center">Наши фотографии</h2>
             <div class="grid">
-               <div class="grid-item grid-item--height2">
-                  <a href="img/mosaic-1-2.jpg" data-lightbox="wheels">
-                     <img class="img-response" src="img/mosaic-1-2.jpg" alt="">
+               <div class="box size12">
+                  <a href="img/mosaic-1-2.jpg" style="background-image: url('img/mosaic-1-2.jpg');" data-lightbox="wheels">
                   </a>
                </div>
-               <div class="grid-item grid-sizer">
-                  <a href="img/mosaic-1-1.jpg" data-lightbox="wheels">
-                     <img class="img-response" src="img/mosaic-1-1.jpg" alt="">
+               <div class="box size11">
+                  <a href="img/mosaic-1-1.jpg" style="background-image: url('img/mosaic-1-1.jpg');" data-lightbox="wheels">
                   </a>
                </div>
-               <div class="grid-item grid-item--width2">
-                  <a href="img/mosaic-2-1.jpg" data-lightbox="wheels">
-                     <img class="img-response" src="img/mosaic-2-1.jpg" alt="">
+               <div class="box size21">
+                  <a href="img/mosaic-2-1.jpg" style="background-image: url('img/mosaic-2-1.jpg');" data-lightbox="wheels">
                   </a>
                </div>
-               <div class="grid-item">
-                  <a href="img/mosaic-1-1.jpg" data-lightbox="wheels">
-                     <img class="img-response" src="img/mosaic-1-1.jpg" alt="">
+               <div class="box size11">
+                  <a href="img/mosaic-1-1.jpg" style="background-image: url('img/mosaic-1-12.jpg');" data-lightbox="wheels">
                   </a>
                </div>
-               <div class="grid-item">
-                  <a href="img/mosaic-1-1.jpg" data-lightbox="wheels">
-                     <img class="img-response" src="img/mosaic-1-1.jpg" alt="">
+               <div class="box size11">
+                  <a href="img/mosaic-1-1.jpg" style="background-image: url('img/mosaic-1-13.jpg');" data-lightbox="wheels">
                   </a>
                </div>
-               <div class="grid-item">
-                  <a href="img/mosaic-1-1.jpg" data-lightbox="wheels">
-                     <img class="img-response" src="img/mosaic-1-1.jpg" alt="">
+               <div class="box size11">
+                  <a href="img/mosaic-1-1.jpg" style="background-image: url('img/mosaic-1-14.jpg');" data-lightbox="wheels">
                   </a>
                </div>
-               <div class="grid-item">
-                  <a href="img/mosaic-1-1.jpg" data-lightbox="wheels">
-                     <img class="img-response" src="img/mosaic-1-1.jpg" alt="">
+               <div class="box size11">
+                  <a href="img/mosaic-1-1.jpg" style="background-image: url('img/mosaic-1-15.jpg');" data-lightbox="wheels">
                   </a>
                </div>
-               <div class="grid-item">
-                  <a href="img/mosaic-1-1.jpg" data-lightbox="wheels">
-                     <img class="img-response" src="img/mosaic-1-1.jpg" alt="">
-                  </a>
+               <div class="box size11">
+                  <a href="img/mosaic-1-1.jpg" style="background-image: url('img/mosaic-1-16.jpg');" data-lightbox="wheels">
                </div>
             </div>
             <a href="#" class="more-photo">
@@ -308,12 +299,14 @@
             $('.video-overlay').fadeIn(300);
          });
 
-         $('.grid').masonry({
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
-            percentPosition: true
-         })
-      })
+         $(".grid").nested({
+            minWidth: 170,
+            gutter: 15,
+            animate: false,
+            minColumn: 2
+         });
+
+      });
    </script>
 </body>
 </html>

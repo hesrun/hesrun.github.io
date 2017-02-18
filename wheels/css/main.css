@@ -326,9 +326,13 @@ body {
   color: #000;
 }
 
+.photos .container {
+  max-width: 970px;
+}
+
 .photos .more-photo {
   display: inline-block;
-  margin: 30px 0 0 30px;
+  margin: 30px 0 0 15px;
 }
 
 .photos .more-photo .fa {
@@ -336,26 +340,15 @@ body {
 }
 
 .grid {
-  margin-top: 40px;
-  margin: 0 15px;
+  margin: 40px 15px 0;
 }
 
-.grid-item {
-  width: 170px;
-  margin: 15px;
-}
-
-.grid-item a {
+.grid .box a {
   display: block;
-  transition: all 0.3s;
-}
-
-.grid-item a:hover {
-  filter: blur(2px);
-}
-
-.grid-item--width2 {
-  width: 370px;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .video-about {
@@ -548,16 +541,6 @@ body {
   .kids-say .double img {
     margin: 0px;
   }
-  .grid-item {
-    width: 170px;
-    height: auto;
-  }
-  .grid-item--width2 {
-    width: 370px;
-  }
-  .grid-item--height2 {
-    height: auto;
-  }
 }
 
 @media (max-width: 400px) {
@@ -575,16 +558,5 @@ body {
   .banner .logo {
     top: 50px;
     left: 0px;
-  }
-  .grid {
-    padding: 0px;
-    margin: 0 7.5px;
-  }
-  .grid-item {
-    width: 46%;
-    margin: 2%;
-  }
-  .grid-item--width2 {
-    width: 98%;
   }
 }
