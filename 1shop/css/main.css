@@ -31,6 +31,7 @@
     font-size: 20px;
     color: #9f9f9f;
     margin-right: 10px;
+    transition: all 0.2s;
 }
 
 .button.small {
@@ -50,8 +51,12 @@
     border-color: #72aab7;
 }
 
-.button.turq:hover {
+.button.turq:hover, .button.turq.active {
     background: #72aab7;
+    color: #fff;
+}
+
+.button.turq:hover .mdi, .button.turq.active .mdi {
     color: #fff;
 }
 
@@ -247,7 +252,7 @@ section {
     letter-spacing: 2px;
 }
 
-.exo, .button, .input-field input, input, a, select, textarea, button, .section-title .title, .lbl, .main-nav > ul > li > a, .brends-nav .lbl, .main-slider-text a, .our-services strong, .filter-item select, .share-section, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .help-links, .watch-info .share span, .main-footer, .banner-modal-wrap .banner-text > span, .banner-modal-wrap .title, .banner-modal-wrap .sub-title, .bay-form-modal-wrap .title {
+.exo, .button, .input-field input, input, a, select, textarea, button, .section-title .title, .lbl, .main-nav > ul > li > a, .brends-nav .lbl, .main-slider-text a, .our-services strong, .filter-item select, .share-section, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .help-links, .share span, .main-footer, .banner-modal-wrap .banner-text > span, .banner-modal-wrap .title, .banner-modal-wrap .sub-title, .bay-form-modal-wrap .title {
     font-family: 'Exo 2', sans-serif;
 }
 
@@ -792,8 +797,12 @@ section {
     background-position: center;
     background-size: cover;
     color: #fff;
-    padding: 120px 0;
+    padding: 80px 0;
     margin-bottom: 35px;
+}
+
+.main-banner .logo {
+    margin-bottom: 20px;
 }
 
 .main-banner h1 {
@@ -806,8 +815,9 @@ section {
 
 .main-banner p {
     font-size: 24px;
-    margin: 50px 0;
+    margin: 20px 0;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 .main-banner a {
@@ -817,6 +827,27 @@ section {
 .main-banner a:hover {
     color: #fff !important;
     border-color: #fff !important;
+}
+
+.main-banner .date {
+    display: block;
+    margin: 40px 0;
+}
+
+.main-banner .share {
+    margin-bottom: 0px;
+}
+
+.main-banner .share a {
+    letter-spacing: 0px;
+}
+
+.main-banner .share span {
+    color: #fff;
+}
+
+.main-banner + .article-section {
+    margin-top: 50px;
 }
 
 /********************************brands-list****************************/
@@ -966,6 +997,10 @@ section {
     margin: 0 0 24px 0;
 }
 
+.article-section .journal-block {
+    height: 470px;
+}
+
 article h2, article h3, article h4 {
     line-height: 1.3;
     font-weight: 500;
@@ -991,6 +1026,67 @@ article p {
     font-weight: 300;
     line-height: 1.8;
     text-align: justify;
+}
+
+article p.letter:first-letter {
+    float: left;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 58px;
+}
+
+article p:first-child {
+    margin-top: 0px;
+}
+
+.similar-articles {
+    box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.07);
+}
+
+.similar-articles .title {
+    background: #dceff3;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 15px 30px 13px;
+}
+
+.similar-articles .list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.similar-articles .list li {
+    margin: 0px;
+}
+
+.similar-articles .list a {
+    display: block;
+    padding: 19px 30px;
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.similar-articles .list a:hover {
+    background: rgba(114, 170, 183, 0.1);
+}
+
+.similar-articles .list p {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.similar-articles .list .date {
+    font-size: 12px;
+    color: #888;
+}
+
+.similar-articles .list h2 {
+    line-height: 1.3;
+    font-size: 20px;
+    margin: 0px 0 15px;
+    font-weight: 300;
 }
 
 /*********************************services*******************************/
@@ -1476,6 +1572,430 @@ article p {
     color: #fff;
 }
 
+/*************************filters************************/
+.journal-filter {
+    margin-bottom: 24px;
+}
+
+.journal-filter .button {
+    margin-bottom: 16px;
+}
+
+.journal-filter #ExpandFilters {
+    width: 100%;
+}
+
+.picked-filters .button {
+    margin: 0 16px 16px 0;
+}
+
+.journal-filter-list {
+    display: none;
+    margin-bottom: 80px;
+}
+
+.journal-filter-list input {
+    display: none;
+}
+
+.journal-filter-list input:checked + label {
+    color: #72aab7;
+}
+
+.journal-filter-list input:checked + label .mdi {
+    width: 22px;
+}
+
+.journal-filter-list label {
+    display: block;
+    padding: 5px 0;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.journal-filter-list label i.mdi {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.journal-filter-list label span {
+    font-size: 11px;
+    margin: 2px 0 0 6px;
+    color: #888;
+}
+
+.journal-filter-list i.mdi {
+    color: #72aab7;
+    font-size: 20px;
+    width: 0px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.journal-filter-list .gliph {
+    font-weight: 600;
+    margin: 14px 0 6px;
+}
+
+.journal-filter-list .gliph:first-child {
+    margin-top: 0px;
+}
+
+/*************************journal************************/
+.journal-block {
+    height: 500px;
+    box-shadow: 0 0px 25px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    color: inherit;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.journal-block:hover {
+    box-shadow: 0 0px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+.journal-block .img img {
+    vertical-align: middle;
+}
+
+.journal-block .info {
+    padding: 25px;
+}
+
+.journal-block .info .brand {
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 500;
+}
+
+.journal-block .info h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.journal-block .info p {
+    margin: 14px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #888;
+}
+
+.journal-block .info .date {
+    font-size: 12px;
+    color: #888;
+}
+
+.journal-block.type-1 img {
+    width: 100%;
+}
+
+.journal-block.type-1 .info {
+    padding: 40px 50px;
+    position: relative;
+}
+
+.journal-block.type-1 .info .date {
+    position: absolute;
+    right: 50px;
+    top: 42px;
+}
+
+.journal-block.type-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+.journal-block.type-2 .img {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.journal-block.type-2 .img img {
+    margin: auto;
+}
+
+.journal-block.type-2 .info {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 25px;
+}
+
+.journal-block.type-2 .info p {
+    display: none;
+}
+
+.journal-block.type-3 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.journal-block.type-3 .img {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.journal-block.type-3 .info {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 25px;
+}
+
+.journal-block.type-4 {
+    background: #dceff3;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    position: relative;
+    text-align: center;
+}
+
+.journal-block.type-4 .img {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.journal-block.type-4 .info {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 25px;
+    position: static;
+}
+
+.journal-block.type-4 .info p {
+    display: none;
+}
+
+.journal-block.type-4 .info .date {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+
+.journal-block.type-5 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.journal-block.type-5 .img {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.journal-block.type-5 .img img {
+    margin: auto;
+}
+
+.journal-block.type-5 .info {
+    text-align: center;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 25px;
+}
+
+.journal-block.type-5 .info p {
+    display: none;
+}
+
+.journal-block.type-5 .info .date {
+    margin-top: 40px;
+    display: block;
+    text-align: left;
+}
+
+.journal-block.small {
+    height: 350px;
+}
+
+.journal-block.type-6 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.journal-block.type-6 .img {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.journal-block.type-6 .img img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.journal-block.type-6 .info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.journal-block.type-6 .info .date {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.journal-block.type-6 .info .brand {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.journal-block.type-7 {
+    position: relative;
+}
+
+.journal-block.type-7 .img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.journal-block.type-7 .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.journal-block.type-7 .info {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(148, 196, 205, 0.85);
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.journal-block.type-7 .info .brand {
+    color: #fff;
+}
+
+.journal-block.type-7 .info p {
+    color: #fff;
+}
+
+.journal-block.type-7 .info .date {
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.journal-block.type-8 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.journal-block.type-8 .img {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.journal-block.type-8 .img img {
+    width: 100%;
+}
+
+.journal-block.type-8 .info {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.journal-block.type-8 .info p {
+    display: none;
+}
+
+.journal-block.type-8 .info .date {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.journal-block.type-9 {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.journal-block.type-9 .img {
+    -ms-flex: 0 0 360px;
+    flex: 0 0 360px;
+}
+
+.journal-block.type-9 .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.journal-block.type-9 .info {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.journal-block.type-9 .info .date {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.journal-block.type-9 .info .brand {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
 /**************************watch-card********************/
 .back-page {
     margin: 40px 0;
@@ -1669,9 +2189,8 @@ article p {
 }
 
 .watch-info .to-tth {
-    margin-top: 40px;
-    float: left;
-    display: inline-block;
+    margin: 40px 0;
+    display: block;
     color: #888;
 }
 
@@ -1680,17 +2199,17 @@ article p {
     margin-left: 10px;
 }
 
-.watch-info .share {
+.share {
     color: #888;
-    margin-top: 62px;
-    margin-left: 270px;
+    margin: 40px 0;
+    text-align: center;
 }
 
-.watch-info .share span {
+.share span {
     font-size: 14px;
 }
 
-.watch-info .share .links {
+.share .links {
     margin-top: 10px;
     display: -ms-flexbox;
     display: flex;
@@ -1698,11 +2217,11 @@ article p {
     justify-content: center;
 }
 
-.watch-info .share a {
+.share a {
     margin: 0px 8px;
 }
 
-.watch-info .share .mdi {
+.share .mdi {
     display: block;
     width: 28px;
     height: 28px;
@@ -1714,19 +2233,19 @@ article p {
     transition: all 0.2s;
 }
 
-.watch-info .share .mdi-vk:hover {
+.share .mdi-vk:hover {
     background: #507299;
 }
 
-.watch-info .share .mdi-facebook:hover {
+.share .mdi-facebook:hover {
     background: #3b5998;
 }
 
-.watch-info .share .mdi-instagram:hover {
+.share .mdi-instagram:hover {
     background: #c13584;
 }
 
-.watch-info .share .mdi-twitter:hover {
+.share .mdi-twitter:hover {
     background: #1da1f2;
 }
 

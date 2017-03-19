@@ -33,6 +33,7 @@
     font-size: 20px;
     color: #9f9f9f;
     margin-right: 10px;
+    transition: all 0.2s;
 }
 
 .button.small {
@@ -52,8 +53,12 @@
     border-color: #72aab7;
 }
 
-.button.turq:hover {
+.button.turq:hover, .button.turq.active {
     background: #72aab7;
+    color: #fff;
+}
+
+.button.turq:hover .mdi, .button.turq.active .mdi {
     color: #fff;
 }
 
@@ -343,7 +348,7 @@ section {
 
 .currency-choise select {
     font-size: 16px;
-    color: #c6c6c6;
+    color: #000;
     background: none;
     cursor: pointer;
     position: absolute;
@@ -751,7 +756,7 @@ section {
 
 .brands-list .links > a {
     font-family: "Roboto";
-    width: 150px;
+    width: 133px;
     padding: 9px 0;
     -ms-flex-pack: center;
     justify-content: center;
@@ -763,6 +768,10 @@ section {
     border-radius: 4px;
     background: #95c5cf;
     color: #fff;
+}
+
+.brands-list .links > a:last-child {
+    margin-right: 0px;
 }
 
 .brands-list .links .count {
