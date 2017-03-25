@@ -115,6 +115,34 @@
     margin: 0 0 0 18px;
 }
 
+.button.block {
+    width: 100%;
+}
+
+.tag {
+    font-weight: 400;
+    height: 42px;
+    border: 1px #e6e6e6 solid;
+    padding: 11px 15px;
+    border-radius: 3px;
+    line-height: 16px;
+    font-size: 16px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #333333;
+    letter-spacing: 1px;
+}
+
+.tag i.mdi {
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
 .input-field {
     height: 42px;
     border-radius: 4px;
@@ -176,6 +204,56 @@
 
 .input-field input:focus {
     background: rgba(114, 170, 183, 0.1);
+}
+
+.checkbox {
+    margin: 15px 0;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox label {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.checkbox .check {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 3px;
+    text-align: center;
+    margin-right: 15px;
+    transition: all 0.3s;
+}
+
+.checkbox .check i.mdi {
+    color: #72aab7;
+    font-size: 30px;
+    line-height: 30px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.checkbox input:checked + label {
+    color: #72aab7;
+}
+
+.checkbox input:checked + label .check {
+    background: transparent;
+}
+
+.checkbox input:checked + label .check i.mdi {
+    opacity: 1;
 }
 
 * {
@@ -252,11 +330,11 @@ section {
     letter-spacing: 2px;
 }
 
-.exo, .button, .input-field input, input, a, select, textarea, button, .section-title .title, .lbl, .main-nav > ul > li > a, .brends-nav .lbl, .main-slider-text a, .our-services strong, .filter-item select, .share-section, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .help-links, .share span, .main-footer, .banner-modal-wrap .banner-text > span, .banner-modal-wrap .title, .banner-modal-wrap .sub-title, .bay-form-modal-wrap .title {
+.exo, .button, .input-field input, input, a, select, textarea, button, .section-title .title, .lbl, .main-nav > ul > li > a, .brends-nav .lbl, .main-slider-text a, .our-services strong, .filter-item select, .share-section, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .help-links, .share span, .main-footer, .banner-modal-wrap .banner-text > span, .banner-modal-wrap .title, .banner-modal-wrap .sub-title, .subscribe-modal-wrap .subscribe-form .title, .subscribe-modal-wrap .subscribe-form span, .bay-form-modal-wrap .title {
     font-family: 'Exo 2', sans-serif;
 }
 
-.merri, .main-slider-text h2, .main-slider-text .price-block strong, .main-banner h1, .brands-list .series-name, article h2, article h3, article h4 {
+.merri, .main-slider-text h2, .main-slider-text .price-block strong, .main-banner h1, .question-banner h1, .question-banner p, .brands-list .series-name, article h2, article h3, article h4 {
     font-family: 'Merriweather', serif;
 }
 
@@ -458,9 +536,10 @@ section {
 .main-nav > ul > li > a {
     font-size: 14px;
     color: #888;
+    letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 600;
-    padding: 30px 15px;
+    padding: 30px 12px;
     position: relative;
 }
 
@@ -611,6 +690,7 @@ section {
 
 .main-header.fixed .small-logo {
     display: block;
+    margin-left: 0px;
 }
 
 .main-header.fixed .header-favorite {
@@ -820,13 +900,13 @@ section {
     line-height: 1.5;
 }
 
-.main-banner a {
+.main-banner .button {
     letter-spacing: 2px;
+    background: #e6e6e6;
 }
 
-.main-banner a:hover {
-    color: #fff !important;
-    border-color: #fff !important;
+.main-banner .button:hover {
+    background: #fff !important;
 }
 
 .main-banner .date {
@@ -835,7 +915,7 @@ section {
 }
 
 .main-banner .share {
-    margin-bottom: 0px;
+    margin-bottom: -30px;
 }
 
 .main-banner .share a {
@@ -848,6 +928,34 @@ section {
 
 .main-banner + .article-section {
     margin-top: 50px;
+}
+
+.question-banner {
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 80px 0;
+    margin-bottom: 35px;
+}
+
+.question-banner .note {
+    font-size: 24px;
+    color: #c9c9c9;
+    letter-spacing: 1px;
+}
+
+.question-banner h1 {
+    font-size: 40px;
+    font-weight: lighter;
+    line-height: 60px;
+    letter-spacing: 2px;
+}
+
+.question-banner p {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    line-height: 40px;
 }
 
 /********************************brands-list****************************/
@@ -1585,8 +1693,12 @@ article p:first-child {
     width: 100%;
 }
 
-.picked-filters .button {
+.picked-filters .tag {
     margin: 0 16px 16px 0;
+}
+
+.picked-filters .tag i.mdi:hover {
+    color: red;
 }
 
 .journal-filter-list {
@@ -2206,11 +2318,13 @@ article p:first-child {
 }
 
 .share span {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 .share .links {
-    margin-top: 10px;
+    margin-top: 13px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -2223,12 +2337,13 @@ article p:first-child {
 
 .share .mdi {
     display: block;
-    width: 28px;
-    height: 28px;
+    width: 31px;
+    height: 31px;
     background: #cbcbcb;
     color: #fff;
     text-align: center;
-    line-height: 28px;
+    line-height: 31px;
+    font-size: 20px;
     border-radius: 50%;
     transition: all 0.2s;
 }
@@ -2272,6 +2387,79 @@ article p:first-child {
 
 .original-note p + p {
     color: #999999;
+}
+
+/*************************how-to-bay-watch****************/
+.how-to-bay-watch .img {
+    margin: 10px 0 30px;
+    height: 78px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.how-to-bay-watch p {
+    text-align: center;
+    line-height: 23px;
+    letter-spacing: 0.8px;
+}
+
+/*************************questions**********************/
+.question-item {
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px #e6e6e6 solid;
+    border-radius: 3px;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 14px 0;
+}
+
+.question-item .text {
+    max-width: 540px;
+    padding: 20px 0px 20px 40px;
+}
+
+.question-item h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    font-weight: 500;
+}
+
+.question-item p {
+    margin: 0px;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+
+/************************contact-info*********************/
+.contact-information {
+    background: url(../img/contact-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 80px;
+}
+
+.contact-information .section-title {
+    padding-bottom: 10px;
+}
+
+.contact-information .contact-info {
+    background: #fff;
+    border-radius: 4px;
+    padding-bottom: 40px;
+}
+
+.contact-information .contact-info p {
+    margin: 20px 0;
+    line-height: 24px;
+}
+
+.contact-information .contact-info > a {
+    margin-top: 30px;
 }
 
 /**************************footer*************************/
@@ -2507,6 +2695,53 @@ article p:first-child {
     width: 20px;
     height: 2px;
     background: #000;
+}
+
+/************************************subscribe****************************/
+.subscribe-modal {
+    width: 1100px;
+    background: #fff;
+}
+
+.subscribe-modal-wrap .subscribe-form {
+    padding: 40px 200px;
+    color: #fff;
+    background: url("../img/subscribe-bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.subscribe-modal-wrap .subscribe-form .title {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.subscribe-modal-wrap .subscribe-form span {
+    display: block;
+    margin: 8px 0 30px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.subscribe-modal-wrap .subscribe-form .input-field {
+    height: 52px;
+}
+
+.subscribe-modal-wrap .input-field {
+    background: #fff;
+}
+
+.subscribe-modal-wrap .checks {
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 465px;
+}
+
+.subscribe-modal-wrap .center {
+    margin-bottom: 40px;
 }
 
 /************************************bay-modal****************************/

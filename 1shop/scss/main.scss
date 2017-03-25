@@ -228,9 +228,10 @@ section {
             > a {
                 font-size: 14px;
                 color: #888;
+                letter-spacing: 1px;
                 text-transform: uppercase;
                 font-weight: 600;
-                padding: 30px 15px;
+                padding: 30px 12px;
                 position: relative;
                 @extend .exo;
                 &:hover {
@@ -353,6 +354,7 @@ section {
     }
     .small-logo {
         display: block;
+        margin-left: 0px;
     }
     .header-favorite {
         position: fixed;
@@ -536,11 +538,11 @@ section {
         font-weight: 300;
         line-height: 1.5;
     }
-    a {
+    .button {
         letter-spacing: 2px;
+        background: #e6e6e6;
         &:hover {
-            color: #fff !important;
-            border-color: #fff !important;
+            background: #fff !important;
         }
     }
     .date {
@@ -548,7 +550,7 @@ section {
         margin: 40px 0;
     }
     .share {
-        margin-bottom: 0px;
+        margin-bottom: -30px;
         a {
             letter-spacing: 0px;
         }
@@ -558,6 +560,32 @@ section {
     }
     & + .article-section {
         margin-top: 50px;
+    }
+}
+.question-banner {
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 80px 0;
+    margin-bottom: 35px;
+    .note {
+        font-size: 24px;
+        color: #c9c9c9;
+        letter-spacing: 1px;
+    }
+    h1 {
+        font-size: 40px;
+        font-weight: lighter;
+        line-height: 60px;
+        letter-spacing: 2px;
+        @extend .merri;
+    }
+    p {
+        font-size: 24px;
+        letter-spacing: 2px;
+        font-weight: lighter;
+        line-height: 40px;
+        @extend .merri;
     }
 }
 /********************************brands-list****************************/
@@ -1169,8 +1197,11 @@ article {
     }
 }
 .picked-filters {
-    .button {
+    .tag {
         margin: 0 16px 16px 0;
+        i.mdi:hover {
+            color: red;
+        }
     }
 }
 .journal-filter-list {
@@ -1639,10 +1670,12 @@ article {
     text-align: center;
     span {
         @extend .exo;
-        font-size: 14px;
+        font-size: 15px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
     }
     .links {
-        margin-top: 10px;
+        margin-top: 13px;
         display: flex;
         justify-content: center;
     }
@@ -1651,12 +1684,13 @@ article {
     }
     .mdi {
         display: block;
-        width: 28px;
-        height: 28px;
+        width: 31px;
+        height: 31px;
         background: #cbcbcb;
         color: #fff;
         text-align: center;
-        line-height: 28px;
+        line-height: 31px;
+        font-size: 20px;
         border-radius: 50%;
         transition: all 0.2s;
     }
@@ -1693,6 +1727,66 @@ article {
     }
     p + p {
         color: #999999
+    }
+}
+/*************************how-to-bay-watch****************/
+.how-to-bay-watch {
+    .img {
+        margin: 10px 0 30px;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    p {
+        text-align: center;
+        line-height: 23px;
+        letter-spacing: 0.8px;
+    }
+
+}
+/*************************questions**********************/
+.question-item {
+    display: flex;
+    border: 1px #e6e6e6 solid;
+    border-radius: 3px;
+    justify-content: space-between;
+    margin: 14px 0;
+    .text {
+        max-width: 540px;
+        padding: 20px 0px 20px 40px;
+    }
+    h2 {
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0 0 20px 0;
+        font-weight: 500;
+    }
+    p {
+        margin: 0px;
+        line-height: 28px;
+        letter-spacing: 1px;
+    }
+}
+/************************contact-info*********************/
+.contact-information {
+    background: url(../img/contact-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 80px;
+    .section-title {
+        padding-bottom: 10px;
+    }
+    .contact-info {
+        background: #fff;
+        border-radius: 4px;
+        padding-bottom: 40px;
+        p {
+            margin: 20px 0;
+            line-height: 24px;
+        }
+        > a {
+            margin-top: 30px;
+        }
     }
 }
 /**************************footer*************************/
@@ -1871,10 +1965,54 @@ article {
         }
     }
 }
+/************************************subscribe****************************/
+.subscribe-modal {
+    width: 1100px;
+    background: #fff;
+}
+.subscribe-modal-wrap {
+    .subscribe-form {
+        padding: 40px 200px;
+        color: #fff;
+        background: url('../img/subscribe-bg.jpg') no-repeat center;
+        background-size: cover;
+        .title {
+            @extend .exo;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        span {
+            display: block;
+            margin: 8px 0 30px;
+            letter-spacing: 2px;
+            @extend .exo;
+            font-size: 20px;
+            font-weight: lighter;
+            text-transform: uppercase;
+        }
+        .input-field {
+            height: 52px;
+        }
+    }
+    .input-field {
+        background: #fff;
+    }
+    .checks {
+        margin: 0 auto;
+        padding: 40px 0;
+        width: 465px;
+    }
+    .center {
+        margin-bottom: 40px;
+    }
+}
 /************************************bay-modal****************************/
 .bay-form-modal {
     background: #fff;
     width: 1110px;
+
 }
 .bay-form-modal-wrap {
     background: #fff;
