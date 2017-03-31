@@ -16,15 +16,16 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
+    position: relative;
 }
 
 .bg-overlay {
     min-width: 1140px;
-    position: fixed;
+    position: absolute;
     left: 0px;
     top: 0px;
-    right: 0px;
-    bottom: 0px;
+    width: 100%;
+    min-height: 100%;
     overflow: hidden;
     z-index: 1;
 }
@@ -200,20 +201,21 @@ body {
     z-index: 1;
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
     transition: all 0.2s;
+  /*&:hover {
+            background: $yellow;
+            color: #000;
+            text-shadow: -1px 1px 1px rgba(darken($yellow, 50), 0.2);
+            span {
+                color: #fff;
+            }
+            &:after {
+                background: $yellow;
+            }
+        }*/
 }
 
 .main-nav-links a:hover {
-    background: #e9ba00;
-    color: #000;
-    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.main-nav-links a:hover span {
-    color: #fff;
-}
-
-.main-nav-links a:hover:after {
-    background: #e9ba00;
+    text-shadow: 0 0 20px white;
 }
 
 .main-nav-links a:after {
@@ -229,6 +231,10 @@ body {
     transition: all 0.2s;
 }
 
+.main-nav-links a:last-child:after {
+    display: none;
+}
+
 .main-nav-links a span {
     color: #e9ba00;
     font-size: 10px;
@@ -236,6 +242,10 @@ body {
 }
 
 /********************second-nav********************/
+.services-nav {
+    margin-bottom: 12px;
+}
+
 .services-nav-links {
     display: -ms-flexbox;
     display: flex;
@@ -277,4 +287,83 @@ body {
 .services-nav-links a:hover span {
     color: #fff;
     border-color: #fff;
+}
+
+/********************main-content********************/
+.block-title {
+    border-bottom: 4px #e9ba00 solid;
+    padding: 17px 30px 12px 40px;
+}
+
+.block-title strong {
+    font-size: 16px;
+    color: #616161;
+}
+
+.main-content {
+    background: rgba(255, 255, 255, 0.9);
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.main-content .content {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.main-content .content .block-title {
+    display: inline-block;
+}
+
+.main-content .side-bar {
+    margin-left: 20px;
+    -ms-flex: 0 0 300px;
+    flex: 0 0 300px;
+}
+
+.catalog-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.catalog-item {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.333%;
+    padding: 20px;
+    color: #565555;
+    text-decoration: none;
+}
+
+.catalog-item .product-info {
+    padding-left: 20px;
+}
+
+.catalog-item .product-img {
+    margin-bottom: 10px;
+}
+
+.catalog-item .product-img img {
+    max-width: 100%;
+}
+
+.catalog-item .product-name {
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.catalog-item .product-description {
+    font-size: 14px;
+    font-weight: 300;
+    color: #616161;
+    display: block;
+    margin: 3px 0;
+}
+
+.catalog-item .price strong {
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: underline;
 }
