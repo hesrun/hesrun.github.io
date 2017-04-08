@@ -42,6 +42,7 @@ body {
     width: 1140px;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 35px;
     z-index: 10;
 }
 
@@ -151,9 +152,8 @@ body {
 }
 
 .main-header .links a:hover {
-    background: #e9ba00;
-    border-color: #e9ba00;
-    color: #000;
+    border-color: #fe9b00;
+    color: #fe9b00;
 }
 
 /********************main-nav********************/
@@ -200,22 +200,14 @@ body {
     height: 60px;
     z-index: 1;
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s;
-  /*&:hover {
-            background: $yellow;
-            color: #000;
-            text-shadow: -1px 1px 1px rgba(darken($yellow, 50), 0.2);
-            span {
-                color: #fff;
-            }
-            &:after {
-                background: $yellow;
-            }
-        }*/
 }
 
 .main-nav-links a:hover {
-    text-shadow: 0 0 20px white;
+    color: #e9ba00;
+}
+
+.main-nav-links a:hover span {
+    color: #fff;
 }
 
 .main-nav-links a:after {
@@ -228,7 +220,6 @@ body {
     width: 2px;
     box-shadow: 2px 3px 1px 0px rgba(0, 0, 0, 0.1);
     background: linear-gradient(to bottom, #e9ba00 0%, #e9ba00 30%, rgba(125, 185, 232, 0) 100%);
-    transition: all 0.2s;
 }
 
 .main-nav-links a:last-child:after {
@@ -238,7 +229,6 @@ body {
 .main-nav-links a span {
     color: #e9ba00;
     font-size: 10px;
-    transition: all 0.2s;
 }
 
 /********************second-nav********************/
@@ -266,7 +256,10 @@ body {
     text-decoration: none;
     padding-left: 35px;
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s;
+}
+
+.services-nav-links a .hover-ico {
+    display: none;
 }
 
 .services-nav-links a span {
@@ -277,16 +270,18 @@ body {
     border-left: 4px #e9ba00 solid;
     margin-left: 10px;
     padding-left: 10px;
-    transition: all 0.2s;
 }
 
 .services-nav-links a:hover {
-    background: #e9ba00;
+    color: #e9ba00;
 }
 
-.services-nav-links a:hover span {
-    color: #fff;
-    border-color: #fff;
+.services-nav-links a:hover img {
+    display: none;
+}
+
+.services-nav-links a:hover .hover-ico {
+    display: inline;
 }
 
 /********************main-content********************/
@@ -304,21 +299,77 @@ body {
     background: rgba(255, 255, 255, 0.9);
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: 12px;
 }
 
 .main-content .content {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+    position: relative;
+    padding-bottom: 90px;
 }
 
 .main-content .content .block-title {
     display: inline-block;
 }
 
+.main-content .content .link-more {
+    width: 288px;
+}
+
 .main-content .side-bar {
     margin-left: 20px;
-    -ms-flex: 0 0 300px;
-    flex: 0 0 300px;
+    -ms-flex: 0 0 334px;
+    flex: 0 0 334px;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.main-content .side-bar .link-more {
+    display: block;
+    margin-right: 20px;
+}
+
+.main-content .action {
+    padding: 30px 0;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.link-more {
+    display: inline-block;
+    height: 36px;
+    border: 2px transparent solid;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    text-decoration: none;
+    padding-left: 32px;
+    padding-right: 32px;
+    transition: all 0.1s;
+}
+
+.link-more.yellow {
+    border-color: #e9ba00;
+    color: #e9ba00;
+}
+
+.link-more.yellow:hover {
+    background: #e9ba00;
+    color: #fff;
+}
+
+.link-more.black {
+    border-color: #616161;
+    color: #616161;
+}
+
+.link-more.black:hover {
+    background: #616161;
+    color: #fff;
 }
 
 .catalog-list {
@@ -347,6 +398,7 @@ body {
 
 .catalog-item .product-img img {
     max-width: 100%;
+    transition: all 0.4s;
 }
 
 .catalog-item .product-name {
@@ -366,4 +418,184 @@ body {
     font-size: 17px;
     font-weight: 400;
     text-decoration: underline;
+}
+
+.catalog-item:hover .product-img img {
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+
+.catalog-item:hover .product-name {
+    color: #e9ba00;
+}
+
+.catalog-item:hover .price strong {
+    color: #e9ba00;
+}
+
+.news-list {
+    padding-right: 20px;
+}
+
+.news-item {
+    padding: 20px 0px 15px 0;
+    border-top: 1px #c1bfbf solid;
+}
+
+.news-item:first-child {
+    border-top: none;
+}
+
+.news-item .head {
+    margin-bottom: 20px;
+}
+
+.news-item .head h3 {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.news-item .head a {
+    color: #616161;
+}
+
+.news-item .head a:hover {
+    color: #e9ba00;
+}
+
+.news-item .body {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.news-item .body img {
+    float: left;
+    margin: 0 11px 11px 0;
+}
+
+.news-item .body p {
+    line-height: 1.4;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.news-item .footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.news-item .footer .date {
+    font-size: 13px;
+}
+
+.news-item .footer a {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.news-item .footer a:hover {
+    text-decoration: none;
+}
+
+/********************partners***********************/
+.partners {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 4px #e9ba00 solid;
+    padding: 30px 0;
+    margin-bottom: 22px;
+}
+
+/********************filials*************************/
+.affiliates {
+    margin-bottom: 20px;
+    padding: 0 35px;
+    position: relative;
+}
+
+.affiliates .prev, .affiliates .next {
+    padding: 15px;
+    margin-top: -23px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.affiliates .prev div, .affiliates .next div {
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 7px transparent solid;
+    border-bottom: 7px transparent solid;
+}
+
+.affiliates .next {
+    right: 0px;
+}
+
+.affiliates .next div {
+    border-left: 9px #fff solid;
+}
+
+.affiliates .next:hover div {
+    border-left-color: #e9ba00;
+}
+
+.affiliates .prev {
+    left: 0px;
+}
+
+.affiliates .prev div {
+    border-right: 9px #fff solid;
+}
+
+.affiliates .prev:hover div {
+    border-right-color: #e9ba00;
+}
+
+.affiliates .bx-wrapper {
+    margin: 0px;
+    box-shadow: none;
+    border: none;
+    background: none;
+}
+
+/********************footer***************************/
+.main-footer {
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.main-footer .social {
+    float: left;
+    margin-top: 2px;
+}
+
+.main-footer .social a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.main-footer .metrik {
+    margin-left: 10px;
+    float: left;
+}
+
+.main-footer .copy {
+    float: right;
+    color: #fff;
+    text-align: right;
+}
+
+.main-footer .copy p {
+    font-size: 10px;
 }

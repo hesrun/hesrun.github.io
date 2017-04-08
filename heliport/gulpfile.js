@@ -25,7 +25,7 @@ gulp.task('style', function() {
 
 gulp.task('watch', function () {
 	gulp.watch('./scss/*.scss', ['style']);
-	gulp.watch('./scss/*.scss', browserSync.reload);
+	gulp.watch('./css/*.css', browserSync.reload);
 	gulp.watch('./*.html', browserSync.reload);
 });
 

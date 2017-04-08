@@ -38,6 +38,7 @@ body {
     width: 1140px;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 35px;
     z-index: 10;
 }
 .spacer {
@@ -120,9 +121,8 @@ body {
             text-shadow: 1px 1px 1px rgba(#000,0.2);
             transition: all 0.2s;
             &:hover {
-                background: $yellow;
-                border-color: $yellow;
-                color: #000;
+                border-color: #fe9b00;
+                color: #fe9b00;
             }
         }
     }
@@ -161,20 +161,11 @@ body {
         height: 60px;
         z-index: 1;
         text-shadow: -1px 1px 1px rgba(#000, 0.2);
-        transition: all 0.2s;
-        /*&:hover {
-            background: $yellow;
-            color: #000;
-            text-shadow: -1px 1px 1px rgba(darken($yellow, 50), 0.2);
+        &:hover {
+            color: $yellow;
             span {
                 color: #fff;
             }
-            &:after {
-                background: $yellow;
-            }
-        }*/
-        &:hover {
-            text-shadow: 0 0 20px rgba(#fff,1);
         }
         &:after {
             content: "";
@@ -186,7 +177,6 @@ body {
             width: 2px;
             box-shadow: 2px 3px 1px 0px rgba(0, 0, 0, 0.1);
             background: linear-gradient(to bottom, rgba(233,186,0,1) 0%, rgba(233,186,0,1) 30%,rgba(125,185,232,0) 100%);
-            transition: all 0.2s;
         }
         &:last-child:after {
             display: none;
@@ -194,7 +184,6 @@ body {
         span {
             color: $yellow;
             font-size: 10px;
-            transition: all 0.2s;
         }
     }
 }
@@ -216,7 +205,9 @@ body {
         text-decoration: none;
         padding-left: 35px;
         text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
-        transition: all 0.2s;
+        .hover-ico {
+            display: none;
+        }
         span {
             line-height: 16px;
             font-weight: 500;
@@ -224,13 +215,14 @@ body {
             border-left: 4px $yellow solid;
             margin-left: 10px;
             padding-left: 10px;
-            transition: all 0.2s;
         }
         &:hover {
-            background: $yellow;
-            span {
-                color: #fff;
-                border-color: #fff;
+            color: $yellow;
+            img {
+                display: none;
+            }
+            .hover-ico {
+                display: inline;
             }
         }
     }
@@ -247,15 +239,63 @@ body {
 .main-content {
     background: rgba(#fff,0.9);
     display: flex;
+    margin-bottom: 12px;
     .content {
         flex: 1 1 auto;
+        position: relative;
+        padding-bottom: 90px;
         .block-title {
             display: inline-block;
+        }
+        .link-more {
+            width: 288px;
         }
     }
     .side-bar {
         margin-left: 20px;
-        flex: 0 0 300px;
+        flex: 0 0 334px;
+        position: relative;
+        padding-bottom: 90px;
+        .link-more {
+            display: block;
+            margin-right: 20px;
+        }
+    }
+    .action {
+        padding: 30px 0;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+}
+.link-more {
+    display: inline-block;
+    height: 36px;
+    border: 2px transparent solid;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    text-decoration: none;
+    padding-left: 32px;
+    padding-right: 32px;
+    transition: all 0.1s;
+    &.yellow {
+        border-color: $yellow;
+        color: $yellow;
+        &:hover {
+            background: $yellow;
+            color: #fff;
+        }
+    }
+    &.black {
+        border-color: #616161;
+        color: #616161;
+        &:hover {
+            background: #616161;
+            color: #fff;
+        }
     }
 }
 .catalog-list {
@@ -275,6 +315,7 @@ body {
         margin-bottom: 10px;
         img {
             max-width: 100%;
+            transition: all 0.4s;
         }
     }
     .product-name {
@@ -293,6 +334,157 @@ body {
             font-size: 17px;
             font-weight: 400;
             text-decoration: underline;
+        }
+    }
+    &:hover {
+        .product-img {
+            img {
+                transform: scale(1.1,1.1);
+            }
+        }
+        .product-name {
+            color: $yellow;
+        }
+        .price {
+            strong {
+                color: $yellow;
+            }
+        }
+    }
+}
+.news-list {
+    padding-right: 20px;
+}
+.news-item {
+    padding: 20px 0px 15px 0;
+    border-top: 1px #c1bfbf solid;
+    &:first-child {
+        border-top: none;
+    }
+    .head {
+        margin-bottom: 20px;
+        h3 {
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        a {
+            color: #616161;
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+    .body {
+        margin-bottom: 10px;
+        overflow: hidden;
+        img {
+            float: left;
+            margin: 0 11px 11px 0;
+        }
+        p {
+            line-height: 1.4;
+            font-size: 13px;
+            font-weight: 300;
+        }
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        .date {
+            font-size: 13px;
+        }
+        a {
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 500;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/********************partners***********************/
+.partners {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 4px $yellow solid;
+    padding: 30px 0;
+    margin-bottom: 22px;
+}
+/********************filials*************************/
+.affiliates {
+    margin-bottom: 20px;
+    padding: 0 35px;
+    position: relative;
+    .prev,.next {
+        padding: 15px;
+        margin-top: -23px;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        div {
+            display: block;
+            width: 0px;
+            height: 0px;
+            border-top: 7px transparent solid;
+            border-bottom: 7px transparent solid;
+        }
+    }
+    .next {
+        right: 0px;
+        div {
+            border-left: 9px #fff solid;
+        }
+        &:hover {
+            div {
+                border-left-color: $yellow;
+            }
+        }
+    }
+    .prev {
+        left: 0px;
+        div {
+            border-right: 9px #fff solid;
+        }
+        &:hover {
+            div {
+                border-right-color: $yellow;
+            }
+        }
+    }
+    .bx-wrapper {
+        margin: 0px;
+        box-shadow: none;
+        border: none;
+        background: none;
+    }
+}
+/********************footer***************************/
+.main-footer {
+    overflow: hidden;
+    padding: 0 15px;
+    .social {
+        float: left;
+        margin-top: 2px;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    }
+    .metrik {
+        margin-left: 10px;
+        float: left;
+    }
+    .copy {
+        float: right;
+        color: #fff;
+        text-align: right;
+        p {
+            font-size: 10px;
         }
     }
 }
