@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    height: 100%;
+    background-image: url(../img/bg-pattern.jpg);
+    background-repeat: repeat;
+}
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    height: 100%;
+}
+.wrap {
+    height: 100%;
+}
+.head {
+    padding-top: 75px;
+    text-align: center;
+    .logo {
+        display: block;
+    }
+    img {
+        vertical-align: middle;
+    }
+    h1 {
+        margin: 15px 0 6px;
+        display: inline-block;
+        color: #0078ff;
+        font-size: 18px;
+        font-family: 'Conv_Gotham-Bold';
+        position: relative;
+        &:after, &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #0078ff;
+            top: 50%;
+            margin-top: -2px;
+        }
+        &:before {
+            left: 29px;
+        }
+        &:after {
+            right: 71px;
+        }
+    }
+    span {
+        letter-spacing: 2px;
+        font-size: 12px;
+        display: block;
+        text-transform: uppercase;
+        color: rgba(#000,.5);
+    }
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.equalizer {
+    font-size: 0px;
+    overflow: hidden;
+    .bar {
+        display: inline-block;
+        height: 22px;
+        width: 2px;
+        margin: 0 1px;
+        background-image:
+            repeating-linear-gradient(0deg,
+            rgba(#a2a3a3,1) 0px,
+            rgba(#a2a3a3,1) 2px,
+            transparent 2px,
+            transparent 4px);
+        transform: translateY(100%);
+        animation: 0.8s BarMove linear infinite;
+        &:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        &:nth-child(2) {
+            animation-delay: 0s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+        &:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        &:nth-child(5) {
+            animation-delay: 1s;
+        }
+        &:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+    }
+}
+
+.track-text {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 5px 0 10px;
+    width: 330px;
+    overflow: hidden;
+    white-space: nowrap;
+    .track-text-inner {
+        display: flex;
+        animation: 10s TextMove linear infinite;
+    }
+    .artist {
+        flex: 0 0 auto;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+    .name {
+        flex: 1 1 auto;
+        font-weight: 300;
+    }
+}
+
+.pleer {
+    margin: 40px 0;
+    text-align: center;
+    .volume {
+        display: inline-block;
+    }
+}
+.volume {
+    .knob {
+        position: relative;
+        img {
+            vertical-align: middle;
+            transform: rotate(-135deg);
+        }
+    }
+    .scale {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-135deg);
+        .item {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        .item.dig:first-child:after {
+            content: "0";
+            display: block;
+            position: absolute;
+            color: #000;
+            top: -15px;
+            left: 50%;
+        }
+        .item.dig:last-child:after {
+            content: "100";
+            display: block;
+            position: absolute;
+            color: #000;
+            top: -15px;
+            left: 50%;
+        }
+        .item:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #303030;
+            top: -15px;
+            left: 50%;
+            margin-left: -2px;
+        }
+    }
+}
+$size: 20;
+$elements: 21;
+$fullAngle: 270;
+$itemAngle: $fullAngle/$size;
+@for $i from 0 to $elements {
+    .scale .item:nth-child(#{$i + 1}) {
+        transform: rotate($itemAngle * 1deg * $i);
+    }
+}
+
+
+@keyframes TextMove {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes BarMove {
+    0% {
+        transform: translateY(100%);
+    }
+    50% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
