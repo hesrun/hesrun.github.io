@@ -5,25 +5,27 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 html {
-    height: 100%;
     background-image: url(../img/bg-pattern.jpg);
     background-repeat: repeat;
-    overflow-x: hidden;
 }
 body {
     font-family: 'Fira Sans', sans-serif;
     font-size: 14px;
-    height: 100%;
-    overflow-x: hidden;
 }
 .wrap {
-    min-height: 100%;
-    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    min-height: 500px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .head {
-    padding-top: 8vh;
+    padding-top: 60px;
     text-align: center;
     flex: 0 0 auto;
     .logo {
@@ -128,7 +130,7 @@ body {
 }
 
 .pleer {
-    margin: 35px 0 8vh;
+    margin: 35px 0 70px;
     text-align: center;
     .volume {
         display: inline-block;
@@ -299,7 +301,7 @@ body {
     justify-content: space-between;
     width: 100%;
     max-width: 395px;
-    margin: 6vh auto 6vh;
+    margin: 0 auto 60px;
     > * {
         color: #000;
         display: flex;
@@ -346,7 +348,7 @@ $itemAngle: $fullAngle/$size;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px) and (orientation: portrait) {
     .button-name {
         display: none;
     }
@@ -381,11 +383,17 @@ $itemAngle: $fullAngle/$size;
         margin: 30px auto 20px;
     }
 }
-@media screen and (orientation: landscape) and (max-height: 600px) {
-    .pleer {
-        margin: 10px 0 10px;
+@media screen and (max-height: 650px) and (orientation: landscape){
+    .head {
+        padding-top: 20px;
     }
-    .pleer .volume {
+    .button-name {
         display: none;
+    }
+    .pleer {
+        margin: 30px 0;
+    }
+    .footer {
+        margin: 30px auto;
     }
 }
