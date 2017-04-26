@@ -18,7 +18,7 @@ body {
 }
 .wrap {
     min-height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -128,7 +128,7 @@ body {
 }
 
 .pleer {
-    margin: 0 0 8vh;
+    margin: 35px 0 8vh;
     text-align: center;
     .volume {
         display: inline-block;
@@ -299,7 +299,7 @@ body {
     justify-content: space-between;
     width: 100%;
     max-width: 395px;
-    margin: 0 auto 6vh;
+    margin: 6vh auto 6vh;
     > * {
         color: #000;
         display: flex;
@@ -378,6 +378,11 @@ $itemAngle: $fullAngle/$size;
     }
     .footer {
         padding: 0 20px;
-        margin: 30px auto 10px;
+        margin: 30px auto 20px;
+    }
+}
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    .pleer .volume {
+        display: none;
     }
 }
