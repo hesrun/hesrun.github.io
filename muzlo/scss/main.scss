@@ -158,11 +158,10 @@ body {
     height: 104px;
     position: relative;
     cursor: pointer;
-    background-image: url(../img/play-btn.png)
-    img {
-        user-select: none;
-        pointer-events: none;
-        vertical-align: middle;
+    .base {
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/play-btn.png);
     }
     &:before, &:after {
         content: "";
@@ -184,6 +183,9 @@ body {
         background-image: url(../img/pause-ico.png);
     }
     &.active {
+        .base {
+            transform: rotate(180deg);
+        }
         &:after {
             transform: scale(1);
         }
@@ -193,7 +195,6 @@ body {
     }
 }
 .volume {
-    position: relative;
     width: 200px;
     height: 200px;
     &.active {
@@ -202,11 +203,14 @@ body {
         }
     }
     .knob {
+        width: 200px;
+        height: 200px;
         position: relative;
-        img {
-            pointer-events: none;
-            vertical-align: middle;
-        }
+    }
+    .base {
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/base.png);
     }
     .knob-rotate {
         position: absolute;
@@ -220,21 +224,23 @@ body {
             height: 100%;
             transform: rotate(-135deg);
         }
-        .ring {
-            pointer-events: none;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-        }
-        .light {
-            pointer-events: none;
-            opacity: 0;
-            z-index: 1;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, 45px);
-        }
+    }
+    .ring {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url('../img/knob.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .light {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url('../img/light.png');
+        background-repeat: no-repeat;
+        background-position: 50% 45px;
     }
     .scale {
         position: absolute;
