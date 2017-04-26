@@ -67,6 +67,7 @@ body {
 .equalizer {
     font-size: 0px;
     overflow: hidden;
+    flex: 0 0 auto;
     .bar {
         display: inline-block;
         height: 22px;
@@ -124,18 +125,96 @@ body {
 }
 
 .pleer {
-    margin: 40px 0;
+    margin: 170px 0 90px;
     text-align: center;
     .volume {
         display: inline-block;
+        vertical-align: middle;
+        margin-right: 90px;
+        .button-name {
+            left: -100px;
+        }
+    }
+    .play-btn {
+        display: inline-block;
+        vertical-align: middle;
+        .button-name {
+            right: -80px;
+        }
+    }
+}
+.button-name {
+    color: #0078ff;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.play-btn {
+    position: relative;
+    cursor: pointer;
+    img {
+        vertical-align: middle;
+    }
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.2s all;
+    }
+    &:before {
+        background-image: url(../img/play-ico.png);
+    }
+    &:after {
+        transform: scale(0);
+        background-image: url(../img/pause-ico.png);
+    }
+    &.active {
+        &:after {
+            transform: scale(1);
+        }
+        &:before {
+            transform: scale(0);
+        }
     }
 }
 .volume {
+    position: relative;
     .knob {
         position: relative;
         img {
             vertical-align: middle;
+        }
+    }
+    .knob-rotate {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        .knob-inner {
+            width: 100%;
+            height: 100%;
             transform: rotate(-135deg);
+        }
+        .ring {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .light {
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 45px);
         }
     }
     .scale {
@@ -144,7 +223,7 @@ body {
         top: 0px;
         width: 100%;
         height: 100%;
-        transform: rotate(-135deg);
+        transform: rotate(-136deg);
         .item {
             position: absolute;
             left: 0px;
@@ -152,21 +231,27 @@ body {
             width: 100%;
             height: 100%;
         }
-        .item.dig:first-child:after {
-            content: "0";
-            display: block;
-            position: absolute;
-            color: #000;
-            top: -15px;
-            left: 50%;
+        .item.active:after {
+            background: #0078ff;
+            color: #0078ff !important;
         }
-        .item.dig:last-child:after {
-            content: "100";
-            display: block;
-            position: absolute;
+        .item:first-child:after {
+            content: "0";
             color: #000;
-            top: -15px;
-            left: 50%;
+            background: none;
+            height: auto;
+            width: auto;
+            font-size: 14px;
+            transform: translate(-50%, -50%) rotate(135deg);
+        }
+        .item:last-child:after {
+            content: "100";
+            color: #000;
+            background: none;
+            height: auto;
+            width: auto;
+            font-size: 14px;
+            transform: translate(-50%, -50%) rotate(-135deg);
         }
         .item:after {
             content: "";
@@ -178,7 +263,7 @@ body {
             background: #303030;
             top: -15px;
             left: 50%;
-            margin-left: -2px;
+            font-size: 12px;
         }
     }
 }
@@ -210,5 +295,28 @@ $itemAngle: $fullAngle/$size;
     }
     100% {
         transform: translateY(100%);
+    }
+}
+
+@media (max-width:600px) {
+    .button-name {
+        display: none;
+    }
+    .head {
+        padding-top: 15px;
+    }
+    .pleer {
+        margin: 40px 0 25px;
+        .volume {
+            display: block;
+            margin: 0px;
+        }
+        .play-btn {
+            display: block;
+            margin: 15px;
+        }
+    }
+    .track-info {
+        padding: 0 20px;
     }
 }

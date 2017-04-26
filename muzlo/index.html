@@ -25,11 +25,11 @@
             <div class="volume">
                 <div class="knob">
                     <div class="scale">
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
+                        <div class="item active"></div>
+                        <div class="item active"></div>
+                        <div class="item active"></div>
+                        <div class="item active"></div>
+                        <div class="item active"></div>
                         <div class="item"></div>
                         <div class="item"></div>
                         <div class="item"></div>
@@ -47,12 +47,23 @@
                         <div class="item"></div>
                         <div class="item"></div>
                     </div>
-                    <div id="knob">
-                        <img src="img/knob.png" alt="">
+                    <div class="base">
+                        <img src="img/base.png" alt="">
+                    </div>
+                    <div id="knob" class="knob-rotate">
+                        <div class="knob-inner">
+                            <img class="ring" src="img/knob.png" alt="">
+                            <img class="light" src="img/light.png" alt="">
+                        </div>
                     </div>
                 </div>
+                <div class="button-name">Volume</div>
             </div>
-            <div class="percent">0</div>
+            <div class="play-btn">
+                <img src="img/play-btn.png" alt="">
+                <div class="button-name">Pause</div>
+            </div>
+
         </div>
         <div class="track-info">
             <div class="equalizer">
@@ -74,8 +85,9 @@
     </div>
 </body>
     <script type="text/javascript">
-        var button = $('#knob'),
-        count = $('.percent');
+        var button = $('#knob');
+
+        TweenLite.set(button, {rotation:135});
 
         Draggable.create(button,{
             bounds:{
@@ -88,9 +100,13 @@
 
         function dragUpdate(){
             percent = Math.floor((this.rotation)/2.7)
-            count.text(
-                percent
-            );
-        }
+            console.log(percent);
+        };
+
+
+
+        $('.play-btn').click(function(){
+            $(this).toggleClass('active');
+        })
     </script>
 </html>
