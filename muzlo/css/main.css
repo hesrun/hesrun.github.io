@@ -185,6 +185,8 @@ body {
 }
 
 .play-btn {
+    width: 104px;
+    height: 104px;
     position: relative;
     cursor: pointer;
 }
@@ -228,6 +230,12 @@ body {
 
 .volume {
     position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.volume.active .light {
+    opacity: 1;
 }
 
 .volume .knob {
@@ -263,6 +271,7 @@ body {
 }
 
 .volume .knob-rotate .light {
+    opacity: 0;
     z-index: 1;
     position: absolute;
     left: 50%;
@@ -472,12 +481,12 @@ body {
 
     .pleer .volume {
         display: block;
-        margin: 0px;
+        margin: 0px auto;
     }
 
     .pleer .play-btn {
         display: block;
-        margin: 15px;
+        margin: 15px auto;
     }
 
     .track-info {

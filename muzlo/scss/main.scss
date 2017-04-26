@@ -151,6 +151,8 @@ body {
     transform: translate(0,-50%);
 }
 .play-btn {
+    width: 104px;
+    height: 104px;
     position: relative;
     cursor: pointer;
     img {
@@ -186,6 +188,13 @@ body {
 }
 .volume {
     position: relative;
+    width: 200px;
+    height: 200px;
+    &.active {
+        .light {
+            opacity: 1;
+        }
+    }
     .knob {
         position: relative;
         img {
@@ -211,6 +220,7 @@ body {
             transform: translate(-50%,-50%);
         }
         .light {
+            opacity: 0;
             z-index: 1;
             position: absolute;
             left: 50%;
@@ -309,11 +319,11 @@ $itemAngle: $fullAngle/$size;
         margin: 40px 0 25px;
         .volume {
             display: block;
-            margin: 0px;
+            margin: 0px auto ;
         }
         .play-btn {
             display: block;
-            margin: 15px;
+            margin: 15px auto;
         }
     }
     .track-info {
