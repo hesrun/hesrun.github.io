@@ -64,11 +64,6 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-.track-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .equalizer {
     font-size: 0px;
     overflow: hidden;
@@ -109,28 +104,6 @@ body {
         .bar {
             animation-play-state: paused;
         }
-    }
-}
-
-.track-text {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 5px 0 10px;
-    width: 330px;
-    overflow: hidden;
-    white-space: nowrap;
-    .track-text-inner {
-        display: flex;
-        animation: 10s TextMove linear infinite;
-    }
-    .artist {
-        flex: 0 0 auto;
-        font-weight: 500;
-        margin-right: 10px;
-    }
-    .name {
-        flex: 1 1 auto;
-        font-weight: 300;
     }
 }
 
@@ -304,12 +277,43 @@ body {
     }
 }
 
+.track-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.track-text {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 5px 0 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    .track-text-inner {
+        display: flex;
+        animation: 10s TextMove linear infinite;
+    }
+    .artist {
+        flex: 0 0 auto;
+        font-weight: 500;
+        margin-right: 10px;
+    }
+    .name {
+        flex: 1 1 auto;
+        font-weight: 300;
+    }
+}
+
+
 .footer {
     flex: 0 0 auto;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 395px;
+    max-width: 400px;
     margin: 40px auto 60px;
     > * {
         color: #000;
