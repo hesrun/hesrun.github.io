@@ -15,7 +15,7 @@ body {
 .wrap {
     position: absolute;
     height: 100%;
-    min-height: 500px;
+    min-height: 700px;
     width: 100%;
     left: 0px;
     top: 0px;
@@ -305,7 +305,7 @@ body {
     justify-content: space-between;
     width: 100%;
     max-width: 395px;
-    margin: 0 auto 60px;
+    margin: 40px auto 60px;
     > * {
         color: #000;
         display: flex;
@@ -326,6 +326,7 @@ $size: 20;
 $elements: 21;
 $fullAngle: 270;
 $itemAngle: $fullAngle/$size;
+
 @for $i from 0 to $elements {
     .scale .item:nth-child(#{$i + 1}) {
         transform: rotate($itemAngle * 1deg * $i);
@@ -353,7 +354,10 @@ $itemAngle: $fullAngle/$size;
     }
 }
 
-@media screen and (max-device-width: 440px) and (max-device-height: 750px) and (orientation: portrait) {
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .wrap {
+        min-height: 0px;
+    }
     .button-name {
         display: none;
     }
@@ -391,16 +395,16 @@ $itemAngle: $fullAngle/$size;
         margin: 30px auto 20px;
     }
 }
-@media screen and (max-device-width: 440px) and (max-device-height: 600px) and (orientation: portrait) {
+@media screen and (max-width: 600px) and (max-height: 600px) and (orientation: portrait) {
     .pleer {
         .volume {
             display: none;
         }
     }
 }
-@media screen and (max-device-width: 440px) and (max-device-height: 750px) and (orientation: landscape) {
+@media screen and (max-width: 740px) and (orientation: landscape) {
     .wrap {
-        min-height: 200px;
+        min-height: 0px;
     }
     .head {
         padding-top: 20px;
@@ -416,20 +420,5 @@ $itemAngle: $fullAngle/$size;
     }
     .footer {
         display: none;
-        margin: 30px auto;
-    }
-}
-@media screen and (min-width: 460px) and (max-height: 600px) {
-    .head {
-        padding-top: 20px;
-    }
-    .button-name {
-        display: none;
-    }
-    .pleer {
-        margin: 25px 0 15px;
-    }
-    .footer {
-        margin: 30px auto;
     }
 }
