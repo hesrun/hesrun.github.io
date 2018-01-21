@@ -15,6 +15,9 @@ body {
     font-size: 17px;
     color: #2f2f2f;
     height: 100%;
+    &.open-menue {
+        overflow: hidden;
+    }
 }
 input {
     font-family: "Helvetica";
@@ -92,7 +95,7 @@ a {
         position: relative;
         display: block;
         z-index: 2;
-        &:hover {
+        &:hover, &.active {
             .fa {
                 background: $blue;
                 color: white;
@@ -139,6 +142,87 @@ a {
         }
     }
 }
+//site Map
+.site-map {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 50px;
+    right: 325px;
+    background: $yellow;
+    padding: 15px 40px 40px;
+    color: $blue;
+    overflow: auto;
+    border-left: 1px #ac8a43 solid;
+    z-index: 100;
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+        font-size: italic;
+    }
+    a {
+        color: $blue
+    }
+    .site-map-blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .block {
+        margin-top: 50px;
+        width: 33.333%;
+        flex: 0 0 auto;
+        font-family: "Helvetica";
+    }
+    b {
+        font-family: "Gotham Pro";
+        font-size: 30px;
+    }
+    .links-block {
+        max-width: 250px;
+        margin-top: 30px;
+        strong {
+            font-size: 15px;
+            color: #fff;
+            font-weight: 700;
+        }
+        ul {
+            margin: 15px 0 0 0;
+            list-style: none;
+            padding: 0px;
+        }
+        a {
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            line-height: 20px;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .footer-social {
+        margin-top: 25px;
+        .links {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        a {
+            margin-right: 20px;
+            margin-bottom: 20px;
+            width: 52px;
+            height: 52px;
+            line-height: 52px;
+            font-size: 30px;
+            border-color: $blue;
+            &:hover {
+                background: $blue;
+                color: #fff;
+            }
+        }
+    }
+}
 //main content
 .main-content {
     margin-left: 50px;
@@ -151,7 +235,6 @@ a {
             flex: 1 1 auto;
         }
         .side-bar {
-            width: 325px;
             flex: 0 0 auto;
             position: static;
             align-self: stretch;
@@ -166,7 +249,7 @@ a {
 }
 //side bar
 .side-bar {
-    width: 310px;
+    width: 325px;
     right: 0px;
     top: 0px;
     bottom: 0px;

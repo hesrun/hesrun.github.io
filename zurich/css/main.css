@@ -125,6 +125,10 @@ body {
     height: 100%;
 }
 
+body.open-menue {
+    overflow: hidden;
+}
+
 input {
     font-family: "Helvetica";
 }
@@ -218,7 +222,7 @@ a {
     z-index: 2;
 }
 
-.nav-bar a:hover .fa {
+.nav-bar a:hover .fa, .nav-bar a.active .fa {
     background: #1b2473;
     color: white;
 }
@@ -270,6 +274,107 @@ a {
     background: none;
 }
 
+.site-map {
+    display: none;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 50px;
+    right: 325px;
+    background: #bd9e5e;
+    padding: 15px 40px 40px;
+    color: #1b2473;
+    overflow: auto;
+    border-left: 1px #ac8a43 solid;
+    z-index: 100;
+}
+
+.site-map .title {
+    font-size: 20px;
+    font-weight: 600;
+    font-size: italic;
+}
+
+.site-map a {
+    color: #1b2473;
+}
+
+.site-map .site-map-blocks {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.site-map .block {
+    margin-top: 50px;
+    width: 33.333%;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    font-family: "Helvetica";
+}
+
+.site-map b {
+    font-family: "Gotham Pro";
+    font-size: 30px;
+}
+
+.site-map .links-block {
+    max-width: 250px;
+    margin-top: 30px;
+}
+
+.site-map .links-block strong {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.site-map .links-block ul {
+    margin: 15px 0 0 0;
+    list-style: none;
+    padding: 0px;
+}
+
+.site-map .links-block a {
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.site-map .links-block a:hover {
+    color: #fff;
+}
+
+.site-map .footer-social {
+    margin-top: 25px;
+}
+
+.site-map .footer-social .links {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.site-map .footer-social a {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 30px;
+    border-color: #1b2473;
+}
+
+.site-map .footer-social a:hover {
+    background: #1b2473;
+    color: #fff;
+}
+
 .main-content {
     margin-left: 50px;
     margin-right: 310px;
@@ -289,7 +394,6 @@ a {
 }
 
 .main-content.full .side-bar {
-    width: 325px;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     position: static;
@@ -307,7 +411,7 @@ a {
 }
 
 .side-bar {
-    width: 310px;
+    width: 325px;
     right: 0px;
     top: 0px;
     bottom: 0px;
