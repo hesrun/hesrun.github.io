@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
@@ -25,7 +24,7 @@
                     </a>
                     <div class="nav-bar-search">
                         <div class="filed">
-                            <input type="text" placeholder="Type ref., lot №, brand or other...">
+                            <input class="placeholder-focus" type="text" placeholder="Type ref., lot №, brand or other...">
                         </div>
                         <a class="btn" href="#">Search</a>
                     </div>
@@ -46,12 +45,19 @@
         <div class="main-content">
             <div class="main-banner">
                 <div class="slider">
-                    <div class="slide-item">
-                        <img class="image" src="img/banner-img.jpg" alt="">
+                    <div class="slide-item product-slide" style="background: #eee3cc">
+                        <img class="image" src="img/banner-img-watch.png" alt="">
                         <div class="main-banner-text">
-                            In the heart of <span>Zürich:</span> Ineichen watch & jewelry auctioneer showroom &office <br><br>
-                            <span>Welcome</span>
+                            <div class="watch-brand-logo">
+                                <img src="img/watch-brand-logo.png" alt="">
+                            </div>
+                            <span class="lot-num">Lot 1934</span>
+                            <strong class="lot-name">A Gold Pocket Watch Vacheron Constantin ca. 1920</strong>
+                            <p class="lor-descr">Open face case, white dial with Arabic numerals, subsidiary seconds, monogram to reverse, in 14k gold, with original box</p>
+                            <span class="lot-price">CHF 3000.–</span>
+                            <a class="btn" href="#">BUY NOW</a>
                         </div>
+                        <div class="offer-title">Ineichen’s online shop offer:</div>
                     </div>
                     <div class="slide-item">
                         <img class="image" src="img/banner-img.jpg" alt="">
@@ -62,6 +68,13 @@
                     </div>
                     <div  class="slide-item">
                         <img  class="image" src="img/banner-img.jpg" alt="">
+                        <div class="main-banner-text">
+                            In the heart of <span>Zürich:</span> Ineichen watch & jewelry auctioneer showroom &office <br><br>
+                            <span>Welcome</span>
+                        </div>
+                    </div>
+                    <div  class="slide-item">
+                        <img class="image" src="img/banner-img.jpg" alt="">
                         <div class="main-banner-text">
                             In the heart of <span>Zürich:</span> Ineichen watch & jewelry auctioneer showroom &office <br><br>
                             <span>Welcome</span>
@@ -175,104 +188,129 @@
                     </div>
                 </div>
             </div>
-            <div class="main-footer">
-                <div class="footer-logo">
-                    <img src="img/logo-blue.png" alt="">
+            <div class="side-bar">
+                <div class="side-bar-head">
+                    <div class="side-bar-head-nav">
+                        <div class="link-group">
+                            <div class="link">
+                                <i class="fa fa-chevron-down"></i>
+                                <a href="#">MY ACCOUNT</a>
+                            </div>
+                            <div class="divide">|</div>
+                            <div class="link">
+                                <a href="#">LOG OUT</a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="link">
+                                <i class="fa fa-chevron-down"></i>
+                                <a href="#">English</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-bar-logo">
+                        <img src="img/logo.png" alt="">
+                    </div>
                 </div>
-                <div class="main-footer-links">
-                    <div class="block">
-                        <span>SUPPPORT</span>
+                <div class="side-bar-body">
+                    <div class="side-bar-nav">
+                        <a href="#">Buy</a>
+                        <a href="#">Sell</a>
+                        <a href="#">Discover</a>
                         <ul>
                             <li>
-                                <a href="#">Compliance</a>
+                                <a href="#">AUCTION CALENDAR</a>
                             </li>
                             <li>
-                                <a href="#">Contact Us</a>
+                                <a href="#">ONLINE SHOP</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    TRADE-IN
+                                    <span class="badge">new</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">SERVICES</a>
                             </li>
                             <li>
                                 <a href="#">FAQ</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="block">
-                        <span>CORPORATE</span>
-                        <ul>
-                            <li>
-                                <a href="#">Investor Relations</a>
-                            </li>
-                            <li>
-                                <a href="#">Press</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy Policy</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="block">
-                        <span>MORE...</span>
-                        <ul>
-                            <li>
-                                <a href="#">Security</a>
-                            </li>
-                            <li>
-                                <a href="#">Site Map</a>
-                            </li>
-                            <li>
-                                <a href="#">Terms & Conditions</a>
-                            </li>
-                        </ul>
+                </div>
+                <div class="side-bar-footer">
+                    <div class="footer-social">
+                        <div class="links">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-whatsapp"></i>
+                            </a>
+                        </div>
+                        <span class="contacts">
+                            Stadthausquai 11-13, 8001 Zürich
+                            +41 44 2981144   info@ineichen.ch
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="side-bar">
-            <div class="side-bar-head">
-                <div class="side-bar-head-nav">
-                    <div class="link-group">
-                        <div class="link">
-                            <i class="fa fa-chevron-down"></i>
-                            <a href="#">MY ACCOUNT</a>
-                        </div>
-                        <div class="divide">|</div>
-                        <div class="link">
-                            <a href="#">LOG OUT</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="link">
-                            <i class="fa fa-chevron-down"></i>
-                            <a href="#">English</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="side-bar-logo">
-                    <img src="img/logo.png" alt="">
-                </div>
+        <div class="main-footer">
+            <div class="footer-logo">
+                <img src="img/logo-blue.png" alt="">
             </div>
-            <div class="side-bar-body">
-                <div class="side-bar-nav">
-                    <a href="#">Buy</a>
-                    <a href="#">Sell</a>
-                    <a href="#">Discover</a>
+            <div class="main-footer-links">
+                <div class="block">
+                    <span>SUPPPORT</span>
                     <ul>
                         <li>
-                            <a href="#">AUCTION CALENDAR</a>
+                            <a href="#">Compliance</a>
                         </li>
                         <li>
-                            <a href="#">ONLINE SHOP</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                TRADE-IN
-                                <span class="badge">new</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">SERVICES</a>
+                            <a href="#">Contact Us</a>
                         </li>
                         <li>
                             <a href="#">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <span>CORPORATE</span>
+                    <ul>
+                        <li>
+                            <a href="#">Investor Relations</a>
+                        </li>
+                        <li>
+                            <a href="#">Press</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <span>MORE...</span>
+                    <ul>
+                        <li>
+                            <a href="#">Security</a>
+                        </li>
+                        <li>
+                            <a href="#">Site Map</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Conditions</a>
                         </li>
                     </ul>
                 </div>
@@ -283,13 +321,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js" charset="utf-8"></script>
     <script type="text/javascript">
-
+    //banner
     var MainBanner = $('.main-banner .slider').bxSlider({
-        auto: true,
         pager: true,
         controls: false,
-        nextSelector: '.main-banner-arrovs .next',
-        prevSelector: '.main-banner-arrovs .prev'
     });
     $('.main-banner-arrovs a').click(function() {
         if ($(this).hasClass('next')) {
@@ -298,6 +333,16 @@
             MainBanner.goToPrevSlide();
         }
         return false
+    })
+    //focus in inputs
+    var plcText = "";
+    $('.placeholder-focus').focus(function() {
+        plcText = $(this).attr('placeholder');
+        $(this).attr('placeholder','')
+        console.log(plcText);
+    })
+    $('.placeholder-focus').blur(function() {
+        $(this).attr('placeholder', plcText);
     })
 
     </script>

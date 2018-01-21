@@ -165,6 +165,15 @@ h2.with-line:before {
     top: -10px;
 }
 
+h3 {
+    margin: 0 0 17px 0;
+    font-family: 'Gotham Pro';
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #1b2473;
+}
+
 a {
     color: #1b2473;
 }
@@ -207,6 +216,11 @@ a {
     position: relative;
     display: block;
     z-index: 2;
+}
+
+.nav-bar a:hover .fa {
+    background: #1b2473;
+    color: white;
 }
 
 .nav-bar a > .fa {
@@ -261,6 +275,37 @@ a {
     margin-right: 310px;
 }
 
+.main-content.full {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-right: 0px;
+}
+
+.main-content.full .content {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.main-content.full .side-bar {
+    width: 325px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    position: static;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
+}
+
+.main-content.full .side-bar .side-bar-body {
+    background: #fff;
+}
+
+.main-content.full + .main-footer {
+    margin-right: 30px;
+}
+
 .side-bar {
     width: 310px;
     right: 0px;
@@ -268,12 +313,33 @@ a {
     bottom: 0px;
     position: fixed;
     background: #1b2473;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
 }
 
 .side-bar-head {
+    min-height: 305px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
     background: #1b2473;
     padding: 15px;
     color: #fff;
+}
+
+.side-bar-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 30px;
+}
+
+.side-bar-footer {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 30px;
+    color: #bd9e5e;
 }
 
 .side-bar-logo {
@@ -312,7 +378,7 @@ a {
 }
 
 .side-bar-nav {
-    padding: 40px;
+    padding: 0 10px;
     color: #fff;
     font-family: "Gotham Pro";
 }
@@ -324,6 +390,10 @@ a {
     display: block;
     font-weight: 700;
     line-height: 1.5;
+}
+
+.side-bar-nav > a:hover {
+    color: #bd9e5e;
 }
 
 .side-bar-nav ul {
@@ -344,6 +414,10 @@ a {
     text-transform: uppercase;
 }
 
+.side-bar-nav ul a:hover {
+    color: white;
+}
+
 .side-bar-nav ul a .badge {
     background: #010a5b;
     font-size: 12px;
@@ -352,6 +426,107 @@ a {
     vertical-align: middle;
     line-height: 20px;
     padding: 0 8px;
+}
+
+.footer-social {
+    max-width: 250px;
+}
+
+.footer-social .links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    display: block;
+    width: 31px;
+    height: 31px;
+    text-align: center;
+    line-height: 31px;
+    color: inherit;
+    border: 1px #bd9e5e solid;
+    border-radius: 50%;
+}
+
+.footer-social .contacts {
+    font-family: "Helvetica";
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+}
+
+.head-nav {
+    height: 335px;
+    margin: -30px -30px 0 -30px;
+    padding: 40px;
+    font-family: "Gotham Pro";
+    background: url(../img/head-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.head-nav .head-links {
+    font-size: 20px;
+    font-weight: 700;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.head-nav .head-links a {
+    margin-right: 25px;
+}
+
+.head-nav .head-links a.active {
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.head-nav a {
+    color: #fff;
+}
+
+.head-nav a:hover {
+    color: #6b76da;
+}
+
+.head-nav .sublinks {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 700px;
+}
+
+.head-nav .sublinks strong {
+    font-size: 18px;
+    color: #bd9e5e;
+}
+
+.head-nav .sublinks ul {
+    padding: 0px;
+    margin: 15px 0 0 0;
+    list-style: none;
+}
+
+.head-nav .sublinks ul li {
+    margin-top: 5px;
+}
+
+.head-nav .sublinks ul a {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 .content {
@@ -442,6 +617,70 @@ a {
     color: #bd9e5e;
 }
 
+.main-banner .product-slide .main-banner-text {
+    width: 261px;
+    right: 20%;
+}
+
+.main-banner .product-slide .offer-title {
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    font-size: 20px;
+    color: #bd9e5e;
+    font-style: italic;
+}
+
+.main-banner .product-slide .image {
+    top: 50%;
+    left: 15%;
+    width: 25%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    min-height: auto;
+    object-fit: initial;
+}
+
+.main-banner .product-slide .watch-brand-logo {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px #bfb7a4 solid;
+}
+
+.main-banner .product-slide .watch-brand-logo img {
+    max-width: none;
+    display: inline;
+    vertical-align: middle;
+}
+
+.main-banner .product-slide .lot-num {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.main-banner .product-slide .lot-name {
+    font-size: 30px;
+}
+
+.main-banner .product-slide .lor-descr {
+    font-size: 16px;
+    color: #050606;
+}
+
+.main-banner .product-slide .lot-price {
+    display: block;
+    font-style: normal;
+    font-size: 25px;
+    color: #050606;
+}
+
+.main-banner .product-slide .btn {
+    margin-top: 2em;
+    font-style: normal;
+}
+
 .short-img-news {
     display: -ms-flexbox;
     display: flex;
@@ -489,6 +728,13 @@ a {
     margin-top: 0px;
 }
 
+.news-block-item img {
+    width: 100%;
+    max-width: 100%;
+    border: 1px #ccc solid;
+    margin-bottom: 1em;
+}
+
 .product-list {
     display: -ms-flexbox;
     display: flex;
@@ -509,6 +755,10 @@ a {
     color: #1b2473;
 }
 
+.product-item:hover .product-img {
+    opacity: 0.7;
+}
+
 .product-item .product-img {
     border: 1px #ccc solid;
     padding: 25px;
@@ -527,6 +777,10 @@ a {
 
 .product-item .price {
     font-size: 17px;
+}
+
+.side-bar .product-item {
+    width: 100%;
 }
 
 .year-chrono {
@@ -604,9 +858,70 @@ a {
     margin-left: 35px;
 }
 
+.near-auction {
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 40px;
+    background-image: url(../img/auction-bg.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.near-auction .coming-auction-text {
+    max-width: 550px;
+}
+
+.near-auction .date {
+    font-size: 30px;
+    color: #bd9e5e;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.near-auction .links {
+    margin-top: 25px;
+}
+
+.near-auction .links a:not(.btn) {
+    margin-right: 20px;
+}
+
+.near-auction .links a:not(.btn):hover {
+    text-decoration: none;
+}
+
+.upcomming-auctions-item {
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 3px #1b2473 solid;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.upcomming-auctions-item .info {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.upcomming-auctions-item .image {
+    width: 230px;
+    height: 160px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-left: 90px;
+}
+
+.upcomming-auctions-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .main-footer {
     border-top: 1px #bd9e5e solid;
-    margin: 0 30px;
+    margin: 0 340px 0 80px;
     padding: 30px 0;
     display: -ms-flexbox;
     display: flex;
@@ -654,6 +969,14 @@ a {
 
 .main-footer .main-footer-links ul a {
     text-decoration: none;
+}
+
+.main-footer .main-footer-links ul a:hover {
+    text-decoration: underline;
+}
+
+.main-footer .footer-social a {
+    color: #bd9e5e;
 }
 
 .btn {
