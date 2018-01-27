@@ -279,26 +279,38 @@ a {
     margin-top: 50px;
     text-align: center;
 }
-.side-bar-head-nav {
+.lang-select-wrap {
     display: flex;
-    justify-content: space-between;
-    font-family: 'Helvetica';
-    font-size: 11px;
-    .divide {
-        margin: 0 10px;
+    flex-direction: row-reverse;
+}
+.lang-select {
+    position: relative;
+    .fa {
+        font-size: 13px;
+        position: absolute;
+        left: 0px;
+        top: 4px;
     }
-    .link-group {
-        display: flex;
-    }
-    .link {
+    select {
         position: relative;
+        height: 20px;
+        padding-left: 20px;
         cursor: pointer;
-        font-weight: 500;
+        font-family: 'Helvetica';
+        font-weight: 700;
+        font-size: 11px;
         text-transform: uppercase;
-        a {
-            color: #fff;
-            text-decoration: none;
+        appearance: none;
+        background: none;
+        border: none;
+        color: #fff;
+        z-index: 2;
+        &:focus {
+            outline: none;
         }
+    }
+    option {
+        color: #000;
     }
 }
 .side-bar-nav {
