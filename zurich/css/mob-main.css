@@ -812,10 +812,25 @@ p {
     background-position: right top;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+}
+
+.near-auction:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.7;
 }
 
 .near-auction .coming-auction-text {
     max-width: 550px;
+    position: relative;
+    z-index: 2;
 }
 
 .near-auction .date {
@@ -823,10 +838,6 @@ p {
     color: #bd9e5e;
     display: block;
     margin-bottom: 10px;
-}
-
-.near-auction p {
-    color: #fff;
 }
 
 .near-auction .links {
@@ -842,7 +853,6 @@ p {
 }
 
 .near-auction .links a:not(.btn) {
-    color: #fff;
     margin-right: 20px;
     font-size: 14px;
 }
