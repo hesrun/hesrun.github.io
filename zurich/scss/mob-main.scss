@@ -15,7 +15,7 @@ $yellow: #bd9e5e;
 }
 body {
     font-family: 'Minion Pro';
-    font-size: 10px;
+    font-size: 12px;
     color: #2f2f2f;
     &.open-menue {
         overflow: hidden;
@@ -57,8 +57,8 @@ h2 {
 h3 {
     margin: 0 0 8px 0;
     font-family: 'Gotham Pro';
-    font-size: 8px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
     text-transform: uppercase;
     color: $blue;
 }
@@ -95,13 +95,13 @@ p {
             text-align: center;
         }
         .fa {
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 2px;
         }
         span {
             font-family: 'Gotham Pro';
             font-weight: 800;
-            font-size: 7px;
+            font-size: 9px;
             text-transform: uppercase;
         }
     }
@@ -110,7 +110,7 @@ p {
         flex: 1 1 auto;
         align-items: center;
         .logo {
-            margin-left: 40px;
+            margin-left: 30px;
             height: 30px;
         }
     }
@@ -140,7 +140,7 @@ p {
         cursor: pointer;
         font-family: 'Helvetica';
         font-weight: 700;
-        font-size: 8px;
+        font-size: 10px;
         text-transform: uppercase;
         appearance: none;
         background: none;
@@ -166,6 +166,12 @@ p {
     bottom: 0px;
     z-index: 1000;
     border-top: 1px #ac8a43 solid;
+    .site-map-inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: auto;
+    }
     .nav-bar {
         left: 0px;
         top: 0px;
@@ -177,7 +183,7 @@ p {
         }
         a {
             text-align: center;
-            font-size: 16px;
+            font-size: 18px;
             color: #fff;
             display: block;
             width: 50px;
@@ -188,9 +194,11 @@ p {
         }
     }
     .site-map-blocks {
+        flex: 1 1 auto;
         padding-top: 30px;
         padding-left: 40px;
         margin-left: 50px;
+        margin-bottom: 30px;
         font-family: "Helvetica";
         b {
             display: block;
@@ -211,7 +219,7 @@ p {
         padding-top: 15px;
         max-width: 160px;
         strong {
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 500;
             color: #fff;
         }
@@ -220,13 +228,73 @@ p {
             margin: 6px 0 0;
             padding: 0px;
             a {
-                line-height: 16px;
-                font-size: 12px;
+                line-height: 18px;
+                font-size: 14px;
                 text-decoration: none;
                 font-weight: bold;
                 &:hover {
                     color: #fff;
                 }
+            }
+        }
+    }
+    .other-links {
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 20px 0 0;
+        }
+        a {
+            font-size: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            .badge {
+                background: #010a5b;
+                font-size: 8px;
+                color: #fff;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 15px;
+                padding: 0 4px;
+                margin-left: 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .site-map-footer {
+        flex: 0 0 auto;
+    }
+    .social {
+        color: $blue;
+        padding: 15px;
+        text-align: center;
+        background: #cab080;
+        border-top: 1px #ac8a43 solid;
+        border-bottom: 1px #ac8a43 solid;
+        strong {
+            font-family: "Gotham Pro";
+            font-size: 17px;
+        }
+        .links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        a {
+            display: block;
+            width: 34px;
+            height: 34px;
+            line-height: 34px;
+            font-size: 18px;
+            border: 1px $blue solid;
+            border-radius: 50%;
+            margin: 0 5px;
+            &:hover {
+                background: #fff;
+                border-color: #fff;
             }
         }
     }
@@ -268,7 +336,7 @@ p {
         }
     }
     .slide-item {
-        height: 260px;
+        height: 300px;
     }
     .image {
         position: absolute;
@@ -312,14 +380,14 @@ p {
             text-align: center;
             border-bottom: 1px #bfb7a4 solid;
             img {
-                height: 25px;
+                height: 30px;
                 max-width: none;
                 display: inline;
                 vertical-align: middle;
             }
         }
         .lot-num {
-            font-size: 10px;
+            font-size: 12px;
             display: block;
             margin-bottom: 5px;
         }
@@ -327,7 +395,7 @@ p {
             font-size: 15px;
         }
         .lor-descr {
-            font-size: 10px;
+            font-size: 12px;
             color: #050606;
         }
         .lot-price {
@@ -362,11 +430,11 @@ p {
         margin-top: 25px;
     }
     .news-date {
-        font-size: 8px;
+        font-size: 10px;
         display: block;
     }
     .title {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 800;
     }
     p {
@@ -405,11 +473,11 @@ p {
         }
     }
     .product-name {
-        font-size: 10px;
+        font-size: 12px;
         display: block;
     }
     .price {
-        font-size: 8px;
+        font-size: 10px;
     }
 }
 .year-chrono {
@@ -417,7 +485,7 @@ p {
     padding: 0 20px;
     position: relative;
     i.fa {
-        line-height: 44px;
+        line-height: 50px;
         font-size: 32px;
         position: absolute;
         top: 0;
@@ -437,7 +505,7 @@ p {
             content: "";
             display: block;
             position: absolute;
-            top: 22px;
+            top: 25px;
             left: 0px;
             height: 1px;
             width: 100%;
@@ -463,14 +531,14 @@ p {
         cursor: pointer;
         font-family: "Helvetica";
         font-weight: 300;
-        font-size: 10px;
+        font-size: 12px;
         flex: 0 0 auto;
         border: 1px $blue solid;
-        width: 44px;
-        height: 44px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         text-align: center;
-        line-height: 42px;
+        line-height: 50px;
         text-transform: uppercase;
         color: $blue;
         background: #fff;
@@ -492,14 +560,14 @@ p {
 }
 .chrono-date-text {
     strong {
-        font-size: 10px;
+        font-size: 12px;
     }
     ul {
         margin: 0px;
         list-style: none;
         padding: 0px;
         display: flex;
-        font-size: 8px;
+        font-size: 10px;
         justify-content: space-between;
         li + li {
             margin-left: 10px;
@@ -507,10 +575,8 @@ p {
     }
 }
 .near-auction {
-    margin-top: -30px;
-    margin-left: -30px;
-    margin-right: -30px;
-    padding: 40px;
+    margin: -15px -15px 0 -15px;
+    padding: 15px;
     background-image: url(../img/auction-bg.jpg);
     background-position: right top;
     background-repeat: no-repeat;
@@ -519,15 +585,25 @@ p {
         max-width: 550px;
     }
     .date {
-        font-size: 30px;
+        font-size: 15px;
         color: $yellow;
         display: block;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+    }
+    p {
+        color: #fff;
     }
     .links {
         margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        .btn {
+            padding: 0px 6px;
+        }
         a:not(.btn) {
+            color: #fff;
             margin-right: 20px;
+            font-size: 14px;
             &:hover {
                 text-decoration: none;
             }
@@ -535,18 +611,18 @@ p {
     }
 }
 .upcomming-auctions-item {
-    padding: 30px;
-    margin-bottom: 30px;
-    border: 3px $blue solid;
-    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px $blue solid;
     .info {
         flex: 1 1 auto;
     }
     .image {
-        width: 230px;
-        height: 160px;
+        margin: 7px 0 0px 12px;
+        float: right;
+        width: 100px;
+        height: 100px;
         flex: 0 0 auto;
-        margin-left: 90px;
         img {
             width: 100%;
             height: 100%;
@@ -557,7 +633,7 @@ p {
 
 .footer-links {
     font-family: "Helvetica";
-    font-size: 8px;
+    font-size: 10px;
     border-top: 1px $yellow solid;
     padding: 15px;
     display: flex;
@@ -612,7 +688,7 @@ p {
     .contacts {
         min-width: 140px;
         display: block;
-        font-size: 10px;
+        font-size: 12px;
         margin-bottom: 5px;
     }
 }
@@ -637,3 +713,5 @@ p {
         margin-left: 8px;
     }
 }
+
+@import "responsive.scss";
