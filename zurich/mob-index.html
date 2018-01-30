@@ -28,7 +28,7 @@
         <div class="menue-toggle">
             <a href="#" id="OpenSiteMap">
                 <i class="fa fa-bars"></i>
-                <span>menue</span>
+                <span>menu</span>
             </a>
         </div>
         <div class="site-map">
@@ -36,9 +36,15 @@
                 <div class="nav-bar">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a id="OpenSearch" href="#">
                                 <i class="fa fa-search"></i>
                             </a>
+                            <div class="nav-bar-search">
+                                <div class="filed">
+                                    <input class="placeholder-focus" type="text" placeholder="Type ref., lot №, brand or other...">
+                                </div>
+                                <a class="btn" href="#">Search</a>
+                            </div>
                         </li>
                         <li>
                             <a href="#">
@@ -474,6 +480,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script type="text/javascript">
 
+        //open search
+        $('#OpenSearch').click(function () {
+            $(this).toggleClass('active').next().toggleClass('open');
+            return false;
+        })
         //open menue
         $('.menue-toggle').click(function() {
             $('body').toggleClass('open-menue');
@@ -483,7 +494,7 @@
             if ($('.menue-toggle').hasClass('active')) {
                 $('.menue-toggle').find('span').text('close');
             } else {
-                $('.menue-toggle').find('span').text('menue');
+                $('.menue-toggle').find('span').text('menu');
             }
         })
 
@@ -496,8 +507,11 @@
 
             if (linksBlock.is(':hidden')) {
                 $('.links-block-list').slideUp(200);
+                $('.other-links').slideUp(200);
                 linksBlock.slideDown(200);
+
             } else {
+                $('.other-links').slideDown(200);
                 linksBlock.slideUp(200);
             }
         })

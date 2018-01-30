@@ -237,18 +237,18 @@ p {
 }
 
 .main-header .main-header-content {
+    padding-left: 50px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .main-header .main-header-content .logo {
-    margin-right: 30px;
     height: 30px;
 }
 
@@ -304,7 +304,6 @@ p {
 }
 
 .site-map {
-    display: none;
     background: #bd9e5e;
     position: absolute;
     top: 50px;
@@ -329,13 +328,18 @@ p {
     position: absolute;
 }
 
-.site-map .nav-bar ul {
+.site-map .nav-bar > ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
 }
 
-.site-map .nav-bar a {
+.site-map .nav-bar > ul > li {
+    position: relative;
+}
+
+.site-map .nav-bar > ul > li > a {
+    position: relative;
     text-align: center;
     font-size: 18px;
     color: #fff;
@@ -343,8 +347,16 @@ p {
     width: 50px;
     height: 50px;
     line-height: 52px;
+    background: #bd9e5e;
     border-left: 1px #ac8a43 solid;
     border-bottom: 1px #ac8a43 solid;
+    z-index: 4;
+}
+
+.site-map .nav-bar > ul > li > a.active {
+    background: #1b2473;
+    border-color: #1b2473;
+    color: #fff;
 }
 
 .site-map .site-map-blocks {
@@ -473,6 +485,47 @@ p {
 .site-map .social a:hover {
     background: #fff;
     border-color: #fff;
+}
+
+.nav-bar-search {
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    padding: 10px;
+    width: calc(100vw - 50px);
+    height: 50px;
+    border-bottom: 1px #ac8a43 solid;
+    border-left: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #bd9e5e;
+    z-index: 1;
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    transition: all 0.2s;
+}
+
+.nav-bar-search.open {
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.nav-bar-search .filed {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-right: 10px;
+}
+
+.nav-bar-search .filed input {
+    padding: 0px;
+    width: 100%;
+    height: 29px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    background: none;
 }
 
 .main-content {
