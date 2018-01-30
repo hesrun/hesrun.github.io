@@ -460,11 +460,13 @@
             $(this).addClass('active');
 
             if (linksBlock.is(':hidden')) {
+
                 $('.links-block-list').slideUp(200);
                 $('.other-links').slideUp(200);
                 linksBlock.slideDown(200);
 
             } else {
+                $(this).removeClass('active');
                 $('.other-links').slideDown(200);
                 linksBlock.slideUp(200);
             }
