@@ -304,12 +304,11 @@ p {
 .site-map {
     display: none;
     background: #bd9e5e;
-    position: fixed;
-    left: 0px;
+    position: absolute;
     top: 50px;
     right: 0px;
-    bottom: 0px;
-    z-index: 1000;
+    height: calc(100vh - 50px);
+    width: 100%;
     border-top: 1px #ac8a43 solid;
 }
 
@@ -341,7 +340,7 @@ p {
     display: block;
     width: 50px;
     height: 50px;
-    line-height: 50px;
+    line-height: 52px;
     border-left: 1px #ac8a43 solid;
     border-bottom: 1px #ac8a43 solid;
 }
@@ -351,6 +350,7 @@ p {
     flex: 1 1 auto;
     padding-top: 30px;
     padding-left: 40px;
+    padding-right: 50px;
     margin-bottom: 30px;
     font-family: "Helvetica";
 }
@@ -780,11 +780,6 @@ p {
     font-size: 8px;
 }
 
-.year-chrono .swiper-slide-next {
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-}
-
 .chrono-date-text strong {
     font-size: 12px;
 }
@@ -952,7 +947,7 @@ p {
     border-radius: 50%;
     border: 1px #bd9e5e solid;
     text-align: center;
-    line-height: 18px;
+    line-height: 20px;
     font-size: 10px;
     color: #bd9e5e;
 }

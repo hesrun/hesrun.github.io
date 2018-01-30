@@ -159,12 +159,11 @@ p {
 .site-map {
     display: none;
     background: $yellow;
-    position: fixed;
-    left: 0px;
+    position: absolute;
     top: 50px;
     right: 0px;
-    bottom: 0px;
-    z-index: 1000;
+    height: calc(100vh - 50px);
+    width: 100%;
     border-top: 1px #ac8a43 solid;
     .site-map-inner {
         display: flex;
@@ -188,7 +187,7 @@ p {
             display: block;
             width: 50px;
             height: 50px;
-            line-height: 50px;
+            line-height: 52px;
             border-left: 1px #ac8a43 solid;
             border-bottom: 1px #ac8a43 solid;
         }
@@ -197,6 +196,7 @@ p {
         flex: 1 1 auto;
         padding-top: 30px;
         padding-left: 40px;
+        padding-right: 50px;
         margin-bottom: 30px;
         font-family: "Helvetica";
         b {
@@ -552,10 +552,6 @@ p {
             font-size: 8px;
         }
     }
-    .swiper-slide-next {
-        justify-content: flex-end;
-    }
-
 }
 .chrono-date-text {
     strong {
@@ -689,7 +685,7 @@ p {
             border-radius: 50%;
             border: 1px $yellow solid;
             text-align: center;
-            line-height: 18px;
+            line-height: 20px;
             font-size: 10px;
             color: $yellow;
         }
