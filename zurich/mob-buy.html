@@ -13,12 +13,6 @@
 </head>
 <body>
     <div class="main-header">
-        <div class="menue-toggle">
-            <a href="#" id="OpenSiteMap">
-                <i class="fa fa-bars"></i>
-                <span>menue</span>
-            </a>
-        </div>
         <div class="main-header-content">
             <img class="logo" src="img/mob/head-logo.png" alt="">
             <div class="lang-select-wrap">
@@ -30,6 +24,12 @@
                     </select>
                 </div>
             </div>
+        </div>
+        <div class="menue-toggle">
+            <a href="#" id="OpenSiteMap">
+                <i class="fa fa-bars"></i>
+                <span>menue</span>
+            </a>
         </div>
     </div>
     <div class="main-content">
@@ -417,18 +417,6 @@
                         </a>
                     </div>
                 </div>
-                <div class="main-footer">
-                    <a class="logo" href="#">
-                        <img src="img/logo-blue-wt.png" alt="">
-                    </a>
-                    <div class="footer-social">
-                        <span class="contacts">
-                            Stadthausquai 11-13, 8001 Zürich <br>
-                            +41 44 2981144 <a href="mailto:info@ineichen.ch">info@ineichen.ch</a>
-                        </span>
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -442,7 +430,7 @@
         $('.menue-toggle').click(function() {
             $('body').toggleClass('open-menue');
             $(this).toggleClass('active').find('.fa').toggleClass('fa-bars fa-times');
-            $('.site-map').toggle(200);
+            $('.site-map').fadeToggle(200);
 
             if ($('.menue-toggle').hasClass('active')) {
                 $('.menue-toggle').find('span').text('close');
