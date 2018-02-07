@@ -91,7 +91,7 @@ a {
     text-align: center;
 }
 .wrapper {
-    min-width: 1024px;
+    min-width: 1240px;
     min-height: 100%;
 }
 //nav bar
@@ -198,7 +198,7 @@ a {
     }
     .block {
         margin-top: 50px;
-        width: 33.333%;
+        width: 25%;
         flex: 0 0 auto;
         font-family: "Helvetica";
     }
@@ -308,7 +308,7 @@ a {
 }
 .lang-select-wrap {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 .lang-select {
     position: relative;
@@ -480,20 +480,20 @@ a {
         box-shadow: none;
         border: none;
         background: transparent;
-    }
-    .bx-pager {
-        position: absolute;
-        right: 40px;
-        top: 12px;
-        bottom: auto;
-        width: auto;
-        padding: 0px;
-        .bx-pager-link {
-            background: none !important;
-            border: 1px #a2b2c6 solid;
-            &.active {
-                border-color: $blue;
-                background: $blue !important;
+        .bx-pager {
+            position: absolute;
+            right: 40px;
+            top: 12px;
+            bottom: auto;
+            width: auto;
+            padding: 0px;
+            .bx-pager-link {
+                background: none !important;
+                border: 1px #a2b2c6 solid;
+                &.active {
+                    border-color: $blue;
+                    background: $blue !important;
+                }
             }
         }
     }
@@ -1016,9 +1016,14 @@ a {
         font-style: italic;
         font-weight: 300;
     }
-    .btn {
+    .to-back {
         position: absolute;
         left: 0px;
+        top: 0px;
+    }
+    .to-favorite {
+        position: absolute;
+        right: 0px;
         top: 0px;
     }
 }
@@ -1185,7 +1190,8 @@ a {
 .btn {
     font-family: "Helvetica";
     background: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     vertical-align: top;
     height: 31px;
     line-height: 27px;
@@ -1195,6 +1201,7 @@ a {
     border: 2px $blue solid;
     text-decoration: none;
     padding: 0 15px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s;
     &:hover {
@@ -1214,6 +1221,18 @@ a {
     &.filled {
         background: $blue;
         color: #fff;
+    }
+    &.icon-left {
+        .fa {
+            margin-right: 8px;
+        }
+    }
+    &.to-favorite {
+        .fa {
+            line-height: 27px;
+            font-size: 16px;
+            color: red;
+        }
     }
 }
 .input-field {

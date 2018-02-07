@@ -187,7 +187,7 @@ a {
 }
 
 .wrapper {
-    min-width: 1024px;
+    min-width: 1240px;
     min-height: 100%;
 }
 
@@ -314,7 +314,7 @@ a {
 
 .site-map .block {
     margin-top: 50px;
-    width: 33.333%;
+    width: 25%;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     font-family: "Helvetica";
@@ -458,8 +458,8 @@ a {
 .lang-select-wrap {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .lang-select {
@@ -671,7 +671,7 @@ a {
     background: transparent;
 }
 
-.main-banner .bx-pager {
+.main-banner .bx-wrapper .bx-pager {
     position: absolute;
     right: 40px;
     top: 12px;
@@ -680,12 +680,12 @@ a {
     padding: 0px;
 }
 
-.main-banner .bx-pager .bx-pager-link {
+.main-banner .bx-wrapper .bx-pager .bx-pager-link {
     background: none !important;
     border: 1px #a2b2c6 solid;
 }
 
-.main-banner .bx-pager .bx-pager-link.active {
+.main-banner .bx-wrapper .bx-pager .bx-pager-link.active {
     border-color: #1b2473;
     background: #1b2473 !important;
 }
@@ -1337,9 +1337,15 @@ a {
     font-weight: 300;
 }
 
-.lot-card-head .btn {
+.lot-card-head .to-back {
     position: absolute;
     left: 0px;
+    top: 0px;
+}
+
+.lot-card-head .to-favorite {
+    position: absolute;
+    right: 0px;
     top: 0px;
 }
 
@@ -1558,7 +1564,10 @@ a {
 .btn {
     font-family: "Helvetica";
     background: none;
-    display: inline-block;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
     vertical-align: top;
     height: 31px;
     line-height: 27px;
@@ -1568,6 +1577,7 @@ a {
     border: 2px #1b2473 solid;
     text-decoration: none;
     padding: 0 15px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -1592,6 +1602,16 @@ a {
 .btn.filled {
     background: #1b2473;
     color: #fff;
+}
+
+.btn.icon-left .fa {
+    margin-right: 8px;
+}
+
+.btn.to-favorite .fa {
+    line-height: 27px;
+    font-size: 16px;
+    color: red;
 }
 
 .input-field input {
