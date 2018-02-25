@@ -31,6 +31,9 @@ $yellow: #bd9e5e;
 $red: #d70606;
 * {
     box-sizing: border-box;
+    &:after, &:before {
+        box-sizing: border-box;
+    }
 }
 html {
     height: 100%;
@@ -44,7 +47,8 @@ body {
         overflow: hidden;
     }
 }
-input {
+input,
+textarea {
     font-family: "Helvetica";
     &:focus {
         outline: none;
@@ -453,6 +457,19 @@ a {
     &.is-service-watch {
         background-image: url(../img/head-bg-service-watch.jpg);
     }
+    &.is-repair-restore {
+        background-image: url(../img/head-bg-repair-restore.jpg);
+    }
+    &.is-catalogin-collection {
+        background-image: url(../img/head-bg-catalogin-collection.jpg);
+        background-position: right bottom;
+    }
+    &.is-service-collectors {
+        background-image: url(../img/head-bg-service-for-collectors.jpg);
+    }
+    &.is-contact {
+        background-image: url(../img/head-bg-contact.jpg);
+    }
     .head-links {
         font-size: 20px;
         font-weight: 700;
@@ -662,6 +679,10 @@ a {
         max-width: 100%;
         border: 1px #ccc solid;
         margin-bottom: 1em;
+    }
+    blockquote {
+        margin-left: 25px;
+        padding-left: 25px;
     }
     .non-response {
         width: auto;
@@ -1272,47 +1293,57 @@ a {
         flex: 1 1 auto;
     }
     .services-request-form {
-        align-self: flex-start;
-        padding: 30px 20px 20px;
-        margin-left: 60px;
         flex: 0 0 auto;
-        width: 370px;
-        border: 1px #ccc solid;
-        box-shadow: 0 -2px 15px 0 rgba(#000,0.1);
-        .attached-files {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .btn {
-                flex: 0 0 auto;
-            }
-        }
-        .name-list {
-            font-family: 'Helvetica';
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            font-size: 12px;
-            color: $blue;
-            .item {
-                margin: 4px 0 4px 30px;
-            }
-        }
-        .to-send {
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .btn {
-                margin-right: 20px;
-                flex: 0 0 auto;
-            }
-            span {
-                font-size: 14px;
-            }
+        margin-left: 60px;
+    }
+}
+.services-request-form {
+    max-width: 370px;
+    align-self: flex-start;
+    padding: 30px 20px 20px;
+    border: 1px #ccc solid;
+    box-shadow: 0 -2px 15px 0 rgba(#000,0.1);
+    .attached-files {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btn {
+            flex: 0 0 auto;
         }
     }
+    .name-list {
+        font-family: 'Helvetica';
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        font-size: 12px;
+        color: $blue;
+        .item {
+            margin: 4px 0 4px 30px;
+        }
+    }
+    .to-send {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btn {
+            margin-right: 20px;
+            flex: 0 0 auto;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+}
+.floating-image {
+    border: 13px #f2ecdf solid !important;
+}
+.right-image {
+    float: right;
+    margin-left: 35px;
+    margin-bottom: 35px;
 }
 ////////////////////////////////////modals////////////////////////////
 .buy-form-modal {
@@ -1577,6 +1608,27 @@ a {
         top: 0px;
     }
 }
+.thermins-list {
+    list-style: none;
+    padding: 0px;
+    li {
+        margin-bottom: 1.5em;
+        padding-left: 30px;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border: 3px #1b2473 solid;
+            border-radius: 50%;
+            left: 0px;
+            top: 3px;
+        }
+    }
+}
+
 ////////////////////////////////////modal/////////////////////////////
 .remodal-overlay {
     background: rgba($blue, 0.8);
