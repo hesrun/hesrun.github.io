@@ -1045,12 +1045,23 @@ a {
     width: calc(20% - 16px);
     flex: 0 0 auto;
     border: 2px $blue solid;
+    color: $blue;
     height: 31px;
     position: relative;
     padding: 0 10px;
     margin: 0 8px;
     cursor: pointer;
+    transition: all 0.2s;
+    &.sel {
+        border-color: $yellow;
+        background-color: $yellow;
+        color: #fff;
+        .name {
+            color: #fff;
+        }
+    }
     &:hover,&.active {
+        border-color: $blue;
         background: $blue;
         color: #fff;
         .name {
@@ -1063,12 +1074,12 @@ a {
         }
     }
     .name {
-        color: $blue;
         font-family: "Helvetica";
         font-size: 11px;
-        line-height: 27px;
+        line-height: 29px;
         text-transform: uppercase;
         font-weight: 600;
+        transition: all 0.2s;
     }
     .fa {
         position: absolute;
@@ -1076,6 +1087,7 @@ a {
         right: 10px;
         line-height: 27px;
         font-size: 24px;
+        transition: all 0.2s;
     }
 }
 .filters-block-item {
