@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -233,6 +235,34 @@
                     <div class="news-block-item">
                         <img src="img/auction-place.jpg" alt="">
                     </div>
+                </div>
+                <hr class="m-b">
+                <h2 class="with-line m-b">PHOTOGALLERY OF THE AUCTION</h2>
+                <div class="photo-gallery">
+                    <a href="#">
+                        <img src="img/product-jew-item.jpg" alt="">
+                        <span>Text for picture</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/product-jew-item.jpg" alt="">
+                        <span>Text for picture</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/product-jew-item.jpg" alt="">
+                        <span>Text for picture</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/product-jew-item.jpg" alt="">
+                        <span>Text for picture</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/product-jew-item.jpg" alt="">
+                        <span>Text for picture</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/product-jew-item.jpg" alt="">
+                        <span>Text for picture</span>
+                    </a>
                 </div>
                 <hr class="m-b">
                 <h2 class="with-line">CONDITIONS OF SALE</h2>
@@ -626,9 +656,17 @@
         </div>
     </div>
 
+    <div class="remodal my-modal frame-reg-modal">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <iframe src="https://ineichen.nextlot.com/public/" width="100%" height="100%"></iframe>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js" charset="utf-8"></script>
     <script type="text/javascript">
+
+        var modal = $('.frame-reg-modal').remodal().open();
         //site map
         $('#OpenSiteMap').click(function() {
             $(this).toggleClass('active').find('.fa').toggleClass('fa-bars fa-times');

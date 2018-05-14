@@ -7,7 +7,6 @@
         @content;
     }
 }
-
 @mixin placeholder {
     @include optional-at-root('::-webkit-input-placeholder') {
         @content;
@@ -1365,6 +1364,36 @@ a {
     margin-left: 35px;
     margin-bottom: 35px;
 }
+////////////////////////////////////news//////////////////////////
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    a {
+        display: block;
+        flex: 0 0 auto;
+        width: 33.3333%;
+        padding: 0 8px 30px;
+        text-decoration: none;
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+            color: $yellow;
+        }
+        img {
+            filter: grayscale(1);
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+        span {
+            font-family: 'Gotham Pro';
+            font-weight: bold;
+        }
+    }
+}
 ////////////////////////////////////modals////////////////////////////
 .buy-form-modal {
     max-width: 590px;
@@ -1402,6 +1431,14 @@ a {
             flex: 0 0 auto;
             margin-right: 30px;
         }
+    }
+}
+.frame-reg-modal {
+    padding: 0px;
+    min-width: 1240px;
+    height: 700px;
+    iframe {
+        border: none;
     }
 }
 ////////////////////////////////////footer////////////////////////////

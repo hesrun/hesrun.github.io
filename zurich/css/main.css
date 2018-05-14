@@ -1805,6 +1805,44 @@ a {
     margin-bottom: 35px;
 }
 
+.photo-gallery {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+.photo-gallery a {
+    display: block;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.3333%;
+    padding: 0 8px 30px;
+    text-decoration: none;
+}
+
+.photo-gallery a:hover {
+    color: #bd9e5e;
+}
+
+.photo-gallery a:hover img {
+    filter: grayscale(0);
+}
+
+.photo-gallery a img {
+    filter: grayscale(1);
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.photo-gallery a span {
+    font-family: 'Gotham Pro';
+    font-weight: bold;
+}
+
 .buy-form-modal {
     max-width: 590px;
     padding: 30px 60px;
@@ -1855,6 +1893,16 @@ a {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-right: 30px;
+}
+
+.frame-reg-modal {
+    padding: 0px;
+    min-width: 1240px;
+    height: 700px;
+}
+
+.frame-reg-modal iframe {
+    border: none;
 }
 
 .main-footer {
