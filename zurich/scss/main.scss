@@ -417,7 +417,6 @@ a {
     .links {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin-bottom: 20px;
     }
     a {
@@ -429,6 +428,7 @@ a {
         color: inherit;
         border: 1px $yellow solid;
         border-radius: 50%;
+        margin-right: 10px;
     }
     .contacts {
         font-family: "Helvetica";
@@ -747,6 +747,7 @@ a {
 .upcoming-auction-item {
     border: 2px #dfdad4 solid;
     padding: 15px;
+    margin-bottom: 30px;
     .links {
         .btn {
             width: 100%;
@@ -798,7 +799,8 @@ a {
         z-index: 2;
         box-shadow: 0 0 0 15px #fff;
         transition: all 0.2s;
-        &:hover {
+        &:hover,
+        &.active {
             color: #fff;
             background: $blue;
         }
@@ -809,6 +811,7 @@ a {
 
 }
 .chrono-date-text {
+    display: none;
     strong {
         font-size: 20px;
     }
@@ -1394,6 +1397,98 @@ a {
         }
     }
 }
+////////////////////////////////////razdeli/////////////////////////
+.card-links {
+    margin-top: 30px;
+    display: flex;
+    .card-link-item {
+        position: relative;
+        border: 1px $yellow solid;
+        width: 100%;
+        max-width: 240px;
+        padding: 20px 30px;
+        margin-right: 50px;
+        overflow: hidden;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            margin: -320px 0 0 -250px;
+            background: rgba($yellow,0.05);
+            transform: scale(0);
+            transition: all 0.3s;
+            z-index: -1;
+        }
+        &:hover {
+            &:before {
+                transform: scale(1);
+            }
+        }
+    }
+    .icon {
+        display: flex;
+        text-align: center;
+        min-height: 95px;
+        img {
+            margin: auto;
+        }
+    }
+    .with-line {
+        font-size: 15px;
+        margin: 30px 0;
+        &:before, &:after {
+            width: 21px;
+            height: 3px;
+        }
+    }
+    .links {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        li {
+            margin-top: 5px;
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+        a:hover {
+            text-decoration: none;
+            color: $yellow;
+        }
+    }
+}
+////////////////////////////////////partners/////////////////////////
+.partner-block {
+    display: flex;
+    margin: 30px 0 40px;
+    .logo {
+        border: 1px #8a8a8a solid;
+        width: 290px;
+        height: 200px;
+        display: flex;
+        flex: 0 0 auto;
+        margin-right: 35px;
+        &:hover {
+            border-color: $yellow;
+        }
+        img {
+            margin: auto;
+        }
+    }
+    .info {
+        h2 {
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: none;
+            color: $yellow;
+        }
+    }
+}
 ////////////////////////////////////modals////////////////////////////
 .buy-form-modal {
     max-width: 590px;
@@ -1431,6 +1526,11 @@ a {
             flex: 0 0 auto;
             margin-right: 30px;
         }
+    }
+}
+.success-modal {
+    .status-img {
+        margin: 30px 0 40px;
     }
 }
 .frame-reg-modal {
@@ -1685,7 +1785,6 @@ a {
         }
     }
 }
-
 ////////////////////////////////////modal/////////////////////////////
 .remodal-overlay {
     background: rgba($blue, 0.8);

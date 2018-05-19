@@ -595,8 +595,6 @@ a {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     margin-bottom: 20px;
 }
 
@@ -609,6 +607,7 @@ a {
     color: inherit;
     border: 1px #bd9e5e solid;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 .footer-social .contacts {
@@ -1000,6 +999,7 @@ a {
 .upcoming-auction-item {
     border: 2px #dfdad4 solid;
     padding: 15px;
+    margin-bottom: 30px;
 }
 
 .upcoming-auction-item .links .btn {
@@ -1063,13 +1063,17 @@ a {
     transition: all 0.2s;
 }
 
-.year-chrono li:hover {
+.year-chrono li:hover, .year-chrono li.active {
     color: #fff;
     background: #1b2473;
 }
 
 .year-chrono li.more {
     font-size: 15px;
+}
+
+.chrono-date-text {
+    display: none;
 }
 
 .chrono-date-text strong {
@@ -1843,6 +1847,117 @@ a {
     font-weight: bold;
 }
 
+.card-links {
+    margin-top: 30px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.card-links .card-link-item {
+    position: relative;
+    border: 1px #bd9e5e solid;
+    width: 100%;
+    max-width: 240px;
+    padding: 20px 30px;
+    margin-right: 50px;
+    overflow: hidden;
+}
+
+.card-links .card-link-item:before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin: -320px 0 0 -250px;
+    background: rgba(189, 158, 94, 0.05);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.card-links .card-link-item:hover:before {
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.card-links .icon {
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    min-height: 95px;
+}
+
+.card-links .icon img {
+    margin: auto;
+}
+
+.card-links .with-line {
+    font-size: 15px;
+    margin: 30px 0;
+}
+
+.card-links .with-line:before, .card-links .with-line:after {
+    width: 21px;
+    height: 3px;
+}
+
+.card-links .links {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.card-links .links li {
+    margin-top: 5px;
+}
+
+.card-links .links li:first-child {
+    margin-top: 0px;
+}
+
+.card-links .links a:hover {
+    text-decoration: none;
+    color: #bd9e5e;
+}
+
+.partner-block {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 30px 0 40px;
+}
+
+.partner-block .logo {
+    border: 1px #8a8a8a solid;
+    width: 290px;
+    height: 200px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-right: 35px;
+}
+
+.partner-block .logo:hover {
+    border-color: #bd9e5e;
+}
+
+.partner-block .logo img {
+    margin: auto;
+}
+
+.partner-block .info h2 {
+    margin-top: 20px;
+}
+
+.partner-block .info a:hover {
+    text-decoration: none;
+    color: #bd9e5e;
+}
+
 .buy-form-modal {
     max-width: 590px;
     padding: 30px 60px;
@@ -1893,6 +2008,10 @@ a {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-right: 30px;
+}
+
+.success-modal .status-img {
+    margin: 30px 0 40px;
 }
 
 .frame-reg-modal {
