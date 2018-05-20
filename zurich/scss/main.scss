@@ -1397,6 +1397,63 @@ a {
         }
     }
 }
+.news-block {
+    display: flex;
+    margin: 30px 0;
+    &.inverse {
+        flex-direction: row-reverse;
+        .img {
+            margin-left: 40px;
+            margin-right: auto;
+        }
+    }
+    &.with-bg {
+        position: relative;
+        .img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, rgba(#000,1), rgba(#000,0));
+            }
+        }
+        .text {
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            padding: 60px 40px;
+            .with-line {
+                color: #fff;
+            }
+        }
+    }
+    .img {
+        flex: 0 0 auto;
+        width: 290px;
+        height: 200px;
+        margin-right: 40px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .text {
+        .with-line {
+            margin-top: 15px;
+        }
+    }
+}
 ////////////////////////////////////razdeli/////////////////////////
 .card-links {
     margin-top: 30px;
@@ -1485,6 +1542,48 @@ a {
         }
         a:hover {
             text-decoration: none;
+            color: $yellow;
+        }
+    }
+}
+////////////////////////////////////contacts/////////////////////////
+.contact-map {
+    min-height: 100%;
+    position: relative;
+    iframe {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
+}
+.footer-social.at-contact {
+    a {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 52px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 30px;
+        border-color: $blue;
+        color: $blue;
+        flex: 0 0 auto;
+        &:hover {
+            background: $blue;
+            color: #fff;
+        }
+    }
+    .text-link {
+        width: auto;
+        height: auto;
+        border: none;
+        font-size: 17px;
+        line-height: normal;
+        text-align: left;
+        font-weight: 600;
+        &:hover {
+            background: none;
             color: $yellow;
         }
     }
