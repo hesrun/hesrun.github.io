@@ -100,6 +100,9 @@ h3 {
 a {
     color: $blue;
 }
+.text-center {
+    text-align: center;
+}
 blockquote {
     color: #1b2473;
     font-size: 16px;
@@ -542,6 +545,10 @@ p {
         border: 1px #ccc solid;
         margin-bottom: 1em;
     }
+    .non-response {
+        width: auto;
+        border: none;
+    }
 }
 .product-list {
     display: flex;
@@ -666,6 +673,129 @@ p {
         }
     }
 }
+////////////////////////upcoming auction/////////////////////////////////
+.near-auction {
+    margin: -15px -15px 0 -15px;
+    padding: 15px;
+    background-image: url(../img/auction-bg.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#fff,0.5);
+    }
+    .coming-auction-text {
+        position: relative;
+        z-index: 2;
+    }
+    .date {
+        font-size: 20px;
+        color: $blue;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .catalog {
+        margin-top: 20px;
+    }
+    .get-catalog {
+        display: flex;
+        .file-download {
+            margin-right: 40px;
+        }
+        .print {
+            span {
+                display: block;
+                margin-top: 5px;
+                font-size: 13px;
+            }
+        }
+    }
+}
+.auction-time-table {
+    margin-top: 25px;
+    .box {
+        margin-top: 15px;
+        border: 1px #ccc solid;
+        padding: 15px;
+        .footer {
+            margin-top: 15px;
+        }
+    }
+}
+.past-auctions-item {
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 3px $blue solid;
+    .info {
+        flex: 1 1 auto;
+    }
+    .image {
+        width: 230px;
+        height: 160px;
+        flex: 0 0 auto;
+        margin-left: 90px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .past-auctions-gallery {
+        display: none;
+        .head {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .close {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            &:hover {
+                color: $yellow;
+            }
+            .fa {
+                font-size: 20px;
+                margin-right: 5px;
+            }
+            span {
+                font-size: 13px;
+                font-weight: 700;
+                font-family: "Gotham Pro";
+                text-decoration: underline;
+            }
+        }
+        h2 {
+            font-size: 20px;
+            margin: 0px;
+        }
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5px;
+            .item {
+                flex: 0 0 auto;
+                width: calc(20% - 10px);
+                margin: 0 5px 10px 5px;
+                border: 1px #ccc solid;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
 //////////////////////////highlights/////////////////////////////////////
 .thermins-list {
     list-style: none;
@@ -783,6 +913,10 @@ p {
     margin-top: 20px;
     border-top: 1px $yellow solid;
     padding: 20px 0;
+    i {
+        color: $yellow;
+        font-size: 20px;
+    }
     .filter-res-info {
         display: flex;
         align-items: center;
@@ -959,7 +1093,111 @@ p {
         }
     }
 }
-
+///////////////////////////////////lot card//////////////////////////
+.lot-card {
+    margin: 30px 0;
+}
+.lot-card-head {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    img {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    .lot-num {
+        font-size: 16px;
+        color: $yellow;
+        margin-bottom: 10px;
+    }
+    .lot-name {
+        color: $blue;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 300;
+    }
+    .to-back {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    .to-favorite {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+}
+.lot-card-body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.lot-gallery {
+    .lot-img {
+        border: 1px #ccc solid;
+        padding: 15px;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .thumbs {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -7.5px;
+        a {
+            flex: 0 0 auto;
+            width: calc(25% - 15px);
+            border: 1px #ccc solid;
+            padding: 5px;
+            margin: 15px 7.5px 0;
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.lot-card-info {
+    .descr {
+        font-size: 18px;
+        font-style: italic;
+    }
+    .lot-price {
+        display: block;
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    .to-buy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+        a:not(.btn) {
+            font-weight: 500;
+            font-family: "Gotham Pro";
+            font-size: 14px;
+        }
+    }
+    .technical {
+        margin-bottom: 35px;
+        table {
+            width: 100%;
+            border-spacing: 0px;
+        }
+        td {
+            font-size: 16px;
+            font-style: italic;
+            border-top: 1px $yellow solid;
+            padding: 10px 0;
+        }
+        td + td {
+            text-align: right;
+        }
+    }
+}
 ////////////////////////////////////razdeli/////////////////////////
 .card-links {
     margin-top: 15px;
@@ -1235,7 +1473,70 @@ p {
         }
     }
 }
-
+////////////////////////////////////modals////////////////////////////
+.remodal-overlay {
+    background: rgba($blue, 0.8);
+}
+.my-modal {
+    padding: 15px;
+    text-align: left;
+    .remodal-close {
+        left: auto;
+        right: 10px;
+        top: 10px;
+        background: $yellow;
+        color: #fff;
+    }
+}
+.buy-form-modal {
+    .lot-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        img {
+            margin-bottom: 20px;
+            width: 100px;
+        }
+        .lot-num {
+            font-size: 16px;
+            color: $yellow;
+        }
+        .lot-name {
+            margin: 15px 0;
+            color: $blue;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 300;
+        }
+        .lot-price {
+            font-size: 25px;
+        }
+    }
+    .submit-buy {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        .btn {
+            flex: 0 0 auto;
+            margin-right: 30px;
+        }
+    }
+}
+.success-modal {
+    .lot-info {
+        .status-img {
+            margin: 10px 0 40px;
+        }
+    }
+}
+.frame-reg-modal {
+    padding: 0px;
+    iframe {
+        border: none;
+    }
+}
 //ui
 .btn {
     font-family: "Helvetica";
@@ -1248,6 +1549,7 @@ p {
     color: $blue;
     border: 2px $blue solid;
     text-decoration: none;
+    text-transform: uppercase;
     padding: 0 8px;
     transition: all 0.2s;
     background: none;
@@ -1257,6 +1559,30 @@ p {
     }
     & + .btn {
         margin-left: 8px;
+    }
+    &.large {
+        height: 38px;
+        line-height: 35px;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 25px;
+    }
+    &.filled {
+        background: $blue;
+        color: #fff;
+    }
+    &.icon-left {
+        .fa {
+            margin-right: 4px;
+        }
+    }
+    &.to-favorite {
+        .fa {
+            line-height: 21px;
+            font-size: 12px;
+            color: red;
+            vertical-align: middle;
+        }
     }
     &.badge {
         small {
@@ -1319,6 +1645,42 @@ p {
             padding: 10px 15px;
             resize: vertical;
         }
+    }
+}
+.file-download {
+    display: flex;
+    text-decoration: none;
+    align-items: flex-start;
+    img {
+        border: none;
+        width: auto;
+        flex: 0 0 auto;
+        margin-right: 15px;
+    }
+    .info {
+        font-family: "Helvetica";
+    }
+    .name {
+        font-size: 10px;
+        font-weight: 700;
+    }
+    .size {
+        margin-top: 4px;
+        font-size: 11px;
+        color: #686661;
+    }
+}
+.alert-block {
+    font-family: "Helvetica";
+    font-weight: 700;
+    font-size: 11px;
+    padding: 10px 20px;
+    border: 2px #ccc solid;
+    text-align: center;
+    margin: 20px 0;
+    &.is-red {
+        border-color: $red;
+        color: $red;
     }
 }
 .drop-select {
