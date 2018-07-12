@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    background: #263238;
+}
+.confirm {
+    margin: auto;
+    position: relative;
+}
+
+.confirm {
+    position: relative;
+    button {
+        height: 64px;
+        border: 2px #00c853 solid;
+        background: #00c853;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+        &.confirm-button {
+            padding: 0 32px;
+            position: relative;
+            z-index: 2;
+            transition: all 0.5s;
+            transition-delay: 1s;
+        }
+        &.yes, &.no {
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            z-index: 1;
+            transition: all 1s;
+            i.mdi {
+                font-size: 32px;
+                opacity: 0;
+                transition: all 1s;
+            }
+        }
+        &.yes {
+            left: 0px;
+        }
+        &.no {
+            right: 0px;
+        }
+    }
+    &.expand {
+        .confirm-button {
+            opacity: 0;
+            visibility: hidden;
+            transition-delay: 0s;
+        }
+        .yes, .no {
+            background: rgba(#00c853,0.2);
+            width: 64px;
+            i.mdi {
+                opacity: 1;
+                transition-delay: 1s;
+            }
+        }
+        .yes {
+            transform: translateX(-100px);
+            transition-delay: 0.5s;
+        }
+        .no {
+            transform: translateX(100px);
+            transition-delay: 0.5s;
+        }
+    }
+    &.is-ok {
+        .yes {
+            width: 100%;
+            background: rgba(#00c853,1);
+            transform: translateX(0%);
+            transition-delay: 0s;
+        }
+        .no {
+            opacity: 0;
+            visibility: hidden;
+            transition-duration: 0.3s;
+            transition-delay: 0s;
+        }
+    }
+}

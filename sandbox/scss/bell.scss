@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    margin-top: 80px;
+    display: inline-block;
+    border: none;
+    height: 38px;
+    padding: 0 30px;
+    background: #3f51b5;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    border-bottom: 4px #1a237e solid;
+    cursor: pointer;
+}
+.bell {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    &.to_ring {
+        .bell_inner {
+            animation: tongue 0.7s 2 linear;
+        }
+        .bell_tongue {
+            animation: tongue 0.7s 2 linear;
+        }
+    }
+}
+.count {
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    font-size: 32px;
+    right: 0px;
+    top: 0px;
+    background: #f44336;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    box-shadow: 0 0 0 5px #fff;
+}
+.bell_inner {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-origin: center top;
+}
+.bell_body {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    width: 160px;
+    height: 100%;
+    background: #ffc107;
+    border-radius: 75px 75px 0 0;
+}
+.bell_ring {
+    top: -15px;
+    left: 90px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 5px #ffc107 solid;
+    border-radius: 50% 50% 0 0;
+}
+.bell_skirt {
+    position: absolute;
+    height: 40px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: #ffc107;
+    border-radius: 16px;
+}
+.bell_tongue {
+    transform-origin: center top;
+    position: absolute;
+    width: 8px;
+    height: 220px;
+    left: 96px;
+    background: #ffc107;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: #ffc107;
+        border-radius: 50%;
+        display: block;
+        bottom: -15px;
+        left: -11px;
+    }
+}
+@keyframes tongue {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes bell {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

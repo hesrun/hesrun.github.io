@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/css/confir.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="confirm">
+        <button class="yes" type="button">
+            <i class="mdi mdi-check"></i>
+        </button>
+        <button class="no" type="button">
+            <i class="mdi mdi-close"></i>
+        </button>
+        <button class="confirm-button" type="button">
+            A you sure?
+        </button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $('.confirm-button').click(function() {
+            $('.confirm').addClass('expand')
+        })
+        $('.no').click(function() {
+            $('.confirm').removeClass('expand')
+        })
+        $('.yes').click(function() {
+            $('.confirm').addClass('is-ok')
+        })
+    </script>
+</body>
+</html>

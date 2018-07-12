@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bell.css">
+</head>
+<body>
+    <div class="bell">
+        <div class="bell_inner">
+            <div class="bell_body"></div>
+            <div class="bell_ring"></div>
+            <div class="bell_skirt"></div>
+            <div class="bell_tongue"></div>
+        </div>
+        <div class="count">0</div>
+    </div>
+    <button class="btn">+1</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var count = 0
+        $('.btn').click(function() {
+            count += 1;
+            $('.count').html(count);
+            $('.bell').addClass('to_ring');
+            setTimeout(function() {
+                $('.bell').removeClass('to_ring')
+            },1400);
+        })
+    </script>
+</body>
+</html>
