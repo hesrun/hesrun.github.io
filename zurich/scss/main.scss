@@ -7,7 +7,6 @@
         @content;
     }
 }
-
 @mixin placeholder {
     @include optional-at-root('::-webkit-input-placeholder') {
         @content;
@@ -281,7 +280,7 @@ a {
 //main content
 .main-content {
     margin-left: 50px;
-    margin-right: 310px;
+    margin-right: 325px;
     &.full {
         display: flex;
         align-items: flex-start;
@@ -313,6 +312,7 @@ a {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    z-index: 2;
 }
 .side-bar-head {
     min-height: 305px;
@@ -418,7 +418,6 @@ a {
     .links {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         margin-bottom: 20px;
     }
     a {
@@ -430,6 +429,7 @@ a {
         color: inherit;
         border: 1px $yellow solid;
         border-radius: 50%;
+        margin-right: 10px;
     }
     .contacts {
         font-family: "Helvetica";
@@ -748,6 +748,7 @@ a {
 .upcoming-auction-item {
     border: 2px #dfdad4 solid;
     padding: 15px;
+    margin-bottom: 30px;
     .links {
         .btn {
             width: 100%;
@@ -799,7 +800,8 @@ a {
         z-index: 2;
         box-shadow: 0 0 0 15px #fff;
         transition: all 0.2s;
-        &:hover {
+        &:hover,
+        &.active {
             color: #fff;
             background: $blue;
         }
@@ -810,6 +812,7 @@ a {
 
 }
 .chrono-date-text {
+    display: none;
     strong {
         font-size: 20px;
     }
@@ -1365,6 +1368,227 @@ a {
     margin-left: 35px;
     margin-bottom: 35px;
 }
+////////////////////////////////////news//////////////////////////
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+    a {
+        display: block;
+        flex: 0 0 auto;
+        width: 33.3333%;
+        padding: 0 8px 30px;
+        text-decoration: none;
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+            color: $yellow;
+        }
+        img {
+            filter: grayscale(1);
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+        span {
+            font-family: 'Gotham Pro';
+            font-weight: bold;
+        }
+    }
+}
+.news-block {
+    display: flex;
+    margin: 30px 0;
+    &.inverse {
+        flex-direction: row-reverse;
+        .img {
+            margin-left: 40px;
+            margin-right: auto;
+        }
+    }
+    &.with-bg {
+        position: relative;
+        .img {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, rgba(#000,1), rgba(#000,0));
+            }
+        }
+        .text {
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            padding: 60px 40px;
+            .with-line {
+                color: #fff;
+            }
+        }
+    }
+    .img {
+        flex: 0 0 auto;
+        width: 290px;
+        height: 200px;
+        margin-right: 40px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .text {
+        .with-line {
+            margin-top: 15px;
+        }
+    }
+}
+////////////////////////////////////razdeli/////////////////////////
+.card-links {
+    margin-top: 30px;
+    display: flex;
+    .card-link-item {
+        position: relative;
+        border: 1px $yellow solid;
+        width: 100%;
+        max-width: 240px;
+        padding: 20px 30px;
+        margin-right: 50px;
+        overflow: hidden;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            margin: -320px 0 0 -250px;
+            background: rgba($yellow,0.05);
+            transform: scale(0);
+            transition: all 0.3s;
+            z-index: -1;
+        }
+        &:hover {
+            &:before {
+                transform: scale(1);
+            }
+        }
+    }
+    .icon {
+        display: flex;
+        text-align: center;
+        min-height: 95px;
+        img {
+            margin: auto;
+        }
+    }
+    .with-line {
+        font-size: 15px;
+        margin: 30px 0;
+        &:before, &:after {
+            width: 21px;
+            height: 3px;
+        }
+    }
+    .links {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        li {
+            margin-top: 5px;
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+        a:hover {
+            text-decoration: none;
+            color: $yellow;
+        }
+    }
+}
+////////////////////////////////////partners/////////////////////////
+.partner-block {
+    display: flex;
+    margin: 30px 0 40px;
+    .logo {
+        border: 1px #8a8a8a solid;
+        width: 290px;
+        height: 200px;
+        display: flex;
+        flex: 0 0 auto;
+        margin-right: 35px;
+        &:hover {
+            border-color: $yellow;
+        }
+        img {
+            margin: auto;
+        }
+    }
+    .info {
+        h2 {
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: none;
+            color: $yellow;
+        }
+    }
+}
+////////////////////////////////////contacts/////////////////////////
+.contact-map {
+    min-height: 100%;
+    position: relative;
+    iframe {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+    }
+}
+.footer-social.at-contact {
+    a {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        width: 52px;
+        height: 52px;
+        line-height: 52px;
+        font-size: 30px;
+        border-color: $blue;
+        color: $blue;
+        flex: 0 0 auto;
+        &:hover {
+            background: $blue;
+            color: #fff;
+        }
+    }
+    .text-link {
+        width: auto;
+        height: auto;
+        border: none;
+        font-size: 17px;
+        line-height: normal;
+        text-align: left;
+        font-weight: 600;
+        &:hover {
+            background: none;
+            color: $yellow;
+        }
+    }
+}
 ////////////////////////////////////modals////////////////////////////
 .buy-form-modal {
     max-width: 590px;
@@ -1404,6 +1628,19 @@ a {
         }
     }
 }
+.success-modal {
+    .status-img {
+        margin: 30px 0 40px;
+    }
+}
+.frame-reg-modal {
+    padding: 0px;
+    min-width: 1240px;
+    height: 700px;
+    iframe {
+        border: none;
+    }
+}
 ////////////////////////////////////footer////////////////////////////
 .main-footer {
     border-top: 1px $yellow solid;
@@ -1411,7 +1648,6 @@ a {
     padding: 30px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     .footer-logo {
         flex: 0 0 auto;
     }
@@ -1419,22 +1655,23 @@ a {
         font-family: "Helvetica";
         font-weight: 500;
         font-size: 13px;
-        flex: 1 1 auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
+        margin-right: auto;
+        margin-left: 10%;
         span {
             font-family: "Helvetica";
             font-size: 13px;
             text-transform: uppercase;
             color: $yellow;
+            display: block;
+            margin-bottom: 15px;
         }
         ul {
             list-style: none;
             padding: 0px;
             margin: 0px;
+            column-count: 3;
             li {
-                margin-top: 10px;
+                margin-bottom: 10px;
             }
             a {
                 text-decoration: none;
@@ -1648,7 +1885,6 @@ a {
         }
     }
 }
-
 ////////////////////////////////////modal/////////////////////////////
 .remodal-overlay {
     background: rgba($blue, 0.8);
