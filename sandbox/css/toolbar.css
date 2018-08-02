@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.view {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.toolbar {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 56px;
+    background: #232323;
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.toolbar.large {
+    height: 200px;
+}
+
+.toolbar.large .center {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    font-size: 30px;
+}
+
+.toolbar ~ .content {
+    padding-top: 56px;
+}
+
+.toolbar .left, .toolbar .right {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.toolbar .left a, .toolbar .right a {
+    color: inherit;
+    display: -ms-flexbox;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    padding: 0 16px;
+}
+
+.toolbar .left a .mdi, .toolbar .right a .mdi {
+    margin: auto;
+}
+
+.toolbar .center {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    line-height: 56px;
+    font-size: 20px;
+}
+
+.card {
+    margin: 16px;
+    height: 300px;
+    box-shadow: 0 6px 24px 0px rgba(35, 35, 50, 0.22);
+    border-radius: 8px;
+}

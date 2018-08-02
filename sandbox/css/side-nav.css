@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    height: 100%;
+    background: url("https://www.walldevil.com/wallpapers/w01/415329-gradient-background-turquoise.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    perspective: 2000px;
+}
+
+.content {
+    height: 100%;
+    background: #fff;
+    margin-left: 50px;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    overflow: auto;
+    transition: all 0.3s;
+    will-change: transform, filter, scroll-position;
+}
+
+.toggle-nav-checkbox {
+    display: none;
+}
+
+.toggle-nav {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background: #263238;
+    border-bottom: 1px rgba(255, 255, 255, 0.3) solid;
+    border-right: 1px rgba(255, 255, 255, 0.3) solid;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.toggle-nav:hover {
+    color: #03a9f4;
+}
+
+.toggle-nav-checkbox:checked ~ .toggle-nav {
+    color: #03a9f4;
+}
+
+.toggle-nav-checkbox:checked ~ .toggle-nav i.mdi:before {
+    content: "\F156";
+}
+
+.toggle-nav-checkbox:checked ~ .content {
+    height: 100%;
+    overflow: hidden;
+    transform: translateX(200px) scale(0.7) rotateY(-10deg);
+    filter: blur(5px);
+}
+
+.side-nav {
+    width: 50px;
+    position: fixed;
+    top: 50px;
+    bottom: 0px;
+    background: #263238;
+    color: #fff;
+    border-right: 1px rgba(255, 255, 255, 0.3) solid;
+}
+
+.side-nav a {
+    text-decoration: none;
+    line-height: 50px;
+    white-space: nowrap;
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    color: #fff;
+    border-bottom: 1px rgba(255, 255, 255, 0.3) solid;
+    transition: all 0.3s;
+}
+
+.side-nav a:hover {
+    color: #ff6f00;
+}
+
+.side-nav a:hover i.mdi {
+    color: #03a9f4;
+    margin-right: 25px;
+}
+
+.side-nav i.mdi {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50px;
+    text-align: center;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+
+.cards {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.card {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: calc(25% - 20px);
+    margin: 0 10px 20px 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 32px 0 rgba(144, 164, 174, 0.2);
+}
+
+.card:hover .card-body img {
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.card .card-body {
+    overflow: hidden;
+}
+
+.card .card-body img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    filter: grayscale(100%);
+    transition: all 0.6s;
+}
+
+.card .card-footer {
+    padding: 15px;
+}
+
+.card strong {
+    font-size: 14px;
+}
+
+.card p {
+    margin: 10px 0 0 0;
+    font-size: 12px;
+}

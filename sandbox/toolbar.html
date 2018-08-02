@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/toolbar.css">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+    <div class="view">
+        <div class="toolbar large">
+            <div class="left">
+                <a href="">
+                    <i class="mdi mdi-arrow-left mdi-24px"></i>
+                </a>
+            </div>
+            <div class="center">
+                <div class="title">Заголовок</div>
+            </div>
+            <div class="right">
+                <a href="">
+                    <i class="mdi mdi-alarm mdi-24px"></i>
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        let content = $('.content'),
+            toolbar = {
+                el: $('.toolbar'),
+                titleEl: $('.toolbar .center'),
+                defaultH: $('.toolbar').height(),
+                minH: 56,
+                size: {
+                    min: 20,
+                    max: 30
+                },
+                calcProcent: function(diff) {
+                    return (diff - this.minH) * 100 / ( this.defaultH - this.minH );
+                },
+                calcValueByProcent: function(min, max, actualProcent) {
+                    return min + (actualProcent / (max - min))
+                }
+            };
+
+        content.css({
+            'paddingTop': toolbar.defaultH
+        });
+
+        content.scroll(function () {
+            contentST = content.scrollTop();
+            if ( (contentST + toolbar.minH) <= toolbar.defaultH ) {
+                let actualToolbarHeight = toolbar.defaultH - contentST;
+                toolbar.el.css({
+                    'height': actualToolbarHeight
+                })
+                toolbar.titleEl.css({
+                    "fontSize": toolbar.calcValueByProcent(toolbar.size.min, toolbar.size.max, toolbar.calcProcent(actualToolbarHeight))
+                })
+            } else {
+                toolbar.el.css({'height': toolbar.minH});
+                toolbar.titleEl.css({
+                    "fontSize": toolbar.size.min
+                })
+            }
+
+        })
+
+    </script>
+</body>
+</html>

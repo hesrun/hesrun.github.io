@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    background: #263238;
+}
+
+.confirm {
+    margin: auto;
+    position: relative;
+}
+
+.confirm {
+    position: relative;
+}
+
+.confirm button {
+    height: 64px;
+    border: 2px #00c853 solid;
+    background: #00c853;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.confirm button:focus {
+    outline: none;
+}
+
+.confirm button.confirm-button {
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s;
+    transition-delay: 1s;
+}
+
+.confirm button.yes, .confirm button.no {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    transition: all 1s;
+}
+
+.confirm button.yes i.mdi, .confirm button.no i.mdi {
+    font-size: 32px;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.confirm button.yes {
+    left: 0px;
+}
+
+.confirm button.no {
+    right: 0px;
+}
+
+.confirm.expand .confirm-button {
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0s;
+}
+
+.confirm.expand .yes, .confirm.expand .no {
+    background: rgba(0, 200, 83, 0.2);
+    width: 64px;
+}
+
+.confirm.expand .yes i.mdi, .confirm.expand .no i.mdi {
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.confirm.expand .yes {
+    -ms-transform: translateX(-100px);
+    transform: translateX(-100px);
+    transition-delay: 0.5s;
+}
+
+.confirm.expand .no {
+    -ms-transform: translateX(100px);
+    transform: translateX(100px);
+    transition-delay: 0.5s;
+}
+
+.confirm.is-ok .yes {
+    width: 100%;
+    background: #00c853;
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+    transition-delay: 0s;
+}
+
+.confirm.is-ok .no {
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+}
