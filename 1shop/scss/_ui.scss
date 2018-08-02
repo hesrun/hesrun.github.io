@@ -1,16 +1,17 @@
 .button {
     @extend .exo;
-    font-weight: 400;
+    font-weight: 600;
     height: 42px;
     border: 1px #c6c6c6 solid;
-    padding: 11px 18px;
+    padding: 11px 15px;
     border-radius: 3px;
     line-height: 16px;
-    font-size: 16px;
+    font-size: 14px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #333333;
+    text-transform: uppercase;
+    color: #6666;
     cursor: pointer;
     letter-spacing: 1px;
     transition: all 0.2s;
@@ -20,6 +21,9 @@
         color: #9f9f9f;
         margin-right: 10px;
         transition: all 0.2s;
+        &:last-child {
+            margin-right: 0px;
+        }
     }
     &.small {
         font-size: 14px;
@@ -61,7 +65,7 @@
     }
     &.grey {
         border-color: #d1d1d1;
-        color: #000;
+        color: #666;
         &:hover {
             background: #d1d1d1;
             color: #000;
@@ -84,6 +88,12 @@
         .mdi {
             margin: 0 0 0 18px;
         }
+    }
+    &.icon-only {
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 42px;
     }
     &.block {
         width: 100%;

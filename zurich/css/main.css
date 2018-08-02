@@ -159,6 +159,15 @@ h2 {
     color: #1b2473;
 }
 
+h2 a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 a:hover {
+    color: #bd9e5e;
+}
+
 h2.with-line {
     margin: 0 0 30px 0;
     position: relative;
@@ -1358,10 +1367,17 @@ a {
     display: inline-block;
     padding: 4px 10px;
     border: 2px transparent solid;
+    text-decoration: none;
+    position: relative;
 }
 
-.price-filter a:first-child {
-    margin-left: 20px;
+.price-filter a:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 20px);
+    left: 10px;
+    border-bottom: 1px #1b2473 dotted;
 }
 
 .price-filter a.active {
@@ -1370,8 +1386,16 @@ a {
     color: #000;
 }
 
+.price-filter a.active:after {
+    opacity: 0;
+}
+
 .price-filter a:hover {
     text-decoration: none;
+}
+
+.price-filter a:hover:after {
+    opacity: 0;
 }
 
 .filters-list {
@@ -1777,6 +1801,11 @@ a {
 }
 
 .services-request-form .name-list .item {
+    display: block;
+    max-width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin: 4px 0 4px 30px;
 }
 
@@ -2297,6 +2326,10 @@ a {
     color: #c1c1c1;
     opacity: 1;
     text-transform: uppercase;
+}
+
+.input-field input.err, .input-field textarea.err {
+    border-color: red;
 }
 
 .input-field textarea {

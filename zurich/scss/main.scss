@@ -66,6 +66,13 @@ h2 {
     font-weight: 500;
     text-transform: uppercase;
     color: $blue;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            color: $yellow;
+        }
+    }
     &.with-line {
         margin: 0 0 30px 0;
         position: relative;
@@ -1024,16 +1031,29 @@ a {
         display: inline-block;
         padding: 4px 10px;
         border: 2px transparent solid;
-        &:first-child {
-            margin-left: 20px;
+        text-decoration: none;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            width: calc(100% - 20px);
+            left: 10px;
+            border-bottom: 1px $blue dotted;
         }
         &.active {
             text-decoration: none;
             border-color: $blue;
             color: #000;
+            &:after {
+                opacity: 0;
+            }
         }
         &:hover {
             text-decoration: none;
+            &:after {
+                opacity: 0;
+            }
         }
     }
 }
@@ -1343,6 +1363,11 @@ a {
         font-size: 12px;
         color: $blue;
         .item {
+            display: block;
+            max-width: 70px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             margin: 4px 0 4px 30px;
         }
     }
@@ -1764,6 +1789,9 @@ a {
             color: #c1c1c1;
             opacity: 1;
             text-transform: uppercase;
+        }
+        &.err {
+            border-color: red;
         }
     }
     textarea {

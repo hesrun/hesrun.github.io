@@ -7,20 +7,21 @@
 @import url("https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css");
 
 .button {
-    font-weight: 400;
+    font-weight: 600;
     height: 42px;
     border: 1px #c6c6c6 solid;
-    padding: 11px 18px;
+    padding: 11px 15px;
     border-radius: 3px;
     line-height: 16px;
-    font-size: 16px;
+    font-size: 14px;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    color: #333333;
+    text-transform: uppercase;
+    color: #6666;
     cursor: pointer;
     letter-spacing: 1px;
     transition: all 0.2s;
@@ -32,6 +33,10 @@
     color: #9f9f9f;
     margin-right: 10px;
     transition: all 0.2s;
+}
+
+.button i.mdi:last-child {
+    margin-right: 0px;
 }
 
 .button.small {
@@ -83,7 +88,7 @@
 
 .button.grey {
     border-color: #d1d1d1;
-    color: #000;
+    color: #666;
 }
 
 .button.grey:hover {
@@ -113,6 +118,13 @@
 
 .button.icon-right .mdi {
     margin: 0 0 0 18px;
+}
+
+.button.icon-only {
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 42px;
 }
 
 .button.block {
@@ -256,12 +268,128 @@
     opacity: 1;
 }
 
+.main-slider {
+    height: 550px;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.has-error .input-field, .input-field.has-error {
+    border-color: #cc5555 !important;
+}
+
+.banner-modal span.success-body {
+    margin-top: 170px;
+    margin-bottom: 150px;
+}
+
+#askquestionform-text {
+    height: 168px;
+}
+
+.success-text {
+    padding: 100px 0 0;
+    font-weight: 600;
+    font-family: 'Exo 2', sans-serif;
+    text-transform: uppercase;
+}
+
+.success-text > .center:first-child {
+    padding-bottom: 50px;
+}
+
+.add-file.valid span {
+    color: green;
+}
+
+.add-file.no-valid span {
+    color: red;
+}
+
+.beggar-modal .img img {
+    max-height: 373px;
+}
+
+.share-favorite .button {
+    background-color: #fff;
+}
+
+.pull-right {
+    float: right;
+}
+
+.order-info .privacy-policy {
+    margin-top: 16px;
+    color: #555;
+}
+
+.subscribe-modal .privacy-policy {
+    font-size: 90%;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.banner-modal .privacy-policy {
+    display: none;
+    font-size: 90%;
+    margin-top: 16px;
+    color: #555;
+}
+
+.banner-modal .hidden + .privacy-policy {
+    display: block;
+}
+
+.feedback-form .privacy-policy {
+    font-size: 90%;
+    margin-top: 16px;
+    color: #555;
+}
+
+.in-stock {
+    color: #27ae60;
+}
+
+.brends-nav.col-5 {
+    width: 925px;
+}
+
+.brends-nav.col-5 ul {
+    columns: 5;
+}
+
+.main-header.fixed .msg-apps {
+    position: fixed;
+    right: calc(50% + 140px);
+    top: 26px;
+    z-index: 111;
+    -ms-transform: translateX(455px);
+    transform: translateX(455px);
+}
+
+@media screen and (max-width: 1480px) {
+    .main-slider .bx-wrapper .bx-next {
+        right: 10px;
+    }
+
+    .main-slider .bx-wrapper .bx-prev {
+        left: 10px;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
 
 input, a, select, textarea, button {
     outline: none;
+}
+
+.blue-color {
+    color: #72aab7 !important;
 }
 
 a {
@@ -283,6 +411,14 @@ body {
     font-size: 16px;
     color: #333333;
     min-width: 1170px;
+}
+
+.exo, .button, .input-field input, input, a, select, textarea, button, .section-title .title, .lbl, .main-nav > ul > li > a, .brends-nav .lbl, .main-slider-text a, .our-services strong, .filter-item select, .share-section, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .help-links, .share span, .our-shop-item .adress strong, .main-footer, .banner-modal-wrap .banner-text > span, .banner-modal-wrap .title, .banner-modal-wrap .sub-title, .subscribe-modal-wrap .subscribe-form .title, .subscribe-modal-wrap .subscribe-form span, .bay-form-modal-wrap .title {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.merri, .main-slider-text h2, .main-slider-text .price-block strong, .main-banner h1, .question-banner h1, .question-banner p, .brands-list .series-name, article h2, article h3, article h4 {
+    font-family: 'Merriweather', serif;
 }
 
 section {
@@ -330,14 +466,6 @@ section {
     letter-spacing: 2px;
 }
 
-.exo, .button, .input-field input, input, a, select, textarea, button, .section-title .title, .lbl, .main-nav > ul > li > a, .brends-nav .lbl, .main-slider-text a, .our-services strong, .filter-item select, .share-section, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .help-links, .share span, .main-footer, .banner-modal-wrap .banner-text > span, .banner-modal-wrap .title, .banner-modal-wrap .sub-title, .subscribe-modal-wrap .subscribe-form .title, .subscribe-modal-wrap .subscribe-form span, .bay-form-modal-wrap .title {
-    font-family: 'Exo 2', sans-serif;
-}
-
-.merri, .main-slider-text h2, .main-slider-text .price-block strong, .main-banner h1, .question-banner h1, .question-banner p, .brands-list .series-name, article h2, article h3, article h4 {
-    font-family: 'Merriweather', serif;
-}
-
 /************************************header*****************************/
 .main-heder {
     position: relative;
@@ -379,8 +507,16 @@ section {
     align-items: center;
 }
 
-.header-favorite {
-    margin-left: 15px;
+.main-header-top .tel {
+    text-align: center;
+}
+
+.main-header-top .tel span {
+    display: block;
+    color: #888888;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 5px;
 }
 
 .header-search {
@@ -448,11 +584,15 @@ section {
     justify-content: space-between;
 }
 
-.main-header-nav .question-to-mag {
-    text-transform: uppercase;
-    margin-right: 15px;
-    font-size: 14px;
-    font-weight: 600;
+.main-header-nav .actions {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main-header-nav .actions .button:not(first-child) {
+    margin-left: 20px;
 }
 
 .header-search-form {
@@ -646,7 +786,6 @@ section {
 }
 
 .brends-nav.col-4 ul {
-    -moz-columns: 4;
     columns: 4;
 }
 
@@ -655,7 +794,6 @@ section {
 }
 
 .brends-nav.col-3 ul {
-    -moz-columns: 2;
     columns: 2;
 }
 
@@ -664,7 +802,6 @@ section {
 }
 
 .brends-nav.col-2 ul {
-    -moz-columns: 2;
     columns: 2;
 }
 
@@ -673,8 +810,25 @@ section {
 }
 
 .brends-nav.col-1 ul {
-    -moz-columns: 2;
     columns: 2;
+}
+
+.eneichen-partner {
+    margin-left: 30px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 12px;
+    color: #888;
+}
+
+.eneichen-partner img {
+    margin-right: 10px;
+}
+
+.eneichen-partner:hover {
+    color: #72aab7;
 }
 
 .main-header.fixed .main-header-nav {
@@ -684,38 +838,9 @@ section {
     z-index: 110;
 }
 
-.main-header.fixed .question-to-mag {
-    display: none;
-}
-
 .main-header.fixed .small-logo {
     display: block;
     margin-left: 0px;
-}
-
-.main-header.fixed .header-favorite {
-    position: fixed;
-    right: 35px;
-    top: 15px;
-    z-index: 111;
-}
-
-.main-header.fixed .header-favorite .button {
-    padding: 10px;
-    border: none;
-}
-
-.main-header.fixed .header-favorite .button span {
-    display: none;
-}
-
-.main-header.fixed .header-favorite .button .mdi {
-    color: #000;
-    margin: 0px;
-}
-
-.main-header.fixed .header-favorite .button:hover {
-    background: none;
 }
 
 .main-header.fixed .header-search {
@@ -746,6 +871,22 @@ section {
 
 .main-header.fixed .header-search .button:hover {
     background: none;
+}
+
+.main-header.fixed .main-header-nav .actions {
+    top: 15px;
+    position: absolute;
+    right: 40px;
+}
+
+.main-header.fixed .main-header-nav .actions .button:first-child {
+    display: none;
+}
+
+.main-header.fixed .main-header-nav .actions .button:last-child {
+    border: none;
+    background: none;
+    margin: 0px;
 }
 
 /************************************slider******************************/
@@ -2460,6 +2601,90 @@ article p:first-child {
 
 .contact-information .contact-info > a {
     margin-top: 30px;
+}
+
+/************************our-shops************************/
+.our-shops .section-title p {
+    color: #010101;
+    line-height: 1.5;
+    margin-top: 40px;
+}
+
+.our-shop-item {
+    margin-bottom: 60px;
+}
+
+.our-shop-item img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.our-shop-item .shop-preview {
+    position: relative;
+}
+
+.our-shop-item .adress {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.our-shop-item .adress strong {
+    margin: 10px 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.our-shop-item .adress span {
+    line-height: 1.5;
+}
+
+.our-shop-item .adress a {
+    margin-top: 30px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.our-shop-item .adress a:hover {
+    color: #72aab7;
+}
+
+.our-shop-item .info {
+    margin: 20px 0 0 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.our-shop-item .work-time {
+    text-align: right;
+}
+
+.our-shop-item .work-time strong {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.our-shop-item .work-time span {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.3;
 }
 
 /**************************footer*************************/
