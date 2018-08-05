@@ -7,21 +7,20 @@
 @import url("https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css");
 
 .button {
-    font-weight: 600;
+    font-weight: 500;
     height: 42px;
     border: 1px #c6c6c6 solid;
-    padding: 11px 15px;
+    padding: 11px 25px;
     border-radius: 3px;
     line-height: 16px;
-    font-size: 14px;
+    font-size: 16px;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    text-transform: uppercase;
-    color: #6666;
+    color: #333;
     cursor: pointer;
     letter-spacing: 1px;
     transition: all 0.2s;
@@ -88,7 +87,7 @@
 
 .button.grey {
     border-color: #d1d1d1;
-    color: #666;
+    color: #333;
 }
 
 .button.grey:hover {
@@ -109,6 +108,15 @@
 .button.grey.filled:hover {
     color: #000;
     background: none;
+}
+
+.button.white {
+    background: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+.button.white:hover {
+    background: #fff;
 }
 
 .button.icon-right {
@@ -163,6 +171,7 @@
     display: flex;
     -ms-flex-align: center;
     align-items: center;
+    position: relative;
 }
 
 .input-field.required {
@@ -218,6 +227,33 @@
     background: rgba(114, 170, 183, 0.1);
 }
 
+.input-field select {
+    cursor: pointer;
+    background: none;
+    padding: 11px 16px;
+    width: 100%;
+    font-size: 16px;
+    color: #666666;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input-field select option {
+    padding: 10px 15px;
+}
+
+.input-field select + i.mdi {
+    pointer-events: none;
+    color: #c6c6c6;
+    font-size: 20px;
+    position: absolute;
+    right: 6px;
+    top: 10px;
+    z-index: 1;
+}
+
 .checkbox {
     margin: 15px 0;
 }
@@ -266,6 +302,47 @@
 
 .checkbox input:checked + label .check i.mdi {
     opacity: 1;
+}
+
+.radio-field {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-field input {
+    display: none;
+}
+
+.radio-field input:checked + .icon:after {
+    opacity: 1;
+}
+
+.radio-field .icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.radio-field .icon:after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: #72aab7;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s;
 }
 
 .main-slider {
@@ -413,11 +490,11 @@ body {
     min-width: 1170px;
 }
 
-.exo, .button, .input-field input, input, a, select, textarea, button, .section-title .title, .lbl, .main-nav > ul > li > a, .brends-nav .lbl, .main-slider-text a, .our-services strong, .filter-item select, .share-section, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .help-links, .share span, .our-shop-item .adress strong, .main-footer, .banner-modal-wrap .banner-text > span, .banner-modal-wrap .title, .banner-modal-wrap .sub-title, .subscribe-modal-wrap .subscribe-form .title, .subscribe-modal-wrap .subscribe-form span, .bay-form-modal-wrap .title {
+.exo, .button, .input-field input, .input-field select, input, a, select, textarea, button, .section-title .title, .lbl, .main-nav > ul > li > a, .brends-nav .lbl, .main-slider-text a, .our-services strong, .filter-item select, .share-section, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .help-links, .share span, .our-shop-item .adress strong, .our-priority-grid .text, .main-footer, .banner-modal-wrap .banner-text > span, .banner-modal-wrap .title, .banner-modal-wrap .sub-title, .subscribe-modal-wrap .subscribe-form .title, .subscribe-modal-wrap .subscribe-form span, .bay-form-modal-wrap .title, .assessment-modal .assessment-modal-wrap > strong {
     font-family: 'Exo 2', sans-serif;
 }
 
-.merri, .main-slider-text h2, .main-slider-text .price-block strong, .main-banner h1, .question-banner h1, .question-banner p, .brands-list .series-name, article h2, article h3, article h4 {
+.merri, .main-slider-text h2, .main-slider-text .price-block strong, .main-banner h1, .question-banner h1, .question-banner p, .brands-list .series-name, article h2, article h3, article h4, .buyout-banner h1, .buyout-services h2 {
     font-family: 'Merriweather', serif;
 }
 
@@ -2687,6 +2764,532 @@ article p:first-child {
     line-height: 1.3;
 }
 
+/**************************buyout*************************/
+.buyout-banner {
+    position: relative;
+    min-height: 520px;
+}
+
+.buyout-banner:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.buyout-banner h1 {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin: 0px;
+}
+
+.buyout-banner p {
+    line-height: 1.5;
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+.buyout-banner .button {
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.buyout-banner > img {
+    position: absolute;
+    object-fit: cover;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.buyout-banner .text {
+    position: relative;
+    color: #fff;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 80px 0;
+    z-index: 1;
+}
+
+.about-partner .contract {
+    margin-top: -50px;
+}
+
+.about-partner .contract img {
+    width: 100%;
+    box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.07);
+}
+
+.about-partner .partner-info {
+    padding: 80px 0 0 0;
+}
+
+.about-partner .partner-info p {
+    margin: 35px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.about-partner .links {
+    padding: 80px 0 0 0;
+    list-style: none;
+}
+
+.about-partner .links li {
+    margin-bottom: 25px;
+}
+
+.about-partner .links a {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #bcbcbc;
+}
+
+.about-partner .links a:hover {
+    color: #72aab7;
+}
+
+.brands-grid .brands-list {
+    position: relative;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.brands-grid .brands-list:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+}
+
+.brands-grid li {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    border-right: 1px #e8e8e8 solid;
+    border-bottom: 1px #e8e8e8 solid;
+}
+
+.brands-grid li:nth-child(5n) {
+    border-right: none;
+}
+
+.brands-grid a {
+    display: -ms-flexbox;
+    display: flex;
+    height: 155px;
+    transition: all 0.3s;
+}
+
+.brands-grid a img {
+    margin: auto;
+    transition: all 0.3s;
+}
+
+.brands-grid a:hover {
+    background: rgba(114, 170, 183, 0.05);
+}
+
+.brands-grid a:hover img {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.brands-grid .note {
+    max-width: 650px;
+    margin: 40px auto;
+}
+
+.brands-grid .note strong {
+    display: block;
+    color: #333;
+}
+
+.brands-grid .note p {
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.our-priority-grid .grid-item {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.our-priority-grid .grid-item.one-of-one {
+    height: 290px;
+}
+
+.our-priority-grid .grid-item.one-of-two {
+    height: 447px;
+}
+
+.our-priority-grid .grid-item.two-of-one {
+    height: 290px;
+}
+
+.our-priority-grid .grid-item.one-of-three {
+    height: 604px;
+}
+
+.our-priority-grid .grid-item.one-of-three.text-bottom .text {
+    text-align: right;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.our-priority-grid .grid-item.green-l {
+    background: #dceff3;
+}
+
+.our-priority-grid .grid-item.green-d {
+    background: #94c4cd;
+}
+
+.our-priority-grid .grid-item.green-d .text {
+    color: #fff;
+}
+
+.our-priority-grid .grid-item.text-bottom .text {
+    text-align: left;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.our-priority-grid .grid-item.icon-left .text {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    text-align: left;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.our-priority-grid .grid-item.icon-left .text img {
+    margin-right: 40px;
+}
+
+.our-priority-grid .bg-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.our-priority-grid .bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.our-priority-grid .bg-img + .text {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 25px;
+}
+
+.our-priority-grid .text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.our-priority-grid .text img {
+    margin-bottom: 30px;
+}
+
+.our-priority-grid .note {
+    max-width: 930px;
+    margin: 40px auto;
+}
+
+.our-priority-grid .note strong {
+    display: block;
+    color: #333;
+}
+
+.our-priority-grid .note p {
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.benefit-info {
+    background: #f7f7f7;
+}
+
+.benefit-info p {
+    line-height: 1.5;
+}
+
+.buyout-banner.antiquare {
+    min-height: 600px;
+}
+
+.buyout-banner.antiquare .text {
+    padding-top: 0px;
+    max-width: none;
+}
+
+.buyout-banner.antiquare .section-title {
+    color: #fff;
+}
+
+.buyout-banner.antiquare p {
+    margin: 0px;
+    font-size: 16px;
+}
+
+.buyout-banner.antiquare .antiq-item {
+    margin: 40px 0;
+}
+
+.buyout-banner.antiquare .antiq-item .ico {
+    height: 86px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.buyout-banner.antiquare .antiq-item span {
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.buyout-steps {
+    margin-top: -60px;
+}
+
+.buyout-steps .container {
+    position: relative;
+}
+
+.buyout-steps .container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #fff;
+    left: -26px;
+    top: -50px;
+    right: -26px;
+    bottom: 0px;
+}
+
+.buyout-steps .steps,
+.buyout-steps .original {
+    min-height: 500px;
+}
+
+.buyout-steps .steps p,
+.buyout-steps .original p {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.buyout-steps .section-title {
+    padding: 0px;
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.buyout-steps .steps {
+    background: #dceff3;
+    padding: 35px 40px;
+}
+
+.buyout-steps .contats div {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 35px 0;
+}
+
+.buyout-steps .contats .mdi {
+    margin-right: 15px;
+}
+
+.buyout-steps .contats span {
+    line-height: 1.3;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.buyout-steps .contats + span {
+    color: #888888;
+}
+
+.buyout-steps .original {
+    position: relative;
+    color: #fff;
+}
+
+.buyout-steps .original .section-title {
+    color: inherit;
+}
+
+.buyout-steps .original > img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.buyout-steps .original .text {
+    min-height: 500px;
+    padding: 35px 40px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.buyout-assessment .section-title {
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.buyout-assessment p {
+    margin: 0px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding-right: 40px;
+}
+
+.buyout-assessment p strong {
+    color: #333;
+    font-weight: 700;
+}
+
+.buyout-assessment .button {
+    margin: 40px 0;
+}
+
+.buyout-assessment p ~ p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.buyout-assessment .assessment-item {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.buyout-assessment .assessment-item strong {
+    display: block;
+    margin: 10px 0;
+}
+
+.buyout-assessment .assessment-item span {
+    font-size: 12px;
+    color: #888888;
+    line-height: 1.5;
+}
+
+.buyout-services {
+    padding-bottom: 0px;
+}
+
+.buyout-services .item {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.buyout-services .item.reverse {
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.buyout-services .item.reverse .text {
+    padding-left: 0px;
+}
+
+.buyout-services .img {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+}
+
+.buyout-services .img img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.buyout-services .text {
+    padding: 0 50px;
+}
+
+.buyout-services .section-title {
+    padding: 0px;
+    text-align: left;
+}
+
+.buyout-services .section-title + h2 {
+    margin-top: 30px;
+}
+
+.buyout-services .action {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.buyout-services .action .button {
+    min-width: 220px;
+}
+
+.buyout-services .action span {
+    margin-left: 20px;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.buyout-services h2 {
+    margin: 55px 0 30px;
+    font-size: 24px;
+}
+
+.buyout-services p {
+    line-height: 1.45;
+    margin-bottom: 35px;
+}
+
 /**************************footer*************************/
 .main-footer {
     background: #333333;
@@ -3035,4 +3638,99 @@ article p:first-child {
     line-height: 20px;
     color: #72aab7;
     font-size: 22px;
+}
+
+/*******************************assessment-modal*************************/
+.assessment-modal {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.assessment-modal .assessment-modal-wrap > strong {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.assessment-modal .assessment-modal-wrap .pager {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.assessment-modal .assessment-modal-wrap .pager span {
+    margin: 0 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.5;
+}
+
+.assessment-modal .assessment-modal-wrap .pager span.active {
+    opacity: 1;
+}
+
+.assessment-modal .form-wrap {
+    background: #fff;
+    border-radius: 4px;
+    padding: 70px 0;
+    text-align: left;
+}
+
+.assessment-modal .step-2 {
+    margin: 0 auto;
+    max-width: 370px;
+}
+
+.assessment-modal form {
+    max-width: 730px;
+    margin: 0 auto;
+}
+
+.assessment-modal form .item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.assessment-modal form .lbl {
+    margin: 0px;
+    color: #888888;
+    -ms-flex: 0 0 230px;
+    flex: 0 0 230px;
+}
+
+.assessment-modal form .input-field,
+.assessment-modal form .button {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.assessment-modal form .radio-field {
+    margin-right: 20px;
+}
+
+.assessment-modal .action {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.assessment-modal .action .button {
+    min-width: 200px;
+}
+
+.assessment-modal .action span {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
 }

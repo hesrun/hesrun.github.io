@@ -9,21 +9,20 @@
 @import url("https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css");
 
 .button {
-    font-weight: 600;
+    font-weight: 500;
     height: 42px;
     border: 1px #c6c6c6 solid;
-    padding: 11px 15px;
+    padding: 11px 25px;
     border-radius: 3px;
     line-height: 16px;
-    font-size: 14px;
+    font-size: 16px;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    text-transform: uppercase;
-    color: #6666;
+    color: #333;
     cursor: pointer;
     letter-spacing: 1px;
     transition: all 0.2s;
@@ -90,7 +89,7 @@
 
 .button.grey {
     border-color: #d1d1d1;
-    color: #666;
+    color: #333;
 }
 
 .button.grey:hover {
@@ -111,6 +110,15 @@
 .button.grey.filled:hover {
     color: #000;
     background: none;
+}
+
+.button.white {
+    background: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
+.button.white:hover {
+    background: #fff;
 }
 
 .button.icon-right {
@@ -165,6 +173,7 @@
     display: flex;
     -ms-flex-align: center;
     align-items: center;
+    position: relative;
 }
 
 .input-field.required {
@@ -220,6 +229,33 @@
     background: rgba(114, 170, 183, 0.1);
 }
 
+.input-field select {
+    cursor: pointer;
+    background: none;
+    padding: 11px 16px;
+    width: 100%;
+    font-size: 16px;
+    color: #666666;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input-field select option {
+    padding: 10px 15px;
+}
+
+.input-field select + i.mdi {
+    pointer-events: none;
+    color: #c6c6c6;
+    font-size: 20px;
+    position: absolute;
+    right: 6px;
+    top: 10px;
+    z-index: 1;
+}
+
 .checkbox {
     margin: 15px 0;
 }
@@ -270,12 +306,57 @@
     opacity: 1;
 }
 
+.radio-field {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-field input {
+    display: none;
+}
+
+.radio-field input:checked + .icon:after {
+    opacity: 1;
+}
+
+.radio-field .icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.radio-field .icon:after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: #72aab7;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
 * {
     box-sizing: border-box;
 }
 
 input, a, select, textarea, button {
     outline: none;
+}
+
+.blue-color {
+    color: #72aab7 !important;
 }
 
 a {
@@ -364,11 +445,11 @@ section {
     letter-spacing: 2px;
 }
 
-.exo, .button, .input-field input, input, a, select, textarea, button, .section-title .title, .lbl, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .economy strong, .share span, .share-section, .our-shop-item .adress strong, .main-footer, .subscribe-modal-wrap .subscribe-form .title, .subscribe-modal-wrap .subscribe-form span {
+.exo, .button, .input-field input, .input-field select, input, a, select, textarea, button, .section-title .title, .lbl, .watch-info .name, .watch-info .price strong, .watch-info .economy, .watch-info .economy strong, .share span, .share-section, .our-shop-item .adress strong, .our-priority-grid .text, .main-footer, .subscribe-modal-wrap .subscribe-form .title, .subscribe-modal-wrap .subscribe-form span, .assessment-modal .assessment-modal-wrap > strong {
     font-family: 'Exo 2', sans-serif;
 }
 
-.merri, .main-slider-text h2, .main-slider-text .price-block strong, .main-banner h1, .brands-list .series-name, .question-banner h1, .question-banner p {
+.merri, .main-slider-text h2, .main-slider-text .price-block strong, .main-banner h1, .brands-list .series-name, .buyout-banner h1, .buyout-services h2, .question-banner h1, .question-banner p {
     font-family: 'Merriweather', serif;
 }
 
@@ -1807,6 +1888,529 @@ article p {
     line-height: 1.3;
 }
 
+/**************************buyout*************************/
+.buyout-banner {
+    position: relative;
+    min-height: 520px;
+}
+
+.buyout-banner:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.buyout-banner h1 {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin: 0px;
+}
+
+.buyout-banner p {
+    line-height: 1.5;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.buyout-banner .button {
+    margin-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.buyout-banner > img {
+    position: absolute;
+    object-fit: cover;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.buyout-banner .text {
+    position: relative;
+    color: #fff;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 80px 0;
+    z-index: 1;
+}
+
+.about-partner .contract {
+    margin-top: -50px;
+}
+
+.about-partner .contract img {
+    width: 100%;
+    box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.07);
+}
+
+.about-partner .partner-info {
+    padding: 50px 0 0 0;
+}
+
+.about-partner .partner-info p {
+    margin: 35px 0;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.about-partner .actions {
+    display: none;
+}
+
+.brands-grid .brands-list {
+    position: relative;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.brands-grid .brands-list:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+}
+
+.brands-grid li {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    border-right: 1px #e8e8e8 solid;
+    border-bottom: 1px #e8e8e8 solid;
+}
+
+.brands-grid li:nth-child(4n) {
+    border-right: none;
+}
+
+.brands-grid a {
+    display: -ms-flexbox;
+    display: flex;
+    height: 155px;
+    transition: all 0.3s;
+}
+
+.brands-grid a img {
+    margin: auto;
+    transition: all 0.3s;
+}
+
+.brands-grid a:hover {
+    background: rgba(114, 170, 183, 0.05);
+}
+
+.brands-grid a:hover img {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.brands-grid .note {
+    max-width: 650px;
+    margin: 40px auto;
+}
+
+.brands-grid .note strong {
+    display: block;
+    color: #333;
+}
+
+.brands-grid .note p {
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.our-priority-grid .grid-item {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.our-priority-grid .grid-item.one-of-one {
+    height: 160px;
+}
+
+.our-priority-grid .grid-item.one-of-two {
+    height: 252px;
+}
+
+.our-priority-grid .grid-item.two-of-one {
+    height: 160px;
+}
+
+.our-priority-grid .grid-item.one-of-three {
+    height: 344px;
+}
+
+.our-priority-grid .grid-item.one-of-three.text-bottom .text {
+    text-align: right;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.our-priority-grid .grid-item.green-l {
+    background: #dceff3;
+}
+
+.our-priority-grid .grid-item.green-d {
+    background: #94c4cd;
+}
+
+.our-priority-grid .grid-item.green-d .text {
+    color: #fff;
+}
+
+.our-priority-grid .grid-item.text-bottom .text {
+    text-align: left;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.our-priority-grid .grid-item.icon-left .text {
+    -ms-flex-direction: row;
+    flex-direction: row;
+    text-align: left;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.our-priority-grid .grid-item.icon-left .text img {
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+
+.our-priority-grid .bg-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.our-priority-grid .bg-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.our-priority-grid .bg-img + .text {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 25px;
+}
+
+.our-priority-grid .text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.our-priority-grid .text img {
+    max-width: 90px;
+    margin-bottom: 20px;
+}
+
+.our-priority-grid .note {
+    max-width: 930px;
+    margin: 20px auto;
+}
+
+.our-priority-grid .note strong {
+    display: block;
+    color: #333;
+}
+
+.our-priority-grid .note p {
+    color: #999999;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.benefit-info {
+    background: #f7f7f7;
+}
+
+.benefit-info .section-title {
+    padding-bottom: 10px;
+}
+
+.benefit-info p {
+    line-height: 1.5;
+}
+
+.buyout-banner.antiquare {
+    min-height: 600px;
+}
+
+.buyout-banner.antiquare .text {
+    padding-top: 0px;
+    max-width: none;
+}
+
+.buyout-banner.antiquare .section-title {
+    color: #fff;
+    padding-bottom: 0px;
+}
+
+.buyout-banner.antiquare p {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.buyout-banner.antiquare p br {
+    display: none;
+}
+
+.buyout-banner.antiquare .antiq-item {
+    margin: 10px 0;
+}
+
+.buyout-banner.antiquare .antiq-item .ico {
+    height: 86px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.buyout-banner.antiquare .antiq-item span {
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.buyout-steps {
+    margin-top: -60px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.buyout-steps .container {
+    position: relative;
+}
+
+.buyout-steps .container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #fff;
+    left: -12px;
+    top: -30px;
+    right: -12px;
+    bottom: 0px;
+}
+
+.buyout-steps .steps,
+.buyout-steps .original {
+    min-height: 600px;
+}
+
+.buyout-steps .steps p,
+.buyout-steps .original p {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.buyout-steps .section-title {
+    padding: 0px;
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.buyout-steps .steps {
+    background: #dceff3;
+    padding: 20px 20px;
+}
+
+.buyout-steps .contats div {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 35px 0;
+}
+
+.buyout-steps .contats .mdi {
+    margin-right: 15px;
+}
+
+.buyout-steps .contats span {
+    line-height: 1.3;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.buyout-steps .contats + span {
+    color: #888888;
+}
+
+.buyout-steps .original {
+    position: relative;
+    color: #fff;
+}
+
+.buyout-steps .original .section-title {
+    color: inherit;
+}
+
+.buyout-steps .original > img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.buyout-steps .original .text {
+    min-height: 600px;
+    padding: 20px 20px 10px 20px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.buyout-assessment {
+    text-align: center;
+}
+
+.buyout-assessment .section-title {
+    padding-bottom: 25px;
+}
+
+.buyout-assessment p {
+    margin: 0px 0 10px 0;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.buyout-assessment p br {
+    display: none;
+}
+
+.buyout-assessment p strong {
+    color: #333;
+    font-weight: 700;
+}
+
+.buyout-assessment .button {
+    width: 100%;
+    max-width: 345px;
+    margin: 40px auto;
+}
+
+.buyout-assessment p ~ p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.buyout-assessment .assessment-item {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.buyout-assessment .assessment-item strong {
+    display: block;
+    margin: 10px 0;
+}
+
+.buyout-assessment .assessment-item span {
+    font-size: 12px;
+    color: #888888;
+    line-height: 1.5;
+}
+
+.buyout-services {
+    padding-bottom: 0px;
+}
+
+.buyout-services .img {
+    margin: 0 -15px;
+    height: 400px;
+}
+
+.buyout-services .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.buyout-services .text {
+    padding: 40px 0;
+}
+
+.buyout-services .section-title {
+    padding: 0px;
+}
+
+.buyout-services .section-title + h2 {
+    margin-top: 30px;
+}
+
+.buyout-services .action {
+    text-align: center;
+}
+
+.buyout-services .action .button {
+    width: 100%;
+    max-width: 345px;
+    margin: 10px auto 15px;
+}
+
+.buyout-services .action span {
+    display: block;
+    color: #888;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.buyout-services .action span br {
+    display: none;
+}
+
+.buyout-services h2 {
+    text-align: center;
+    margin: 55px 0 30px;
+    font-size: 24px;
+}
+
+.buyout-services p {
+    line-height: 1.45;
+}
+
 /**************************footer*************************/
 .main-footer {
     background: #333333;
@@ -2101,11 +2705,16 @@ article p {
 /*******************************Модалки*********************/
 .remodal-wrapper {
     padding: 0px;
-    overflow: hidden;
     height: 100%;
 }
 
+.remodal-wrapper .remodal {
+    -ms-transform: none;
+    transform: none;
+}
+
 .fullscreen-modal {
+    width: 100%;
     height: 100%;
     background: #FFF;
     text-align: left;
@@ -2113,6 +2722,7 @@ article p {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
+    position: fixed;
 }
 
 .fullscreen-modal .header {
@@ -2306,6 +2916,84 @@ article p {
 
 .subscribe-modal-wrap .center .button {
     width: 100%;
+}
+
+/*******************************assessment-modal*************************/
+.assessment-modal {
+    max-width: 595px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.assessment-modal .remodal-close {
+    right: 10px;
+    top: -2px;
+}
+
+.assessment-modal .remodal-close:before {
+    font-size: 52px;
+}
+
+.assessment-modal .assessment-modal-wrap > strong {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+.assessment-modal .form-wrap {
+    background: #fff;
+    border-radius: 4px;
+    padding: 60px 0 30px;
+    text-align: left;
+}
+
+.assessment-modal form {
+    max-width: 345px;
+    margin: 0 auto;
+}
+
+.assessment-modal form input, .assessment-modal form select {
+    text-align: center;
+    text-align-last: center;
+}
+
+.assessment-modal form .lbl {
+    text-transform: none;
+}
+
+.assessment-modal form .item {
+    margin-bottom: 20px;
+}
+
+.assessment-modal form .input-field,
+.assessment-modal form .button {
+    width: 100%;
+}
+
+.assessment-modal form .radio-field {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: 20px;
+}
+
+.assessment-modal .action {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.assessment-modal .action .button {
+    width: 100%;
+}
+
+.assessment-modal .action span {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
 }
 
 /******************response****************/
@@ -2952,5 +3640,193 @@ article p {
 
     .our-shops .col-xs-12:last-child > .our-shop-item {
         margin-bottom: 0px;
+    }
+  /**************************buyout*************************/
+    .buyout-banner {
+        min-height: 0px;
+        padding: 0px;
+    }
+
+    .buyout-banner h1 {
+        font-size: 24px;
+    }
+
+    .buyout-banner p {
+        font-size: 15px;
+    }
+
+    .buyout-banner .button {
+        width: 100%;
+    }
+
+    .buyout-banner .text {
+        padding: 40px 0;
+    }
+
+    .about-partner {
+        padding-bottom: 0px;
+    }
+
+    .about-partner .contract {
+        display: none;
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    .about-partner .partner-info {
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .about-partner .partner-info p {
+        margin: 25px 0;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .about-partner .actions {
+        display: block;
+    }
+
+    .about-partner .actions .button {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .brands-grid {
+        display: none;
+        padding-bottom: 0px;
+    }
+
+    .brands-grid li {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+
+    .brands-grid li:nth-child(2n) {
+        border-right: none;
+    }
+
+    .buyout-banner.antiquare .text {
+        padding-top: 0px;
+    }
+
+    .buyout-banner.antiquare p {
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
+    .buyout-banner.antiquare p br {
+        display: none;
+    }
+
+    .buyout-banner.antiquare .row + p {
+        display: none;
+    }
+
+    .buyout-banner.antiquare .antiq-item {
+        margin: 0;
+    }
+
+    .buyout-banner.antiquare .antiq-item span {
+        font-size: 14px;
+    }
+
+    .buyout-steps .steps,
+  .buyout-steps .original {
+        min-height: 0px;
+        font-size: 14px;
+    }
+
+    .buyout-steps .contats div {
+        margin: 25px 0;
+    }
+
+    .buyout-steps .contats span {
+        line-height: 1.5;
+        font-size: 14px;
+    }
+
+    .buyout-steps .contats + span {
+        line-height: 1.5;
+    }
+
+    .buyout-steps .original {
+        margin-top: 25px;
+    }
+
+    .buyout-steps .original .section-title {
+        color: inherit;
+    }
+
+    .buyout-steps .original .text {
+        min-height: 0px;
+    }
+
+    .buyout-assessment p {
+        font-size: 14px;
+    }
+
+    .buyout-assessment p br {
+        display: none;
+    }
+
+    .buyout-assessment .button {
+        margin: 30px auto;
+    }
+
+    .buyout-assessment p ~ p {
+        color: #666666;
+        font-size: 14px;
+    }
+
+    .buyout-services .text {
+        padding: 30px 0;
+        font-size: 14px;
+    }
+
+    .buyout-services .text p {
+        margin-top: 0px;
+    }
+
+    .buyout-services h2 {
+        text-align: left;
+        margin: 0px 0 30px;
+        font-size: 18px;
+    }
+
+    .buyout-services .section-title {
+        text-align: left;
+        padding: 0px;
+    }
+
+    .buyout-services .section-title + h2 {
+        margin-top: 20px;
+    }
+
+    .buyout-services .action {
+        text-align: center;
+    }
+
+    .buyout-services .action span {
+        font-size: 14px;
+    }
+
+    .buyout-services p {
+        line-height: 1.45;
+    }
+  /*******************************assessment-modal*************************/
+    .assessment-modal {
+        padding-top: 85px;
+    }
+
+    .assessment-modal .remodal-close {
+        right: 10px;
+        top: 10px;
+    }
+
+    .assessment-modal .form-wrap {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
