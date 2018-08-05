@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather&subset=cyrillic');
 @import url('https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css');
 @import "ui.scss";
-@import "fix_desktop.scss";
 
 * {
     box-sizing: border-box;
@@ -105,9 +104,27 @@ section {
         display: flex;
         align-items: center;
     }
+    .msg-apps {
+        align-self: flex-start;
+        margin: 4px 15px 0 0;
+        i.mdi {
+            font-size: 20px;
+        }
+        .mdi-whatsapp {
+            color: #54b948;
+        }
+        .mdi-telegram {
+            color: #59b8e1;
+        }
+    }
     .tel {
         text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        @extend .exo;
         span {
+            letter-spacing: 0;
             display: block;
             color: #888888;
             font-size: 12px;
@@ -378,11 +395,25 @@ section {
         display: block;
         margin-left: 0px;
     }
+    .right-part {
+        position: fixed;
+        left: 50%;
+        top: 21px;
+        transform: translateX(290px);
+        z-index: 111;
+        .eneichen-partner {
+            display: none;
+        }
+        .msg-apps {
+            margin-top: -2px;
+        }
+    }
     .header-search {
         position: fixed;
-        right: 70px;
+        left: 50%;
         top: 15px;
-        z-index: 111;
+        transform: translateX(574px - 42px);
+        z-index: 112;
         .header-search-form {
             left: auto;
             right: 0px;
@@ -406,7 +437,8 @@ section {
         .actions {
             top: 15px;
             position: absolute;
-            right: 40px;
+            left: 50%;
+            transform: translateX(574px);
             .button:first-child {
                 display: none;
             }
@@ -2009,11 +2041,19 @@ article {
         p {
             color: #999999;
             font-size: 14px;
-            line-height: 1.3;
+            line-height: 1.5;
         }
     }
 }
 .our-priority-grid {
+    .title {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        @extend .merri;
+    }
     .grid-item {
         position: relative;
         margin-bottom: 24px;
@@ -2107,7 +2147,7 @@ article {
         p {
             color: #999999;
             font-size: 14px;
-            line-height: 1.3;
+            line-height: 1.5;
         }
     }
 }
@@ -2655,3 +2695,5 @@ article {
         }
     }
 }
+
+@import "fix_desktop.scss";
