@@ -1270,8 +1270,6 @@ p {
     font-size: 10px;
     border-top: 1px $yellow solid;
     padding: 15px;
-    display: flex;
-    justify-content: space-between;
     span {
         color: $yellow;
         text-transform: uppercase;
@@ -1280,6 +1278,11 @@ p {
         margin: 0px;
         padding: 0px;
         list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            flex: 0 0 33.333%;
+        }
         a {
             display: block;
             text-decoration: none;
@@ -1456,6 +1459,11 @@ p {
         font-size: 12px;
         color: $blue;
         .item {
+            display: block;
+            max-width: 70px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             margin: 4px 0 4px 15px;
         }
     }
@@ -1615,6 +1623,9 @@ p {
             opacity: 1;
             text-transform: uppercase;
         }
+        &.err {
+            border-color: red;
+        }
     }
     textarea {
         min-height: 43px;
@@ -1712,6 +1723,44 @@ p {
         width: 25px;
         font-size: 10px;
         position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+}
+
+.bx-viewer-wrap-outer {
+    left: 0px !important;
+    top: 0px !important;
+    height: 100% !important;
+    width: 100% !important;
+    .bx-viewer-prev-outer,
+    .bx-viewer-next-outer {
+        z-index: 15;
+    }
+    .bx-viewer-wrap-inner {
+        border-radius: 0px;
+        padding: 0px !important;
+        box-shadow: none;
+        height: 100%;
+        width: 100%;
+    }
+    .bx-viewer-wrap {
+        height: 100% !important;
+        width: 100% !important;
+        border: none !important;
+        background: none !important;
+    }
+    .bx-viewer-cap-wrap {
+        display: flex;
+    }
+    .bx-viewer-image {
+        height: auto !important;
+        width: auto !important;
+        max-height: 100% !important;
+        max-width: 100% !important;
+        margin: auto !important;
+    }
+    .bx-viewer-close {
         right: 0px;
         top: 0px;
     }
