@@ -413,28 +413,24 @@ p {
 }
 .main-banner {
     position: relative;
-    margin-bottom: 20px;
-    .bx-wrapper {
-        margin: 0px;
-        box-shadow: none;
-        border: none;
-        background: transparent;
+    .swiper-container {
+        padding-bottom: 20px;
     }
-    .bx-pager.bx-default-pager {
-        padding-top: 10px;
-        bottom: auto;
-        a {
+    .swiper-pagination {
+        bottom: 0px;
+        .swiper-pagination-bullet {
             border: 1px #c5c5c5 solid;
             width: 8px;
             height: 8px;
             background: none;
-            &.active {
+            opacity: 1;
+            &.swiper-pagination-bullet-active {
                 background: $blue;
                 border: $blue;
             }
         }
     }
-    .slide-item {
+    .swiper-slide {
         height: 300px;
     }
     .image {
