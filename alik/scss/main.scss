@@ -72,20 +72,20 @@ a {
 .main-banner {
     height: 600px;
     position: relative;
-    img {
-        position: absolute;
-        object-fit: cover;
+    .parallax-window {
         height: 100%;
-        width: 100%;
     }
     .banner-text {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         text-align: center;
-        position: relative;
         z-index: 2;
         margin: auto;
         background: rgba(#000,0.3);
@@ -210,22 +210,22 @@ a {
 
 .section-accordions {
     .accord-item:nth-child(1) .accord-head {
-        background: $orange;
+        background: #808183;
     }
     .accord-item:nth-child(2) .accord-head {
-        background: lighten($orange,5);
+        background: lighten(#808183,5);
     }
     .accord-item:nth-child(3) .accord-head {
-        background: lighten($orange,10);
+        background: lighten(#808183,10);
     }
     .accord-item:nth-child(4) .accord-head {
-        background: lighten($orange,15);
+        background: lighten(#808183,15);
     }
     .accord-item:nth-child(5) .accord-head {
-        background: lighten($orange,20);
+        background: lighten(#808183,20);
     }
     .accord-item:nth-child(6) .accord-head {
-        background: lighten($orange,25);
+        background: lighten(#808183,25);
     }
     .accord-head {
         color: #fff;
@@ -259,6 +259,25 @@ a {
     }
 }
 
+.my-modal-body {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    border: none;
+    > .close {
+        position: absolute;
+        right: -1.5rem;
+        top: -1.5rem;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        background: $orange;
+        color: #fff;
+        opacity: 1 !important;
+        color: #fff !important;
+    }
+}
 .sign-form {
     max-width: 600px;
     margin: 0 auto;
@@ -301,7 +320,7 @@ a {
         }
     }
     .custom-checkbox {
-        margin: 1rem 0 1rem 150px; 
+        margin: 1rem 0 1rem 150px;
     }
     .input-group {
         position: relative;
@@ -315,6 +334,7 @@ a {
         }
     }
 }
+
 .footer-nav {
     background: rgb(88,76,74);
     color: #fff;

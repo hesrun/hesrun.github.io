@@ -35,6 +35,10 @@
     border-color: #dd8c5b !important;
 }
 
+.modal-dialog {
+    max-width: 600px;
+}
+
 html {
     font-size: 14px;
 }
@@ -121,14 +125,15 @@ a:hover {
     position: relative;
 }
 
-.main-banner img {
-    position: absolute;
-    object-fit: cover;
+.main-banner .parallax-window {
     height: 100%;
-    width: 100%;
 }
 
 .main-banner .banner-text {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
     height: 100%;
     display: -ms-flexbox;
     display: flex;
@@ -139,7 +144,6 @@ a:hover {
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
-    position: relative;
     z-index: 2;
     margin: auto;
     background: rgba(0, 0, 0, 0.3);
@@ -275,27 +279,27 @@ a:hover {
 }
 
 .section-accordions .accord-item:nth-child(1) .accord-head {
-    background: #d46e31;
+    background: #808183;
 }
 
 .section-accordions .accord-item:nth-child(2) .accord-head {
-    background: #d87d46;
+    background: #8d8e90;
 }
 
 .section-accordions .accord-item:nth-child(3) .accord-head {
-    background: #dd8c5b;
+    background: #9a9b9c;
 }
 
 .section-accordions .accord-item:nth-child(4) .accord-head {
-    background: #e19b70;
+    background: #a7a7a9;
 }
 
 .section-accordions .accord-item:nth-child(5) .accord-head {
-    background: #e6a985;
+    background: #b4b4b5;
 }
 
 .section-accordions .accord-item:nth-child(6) .accord-head {
-    background: #eab89a;
+    background: #c1c1c2;
 }
 
 .section-accordions .accord-head {
@@ -333,6 +337,27 @@ a:hover {
 
 .my-article-style p {
     font-size: 1.2rem;
+}
+
+.my-modal-body {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    border: none;
+}
+
+.my-modal-body > .close {
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    background: #d46e31;
+    color: #fff;
+    opacity: 1 !important;
+    color: #fff !important;
 }
 
 .sign-form {

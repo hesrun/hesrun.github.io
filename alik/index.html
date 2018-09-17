@@ -7,6 +7,7 @@
         <title>Document</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -22,16 +23,16 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Аптеки<span class="sr-only">(current)</span></a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#apteki">Аптеки</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Вопросы и ответы</a>
+                                <a class="nav-link" href="#faq">Вопросы и ответы</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#signIn">
                                     <i class="mdi mdi-login-variant"></i>
                                     Вход
                                 </a>
@@ -42,11 +43,16 @@
                                     Регистрация
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link b24-web-form-popup-btn-31" href="#">
+                                    <i class="mdi mdi-cellphone-basic"></i>
+                                    Обратный звонок
+                                </a>
+                            </li>
                         </ul>
                         <span class="navbar-text">
                             <strong class="tel">
-                                8 800 888-88-88
-                                <span>Обратный звонок</span>
+                                <a href="tel:88008888888">8 800 888-88-88</a>
                             </strong>
                         </span>
                     </div>
@@ -54,8 +60,8 @@
             </div>
         </header>
         <section class="main-banner">
-            <img class="img-fluid" src="img/banner.jpg" alt="">
-            <div class="banner-text">
+            <div class="parallax-window" data-parallax="scroll" data-image-src="img/banner.jpg"></div>
+            <div class="banner-text wow animated fadeIn" data-wow-duration="2s" data-wow-delay="1s">
                 <b>Новый день</b>
                 <p>Официальная программа поддержки <br>пациентов компании «Джонсон&Джонсон»</p>
             </div>
@@ -63,12 +69,12 @@
         <section class="section-pad intro-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-5">
+                    <div class="col-sm-5 wow animated fadeIn" data-wow-delay="2s">
                         <div class="text">
                             <p>Мы начали «Новый день», чтобы еще больше пациентов с социально значимыми заболеваниями получили доступ к инновационным препаратам. </p>
                         </div>
                     </div>
-                    <div class="col-sm-5 offset-sm-2">
+                    <div class="col-sm-5 offset-sm-2 wow animated fadeIn" data-wow-delay="2s">
                         <div class="drug-search">
                             <p>Если вместе с вашим врачом вы решили пройти терапию препаратами компании Johnson&Johnson, мы поможем начать лечение на комфортных условиях.</p>
                             <div class="input-group mb-3">
@@ -95,29 +101,29 @@
         </section>
         <section class="section-pad steps-to-access">
             <div class="container">
-                <div class="section-title text-center">
+                <div class="section-title text-center wow animated zoomIn">
                     <h2>4-шага к участию:</h2>
                 </div>
                 <div class="row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 wow animated fadeInRight">
                         <div class="step-block">
                             <div class="step-num">1</div>
                             <span>Регистрация в программе</span>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 wow animated fadeInRight" data-wow-delay="1s">
                         <div class="step-block">
                             <div class="step-num">2</div>
                             <span>Заказ препарата</span>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 wow animated fadeInRight" data-wow-delay="2s">
                         <div class="step-block">
                             <div class="step-num">3</div>
                             <span>Выбор удобной аптеки</span>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 wow animated fadeInRight" data-wow-delay="3s">
                         <div class="step-block">
                             <div class="step-num">4</div>
                             <span>Покупка со скидкой до 50%</span>
@@ -128,25 +134,25 @@
         </section>
         <section class="section-pad program-priority">
             <div class="container">
-                <div class="section-title text-center">
+                <div class="section-title text-center wow animated zoomIn">
                     <h2>Преимущества программы:</h2>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 wow animated fadeInUp">
                         <div class="item">
                             <i class="mdi mdi-security-account"></i>
                             <strong>БЕЗОПАСНО</strong>
                             <p>Участники программы получают оригинальный препарат напрямую от компании-производителя.</p>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 wow animated fadeInUp" data-wow-delay="1s">
                         <div class="item">
                             <i class="mdi mdi-pill"></i>
                             <strong>НАДЕЖНО</strong>
                             <p>Основатель программы «Новый день» — Johnson&Johnson, компания с серьезным фармацевтическим опытом. Наши партнеры — только проверенные аптеки и клиники.</p>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 wow animated fadeInUp" data-wow-delay="2s">
                         <div class="item">
                             <i class="mdi mdi-speedometer"></i>
                             <strong>ЭФФЕКТИВНО</strong>
@@ -164,7 +170,7 @@
                             <strong class="block-title">ОБРАТНЫЙ ЗВОНОК</strong>
                             <p>Мы перезвоним на указанный телефон с 8:00 до 20:00 по московскому времени</p>
                             <br>
-                            <form action="">
+                            <!-- <form action="">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Имя">
                                 </div>
@@ -178,7 +184,8 @@
                                     </label>
                                 </div>
                                 <button class="btn btn-warning" type="button">Позвонить мне</button>
-                            </form>
+                            </form> -->
+                            <button class="btn btn-warning b24-web-form-popup-btn-31" type="button">Позвонить мне</button>
                         </div>
                         <div class="col-sm-3 offset-sm-1">
                             <strong class="block-title">РАЗДЕЛЫ</strong>
@@ -230,7 +237,68 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal my-modal fade" id="signIn" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content my-modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="title text-center">
+                        <h2 class="orange-text">Вход в личный кабинет</h2>
+                    </div>
+                    <form action="" class="form sign-form">
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            Неверный номер телефона или пароль
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Пароль</label>
+                            <input type="password" class="form-control">
+                            <a href="#">Получить пароль по SMS</a>
+                        </div>
+                        <p>
+                            Если вы забыли пароль, то получите его по SMS. Если вы не являетесь участником программы, пройдите регистрацию по назначенному препарату.
+                        </p>
+                        <button class="btn btn-warning" type="button">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" charset="utf-8"></script>
         <script src="js\bootstrap.min.js" charset="utf-8"></script>
+        <script type="text/javascript">
+            $('.parallax-window').parallax({imageSrc: 'img/banner.jpg'});
+            wow = new WOW(
+                {
+                    boxClass:     'wow',      // default
+                    animateClass: 'animated', // default
+                    offset:       200,          // default
+                    mobile:       true,       // default
+                    live:         true        // default
+                }
+            )
+            wow.init();
+        </script>
+        <script id="bx24_form_link" data-skip-moving="true">
+            (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                    (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                    if(w[b]['forms']) return;
+                    var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+                    var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+            })(window,document,'https://medfarminform.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+
+            b24form({"id":"31","lang":"ru","sec":"5vvb14","type":"link","click":""});
+        </script>
     </body>
 </html>
