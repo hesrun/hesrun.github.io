@@ -16,6 +16,10 @@
     padding-right: 1rem;
 }
 
+.btn:active, .btn:focus {
+    box-shadow: none !important;
+}
+
 .btn-warning {
     background: #d46e31;
     border-color: #d46e31;
@@ -29,7 +33,6 @@
 }
 
 .btn-warning:active, .btn-warning:focus {
-    box-shadow: none !important;
     color: #fff !important;
     background: #dd8c5b !important;
     border-color: #dd8c5b !important;
@@ -72,7 +75,12 @@ a:hover {
 }
 
 .main-header {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0px;
+    top: 0px;
     background: #d46e31;
+    z-index: 100;
 }
 
 .main-header a {
@@ -169,6 +177,17 @@ a:hover {
 
 .intro-section .note {
     font-size: 0.8rem;
+}
+
+.intro-section .input-group {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #d46e31;
+    border-radius: 1rem;
+}
+
+.intro-section .input-group .form-control {
+    border-color: #fff !important;
 }
 
 .intro-section .alert-warning {
@@ -480,6 +499,15 @@ a:hover {
 .footer-nav .links i.mdi {
     margin-top: 2px;
     margin-right: 0.5rem;
+}
+
+.footer-nav .tel {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-nav .tel:hover {
+    color: #d46e31;
 }
 
 .footer-copy {

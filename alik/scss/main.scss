@@ -29,7 +29,11 @@ a {
 }
 
 .main-header {
+    position: sticky;
+    left: 0px;
+    top: 0px;
     background: $orange;
+    z-index: 100;
     a {
         text-decoration: none;
     }
@@ -109,6 +113,15 @@ a {
     }
     .note {
         font-size: 0.8rem;
+    }
+    .input-group {
+        margin: 2rem 0;
+        padding: 2rem;
+        background: $orange;
+        border-radius: 1rem;
+        .form-control {
+            border-color: #fff !important;
+        }
     }
     .alert-warning {
         font-size: 1rem;
@@ -367,6 +380,13 @@ a {
         i.mdi {
             margin-top: 2px;
             margin-right: 0.5rem;
+        }
+    }
+    .tel {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+            color: $orange;
         }
     }
 }
