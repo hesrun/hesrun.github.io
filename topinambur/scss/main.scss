@@ -21,6 +21,9 @@ a {
         text-decoration: none;
     }
 }
+img {
+    vertical-align: middle;
+}
 h1,h2,h3,h4 {
     font-family: "PT Serif";
     line-height: 1;
@@ -37,9 +40,31 @@ h2 {
 h3 {
     font-size: 20px;
 }
-input,textarea,button,a {
+input,select,textarea,button,a {
     font: inherit;
     outline: none !important;
+}
+article {
+    line-height: 1.5;
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    p {
+        margin: 20px 0;
+    }
+    ul {
+        list-style: disc;
+        padding-left: 35px;
+    }
+    a {
+        color: #0072ff;
+    }
+}
+.img-response {
+    width: 100%;
 }
 .sec-pad {
     padding: 50px 0;
@@ -98,6 +123,7 @@ input,textarea,button,a {
         }
         img {
             width: 20px;
+            margin-top: -2px;
             margin-right: 3px;
         }
     }
@@ -115,7 +141,7 @@ input,textarea,button,a {
             text-decoration: none;
             letter-spacing: 1.5px;
             &.active {
-                opacity: 0.5;
+                opacity: 0.3;
             }
         }
     }
@@ -465,6 +491,40 @@ input,textarea,button,a {
         bottom: -20px;
         max-width: 650px;
     }
+}
+/*about-company*/
+.about-company {
+    padding-bottom: 0px;
+    .image {
+        margin-bottom: 50px;
+    }
+}
+.white-feed-form {
+    background: $green;
+    color: #fff;
+    padding: 20px;
+    h2 {
+        font-size: 25px;
+    }
+    .row {
+        margin: 0 -7.5px;
+    }
+    [class^="col-"] {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+    }
+    .action {
+        margin: 20px 0;
+        text-align: center;
+    }
+}
+.map-section {
+    margin-top: -40px;
+    height: 450px;
+    iframe {
+        vertical-align: middle;
+    }
+
 }
 /*main-footer*/
 .main-footer {
