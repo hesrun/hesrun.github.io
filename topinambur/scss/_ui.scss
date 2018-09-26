@@ -1,0 +1,43 @@
+.t-button {
+    font-family: "Fira Sans";
+    font-size: 14px;
+    display: inline-flex;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 38px;
+    background: none;
+    border: none;
+    border-radius: 20px;
+    border: 2px transparent solid;
+    vertical-align: middle;
+    transition: all 0.2s;
+    &.salat-filled {
+        color: #000;
+        border-color: $salat;
+        background: $salat;
+        &:hover {
+            border-color: darken($salat,10);
+            background: darken($salat,10);
+        }
+    }
+    &.green-outline {
+        color: $green;
+        border-color: $green;
+        &:hover {
+            background: $green;
+            color: #fff;
+        }
+    }
+    &.white-outline {
+        color: #fff;
+        border-color: #fff;
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+}

@@ -5,8 +5,8 @@
 @mixin make-container($gutter: $grid-gutter-width) {
   margin-left: auto;
   margin-right: auto;
-  padding-left:  ($gutter);
-  padding-right: ($gutter);
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
   @if not $enable-flex {
     @include clearfix();
   }
