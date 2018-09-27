@@ -125,11 +125,15 @@ article {
 }
 
 article h1 {
-    font-size: 25px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    line-height: 1.3;
 }
 
 article h2 {
     font-size: 25px;
+    margin-bottom: 25px;
+    line-height: 1.3;
 }
 
 article p {
@@ -139,6 +143,28 @@ article p {
 article ul {
     list-style: disc;
     padding-left: 35px;
+}
+
+article .fl-l {
+    float: left;
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+article .fl-l + p {
+    margin-left: 200px;
+}
+
+article figure {
+    width: 180px;
+}
+
+article figure figcaption {
+    line-height: 1.3;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #616161;
+    font-style: italic;
 }
 
 article a {
@@ -245,7 +271,7 @@ article a {
     letter-spacing: 1.5px;
 }
 
-.main-header .header-nav a.active {
+.main-header .header-nav a.active, .main-header .header-nav a:hover {
     opacity: 0.3;
 }
 
@@ -266,6 +292,18 @@ article a {
 
 .main-banner h1 {
     margin: 0px;
+    position: relative;
+}
+
+.main-banner h1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 30px;
+    left: -60px;
 }
 
 .main-banner .t-button {
@@ -279,6 +317,7 @@ article a {
 .main-banner.small {
     padding: 50px 0;
     background: url(../img/img-title-bg.jpg);
+    background-position: center top;
 }
 
 /*--------product-item--------*/
@@ -487,20 +526,20 @@ article a {
     animation-duration: 0.6s;
 }
 
-.gallery-carusel .owl-dots {
+.owl-dots {
     padding-top: 25px;
     text-align: center;
 }
 
-.gallery-carusel .owl-dots button {
+.owl-dots button {
     margin: 0 5px;
 }
 
-.gallery-carusel .owl-dots .active span {
+.owl-dots .active span {
     background: #739f2d;
 }
 
-.gallery-carusel .owl-dots span {
+.owl-dots span {
     display: block;
     width: 10px;
     height: 10px;
@@ -684,6 +723,65 @@ article a {
 
 .map-section iframe {
     vertical-align: middle;
+}
+
+/*our-products*/
+.our-products .products-nav {
+    font-family: "PT Serif";
+}
+
+.our-products .products-nav a {
+    color: #739f2d;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.our-products .products-nav a.active {
+    text-decoration: none;
+    color: #cbcbcb;
+}
+
+.our-products .products-nav > li {
+    margin-bottom: 25px;
+}
+
+.our-products .products-nav > li > a {
+    font-weight: 900;
+}
+
+.our-products .products-nav > li > ul {
+    padding-left: 10px;
+}
+
+.our-products .note-block {
+    margin-top: 50px;
+    background: #739f2d;
+    color: #fff;
+    padding: 30px;
+}
+
+.our-products .note-block p {
+    margin: 0px;
+}
+
+.product-params {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.product-params th, .product-params td {
+    padding: 10px 0;
+}
+
+.product-params th {
+    text-align: left;
+    font-weight: 400;
+}
+
+.product-params td {
+    font-weight: 700;
 }
 
 /*main-footer*/
