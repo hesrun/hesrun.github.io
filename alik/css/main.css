@@ -5,7 +5,7 @@
 
 .form-control:focus {
     box-shadow: none !important;
-    border-color: #d46e31 !important;
+    border-color: #ff7a00 !important;
 }
 
 .btn {
@@ -21,21 +21,48 @@
 }
 
 .btn-warning {
-    background: #d46e31;
-    border-color: #d46e31;
+    background: #ff7a00;
+    border-color: #ff7a00;
     color: #fff;
 }
 
 .btn-warning:hover {
     color: #fff;
-    background: #dd8c5b;
-    border-color: #dd8c5b;
+    background: #ff9533;
+    border-color: #ff9533;
 }
 
 .btn-warning:active, .btn-warning:focus {
     color: #fff !important;
-    background: #dd8c5b !important;
-    border-color: #dd8c5b !important;
+    background: #ff9533 !important;
+    border-color: #ff9533 !important;
+}
+
+.btn-primary {
+    background: #015965;
+    border-color: #015965;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background: #028698;
+    border-color: #028698;
+}
+
+.btn-primary:active, .btn-primary:focus {
+    color: #fff !important;
+    background: #028698 !important;
+    border-color: #028698 !important;
+}
+
+.alert-warning {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: #ffcf73;
+    border: none;
+    color: #404040;
+    line-height: 1.5;
 }
 
 .modal-dialog {
@@ -55,7 +82,7 @@ body {
 
 a {
     text-decoration: underline;
-    color: #d46e31;
+    color: #ff7a00;
 }
 
 a:hover {
@@ -63,7 +90,7 @@ a:hover {
 }
 
 .orange-text {
-    color: #d46e31;
+    color: #ff7a00;
 }
 
 .section-pad {
@@ -71,15 +98,16 @@ a:hover {
 }
 
 .section-title {
-    margin-bottom: 3rem;
+    color: #1F6B75;
+    margin-bottom: 4rem;
 }
 
 .main-header {
-    position: -webkit-sticky;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     left: 0px;
     top: 0px;
-    background: #d46e31;
+    background: #ff7a00;
     z-index: 100;
 }
 
@@ -129,7 +157,7 @@ a:hover {
 }
 
 .main-banner {
-    height: 600px;
+    height: 800px;
     position: relative;
 }
 
@@ -138,6 +166,8 @@ a:hover {
 }
 
 .main-banner .banner-text {
+    padding-top: 5%;
+    font-size: 1.5rem;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -147,67 +177,65 @@ a:hover {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     z-index: 2;
     margin: auto;
-    background: rgba(0, 0, 0, 0.3);
 }
 
 .main-banner .banner-text b {
-    font-size: 4rem;
-    color: #d46e31;
+    font-size: 2.5rem;
+    color: #ff7a00;
+}
+
+.main-banner .banner-text strong {
+    margin: 0.5rem 0;
+    color: #015965;
+    text-transform: uppercase;
 }
 
 .main-banner .banner-text p {
-    color: #fff;
+    color: #015965;
+}
+
+.intro-section {
+    padding-top: 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-section .search-form {
+    margin-top: -3.6rem;
+    padding: 3rem;
+    background: #ff9c40;
+}
+
+.intro-section .search-form strong {
     font-size: 1.5rem;
 }
 
-.intro-section .text {
-    font-size: 1.7rem;
-}
-
-.intro-section .drug-search {
+.intro-section .search-form p {
+    margin: 2rem 0 0;
     font-size: 1.2rem;
 }
 
-.intro-section .note {
-    font-size: 0.8rem;
+.intro-section .search {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2rem 0 1.5rem;
 }
 
-.intro-section .input-group {
-    margin: 2rem 0;
-    padding: 2rem;
-    background: #d46e31;
-    border-radius: 1rem;
-}
-
-.intro-section .input-group .form-control {
+.intro-section .search input {
+    margin-right: 2rem;
     border-color: #fff !important;
 }
 
-.intro-section .alert-warning {
-    font-size: 1rem;
-}
-
-.intro-section .alert-warning span {
-    display: block;
-    font-weight: 700;
-}
-
-.steps-to-access {
-    background: #fcf4ef;
-}
-
 .steps-to-access .step-block {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
+    max-width: 220px;
+    margin: 1rem auto;
+    text-align: center;
+    color: #1F6B75;
 }
 
 .steps-to-access .step-block span {
@@ -221,38 +249,46 @@ a:hover {
 }
 
 .steps-to-access .step-num {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    margin: 0 auto 2rem;
+    font-weight: 300;
+    background: #03899C;
+    color: #fff;
     text-align: center;
-    line-height: 46px;
+    line-height: 60px;
     font-size: 1.5rem;
     display: block;
-    width: 50px;
-    height: 50px;
-    border: 2px #d46e31 solid;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    font-weight: 700;
-    margin-right: 1rem;
+    font-weight: 300;
 }
 
-.program-priority .item {
-    text-align: center;
+.program-priority {
+    background: #FFE9D5;
+    color: #1F6B75;
 }
 
-.program-priority .item i.mdi {
-    font-size: 4rem;
-    color: #d46e31;
-}
-
-.program-priority .item strong {
-    display: block;
-    color: #d46e31;
+.program-priority p {
     font-size: 1.5rem;
-    margin: 1rem 0;
 }
 
-.program-priority .item p {
-    font-size: 1.2rem;
+.check-pills {
+    padding: 2.5rem 0;
+    background: #FF9C40;
+    text-align: right;
+}
+
+.check-pills strong {
+    font-size: 1.5rem;
+}
+
+.check-pills p {
+    margin: 0;
+}
+
+.check-pills .btn {
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .product-section .product-image {
@@ -278,13 +314,13 @@ a:hover {
     display: block;
     width: 100px;
     height: 100px;
-    border: 2px #d46e31 solid;
+    border: 2px #ff7a00 solid;
     border-radius: 30px;
 }
 
 .product-priority .icon i.mdi {
     font-size: 48px;
-    color: #d46e31;
+    color: #ff7a00;
     line-height: 96px;
 }
 
@@ -373,7 +409,7 @@ a:hover {
     width: 3rem;
     height: 3rem;
     line-height: 3rem;
-    background: #d46e31;
+    background: #ff7a00;
     color: #fff;
     opacity: 1 !important;
     color: #fff !important;
@@ -461,6 +497,10 @@ a:hover {
     color: #fff;
 }
 
+.footer-nav a:hover {
+    color: #fff;
+}
+
 .footer-nav .block-title {
     display: block;
     font-size: 1.2rem;
@@ -468,37 +508,9 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-.footer-nav .custom-control {
-    margin-bottom: 1rem;
-}
-
-.footer-nav .custom-control a {
-    color: #fff;
-}
-
-.footer-nav .links {
-    list-style: none;
-    padding: 0px;
-}
-
-.footer-nav .links li {
-    margin-bottom: 1.3rem;
-}
-
-.footer-nav .links a {
-    text-decoration: none;
-    color: #fff;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.footer-nav .links a:hover {
-    color: #d46e31;
-}
-
-.footer-nav .links i.mdi {
-    margin-top: 2px;
-    margin-right: 0.5rem;
+.footer-nav p {
+    max-width: 300px;
+    line-height: 1.4;
 }
 
 .footer-nav .tel {
@@ -507,7 +519,31 @@ a:hover {
 }
 
 .footer-nav .tel:hover {
-    color: #d46e31;
+    color: #ff7a00;
+}
+
+.footer-nav .off-site {
+    display: block;
+    position: relative;
+    padding-left: 1.7rem;
+}
+
+.footer-nav .off-site i.mdi {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.footer-nav .coockie-about {
+    margin-top: 3rem;
+}
+
+.footer-nav .coockie-about p {
+    max-width: none;
+}
+
+.footer-nav .coockie-about .note {
+    display: none;
 }
 
 .footer-copy {
@@ -554,5 +590,73 @@ a:hover {
 }
 
 .footer-copy .links a:hover {
-    color: #d46e31;
+    color: #ff7a00;
+}
+
+@media screen and (max-width: 576px) {
+    .section-pad {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .main-banner {
+        height: 400px;
+    }
+
+    .main-banner .banner-text {
+        font-size: 1rem;
+    }
+
+    .main-banner .banner-text b {
+        font-size: 1.5rem;
+    }
+
+    .intro-section {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .intro-section .search-form {
+        padding: 2rem;
+        margin-top: 0px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .intro-section .search {
+        display: block;
+    }
+
+    .intro-section .search .btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .check-pills {
+        text-align: center;
+    }
+
+    .check-pills .btn {
+        margin-top: 1rem;
+    }
+
+    .program-priority img {
+        margin-bottom: 2rem;
+    }
+
+    .program-priority p {
+        font-size: 1.2rem;
+    }
+
+    .footer-copy {
+        text-align: center;
+    }
+
+    .footer-copy .links {
+        margin-top: 0.5rem;
+    }
+
+    .footer-copy .container {
+        display: block;
+    }
 }
