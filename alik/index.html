@@ -49,7 +49,7 @@
         </header>
         <section class="main-banner">
             <div class="parallax-window" data-parallax="scroll" data-image-src="img/banner.jpg"></div>
-            <div class="banner-text wow animated fadeIn" data-wow-duration="2s" data-wow-delay="1s">
+            <div class="banner-text wow animated fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                 <b>Новый день</b>
                 <strong>ЭКОНОМИЯ НА ЛЕЧЕНИИ ДО 50%</strong>
                 <p>официальная программа лекарственной <br> поддержки пациентов «Джонсон & Джонсон»</p>
@@ -80,29 +80,29 @@
 
         <section class="section-pad steps-to-access">
             <div class="container">
-                <div class="section-title text-center wow animated zoomIn">
+                <div class="section-title text-center wow animated zoomIn" data-wow-duration="0.5s">
                     <h2>ЧЕТЫРЕ ШАГА К ЦЕЛИ</h2>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3 wow animated fadeInRight">
+                    <div class="col-12 col-md-6 col-lg-3 wow animated fadeInUp" data-wow-duration="0.5s">
                         <div class="step-block">
                             <div class="step-num">1</div>
                             <span>Проверить, входит ли препарат в программу</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 wow animated fadeInRight" data-wow-delay="1s">
+                    <div class="col-12 col-md-6 col-lg-3 wow animated fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.2s">
                         <div class="step-block">
                             <div class="step-num">2</div>
                             <span>Зарегистрироваться в программе</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 wow animated fadeInRight" data-wow-delay="2s">
+                    <div class="col-12 col-md-6 col-lg-3 wow animated fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.4s">
                         <div class="step-block">
                             <div class="step-num">3</div>
                             <span>Оформить заказ в удобную аптеку</span>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 wow animated fadeInRight" data-wow-delay="3s">
+                    <div class="col-12 col-md-6 col-lg-3 wow animated fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.6s">
                         <div class="step-block">
                             <div class="step-num">4</div>
                             <span>Выкупить препарат со скидкой до 50%</span>
@@ -116,14 +116,14 @@
 
         <section class="section-pad program-priority">
             <div class="container">
-                <div class="section-title text-center wow animated zoomIn">
+                <div class="section-title text-center wow animated zoomIn" data-wow-duration="0.5s">
                     <h2>Преимущества программы:</h2>
                 </div>
                 <div class="row align-items-center">
-                    <div class="col-12 col-md-4 col-lg-4 text-center wow animated fadeIn">
+                    <div class="col-12 col-md-4 col-lg-4 text-center wow animated fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.6s">
                         <img src="img/safe.png" alt="">
                     </div>
-                    <div class="col-12 col-md-8 col-lg-8 wow animated fadeInRight">
+                    <div class="col-12 col-md-8 col-lg-8 wow animated fadeIn" data-wow-duration="0.5s">
                         <p>
                             Для эффективного лечения необходимо, чтобы препарат, который принимает пациент, был произведен с соблюдением стандартов качества и с момента его производства постоянно находился в требуемом температурном режиме. <br> <br>
                             В этой программе вы получаете оригинальные лекарственные препараты, зарегистрированные и официально завезенные на территорию РФ со строгим соблюдением требований к хранению и транспортировке.
@@ -264,6 +264,11 @@
             wow.init();
 
             $('.toggle-note').click(function() {
+                if ($('.coockie-about .note').is(":visible")) {
+                    $(this).text('Подробнее')
+                } else {
+                    $(this).text('Скрыть')
+                }
                 $('.coockie-about .note').slideToggle();
                 return false;
             })

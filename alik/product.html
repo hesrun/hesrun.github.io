@@ -59,13 +59,7 @@
                 </nav>
             </div>
         </header>
-        <section class="main-banner">
-            <div class="parallax-window" data-parallax="scroll" data-image-src="img/banner.jpg"></div>
-            <div class="banner-text wow animated fadeIn" data-wow-duration="2s" data-wow-delay="1s">
-                <b>Новый день</b>
-                <strong>ЭКОНОМИЯ НА ЛЕЧЕНИИ ДО 50%</strong>
-                <p>официальная программа лекарственной <br> поддержки пациентов «Джонсон & Джонсон»</p>
-            </div>
+        <section class="main-banner is-small">
         </section>
         <section class="section-pad product-section">
             <div class="container">
@@ -312,9 +306,6 @@
                 </div>
             </div>
         </section>
-
-
-
         <footer class="main-footer">
             <div class="footer-nav section-pad">
                 <div class="container">
@@ -414,12 +405,15 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" charset="utf-8"></script>
-        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" charset="utf-8"></script>
         <script src="js\bootstrap.min.js" charset="utf-8"></script>
         <script type="text/javascript">
-            $('.parallax-window').parallax({imageSrc: 'img/banner.jpg'});
             $('.toggle-note').click(function() {
+                if ($('.coockie-about .note').is(":visible")) {
+                    $(this).text('Подробнее')
+                } else {
+                    $(this).text('Скрыть')
+                }
                 $('.coockie-about .note').slideToggle();
                 return false;
             })

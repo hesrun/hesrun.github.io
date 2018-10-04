@@ -104,6 +104,12 @@ a {
 .main-banner {
     height: 800px;
     position: relative;
+    &.is-small {
+        height: 100px;
+        background: url('../img/banner.jpg');
+        background-position: top bottom;
+        background-size: cover;
+    }
     .parallax-window {
         height: 100%;
     }
@@ -220,12 +226,18 @@ a {
 /*product*/
 .product-section {
     .search-res-note {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
         border-bottom: 2px $comp3 solid;
         padding-bottom: 0.5rem;
         font-size: 1.3rem;
         margin-bottom: 2rem;
     }
     .product {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
         background: #FCF4EF;
         padding: 2rem;
         line-height: 1.5;
@@ -345,9 +357,12 @@ a {
         a {
             margin: 1rem 0;
             display: inline-block;
-            color: $prim2;
+            color: $prim1;
             font-size: 1.2rem;
             cursor: pointer;
+            &:hover {
+                color: $prim1;
+            }
         }
     }
     .answer {
@@ -358,10 +373,6 @@ a {
         }
     }
 }
-
-
-
-
 
 .my-modal-body {
     background: #fff;
@@ -445,7 +456,7 @@ a {
     background: rgb(88,76,74);
     color: #fff;
     a:hover {
-        color: #fff;
+        color: $prim1;
     }
     .block-title {
         display: block;
