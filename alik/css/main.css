@@ -87,6 +87,7 @@ a {
 }
 
 a:hover {
+    color: #ff7a00;
     text-decoration: none;
 }
 
@@ -101,6 +102,17 @@ a:hover {
 .section-title {
     color: #1F6B75;
     margin-bottom: 4rem;
+}
+
+.title-at-product {
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #015965;
+}
+
+.title-at-product h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
 }
 
 .main-header {
@@ -168,7 +180,6 @@ a:hover {
 
 .main-banner .banner-text {
     padding-top: 5%;
-    font-size: 1.5rem;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -191,6 +202,7 @@ a:hover {
 }
 
 .main-banner .banner-text strong {
+    font-size: 1.4rem;
     margin: 0.5rem 0;
     color: #015965;
     text-transform: uppercase;
@@ -292,107 +304,168 @@ a:hover {
     padding-right: 3rem;
 }
 
-.product-section .product-image {
-    text-align: center;
+/*product*/
+.product-section .search-res-note {
+    border-bottom: 2px #015965 solid;
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
 }
 
-.product-section .product-info p {
-    margin: 2rem 0;
+.product-section .product {
+    background: #FCF4EF;
+    padding: 2rem;
+    line-height: 1.5;
 }
 
-.product-priority {
-    background: #ecf6ff;
-}
-
-.product-priority .item {
-    text-align: center;
-    width: 240px;
-    margin: 0 auto;
-}
-
-.product-priority .icon {
-    margin: 0 auto 2rem;
+.product-section .product .name {
     display: block;
-    width: 100px;
-    height: 100px;
-    border: 2px #ff7a00 solid;
-    border-radius: 30px;
-}
-
-.product-priority .icon i.mdi {
-    font-size: 48px;
+    font-size: 1.4rem;
     color: #ff7a00;
-    line-height: 96px;
 }
 
-.product-priority span {
-    font-size: 1.2rem;
+.product-section .product .produce {
     display: block;
+    font-weight: 600;
+}
+
+.product-section .product .old {
+    text-decoration: line-through;
+}
+
+.product-section .product .new {
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.keeping-temp {
+    color: #fff;
+    background: #03899C;
+    padding: 3rem 0;
+}
+
+.keeping-temp p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.table-pharmacy table {
+    width: 100%;
+}
+
+.table-pharmacy th {
+    padding: 1rem;
+    border-bottom: 2px #015965 solid;
+}
+
+.table-pharmacy tbody {
+    font-size: 1.2rem;
+}
+
+.table-pharmacy tbody:before {
+    content: "";
+    display: block;
+    height: 1.5rem;
+}
+
+.table-pharmacy tbody tr {
+    vertical-align: top;
+}
+
+.table-pharmacy tbody tr td:nth-child(2) {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-pharmacy tbody tr td:first-child {
+    border-right: 5px #fff solid;
+    width: 60px;
+    text-align: center;
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+
+.table-pharmacy td {
+    border-bottom: 5px #fff solid;
+    padding: 2rem 1rem;
+    background: #FCF4EF;
+}
+
+.table-pharmacy td strong {
+    font-size: 1.5rem;
+}
+
+.terms-program {
+    color: #015965;
+}
+
+.terms-program .item {
+    display: block;
+    position: relative;
+    margin-bottom: 1.8rem;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.terms-program i.mdi {
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    color: #015965;
+    font-size: 1.4rem;
 }
 
 .map-section {
-    height: 600px;
+    height: 400px;
 }
 
-.section-accordions .accord-item:nth-child(1) .accord-head {
-    background: #808183;
+.form-include {
+    background: #5A403F;
 }
 
-.section-accordions .accord-item:nth-child(2) .accord-head {
-    background: #8d8e90;
+.form-include .form-wrap {
+    margin: 0 auto;
+    max-width: 570px;
+    padding: 0 15px;
 }
 
-.section-accordions .accord-item:nth-child(3) .accord-head {
-    background: #9a9b9c;
+.FAQ-accordion .question {
+    padding-left: 2rem;
+    position: relative;
 }
 
-.section-accordions .accord-item:nth-child(4) .accord-head {
-    background: #a7a7a9;
+.FAQ-accordion .question .collapsed i.mdi {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 
-.section-accordions .accord-item:nth-child(5) .accord-head {
-    background: #b4b4b5;
+.FAQ-accordion .question i.mdi {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0px;
+    top: 11px;
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: all 0.4s;
 }
 
-.section-accordions .accord-item:nth-child(6) .accord-head {
-    background: #c1c1c2;
-}
-
-.section-accordions .accord-head {
-    color: #fff;
-    font-size: 2rem;
-}
-
-.section-accordions .accord-head a {
-    padding: 1rem 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    color: inherit;
-    text-decoration: none;
-}
-
-.section-accordions .accord-head a i.mdi {
-    transition: all 0.3s;
-}
-
-.section-accordions .accord-head a:hover i.mdi {
-    -ms-transform: translateX(-10px);
-    transform: translateX(-10px);
-}
-
-.section-accordions .accord-head a:not(.collapsed) i.mdi {
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-
-.my-article-style {
-    padding: 2rem 0;
-}
-
-.my-article-style p {
+.FAQ-accordion .question a {
+    margin: 1rem 0;
+    display: inline-block;
+    color: #bf7530;
     font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.FAQ-accordion .answer {
+    padding-left: 2rem;
+}
+
+.FAQ-accordion .answer p {
+    margin: 0.5rem 0 1rem;
+    font-size: 1.1rem;
 }
 
 .my-modal-body {
@@ -594,10 +667,74 @@ a:hover {
     color: #ff7a00;
 }
 
+@media screen and (max-width: 768px) {
+    .program-priority img {
+        margin-bottom: 2rem;
+    }
+
+    .program-priority p {
+        font-size: 1.2rem;
+    }
+
+    .check-pills {
+        text-align: center;
+    }
+
+    .check-pills .btn {
+        margin-top: 1rem;
+    }
+
+    .footer-nav .col-sm-6, .footer-nav .col-sm-12 {
+        margin-bottom: 2rem;
+    }
+
+    .footer-nav p {
+        max-width: 100%;
+    }
+
+    .product-section .product .btn {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .keeping-temp .col-md-auto {
+        text-align: center;
+    }
+
+    .keeping-temp .col-md-auto img {
+        margin-bottom: 2rem;
+    }
+
+    .pharmacy-partner .table-pharmacy {
+        overflow-x: auto;
+    }
+
+    .pharmacy-partner .table-pharmacy table {
+        min-width: 650px;
+    }
+
+    .pharmacy-partner .table-pharmacy table td {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .pharmacy-partner .table-pharmacy table td strong {
+        font-size: 1.2rem;
+    }
+
+    .pharmacy-partner .container {
+        max-width: 100%;
+    }
+}
+
 @media screen and (max-width: 576px) {
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
     .section-pad {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
 
     .main-banner {
@@ -606,6 +743,10 @@ a:hover {
 
     .main-banner .banner-text {
         font-size: 1rem;
+    }
+
+    .main-banner .banner-text strong {
+        font-size: 1.2rem;
     }
 
     .main-banner .banner-text b {
@@ -649,11 +790,26 @@ a:hover {
         font-size: 1.2rem;
     }
 
+    .product-section .search-res-note {
+        font-size: 1.2rem;
+    }
+
+    .product-section .product .name {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .keeping-temp p {
+        text-align: center;
+    }
+
     .footer-copy {
         text-align: center;
     }
 
     .footer-copy .links {
+        -ms-flex-pack: center;
+        justify-content: center;
         margin-top: 0.5rem;
     }
 

@@ -31,6 +31,7 @@ a {
     text-decoration: underline;
     color: $prim1;
     &:hover {
+        color: $prim1;
         text-decoration: none;
     }
 }
@@ -43,6 +44,15 @@ a {
 .section-title {
     color: $comp2;
     margin-bottom: 4rem;
+}
+.title-at-product {
+    margin-bottom: 3rem;
+    text-align: center;
+    color: $comp3;
+    h2 {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
 }
 
 .main-header {
@@ -99,7 +109,6 @@ a {
     }
     .banner-text {
         padding-top: 5%;
-        font-size: 1.5rem;
         position: absolute;
         left: 0px;
         top: 0px;
@@ -116,6 +125,7 @@ a {
             color: $prim1;
         }
         strong {
+            font-size: 1.4rem;
             margin: 0.5rem 0;
             color: $comp3;
             text-transform: uppercase;
@@ -207,97 +217,151 @@ a {
     }
 }
 
+/*product*/
 .product-section {
-    .product-image {
-        text-align: center;
+    .search-res-note {
+        border-bottom: 2px $comp3 solid;
+        padding-bottom: 0.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
     }
-    .product-info {
-        p {
-            margin: 2rem 0;
-        }
-    }
-}
-
-.product-priority {
-    background: rgb(236,246,255);
-    .item {
-        text-align: center;
-        width: 240px;
-        margin: 0 auto;
-    }
-    .icon {
-        margin: 0 auto 2rem;
-        display: block;
-        width: 100px;
-        height: 100px;
-        border: 2px $prim1 solid;
-        border-radius: 30px;
-        i.mdi {
-            font-size: 48px;
+    .product {
+        background: #FCF4EF;
+        padding: 2rem;
+        line-height: 1.5;
+        .name {
+            display: block;
+            font-size: 1.4rem;
             color: $prim1;
-            line-height: 96px;
         }
-    }
-    span {
-        font-size: 1.2rem;
-        display: block;
-    }
-}
-
-.map-section {
-    height: 600px;
-}
-
-.section-accordions {
-    .accord-item:nth-child(1) .accord-head {
-        background: #808183;
-    }
-    .accord-item:nth-child(2) .accord-head {
-        background: lighten(#808183,5);
-    }
-    .accord-item:nth-child(3) .accord-head {
-        background: lighten(#808183,10);
-    }
-    .accord-item:nth-child(4) .accord-head {
-        background: lighten(#808183,15);
-    }
-    .accord-item:nth-child(5) .accord-head {
-        background: lighten(#808183,20);
-    }
-    .accord-item:nth-child(6) .accord-head {
-        background: lighten(#808183,25);
-    }
-    .accord-head {
-        color: #fff;
-        font-size: 2rem;
-        a {
-            padding: 1rem 0;
-            display: flex;
-            justify-content:space-between;
-            color: inherit;
-            text-decoration: none;
-            i.mdi {
-                transition: all 0.3s;
-            }
-            &:hover {
-                i.mdi {
-                    transform: translateX(-10px);
-                }
-            }
-            &:not(.collapsed) {
-                i.mdi {
-                    transform: rotate(-90deg);
-                }
-            }
+        .produce {
+            display: block;
+            font-weight: 600;
+        }
+        .old {
+            text-decoration: line-through;
+        }
+        .new {
+            margin-top: 1rem;
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
     }
 }
-.my-article-style {
-    padding: 2rem 0;
+.keeping-temp {
+    color: #fff;
+    background: #03899C;
+    padding: 3rem 0;
     p {
         font-size: 1.2rem;
+        line-height: 1.5;
     }
 }
+.table-pharmacy {
+    table {
+        width: 100%;
+    }
+    th {
+        padding: 1rem;
+        border-bottom: 2px $comp3 solid;
+    }
+    tbody {
+        font-size: 1.2rem;
+        &:before {
+            content: "";
+            display: block;
+            height: 1.5rem;
+        }
+        tr {
+            vertical-align: top;
+            td:nth-child(2) {
+                vertical-align: middle;
+                text-align: center;
+            }
+            td:first-child {
+                border-right: 5px #fff solid;
+                width: 60px;
+                text-align: center;
+                font-size: 1.4rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    td {
+        border-bottom: 5px #fff solid;
+        padding: 2rem 1rem;
+        background: #FCF4EF;
+        strong {
+            font-size: 1.5rem;
+        }
+    }
+}
+.terms-program {
+    color: $comp3;
+    .item {
+        display: block;
+        position: relative;
+        margin-bottom: 1.8rem;
+        padding-left: 2rem;
+        font-size: 1.1rem;
+    }
+    i.mdi {
+        position: absolute;
+        left: 0px;
+        top: -2px;
+        color: $comp3;
+        font-size: 1.4rem;
+    }
+}
+.map-section {
+    height: 400px;
+}
+.form-include {
+    background: #5A403F;
+    .form-wrap {
+        margin: 0 auto;
+        max-width: 570px;
+        padding: 0 15px;
+    }
+}
+.FAQ-accordion {
+    .question {
+        padding-left: 2rem;
+        position: relative;
+        .collapsed {
+            i.mdi {
+                transform: rotate(0deg);
+            }
+        }
+        i.mdi {
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0px;
+            top: 11px;
+            transform: rotate(180deg);
+            transition: all 0.4s;
+        }
+        a {
+            margin: 1rem 0;
+            display: inline-block;
+            color: $prim2;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    }
+    .answer {
+        padding-left: 2rem;
+        p {
+            margin: 0.5rem 0 1rem;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+
+
+
 
 .my-modal-body {
     background: #fff;
@@ -455,16 +519,82 @@ a {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .program-priority {
+        img {
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .check-pills {
+        text-align: center;
+        .btn {
+            margin-top: 1rem;
+        }
+    }
+    .footer-nav {
+        .col-sm-6, .col-sm-12 {
+            margin-bottom: 2rem;
+        }
+        p {
+            max-width: 100%;
+        }
+    }
+    .product-section {
+        .product {
+            .btn {
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+    }
+    .keeping-temp {
+        .col-md-auto {
+            text-align: center;
+            img {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    .pharmacy-partner {
+        .table-pharmacy {
+            overflow-x: auto;
+            table {
+                min-width: 650px;
+                td {
+                    font-size: 1rem;
+                    padding: 1rem;
+                    strong {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        .container {
+            max-width: 100%;
+        }
+    }
+}
 
 @media screen and (max-width: 576px) {
+    .section-title {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
     .section-pad {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
     }
     .main-banner {
         height: 400px;
         .banner-text {
             font-size: 1rem;
+            strong {
+                font-size: 1.2rem;
+            }
             b {
                 font-size: 1.5rem;
             }
@@ -501,9 +631,26 @@ a {
             font-size: 1.2rem;
         }
     }
+    .product-section {
+        .search-res-note {
+            font-size: 1.2rem;
+        }
+        .product {
+            .name {
+                font-size: 1.2rem;
+                line-height: 1.2;
+            }
+        }
+    }
+    .keeping-temp {
+        p {
+            text-align: center;
+        }
+    }
     .footer-copy {
         text-align: center;
         .links {
+            justify-content: center;
             margin-top: 0.5rem;
         }
         .container {
