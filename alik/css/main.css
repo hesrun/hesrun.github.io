@@ -5,7 +5,7 @@
 
 .form-control:focus {
     box-shadow: none !important;
-    border-color: #d46e31 !important;
+    border-color: #ff7a00 !important;
 }
 
 .btn {
@@ -21,21 +21,48 @@
 }
 
 .btn-warning {
-    background: #d46e31;
-    border-color: #d46e31;
+    background: #ff7a00;
+    border-color: #ff7a00;
     color: #fff;
 }
 
 .btn-warning:hover {
     color: #fff;
-    background: #dd8c5b;
-    border-color: #dd8c5b;
+    background: #ff9533;
+    border-color: #ff9533;
 }
 
 .btn-warning:active, .btn-warning:focus {
     color: #fff !important;
-    background: #dd8c5b !important;
-    border-color: #dd8c5b !important;
+    background: #ff9533 !important;
+    border-color: #ff9533 !important;
+}
+
+.btn-primary {
+    background: #015965;
+    border-color: #015965;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background: #028698;
+    border-color: #028698;
+}
+
+.btn-primary:active, .btn-primary:focus {
+    color: #fff !important;
+    background: #028698 !important;
+    border-color: #028698 !important;
+}
+
+.alert-warning {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: #ffcf73;
+    border: none;
+    color: #404040;
+    line-height: 1.5;
 }
 
 .modal-dialog {
@@ -51,19 +78,21 @@ body {
     color: #434037;
     line-height: normal;
     font-size: 1rem;
+    padding-top: 57px;
 }
 
 a {
     text-decoration: underline;
-    color: #d46e31;
+    color: #ff7a00;
 }
 
 a:hover {
+    color: #ff7a00;
     text-decoration: none;
 }
 
 .orange-text {
-    color: #d46e31;
+    color: #ff7a00;
 }
 
 .section-pad {
@@ -71,15 +100,28 @@ a:hover {
 }
 
 .section-title {
+    color: #1F6B75;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.title-at-product {
     margin-bottom: 3rem;
+    text-align: center;
+    color: #015965;
+}
+
+.title-at-product h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
 }
 
 .main-header {
-    position: -webkit-sticky;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     left: 0px;
     top: 0px;
-    background: #d46e31;
+    background: #ff7a00;
     z-index: 100;
 }
 
@@ -129,8 +171,15 @@ a:hover {
 }
 
 .main-banner {
-    height: 600px;
+    height: 800px;
     position: relative;
+}
+
+.main-banner.is-small {
+    height: 100px;
+    background: url("../img/banner.jpg");
+    background-position: top bottom;
+    background-size: cover;
 }
 
 .main-banner .parallax-window {
@@ -138,6 +187,7 @@ a:hover {
 }
 
 .main-banner .banner-text {
+    padding-top: 5%;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -147,67 +197,66 @@ a:hover {
     display: flex;
     -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
     z-index: 2;
     margin: auto;
-    background: rgba(0, 0, 0, 0.3);
 }
 
 .main-banner .banner-text b {
-    font-size: 4rem;
-    color: #d46e31;
+    font-size: 2.5rem;
+    color: #ff7a00;
+}
+
+.main-banner .banner-text strong {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    color: #015965;
+    text-transform: uppercase;
 }
 
 .main-banner .banner-text p {
-    color: #fff;
+    color: #015965;
+}
+
+.intro-section {
+    padding-top: 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-section .search-form {
+    margin-top: -3.6rem;
+    padding: 3rem;
+    background: #ff9c40;
+}
+
+.intro-section .search-form strong {
     font-size: 1.5rem;
 }
 
-.intro-section .text {
-    font-size: 1.7rem;
-}
-
-.intro-section .drug-search {
+.intro-section .search-form p {
+    margin: 2rem 0 0;
     font-size: 1.2rem;
 }
 
-.intro-section .note {
-    font-size: 0.8rem;
+.intro-section .search {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 2rem 0 1.5rem;
 }
 
-.intro-section .input-group {
-    margin: 2rem 0;
-    padding: 2rem;
-    background: #d46e31;
-    border-radius: 1rem;
-}
-
-.intro-section .input-group .form-control {
+.intro-section .search input {
+    margin-right: 2rem;
     border-color: #fff !important;
 }
 
-.intro-section .alert-warning {
-    font-size: 1rem;
-}
-
-.intro-section .alert-warning span {
-    display: block;
-    font-weight: 700;
-}
-
-.steps-to-access {
-    background: #fcf4ef;
-}
-
 .steps-to-access .step-block {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
+    max-width: 220px;
+    margin: 1rem auto;
+    text-align: center;
+    color: #1F6B75;
 }
 
 .steps-to-access .step-block span {
@@ -221,141 +270,214 @@ a:hover {
 }
 
 .steps-to-access .step-num {
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    text-align: center;
-    line-height: 46px;
-    font-size: 1.5rem;
-    display: block;
-    width: 50px;
-    height: 50px;
-    border: 2px #d46e31 solid;
-    border-radius: 50%;
-    font-weight: 700;
-    margin-right: 1rem;
-}
-
-.program-priority .item {
-    text-align: center;
-}
-
-.program-priority .item i.mdi {
-    font-size: 4rem;
-    color: #d46e31;
-}
-
-.program-priority .item strong {
-    display: block;
-    color: #d46e31;
-    font-size: 1.5rem;
-    margin: 1rem 0;
-}
-
-.program-priority .item p {
-    font-size: 1.2rem;
-}
-
-.product-section .product-image {
-    text-align: center;
-}
-
-.product-section .product-info p {
-    margin: 2rem 0;
-}
-
-.product-priority {
-    background: #ecf6ff;
-}
-
-.product-priority .item {
-    text-align: center;
-    width: 240px;
-    margin: 0 auto;
-}
-
-.product-priority .icon {
     margin: 0 auto 2rem;
+    font-weight: 300;
+    background: #03899C;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    font-size: 1.5rem;
     display: block;
-    width: 100px;
-    height: 100px;
-    border: 2px #d46e31 solid;
-    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-weight: 300;
 }
 
-.product-priority .icon i.mdi {
-    font-size: 48px;
-    color: #d46e31;
-    line-height: 96px;
+.program-priority {
+    background: #FFE9D5;
+    color: #1F6B75;
 }
 
-.product-priority span {
+.program-priority p {
+    font-size: 1.5rem;
+}
+
+.check-pills {
+    padding: 2.5rem 0;
+    background: #FF9C40;
+    text-align: right;
+}
+
+.check-pills strong {
+    font-size: 1.5rem;
+}
+
+.check-pills p {
+    margin: 0;
+}
+
+.check-pills .btn {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/*product*/
+.product-section .search-res-note {
+    border-bottom: 2px #015965 solid;
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.product-section .product {
+    background: #FCF4EF;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+.product-section .product .name {
+    display: block;
+    font-size: 1.4rem;
+    color: #ff7a00;
+}
+
+.product-section .product .produce {
+    display: block;
+    font-weight: 600;
+}
+
+.product-section .product .old {
+    text-decoration: line-through;
+}
+
+.product-section .product .new {
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.keeping-temp {
+    color: #fff;
+    background: #03899C;
+    padding: 3rem 0;
+}
+
+.keeping-temp p {
     font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.table-pharmacy table {
+    width: 100%;
+}
+
+.table-pharmacy th {
+    padding: 1rem;
+    border-bottom: 2px #015965 solid;
+}
+
+.table-pharmacy tbody {
+    font-size: 1.2rem;
+}
+
+.table-pharmacy tbody:before {
+    content: "";
     display: block;
+    height: 1.5rem;
+}
+
+.table-pharmacy tbody tr {
+    vertical-align: top;
+}
+
+.table-pharmacy tbody tr td:nth-child(2) {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-pharmacy tbody tr td:first-child {
+    border-right: 5px #fff solid;
+    width: 60px;
+    text-align: center;
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+
+.table-pharmacy td {
+    border-bottom: 5px #fff solid;
+    padding: 2rem 1rem;
+    background: #FCF4EF;
+}
+
+.table-pharmacy td strong {
+    font-size: 1.5rem;
+}
+
+.terms-program {
+    color: #015965;
+}
+
+.terms-program .item {
+    display: block;
+    position: relative;
+    margin-bottom: 1.8rem;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+}
+
+.terms-program i.mdi {
+    position: absolute;
+    left: 0px;
+    top: -2px;
+    color: #015965;
+    font-size: 1.4rem;
 }
 
 .map-section {
-    height: 600px;
+    height: 400px;
 }
 
-.section-accordions .accord-item:nth-child(1) .accord-head {
-    background: #808183;
+.form-include {
+    background: #5A403F;
 }
 
-.section-accordions .accord-item:nth-child(2) .accord-head {
-    background: #8d8e90;
+.form-include .form-wrap {
+    margin: 0 auto;
+    max-width: 570px;
+    padding: 0 15px;
 }
 
-.section-accordions .accord-item:nth-child(3) .accord-head {
-    background: #9a9b9c;
+.FAQ-accordion .question {
+    padding-left: 2rem;
+    position: relative;
 }
 
-.section-accordions .accord-item:nth-child(4) .accord-head {
-    background: #a7a7a9;
+.FAQ-accordion .question .collapsed i.mdi {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 
-.section-accordions .accord-item:nth-child(5) .accord-head {
-    background: #b4b4b5;
+.FAQ-accordion .question i.mdi {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0px;
+    top: 11px;
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    transition: all 0.4s;
 }
 
-.section-accordions .accord-item:nth-child(6) .accord-head {
-    background: #c1c1c2;
-}
-
-.section-accordions .accord-head {
-    color: #fff;
-    font-size: 2rem;
-}
-
-.section-accordions .accord-head a {
-    padding: 1rem 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    color: inherit;
-    text-decoration: none;
-}
-
-.section-accordions .accord-head a i.mdi {
-    transition: all 0.3s;
-}
-
-.section-accordions .accord-head a:hover i.mdi {
-    -ms-transform: translateX(-10px);
-    transform: translateX(-10px);
-}
-
-.section-accordions .accord-head a:not(.collapsed) i.mdi {
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-
-.my-article-style {
-    padding: 2rem 0;
-}
-
-.my-article-style p {
+.FAQ-accordion .question a {
+    margin: 1rem 0;
+    display: inline-block;
+    color: #ff7a00;
     font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.FAQ-accordion .question a:hover {
+    color: #ff7a00;
+}
+
+.FAQ-accordion .answer {
+    padding-left: 2rem;
+}
+
+.FAQ-accordion .answer p {
+    margin: 0.5rem 0 1rem;
+    font-size: 1.1rem;
 }
 
 .my-modal-body {
@@ -363,6 +485,11 @@ a:hover {
     border-radius: 1rem;
     padding: 2.5rem;
     border: none;
+}
+
+.my-modal-body .title {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
 .my-modal-body > .close {
@@ -373,7 +500,7 @@ a:hover {
     width: 3rem;
     height: 3rem;
     line-height: 3rem;
-    background: #d46e31;
+    background: #ff7a00;
     color: #fff;
     opacity: 1 !important;
     color: #fff !important;
@@ -461,6 +588,10 @@ a:hover {
     color: #fff;
 }
 
+.footer-nav a:hover {
+    color: #ff7a00;
+}
+
 .footer-nav .block-title {
     display: block;
     font-size: 1.2rem;
@@ -468,37 +599,9 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-.footer-nav .custom-control {
-    margin-bottom: 1rem;
-}
-
-.footer-nav .custom-control a {
-    color: #fff;
-}
-
-.footer-nav .links {
-    list-style: none;
-    padding: 0px;
-}
-
-.footer-nav .links li {
-    margin-bottom: 1.3rem;
-}
-
-.footer-nav .links a {
-    text-decoration: none;
-    color: #fff;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.footer-nav .links a:hover {
-    color: #d46e31;
-}
-
-.footer-nav .links i.mdi {
-    margin-top: 2px;
-    margin-right: 0.5rem;
+.footer-nav p {
+    max-width: 300px;
+    line-height: 1.4;
 }
 
 .footer-nav .tel {
@@ -507,7 +610,31 @@ a:hover {
 }
 
 .footer-nav .tel:hover {
-    color: #d46e31;
+    color: #ff7a00;
+}
+
+.footer-nav .off-site {
+    display: block;
+    position: relative;
+    padding-left: 1.7rem;
+}
+
+.footer-nav .off-site i.mdi {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.footer-nav .coockie-about {
+    margin-top: 3rem;
+}
+
+.footer-nav .coockie-about p {
+    max-width: none;
+}
+
+.footer-nav .coockie-about .note {
+    display: none;
 }
 
 .footer-copy {
@@ -554,5 +681,156 @@ a:hover {
 }
 
 .footer-copy .links a:hover {
-    color: #d46e31;
+    color: #ff7a00;
+}
+
+@media screen and (max-width: 768px) {
+    .program-priority img {
+        margin-bottom: 2rem;
+    }
+
+    .program-priority p {
+        font-size: 1.2rem;
+    }
+
+    .check-pills {
+        text-align: center;
+    }
+
+    .check-pills .btn {
+        margin-top: 1rem;
+    }
+
+    .footer-nav .col-sm-6, .footer-nav .col-sm-12 {
+        margin-bottom: 2rem;
+    }
+
+    .footer-nav p {
+        max-width: 100%;
+    }
+
+    .product-section .product .btn {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .keeping-temp .col-md-auto {
+        text-align: center;
+    }
+
+    .keeping-temp .col-md-auto img {
+        margin-bottom: 2rem;
+    }
+
+    .pharmacy-partner .table-pharmacy {
+        overflow-x: auto;
+    }
+
+    .pharmacy-partner .table-pharmacy table {
+        min-width: 650px;
+    }
+
+    .pharmacy-partner .table-pharmacy table td {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .pharmacy-partner .table-pharmacy table td strong {
+        font-size: 1.2rem;
+    }
+
+    .pharmacy-partner .container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .section-pad {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .main-banner {
+        height: 400px;
+    }
+
+    .main-banner .banner-text {
+        font-size: 1rem;
+    }
+
+    .main-banner .banner-text strong {
+        font-size: 1.2rem;
+    }
+
+    .main-banner .banner-text b {
+        font-size: 1.5rem;
+    }
+
+    .intro-section {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .intro-section .search-form {
+        padding: 2rem;
+        margin-top: 0px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .intro-section .search {
+        display: block;
+    }
+
+    .intro-section .search .btn {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .check-pills {
+        text-align: center;
+    }
+
+    .check-pills .btn {
+        margin-top: 1rem;
+    }
+
+    .program-priority img {
+        margin-bottom: 2rem;
+    }
+
+    .program-priority p {
+        font-size: 1.2rem;
+    }
+
+    .product-section .search-res-note {
+        font-size: 1.2rem;
+    }
+
+    .product-section .product .name {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .keeping-temp p {
+        text-align: center;
+    }
+
+    .footer-copy {
+        text-align: center;
+    }
+
+    .footer-copy .links {
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .footer-copy .container {
+        display: block;
+    }
 }

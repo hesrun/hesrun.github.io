@@ -1,4 +1,19 @@
-$orange: #d46e31;
+$prim1: #ff7a00;
+$prim2: #bf7530;
+$prim3: #a65000;
+$prim4: #ff9c40;
+$prim5: #ffb673;
+$sec1: #ffa900;
+$sec2: #bfbf30;
+$sec3: #a66e00;
+$sec4: #ffbe40;
+$sec5: #ffcf73;
+$comp1: #03899C;
+$comp2: #1F6B75;
+$comp3: #015965;
+$comp4: #36BBCE;
+$comp5: #5FC0CE;
+
 @import "bs_custom.scss";
 
 
@@ -10,29 +25,43 @@ body {
     color: #434037;
     line-height: normal;
     font-size: 1rem;
+    padding-top: 57px;
 }
 a {
     text-decoration: underline;
-    color: $orange;
+    color: $prim1;
     &:hover {
+        color: $prim1;
         text-decoration: none;
     }
 }
 .orange-text {
-    color: $orange;
+    color: $prim1;
 }
 .section-pad {
     padding: 5rem 0;
 }
 .section-title {
+    color: $comp2;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+.title-at-product {
     margin-bottom: 3rem;
+    text-align: center;
+    color: $comp3;
+    h2 {
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
 }
 
 .main-header {
-    position: sticky;
+    width: 100%;
+    position: fixed;
     left: 0px;
     top: 0px;
-    background: $orange;
+    background: $prim1;
     z-index: 100;
     a {
         text-decoration: none;
@@ -74,12 +103,19 @@ a {
 }
 
 .main-banner {
-    height: 600px;
+    height: 800px;
     position: relative;
+    &.is-small {
+        height: 100px;
+        background: url('../img/banner.jpg');
+        background-position: top bottom;
+        background-size: cover;
+    }
     .parallax-window {
         height: 100%;
     }
     .banner-text {
+        padding-top: 5%;
         position: absolute;
         left: 0px;
         top: 0px;
@@ -87,56 +123,58 @@ a {
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
         flex-direction: column;
         text-align: center;
         z-index: 2;
         margin: auto;
-        background: rgba(#000,0.3);
         b {
-            font-size: 4rem;
-            color: $orange;
+            font-size: 2.5rem;
+            color: $prim1;
+        }
+        strong {
+            font-size: 1.4rem;
+            margin: 0.5rem 0;
+            color: $comp3;
+            text-transform: uppercase;
         }
         p {
-            color: #fff;
-            font-size: 1.5rem;
+            color: $comp3;
         }
     }
 }
 
 .intro-section {
-    .text {
-        font-size: 1.7rem;
-    }
-    .drug-search {
-        font-size: 1.2rem;
-    }
-    .note {
-        font-size: 0.8rem;
-    }
-    .input-group {
-        margin: 2rem 0;
-        padding: 2rem;
-        background: $orange;
-        border-radius: 1rem;
-        .form-control {
-            border-color: #fff !important;
+    padding-top: 0px;
+    position: relative;
+    z-index: 2;
+    .search-form {
+        margin-top: -3.6rem;
+        padding: 3rem;
+        background: $prim4;
+        strong {
+            font-size: 1.5rem;
+        }
+        p {
+            margin: 2rem 0 0;
+            font-size: 1.2rem;
         }
     }
-    .alert-warning {
-        font-size: 1rem;
-        span {
-            display: block;
-            font-weight: 700;
+    .search {
+        display: flex;
+        margin: 2rem 0 1.5rem;
+        input {
+            margin-right: 2rem;
+            border-color: #fff !important;
         }
     }
 }
 
 .steps-to-access {
-    background: lighten($orange, 45);
     .step-block {
-        display: flex;
-        align-items: center;
+        max-width: 220px;
+        margin: 1rem auto;
+        text-align: center;
+        color: $comp2;
         span {
             font-size: 1.3rem;
             i {
@@ -147,128 +185,187 @@ a {
         }
     }
     .step-num {
-        flex: 0 0 auto;
+        margin: 0 auto 2rem;
+        font-weight: 300;
+        background: $comp1;
+        color: #fff;
         text-align: center;
-        line-height: 46px;
+        line-height: 60px;
         font-size: 1.5rem;
         display: block;
-        width: 50px;
-        height: 50px;
-        border: 2px $orange solid;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
-        font-weight: 700;
-        margin-right: 1rem;
+        font-weight: 300;
     }
 }
 
 .program-priority {
-    .item {
-        text-align: center;
-        i.mdi {
-            font-size: 4rem;
-            color: $orange;
-        }
-        strong {
-            display: block;
-            color: $orange;
-            font-size: 1.5rem;
-            margin: 1rem 0;
-        }
-        p {
-            font-size: 1.2rem;
-        }
+    background: #FFE9D5;
+    color: $comp2;
+    p {
+        font-size: 1.5rem;
     }
 }
 
+.check-pills {
+    padding: 2.5rem 0;
+    background: #FF9C40;
+    text-align: right;
+    strong {
+        font-size: 1.5rem;
+    }
+    p {
+        margin: 0;
+    }
+    .btn {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+/*product*/
 .product-section {
-    .product-image {
-        text-align: center;
+    .search-res-note {
+        border-bottom: 2px $comp3 solid;
+        padding-bottom: 0.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
     }
-    .product-info {
-        p {
-            margin: 2rem 0;
+    .product {
+        background: #FCF4EF;
+        padding: 2rem;
+        line-height: 1.5;
+        .name {
+            display: block;
+            font-size: 1.4rem;
+            color: $prim1;
+        }
+        .produce {
+            display: block;
+            font-weight: 600;
+        }
+        .old {
+            text-decoration: line-through;
+        }
+        .new {
+            margin-top: 1rem;
+            display: block;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
     }
 }
-
-.product-priority {
-    background: rgb(236,246,255);
-    .item {
-        text-align: center;
-        width: 240px;
-        margin: 0 auto;
-    }
-    .icon {
-        margin: 0 auto 2rem;
-        display: block;
-        width: 100px;
-        height: 100px;
-        border: 2px $orange solid;
-        border-radius: 30px;
-        i.mdi {
-            font-size: 48px;
-            color: $orange;
-            line-height: 96px;
-        }
-    }
-    span {
-        font-size: 1.2rem;
-        display: block;
-    }
-}
-
-.map-section {
-    height: 600px;
-}
-
-.section-accordions {
-    .accord-item:nth-child(1) .accord-head {
-        background: #808183;
-    }
-    .accord-item:nth-child(2) .accord-head {
-        background: lighten(#808183,5);
-    }
-    .accord-item:nth-child(3) .accord-head {
-        background: lighten(#808183,10);
-    }
-    .accord-item:nth-child(4) .accord-head {
-        background: lighten(#808183,15);
-    }
-    .accord-item:nth-child(5) .accord-head {
-        background: lighten(#808183,20);
-    }
-    .accord-item:nth-child(6) .accord-head {
-        background: lighten(#808183,25);
-    }
-    .accord-head {
-        color: #fff;
-        font-size: 2rem;
-        a {
-            padding: 1rem 0;
-            display: flex;
-            justify-content:space-between;
-            color: inherit;
-            text-decoration: none;
-            i.mdi {
-                transition: all 0.3s;
-            }
-            &:hover {
-                i.mdi {
-                    transform: translateX(-10px);
-                }
-            }
-            &:not(.collapsed) {
-                i.mdi {
-                    transform: rotate(-90deg);
-                }
-            }
-        }
-    }
-}
-.my-article-style {
-    padding: 2rem 0;
+.keeping-temp {
+    color: #fff;
+    background: #03899C;
+    padding: 3rem 0;
     p {
         font-size: 1.2rem;
+        line-height: 1.5;
+    }
+}
+.table-pharmacy {
+    table {
+        width: 100%;
+    }
+    th {
+        padding: 1rem;
+        border-bottom: 2px $comp3 solid;
+    }
+    tbody {
+        font-size: 1.2rem;
+        &:before {
+            content: "";
+            display: block;
+            height: 1.5rem;
+        }
+        tr {
+            vertical-align: top;
+            td:nth-child(2) {
+                vertical-align: middle;
+                text-align: center;
+            }
+            td:first-child {
+                border-right: 5px #fff solid;
+                width: 60px;
+                text-align: center;
+                font-size: 1.4rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    td {
+        border-bottom: 5px #fff solid;
+        padding: 2rem 1rem;
+        background: #FCF4EF;
+        strong {
+            font-size: 1.5rem;
+        }
+    }
+}
+.terms-program {
+    color: $comp3;
+    .item {
+        display: block;
+        position: relative;
+        margin-bottom: 1.8rem;
+        padding-left: 2rem;
+        font-size: 1.1rem;
+    }
+    i.mdi {
+        position: absolute;
+        left: 0px;
+        top: -2px;
+        color: $comp3;
+        font-size: 1.4rem;
+    }
+}
+.map-section {
+    height: 400px;
+}
+.form-include {
+    background: #5A403F;
+    .form-wrap {
+        margin: 0 auto;
+        max-width: 570px;
+        padding: 0 15px;
+    }
+}
+.FAQ-accordion {
+    .question {
+        padding-left: 2rem;
+        position: relative;
+        .collapsed {
+            i.mdi {
+                transform: rotate(0deg);
+            }
+        }
+        i.mdi {
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0px;
+            top: 11px;
+            transform: rotate(180deg);
+            transition: all 0.4s;
+        }
+        a {
+            margin: 1rem 0;
+            display: inline-block;
+            color: $prim1;
+            font-size: 1.2rem;
+            cursor: pointer;
+            &:hover {
+                color: $prim1;
+            }
+        }
+    }
+    .answer {
+        padding-left: 2rem;
+        p {
+            margin: 0.5rem 0 1rem;
+            font-size: 1.1rem;
+        }
     }
 }
 
@@ -277,6 +374,10 @@ a {
     border-radius: 1rem;
     padding: 2.5rem;
     border: none;
+    .title {
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
     > .close {
         position: absolute;
         right: -1.5rem;
@@ -285,12 +386,13 @@ a {
         width: 3rem;
         height: 3rem;
         line-height: 3rem;
-        background: $orange;
+        background: $prim1;
         color: #fff;
         opacity: 1 !important;
         color: #fff !important;
     }
 }
+
 .sign-form {
     max-width: 600px;
     margin: 0 auto;
@@ -351,42 +453,43 @@ a {
 .footer-nav {
     background: rgb(88,76,74);
     color: #fff;
+    a:hover {
+        color: $prim1;
+    }
     .block-title {
         display: block;
         font-size: 1.2rem;
         font-weight: 400;
         margin-bottom: 2rem;
     }
-    .custom-control {
-        margin-bottom: 1rem;
-        a {
-            color: #fff;
-        }
-    }
-    .links {
-        list-style: none;
-        padding: 0px;
-        li {
-            margin-bottom: 1.3rem;
-        }
-        a {
-            text-decoration: none;
-            color: #fff;
-            display: flex;
-            &:hover {
-                color: $orange;
-            }
-        }
-        i.mdi {
-            margin-top: 2px;
-            margin-right: 0.5rem;
-        }
+    p {
+        max-width: 300px;
+        line-height: 1.4;
     }
     .tel {
         text-decoration: none;
         color: #fff;
         &:hover {
-            color: $orange;
+            color: $prim1;
+        }
+    }
+    .off-site {
+        display: block;
+        position: relative;
+        padding-left: 1.7rem;
+        i.mdi {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    }
+    .coockie-about {
+        margin-top: 3rem;
+        p {
+            max-width: none;
+        }
+        .note {
+            display: none;
         }
     }
 }
@@ -419,8 +522,148 @@ a {
             color: #fff;
             text-decoration: none;
             &:hover {
-                color: $orange;
+                color: $prim1;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .program-priority {
+        img {
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .check-pills {
+        text-align: center;
+        .btn {
+            margin-top: 1rem;
+        }
+    }
+    .footer-nav {
+        .col-sm-6, .col-sm-12 {
+            margin-bottom: 2rem;
+        }
+        p {
+            max-width: 100%;
+        }
+    }
+    .product-section {
+        .product {
+            .btn {
+                width: 100%;
+                margin-top: 2rem;
+            }
+        }
+    }
+    .keeping-temp {
+        .col-md-auto {
+            text-align: center;
+            img {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    .pharmacy-partner {
+        .table-pharmacy {
+            overflow-x: auto;
+            table {
+                min-width: 650px;
+                td {
+                    font-size: 1rem;
+                    padding: 1rem;
+                    strong {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        .container {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section-title {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    .section-pad {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    .main-banner {
+        height: 400px;
+        .banner-text {
+            font-size: 1rem;
+            strong {
+                font-size: 1.2rem;
+            }
+            b {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .intro-section {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        .search-form {
+            padding: 2rem;
+            margin-top: 0px;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .search {
+            display: block;
+            .btn {
+                margin-top: 1rem;
+                width: 100%;
+            }
+        }
+    }
+    .check-pills {
+        text-align: center;
+        .btn {
+            margin-top: 1rem;
+        }
+    }
+    .program-priority {
+        img {
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .product-section {
+        .search-res-note {
+            font-size: 1.2rem;
+        }
+        .product {
+            .name {
+                font-size: 1.2rem;
+                line-height: 1.2;
+            }
+        }
+    }
+    .keeping-temp {
+        p {
+            text-align: center;
+        }
+    }
+    .footer-copy {
+        text-align: center;
+        .links {
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+        .container {
+            display: block;
         }
     }
 }
