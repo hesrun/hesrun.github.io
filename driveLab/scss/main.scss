@@ -293,6 +293,7 @@ h2 {
         }
     }
     .text {
+        padding-top: 20%;
         h2 {
             text-transform: uppercase;
         }
@@ -304,7 +305,8 @@ h2 {
     }
 }
 .dl-our-works {
-    overflow: hidden ;
+    padding: 4rem 0;
+    overflow: hidden;
     h1 {
         margin-bottom: 3rem;
         font-size: 48px;
@@ -347,14 +349,17 @@ h2 {
         display: flex;
     }
     .image {
+        left: 0px;
+        top: 0;
+        position: absolute;
         flex: 0 0 auto;
         width: 400px;
-
         img {
             width: 100%;
         }
     }
     .text {
+        margin-left: 400px;
         padding-right: 2rem;
         h2 {
             font-size: 48px;
@@ -365,10 +370,45 @@ h2 {
         }
     }
     .dl-works-list {
-        margin: 2rem 0;
+        margin: 2rem 0 0;
         line-height: 30px;
         padding-left: 1rem;
         border-left: 2px $blue solid;
+    }
+}
+
+.dl-our-works-slider-nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    .dl-btn {
+        margin: 0 4rem 0 4rem;
+    }
+    .slider-nav {
+        margin: 0 0.5rem;
+        display: inline-flex;
+        width: 60px;
+        height: 60px;
+        border: 2px $blue solid;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+            background: $blue;
+            .chevron-icon {
+                fill: white;
+            }
+        }
+        &.dl-prev {
+            .chevron-icon {
+                transform: rotateY(180deg);
+            }
+        }
+        .chevron-icon {
+            margin: auto;
+            width: 15px;
+            height: 15px;
+            fill: $blue;
+        }
     }
 }
 /*****ui*****/
