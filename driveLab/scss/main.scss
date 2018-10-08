@@ -19,6 +19,9 @@ h2 {
     font-size: 24px;
     font-weight: 900;
 }
+.blue-color {
+    color: $blue;
+}
 .dl-dotts {
     margin: 1rem 0;
     span {
@@ -300,7 +303,74 @@ h2 {
         }
     }
 }
+.dl-our-works {
+    overflow: hidden ;
+    h1 {
+        margin-bottom: 3rem;
+        font-size: 48px;
+        text-align: center;
+        font-weight: 900;
+    }
+}
+.dl-our-works-slider {
+    border: 20px #009aff solid;
+    padding: 2rem 0;
+    .slick-list {
+        overflow: visible !important;
+    }
+    .slick-slide {
+        transition: none !important;
+        opacity: 0 !important;
+        .image {
+            opacity: 0;
+            transform: translateX(-150%);
+        }
+        .text {
+            opacity: 0;
+            transform: translateY(10%);
+        }
+    }
+    .slick-active {
+        opacity: 1 !important;
+        .image {
+            transition: all 0.5s;
+            opacity: 1;
+            transform: translateX(-50%);
+        }
+        .text {
+            transition: all 0.5s;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .item {
+        display: flex;
+    }
+    .image {
+        flex: 0 0 auto;
+        width: 400px;
 
+        img {
+            width: 100%;
+        }
+    }
+    .text {
+        padding-right: 2rem;
+        h2 {
+            font-size: 48px;
+            font-weight: 800;
+        }
+        p {
+            line-height: 30px;
+        }
+    }
+    .dl-works-list {
+        margin: 2rem 0;
+        line-height: 30px;
+        padding-left: 1rem;
+        border-left: 2px $blue solid;
+    }
+}
 /*****ui*****/
 .dl-btn {
     display:inline-flex;
