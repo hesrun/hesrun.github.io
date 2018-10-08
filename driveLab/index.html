@@ -10,7 +10,27 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
+<body class="dl-menu-open">
+    <div class="dl-menu-back-background">
+        <img src="img/back-bg.jpg" alt="">
+    </div>
+    <nav class="dl-nav">
+        <a href="">
+            link-1
+        </a>
+        <a href="">
+            link-2
+        </a>
+        <a href="">
+            link-3
+        </a>
+        <a href="">
+            link-4
+        </a>
+        <a href="">
+            link-5
+        </a>
+    </nav>
     <div class="dl-app">
         <header class="dl-head">
             <div class="container">
@@ -20,6 +40,11 @@
                     <strong>+7 926 946 7774</strong>
                 </div>
             </div>
+            <button class="dl-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </header>
         <section class="dl-main">
             <div class="dl-scene dl-main-parallax" data-relative-input="true">
@@ -166,12 +191,19 @@
                 </div>
             </div>
         </section>
+        <div class="dl-app-lauout"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script type="text/javascript">
         var scene = $('.dl-scene').get(0);
         var parallaxInstance = new Parallax(scene);
+        $('.dl-menu-open .dl-burger').click(function () {
+            $('body').addClass('dl-menu-open');
+        })
+        $('.dl-app-lauout').click(function () {
+            $('body').removeClass('dl-menu-open');
+        })
     </script>
 </body>
 </html>

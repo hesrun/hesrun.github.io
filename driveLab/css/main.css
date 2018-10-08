@@ -1,5 +1,6 @@
 html {
     font-size: 20px;
+    height: 100%;
 }
 
 body {
@@ -7,6 +8,8 @@ body {
     line-height: 1;
     color: #312D3B;
     font-weight: 500;
+    height: 100%;
+    overflow: hidden;
 }
 
 strong {
@@ -31,17 +34,175 @@ h2 {
     background: #009aff;
 }
 
-.dl-app {
+.dl-menu-back-background {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.dl-menu-back-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dl-menu-open {
+    overflow: hidden;
+}
+
+.dl-menu-open .dl-app {
+    -ms-transform: translate(40%, 0) scale(0.85, 0.85);
+    transform: translate(40%, 0) scale(0.85, 0.85);
+    overflow: hidden;
+}
+
+.dl-menu-open .dl-app .dl-app-lauout {
+    display: block;
+}
+
+.dl-menu-open .dl-nav a {
+    opacity: 1;
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.dl-menu-open .dl-nav a:nth-child(1) {
+    transition-delay: .2s;
+}
+
+.dl-menu-open .dl-nav a:nth-child(2) {
+    transition-delay: .24s;
+}
+
+.dl-menu-open .dl-nav a:nth-child(3) {
+    transition-delay: .28s;
+}
+
+.dl-menu-open .dl-nav a:nth-child(4) {
+    transition-delay: .32s;
+}
+
+.dl-menu-open .dl-nav a:nth-child(5) {
+    transition-delay: .36s;
+}
+
+.dl-menu-open .dl-nav a:nth-child(6) {
+    transition-delay: .40s;
+}
+
+.dl-nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-left: 5%;
+    z-index: 2;
+}
+
+.dl-nav a {
     position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    opacity: 0;
+    -ms-transform: translateX(-200px);
+    transform: translateX(-200px);
+    transition: all .4s;
+}
+
+.dl-nav a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 1px #fff solid;
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.dl-nav a:hover:after {
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+.dl-app {
+    height: 100%;
+    overflow: auto;
+    background: #fff;
+    position: relative;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.335, 1.05);
+    z-index: 100;
+}
+
+.dl-app-lauout {
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 101;
 }
 
 .dl-head {
     position: absolute;
     left: 0px;
+    top: 37px;
     width: 100%;
-    padding: 37px 0;
     text-align: center;
     letter-spacing: 2px;
+    z-index: 2;
+}
+
+.dl-head .dl-burger {
+    padding: 0px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.dl-head .dl-burger:hover span {
+    background: #009aff;
+}
+
+.dl-head .dl-burger span {
+    display: block;
+    height: 3px;
+    width: 20px;
+    background: #312D3B;
+}
+
+.dl-head .dl-burger span:nth-child(2) {
+    width: 16px;
+    margin: 2px 0;
 }
 
 .dl-main {
