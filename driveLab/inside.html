@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="css/grid/bootstrap-grid.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
@@ -255,19 +253,9 @@
         <div class="dl-app-lauout"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="js/wow.min.js" charset="utf-8"></script>
     <script type="text/javascript">
-        wow = new WOW ({
-            scrollContainer: '.dl-app',
-            boxClass:     'wow',      // default
-            animateClass: 'animated', // default
-            offset:       400,          // default
-            mobile:       false,       // default
-            live:         false        // default
-        })
-        wow.init();
         var scene = $('.dl-scene').get(0);
         var parallaxInstance = new Parallax(scene);
 
@@ -276,23 +264,6 @@
         })
         $('.dl-app-lauout').click(function () {
             $('body').removeClass('dl-menu-open');
-        })
-        var mainSlider = $('.dl-our-works-slider').slick({
-            autoplay: true,
-            arrows: false,
-            dots: false,
-            infinite: true,
-            speed: 500,
-            fade: true,
-            adaptiveHeight: true,
-            cssEase: 'linear'
-        });
-        $('.slider-nav').click(function () {
-            if ($(this).hasClass('dl-prev')) {
-                mainSlider.slick('slickPrev');
-            } else if ($(this).hasClass('dl-next')) {
-                mainSlider.slick('slickNext');
-            }
         })
     </script>
 </body>
