@@ -16,6 +16,10 @@ strong {
     font-weight: 700;
 }
 
+a, button, input, textarea {
+    outline: none !important;
+}
+
 h2 {
     font-size: 24px;
     font-weight: 900;
@@ -46,8 +50,8 @@ h2 {
     position: fixed;
     left: 0px;
     top: 0px;
-    right: 0px;
-    bottom: 0px;
+    width: 100vw;
+    height: 100vh;
     z-index: 1;
 }
 
@@ -105,8 +109,8 @@ h2 {
     position: fixed;
     left: 0px;
     top: 0px;
-    right: 0px;
-    bottom: 0px;
+    width: 100vw;
+    height: 100vh;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -161,7 +165,7 @@ h2 {
     position: relative;
     -ms-transform-origin: center center;
     transform-origin: center center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.335, 1.05);
+    transition: all 0.4s cubic-bezier(0.72, 0.07, 0.32, 0.93);
     -webkit-overflow-scrolling: touch;
     z-index: 100;
 }
@@ -761,6 +765,35 @@ h2 {
     .dl-our-works-slider .item {
         display: block;
     }
+
+    .dl-specialization-item {
+        padding-top: 120px;
+    }
+
+    .dl-specialization-item .row {
+        margin-bottom: 0px;
+    }
+
+    .dl-specialization-item h1 {
+        font-size: 25px;
+    }
+
+    .dl-specialization-item h1 br {
+        display: none;
+    }
+
+    .dl-specialization-item .image {
+        margin: 0 auto;
+        max-width: 447px;
+    }
+
+    .dl-price h2 {
+        font-size: 25px;
+    }
+
+    .dl-article-section h2 {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -846,9 +879,34 @@ h2 {
         clear: both;
         line-height: 1.3;
     }
+
+    .dl-price .title {
+        min-height: 0px;
+    }
+
+    .dl-price .title:before {
+        width: 4px;
+    }
+
+    .dl-article-section .dl-works-list li {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 576px) {
+    .dl-menu-open .dl-app {
+        -ms-transform: translate(60%, 0) scale(0.85, 0.85);
+        transform: translate(60%, 0) scale(0.85, 0.85);
+    }
+
+    .dl-head {
+        top: 15px;
+    }
+
+    .dl-head .dl-burger {
+        left: 15px;
+    }
+
     .dl-specialization .image {
         max-width: 240px;
     }
