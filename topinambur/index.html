@@ -158,10 +158,11 @@
         </div>
     </section>
     <section class="video-section">
-        <button id="videoBtn" class="play stop">
+        <button id="videoBtn" class="play">
             <i class="mdi mdi-play"></i>
         </button>
         <h2>Выращивание <br> топинамбура</h2>
+        <iframe id="videoFrame" width="100%" height="100%" src="" allowfullscreen></iframe>
     </section>
     <section class="sec-pad our-gallery">
         <div class="container">
@@ -390,7 +391,13 @@
             animateIn: 'fadeIn'
         })
         $('#videoBtn').click(function () {
-            $(this).find('i').toggleClass('mdi-play mdi-pause');
+            $(this).toggleClass('stop').find('i').toggleClass('mdi-play mdi-pause');
+            if($(this).hasClass('stop')) {
+                $('#videoFrame').fadeIn().attr('src','https://www.youtube.com/embed/gwCcI2hQrXc')
+            } else {
+                $('#videoFrame').fadeOut().attr('src','')
+            }
+
         })
         $('.burger-btn').click(function () {
             $('.main-header-inner').toggleClass('open');
