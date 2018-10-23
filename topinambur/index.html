@@ -158,11 +158,11 @@
         </div>
     </section>
     <section class="video-section">
-        <div id="videoContainer" class="player" data-property="{videoURL:'qvuILbcXlg8',containment:'#myPlayer', showControls:true, autoPlay:true, loop:false, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default'}"></div>
-        <button id="videoBtn" class="play">
+        <div id="videoContainer"></div>
+        <!-- <button id="videoBtn" class="play">
             <i class="mdi mdi-play"></i>
         </button>
-        <h2>Выращивание <br> топинамбура</h2>
+        <h2>Выращивание <br> топинамбура</h2> -->
     </section>
     <section class="sec-pad our-gallery">
         <div class="container">
@@ -362,17 +362,26 @@
             </div>
         </div>
     </footer>
+
+    <div id="video1" class="player" data-property="{
+        videoURL:'https://youtu.be/S3qfTDj2QP0',
+        coverImage: '/img/video-bg.jpg',
+        containment:'#videoContainer',
+        showControls:false,
+        autoPlay:true,
+        loop:true,
+        mute:true,
+        startAt:0,
+        opacity:1,
+        addRaster:true,
+        quality:'default'
+    }"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
     <script src="js/jquery.mb.YTPlayer.min.js" charset="utf-8"></script>
     <script type="text/javascript">
-        var myPlayer;
-        jQuery(function () {
-            var options = {
-                mobileFallbackImage: "http://www.hdwallpapers.in/walls/pink_cosmos_flowers-wide.jpg",
-                playOnlyIfVisible  : false
-            };
-            myPlayer = jQuery("#videoContainer").YTPlayer(options);
+        jQuery(function(){
+            jQuery("#video1").YTPlayer();
         });
         $('.product-carusel').owlCarousel({
             loop:true,
