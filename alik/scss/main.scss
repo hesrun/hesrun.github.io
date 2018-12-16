@@ -369,6 +369,140 @@ a {
     }
 }
 
+//lk
+.lk-section {
+    margin: 4rem 0;
+    h2 {
+        font-size: 1.3rem;
+        color: $prim1;
+        margin-bottom: 30px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+}
+.profile-info {
+    margin-bottom: 3rem;
+    .profile-name {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        color: $comp1;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    .profile-tel {
+        display: block;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        color: $comp2;
+    }
+    .profile-activity {
+        line-height: 1.6;
+    }
+}
+.order-form {
+    margin-bottom: 6rem;
+    border: 2px $comp1 solid;
+    padding: 2rem;
+    p {
+        margin-bottom: 30px;
+    }
+    .alert {
+        margin-bottom: 30px;
+    }
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        label {
+            min-width: 150px;
+        }
+    }
+    .btn {
+        margin-left: 150px;
+    }
+}
+.oder-list-item {
+    border: 2px $comp1 solid;
+    border-bottom: none;
+    &:last-child {
+        border-bottom: 2px $comp1 solid;
+    }
+}
+.oder-list-head {
+    a {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        text-decoration: none;
+        transition: all 0.3s;
+        &:hover {
+            background-color: rgba($comp5,0.2);
+        }
+        &.collapsed {
+            .mdi {
+                transform: rotateX(0deg);
+            }
+        }
+        .mdi {
+            font-size: 32px;
+            flex: 0 0 auto;
+            margin-right: 5px;
+            transform: rotateX(180deg);
+            transition: 0.3s;
+        }
+        .oder-num {
+            flex: 1 1 auto;
+            font-size: 1.2rem;
+            color: #434037;
+        }
+        .status {
+            font-size: 1.3rem;
+            font-weight: 700;
+            &.complete {
+                color: #434037;
+            }
+        }
+    }
+}
+.oder-list-body {
+    padding: 0 2rem;
+    .order-info {
+        line-height: 1.5;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .order-final-sum {
+        text-align: right;
+        margin-bottom: 2rem;
+    }
+    .pharmacy-info {
+        margin-bottom: 2rem;
+    }
+    .pharmacy-map {
+        height: 300px;
+        margin-bottom: 2rem;
+    }
+}
+.order-table {
+    width: 100%;
+    margin-bottom: 1rem;
+    th {
+        border-bottom: 2px $comp1 solid;
+        padding: 0.5rem 0;
+        &:last-child {
+            text-align: right;
+        }
+    }
+    td {
+        border-bottom: 1px $comp1 solid;
+        padding: 0.5rem 0;
+        &:last-child {
+            text-align: right;
+        }
+    }
+}
+
+
 .my-modal-body {
     background: #fff;
     border-radius: 1rem;
@@ -665,5 +799,26 @@ a {
         .container {
             display: block;
         }
+    }
+    //lk
+    .order-form {
+        padding: 1rem;
+        .btn {
+            margin-left: 0px;
+        }
+        .form-group {
+            display: block;
+            label {
+                min-width: 0px;
+            }
+        }
+    }
+    .oder-list-head {
+        a {
+            padding: 0.5rem 1rem;
+        }
+    }
+    .oder-list-body {
+        padding: 0 1rem;
     }
 }

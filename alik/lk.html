@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.7.94/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <a class="navbar-brand" href="#">
+                        <img height="35px" src="img/logo.svg" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#apteki">Аптеки</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#faq">Вопросы и ответы</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="modal" data-target="#signIn">
+                                    <i class="mdi mdi-login-variant"></i>
+                                    Вход
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="mdi mdi-account-edit"></i>
+                                    Регистрация
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link b24-web-form-popup-btn-31" href="#">
+                                    <i class="mdi mdi-cellphone-basic"></i>
+                                    Обратный звонок
+                                </a>
+                            </li>
+                        </ul>
+                        <span class="navbar-text">
+                            <strong class="tel">
+                                <a href="tel:88008888888">8 800 888-88-88</a>
+                            </strong>
+                        </span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="lk-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="profile-info">
+                            <h2>ПРОФИЛЬ</h2>
+                            <div class="profile-name">
+                                Константин <br>
+                                Константинович <br>
+                                Константинопольский <br>
+                            </div>
+                            <strong class="profile-tel">+7 999 888-77-66</strong>
+                            <span class="profile-activity">
+                                Остаток лимита заказов: <strong>2</strong> <br>
+                                Регистрация: <strong>10.09.2018</strong>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-8">
+                        <div class="order-form">
+                            <h2>ЗАКАЗАТЬ</h2>
+                            <p>
+                                Ваш заказ доставят в течении 2-3 дней, оператор свяжется для уточнения даты заказа. После успешного формирования заказа на номер телефона, указанный при регистрации, мы вышлем код на скидку. Код действует на один заказ в выбранной аптеке. Заказ необходимо выкупить в течении дня.
+                            </p>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                Оформить следующий заказ в соответствии <a href="#">с условиями программы</a> можно только после подтверждения предыдущей упаковки. Если у Вас остались вопросы, позвоните на горячую линию <b>8 800 333-96-68</b>.
+                            </div>
+                            <form action="">
+                                <div class="form-group">
+                                    <label>Желаемая дата</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Аптека</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <button class="btn btn-warning" type="button">ЗАКАЗАТЬ</button>
+                            </form>
+                        </div>
+                        <div class="order-history">
+                            <h2>ИСТОРИЯ ЗАКАЗОВ</h2>
+                            <div class="oder-list" id="oder_list">
+                                <div class="oder-list-item">
+                                    <div class="oder-list-head" id="order_1_head">
+                                        <a href="#order_1_body" data-toggle="collapse" aria-expanded="true" aria-controls="order_1_body">
+                                            <i class="mdi mdi-chevron-down"></i>
+                                            <span class="oder-num">Заказ №3, Стелара</span>
+                                            <span class="status">На складе</span>
+                                        </a>
+                                    </div>
+                                    <div id="order_1_body" class="oder-list-body collapse show" aria-labelledby="order_1_head" data-parent="#oder_list">
+                                        <div class="order-info">
+                                            Заказ размещен: <strong>07.10.2018 13:30</strong> <br>
+                                            Ожидаемая дата доставки: <strong>09.10.2018</strong>
+                                        </div>
+                                        <table class="order-table">
+                                            <tr>
+                                                <th>Препарат</th>
+                                                <th>Цена</th>
+                                                <th>Кол-во</th>
+                                                <th>Скидка</th>
+                                                <th>Сумма</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                        </table>
+                                        <div class="order-final-sum">
+                                            Итого: <strong>61 250, 00 руб</strong>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="pharmacy-info">
+                                                    <strong>Аптека</strong> <br> <br>
+                                                    <p>Крылатская ул., 17, корп. 3,
+                                                        БЦ Крылатские холмы</p>
+                                                    <p>
+                                                        +7 495 502-14-35 <br>
+                                                        +7 495 502-14-35
+                                                    </p>
+                                                    <p>
+                                                        пн-пт: 8:45-19:30, <br>
+                                                        сб,вс: выходной
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="pharmacy-map">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3729499442256!2d37.61531071659272!3d55.75202328055319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1536743591165" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="oder-list-item">
+                                    <div class="oder-list-head" id="order_2_head">
+                                        <a href="#order_2_body" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="order_2_body">
+                                            <i class="mdi mdi-chevron-down"></i>
+                                            <span class="oder-num">Заказ №3, Стелара</span>
+                                            <span class="status">На складе</span>
+                                        </a>
+                                    </div>
+                                    <div id="order_2_body" class="oder-list-body collapse" aria-labelledby="order_2_head" data-parent="#oder_list">
+                                        <div class="order-info">
+                                            Заказ размещен: <strong>07.10.2018 13:30</strong> <br>
+                                            Ожидаемая дата доставки: <strong>09.10.2018</strong>
+                                        </div>
+                                        <table class="order-table">
+                                            <tr>
+                                                <th>Препарат</th>
+                                                <th>Цена</th>
+                                                <th>Кол-во</th>
+                                                <th>Скидка</th>
+                                                <th>Сумма</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                        </table>
+                                        <div class="order-final-sum">
+                                            Итого: <strong>61 250, 00 руб</strong>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="pharmacy-info">
+                                                    <strong>Аптека</strong> <br> <br>
+                                                    <p>Крылатская ул., 17, корп. 3,
+                                                        БЦ Крылатские холмы</p>
+                                                    <p>
+                                                        +7 495 502-14-35 <br>
+                                                        +7 495 502-14-35
+                                                    </p>
+                                                    <p>
+                                                        пн-пт: 8:45-19:30, <br>
+                                                        сб,вс: выходной
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="pharmacy-map">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3729499442256!2d37.61531071659272!3d55.75202328055319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1536743591165" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="oder-list-item">
+                                    <div class="oder-list-head" id="order_3_head">
+                                        <a href="#order_3_body" class="collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="order_3_body">
+                                            <i class="mdi mdi-chevron-down"></i>
+                                            <span class="oder-num">Заказ №3, Стелара</span>
+                                            <span class="status complete">На складе</span>
+                                        </a>
+                                    </div>
+                                    <div id="order_3_body" class="oder-list-body collapse" aria-labelledby="order_3_head" data-parent="#oder_list">
+                                        <div class="order-info">
+                                            Заказ размещен: <strong>07.10.2018 13:30</strong> <br>
+                                            Ожидаемая дата доставки: <strong>09.10.2018</strong>
+                                        </div>
+                                        <table class="order-table">
+                                            <tr>
+                                                <th>Препарат</th>
+                                                <th>Цена</th>
+                                                <th>Кол-во</th>
+                                                <th>Скидка</th>
+                                                <th>Сумма</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Стелара 45мг №1</td>
+                                                <td>122 500</td>
+                                                <td>1</td>
+                                                <td>50%</td>
+                                                <td>61 250</td>
+                                            </tr>
+                                        </table>
+                                        <div class="order-final-sum">
+                                            Итого: <strong>61 250, 00 руб</strong>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                <div class="pharmacy-info">
+                                                    <strong>Аптека</strong> <br> <br>
+                                                    <p>Крылатская ул., 17, корп. 3,
+                                                        БЦ Крылатские холмы</p>
+                                                    <p>
+                                                        +7 495 502-14-35 <br>
+                                                        +7 495 502-14-35
+                                                    </p>
+                                                    <p>
+                                                        пн-пт: 8:45-19:30, <br>
+                                                        сб,вс: выходной
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <div class="pharmacy-map">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.3729499442256!2d37.61531071659272!3d55.75202328055319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a50b315e573%3A0xa886bf5a3d9b2e68!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1536743591165" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+        <script src="js\bootstrap.min.js" charset="utf-8"></script>
+    </body>
+</html>
