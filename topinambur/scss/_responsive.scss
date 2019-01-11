@@ -51,12 +51,9 @@
             top: 12px;
         }
         .header-logo {
-            margin: 0 auto;
-            display: flex;
-            height: 150px;
-            width: 150px;
-            background: #fff;
-            border-radius: 50%;
+            display: block;
+            text-align: center;
+            margin: 0px 0px 30px;
             img {
                 margin: auto;
             }
@@ -64,6 +61,8 @@
         .header-nav {
             display: block;
             margin: 20px 0;
+            padding: 0px;
+            background: none;
             a {
                 display: block;
                 padding: 15px 15px;
@@ -80,14 +79,21 @@
             text-align: center;
         }
     }
+    .main-banner {
+        &.small {
+            .small-banner-text {
+                display: block;
+                span {
+                    text-align: inherit;
+                    display: block;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
     .product-carusel {
         .owl-nav {
             display: none;
-        }
-    }
-    .history-gallery {
-        .chrono-list {
-            justify-content: flex-start;
         }
     }
 }
@@ -129,7 +135,7 @@
     }
     .contact-section {
         text-align: center;
-        &:before {
+        > .bg {
             display: none;
         }
         .contact-info {
@@ -146,9 +152,18 @@
             margin-right: -15px;
             padding-left: 15px;
             padding-right: 15px;
-            background-image: url(../img/ecomerce-bg.jpg);
-            background-size: cover;
-            background-position: center ;
+            > .bg {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                z-index: 0;
+            }
+            > * {
+                position: relative;
+                z-index: 1;
+            }
         }
     }
     .lightbox {

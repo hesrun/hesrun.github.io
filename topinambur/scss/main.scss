@@ -100,14 +100,18 @@ article {
 }
 
 
-/*-------------header------------------*/
+/*----------------header----------------*/
 .main-header {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
     .main-header-inner {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
+        color: #fff;
     }
     .header-logo {
         img {
@@ -138,6 +142,7 @@ article {
         position: absolute;
         right: 15px;
         top: 10px;
+        color: #fff;
         a {
             font-size: 12px;
             margin-left: 20px;
@@ -158,13 +163,15 @@ article {
         }
     }
     .header-nav {
-        flex: 1 1 auto;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 12px;
+        background: rgba(#000,0.3);
+        padding: 12px 10px 10px;
+        border-radius: 4px;
         a {
-            padding: 0 10px;
+            padding: 0 15px;
             display: block;
             text-transform: uppercase;
             font-weight: 600;
@@ -182,11 +189,11 @@ article {
         font-weight: 300;
     }
 }
-/*---------------main-banner ---------------*/
+/*---------------main-banner---------------*/
 .main-banner  {
-    padding: 150px 0 50px;
+    padding: 235px 0 100px;
     background: url(../img/main-banner-bg.jpg);
-    background-position: center;
+    background-position: center top;
     background-size: cover;
     color: #fff;
     h1 {
@@ -210,9 +217,21 @@ article {
         font-size: 14px;
     }
     &.small {
-        padding: 50px 0;
+        padding: 200px 0 70px;
         background: url(../img/img-title-bg.jpg);
         background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .small-banner-text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        span {
+            text-align: right;
+            max-width: 500px;
+            font-size: 14px;
+        }
     }
 }
 /*--------product-item--------*/
@@ -224,42 +243,18 @@ article {
             color: $green;
         }
         .product-image {
-            &:before {
-                left: 20px;
-                top: 20px;
-                opacity: 0.8;
-            }
-            &:after {
-                right: 20px;
-                bottom: 20px;
-                opacity: 0.8;
+            img {
+                transform: scale(1.1);
             }
         }
     }
     .product-image {
         margin-bottom: 15px;
         position: relative;
+        overflow: hidden;
         img {
+            transition: all 0.3s;
             width: 100%;
-        }
-        &:after, &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            opacity: 0;
-            transition: all 0.2s;
-        }
-        &:before {
-            border-top: 1px $green solid;
-            border-left: 1px $green solid;
-        }
-        &:after {
-            border-right: 1px $green solid;
-            border-bottom: 1px $green solid;
         }
     }
     .product-name {
@@ -407,18 +402,16 @@ article {
 .contact-section {
     position: relative;
     background-color: #ebebeb;
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        left: 50%;
-        width: 50%;
-        height: 100%;
-        background-image: url(../img/ecomerce-bg.jpg);
+    .bg {
+        background-position: center;
         background-size: cover;
-        background-position: center ;
+    }
+    > .bg {
+        position: absolute;
+        left: 50%;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
     }
     .contact-info {
         .adress {
@@ -457,36 +450,6 @@ article {
 }
 /*.history-gallery*/
 .history-gallery {
-    .chrono-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        a {
-            color: $green;
-            &.active {
-                background: $green;
-                color: #fff;
-                text-decoration: none;
-            }
-        }
-        &.year {
-            font-family: "PT Serif";
-            font-size: 25px;
-            font-weight: 700;
-            a {
-                line-height: 40px;
-                padding: 0 10px;
-            }
-        }
-        &.month {
-            margin: 20px 0;
-            font-size: 13px;
-            a {
-                line-height: 30px;
-                padding: 0 10px;
-            }
-        }
-    }
     .grid {
         a {
             display: block;
@@ -495,6 +458,38 @@ article {
         img {
             width: 100%;
             vertical-align: middle;
+        }
+    }
+}
+.chrono-carousel {
+    .date-item {
+        font-family: "PT Serif";
+        margin: 0 auto;
+        display: block;
+        border: 2px $green solid;
+        border-radius: 50%;
+        height: 120px;
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        transform: scale(0.7);
+        transition: all 0.3s;
+        span {
+            font-weight: 600;
+        }
+        b {
+            font-size: 1.3rem;
+            font-weight: 900;
+        }
+    }
+    .active.center {
+        .date-item {
+            transform: scale(1);
+            background: $green;
+            color: #fff;
         }
     }
 }
@@ -657,6 +652,4 @@ article {
         }
     }
 }
-
-
 @import "responsive.scss"

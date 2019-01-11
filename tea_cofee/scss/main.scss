@@ -1,0 +1,142 @@
+@import "font.scss";
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	font-family: "SF";
+	font-size: 19px;
+	&.is-tea {
+		background: url('../img/tea-bg.jpg');
+		background-size: 100% auto;
+		background-position: center top;
+		background-repeat: no-repeat;
+	}
+	&.is-coffee {
+		background: url('../img/cofee-bg.jpg');
+		background-size: 100% auto;
+		background-position: center top;
+		background-repeat: no-repeat;
+	}
+}
+.img-response {
+	max-width: 100%;
+}
+a {
+	color: #004eec;
+	&:hover {
+		text-decoration: none;
+	}
+}
+h1 {
+	font-family: "MON";
+	font-size: 70px;
+}
+
+.main-header {
+	margin-top: 10vw;
+	text-align: center;
+	h1 {
+		font-size: 4.86vw;
+		color: #fff;
+		text-transform: uppercase;
+	}
+	img {
+		margin: 2.2vw 0;
+		width: 2.29vw;
+	}
+	p {
+		color: #fff;
+		font-size: 1.319vw;
+	}
+}
+.main-banner {
+	padding-top: 3.3vw;
+	text-align: center;
+	height: 80vw;
+	margin-bottom: 3vw;
+	img {
+		width: 55.5vw;
+	}
+}
+.text-section {
+	p {
+		margin-bottom: 3.3vw;
+	}
+	.big-text {
+		font-size: 34px;
+		font-weight: 700;
+	}
+}
+.product-info {
+	display: flex;
+	margin-bottom: 4vw;
+	.icon {
+		flex: 0 0 auto;
+		margin-right: 20px;
+	}
+	img {
+		width: 60px;
+	}
+	b {
+		display: block;
+	}
+}
+.slider-section {
+	margin-bottom: 6.6vw;
+	.bx-wrapper {
+		box-shadow: none;
+		border: none;
+		.bx-pager {
+			.bx-pager-link {
+				background: none;
+				border: 1px #b2b2b2 solid;
+				&.active {
+					border-color: #000;
+					background: #000;
+				}
+			}
+		}
+	}
+}
+.main-footer {
+	padding-bottom: 3.3vw;
+	font-size: 15px;
+	hr {
+		border: none;
+		height: 1px;
+		background: #e5e5e5;
+		margin-bottom: 3.3vw;
+	}
+}
+
+@media screen and (max-width:768px) {
+	body {
+		font-size: 14px;
+	}
+	.text-section {
+		text-align: center;
+		p {
+			margin-bottom: 5vw;
+		}
+		.big-text {
+			font-size: 17px;
+		}
+	}
+	.product-info {
+		max-width: 80vw;
+		margin: 0 auto 8vw;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		.icon {
+			margin: 0 0 2vw 0;
+		}
+	}
+	.main-footer {
+		font-size: 14px;	
+	}
+}

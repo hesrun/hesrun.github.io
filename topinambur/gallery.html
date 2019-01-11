@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="css/grid/bootstrap-grid.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
@@ -60,29 +63,47 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-lg-10 col-lg-offset-1">
-                    <div class="chrono-list year">
-                        <a href="">2018</a>
-                        <a class="active" href="">2017</a>
-                        <a href="">2016</a>
-                        <a href="">2015</a>
-                        <a href="">2014</a>
-                        <a href="">2013</a>
-                        <a href="">2012</a>
-                        <a href="">2011</a>
-                    </div>
-                    <div class="chrono-list month">
-                        <a href="#">Январь</a>
-                        <a href="#">Февраль</a>
-                        <a href="#">Март</a>
-                        <a href="#">Апрель</a>
-                        <a class="active" href="#">Май</a>
-                        <a href="#">Июнь</a>
-                        <a href="#">Июль</a>
-                        <a href="#">Август</a>
-                        <a href="#">Сентябрь</a>
-                        <a href="#">Октябрь</a>
-                        <a href="#">Ноябрь</a>
-                        <a href="#">Декабрь</a>
+                    <div class="chrono-carousel owl-carousel">
+                        <div class="date-item">
+                            <span>Январь</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Февраль</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Март</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Апрель</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Май</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Июнь</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Июль</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Август</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Сентябрь</span>
+                            <b>2000</b>
+                        </div>
+                        <div class="date-item">
+                            <span>Октябрь</span>
+                            <b>2000</b>
+                        </div>
                     </div>
                     <div class="grid">
                         <div class="row">
@@ -178,11 +199,34 @@
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js" charset="utf-8"></script>
     <script type="text/javascript">
         $('.burger-btn').click(function () {
             $('.main-header-inner').toggleClass('open');
             $('body').toggleClass('menu-open');
+        })
+        $('.chrono-carousel .date-item').each(function(index) {
+            $(this).attr( 'data-num', index);
+        });
+        $('.chrono-carousel').owlCarousel({
+            center: true,
+            loop:false,
+            margin:0,
+            responsive:{
+                320:{
+                    items:1
+                },
+                576: {
+                    items:3
+                },
+                1200:{
+                    items:5
+                }
+            }
+        });
+        $('.chrono-carousel .date-item').click(function() {
+            $('.chrono-carousel').trigger('to.owl.carousel', $(this).data( 'num' ) );
         })
     </script>
 </body>
