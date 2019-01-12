@@ -158,6 +158,19 @@
 			controls: false,
 			auto: true
 		});
+		$(window).mousemove(function (e) {
+			MoveX = -0.03 * e.pageX;
+			MoveY = -0.03 * e.pageY;
+			$('.product').css({
+				'-webkit-transform' : 'translate(' + MoveX + 'px, '+ MoveY +'px)',
+				'-moz-transform'    : 'translate(' + MoveX + 'px, '+ MoveY +'px)',
+				'-ms-transform'     : 'translate(' + MoveX + 'px, '+ MoveY +'px)',
+				'-o-transform'      : 'translate(' + MoveX + 'px, '+ MoveY +'px)',
+				'transform'         : 'translate(' + MoveX + 'px, '+ MoveY +'px)'
+			})
+			console.log(MoveX,MoveY);
+		})
+
 	</script>
 </body>
 </html>
