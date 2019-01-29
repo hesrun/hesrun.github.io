@@ -1,0 +1,420 @@
+@media screen and (max-width: 768px) {
+	/*-------------------main-header--------------------*/
+	.header-logo {
+		h2 {
+			display: none;
+		}
+	}
+	/*-------------------.main-nav--------------------*/
+	.main-nav {
+		bottom: 0px;
+		margin: 0 - 15px;
+		padding: 0 15px;
+		border-radius: 0px;
+		.burger-btn {
+			display: inline-block;
+		}
+		a {
+			padding-left: 0px;
+			padding-right: 0px;
+			border-bottom: 1px rgba(#fff,0.3) solid;
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+		.nav-links  {
+			display: none;
+		}
+		.sub-links {
+			padding: 0px;
+			display: block;
+			position: static;
+			background: none;
+			border: none;
+			a {
+				margin-left: 20px;
+				color: #fff;
+				border-bottom: 1px rgba(#fff,0.3) solid;
+			}
+			li:last-child {
+				a {
+					border-bottom: 1px rgba(#fff,0.3) solid;
+				}
+			}
+		}
+		.sub-links-title {
+			display: none;
+		}
+		
+	}
+	/*-------------------topi-catalog--------------------*/
+	.catalog-grid {
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+	}
+	/*-------------------product-wrap--------------------*/
+	.product-wrap {
+		display: grid;
+		grid-template-columns: 320px 1fr;
+		grid-column-gap: 30px;
+	}
+	/*-------------------main-content--------------------*/
+	.main-content {
+		padding-top: 40px;
+	}
+	/*-------------------topinabur-benefit-text--------------------*/
+	.topinabur-benefit-text {
+		padding: 5px 0px;
+		&.with-leaver {
+			background: none;
+		}
+		&.with-porridge {
+			background: none;	
+		}
+		p:not(.big) {
+			padding-left: 0px;
+		}
+	}
+	/*-------------------topi-news--------------------*/
+	.topi-news {
+		padding: 25px 0;
+		.topi-news-blocks {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-row-gap: 30px;
+		}
+	}
+	/*-------------------topi-slider--------------------*/
+	.topi-slider {
+		padding: 15px 0;
+	}
+	/*-------------------topi-reviews--------------------*/
+	.topi-reviews-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+	}
+	/*-------------------basket-list--------------------*/
+	.basket-list-table {
+		h3 {
+			font-size: 14px;
+		}
+		th {
+			&:nth-child(2) {
+				width: 150px;
+			}
+			&:nth-child(3) {
+				text-align: left;
+				width: 70px;
+			}
+			&:nth-child(4) {
+				text-align: left;
+				width: 70px;
+			}
+		}
+	}
+	.basket-sum-calculate {
+		flex-direction: column;
+		align-items: flex-end;
+		.final {
+			margin-top: 30px;
+		}
+	}
+	/*-------------------basket-profile--------------------*/
+	.basket-profile-inputs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 30px;
+		margin-bottom: 30px;
+		.if-old-user {
+			display: block;
+		}
+	}
+	/*-------------------basket-pay--------------------*/
+	.pay-methods {
+		display: grid;
+		grid-template-columns: 220px 220px 220px;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+	/*-------------------user-parlour--------------------*/
+	.user-parlour-wrap {
+		display: block;
+	}
+	.parlour-nav {
+		display: flex;
+		margin-bottom: 30px;
+		li {
+			margin-top: 0px;
+		}
+		a {
+			display: block;
+			background: $salat;
+			color: #fff;
+			text-decoration: none;
+			padding: 10px 10px;
+
+			&.active {
+				color: #000;
+				pointer-events: none;
+				user-select: none;
+			}
+		}
+	}
+
+
+
+	/*-------------------text-article--------------------*/
+	.text-article {
+		a {
+			color: $salat;
+		}
+		p {
+			margin: 10px 0;
+		}
+		.big {
+			margin: 10px 0;	
+			font-size: 20px;
+			font-family: "PT Serif";
+			font-weight: 800;
+			line-height: 1.2;
+		}
+	}
+	/*-------------------ui--------------------*/
+	.form-item {
+		display: block;
+		label {
+			padding: 0px;
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
+	.topi-toggle {
+		margin-bottom: 5px;
+	}
+}
+@media screen and (max-width: 500px) {
+	/*-------------------up bar--------------------*/
+	.lang-choise {
+		a {
+			margin-right: 10px;
+		}
+	}
+	.lk-links {
+		a {
+			margin-left: 10px;
+		}
+	}
+	/*-------------------main-header--------------------*/
+	.header-basket {
+		position: relative;
+		.basket-ico {
+			margin-right: 0px;
+		}
+		.basket-info {
+			right: 15px;
+			top: -5px;
+			position: absolute;
+			visibility: hidden;
+			.sum {
+				display: none;
+			}
+			b span {
+				visibility: visible;
+			}
+		}
+	}
+	/*-------------------topi-catalog--------------------*/
+	.catalog-grid {
+		grid-template-columns: 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+	}
+	/*-------------------topi-sales-list--------------------*/
+	.topi-sales-list {
+		.item {
+			display: block;
+			margin-bottom: 25px;
+		}
+		.image {
+			width: 190px;
+			margin: 0px auto 20px;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	/*-------------------topi-news--------------------*/
+	.topi-news {
+		padding: 25px 0;
+		.topi-news-blocks {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-row-gap: 30px;
+		}
+	}
+	/*-------------------topi-reviews--------------------*/
+	.topi-reviews-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 30px;
+	}
+	.review-item {
+		.image {
+			width: 70px;
+			img {
+				width: 100%;
+			}
+		}
+		.review-info {
+			padding: 0px;
+		}
+	}
+	/*-------------------basket-list--------------------*/
+	.basket-list-table-wrap {
+		max-width: 100%;
+		overflow-x: auto;
+		.basket-list-table {
+			min-width: 600px;
+		}
+	}
+	.basket-sum-calculate {
+		.promo {
+			b {
+				font-size: 16px;
+			}
+		}
+		.final {
+			width: 100%;
+			justify-content: space-between;
+			b {
+				font-size: 18px;
+				margin: 0px;
+			}
+		}
+	}
+	/*-------------------basket-profile--------------------*/
+	.basket-profile-inputs {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 0px;
+		margin-bottom: 0px;
+	}
+	.profile-data-agree {
+		display: block;
+		.agree-checks {
+			max-width: 650px;
+		}
+		.topi-btn {
+			margin: 10px 0 0 0;
+		}
+	}
+	/*-------------------basket-delivery--------------------*/
+	.delivery-country {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 0;
+		grid-row-gap: 15px;
+		.delivery-item {
+			display: flex;
+			.topi-toggle {
+				flex: 1 1 auto;
+			}
+		}
+		.next {
+			padding-top: 40px;
+			text-align: right;
+		}
+	}
+	/*-------------------basket-pay--------------------*/
+	.pay-methods {
+		display: grid;
+		grid-template-columns: 1fr;
+		margin-bottom: 20px;
+	}
+	/*-------------------user-parlour--------------------*/
+	.parlour-nav {
+		display: block;
+		margin-bottom: 30px;
+		a {
+			border-bottom: 1px rgba(#fff,.4) solid;
+		}
+	}
+	/*-------------------orders-list-table--------------------*/
+	.orders-list-wrap {
+		max-width: 100%;
+		overflow: auto;
+		.orders-list-table {
+			min-width: 600px;
+			td {
+				padding: 10px 10px;
+			}
+		}
+	}
+	/*-------------------wholesaler-info--------------------*/
+	.wholesaler-info {
+		display: grid;
+		grid-template-columns: 1fr;
+		.feedback-form {
+			margin-top: 40px;
+			padding-left: 0%;
+		}
+	}
+	/*-------------------devivery-info--------------------*/
+	.delivery-pay-info {
+		display: grid;
+		grid-template-columns: 1fr;
+		.pay-info {
+			padding: 0px;
+			margin-top: 30px;
+		}
+	}
+	.product-description {
+		margin-bottom: 30px;
+		.image {
+			margin-bottom: 15px;
+		}
+	}
+	/*-------------------product-wrap--------------------*/
+	.product-wrap {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 0px;
+	}
+	/*-------------------main-footer--------------------*/
+	.main-footer {
+		padding: 20px 0;
+	}
+	.footer-blocks {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-row-gap: 30px;
+		text-align: center;
+		.socials {
+			justify-content: center;
+		}
+	}
+	/*-------------------ui--------------------*/
+	.topi-btn {
+		padding: 0 20px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	/*-------------------up bar--------------------*/
+	.up-bar {
+		a {
+			font-size: 10px;
+		}
+	}
+	/*-------------------main-header--------------------*/
+	.header-logo {
+		display: none;
+	}
+	.main-header-blocks {
+		padding: 20px 0 40px;
+	}
+}
