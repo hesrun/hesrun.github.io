@@ -1,3 +1,9 @@
+.blue-color {
+    color: #72aab7 !important;
+}
+.red {
+    color: red !important;
+}
 .button {
     @extend .exo;
     font-weight: 500;
@@ -17,12 +23,9 @@
     i.mdi {
         line-height: 16px;
         font-size: 20px;
-        color: #9f9f9f;
+        color: inherit;
         margin-right: 10px;
         transition: all 0.2s;
-        &:last-child {
-            margin-right: 0px;
-        }
     }
     &.small {
         font-size: 14px;
@@ -100,6 +103,9 @@
         padding-left: 0px;
         padding-right: 0px;
         width: 42px;
+        i.mdi {
+            margin: 0;
+        }
     }
     &.block {
         width: 100%;
@@ -124,8 +130,18 @@
         margin-left: 10px;
     }
 }
+
+.input-label {
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    color: #999;
+}
+
 .input-field {
-    height: 42px;
+    min-height: 42px;
     border-radius: 4px;
     border: 1px #c6c6c6 solid;
     display: flex;
@@ -141,6 +157,9 @@
             right: -20px;
             top: 12px;
         }
+    }
+    &.gray {
+        background-color: #c6c6c6;
     }
     &.valid {
         border-color: green;
@@ -171,10 +190,16 @@
         border: none;
         background: none;
         letter-spacing: 1px;
-        transition: all 0.2s;
-        &:focus {
-            background: rgba(#72aab7,0.1);
-        }
+    }
+    textarea {
+        padding: 10px 15px 13px;
+        width: 100%;
+        @extend .exo;
+        border: none;
+        background: none;
+        letter-spacing: 1px;
+        height: 100px;
+        resize: vertical;
     }
     select {
         cursor: pointer;
@@ -241,6 +266,7 @@
         }
     }
 }
+
 .radio-field {
     display: flex;
     align-items: center;

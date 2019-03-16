@@ -50,7 +50,7 @@
     </header>
     <section class="main-slider">
         <ul class="bxslider">
-            <li style="background-image: url('img/slider-img-1.jpg')">
+            <li>
                 <div class="main-slider-text black">
                     <h2>Bovet <br> Recital 17</h2>
                     <p>Три часовых зоны и Луны в обоих полушариях и Луны в обоих полушариях</p>
@@ -66,9 +66,10 @@
                     </div>
                     <a  href="#" class="button turq">Подробнее</a>
                 </div>
+                <img class="slider-img" src="http://mob1shop.nvlad.com/files/fs/594b/594be7dbe7329.png" alt="">
             </li>
-            <li style="background-image: url('img/slider-img-2.jpg')">
-                <div class="main-slider-text">
+            <li>
+                <div class="main-slider-text black">
                     <h2>Bovet <br> Recital 17</h2>
                     <p>Три часовых зоны и Луны в обоих полушариях и Луны в обоих полушариях</p>
                     <div class="price-block">
@@ -83,6 +84,25 @@
                     </div>
                     <a  href="#" class="button turq">Подробнее</a>
                 </div>
+                <img class="slider-img" src="http://mob1shop.nvlad.com/files/fs/594b/594be7dbe7329.png" alt="">
+            </li>
+            <li>
+                <div class="main-slider-text black">
+                    <h2>Bovet <br> Recital 17</h2>
+                    <p>Три часовых зоны и Луны в обоих полушариях и Луны в обоих полушариях</p>
+                    <div class="price-block">
+                        <div class="price old">
+                            <strong>$54 692</strong>
+                            Старая цена
+                        </div>
+                        <div class="price">
+                            <strong>$37 421</strong>
+                            Цена со скидкой
+                        </div>
+                    </div>
+                    <a  href="#" class="button turq">Подробнее</a>
+                </div>
+                <img class="slider-img" src="http://mob1shop.nvlad.com/files/fs/594b/594be7dbe7329.png" alt="">
             </li>
         </ul>
     </section>
@@ -94,6 +114,7 @@
             <div class="row">
                 <div class="col-xs-6 col-sm-3">
                     <div class="watch-item">
+                        <i class="mdi mdi-heart favorite"></i>
                         <a href="#">
                             <img class="normal-img" src="img/catalog-watch.png" alt="">
                             <div class="item-description">
@@ -107,6 +128,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-3">
                     <div class="watch-item">
+                        <i class="mdi mdi-heart favorite"></i>
                         <a href="#">
                             <img class="normal-img" src="img/catalog-watch.png" alt="">
                             <div class="item-description">
@@ -170,6 +192,15 @@
             </div>
         </div>
     </section>
+    <div class="load-positions center">
+        <div class="loader"></div>
+        <span>Подбираем часы по вашим параметрам...</span>
+    </div>
+    <div class="no-results center">
+        <img src="img/no-res.png" alt="">
+        <strong>К сожалению, ничего не найдено</strong>
+        <span>Попробуйте изменить параметры часов</span>
+    </div>
     <section class="watch-catalog">
         <div class="container">
             <div class="section-title from-left">
@@ -754,6 +785,23 @@
             </div>
         </div>
     </div>
+    <div class="remodal instagram-modal" data-remodal-id="instagram">
+        <a href="#" class="remodal-close"></a>
+        <div class="instagram-modal-wrap">
+            <div class="text">
+                <p>Первый часовой магазин <br>открыл новый Инстаграм</p>
+                <div class="inst-name">
+                    <span>
+                        Подпишитесь сейчас:
+                    </span>
+                    <b>@1shopru</b>
+                </div>
+                <span>Самое актуальное наличие, видеообзоры, статьи</span>
+            </div>
+            <i class="mdi mdi-instagram"></i>
+        </div>
+        <a class="close" href="#">Спасибо, перейти на сайт</a>
+    </div>
     <div class="mobile-pane">
         <div class="inner">
             <div class="head">
@@ -973,6 +1021,9 @@
     </div>
     <div class="mobile-pane-overlay"></div>
     <script type="text/javascript">
+
+        var Banner = $('[data-remodal-id=instagram]').remodal();
+        Banner.open();
 
         $('.bxslider').bxSlider({
             auto: true,
