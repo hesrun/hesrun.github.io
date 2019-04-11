@@ -20,8 +20,21 @@ html {
 .logo {
     text-align: center;
     margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
     img {
         width: 400px;
+    }
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+        animation: 20s shine infinite;
     }
 }
 .currency {
@@ -70,5 +83,17 @@ table + a {
         left: 10px;
         bottom: 10px;
         transform: rotate(90deg);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100px;
+    }
+    98% {
+        left: -100px;
+    }
+    100% {
+        left: 100%;
     }
 }
