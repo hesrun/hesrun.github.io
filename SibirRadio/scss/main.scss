@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Averta';
+    src: url('../font/subset-AvertaDemoPECuttedDemo-Regular.woff2') format('woff2'),
+        url('../font/subset-AvertaDemoPECuttedDemo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../font/subset-MyriadPro-Regular.woff2') format('woff2'),
+        url('../font/subset-MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+body {
+    font-family: 'Averta';
+    background: #000;
+    color: #fff;
+    line-height: normal;
+    font-size: 30px;
+}
+.vegas-timer {
+    display: none;
+}
+.radio-app {
+    height: 100vh;
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+}
+.main-header {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.logo {
+    margin-right: 40px;
+    flex: 0 0 auto;
+    img {
+        vertical-align: middle;
+    }
+}
+.main-nav {
+    margin-left: 20px;
+    flex: 0 0 auto;
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        li {
+            padding: 0px 15px;
+        }
+        a {
+            padding: 8px 0px;
+            text-transform: lowercase;
+            position: relative;
+            transition: all 0.2s;
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 2px;
+                bottom: 0px;
+                left: 50%;
+                background: #fff;
+                width: 0;
+                transition: all 0.2s;
+            }
+            &:hover,
+            &.active {
+                color: #2884e2;
+                &:after {
+                    left: 0;
+                    width: 100%;
+                    background: #2884e2;
+                }
+            }
+        }
+    }
+}
+.line {
+    margin: 25px 0 0 0;
+    flex: 1 1 auto;
+    position: relative;
+    .line-inner {
+        border-bottom: 2px #fff solid;
+    }
+    .equalizer {
+        position: absolute;
+        overflow: hidden;
+        bottom: 4px;
+        left: 60px;
+        img {
+            vertical-align: bottom;
+        }
+    }
+
+}
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    h1 {
+        margin: auto 0 auto 120px;
+        font-family: 'Myriad Pro';
+        font-size: 110px;
+        letter-spacing: 8px;
+    }
+}
+
+.main-footer {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.play-now {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+.track-info {
+    margin-top: -15px;
+}
+.track-text {
+}
+.track-name {
+    display: block;
+}
+.artist-image {
+    width: 130px;
+    height: 105px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    margin-right: 30px;
+}
+.play-pause {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+.rangeslider {
+    margin-top: 10px;
+    width: 520px;
+    height: 20px;
+    position: relative;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.rangeslider:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    top: 9px;
+}
+.rangeslider__fill {
+    background: #2884e2;
+    position: absolute;
+    left: 0px;
+    top: 7px;
+    height: 6px;
+    border-radius: 6px;
+}
+.rangeslider__handle {
+    cursor: pointer;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #fff;
+    touch-action: pan-x;
+}
+
+.play-btn {
+    margin: auto;
+    outline: 0;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+}
+
+.play-btn:before,
+.play-btn:after {
+    content: '';
+    background: #fff;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transition: 0.2s ease-out;
+}
+
+.play-btn:before {
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%);
+    left: 0;
+}
+
+.play-btn:after {
+    clip-path: polygon(0% 25%, 100% 50%, 100% 50%, 0 75%);
+    right: 0;
+}
+
+.play-btn.play--playing:before {
+    clip-path: polygon(0% 0%, 75% 0%, 75% 100%, 0% 100%);
+}
+
+.play-btn.play--playing:after {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%);
+}
+
+.apps {
+    display: flex;
+    a {
+        display: block;
+        margin-left: 30px;
+    }
+}
