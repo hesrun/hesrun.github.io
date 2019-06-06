@@ -1,80 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Radio Sibir</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
-    <link rel="stylesheet" href="css/main.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Radio Sibir</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+   <link rel="stylesheet" href="//gitcdn.link/repo/wintercounter/Protip/master/protip.min.css">
+   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="radio-app">
-        <header class="main-header">
-            <a href="#" class="logo">
-                <img src="img/logo.png" alt="">
+   <div class="slider-back"></div>
+   <div class="radio-app">
+      <header class="radio-header">
+         <a href="#" class="logo">
+            <img src="img/logo.png" alt="">
+         </a>
+         <nav class="main-nav">
+            <ul>
+               <li>
+                  <a href="#" class="protip"
+                     data-pt-title="#aboutRadio"
+                     data-pt-position="bottom-right"
+                     data-pt-trigger="click"
+                     data-pt-width="1040"
+                  >о радио</a>
+               </li>
+               <li>
+                  <a href="#" class="protip"
+                     data-pt-title="#citiesRadio"
+                     data-pt-position="bottom-left"
+                     data-pt-trigger="click"
+                     data-pt-width="350"
+                  >города вещания</a>
+               </li>
+               <li>
+                  <a href="#" class="protip"
+                     data-pt-title="#contactsRadio"
+                     data-pt-position="bottom-right"
+                     data-pt-trigger="click"
+                     data-pt-width="355"
+                  >рекламодателям</a>
+               </li>
+            </ul>
+            <button class="burger-btn">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+         </nav>
+      </header>
+      <section class="radio-content">
+         <h1>РАДИО НАШЕЙ <br>СТРАНЫ</h1>
+      </section>
+      <div class="radio-footer">
+         <div class="play-now">
+            <div class="artist-image">
+               <img src="img/artist.jpg" alt="">
+               <div class="play-pause">
+                  <div class="play-btn"></div>
+               </div>
+            </div>
+            <div class="track-info">
+               <div class="track-text">
+                  <span>сейчас играет</span>
+                  <div class="track-name">
+                     <marquee behavior="scroll" direction="left">группировка ленинград / дача</marquee>
+                  </div>
+               </div>
+               <div class="volume-range-wrap">
+                  <img src="img/vol-low.png" alt="">
+                  <input class="volume-range" type="range">
+                  <img src="img/vol-hight.png" alt="">
+               </div>
+            </div>
+         </div>
+         <div class="apps">
+            <a href="#">
+               <img src="img/app-store.png" alt="">
             </a>
-            <div class="line">
-                <div class="equalizer">
-                    <img src="img/equalizier.png" alt="">
-                </div>
-                <div class="line-inner"></div>
+            <a href="#">
+               <img src="img/google-play.png" alt="">
+            </a>
+         </div>
+      </div>
+   </div>
+   <footer class="page-footer">
+      <div class="footer-top-line">
+         <div class="company-adress">
+            Россия г. Москва 119017 <br>
+            улица Большая Ордынка, 40 стр.1 <br>
+            +7 499 642 53 04 <br>
+            <a href="mailto:moscow@mkrmedia.ru">moscow@mkrmedia.ru</a>
+         </div>
+         <div class="legal-links">
+            <ul>
+               <li>
+                  <a href="">политика конфиденциальности</a>
+               </li>
+               <li>
+                  <a href="">пользовательское соглашение</a>
+               </li>
+            </ul>
+         </div>
+         <form class="feedback-form">
+            <span>Заполните форму <br>для обратной связи</span>
+            <div class="field">
+               <input type="text" placeholder="ваш email">
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li>
-                        <a href="#" class="active">омск</a>
-                    </li>
-                    <li>
-                        <a href="#">томск</a>
-                    </li>
-                    <li>
-                        <a href="#">чита</a>
-                    </li>
-                    <li>
-                        <a href="#">улан-удэ</a>
-                    </li>
-                    <li>
-                        <a href="#">красноярск</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <section class="main-content">
-            <h1>РАДИО НАШЕЙ <br>СТРАНЫ</h1>
-        </section>
-        <footer class="main-footer">
-            <div class="play-now">
-                <div class="artist-image">
-                    <img src="img/artist.jpg" alt="">
-                    <div class="play-pause">
-                        <div class="play-btn"></div>
-                    </div>
-                </div>
-                <div class="track-info">
-                    <div class="track-text">
-                        сейчас играет
-                        <span class="track-name">
-                            <marquee behavior="scroll" direction="left">группировка ленинград / дача</marquee>
-                        </span>
-                    </div>
-                    <input class="volume-range" type="range">
-                </div>
+            <div class="field">
+               <textarea placeholder="ваше сообщение"></textarea>
             </div>
-            <div class="apps">
-                <a href="#">
-                    <img src="img/app-store.png" alt="">
-                </a>
-                <a href="#">
-                    <img src="img/google-play.png" alt="">
-                </a>
-            </div>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js" charset="utf-8"></script>
-    <script src="js/main.js" charset="utf-8"></script>
+            <button type="submit">отправить</button>
+         </form>
+      </div>
+      <hr>
+      <div class="partners-list">
+         <ul>
+            <li>
+               <a href="#">
+                  <img src="img/partner-1.png" alt="">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="img/partner-2.png" alt="">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="img/partner-3.png" alt="">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="img/partner-4.png" alt="">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="img/partner-5.png" alt="">
+               </a>
+            </li>
+            <li>
+               <a href="#">
+                  <img src="img/partner-6.png" alt="">
+               </a>
+            </li>
+         </ul>
+      </div>
+   </footer>
+   <div id="aboutRadio" class="my-tooltips">
+      <div class="about-radio">
+         <p>
+            «Радио Сибирь»  успешно вещает на российском рынке 27 лет, охватывая крупнейшие города Сибири и Урала с аудиторией более 6 млн человек. На частотах «Радио Сибирь» можно услышать все необходимое для современных слушателей: новости, курсы валют, гороскопы, ситуацию на дорогах, прогноз погоды и специальные рубрики о злободневных вопросах региона. Формат музыкального контента представлен легкими и ненавязчивыми плейлистами, которые регулярно обновляются. <br>
+            Для расширения экономического, культурного и социального взаимодействия между Российской Федерацией и Китайской Народной Республикой в 2015 году между радиосетью "Радио Сибирь" и «Международным радио Китая» был подписан меморандум об обмене видео- и аудиоконтентом.
+         </p>
+      </div>
+   </div>
+   <div id="citiesRadio" class="my-tooltips">
+      <div class="cities-radio">
+         <table class="stations-list">
+            <tr>
+               <td>
+                  <span class="name">Омск</span>
+               </td>
+               <td>
+                  <span class="frequency">103.9</span>
+               </td>
+               <td>
+                  <span class="www">
+                     <img src="img/www-icon.png" alt="">
+                  </span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Томск</span>
+               </td>
+               <td>
+                  <span class="frequency">104.6</span>
+               </td>
+               <td>
+                  <span class="www">
+                     <img src="img/www-icon.png" alt="">
+                  </span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Улан-Удэ</span>
+               </td>
+               <td>
+                  <span class="frequency">106.5</span>
+               </td>
+               <td>
+                  <span class="www">
+                     <img src="img/www-icon.png" alt="">
+                  </span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">95.8</span>
+               </td>
+               <td>
+                  <span class="www">
+                     <img src="img/www-icon.png" alt="">
+                  </span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+         </table>
+         <span class="title-list">СКОРО В ЭФИРЕ</span>
+         <table class="stations-list">
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <span class="name">Красноярск</span>
+               </td>
+               <td>
+                  <span class="frequency">102.6</span>
+               </td>
+            </tr>
+         </table>
+      </div>
+   </div>
+   <div id="contactsRadio" class="my-tooltips">
+      <div class="contacts-radio">
+         По вопросам размещения <br>
+         рекламы на радио <br> <br>
+
+         +7 (495) 223 62 35
+         sales@mkrmedia.ru <br> <br>
+
+         <a href="#">скачать презентацию</a>
+      </div>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+   <script src="//gitcdn.link/repo/wintercounter/Protip/master/protip.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js" charset="utf-8"></script>
+   <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>
