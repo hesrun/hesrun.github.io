@@ -1,10 +1,22 @@
 $(document).ready(function() {
+   var windowWidth = $('body').width(),
+      mobileMenu = $('#mobileMenu').remodal(),
+      mobileAbout = $('#mobileAbout').remodal(),
+      mobileCities = $('#mobileCities').remodal(),
+      mobileApps = $('#mobileApps').remodal(),
+      mobileContacts = $('#mobileContacts').remodal(),
+      mobileFeedback = $('#mobileFeedback').remodal();
+
+
+   //тултипы на главной
    $.protip();
 
+   //громкость
    $('.volume-range').rangeslider({
       polyfill: false
    });
 
+   //задний фон слайдер
    $('.slider-back').vegas({
       transition: ['zoomOut','swirlLeft','swirlRight','blur2','flash2'],
       transitionDuration: 2000,
@@ -18,10 +30,39 @@ $(document).ready(function() {
       ]
    });
 
+   //пауза и плей трансформация
    $('.play-pause').click(function(){
       $('.play-btn').toggleClass('play--playing');
    })
 
+
+
+   //открываем модалки в мобильных
+   $('.burger-btn').click(function() {
+      mobileMenu.open();
+   })
+
+   $('#mobileAboutOpen').click(function() {
+      mobileAbout.open();
+   })
+
+   $('#mobileCitiesOpen').click(function() {
+      mobileCities.open();
+   })
+
+   $('#mobileAppsOpen').click(function() {
+      mobileApps.open();
+   })
+
+   $('#mobileContactsOpen').click(function() {
+      mobileContacts.open();
+   })
+
+   $('#mobileFeedbackOpen').click(function() {
+      mobileFeedback.open();
+   })
+
+   //анимации
    anime({
       targets: '.logo',
       translateX: [-50, 0],
@@ -38,10 +79,41 @@ $(document).ready(function() {
       delay: anime.stagger(200,{start: 2500, from: 'first'}),
    });
 
-   anime({
-      targets: '.radio-footer',
-      opacity:[0,1],
-      duration: 3000,
-      delay: 4000,
-   });
+   if (windowWidth <= 1024) {
+      anime({
+         targets: '.radio-footer',
+         opacity:[0,1],
+         duration: 3000,
+         delay: 0,
+      });
+      anime({
+         targets: '.play-now',
+         translateY: [50, 0],
+         opacity:[0,1],
+         duration: 2000,
+         delay: 1000,
+      });
+      anime({
+         targets: '.apps a',
+         translateY: [50, 0],
+         opacity:[0,1],
+         duration: 2000,
+         delay: anime.stagger(200,{start: 2000, from: 'first'}),
+      });
+      anime({
+         targets: '.burger-btn',
+         translateX: [50, 0],
+         translateY: [-50, 0],
+         opacity:[0,1],
+         duration: 2000,
+         delay: 1000,
+      });
+   } else {
+      anime({
+         targets: '.radio-footer',
+         opacity:[0,1],
+         duration: 3000,
+         delay: 4000,
+      });
+   }
 });

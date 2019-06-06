@@ -617,8 +617,205 @@ input, button, textarea {
     border-color: transparent transparent #335b93 transparent;
 }
 
+/*****************mobile-modal***********/
+.mobile-modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: #2366af;
+    padding: 65px 35px 35px 35px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.remodal-is-opening {
+    animation: 0.5s ModalOpen both ease-in;
+}
+
+.remodal-is-closing {
+    animation: 0.2s ModalClose both ease-in;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    right: 15px;
+    top: 15px;
+    position: fixed;
+}
+
+/******************mobile-menue***********/
+.mobile-menu {
+    min-height: 100%;
+    text-align: right;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.mobile-menu > ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: auto 0;
+    list-style: none;
+    padding: 0px;
+    font-size: 20px;
+}
+
+.mobile-menu .contacts {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px #fff solid;
+}
+
+.mobile-menu .legal-links {
+    margin-top: 20px;
+}
+
+.mobile-menu .legal-links ul {
+    text-align: right;
+}
+
+.mobile-menu .legal-links li {
+    font-size: 10px;
+    margin-top: 0px;
+}
+
+/******************mobile-about***********/
+.mobile-about a {
+    text-decoration: underline;
+}
+
+.mobile-about p {
+    font-size: 17px;
+}
+
+.mobile-about p + p {
+    margin-top: 40px;
+}
+
+.mobile-about .partners-list {
+    margin-top: 60px;
+}
+
+.mobile-about .partners-list ul {
+    display: block;
+}
+
+.mobile-about .partners-list ul li {
+    margin-bottom: 30px;
+}
+
+.mobile-about .partners-list ul li:first-child {
+    margin-bottom: 30px;
+}
+
+.mobile-about .partners-list ul a {
+    opacity: 1;
+    -ms-transform: none;
+    transform: none;
+}
+
+.mobile-about .partners-list ul a img {
+    max-width: 70%;
+}
+
+/******************mobile-cities**********/
+.mobile-cities .stations-list {
+    margin: auto;
+    max-width: 300px;
+    width: 100%;
+    min-width: 0px;
+    border-spacing: 0 12px;
+}
+
+.mobile-cities .stations-list .name {
+    font-size: 16px;
+}
+
+.mobile-cities .stations-list .www,
+.mobile-cities .stations-list .frequency {
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/******************mobile-apps**********/
+.mobile-apps {
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.mobile-apps .apps {
+    margin: auto;
+}
+
+.mobile-apps .apps img {
+    width: 195px;
+}
+
+/******************mobile-contacts**********/
+.mobile-contacts {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100%;
+}
+
+.mobile-contacts .contacts-radio {
+    font-size: 18px;
+    margin: auto;
+}
+
+/******************mobile-contacts**********/
+.mobile-feedback {
+    margin: auto;
+    max-width: 300px;
+    font-size: 19px;
+    min-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.mobile-feedback .feedback-form {
+    padding: 0px;
+}
+
+.mobile-feedback .feedback-form input, .mobile-feedback .feedback-form textarea {
+    font-size: 18px;
+}
+
+.mobile-feedback .feedback-form button {
+    color: #2366af;
+    background: #fff;
+    font-size: 18px;
+}
+
+.mobile-feedback .feedback-form span {
+    text-align: center;
+}
+
+.mobile-feedback .succes {
+    margin-top: 40px;
+}
+
 /*****************media******************/
 @media screen and (max-width: 1024px) {
+    html {
+        overflow: hidden;
+    }
+
     body {
         overflow: hidden;
     }
@@ -865,5 +1062,30 @@ input, button, textarea {
         width: 50%;
         height: 100%;
         transition: 0.2s ease-out;
+    }
+}
+
+/**************animation***********/
+@keyframes ModalOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(5%);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes ModalClose {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.9) translateY(5%);
     }
 }
