@@ -18,7 +18,8 @@ $(document).ready(function() {
 
    //задний фон слайдер
    $('.slider-back').vegas({
-      transition: ['zoomOut','swirlLeft','swirlRight','blur2','flash2'],
+      transition: ['blur2'],
+      delay: 10000,
       transitionDuration: 2000,
       overlay: 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/overlays/01.png',
       slides: [
@@ -26,7 +27,8 @@ $(document).ready(function() {
          { src: 'img/slide_2.jpg' },
          { src: 'img/slide_3.jpg' },
          { src: 'img/slide_4.jpg' },
-         { src: 'img/slide_5.jpg' }
+         { src: 'img/slide_5.jpg' },
+         { src: 'img/slide_6.jpg' }
       ]
    });
 
