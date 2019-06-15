@@ -34,6 +34,26 @@ $(document).ready(function() {
       ]
    });
 
+   //orientation change
+   window.addEventListener("orientationchange", function() {
+      $('.slider-back').vegas({
+         transition: 'blur2',
+         transition: 'fade',
+         transition: 'fade2',
+         delay: 10000,
+         transitionDuration: 2000,
+         overlay: 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/overlays/01.png',
+         slides: [
+            { src: 'img/slide_1.jpg' },
+            { src: 'img/slide_2.jpg' },
+            { src: 'img/slide_3.jpg' },
+            { src: 'img/slide_4.jpg' },
+            { src: 'img/slide_5.jpg' },
+            { src: 'img/slide_6.jpg' }
+         ]
+      });
+   })
+
    //пауза и плей трансформация
    $('.play-pause').click(function(){
       $('.play-btn').toggleClass('play--playing');
