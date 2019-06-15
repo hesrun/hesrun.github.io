@@ -44,6 +44,10 @@ input, button, textarea {
     display: none;
 }
 
+.vegas-slide, .vegas-slide-inner {
+    will-change: transform,opacity,filter;
+}
+
 .radio-app {
     height: 100vh;
     padding: 70px;
@@ -189,6 +193,11 @@ input, button, textarea {
 
 .track-name {
     display: block;
+    overflow: hidden;
+}
+
+.track-name .track-name-inner {
+    animation: 10s rollTrack infinite linear;
 }
 
 .artist-image {
@@ -218,7 +227,7 @@ input, button, textarea {
 }
 
 .volume-range-wrap {
-    margin-top: 5px;
+    margin-top: 8px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -362,8 +371,13 @@ input, button, textarea {
 .footer-top-line .feedback-form {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
+}
+
+.footer-top-line .feedback-block {
+    min-height: 310px;
     width: 100%;
     max-width: 400px;
+    padding-left: 70px;
 }
 
 .footer-top-line .legal-links {
@@ -371,6 +385,10 @@ input, button, textarea {
     align-self: flex-end;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+}
+
+.footer-top-line .succes {
+    text-align: center;
 }
 
 .legal-links ul {
@@ -381,10 +399,6 @@ input, button, textarea {
 
 .legal-links ul li {
     margin: 10px 0 0;
-}
-
-.feedback-form {
-    padding-left: 70px;
 }
 
 .feedback-form span {
@@ -887,11 +901,6 @@ input, button, textarea {
         font-size: 14px;
     }
 
-    .vegas-slide,
-  .vegas-slide-inner {
-        background-position: right -180px center !important;
-    }
-
     .radio-app {
         padding: 30px 15px;
     }
@@ -987,6 +996,13 @@ input, button, textarea {
     }
 }
 
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    .vegas-slide,
+  .vegas-slide-inner {
+        background-position: right -180px center !important;
+    }
+}
+
 @media screen and (max-width: 767px) and (orientation: landscape) {
     .apps {
         display: none;
@@ -1011,7 +1027,7 @@ input, button, textarea {
     }
 
     .logo img {
-        width: 100px;
+        width: 120px;
     }
 
     .apps {
@@ -1105,5 +1121,15 @@ input, button, textarea {
     to {
         opacity: 0;
         transform: scale(0.9) translateY(5%);
+    }
+}
+
+@keyframes rollTrack {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
     }
 }

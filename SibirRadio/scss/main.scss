@@ -38,6 +38,10 @@ input, button, textarea {
 .vegas-timer {
    display: none;
 }
+.vegas-slide, .vegas-slide-inner {
+   will-change: transform,opacity,filter;
+}
+
 .radio-app {
    height: 100vh;
    padding: 70px;
@@ -150,6 +154,10 @@ input, button, textarea {
 }
 .track-name {
    display: block;
+   overflow: hidden;
+   .track-name-inner {
+      animation: 10s rollTrack infinite linear;
+   }
 }
 .artist-image {
    width: 130px;
@@ -174,7 +182,7 @@ input, button, textarea {
    cursor: pointer;
 }
 .volume-range-wrap {
-   margin-top: 5px;
+   margin-top: 8px;
    display: flex;
    align-items: center;
    img {
@@ -295,12 +303,19 @@ input, button, textarea {
    }
    .feedback-form {
       flex: 0 0 auto;
+   }
+   .feedback-block {
+      min-height: 310px;
       width: 100%;
       max-width: 400px;
+      padding-left: 70px;
    }
    .legal-links {
       align-self: flex-end;
       flex: 1 1 auto;
+   }
+   .succes {
+      text-align: center;
    }
 }
 .legal-links {
@@ -314,7 +329,6 @@ input, button, textarea {
    }
 }
 .feedback-form {
-   padding-left: 70px;
    span {
       display: block;
       text-align: right;
@@ -714,10 +728,6 @@ input, button, textarea {
    body {
       font-size: 14px;
    }
-   .vegas-slide,
-   .vegas-slide-inner {
-      background-position: right -180px center !important;
-   }
    .radio-app {
       padding: 30px 15px;
    }
@@ -797,6 +807,12 @@ input, button, textarea {
       transition: 0.2s ease-out;
    }
 }
+@media screen and (max-width: 767px) and (orientation: portrait) {
+   .vegas-slide,
+   .vegas-slide-inner {
+      background-position: right -180px center !important;
+   }
+}
 @media screen and (max-width: 767px) and (orientation: landscape) {
    .apps {
       display: none;
@@ -817,7 +833,7 @@ input, button, textarea {
    }
    .logo {
       img {
-         width: 100px;
+         width: 120px;
       }
    }
    .apps {
@@ -898,5 +914,13 @@ input, button, textarea {
    to {
       opacity: 0;
       transform: scale(0.9) translateY(5%);
+   }
+}
+@keyframes rollTrack {
+   from {
+      transform: translateX(100%);
+   }
+   to {
+      transform: translateX(-100%);
    }
 }

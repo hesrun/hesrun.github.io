@@ -18,7 +18,9 @@ $(document).ready(function() {
 
    //задний фон слайдер
    $('.slider-back').vegas({
-      transition: ['blur2'],
+      transition: 'blur2',
+      transition: 'fade',
+      transition: 'fade2',
       delay: 10000,
       transitionDuration: 2000,
       overlay: 'https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/overlays/01.png',
