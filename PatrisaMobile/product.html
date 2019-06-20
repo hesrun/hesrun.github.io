@@ -81,91 +81,70 @@
    </nav>
 
    <main id="panel" class="app">
-      <div class="main-page-head">
-         <div class="main-slider owl-carousel" data-slideout-ignore>
-            <div>
-               <img src="img/slide-img.jpg" alt="">
-            </div>
-            <div>
-               <img src="img/slide-img.jpg" alt="">
-            </div>
-            <div>
-               <img src="img/slide-img.jpg" alt="">
-            </div>
-         </div>
-         <div class="main-page-tabs">
-            <a href="#" class="active">Новинки</a>
-            <a href="#">Распродажа</a>
+      <div class="top-bar">
+         <a href="" class="back">
+            <img src="img/back-ico.svg" alt="">
+         </a>
+         <div class="search-field">
+            <input type="text" placeholder="Поиск...">
+            <img src="img/search-icon.svg" alt="">
          </div>
       </div>
-      <div class="product-grid">
-         <div class="product-item">
-            <div class="product-thumb">
-               <a href="">
-                  <img class="product-img" src="img/gel.png" alt="">
-               </a>
-               <div class="sale-flag">
-                  <img src="img/sale-flag.svg" alt="">
-                  <span>-20%</span>
-               </div>
+      <div class="product-slider-wrap">
+         <div class="product-slider owl-carousel" data-slideout-ignore>
+            <div>
+               <img src="img/product-img.png" alt="">
             </div>
-            <div class="product-info">
-               <span class="price">250 ₽</span>
-               <span class="info">Гель-краска №8, 5 гр</span>
-               <a class="btn orange outline to-buy" href="">Купить</a>
+            <div>
+               <img src="img/product-img.png" alt="">
             </div>
-
-         </div>
-         <div class="product-item">
-            <div class="product-thumb">
-               <a href="">
-                  <img class="product-img" src="img/gel.png" alt="">
-               </a>
-               <div class="sale-flag">
-                  <img src="img/sale-flag.svg" alt="">
-                  <span>-20%</span>
-               </div>
-            </div>
-            <div class="product-info">
-               <span class="price">250 ₽</span>
-               <span class="info">Гель-краска №8, 5 гр</span>
-               <a class="btn orange outline to-buy" href="">Купить</a>
-            </div>
-         </div>
-         <div class="product-item">
-            <div class="product-thumb">
-               <a href="">
-                  <img class="product-img" src="img/gel.png" alt="">
-               </a>
-               <div class="sale-flag">
-                  <img src="img/sale-flag.svg" alt="">
-                  <span>-20%</span>
-               </div>
-            </div>
-            <div class="product-info">
-               <span class="price">250 ₽</span>
-               <span class="info">Гель-краска №8, 5 гр</span>
-               <a class="btn orange outline to-buy" href="">Купить</a>
-            </div>
-         </div>
-         <div class="product-item">
-            <div class="product-thumb">
-               <a href="">
-                  <img class="product-img" src="img/gel.png" alt="">
-               </a>
-               <div class="sale-flag">
-                  <img src="img/sale-flag.svg" alt="">
-                  <span>-20%</span>
-               </div>
-            </div>
-            <div class="product-info">
-               <span class="price">250 ₽</span>
-               <span class="info">Гель-краска №8, 5 гр</span>
-               <a class="btn orange outline to-buy" href="">Купить</a>
+            <div>
+               <img src="img/product-img.png" alt="">
             </div>
          </div>
       </div>
-      <button type="button" name="button" class="toggle-button">df gsdfgsdfg</button>
+      <h1 class="product-name">
+         Гель-желе Дримлайн камуфлирующий Теплый розовый, 30 гр
+      </h1>
+      <div class="add-product-action">
+         <div class="quantity-btns">
+            <button class="minus"></button>
+            <span class="quantity">1</span>
+            <button class="plus"></button>
+         </div>
+         <button class="btn orange to-cart">Купить</button>
+      </div>
+      <div class="product-parametrs">
+         <table>
+            <tr>
+               <td>Вид:</td>
+               <td>Трехфазный</td>
+            </tr>
+            <tr>
+               <td>Цвет:</td>
+               <td>Пыльный сиреневый</td>
+            </tr>
+            <tr>
+               <td>Эффект:</td>
+               <td>Магнитный, шиммер</td>
+            </tr>
+            <tr>
+               <td>Плотность:</td>
+               <td>Плотный</td>
+            </tr>
+            <tr>
+               <td>Объем:</td>
+               <td>8 мл</td>
+            </tr>
+            <tr>
+               <td>Артикул:</td>
+               <td>BE52</td>
+            </tr>
+         </table>
+      </div>
+      <article class="product-text">
+         <p>Максимально эффектное и загадочное сочетание объемной двойной магнитной полосы и изумительных "пыльных" оттенков новой коллекции гель-лаков Patrisa Nail Туманный Бриз, которая поможет дополнить любой Ваш образ настоящим шармом и утонченным переливом магнитной полосы! Гель-лаки данной коллекции имеют высокую пигментацию и могут быть нанесены без контрастной подложки. Однако мы советуем поэкспериментировать и с цветом подложки, и с узорами магнитных полос. В любом случае - скучно с этой разноплановой коллекцией вам точно не будет!</p>
+      </article>
    </main>
 
    <footer class="bottom-nav">
@@ -202,11 +181,7 @@
       'padding': 120,
       'tolerance': 70
    });
-   document.querySelector('.toggle-button').addEventListener('click', function() {
-     slideout.toggle();
-   });
-   //slideout.open();
-   $('.main-slider').owlCarousel({
+   $('.product-slider').owlCarousel({
       items: 1,
       dots: true,
       autoplay:  true

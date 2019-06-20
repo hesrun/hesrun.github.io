@@ -80,92 +80,51 @@
       </ul>
    </nav>
 
-   <main id="panel" class="app">
-      <div class="main-page-head">
-         <div class="main-slider owl-carousel" data-slideout-ignore>
-            <div>
-               <img src="img/slide-img.jpg" alt="">
-            </div>
-            <div>
-               <img src="img/slide-img.jpg" alt="">
-            </div>
-            <div>
-               <img src="img/slide-img.jpg" alt="">
+   <main id="panel" class="app blue-bg">
+      <div class="sign-wrap">
+         <div id="signIn" class="sign-block">
+            <form action="">
+               <div class="field">
+                  <input type="E-mail" placeholder="E-mail">
+               </div>
+               <div class="field">
+                  <input type="password" placeholder="Пароль">
+               </div>
+               <button class="btn orange">Войти</button>
+            </form>
+            <div class="other-links">
+               <a href="#">Зарегистрироваться</a> <br>
+               <a href="#">Забыли пароль?</a>
             </div>
          </div>
-         <div class="main-page-tabs">
-            <a href="#" class="active">Новинки</a>
-            <a href="#">Распродажа</a>
+         <div id="signUp" class="sign-block">
+            <form action="">
+               <div class="field">
+                  <input type="E-mail" placeholder="E-mail">
+               </div>
+               <div class="field">
+                  <input type="password" placeholder="Пароль">
+               </div>
+               <div class="field">
+                  <input type="password" placeholder="Подтвердите пароль">
+               </div>
+               <label class="custom-check">
+                  <input type="checkbox" name="" id="">
+                  <div class="box"></div>
+                  <span>Подписаться на новости</span>
+               </label>
+               <button class="btn orange">Зарегистрироваться</button>
+            </form>
+         </div>
+         <div id="Recover" class="sign-block">
+            <form action="">
+               <div class="field">
+                  <input type="E-mail" placeholder="E-mail">
+               </div>
+               <button class="btn orange">Восстановить пароль</button>
+            </form>
          </div>
       </div>
-      <div class="product-grid">
-         <div class="product-item">
-            <div class="product-thumb">
-               <a href="">
-                  <img class="product-img" src="img/gel.png" alt="">
-               </a>
-               <div class="sale-flag">
-                  <img src="img/sale-flag.svg" alt="">
-                  <span>-20%</span>
-               </div>
-            </div>
-            <div class="product-info">
-               <span class="price">250 ₽</span>
-               <span class="info">Гель-краска №8, 5 гр</span>
-               <a class="btn orange outline to-buy" href="">Купить</a>
-            </div>
-
-         </div>
-         <div class="product-item">
-            <div class="product-thumb">
-               <a href="">
-                  <img class="product-img" src="img/gel.png" alt="">
-               </a>
-               <div class="sale-flag">
-                  <img src="img/sale-flag.svg" alt="">
-                  <span>-20%</span>
-               </div>
-            </div>
-            <div class="product-info">
-               <span class="price">250 ₽</span>
-               <span class="info">Гель-краска №8, 5 гр</span>
-               <a class="btn orange outline to-buy" href="">Купить</a>
-            </div>
-         </div>
-         <div class="product-item">
-            <div class="product-thumb">
-               <a href="">
-                  <img class="product-img" src="img/gel.png" alt="">
-               </a>
-               <div class="sale-flag">
-                  <img src="img/sale-flag.svg" alt="">
-                  <span>-20%</span>
-               </div>
-            </div>
-            <div class="product-info">
-               <span class="price">250 ₽</span>
-               <span class="info">Гель-краска №8, 5 гр</span>
-               <a class="btn orange outline to-buy" href="">Купить</a>
-            </div>
-         </div>
-         <div class="product-item">
-            <div class="product-thumb">
-               <a href="">
-                  <img class="product-img" src="img/gel.png" alt="">
-               </a>
-               <div class="sale-flag">
-                  <img src="img/sale-flag.svg" alt="">
-                  <span>-20%</span>
-               </div>
-            </div>
-            <div class="product-info">
-               <span class="price">250 ₽</span>
-               <span class="info">Гель-краска №8, 5 гр</span>
-               <a class="btn orange outline to-buy" href="">Купить</a>
-            </div>
-         </div>
-      </div>
-      <button type="button" name="button" class="toggle-button">df gsdfgsdfg</button>
    </main>
 
    <footer class="bottom-nav">
@@ -201,15 +160,6 @@
       'menu': document.getElementById('menu'),
       'padding': 120,
       'tolerance': 70
-   });
-   document.querySelector('.toggle-button').addEventListener('click', function() {
-     slideout.toggle();
-   });
-   //slideout.open();
-   $('.main-slider').owlCarousel({
-      items: 1,
-      dots: true,
-      autoplay:  true
    });
 </script>
 </html>
