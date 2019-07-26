@@ -30,7 +30,8 @@ body {
    color: #fff;
    line-height: normal;
    font-size: 24px;
-   overflow-x: hidden;
+   min-width: 1366px;
+   min-height: 768px;
 }
 input, button, textarea {
    font-family: 'Averta';
@@ -48,6 +49,8 @@ input, button, textarea {
    display: flex;
    flex-direction: column;
    position: relative;
+   min-width: 1366px;
+   min-height: 768px;
    z-index: 5;
 }
 .radio-header {
@@ -185,6 +188,21 @@ input, button, textarea {
    margin-top: 8px;
    display: flex;
    align-items: center;
+   .ico.off {
+      position: relative;
+   }
+   .ico.off:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 34px;
+      height: 2px;
+      background: #FFF;
+      left: -8px;
+      top: 15px;
+      transform: rotate(-45deg);
+      opacity: 0.5;
+   }
    img {
       opacity: 0.5;
    }
@@ -284,6 +302,8 @@ input, button, textarea {
    top: 0px;
    height: 100vh !important;
    width: 100vw;
+   min-width: 1366px;
+   min-height: 768px;
 }
 
 /*************page-footer*************/
@@ -680,223 +700,223 @@ input, button, textarea {
    }
 }
 /*****************media******************/
-@media screen and (max-width: 1024px) {
-   html {
-      overflow: hidden;
-   }
-   body {
-      overflow: hidden;
-   }
-   .page-footer {
-      display: none;
-   }
-   .radio-app {
-      padding: 30px;
-   }
-   .apps {
-      margin-bottom: 40px;
-   }
-   .logo {
-      img {
-         width: 150px;
-      }
-   }
-   .main-nav {
-      ul {
-         display: none;
-      }
-      .burger-btn {
-         display: inline-block;
-      }
-   }
-   .radio-content {
-      display: none;
-   }
-   .radio-footer {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex: 1 1 auto;
-   }
-   .play-now {
-      background: rgba(#000,0.5);
-      flex: 0 0 auto;
-      margin: auto;
-      padding: 30px 20px;
-      border-radius: 10px;
-
-   }
-}
-@media screen and (max-width: 767px) {
-   body {
-      font-size: 14px;
-   }
-   .radio-app {
-      padding: 30px 15px;
-   }
-   .radio-header {
-      padding: 0 15px;
-   }
-   .logo {
-      img {
-         width: 100px;
-      }
-   }
-   .apps {
-      margin-top: -20vh;
-      margin-bottom: 15vh;
-      display: flex;
-      flex-direction: column;
-      a {
-         opacity: 1;
-         margin: 0px;
-         &:last-child {
-            margin-top: 22px;
-         }
-      }
-      img {
-         width: 110px;
-      }
-   }
-   .play-now {
-      width: 100%;
-      padding: 30px 15px;
-   }
-   .artist-image {
-      flex: 0 0 auto;
-      width: 70px;
-      height: 60px;
-      margin-right: 15px;
-   }
-   .track-info {
-      margin-top: -3px;
-   }
-
-   .rangeslider {
-      margin: 0 10px;
-      height: 10px;
-   }
-   .rangeslider:before {
-      content: "";
-      height: 1px;
-      top: 4px;
-   }
-   .rangeslider__fill {
-      top: 3px;
-      height: 3px;
-      border-radius: 2px;
-   }
-   .rangeslider__handle {
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-   }
-   .volume-range-wrap img {
-      height: 10px;
-   }
-   .play-btn {
-      width: 1.4rem;
-      height: 1.4rem;
-   }
-
-   .play-btn:before,
-   .play-btn:after {
-      content: '';
-      background: #fff;
-      position: absolute;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      transition: 0.2s ease-out;
-   }
-}
-@media screen and (max-width: 767px) and (orientation: portrait) {
-   .vegas-slide,
-   .vegas-slide-inner {
-      background-position: right -180px center !important;
-   }
-}
-@media screen and (max-width: 767px) and (orientation: landscape) {
-   .apps {
-      display: none;
-   }
-   .play-now {
-      max-width: 350px;
-   }
-}
-@media screen and (max-width: 813px) and (max-height: 400px) and (orientation: landscape) {
-   body {
-      font-size: 14px;
-   }
-   .radio-app {
-      padding: 30px 15px;
-   }
-   .radio-header {
-      padding: 0 15px;
-   }
-   .logo {
-      img {
-         width: 120px;
-      }
-   }
-   .apps {
-      display: none;
-   }
-   .play-now {
-      max-width: 350px;
-   }
-   .play-now {
-      width: 100%;
-      padding: 30px 15px;
-   }
-   .artist-image {
-      flex: 0 0 auto;
-      width: 70px;
-      height: 60px;
-      margin-right: 15px;
-   }
-   .track-info {
-      margin-top: -3px;
-   }
-
-   .rangeslider {
-      margin: 0 10px;
-      height: 10px;
-   }
-   .rangeslider:before {
-      content: "";
-      height: 1px;
-      top: 4px;
-   }
-   .rangeslider__fill {
-      top: 3px;
-      height: 3px;
-      border-radius: 2px;
-   }
-   .rangeslider__handle {
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-   }
-   .volume-range-wrap img {
-      height: 10px;
-   }
-   .play-btn {
-      width: 1.4rem;
-      height: 1.4rem;
-   }
-
-   .play-btn:before,
-   .play-btn:after {
-      content: '';
-      background: #fff;
-      position: absolute;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      transition: 0.2s ease-out;
-   }
-}
+// @media screen and (max-width: 1024px) {
+//    html {
+//       overflow: hidden;
+//    }
+//    body {
+//       overflow: hidden;
+//    }
+//    .page-footer {
+//       display: none;
+//    }
+//    .radio-app {
+//       padding: 30px;
+//    }
+//    .apps {
+//       margin-bottom: 40px;
+//    }
+//    .logo {
+//       img {
+//          width: 150px;
+//       }
+//    }
+//    .main-nav {
+//       ul {
+//          display: none;
+//       }
+//       .burger-btn {
+//          display: inline-block;
+//       }
+//    }
+//    .radio-content {
+//       display: none;
+//    }
+//    .radio-footer {
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//       flex: 1 1 auto;
+//    }
+//    .play-now {
+//       background: rgba(#000,0.5);
+//       flex: 0 0 auto;
+//       margin: auto;
+//       padding: 30px 20px;
+//       border-radius: 10px;
+//
+//    }
+// }
+// @media screen and (max-width: 767px) {
+//    body {
+//       font-size: 14px;
+//    }
+//    .radio-app {
+//       padding: 30px 15px;
+//    }
+//    .radio-header {
+//       padding: 0 15px;
+//    }
+//    .logo {
+//       img {
+//          width: 100px;
+//       }
+//    }
+//    .apps {
+//       margin-top: -20vh;
+//       margin-bottom: 15vh;
+//       display: flex;
+//       flex-direction: column;
+//       a {
+//          opacity: 1;
+//          margin: 0px;
+//          &:last-child {
+//             margin-top: 22px;
+//          }
+//       }
+//       img {
+//          width: 110px;
+//       }
+//    }
+//    .play-now {
+//       width: 100%;
+//       padding: 30px 15px;
+//    }
+//    .artist-image {
+//       flex: 0 0 auto;
+//       width: 70px;
+//       height: 60px;
+//       margin-right: 15px;
+//    }
+//    .track-info {
+//       margin-top: -3px;
+//    }
+//
+//    .rangeslider {
+//       margin: 0 10px;
+//       height: 10px;
+//    }
+//    .rangeslider:before {
+//       content: "";
+//       height: 1px;
+//       top: 4px;
+//    }
+//    .rangeslider__fill {
+//       top: 3px;
+//       height: 3px;
+//       border-radius: 2px;
+//    }
+//    .rangeslider__handle {
+//       height: 10px;
+//       width: 10px;
+//       border-radius: 50%;
+//    }
+//    .volume-range-wrap img {
+//       height: 10px;
+//    }
+//    .play-btn {
+//       width: 1.4rem;
+//       height: 1.4rem;
+//    }
+//
+//    .play-btn:before,
+//    .play-btn:after {
+//       content: '';
+//       background: #fff;
+//       position: absolute;
+//       top: 0;
+//       width: 50%;
+//       height: 100%;
+//       transition: 0.2s ease-out;
+//    }
+// }
+// @media screen and (max-width: 767px) and (orientation: portrait) {
+//    .vegas-slide,
+//    .vegas-slide-inner {
+//       background-position: right -180px center !important;
+//    }
+// }
+// @media screen and (max-width: 767px) and (orientation: landscape) {
+//    .apps {
+//       display: none;
+//    }
+//    .play-now {
+//       max-width: 350px;
+//    }
+// }
+// @media screen and (max-width: 813px) and (max-height: 400px) and (orientation: landscape) {
+//    body {
+//       font-size: 14px;
+//    }
+//    .radio-app {
+//       padding: 30px 15px;
+//    }
+//    .radio-header {
+//       padding: 0 15px;
+//    }
+//    .logo {
+//       img {
+//          width: 120px;
+//       }
+//    }
+//    .apps {
+//       display: none;
+//    }
+//    .play-now {
+//       max-width: 350px;
+//    }
+//    .play-now {
+//       width: 100%;
+//       padding: 30px 15px;
+//    }
+//    .artist-image {
+//       flex: 0 0 auto;
+//       width: 70px;
+//       height: 60px;
+//       margin-right: 15px;
+//    }
+//    .track-info {
+//       margin-top: -3px;
+//    }
+//
+//    .rangeslider {
+//       margin: 0 10px;
+//       height: 10px;
+//    }
+//    .rangeslider:before {
+//       content: "";
+//       height: 1px;
+//       top: 4px;
+//    }
+//    .rangeslider__fill {
+//       top: 3px;
+//       height: 3px;
+//       border-radius: 2px;
+//    }
+//    .rangeslider__handle {
+//       height: 10px;
+//       width: 10px;
+//       border-radius: 50%;
+//    }
+//    .volume-range-wrap img {
+//       height: 10px;
+//    }
+//    .play-btn {
+//       width: 1.4rem;
+//       height: 1.4rem;
+//    }
+//
+//    .play-btn:before,
+//    .play-btn:after {
+//       content: '';
+//       background: #fff;
+//       position: absolute;
+//       top: 0;
+//       width: 50%;
+//       height: 100%;
+//       transition: 0.2s ease-out;
+//    }
+// }
 
 /**************animation***********/
 @keyframes ModalOpen {
