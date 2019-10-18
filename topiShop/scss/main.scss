@@ -1218,6 +1218,13 @@ textarea.topi-input {
 .form-item {
 	display: flex;
 	margin-bottom: 25px;
+   &.vertical {
+      flex-direction: column;
+      label {
+         width: auto;
+         margin-bottom: 10px;
+      }
+   }
 	label {
 		width: 120px;
 		padding: 12px 15px 0 0;
@@ -1270,4 +1277,27 @@ textarea.topi-input {
 	}
 }
 
+.rate-stars {
+   text-align: center;
+   i {
+      color: $salat;
+   }
+}
+.remodal {
+   border-radius: 10px;
+   .modal-body {
+      margin: 0 auto;
+      max-width: 400px;
+      text-align: left;
+      padding: 35px 0 35px;
+   }
+   .remodal-close {
+      color: #fff;
+      background: $salat;
+      left: auto;
+      right: -15px;
+      top: -15px;
+      border-radius: 50%;
+   }
+}
 @import "responsive.scss";

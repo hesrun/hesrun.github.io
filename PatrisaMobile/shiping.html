@@ -80,24 +80,10 @@
       </ul>
    </nav>
 
-   <main id="panel" class="app blue-bg">
-      <div class="sign-wrap">
-         <div id="signIn" class="sign-block">
-            <form action="">
-               <div class="field">
-                  <input type="E-mail" placeholder="E-mail">
-               </div>
-               <div class="field">
-                  <input type="password" placeholder="Пароль">
-               </div>
-               <button class="btn orange">Войти</button>
-            </form>
-            <div class="other-links">
-               <a href="#">Зарегистрироваться</a> <br>
-               <a href="#">Забыли пароль?</a>
-            </div>
-         </div>
-         <div id="signUp" class="sign-block">
+   <main id="panel" class="app">
+      <div class="shiping-page">
+         <h2>Контактные данные</h2>
+         <div class="card-box">
             <form action="">
                <div class="field">
                   <input type="text" placeholder="Фамилия">
@@ -115,29 +101,70 @@
                <div class="field">
                   <input type="tel" placeholder="Телефон">
                </div>
-               <br>
-               <div class="field">
-                  <input type="password" placeholder="Пароль">
-               </div>
-               <div class="field">
-                  <input type="password" placeholder="Подтвердите пароль">
-               </div>
-               <label class="custom-check">
-                  <input type="checkbox" name="" id="">
-                  <div class="box"></div>
-                  <span>Подписаться на новости</span>
-               </label>
-               <button class="btn orange">Зарегистрироваться</button>
             </form>
          </div>
-         <div id="Recover" class="sign-block">
-            <form action="">
-               <div class="field">
-                  <input type="E-mail" placeholder="E-mail">
-               </div>
-               <button class="btn orange">Восстановить пароль</button>
-            </form>
+         <h2>Как доставить заказ в город Москва</h2>
+         <div class="card-box toggle-methods">
+            <input type="radio" name="ship-method" id="method-1">
+            <label for="method-1">
+               <b>PICKPOINT</b>
+               (Постаматы и пункты выдачи) <br>
+               220.80 ₽
+            </label>
+            <input type="radio" name="ship-method" id="method-2">
+            <label for="method-2">
+               <b>IML</b>
+               (Доставка курьером IML)<br>
+               283.20 ₽
+            </label>
+            <input type="radio" name="ship-method" id="method-3">
+            <label for="method-3">
+               <b>IML</b>
+               (Самовывоз IML)<br>
+               283.20 ₽
+            </label>
+            <input type="radio" name="ship-method" id="method-4">
+            <label for="method-4">
+               <b>ДОСТАВКА ПО МОСКВЕ</b>
+               300 ₽
+            </label>
+            <input type="radio" name="ship-method" id="method-5">
+            <label for="method-5">
+               <b>САМОВЫВОЗ</b>
+               0 ₽
+            </label>
          </div>
+         <div class="addres-take-away">
+            Ваш заказ вы можете самостоятельно забрать по адресу: <b>г. Москва, ул. Новорогожская, д.30, офис 4.</b>
+         </div>
+         <h2>Как будете оплачивать?</h2>
+         <div class="card-box toggle-methods pay-methods">
+            <input type="radio" name="pay-method" id="pay-method-1">
+            <label for="pay-method-1">
+               <b>Оплата в магазине</b>
+            </label>
+            <input type="radio" name="pay-method" id="pay-method-2">
+            <label for="pay-method-2">
+               <b>Банковские карты</b>
+               (без комиссии)
+            </label>
+            <input type="radio" name="pay-method" id="pay-method-3">
+            <label for="pay-method-3">
+               <b>PayPal</b>
+               (без комиссии)
+            </label>
+            <input type="radio" name="pay-method" id="pay-method-4">
+            <label for="pay-method-4">
+               <b>Яндекс.Деньги</b>
+               (без комиссии)
+            </label>
+         </div>
+         <div class="final-summ">
+            Итого с учетом доставки <br>
+            Товаров на: 290 ₽ <br><br>
+            <b>Итого: 290 ₽</b>
+         </div>
+         <a class="btn red block" href="">Оформить заказ</a>
       </div>
    </main>
 
@@ -174,6 +201,11 @@
       'menu': document.getElementById('menu'),
       'padding': 120,
       'tolerance': 70
+   });
+   $('.product-slider').owlCarousel({
+      items: 1,
+      dots: true,
+      autoplay:  true
    });
 </script>
 </html>
