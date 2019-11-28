@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Play:400,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext');
+$orange: #F58426;
+$blue: #7A68AE;
+$red: #f52626;
+* {
+   box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+}
+a {
+   text-decoration: none;
+   color: inherit;
+}
+html {
+   height: 100%;
+   overflow: hidden;
+}
+body {
+   font-family: 'Play', sans-serif;
+   font-weight: normal;
+   line-height: normal;
+   font-size: 16px;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+}
+.app {
+   min-height: 100%;
+   padding-bottom: 150px;
+}
+* {
+   outline: none !important;
+}
+/*************sideMenue*****************/
+.slideout-menu {
+   background: #E2E2E2;
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   width: 120px;
+   min-height: 100vh;
+   overflow-y: scroll;
+   -webkit-overflow-scrolling: touch;
+   z-index: 0;
+   display: none;
+}
+.slideout-menu-left {
+   left: 0;
+}
+.slideout-menu-right {
+   right: 0;
+}
+.slideout-panel {
+   position: relative;
+   z-index: 1;
+   will-change: transform;
+   background-color: #FFF;
+}
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+   overflow: hidden;
+}
+.slideout-open .slideout-menu {
+   display: block;
+}
+/*****************side-menu**********/
+.side-menu {
+   text-align: center;
+   padding: 10px 0 80px;
+   li {
+      font-size: 0px;
+      margin-bottom: 15px;
+      padding-left: 10px;
+      &.active {
+         .tab-img {
+            position: relative;
+            border-radius: 8px 0 0 8px;
+            border: none;
+            background: #fff;
+            &:after {
+               content: "";
+               display: block;
+               position: absolute;
+               width: 10px;
+               height: 100%;
+               right: -10px;
+               top: 0px;
+               background: #fff;
+            }
+            &:before {
+               content: "";
+               display: block;
+               position: absolute;
+               width: 20px;
+               height: 100%;
+               left: -10px;
+               top: 0px;
+               background: $orange;
+               z-index: -1;
+            }
+         }
+      }
+   }
+   .tab-img {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 8px;
+      display: flex;
+      padding: 10px;
+      border: 1px solid #C8C8C8;
+      img {
+         max-width: 100%;
+         margin: auto;
+      }
+   }
+   span {
+      display: block;
+      margin-top: 4px;
+      font-size: 12px;
+   }
+}

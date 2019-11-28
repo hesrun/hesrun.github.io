@@ -9,6 +9,7 @@
    <title>Document</title>
 </head>
 <body>
+   <div class="iphoneX"></div>
    <nav id="menu">
       <ul class="side-menu">
          <li>
@@ -88,6 +89,64 @@
          <div class="search-field">
             <input type="text" placeholder="Поиск...">
             <img src="img/search-icon.svg" alt="">
+         </div>
+      </div>
+      <div class="nail-filter">
+         <button class="filter-btn">
+            <img src="img/color-icon.png" alt="">
+            <span>Цветовой фильтр</span>
+         </button>
+         <div class="nail-filter-list">
+            <strong>Френч</strong>
+            <div class="filter-color-list">
+               <input type="checkbox" name="filt-color" id="color1">
+               <label for="color1">
+                  <img src="img/nail-color-ico.png" alt="">
+                  <span>белые</span>
+               </label>
+            </div>
+            <strong>Цвета</strong>
+            <div class="filter-color-list">
+               <input type="checkbox" name="filt-color" id="color1">
+               <label for="color1">
+                  <img src="img/nail-color-ico.png" alt="">
+                  <span>белые</span>
+               </label>
+               <input type="checkbox" name="filt-color" id="color1">
+               <label for="color1">
+                  <img src="img/nail-color-ico.png" alt="">
+                  <span>белые</span>
+               </label>
+               <input type="checkbox" name="filt-color" id="color1">
+               <label for="color1">
+                  <img src="img/nail-color-ico.png" alt="">
+                  <span>белые</span>
+               </label>
+               <input type="checkbox" name="filt-color" id="color1">
+               <label for="color1">
+                  <img src="img/nail-color-ico.png" alt="">
+                  <span>белые</span>
+               </label>
+               <input type="checkbox" name="filt-color" id="color1">
+               <label for="color1">
+                  <img src="img/nail-color-ico.png" alt="">
+                  <span>белые</span>
+               </label>
+               <input type="checkbox" name="filt-color" id="color1">
+               <label for="color1">
+                  <img src="img/nail-color-ico.png" alt="">
+                  <span>белые</span>
+               </label>
+               <input type="checkbox" name="filt-color" id="color1">
+               <label for="color1">
+                  <img src="img/nail-color-ico.png" alt="">
+                  <span>белые</span>
+               </label>
+            </div>
+            <div class="filter-action">
+               <button class="btn grey ">Сбросить</button>
+               <button class="btn orange">Применить</button>
+            </div>
          </div>
       </div>
       <ul class="subcategoryes">
@@ -451,6 +510,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
 <script src="js/slideout.min.js" charset="utf-8"></script>
 <script>
+   $('.filter-btn').click(function functionName() {
+      $('.nail-filter-list').slideToggle(300);
+      $(this).toggleClass('active');
+      if ($(this).hasClass('active')) {
+         $(this).find('span').text('Свернуть фильтр')
+      } else {
+         $(this).find('span').text('Цветовой фильтр')
+      }
+   })
    var slideout = new Slideout({
       'panel': document.getElementById('panel'),
       'menu': document.getElementById('menu'),
