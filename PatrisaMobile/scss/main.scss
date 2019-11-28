@@ -625,16 +625,21 @@ body {
 
 /**************subcategoryes*********/
 .subcategoryes {
-   ul {
+   .subcategory-name {
+      margin-left: 30px;
+      &.active {
+         img {
+            transform: rotate(90deg);
+         }
+      }
+   }
+   .item-sub {
       display: none;
       .subcategory-name {
          margin-left: 30px;
-         &.active {
-            border-color: transparent;
-            img {
-               transform: rotate(90deg);
-            }
-         }
+      }
+      .subcategory-name.active {
+         border-color: transparent;
       }
    }
    .subcategory-name {
@@ -1181,11 +1186,6 @@ a.button {
     text-decoration: none;
     color: inherit;
 }
-
-.subcategoryes .subcategory-name.nl{
-    border-bottom: none;
-}
-
 .sign-block h2 {
     text-align: center;
     color: #F58426;
