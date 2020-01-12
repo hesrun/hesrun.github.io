@@ -8,8 +8,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
    <link rel="stylesheet" href="//cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css">
-   <link rel="stylesheet" href="css/dropkick.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
    <title>Document</title>
 </head>
 <body>
@@ -36,11 +35,15 @@
                   </span>
                   <strong>Профиль</strong>
                </a>
-               <a href="#">
+               <a href="#" class="basket-link">
                   <span class="icon">
                      <img src="img/basket.png" alt="">
+                     <span>0</span>
                   </span>
-                  <strong>Корзина</strong>
+                  <span class="text">
+                     <strong>Корзина</strong>
+                     <span class="current-price"><b>890</b> ₽</span>
+                  </span>
                </a>
             </div>
             <div class="header-links">
@@ -266,7 +269,29 @@
          </div>
          <div class="product-col-wrap">
             <div class="product-gallery">
-               <img src="https://via.placeholder.com/675" alt="">
+               <div class="product-tags">
+                  <span class="hit">Hit</span>
+               </div>
+               <div class="current-image">
+                  <a data-fancybox="gallery" href="img/product-big.jpg">
+                     <img src="img/product-big.jpg">
+                  </a>
+               </div>
+               <div class="thumbs">
+                  <a class="active" href="">
+                     <img src="img/porduct-img.jpg" alt="">
+                  </a>
+                  <a href="">
+                     <img src="img/porduct-img.jpg" alt="">
+                  </a>
+                  <a href="">
+                     <img src="img/porduct-img.jpg" alt="">
+                  </a>
+                  <a data-fancybox="" href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"  class="video">
+                     <img src="img/porduct-img.jpg" alt="">
+                     <i class="mdi mdi-play-circle"></i>
+                  </a>
+               </div>
             </div>
             <div class="product-property">
                <div class="product-count-and-params">
@@ -283,7 +308,16 @@
                            <i class="mdi mdi-plus"></i>
                         </button>
                      </div>
-                     <button type="button" class="btn pink outline big">В корзину</button>
+                     <div class="action">
+                        <button type="button" class="btn pink outline big cart-animate">
+                           В корзину
+                           <i class="mdi mdi-check"></i>
+                        </button>
+                        <button type="button" class="btn blue big cart-animate">
+                           Уведомить
+                           <i class="mdi mdi-check"></i>
+                        </button>
+                     </div>
                   </div>
                   <ul class="tech-params">
                      <li>Вид: Трехфазный</li>
@@ -317,15 +351,128 @@
             </div>
          </div>
          <div class="product-reviews">
-            <div class="product-reviews-head">
-               <strong>Отзывы</strong>
-               <span>8</span>
-               <button type="button" class="btn pink outline dotted big">Написать отзыв</button>
+            <div class="product-reviews-new">
+               <div class="product-reviews-head">
+                  <strong>Отзывы</strong>
+                  <span>8</span>
+                  <button type="button" class="btn pink outline dotted big">Написать отзыв</button>
+               </div>
+               <div class="new-review-form-wrap">
+                  <div class="new-review-form">
+                     <div class="left-side">
+                        <strong>Ваша оценка</strong>
+                        <div class="stars-list">
+                           <a href="#" class="active">
+                              <i class="mdi mdi-star"></i>
+                           </a>
+                           <a href="#" class="active">
+                              <i class="mdi mdi-star"></i>
+                           </a>
+                           <a href="#" class="active">
+                              <i class="mdi mdi-star"></i>
+                           </a>
+                           <a href="#">
+                              <i class="mdi mdi-star"></i>
+                           </a>
+                           <a href="#">
+                              <i class="mdi mdi-star"></i>
+                           </a>
+                        </div>
+                        <div class="upload-images">
+                           <div class="upload-btn">
+                              <i class="mdi mdi-camera"></i>
+                              <span>Загрузить фото</span>
+                              <input type="file">
+                           </div>
+                           <ul class="file-list">
+                              <li>
+                                 <i class="mdi mdi-check"></i>
+                                 <img src="https://via.placeholder.com/65" alt="">
+                              </li>
+                              <li>
+                                 <i class="mdi mdi-check"></i>
+                                 <img src="https://via.placeholder.com/65" alt="">
+                              </li>
+                              <li>
+                                 <i class="mdi mdi-check"></i>
+                                 <img src="https://via.placeholder.com/65" alt="">
+                              </li>
+                              <li>
+                                 <i class="mdi mdi-check"></i>
+                                 <img src="https://via.placeholder.com/65" alt="">
+                              </li>
+                              <li>
+                                 <i class="mdi mdi-check"></i>
+                                 <img src="https://via.placeholder.com/65" alt="">
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="right-side">
+                        <strong>Отзыв</strong>
+                        <div class="g-input">
+                           <textarea placeholder="Комментарий"></textarea>
+                        </div>
+                     </div>
+                     <div class="action">
+                        <button type="button" class="btn grey outline">Отмена</button>
+                        <button type="button" class="btn pink outline">Отправить</button>
+                     </div>
+                  </div>
+               </div>
             </div>
             <ul class="product-reviews-list">
                <li class="product-reviews-item">
                   <div class="user-ava">
-                     <img src="img/ava-cap.png" alt="">
+                     <img class="user-ava-image" src="img/ava-cap.png" alt="">
+                     <img class="user-flag" src="img/flag-icon.png" alt="">
+                  </div>
+                  <div class="user-review">
+                     <strong class="name">Кристина</strong>
+                     <span class="date">15 ноября, 19:15</span>
+                     <div class="product-rate">
+                        <div class="stars">
+                           <i class="mdi mdi-star active"></i>
+                           <i class="mdi mdi-star active"></i>
+                           <i class="mdi mdi-star active"></i>
+                           <i class="mdi mdi-star"></i>
+                           <i class="mdi mdi-star"></i>
+                        </div>
+                     </div>
+                     <div class="review-text">
+                        <p>Брала как допукрепление после базы.Ну с моей работой
+                           (кухонный рабочий) породержались 4 дня,это с тем учётом,
+                           что почти 8 часов руки в воде+ разные хим.средства.
+                           Так что делаю вывод,кому на обычный маникюр,
+                           как допукрепление будет просто шикарно держать.
+                           Дома относила 2 дня делала все по дому и без перчаток,
+                           ни скола,ни отслойки,а вот работу не выдержали.
+                           Но заказала себе ещё один.В целом средство хорошее.
+                        </p>
+                     </div>
+                     <ul class="file-list">
+                        <li>
+                           <img src="https://via.placeholder.com/65" alt="">
+                        </li>
+                        <li>
+                           <img src="https://via.placeholder.com/65" alt="">
+                        </li>
+                        <li>
+                           <img src="https://via.placeholder.com/65" alt="">
+                        </li>
+                        <li>
+                           <img src="https://via.placeholder.com/65" alt="">
+                        </li>
+                        <li>
+                           <img src="https://via.placeholder.com/65" alt="">
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+               <li class="product-reviews-item">
+                  <div class="user-ava">
+                     <img class="user-ava-image" src="img/ava-cap.png" alt="">
+                     <img class="user-flag" src="img/flag-icon.png" alt="">
                   </div>
                   <div class="user-review">
                      <strong class="name">Кристина</strong>
@@ -354,7 +501,8 @@
                </li>
                <li class="product-reviews-item">
                   <div class="user-ava">
-                     <img src="img/ava-cap.png" alt="">
+                     <img class="user-ava-image" src="img/ava-cap.png" alt="">
+                     <img class="user-flag" src="img/flag-icon.png" alt="">
                   </div>
                   <div class="user-review">
                      <strong class="name">Кристина</strong>
@@ -383,36 +531,8 @@
                </li>
                <li class="product-reviews-item">
                   <div class="user-ava">
-                     <img src="img/ava-cap.png" alt="">
-                  </div>
-                  <div class="user-review">
-                     <strong class="name">Кристина</strong>
-                     <span class="date">15 ноября, 19:15</span>
-                     <div class="product-rate">
-                        <div class="stars">
-                           <i class="mdi mdi-star active"></i>
-                           <i class="mdi mdi-star active"></i>
-                           <i class="mdi mdi-star active"></i>
-                           <i class="mdi mdi-star"></i>
-                           <i class="mdi mdi-star"></i>
-                        </div>
-                     </div>
-                     <div class="review-text">
-                        <p>Брала как допукрепление после базы.Ну с моей работой
-                           (кухонный рабочий) породержались 4 дня,это с тем учётом,
-                           что почти 8 часов руки в воде+ разные хим.средства.
-                           Так что делаю вывод,кому на обычный маникюр,
-                           как допукрепление будет просто шикарно держать.
-                           Дома относила 2 дня делала все по дому и без перчаток,
-                           ни скола,ни отслойки,а вот работу не выдержали.
-                           Но заказала себе ещё один.В целом средство хорошее.
-                        </p>
-                     </div>
-                  </div>
-               </li>
-               <li class="product-reviews-item">
-                  <div class="user-ava">
-                     <img src="img/ava-cap.png" alt="">
+                     <img class="user-ava-image" src="img/ava-cap.png" alt="">
+                     <img class="user-flag" src="img/flag-icon.png" alt="">
                   </div>
                   <div class="user-review">
                      <strong class="name">Кристина</strong>
@@ -444,6 +564,11 @@
                <a href="#">Показать еще отзывы</a>
             </div>
          </div>
+
+      </div>
+   </section>
+   <section class="featured-products">
+      <div class="container">
          <h1>С этим товаром покупали</h1>
          <div class="catalog-grid">
             <div class="product-card">
@@ -754,9 +879,26 @@
       </div>
    </footer>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
-   <script src="js/dropkick.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
    <script type="text/javascript">
+   var currentBtn;
+      $('.cart-animate').click(function(){
+         currentBtn = $(this);
+         currentBtn.addClass('animate');
+         setTimeout(function() {
+            currentBtn.removeClass('animate');
+         }, 1600);
+         return false;
+      })
+      $('.product-reviews-head .btn').click(function(){
+         $(this).addClass('activated');
+         $('.new-review-form-wrap').slideDown(300);
+      })
+      $('.new-review-form-wrap .btn.grey').click(function(){
+         $('.product-reviews-head .btn').removeClass('activated');
+         $('.new-review-form-wrap').slideUp(300);
+      })
+
       $('.catalog-btn').click(function() {
          $(this).toggleClass('active');
          $('.main-navigation').fadeToggle(300);
@@ -772,18 +914,6 @@
          $(this).toggleClass('active');
          $(this).siblings('ul').slideToggle(300);
       })
-
-      $('.custom-drop').dropkick();
-
-      $(".price-slider-input").ionRangeSlider({
-         type: "double",
-         min: 0,
-         max: 1000,
-         from: 200,
-         to: 500,
-         grid: true
-      });
-
    </script>
 </body>
 </html>

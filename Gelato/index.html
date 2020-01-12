@@ -23,7 +23,7 @@
                   <i></i>
                   <i></i>
                </span>
-               Каталог товаров
+               Каталог <i>товаров</i>
             </a>
          </div>
          <div class="header-nav">
@@ -34,11 +34,15 @@
                   </span>
                   <strong>Профиль</strong>
                </a>
-               <a href="#">
+               <a href="#" class="basket-link">
                   <span class="icon">
                      <img src="img/basket.png" alt="">
+                     <span>0</span>
                   </span>
-                  <strong>Корзина</strong>
+                  <span class="text">
+                     <strong>Корзина</strong>
+                     <span class="current-price"><b>890</b> ₽</span>
+                  </span>
                </a>
             </div>
             <div class="header-links">
@@ -62,18 +66,14 @@
       <div class="main-navigation">
          <div class="container">
             <a href="#" class="close-menu"></a>
-            <div class="main-navigation-titles">
-               <strong>
-                  Каталог продукции
-                  <i class="mdi mdi-hand-pointing-down"></i>
-               </strong>
-               <strong>
-                  Бренды
-                  <i class="mdi mdi-hand-pointing-down"></i>
-               </strong>
-            </div>
             <div class="main-navigation-links">
                <div class="main-navigation-links-block">
+                  <div class="main-navigation-titles">
+                     <strong>
+                        Каталог продукции
+                        <i class="mdi mdi-hand-pointing-down"></i>
+                     </strong>
+                  </div>
                   <ul class="links">
                      <li>
                         <a href="#">link-1</a>
@@ -123,6 +123,12 @@
                   </ul>
                </div>
                <div class="main-navigation-links-block">
+                  <div class="main-navigation-titles">
+                     <strong>
+                        Бренды
+                        <i class="mdi mdi-hand-pointing-down"></i>
+                     </strong>
+                  </div>
                   <ul class="alphabet">
                      <li>
                         <a href="#">a</a>
@@ -1026,6 +1032,11 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js" charset="utf-8"></script>
    <script type="text/javascript">
+      $('.toggle-products a').click(function() {
+         $('.toggle-products a').removeClass('active');
+         $(this).addClass('active');
+         return false;
+      })
       $('.catalog-btn').click(function() {
          $(this).toggleClass('active');
          $('.main-navigation').fadeToggle(300);
