@@ -3103,25 +3103,25 @@ h1 {
         flex-wrap: wrap;
     }
 
-    .main-footer .container .logo {
+    .main-footer .logo {
         width: 50%;
         text-align: right;
         padding-right: 70px;
     }
 
-    .main-footer .container .pay-systems {
+    .main-footer .pay-systems {
         -ms-flex-order: 3;
         order: 3;
         margin: 30px auto;
     }
 
-    .main-footer .container .social-links {
+    .main-footer .social-links {
         -ms-flex-order: 2;
         order: 2;
         width: 50%;
     }
 
-    .main-footer .container .footer-nav {
+    .main-footer .footer-nav {
         width: 100%;
         margin: 30px auto;
         max-width: 500px;
@@ -3129,7 +3129,7 @@ h1 {
         order: 4;
     }
 
-    .main-footer .container .footer-nav ul {
+    .main-footer .footer-nav ul {
         columns: 3;
     }
 }
@@ -3180,10 +3180,15 @@ h1 {
     .main-navigation .main-navigation-links-block:last-child {
         margin-bottom: 0px;
     }
-  /***************toggle-products*************/
+  /***************slide-products*************/
+    .slide-products {
+        margin: 0 -15px;
+        padding: 10px 15px;
+    }
+
     .slide-products .item {
         margin-right: 15px;
-        width: calc(50vw - 30px);
+        width: calc(50vw - 22px);
     }
 
     .slide-products .product-card {
@@ -3209,7 +3214,7 @@ h1 {
     .gallery-grid .big, .gallery-grid .rows {
         width: 100%;
     }
-  /***************toggle-products*************/
+  /***************main-brands*************/
     .main-brands .brands-list li {
         width: 50%;
     }
@@ -3225,5 +3230,67 @@ h1 {
 
     .product-card .product-img img {
         height: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  /*****************header*********/
+    .catalog-btn-wrap {
+        top: 77px;
+    }
+
+    .header-account a .icon {
+        margin-right: 5px;
+    }
+
+    .header-account a .icon img {
+        width: 40px;
+    }
+
+    .header-account a strong {
+        font-size: 14px;
+    }
+
+    .header-links ul a {
+        font-size: 10px;
+    }
+  /*****************free-delivery-info*********/
+    .free-delivery-info {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .free-delivery-info img {
+        display: none;
+    }
+  /*******************footer*************/
+    .main-footer {
+        padding: 30px 0;
+    }
+
+    .main-footer .logo {
+        padding: 0px;
+    }
+
+    .main-footer .logo img {
+        max-width: 100%;
+    }
+
+    .main-footer .social-links {
+        width: 40%;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .main-footer .social-links li {
+        margin: 0px;
+    }
+
+    .main-footer .social-links li i.mdi {
+        font-size: 24px;
+    }
+
+    .main-footer .footer-nav {
+        margin: 0px;
     }
 }
