@@ -1,0 +1,86 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+body {
+   font-family: "Calibri";
+}
+.table {
+
+}
+.options {
+   position: fixed;
+   right: 30px;
+   top: 30px;
+   padding: 30px;
+   background: #fff;
+   box-shadow: 0 5px 5px 1px rgba(0,0,0,0.2);
+   border-radius: 10px;
+   z-index: 2;
+}
+.options label {
+   display: block;
+   margin-bottom: 10px;
+}
+.options input {
+   margin-bottom: 15px;
+   display: block;
+   width: 100%;
+   height: 30px;
+   border: 1px #ccc solid;
+   padding: 0 10px;
+   border-radius: 20px;
+   outline: none;
+}
+.options input:focus {
+   border-color: #009bff;
+}
+.generate {
+   border-radius: 20px;
+   color: #fff;
+   width: 100%;
+   height: 30px;
+   background: #43a047;
+   text-align: center;
+   border: none;
+   cursor: pointer;
+}
+.row {
+   display: flex;
+}
+.table .col {
+   box-shadow: 0 0 1px 0 #000 inset;
+   text-align: center;
+   width: 52.5mm;
+   height: 21.2mm;
+   display: flex;
+}
+.table .col svg {
+   position: relative;
+   left: -3px;
+   margin: auto;
+   max-width: 100% !important;
+}
+
+@media print {
+   @page {
+      padding: 0;
+      margin: 0;
+   }
+   body {
+      margin: 0px;
+      padding: 0px;
+      padding-top: 12mm;
+   }
+   html {
+      margin: 0px;
+      padding: 0px;
+   }
+   .table .col {
+      box-shadow: none;
+   }
+   .options {
+      display: none;
+   }
+}

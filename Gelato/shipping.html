@@ -21,36 +21,52 @@
          <h1 class="text-center">Контактные данные</h1>
          <div class="shipping-data">
             <div class="field-row">
-               <div class="g-input col-1-of-3">
-                  <input type="text" placeholder="Фамилия" name="" value="">
+               <div class="col-1-of-3">
+                  <div class="g-input ">
+                     <input type="text" placeholder="Фамилия" name="" value="">
+                  </div>
                </div>
-               <div class="g-input col-1-of-3">
-                  <input type="text" placeholder="Имя" name="" value="">
+               <div class="col-1-of-3">
+                  <div class="g-input">
+                     <input type="text" placeholder="Имя" name="" value="">
+                  </div>
                </div>
-               <div class="g-input col-1-of-3">
-                  <input type="text" placeholder="Отчество" name="" value="">
-               </div>
-            </div>
-            <div class="field-row">
-               <div class="g-input col-2-of-3">
-                  <input type="text" placeholder="Город" name="" value="">
-               </div>
-               <div class="g-input col-1-of-3">
-                  <input type="text" placeholder="Телефон" name="" value="">
+               <div class="col-1-of-3">
+                  <div class="g-input">
+                     <input type="text" placeholder="Отчество" name="" value="">
+                  </div>
                </div>
             </div>
             <div class="field-row">
-               <div class="g-input col-2-of-3">
-                  <input type="text" placeholder="Адрес доставки" name="" value="">
+               <div class="col-2-of-3">
+                  <div class="g-input">
+                     <input type="text" placeholder="Город" name="" value="">
+                  </div>
                </div>
-               <div class="g-input col-1-of-3">
-                  <input type="text" placeholder="Индекс" name="" value="">
+               <div class="col-1-of-3">
+                  <div class="g-input ">
+                     <input type="text" placeholder="Телефон" name="" value="">
+                  </div>
+               </div>
+            </div>
+            <div class="field-row">
+               <div class="col-2-of-3">
+                  <div class="g-input ">
+                     <input type="text" placeholder="Адрес доставки" name="" value="">
+                  </div>
+               </div>
+               <div class="col-1-of-3">
+                  <div class="g-input">
+                     <input type="text" placeholder="Индекс" name="" value="">
+                  </div>
                </div>
             </div>
             <div class="comment-filed">
                <div class="field-row">
-                  <div class="g-input col-3-of-3">
-                     <textarea placeholder="Комментарий"></textarea>
+                  <div class="col-3-of-3">
+                     <div class="g-input">
+                        <textarea placeholder="Комментарий"></textarea>
+                     </div>
                   </div>
                </div>
             </div>
@@ -146,6 +162,26 @@
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
    <script type="text/javascript">
+      $('.g-input').each(function() {
+         holder = $(this).find('input, textarea').attr('placeholder');
+         $(this).find('input, textarea').attr('placeholder','');
+         lbl = '<label class="floating">'+holder+'</label>';
+         $(this).append(lbl);
+      })
+
+
+      $('.g-input input, .g-input textarea').on('focus', function(){
+         $(this).parent().addClass('floated');
+      })
+      $('.g-input input, .g-input textarea').on('blur', function(){
+         var value = $(this).val();
+         if (value) {
+            $(this).parent().addClass('floated');
+         } else {
+            $(this).parent().removeClass('floated');
+         }
+      })
+
       $('.open-comment').click(function () {
          $('.comment-filed').slideToggle();
          return false;

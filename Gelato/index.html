@@ -44,6 +44,12 @@
                      <span class="current-price"><b>890</b> ₽</span>
                   </span>
                </a>
+               <a class="exit" href="#">
+                  <span class="icon">
+                     <i class="mdi mdi-exit-run"></i>
+                  </span>
+                  <strong>Выйти</strong>
+               </a>
             </div>
             <div class="header-links">
                <ul>
@@ -947,22 +953,16 @@
          <b>- Бренды -</b>
          <ul class="brands-list">
             <li>
-               <img src="img/br-1.jpg" alt="">
+               <img src="img/br-1.png" alt="">
             </li>
             <li>
-               <img src="img/br-2.jpg" alt="">
+               <img src="img/br-2.png" alt="">
             </li>
             <li>
-               <img src="img/br-3.jpg" alt="">
+               <img src="img/br-3.png" alt="">
             </li>
             <li>
-               <img src="img/br-4.jpg" alt="">
-            </li>
-            <li>
-               <img src="img/br-5.jpg" alt="">
-            </li>
-            <li>
-               <img src="img/br-6.jpg" alt="">
+               <img src="img/br-4.png" alt="">
             </li>
          </ul>
       </div>
@@ -1028,9 +1028,13 @@
          </ul>
       </div>
    </footer>
+   <div class="preloader" id="preloader">
+      <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+   </div>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js" charset="utf-8"></script>
+   <script src="js/anime.min.js" charset="utf-8"></script>
    <script type="text/javascript">
       $('.toggle-products a').click(function() {
          $('.toggle-products a').removeClass('active');
@@ -1063,8 +1067,6 @@
             autoWidth:true,
             items:4
          });
-
-
          var $frame  = $('.slide-products');
 		   var $slidee = $frame.children('.item').eq(0);
 		   var $wrap   = $frame.parent();
@@ -1088,6 +1090,18 @@
    			dynamicHandle: 1,
    			clickBar: 1,
    		});
+
+         anime({
+            targets: '#preloader',
+            duration: 1000,
+            scale:[1,10],
+            opacity:[1,0],
+            delay: 3000,
+            easing: 'easeInOutQuad',
+            complete: function(anim) {
+               $('#preloader').hide();
+            }
+         });
       });
    </script>
 </body>

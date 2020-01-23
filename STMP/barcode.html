@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="bar.css">
+</head>
+<body>
+  <div class="options">
+    <label>Код EAN-13</label>
+    <input id="CodeNum" type="text" value="123456789012">
+    <label>Ширина 1-90</label>
+    <input id="WidthNum" type="text" name="" value="50">
+    <label>Высота 5-50</label>
+    <input id="HeightNum" type="text" name="" value="30">
+    <button class="generate">Сформировать</button>
+  </div>
+  <div class="table">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.0/JsBarcode.all.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var table = '',
+        code = '',
+        width = 0,
+        height = 0 ;
+    for (i = 0; i < 13; i++) {
+          table +="<div class='row'>";
+            for (j = 0; j < 4; j++) {
+              table+="<div class='col'><svg class='barcode'></svg></div>";
+            }
+           table+="</div>";
+        }
+    $(".table").html(table);
+
+    $('.generate').click(function() {
+      code = $('#CodeNum').val();
+      width = $('#WidthNum').val();
+      height = $('#HeightNum').val();
+      JsBarcode(".barcode", code, {
+        format: "EAN13",
+        lineColor: "#000",
+        width: 2,
+        height: height
+      });
+      $('.barcode').css({
+        width: width + '%'
+      })
+
+    })
+
+  </script>
+</body>
+
+</html>

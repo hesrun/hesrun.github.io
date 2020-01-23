@@ -48,6 +48,27 @@
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
    <script type="text/javascript">
+      $('.g-input').each(function() {
+         holder = $(this).find('input').attr('placeholder');
+         $(this).find('input').attr('placeholder','');
+         lbl = '<label class="floating">'+holder+'</label>';
+         $(this).append(lbl);
+      })
+
+
+      $('.g-input input').on('focus', function(){
+         $(this).parent().addClass('floated');
+      })
+      $('.g-input input').on('blur', function(){
+         var value = $(this).val();
+   		if (value) {
+   			$(this).parent().addClass('floated');
+   		} else {
+   			$(this).parent().removeClass('floated');
+   		}
+      })
+
+
    </script>
 </body>
 </html>

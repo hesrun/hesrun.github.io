@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link href="https://cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">
+  <link rel="stylesheet" href="popis.css">
+</head>
+<body>
+  <div class="options">
+    <div id="editor-container">
+
+    </div>
+    <div class="inputs">
+      <div>
+        <label>Столбцы</label>
+        <input id="col" type="text" name="" value="4">
+      </div>
+      <div>
+        <label>Строки</label>
+        <input id="row" type="text" name="" value="13">
+      </div>
+      <div>
+        <label>Ширина, мм</label>
+        <input id="cw" type="text" name="" value="52.5">
+      </div>
+      <div>
+        <label>Высота, мм</label>
+        <input id="ch" type="text" name="" value="21.2">
+      </div>
+      <div>
+        <label>Верхний отступ, мм</label>
+        <input id="tm" type="text" name="" value="12">
+      </div>
+      <div>
+        <label>Горизонтальные отступы, мм (мин. 6)</label>
+        <input id="gp" type="text" name="" value="6">
+      </div>
+      <div>
+        <label>Размер текста, px</label>
+        <input id="fs" type="text" name="" value="14">
+      </div>
+      <div>
+        <label>Высота строки</label>
+        <input id="lh" type="text" name="" value="1">
+      </div>
+      <button id="generate" type="button" class="generate">Генерировать</button>
+    </div>
+  </div>
+
+  <div class="table">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+  <script type="text/javascript">
+
+  $(document).ready(function() {
+    var toolbarOptions = [
+      ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+      ['blockquote', 'code-block'],
+      [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+      [{ 'align': [] }],
+      ['clean']                                         // remove formatting button
+    ];
+
+    var quill = new Quill('#editor-container', {
+      modules: {
+        toolbar: toolbarOptions
+      },
+      placeholder: 'Описание',
+      theme: 'snow'  // or 'bubble'
+    });
+
+    quill.on('text-change', function(delta, oldDelta, source) {
+      if (source == 'api') {
+        $('.text').html($('.ql-editor').html());
+        console.log(EditorText);
+      } else if (source == 'user') {
+        $('.text').html($('.ql-editor').html());
+      }
+    });
+
+    var col = $('#col').val(),
+        row = $('#row').val(),
+        cw =  $('#cw').val(),
+        ch =  $('#ch').val(),
+        tm =  $('#tm').val(),
+        gp =  $('#gp').val(),
+        fs =  $('#fs').val(),
+        lh =  $('#lh').val();
+
+    function GenTable(col,row) {
+      table = '';
+      for (i = 0; i < row; i++) {
+            table +="<div class='row'>";
+              for (j = 0; j < col; j++) {
+                table+="<div class='col'><div class='text ql-editor'></div></div>";
+              }
+             table+="</div>";
+          }
+      $(".table").html(table);
+    };
+
+    function makeCell (cw,ch,tm,gp) {
+      $("body").css({
+        "padding-top": tm + "mm"
+      });
+      $(".col").css({
+        "width": cw + "mm",
+        "height": ch + "mm",
+        "padding-right": gp + "mm",
+        "padding-left": gp + "mm",
+      });
+    };
+    function makeText (fs,lh) {
+      $('.text').html($('.ql-editor').html());
+      $('.text').css({
+        "font-size": fs + "px",
+        "line-height": lh
+      });
+    };
+
+
+    GenTable(col,row);
+    makeCell(cw,ch,tm,gp);
+    makeText (fs,lh);
+
+    $('#generate').click(function() {
+
+      col = $('#col').val(),
+      row = $('#row').val(),
+      cw =  $('#cw').val(),
+      ch =  $('#ch').val(),
+      tm =  $('#tm').val(),
+      gp =  $('#gp').val(),
+      fs =  $('#fs').val(),
+      lh =  $('#lh').val();
+
+      GenTable(col,row);
+      makeCell(cw,ch,tm,gp);
+      makeText (fs,lh);
+    })
+  })
+  </script>
+</body>
+
+</html>
