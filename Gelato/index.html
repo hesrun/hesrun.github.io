@@ -28,6 +28,10 @@
          </div>
          <div class="header-nav">
             <div class="header-account">
+               <a href="" class="search-open-btn">
+                  <img src="img/search.png" alt="">
+                  <i></i>
+               </a>
                <a href="#">
                   <span class="icon">
                      <img src="img/avatar.png" alt="">
@@ -67,6 +71,16 @@
                   </li>
                </ul>
             </div>
+         </div>
+      </div>
+      <div class="search-wrapper">
+         <div class="container">
+            <form class="search-form">
+               <div class="search-filed">
+                  <input type="text" placeholder="Верхние формы с разметкой">
+                  <button>Найти</button>
+               </div>
+            </form>
          </div>
       </div>
       <div class="main-navigation">
@@ -1028,7 +1042,7 @@
          </ul>
       </div>
    </footer>
-   <div class="preloader" id="preloader">
+   <div class="preloader" id="preloader" style="display:none">
       <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
    </div>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
@@ -1036,6 +1050,15 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js" charset="utf-8"></script>
    <script src="js/anime.min.js" charset="utf-8"></script>
    <script type="text/javascript">
+
+      $('.search-open-btn').click(function() {
+         $(this).toggleClass('active');
+         $('body').toggleClass('search-open');
+         $('.search-wrapper').fadeToggle(100);
+         return false;
+      })
+
+
       $('.toggle-products a').click(function() {
          $('.toggle-products a').removeClass('active');
          $(this).addClass('active');
@@ -1044,11 +1067,13 @@
       $('.catalog-btn').click(function() {
          $(this).toggleClass('active');
          $('.main-navigation').fadeToggle(300);
+         $('body').toggleClass('menu-open');
          return false;
       })
       $('.close-menu').click(function() {
          $('.catalog-btn').removeClass('active');
          $('.main-navigation').fadeOut(300);
+         $('body').removeClass('menu-open');
          return false;
       })
 

@@ -24,6 +24,10 @@ body {
     line-height: 1;
 }
 
+body.search-open {
+    overflow: hidden;
+}
+
 input, button, textarea {
     font-family: 'Fira Sans', sans-serif;
     outline: none;
@@ -167,6 +171,112 @@ h1 {
 
 .main-header .logo img {
     max-width: 100%;
+}
+
+a.search-open-btn {
+    margin: 0 5% 0 0;
+}
+
+a.search-open-btn img {
+    transition: all 0.3s;
+}
+
+a.search-open-btn:hover img {
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.search-open-btn.active {
+    position: relative;
+    z-index: 101;
+}
+
+.search-open-btn.active img {
+    position: relative;
+    z-index: 1;
+}
+
+.search-open-btn.active i {
+    bottom: -23px;
+    left: -36px;
+    position: absolute;
+    width: 129px;
+    height: 21px;
+    background: url(../img/search-rounds.png);
+}
+
+.search-open-btn.active:after {
+    content: "";
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    width: 63px;
+    height: 63px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.search-open-btn.active:before {
+    content: "";
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    width: 81px;
+    height: 91px;
+    background: #ed008c;
+    border-radius: 50% 50% 0 0;
+}
+
+.search-wrapper {
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.search-wrapper .search-form {
+    background: #ed008c;
+    padding: 45px;
+    border-radius: 16px;
+}
+
+.search-wrapper .search-filed {
+    height: 55px;
+    background: #fff;
+    box-shadow: 0 2px 5px 0px #aaa inset;
+    border-radius: 10px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.search-wrapper .search-filed input {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    background: none;
+    border: none;
+    padding: 0 30px;
+    height: 100%;
+    font-size: 20px;
+}
+
+.search-wrapper .search-filed button {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    padding: 0 70px;
 }
 
 .catalog-btn-wrap {
@@ -777,8 +887,15 @@ h1 {
     box-shadow: 0 10px 14px 0 rgba(32, 29, 30, 0.25);
 }
 
+.product-card .product-img {
+    height: 220px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .product-card .product-img img {
-    width: 100%;
+    margin: auto;
+    max-height: 100%;
     max-width: 100%;
 }
 
@@ -2855,7 +2972,7 @@ h1 {
 /***************ui**************/
 .page-cap {
     text-align: center;
-    padding: 15% 0;
+    padding: 30px 0;
 }
 
 .page-cap .icon {
@@ -3442,12 +3559,18 @@ h1 {
     }
 
     .sign-blocks .sign-blocks-item .footer {
-        display: block;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
 
     .sign-blocks .sign-blocks-item .footer .btn {
         margin-top: 15px;
         width: 100%;
+    }
+
+    .sign-blocks .sign-blocks-item .footer .blue {
+        -ms-flex-order: 2;
+        order: 2;
     }
 
     .sign-blocks .come-from .body {
@@ -3524,11 +3647,30 @@ h1 {
         font-size: 26px;
         margin-top: 30px;
     }
+
+    .back-link {
+        margin: 15px 0;
+    }
+
+    .page-cap {
+        padding: 40% 0 0;
+    }
+
+    .page-cap .icon {
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+        font-size: 64px;
+    }
+
+    .page-cap strong {
+        font-size: 20px;
+        font-weight: 600;
+    }
   /***************main-navigation*************/
     .main-navigation {
-        position: fixed;
-        height: 100vh;
-        overflow: auto;
+        position: absolute;
+        box-shadow: 0 5px 8px 0 rgba(32, 29, 30, 0.15);
     }
 
     .main-navigation:before {
@@ -3837,7 +3979,7 @@ h1 {
     }
   /**************sign-section*********/
     .sign-section {
-        padding-top: 40px;
+        padding-top: 0px;
     }
 
     .sign-section h1 {
@@ -3856,10 +3998,6 @@ h1 {
 
     .sign-blocks .sign-blocks-item .body {
         padding: 30px 0;
-    }
-
-    .sign-blocks .sign-blocks-item .footer {
-        display: block;
     }
 
     .sign-blocks .sign-blocks-item .footer .btn {
@@ -3883,7 +4021,7 @@ h1 {
     }
   /**************shipping-data*********/
     .shipping-page {
-        padding-top: 30px;
+        padding-top: 0px;
     }
 
     .shipping-page h1 {
@@ -4279,6 +4417,10 @@ h1 {
 
     .header-links ul a {
         font-size: 10px;
+    }
+  /******************product-card**************/
+    .product-card .product-img {
+        height: 150px;
     }
   /*****************free-delivery-info*********/
     .free-delivery-info {

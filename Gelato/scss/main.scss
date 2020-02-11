@@ -21,6 +21,9 @@ body {
    font-family: 'Fira Sans', sans-serif;
    line-height: 1;
 }
+body.search-open {
+   overflow: hidden;
+}
 input, button, textarea {
    font-family: 'Fira Sans', sans-serif;
    outline: none;
@@ -139,6 +142,98 @@ h1 {
    .logo {
       img {
          max-width: 100%;
+      }
+   }
+}
+a.search-open-btn {
+   margin: 0 5% 0 0;
+   img {
+      transition: all 0.3s;
+   }
+   &:hover {
+      img {
+         transform: rotate(90deg);
+      }
+   }
+}
+.search-open-btn.active {
+   position: relative;
+   z-index: 101;
+   img {
+      position: relative;
+      z-index: 1;
+   }
+   i {
+      bottom: -23px;
+      left: -36px;
+      position: absolute;
+      width: 129px;
+      height: 21px;
+      background: url(../img/search-rounds.png)
+   }
+   &:after {
+      content: "";
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      width: 63px;
+      height: 63px;
+      background: #fff;
+      border-radius: 50%;
+   }
+   &:before {
+      content: "";
+      box-sizing: border-box;
+      display: block;
+      position: absolute;
+      left: -12px;
+      top: -12px;
+      width: 81px;
+      height: 91px;
+      background: $pink;
+      border-radius: 50% 50% 0 0;
+   }
+}
+.search-wrapper {
+   display: none;
+   padding-top: 100px;
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   height: 100vh;
+   width: 100%;
+   background: rgba(#000,0.5);
+   z-index: 100;
+   .search-form {
+      background: $pink;
+      padding: 45px;
+      border-radius: 16px;
+   }
+   .search-filed {
+      height: 55px;
+      background: #fff;
+      box-shadow: 0 2px 5px 0px #aaa inset;
+      border-radius: 10px;
+      display: flex;
+      input {
+         flex: 1 1 auto;
+         background: none;
+         border: none;
+         padding: 0 30px;
+         height: 100%;
+         font-size: 20px;
+      }
+      button {
+         font-size: 25px;
+         text-transform: uppercase;
+         color: #fff;
+         background: #000;
+         border: none;
+         border-radius: 10px;
+         font-weight: 800;
+         padding: 0 70px;
       }
    }
 }
@@ -639,8 +734,11 @@ h1 {
       box-shadow: 0 10px 14px 0 rgba(#201d1e, 0.25);
    }
    .product-img {
+      height: 220px;
+      display: flex;
       img {
-         width: 100%;
+         margin: auto;
+         max-height: 100%;
          max-width: 100%;
       }
    }
@@ -2338,7 +2436,7 @@ h1 {
 /***************ui**************/
 .page-cap {
    text-align: center;
-   padding: 15% 0;
+   padding: 30px 0;
    .icon {
       margin: 0 auto 30px;
       width: 250px;
@@ -2858,10 +2956,13 @@ h1 {
             padding: 30px 0;
          }
          .footer {
-            display: block;
+            flex-direction: column;
             .btn {
                margin-top: 15px;
                width: 100%;
+            }
+            .blue {
+               order: 2;
             }
          }
       }
@@ -2939,11 +3040,26 @@ h1 {
       font-size: 26px;
       margin-top: 30px;
    }
+   .back-link {
+      margin: 15px 0;
+   }
+   .page-cap {
+      padding: 40% 0 0;
+      .icon {
+         width: 150px;
+         height: 150px;
+         line-height: 150px;
+         font-size: 64px;
+      }
+      strong {
+         font-size: 20px;
+         font-weight: 600;
+      }
+   }
    /***************main-navigation*************/
    .main-navigation {
-      position: fixed;
-      height: 100vh;
-      overflow: auto;
+      position: absolute;
+      box-shadow: 0 5px 8px 0 rgba(32, 29, 30, 0.15);
       &:before {
          display: none;
       }
@@ -3024,6 +3140,7 @@ h1 {
          padding: 0px;
       }
       .product-img {
+
          img {
             height: auto;
          }
@@ -3215,7 +3332,7 @@ h1 {
    }
    /**************sign-section*********/
    .sign-section {
-      padding-top: 40px;
+      padding-top: 0px;
       h1 {
          margin: 30px 0 40px;
       }
@@ -3230,7 +3347,6 @@ h1 {
             padding: 30px 0;
          }
          .footer {
-            display: block;
             .btn {
                margin-top: 15px;
                width: 100%;
@@ -3268,7 +3384,7 @@ h1 {
    }
    /**************shipping-data*********/
    .shipping-page {
-      padding-top: 30px;
+      padding-top: 0px;
       h1 {
          margin-bottom: 30px;
       }
@@ -3620,7 +3736,12 @@ h1 {
          }
       }
    }
-
+   /******************product-card**************/
+   .product-card {
+      .product-img {
+         height: 150px;
+      }
+   }
    /*****************free-delivery-info*********/
    .free-delivery-info {
       margin: 20px 0 30px;
