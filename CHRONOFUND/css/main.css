@@ -12,7 +12,7 @@ html {
 
 body {
     font-family: 'SF UI Display';
-    min-height: 100%;
+    height: 100%;
     font-size: 14px;
 }
 
@@ -24,7 +24,7 @@ input, select, textarea {
 .sign-wrapper {
     display: -ms-flexbox;
     display: flex;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 .sign-wrapper .sign-present-column {
@@ -166,6 +166,8 @@ input, select, textarea {
     margin: auto;
     border-radius: 32px 32px 0 0;
     padding: 50px 30px;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
 }
 
 .sign-form-column .bottom-btn span {
@@ -381,10 +383,6 @@ input, select, textarea {
         overflow-x: hidden;
     }
   /******************sign pages*************/
-    .sign-wrapper {
-        display: block;
-    }
-
     .sign-wrapper .sign-present-column {
         width: 100%;
     }
@@ -396,10 +394,10 @@ input, select, textarea {
     .sign-present-column {
         position: fixed;
         background: #fff;
+        height: 100%;
         left: 0px;
         top: 0px;
         padding: 30px;
-        min-height: 100vh;
         z-index: 1;
     }
 
@@ -461,7 +459,6 @@ input, select, textarea {
     .sign-form-column {
         padding: 30px;
         padding-bottom: 0px;
-        min-height: 100vh;
     }
 
     .sign-form-column .form-wrapper h2 {
