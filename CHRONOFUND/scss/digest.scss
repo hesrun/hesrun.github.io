@@ -1,0 +1,234 @@
+@import "../font/sf.css";
+* {
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+}
+body {
+   font-family: 'SF UI Display';
+   background: #e0e0e0;
+}
+
+.digest-wrapper {
+   margin: auto;
+   width: 375px;
+   background: #fff;
+}
+.digest-header {
+   background: #191933;
+   text-align: center;
+   padding: 30px 0;
+}
+.digest-release {
+   padding: 100px 0 55px 0;
+   text-align: center;
+}
+.digest-number {
+   font-size: 95px;
+   color: #2d2d2d;
+   font-weight: 700;
+}
+.digest-date {
+   display: flex;
+   margin-bottom: 114px;
+   .date {
+      padding: 7px 15px 0 0;
+      text-align: right;
+      letter-spacing: 1px;
+      width: 48%;
+      color: #8f92a1;
+      font-weight: 600;
+      font-size: 12px;
+   }
+   strong {
+      text-align: left;
+      width: 52%;
+      font-size: 30px;
+      color: #2d2d2d;
+      font-weight: 600;
+   }
+}
+.digest-lot-num {
+   padding: 5px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #fff;
+   background-color: #2e2e7b;
+   text-align: center;
+   span {
+      letter-spacing: 1px;
+      margin: 0 15px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+   }
+}
+.digest-lot-info {
+   padding: 35px 45px;
+}
+.digest-lot-info-head {
+   display: flex;
+   align-items: flex-start;
+   margin-bottom: 20px;
+   .properties-column {
+      width: 25%;
+   }
+   .name-column {
+      width: 75%;
+   }
+   .brand {
+      display: block;
+      font-size: 15px;
+      color: #2d2d2d;
+      font-weight: 700;
+      margin-bottom: 3px;
+   }
+   .name {
+      line-height: 1.3;
+      color: #2d2d2d;
+      font-size: 16px;
+      font-weight: 500;
+   }
+   .reference-num,
+   .equipment {
+      display: block;
+      font-size: 8px;
+      color: #8f92a1;
+      font-weight: 700;
+   }
+   .reference-num {
+      margin-top: 3px;
+   }
+   .condition {
+      margin: 6px 0;
+      display: block;
+      font-size: 8px;
+      font-weight: 700;
+   }
+}
+.digest-lot-price-table {
+   margin-bottom: 10px;
+   table {
+      width: 100%;
+      border-spacing: 0px;
+      border-collapse: collapse;
+   }
+   th {
+      font-size: 9px;
+      color: #8f92a1;
+      letter-spacing: 1px;
+      font-weight: 700;
+      border-bottom: 1px #efefef solid;
+      padding: 0 0 4px 0;
+      &:first-child {
+         text-align: left;
+      }
+      &:last-child {
+         text-align: right;
+      }
+   }
+   td {
+      padding-top: 5px;
+      padding-bottom: 15px;
+      text-align: center;
+      width: 33.333%;
+      font-size: 14px;
+      font-weight: 700;
+      &:first-child {
+         text-align: left;
+      }
+      &:last-child {
+         text-align: right;
+      }
+      small {
+         margin-right: 4px;
+         font-size: 8px;
+      }
+   }
+}
+.digest-lot-counts {
+   margin-bottom: 35px;
+   display: flex;
+   justify-content: space-between;
+   > * {
+      width: calc(33.333% - 3px);
+   }
+   > div {
+      height: 25px;
+      padding: 0 0 0 5px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #cccccc;
+      border-radius: 1px;
+      font-size: 7px;
+      font-weight: 700;
+      b {
+         margin-left: 10px;
+         font-size: 13px;
+         font-weight: 700;
+      }
+   }
+}
+
+.btn {
+   text-align: center;
+   letter-spacing: 0.7px;
+   background: none;
+   border: 1px solid #cccccc;
+   color: #8f92a1;
+   height: 25px;
+   line-height: 23px;
+   display: inline-block;
+   font-size: 10px;
+   font-weight: 600;
+   text-decoration: none;
+   border-radius: 1px;
+   padding: 0 10px;
+   &.orange {
+      color: #fff;
+      background-color: #f76844;
+      border-color: #f76844;
+   }
+}
+.digest-lot-btns {
+   display: flex;
+   .btn:first-child {
+      margin-right: 5px;
+   }
+   .btn {
+      flex: 1 1 auto;
+   }
+}
+
+.digest-footer {
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #191933;
+   color: #fff;
+   img {
+      margin-right: 15px;
+   }
+   span {
+      line-height: 17px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+   }
+}
+
+.green-color {
+   color: #26b005 !important;
+}
+
+@media print {
+   body {
+      font-family: 'SF UI Display';
+      background: #ccc;
+   }
+   .digest-header {
+      background: #191933;
+   }
+}

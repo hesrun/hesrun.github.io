@@ -1,0 +1,476 @@
+@import url(../font/sf.css);
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'SF UI Display';
+    min-height: 100%;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    font-family: 'SF UI Display';
+}
+
+/******************sign pages*************/
+.sign-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sign-wrapper .sign-present-column {
+    width: 50%;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.sign-wrapper .sign-form-column {
+    width: 50%;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    background: #191933;
+}
+
+.sign-present-column {
+    padding: 90px 45px 35px 45px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sign-present-column .chorono-info {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sign-present-column .logo {
+    width: 100%;
+}
+
+.sign-present-column .logo img {
+    width: 100%;
+    max-width: 190px;
+}
+
+.sign-present-column .chrono-account {
+    display: none;
+    text-align: center;
+}
+
+.sign-present-column .chrono-account a {
+    display: block;
+}
+
+.sign-present-column .chrono-footer {
+    letter-spacing: 1px;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #8f92a1;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.sign-present-column .chorono-info p {
+    font-weight: 300;
+    color: #2d2d2d;
+    font-size: 18px;
+    margin: 50px 0 70px;
+    line-height: 1.5;
+}
+
+.sign-present-column .chorono-info strong {
+    font-weight: 600;
+}
+
+.sign-present-column .chorono-info .btns .c-btn {
+    width: 270px;
+}
+
+.sign-present-column .chorono-info .btns .blue {
+    display: none;
+}
+
+.sign-form-column {
+    padding: 35px 35px 0 35px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.sign-form-column .form-wrapper {
+    width: 100%;
+    max-width: 375px;
+    color: #fff;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.sign-form-column .form-wrapper h2 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.sign-form-column .form-wrapper .c-checkbox {
+    margin-left: 60px;
+}
+
+.sign-form-column .form-wrapper .btns {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.sign-form-column .form-wrapper .link {
+    margin-left: 20px;
+}
+
+.sign-form-column .bottom-btn {
+    text-align: center;
+    background: #fff;
+    width: 100%;
+    max-width: 375px;
+    margin: auto;
+    border-radius: 32px 32px 0 0;
+    padding: 50px 30px;
+}
+
+.sign-form-column .bottom-btn span {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.sign-form-column .bottom-btn .c-btn {
+    width: 100%;
+}
+
+/***********************ui*****************/
+.c-btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    height: 55px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 12px;
+    line-height: 55px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    padding: 0 20px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.c-btn.orange {
+    background: #c6a55b;
+    color: #fff;
+}
+
+.c-btn.orange:hover {
+    background: #b18d3d;
+}
+
+.c-btn.blue {
+    background: #23236a;
+    color: #fff;
+}
+
+.c-btn.blue:hover {
+    background: #303090;
+}
+
+.c-btn.white {
+    background: #fff;
+    border: 2px solid rgba(143, 146, 161, 0.2);
+    line-height: 51px;
+}
+
+.c-btn.white:hover {
+    border-color: #23236a;
+    background: #23236a;
+    color: #fff;
+}
+
+.c-input {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.c-input .c-input-icon {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    font-size: 18px;
+    margin-right: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.c-input .c-input-icon-field {
+    right: 0px;
+    bottom: 0px;
+    line-height: 35px;
+    position: absolute;
+}
+
+.c-input .input {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.c-input label {
+    letter-spacing: 1px;
+    color: #8f92a1;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 15px;
+}
+
+.c-input input {
+    outline: none;
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+    height: 35px;
+    background: none;
+    border: none;
+    border-bottom: 2px rgba(255, 255, 255, 0.2) solid;
+    transition: all 0.6S;
+}
+
+.c-input input:focus {
+    border-bottom: 2px white solid;
+}
+
+.c-input .err {
+    text-transform: uppercase;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    color: #8f92a1;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.c-input.no-valid input {
+    color: #ff00b6;
+}
+
+.c-checkbox {
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #8f92a1;
+    cursor: pointer;
+}
+
+.c-checkbox input {
+    display: none;
+}
+
+.c-checkbox input:checked + .icon:after {
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.c-checkbox .icon {
+    margin-top: 2px;
+    margin-right: 15px;
+    display: block;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    position: relative;
+}
+
+.c-checkbox .icon:after {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #191933;
+    -ms-transform: scale(0);
+    transform: scale(0);
+    transition: all 0.5s;
+}
+
+.link {
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #8f92a1;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #c6a55b;
+}
+
+@media screen and (max-width: 768px) {
+  /******************sign pages*************/
+    .sign-present-column .chrono-footer {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        line-height: 1.8;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    body {
+        overflow-x: hidden;
+    }
+  /******************sign pages*************/
+    .sign-wrapper {
+        display: block;
+    }
+
+    .sign-wrapper .sign-present-column {
+        width: 100%;
+    }
+
+    .sign-wrapper .sign-form-column {
+        width: 100%;
+    }
+
+    .sign-present-column {
+        position: fixed;
+        background: #fff;
+        left: 0px;
+        top: 0px;
+        padding: 30px;
+        min-height: 100vh;
+        z-index: 1;
+    }
+
+    .sign-present-column.hidden-in-mobile {
+        display: none;
+    }
+
+    .sign-present-column .logo img {
+        max-width: 120px;
+    }
+
+    .sign-present-column .chorono-info img {
+        max-width: 200px;
+    }
+
+    .sign-present-column .chorono-info p {
+        margin: 30px 0;
+        font-size: 14px;
+    }
+
+    .sign-present-column .chorono-info p br {
+        display: none;
+    }
+
+    .sign-present-column .chorono-info .btns {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+
+    .sign-present-column .chorono-info .btns .blue {
+        display: inline-block;
+    }
+
+    .sign-present-column .chorono-info .btns .c-btn {
+        width: calc(50% - 5px);
+    }
+
+    .sign-present-column .chrono-account {
+        margin-bottom: 30px;
+        width: 100%;
+        display: block;
+    }
+
+    .sign-present-column .chrono-account .c-btn {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .sign-present-column .chrono-footer {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        line-height: 1.8;
+    }
+
+    .sign-form-column {
+        padding: 30px;
+        padding-bottom: 0px;
+        min-height: 100vh;
+    }
+
+    .sign-form-column .form-wrapper h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .sign-form-column .bottom-btn {
+        margin-top: 30px;
+        padding: 30px;
+    }
+}
