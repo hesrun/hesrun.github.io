@@ -22,3 +22,14 @@ anime({
   duration: 200,
   delay: 1000
 });
+
+$('#ShowPass').click(function() {
+   InpAttr = $('#password').attr('type')
+   if (InpAttr == 'password') {
+      $(this).toggleClass('mdi-eye-outline mdi-eye-off-outline');
+      $('#password').attr('type','text');
+   } else {
+      $(this).toggleClass('mdi-eye-outline mdi-eye-off-outline');
+      $('#password').attr('type','password');
+   }
+})
