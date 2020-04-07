@@ -33,3 +33,7 @@ $('#ShowPass').click(function() {
       $('#password').attr('type','password');
    }
 })
+
+$('.filter-drop').dropkick({
+   mobile: true
+});
