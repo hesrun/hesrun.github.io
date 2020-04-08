@@ -37,3 +37,10 @@ $('#ShowPass').click(function() {
 $('.filter-drop').dropkick({
    mobile: true
 });
+
+$('#mobileMenueOpen').click(function() {
+   $(this).toggleClass('active').find('.mdi').toggleClass('mdi-menu mdi-close');
+   $(".left-side-navigation").toggleClass('open');
+   $("body").toggleClass('menu-open');
+   return false;
+})
