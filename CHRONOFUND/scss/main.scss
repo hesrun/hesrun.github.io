@@ -517,7 +517,7 @@ a {
 .catalog-grid-item {
    display: flex;
    width: 410px;
-   align-items: flex-start;
+   align-items: stretch;
    .item-image {
       flex: 0 0 auto;
       width: 210px;
@@ -541,6 +541,8 @@ a {
          font-weight: 700;
       }
       img {
+         height: 100%;
+         object-fit: cover;
          width: 100%;
          vertical-align: middle;
          max-width: 100%;
@@ -559,7 +561,7 @@ a {
       }
    }
    .table-params {
-      margin: 10px 0 15px;
+      margin: 8px 0 13px;
       table {
          width: 100%;
          border-spacing: 0px;
@@ -577,11 +579,13 @@ a {
          letter-spacing: 1px;
       }
       td:last-child {
+         vertical-align: middle;
          text-align: right;
          font-size: 14px;
          font-weight: 700;
          small {
-            font-size: 10px;
+            display: inline-block;
+            font-size: 14px;
          }
       }
    }
@@ -620,7 +624,7 @@ a {
       border-radius: 12px 12px 0 0;
       position: relative;
       overflow: hidden;
-      height: 325px;
+      height: 327px;
       img {
          height: 100%;
          object-fit: cover;
@@ -1151,11 +1155,12 @@ a {
    text-decoration: none;
    display: inline-block;
    vertical-align: middle;
-   height: 25px;
+   height: 35px;
    border-radius: 1px;
-   line-height: 25px;
+   line-height: 35px;
+   min-width: 35px;
    text-transform: uppercase;
-   font-size: 9px;
+   font-size: 15px;
    font-weight: 600;
    letter-spacing: 1px;
    text-transform: uppercase;
@@ -1170,7 +1175,7 @@ a {
       color: #fff;
    }
    i.mdi {
-      font-size: 16px;
+      font-size: 20px;
    }
 }
 

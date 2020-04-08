@@ -645,8 +645,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     width: 410px;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -ms-flex-align: stretch;
+    align-items: stretch;
 }
 
 .catalog-grid-item .item-image {
@@ -676,6 +676,8 @@ a {
 }
 
 .catalog-grid-item .item-image img {
+    height: 100%;
+    object-fit: cover;
     width: 100%;
     vertical-align: middle;
     max-width: 100%;
@@ -694,7 +696,7 @@ a {
 }
 
 .catalog-grid-item .table-params {
-    margin: 10px 0 15px;
+    margin: 8px 0 13px;
 }
 
 .catalog-grid-item .table-params table {
@@ -717,13 +719,15 @@ a {
 }
 
 .catalog-grid-item .table-params td:last-child {
+    vertical-align: middle;
     text-align: right;
     font-size: 14px;
     font-weight: 700;
 }
 
 .catalog-grid-item .table-params td:last-child small {
-    font-size: 10px;
+    display: inline-block;
+    font-size: 14px;
 }
 
 .catalog-grid-item .profits-bloks {
@@ -776,7 +780,7 @@ a {
     border-radius: 12px 12px 0 0;
     position: relative;
     overflow: hidden;
-    height: 325px;
+    height: 327px;
 }
 
 .digest-catalog-item .image img {
@@ -1436,11 +1440,12 @@ a {
     text-decoration: none;
     display: inline-block;
     vertical-align: middle;
-    height: 25px;
+    height: 35px;
     border-radius: 1px;
-    line-height: 25px;
+    line-height: 35px;
+    min-width: 35px;
     text-transform: uppercase;
-    font-size: 9px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -1459,7 +1464,7 @@ a {
 }
 
 .small-btn i.mdi {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .mobile-select-list .item {
