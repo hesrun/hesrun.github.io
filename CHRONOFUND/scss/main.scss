@@ -198,11 +198,12 @@ a {
       display: flex;
       align-items: center;
       span {
-         line-height: 16px;
+         line-height: 18px;
          font-size: 12px;
          margin-left: 20px;
          letter-spacing: 1px;
          font-weight: 600;
+         white-space: nowrap;
       }
    }
    .head-btn {
@@ -310,8 +311,9 @@ a {
    }
    .need-help {
       position: sticky;
+      margin-top: 50px;
       top: 30px;
-      margin-top: 60px;
+      position: sticky;
       display: inline-flex;
       align-items: center;
       &:hover {
@@ -400,7 +402,7 @@ a {
       align-items: center;
       input {
          outline: none;
-         height: 25px;
+         height: 35px;
          border: 1px solid #979797;
          padding: 0 10px;
       }
@@ -415,6 +417,7 @@ a {
    align-items: center;
    justify-content: space-between;
    .item {
+      padding-right: 10px;
       width: 25%;
       flex: 1 0 auto;
    }
@@ -504,19 +507,20 @@ a {
 /***********************catalog-grid*****************/
 .catalog-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-   grid-gap: 30px;
+   grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+   grid-gap: 30px 50px;
    grid-auto-rows: minmax(180px, auto);
    grid-auto-flow: dense;
    align-items: center;
-   justify-items: center;
    .d-height {
       grid-row-end: span 2;
    }
 }
 .catalog-grid-item {
    display: flex;
-   width: 410px;
+   width: 100%;
+   max-width: 500px;
+   margin: auto;
    align-items: stretch;
    .item-image {
       flex: 0 0 auto;
@@ -549,15 +553,18 @@ a {
       }
    }
    .item-info {
+      flex: 1 1 auto;
       .brand {
          display: block;
-         font-size: 15px;
+         font-size: 17px;
          font-weight: 600;
       }
       .name {
+         min-height: 36px;
+         line-height: 18px;
          font-weight: 500;
          display: block;
-         font-size: 14px;
+         font-size: 16px;
       }
    }
    .table-params {
@@ -601,11 +608,11 @@ a {
       border-radius: 1px;
       span {
          font-weight: 700;
-         font-size: 10px;
+         font-size: 12px;
       }
       b {
          margin-left: 10px;
-         font-size: 13px;
+         font-size: 16px;
          font-weight: 700;
       }
    }
@@ -619,12 +626,14 @@ a {
    }
 }
 .digest-catalog-item {
-   width: 410px;
+   width: 100%;
+   max-width: 500px;
+   margin: auto;
    .image {
       border-radius: 12px 12px 0 0;
       position: relative;
       overflow: hidden;
-      height: 327px;
+      height: 359px;
       img {
          height: 100%;
          object-fit: cover;
@@ -742,11 +751,11 @@ a {
       align-items: center;
       span {
          font-weight: 700;
-         font-size: 10px;
+         font-size: 12px;
       }
       b {
          margin-left: 10px;
-         font-size: 13px;
+         font-size: 16px;
          font-weight: 700;
       }
    }
@@ -759,7 +768,7 @@ a {
       display: flex;
       align-items: center;
       .orange {
-         min-width: 100px;
+         min-width: 140px;
          flex: 1 1 auto;
          margin-left: 5px;
       }
@@ -847,6 +856,11 @@ a {
       align-items: center;
       a + a {
          margin-left: 50px;
+      }
+      a:first-child {
+         img {
+            height: 50px;
+         }
       }
       img {
          height: 30px;
@@ -1230,6 +1244,12 @@ a {
 }
 
 @media screen and (max-width:768px) {
+   /*******************container**************/
+   .container {
+      max-width: 100%;
+      min-width: 0px;
+      padding: 0 30px;
+   }
    /******************sign pages*************/
    .sign-present-column {
       .chrono-footer {

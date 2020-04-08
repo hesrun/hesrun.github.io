@@ -259,11 +259,12 @@ a {
 }
 
 .main-header .ineichen-info span {
-    line-height: 16px;
+    line-height: 18px;
     font-size: 12px;
     margin-left: 20px;
     letter-spacing: 1px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .main-header .head-btn {
@@ -392,8 +393,9 @@ a {
 .left-side-navigation .need-help {
     position: -webkit-sticky;
     position: sticky;
+    margin-top: 50px;
     top: 30px;
-    margin-top: 60px;
+    position: sticky;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-align: center;
@@ -504,7 +506,7 @@ a {
 
 .filtering .search input {
     outline: none;
-    height: 25px;
+    height: 35px;
     border: 1px solid #979797;
     padding: 0 10px;
 }
@@ -525,6 +527,7 @@ a {
 }
 
 .catalog-filters .item {
+    padding-right: 10px;
     width: 25%;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
@@ -625,15 +628,13 @@ a {
 .catalog-grid {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 30px;
+    -ms-grid-columns: (minmax(420px, 1fr))[auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    grid-gap: 30px 50px;
     grid-auto-rows: minmax(180px, auto);
     grid-auto-flow: dense;
     -ms-flex-align: center;
     align-items: center;
-    -ms-grid-column-align: center;
-    justify-items: center;
 }
 
 .catalog-grid .d-height {
@@ -644,7 +645,9 @@ a {
 .catalog-grid-item {
     display: -ms-flexbox;
     display: flex;
-    width: 410px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
     -ms-flex-align: stretch;
     align-items: stretch;
 }
@@ -683,16 +686,23 @@ a {
     max-width: 100%;
 }
 
+.catalog-grid-item .item-info {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
 .catalog-grid-item .item-info .brand {
     display: block;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
 }
 
 .catalog-grid-item .item-info .name {
+    min-height: 36px;
+    line-height: 18px;
     font-weight: 500;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .catalog-grid-item .table-params {
@@ -750,12 +760,12 @@ a {
 
 .catalog-grid-item .profit-block span {
     font-weight: 700;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .catalog-grid-item .profit-block b {
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -773,14 +783,16 @@ a {
 }
 
 .digest-catalog-item {
-    width: 410px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
 }
 
 .digest-catalog-item .image {
     border-radius: 12px 12px 0 0;
     position: relative;
     overflow: hidden;
-    height: 327px;
+    height: 359px;
 }
 
 .digest-catalog-item .image img {
@@ -929,12 +941,12 @@ a {
 
 .digest-catalog-item .profit-block span {
     font-weight: 700;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .digest-catalog-item .profit-block b {
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -955,7 +967,7 @@ a {
 }
 
 .digest-catalog-item .btns .orange {
-    min-width: 100px;
+    min-width: 140px;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     margin-left: 5px;
@@ -1068,6 +1080,10 @@ a {
 
 .footer-company-info .logos a + a {
     margin-left: 50px;
+}
+
+.footer-company-info .logos a:first-child img {
+    height: 50px;
 }
 
 .footer-company-info .logos img {
@@ -1524,6 +1540,12 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  /*******************container**************/
+    .container {
+        max-width: 100%;
+        min-width: 0px;
+        padding: 0 30px;
+    }
   /******************sign pages*************/
     .sign-present-column .chrono-footer {
         -ms-flex-direction: column;
