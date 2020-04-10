@@ -451,7 +451,7 @@ a {
 
 .digest-realease .name {
     display: block;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 600;
 }
 
@@ -474,6 +474,7 @@ a {
 }
 
 .digest-realease .search input {
+    font-size: 16px;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     outline: none;
@@ -737,11 +738,11 @@ a {
     font-size: 18px;
 }
 
-.catalog-grid-item .item-info a {
+.catalog-grid-item .item-info a:not(.small-btn) {
     transition: all 0.2s;
 }
 
-.catalog-grid-item .item-info a:hover {
+.catalog-grid-item .item-info a:not(.small-btn):hover {
     color: #f76844;
 }
 
@@ -756,8 +757,18 @@ a {
 }
 
 .catalog-grid-item .table-params td {
-    padding: 6px 0;
+    padding: 4px 0;
     border-bottom: 1px #f5f5f5 solid;
+}
+
+.catalog-grid-item .table-params td i.mdi {
+    font-size: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.catalog-grid-item .table-params td i.mdi:hover {
+    color: #f76844;
 }
 
 .catalog-grid-item .table-params td:first-child {
@@ -965,6 +976,16 @@ a {
     text-align: right;
 }
 
+.digest-catalog-item .digest-item-price-table th i.mdi {
+    font-size: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.digest-catalog-item .digest-item-price-table th i.mdi:hover {
+    color: #f76844;
+}
+
 .digest-catalog-item .digest-item-price-table td {
     padding-top: 5px;
     padding-bottom: 25px;
@@ -1152,7 +1173,7 @@ a {
 }
 
 .footer-company-info .logos img {
-    height: 30px;
+    height: 35px;
 }
 
 .footer-company-info .copy {
@@ -1525,9 +1546,11 @@ a {
     text-decoration: none;
     display: inline-block;
     vertical-align: middle;
+    border-width: 2px;
+    border-style: solid;
     height: 35px;
     border-radius: 1px;
-    line-height: 35px;
+    line-height: 32px;
     min-width: 35px;
     text-transform: uppercase;
     font-size: 15px;
@@ -1540,34 +1563,55 @@ a {
 }
 
 .small-btn.orange {
+    border-color: #f76844;
     background: #f76844;
     color: #fff;
 }
 
 .small-btn.orange:hover {
-    background: #cc3009;
+    background: transparent;
+    color: #f76844;
 }
 
 .small-btn.blue {
+    border-color: #23236a;
     background: #23236a;
     color: #fff;
 }
 
 .small-btn.blue:hover {
-    background: #5d5dc9;
+    background: transparent;
+    color: #23236a;
 }
 
 .small-btn.grey {
+    border-color: #818181;
     background: #818181;
     color: #fff;
 }
 
 .small-btn.grey:hover {
-    background: #9b9b9b;
+    background: transparent;
+    color: #818181;
 }
 
 .small-btn i.mdi {
     font-size: 20px;
+}
+
+.tooltipster-base.tooltipster-default {
+    border-radius: 5px;
+    border: none;
+    background: #191933;
+    color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(25, 25, 51, 0.6);
+}
+
+.tooltipster-base.tooltipster-default .tooltipster-content {
+    font-family: 'SF UI Display';
+    font-size: 13px;
+    padding: 5px 10px;
+    overflow: hidden;
 }
 
 .mobile-select-list .item {
@@ -1810,9 +1854,21 @@ a {
     .main-header .logo img {
         width: 120px;
     }
+
+    .main-header .head-btn i.mdi {
+        margin-bottom: 0px;
+    }
+
+    .main-header .head-btn span {
+        display: none;
+    }
   /****************digest-realease************/
     .digest-realease .search {
         display: none;
+    }
+
+    .digest-realease .name {
+        font-size: 24px;
     }
   /**********************catalog-tools*****************/
     .catalog-tools {
@@ -1902,6 +1958,10 @@ a {
         padding: 4px 0;
     }
 
+    .catalog-grid-item .table-params td i.mdi {
+        font-size: 14px;
+    }
+
     .catalog-grid-item .table-params td:first-child {
         font-size: 9px;
     }
@@ -1986,6 +2046,10 @@ a {
         padding: 0 0 4px 0;
     }
 
+    .digest-catalog-item .digest-item-price-table th i.mdi {
+        font-size: 14px;
+    }
+
     .digest-catalog-item .digest-item-price-table td {
         padding-top: 4px;
         padding-bottom: 15px;
@@ -2034,6 +2098,42 @@ a {
     .search-mobile-modal .c-input {
         margin-top: auto;
         margin-bottom: auto;
+    }
+  /********************mobile-navigation-bar*****************/
+    .mobile-navigation-bar {
+        padding: 10px 0;
+    }
+
+    .mobile-navigation-bar ul i.mdi {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .mobile-navigation-bar ul a {
+        display: block;
+    }
+
+    .mobile-navigation-bar ul a.active {
+        color: #f76844;
+        position: relative;
+    }
+
+    .mobile-navigation-bar ul a.active:after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        bottom: -3px;
+    }
+
+    .mobile-navigation-bar ul span {
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .mobile-navigation-bar ul .mdi.mdi-lifebuoy {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
     }
   /*************************ui*************************/
     .small-btn {
