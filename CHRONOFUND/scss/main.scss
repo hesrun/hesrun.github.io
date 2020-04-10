@@ -14,16 +14,13 @@ $grey: #818181;
    box-sizing: border-box;
 }
 html {
-   height: 100%;
 }
 body {
    font-family: 'SF UI Display';
-   height: 100%;
    font-size: 14px;
    color: #2d2d2d;
 }
 html.menu-open {
-   overflow: hidden;
    body {
       overflow: hidden;
    }
@@ -853,7 +850,7 @@ a {
 /********************mobile-navigation-bar*****************/
 .mobile-navigation-bar {
    display: none;
-   position: sticky;
+   position: fixed;
    bottom: 0px;
    left: 0px;
    width: 100%;
@@ -1376,8 +1373,9 @@ a {
    }
    /****************main-header************/
    .main-header {
-      position: sticky;
+      position: fixed;
       top: 0px;
+      width: 100%;
       z-index: 10;
       .btn-compare,
       .btn-profile,
@@ -1390,6 +1388,10 @@ a {
       .head-btn + .head-btn {
          margin: 0px;
       }
+   }
+   /******************main-section***************/
+   .main-section {
+      padding-top: 124px;
    }
    /********************left-side-navigation*********/
    .left-side-navigation {
@@ -1422,7 +1424,7 @@ a {
    }
    /********************main-content*********/
    .main-content {
-      padding: 30px 0;
+      padding: 30px 0 130px;
    }
    /********************mobile-navigation-bar*****************/
    .mobile-navigation-bar {
@@ -1534,6 +1536,10 @@ a {
          }
       }
    }
+   /******************main-section***************/
+   .main-section {
+      padding-top: 77px;
+   }
    /********************left-side-navigation*********/
    .left-side-navigation {
       top: 77px;
@@ -1541,7 +1547,7 @@ a {
    }
    /********************main-content*********/
    .main-content {
-      padding: 30px 0;
+      padding: 30px 0 80px;
    }
    /****************digest-realease************/
    .digest-realease {
