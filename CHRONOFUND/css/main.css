@@ -1066,9 +1066,9 @@ a {
 /********************mobile-navigation-bar*****************/
 .mobile-navigation-bar {
     display: none;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     bottom: 0px;
+    left: 0px;
     width: 100%;
     background: #fff;
     padding: 30px 0;
@@ -1717,7 +1717,7 @@ a {
         position: fixed;
         left: 0px;
         top: 116px;
-        bottom: 0px;
+        height: 100vh;
         background: #23236a;
         z-index: 10;
         overflow: auto;
@@ -1868,7 +1868,8 @@ a {
     }
   /********************left-side-navigation*********/
     .left-side-navigation {
-        top: 71px;
+        top: 77px;
+        height: calc(100vh - 77px);
     }
   /****************digest-realease************/
     .digest-realease .search {
@@ -1971,15 +1972,15 @@ a {
     }
 
     .catalog-grid-item .table-params td:first-child {
-        font-size: 9px;
+        font-size: 10px;
     }
 
     .catalog-grid-item .table-params td:last-child {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .catalog-grid-item .table-params td:last-child small {
-        font-size: 9px;
+        font-size: 12px;
     }
 
     .catalog-grid-item .profits-bloks {
@@ -1987,7 +1988,7 @@ a {
     }
 
     .catalog-grid-item .profit-block span {
-        font-size: 8px;
+        font-size: 9px;
     }
 
     .catalog-grid-item .profit-block b {
@@ -2061,12 +2062,12 @@ a {
     .digest-catalog-item .digest-item-price-table td {
         padding-top: 4px;
         padding-bottom: 15px;
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .digest-catalog-item .digest-item-price-table td small {
         margin-right: 4px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .digest-catalog-item .digest-item-info-footer {
@@ -2086,7 +2087,11 @@ a {
     }
 
     .digest-catalog-item .profit-block span {
-        font-size: 12px;
+        font-size: 10px;
+    }
+
+    .digest-catalog-item .profit-block span br {
+        display: none;
     }
 
     .digest-catalog-item .profit-block b {

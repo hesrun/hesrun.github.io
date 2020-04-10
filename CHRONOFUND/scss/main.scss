@@ -850,8 +850,9 @@ a {
 /********************mobile-navigation-bar*****************/
 .mobile-navigation-bar {
    display: none;
-   position: sticky;
+   position: fixed;
    bottom: 0px;
+   left: 0px;
    width: 100%;
    background: #fff;
    padding: 30px 0;
@@ -1395,7 +1396,7 @@ a {
       position: fixed;
       left: 0px;
       top: 116px;
-      bottom: 0px;
+      height: 100vh;
       background: $blue;
       z-index: 10;
       overflow: auto;
@@ -1531,7 +1532,8 @@ a {
    }
    /********************left-side-navigation*********/
    .left-side-navigation {
-      top: 71px;
+      top: 77px;
+      height: calc(100vh - 77px);
    }
    /****************digest-realease************/
    .digest-realease {
@@ -1615,12 +1617,12 @@ a {
             }
          }
          td:first-child {
-            font-size: 9px;
+            font-size: 10px;
          }
          td:last-child {
-            font-size: 11px;
+            font-size: 13px;
             small {
-               font-size: 9px;
+               font-size: 12px;
             }
          }
       }
@@ -1629,7 +1631,7 @@ a {
       }
       .profit-block {
          span {
-            font-size: 8px;
+            font-size: 9px;
          }
          b {
             margin-left: 10px;
@@ -1690,10 +1692,10 @@ a {
          td {
             padding-top: 4px;
             padding-bottom: 15px;
-            font-size: 14px;
+            font-size: 13px;
             small {
                margin-right: 4px;
-               font-size: 10px;
+               font-size: 12px;
             }
          }
       }
@@ -1708,7 +1710,10 @@ a {
       .profit-block {
          margin-right: 15px;
          span {
-            font-size: 12px;
+            font-size: 10px;
+            br {
+               display: none;
+            }
          }
          b {
             margin-left: 10px;
