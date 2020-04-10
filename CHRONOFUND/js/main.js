@@ -41,6 +41,6 @@ $('.filter-drop').dropkick({
 $('#mobileMenueOpen').click(function() {
    $(this).toggleClass('active').find('.mdi').toggleClass('mdi-menu mdi-close');
    $(".left-side-navigation").toggleClass('open');
-   $("body").toggleClass('menu-open');
+   $("html").toggleClass('menu-open');
    return false;
 })

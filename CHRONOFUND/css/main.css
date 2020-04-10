@@ -17,7 +17,11 @@ body {
     color: #2d2d2d;
 }
 
-body.menu-open {
+html.menu-open {
+    overflow: hidden;
+}
+
+html.menu-open body {
     overflow: hidden;
 }
 
@@ -1066,7 +1070,8 @@ a {
 /********************mobile-navigation-bar*****************/
 .mobile-navigation-bar {
     display: none;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -1743,7 +1748,7 @@ a {
     }
   /********************main-content*********/
     .main-content {
-        padding: 30px 0 130px;
+        padding: 30px 0;
     }
   /********************mobile-navigation-bar*****************/
     .mobile-navigation-bar {
@@ -1874,7 +1879,7 @@ a {
     }
   /********************main-content*********/
     .main-content {
-        padding: 30px 0 80px;
+        padding: 30px 0;
     }
   /****************digest-realease************/
     .digest-realease .search {
