@@ -49,8 +49,7 @@ a {
 /******************container**************/
 .container {
    margin: auto;
-   max-width: 1440px;
-   min-width: 1024px;
+   width: 1440px;
    padding: 0 30px;
 }
 /******************sign pages*************/
@@ -767,7 +766,7 @@ a {
       }
    }
    .digest-item-price-table {
-      margin: 30px 0 15px;
+      margin: 20px 0 0px;
       table {
          width: 100%;
          border-spacing: 0px;
@@ -786,18 +785,10 @@ a {
          &:last-child {
             text-align: right;
          }
-         i.mdi {
-            font-size: 16px;
-            vertical-align: middle;
-            cursor: pointer;
-            &:hover {
-               color: $orange;
-            }
-         }
       }
       td {
          padding-top: 5px;
-         padding-bottom: 25px;
+         padding-bottom: 15px;
          text-align: center;
          width: 33.333%;
          font-size: 18px;
@@ -817,9 +808,9 @@ a {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 15px;
    }
    .profit-block {
-      margin-right: 15px;
       display: inline-flex;
       align-items: center;
       span {
@@ -834,11 +825,6 @@ a {
          font-weight: 700;
       }
    }
-   .digest-item-info-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   }
    .btns {
       display: flex;
       align-items: center;
@@ -849,7 +835,269 @@ a {
       }
 
    }
+   i.tooltip {
+      font-size: 16px;
+      vertical-align: middle;
+      color: $grey;
+      cursor: pointer;
+      &:hover {
+         color: $orange;
+      }
+   }
 }
+/**********************catalog-item-card*******************/
+.catalog-item-card {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, auto);
+   grid-column-gap: 70px;
+   grid-row-gap: 45px;
+   h2 {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      margin-top: 40px;
+      &:first-of-type {
+         margin-top: 0px;
+      }
+   }
+   p {
+      line-height: 1.5;
+   }
+   .invest-now {
+      margin: 35px 0;
+      background: $orange;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 30px;
+      transition: all 0.3s;
+      span {
+         font-weight: 300;
+      }
+      &:hover {
+         background: darken($orange,20);
+      }
+   }
+}
+.product-card-img {
+   min-width: 100%;
+   .image {
+      margin: 0 auto;
+      position: relative;
+   }
+   .owl-dots {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+   }
+   .owl-dot {
+      padding: 3px;
+      outline: none;
+      &.active {
+         span {
+            width: 16px;
+         }
+      }
+      span {
+         margin: 3px;
+         border-radius: 10px;
+         display: block;
+         width: 6px;
+         height: 6px;
+         background: #fff;
+         transition: all 0.3s;
+      }
+   }
+   .btns {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+         margin: 0 10px;
+         display: inline-flex;
+         font-weight: 600;
+         color: $grey;
+         font-size: 10px;
+         line-height: 23px;
+         height: 25px;
+         border: 1px solid #cccccc;
+         padding: 0 20px;
+         border-radius: 2px;
+         transition: all 0.3s;
+         &:hover {
+            background: #cccccc;
+            color: #000;
+         }
+      }
+   }
+}
+.product-card-info {
+   .digest-catalog-item {
+      position: relative;
+   }
+   .digest-item-info {
+      padding: 15px 0 0 0;
+      background: none;
+      border: none;
+   }
+   .digest-item-price-table {
+      margin: 30px 0 5px;
+      td {
+         padding-bottom: 30px;
+      }
+   }
+   .btns {
+      position: absolute;
+      right: 0px;
+      top: 15px;
+   }
+   .invest-now {
+      margin-bottom: 0px;
+   }
+}
+.product-card-descr {
+   padding: 0 30px;
+   .tech-params-table {
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         border-spacing: 0px;
+      }
+      td {
+         padding: 10px 0;
+         border-bottom: 1px rgba($grey,0.3) solid;
+      }
+      td:first-child {
+         font-size: 12px;
+         color: $grey;
+         font-weight: 600;
+         text-transform: uppercase;
+      }
+      td:last-child {
+      }
+   }
+}
+.product-card-invest {
+   .consultant {
+      display: flex;
+      align-items: center;
+      background: #eaeaea;
+      padding: 15px 10px;
+      border-radius: 20px 20px 0 0;
+      .avatar {
+         flex: 0 0 auto;
+         margin-right: 10px;
+      }
+      .info {
+         flex: 1 1 auto;
+      }
+      .logo {
+         height: 40px;
+         flex: 0 0 auto;
+      }
+      strong {
+         display: block;
+         font-size: 13px;
+         font-weight: 600;
+      }
+      span {
+         display: block;
+         font-size: 10px;
+         color: $grey;
+      }
+      .rate {
+         display: flex;
+         align-items: center;
+         i.mdi {
+            font-size: 14px;
+            color: $brown;
+         }
+      }
+   }
+   .invest-info {
+      background: $blue;
+      color: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      margin: 0 -15px;
+      p {
+         font-style: italic;
+      }
+   }
+   .last-invest-info {
+      background: #8f92a1;
+      padding: 15px 20px;
+      border-radius: 0 0 20px 20px;
+      color: #fff;
+      .date {
+         margin-bottom: 25px;
+         font-weight: 600;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         .mdi {
+            font-size: 16px;
+            margin-right: 5px;
+            vertical-align: middle;
+         }
+      }
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         border-spacing: 0px;
+         th {
+            width: 25%;
+            font-size: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: rgba(#fff,0.5);
+            border-bottom: 1px rgba(#fff,0.4) solid;
+            padding-bottom: 10px;
+         }
+         td {
+            padding-top: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            small {
+               margin-right: 5px;
+               font-weight: 600;
+            }
+         }
+      }
+   }
+   .invest-rules {
+      a {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         border-bottom: 1px rgba($grey,0.4) solid;
+         color: $grey;
+         font-weight: 600;
+         font-size: 15px;
+         padding: 16px 15px;
+         i.mdi {
+            font-size: 24px;
+         }
+         &:hover {
+            color: $orange;
+         }
+      }
+      .collapse {
+         display: none;
+         padding: 15px;
+         border-bottom: 1px rgba($grey,0.4) solid;
+      }
+   }
+}
+
 /********************mobile-navigation-bar*****************/
 .mobile-navigation-bar {
    display: none;
@@ -1363,8 +1611,7 @@ a {
 @media screen and (max-width:768px) {
    /*******************container**************/
    .container {
-      max-width: 100%;
-      min-width: 0px;
+      width: 100%;
       padding: 0 30px;
    }
    /******************sign pages*************/
@@ -1703,9 +1950,6 @@ a {
             font-size: 10px;
             letter-spacing: 1px;
             padding: 0 0 4px 0;
-            i.mdi {
-               font-size: 14px;
-            }
          }
          td {
             padding-top: 4px;
@@ -1740,6 +1984,9 @@ a {
       }
       .btns {
          width: 100%;
+      }
+      i.tooltip {
+         font-size: 14px;
       }
    }
    /*****************search-mobile-modal**************/
