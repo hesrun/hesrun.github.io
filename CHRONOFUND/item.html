@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1.0, user-scalable=no">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css">
@@ -502,10 +502,13 @@
 <script type="text/javascript">
    $(document).ready(function() {
       $('.tooltip').tooltipster({
-         animation: 'fade',
+         animation: 'grow',
          trigger: 'click',
          animationDuration: 100,
-         maxWidth: 200
+         maxWidth: 200,
+         functionAfter: function(instance, helper) {
+            $('body').removeAttr("style");
+         }
       });
       $('.owl-carousel').owlCarousel({
          items: 1,
