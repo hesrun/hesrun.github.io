@@ -334,16 +334,15 @@ a {
    }
 }
 .need-help-chat {
-   position: fixed;
+   position: sticky;
    display: inline-flex;
    align-items: center;
-   z-index: 100;
-   left: 30px;
-   bottom: 30px;
-   &:hover {
-      i.mdi {
-         transform: rotate(720deg);
-      }
+   margin-top: 50px;
+   top: 30px;
+   span {
+      color: $grey;
+      font-size: 18px;
+      font-weight: 600;
    }
    .mdi {
       width: 100px;
@@ -356,6 +355,33 @@ a {
       background: $orange;
       text-align: center;
       transition: all 1s;
+      position: relative;
+      &:after {
+         content: "";
+         display: block;
+         position: absolute;
+         width: 100px;
+         height: 100px;
+         left: 50%;
+         top: 50%;
+         margin: -50px 0 0 -50px;
+         background: $orange;
+         overflow: hidden;
+         border-radius: 50%;
+         transform: scale(0.5);
+         opacity: 1;
+         z-index: -1;
+         transition: all 0.3s;
+      }
+   }
+   &:hover {
+      span {
+         color: $orange;
+      }
+      .mdi:after {
+         transform: scale(2);
+         opacity: 0;
+      }
    }
 }
 /********************main-content***************/
@@ -949,8 +975,11 @@ a {
    }
 }
 .product-card-info {
+   display: flex;
+   flex-direction: column;
    .digest-catalog-item {
       position: relative;
+      margin: 0;
    }
    .digest-item-info {
       padding: 15px 0 0 0;
@@ -969,6 +998,7 @@ a {
       top: 15px;
    }
    .invest-now {
+      margin-top: auto;
       margin-bottom: 0px;
    }
 }
@@ -1010,7 +1040,7 @@ a {
          flex: 1 1 auto;
       }
       .logo {
-         height: 50px;
+         height: 60px;
          flex: 0 0 auto;
       }
       strong {
@@ -1159,7 +1189,8 @@ a {
       font-size: 18px;
    }
    .lot-num {
-      font-size: 12px;
+      text-transform: uppercase;
+      font-size: 14px;
    }
    .name {
       margin-top: 5px;
@@ -1255,9 +1286,9 @@ a {
 .footer-company-info {
    .logos {
       display: flex;
-      align-items: center;
       a + a {
          margin-left: 50px;
+         margin-top: 5px;
       }
       a:first-child {
          img {
@@ -1408,6 +1439,7 @@ a {
    white-space: nowrap;
    overflow: hidden;
    text-overflow: ellipsis;
+   cursor: pointer;
    &.orange {
       background: $brown;
       color: #fff;
@@ -2159,7 +2191,7 @@ a {
    .product-card-invest {
       .consultant {
          .logo {
-            height: 30px;
+            height: 50px;
          }
          strong {
             font-size: 13px;

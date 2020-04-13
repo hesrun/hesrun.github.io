@@ -414,19 +414,20 @@ a {
 }
 
 .need-help-chat {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-align: center;
     align-items: center;
-    z-index: 100;
-    left: 30px;
-    bottom: 30px;
+    margin-top: 50px;
+    top: 30px;
 }
 
-.need-help-chat:hover i.mdi {
-    -ms-transform: rotate(720deg);
-    transform: rotate(720deg);
+.need-help-chat span {
+    color: #818181;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .need-help-chat .mdi {
@@ -440,6 +441,36 @@ a {
     background: #f76844;
     text-align: center;
     transition: all 1s;
+    position: relative;
+}
+
+.need-help-chat .mdi:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+    background: #f76844;
+    overflow: hidden;
+    border-radius: 50%;
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 1;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.need-help-chat:hover span {
+    color: #f76844;
+}
+
+.need-help-chat:hover .mdi:after {
+    -ms-transform: scale(2);
+    transform: scale(2);
+    opacity: 0;
 }
 
 /********************main-content***************/
@@ -1183,8 +1214,16 @@ a {
     margin-left: 15px;
 }
 
+.product-card-info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
 .product-card-info .digest-catalog-item {
     position: relative;
+    margin: 0;
 }
 
 .product-card-info .digest-item-info {
@@ -1208,6 +1247,7 @@ a {
 }
 
 .product-card-info .invest-now {
+    margin-top: auto;
     margin-bottom: 0px;
 }
 
@@ -1256,7 +1296,7 @@ a {
 }
 
 .product-card-invest .consultant .logo {
-    height: 50px;
+    height: 60px;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
 }
@@ -1445,7 +1485,8 @@ a {
 }
 
 .other-product-list .lot-num {
-    font-size: 12px;
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 .other-product-list .name {
@@ -1567,12 +1608,11 @@ a {
 .footer-company-info .logos {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-    align-items: center;
 }
 
 .footer-company-info .logos a + a {
     margin-left: 50px;
+    margin-top: 5px;
 }
 
 .footer-company-info .logos a:first-child img {
@@ -1750,6 +1790,7 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
 }
 
 .c-btn.orange {
@@ -2621,7 +2662,7 @@ a {
     }
 
     .product-card-invest .consultant .logo {
-        height: 30px;
+        height: 50px;
     }
 
     .product-card-invest .consultant strong {
