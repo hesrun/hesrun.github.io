@@ -263,6 +263,24 @@ a {
       display: flex;
    }
 }
+/********************back-link*************/
+.back-link {
+   display: inline-flex;
+   align-items: center;
+   margin-bottom: 30px;
+   color: $grey;
+   text-transform: uppercase;
+   font-weight: 600;
+   line-height: 30px;
+   transition: all 0.3s;
+   &:hover {
+      color: $orange;
+   }
+   i.mdi {
+      font-size: 24px;
+      line-height: 1;
+   }
+}
 /********************left-side-navigation*********/
 .left-side-navigation {
    width: 280px;
@@ -1093,8 +1111,13 @@ a {
       display: flex;
       align-items: flex-start;
       padding: 30px 0;
-      & + .item {
-         border-top: 1px rgba($grey,0.4) solid;
+      border-top: 1px rgba($grey,0.4) solid;
+      &:first-child {
+         padding-top: 0px;
+         border-top: 0px;
+      }
+      &:last-child {
+         padding-bottom: 0px;
       }
    }
    a {
@@ -1148,8 +1171,6 @@ a {
          margin-left: 5px;
       }
    }
-
-
 }
 /********************mobile-navigation-bar*****************/
 .mobile-navigation-bar {
@@ -1758,6 +1779,31 @@ a {
    .main-content {
       padding: 30px 0 130px;
    }
+   /*****************catalog-item-card**************/
+   .catalog-item-card {
+      margin: 0 auto;
+      max-width: 500px;
+      grid-template-columns: 100%;
+      grid-column-gap: 30px;
+   }
+   .product-card-info {
+      .digest-catalog-item {
+         position: relative;
+      }
+      .digest-item-info {
+         padding: 0;
+      }
+      .digest-item-price-table {
+         margin: 15px 0 5px;
+         td {
+            padding-bottom: 15px;
+         }
+      }
+      .btns {
+         top: 0px;
+      }
+   }
+
    /********************mobile-navigation-bar*****************/
    .mobile-navigation-bar {
       display: block;
@@ -1870,7 +1916,11 @@ a {
    }
    /******************main-section***************/
    .main-section {
-      padding-top: 77px;
+      padding-top: 92px;
+   }
+   /********************back-link*************/
+   .back-link {
+      margin-bottom: 15px;
    }
    /********************left-side-navigation*********/
    .left-side-navigation {
@@ -1879,7 +1929,7 @@ a {
    }
    /********************main-content*********/
    .main-content {
-      padding: 30px 0 80px;
+      padding: 15px 0 80px;
    }
    /****************digest-realease************/
    .digest-realease {
@@ -2053,7 +2103,6 @@ a {
       }
       .profits-bloks {
          width: 100%;
-         margin-bottom: 15px;
       }
       .profit-block {
          margin-right: 0px;
@@ -2073,6 +2122,113 @@ a {
       }
       i.tooltip {
          margin-left: 5px;
+         font-size: 14px;
+      }
+   }
+   /*****************catalog-item-card**************/
+   .catalog-item-card {
+      grid-row-gap: 15px;
+      padding: 0 15px;
+      position: relative;
+      .invest-now {
+         margin: 20px 0;
+         padding: 10px 15px;
+      }
+   }
+   .product-card-img {
+      margin: 0 -30px;
+      .btns {
+         margin-left: 15px;
+         margin-right: 15px;
+      }
+   }
+   .product-card-info {
+      .digest-catalog-item {
+         position: static;
+      }
+      .digest-item-info {
+         padding: 0px;
+      }
+      .btns {
+         width: auto;
+         top: -48px;
+      }
+   }
+   .product-card-invest {
+      .consultant {
+         .logo {
+            height: 40px;
+         }
+         strong {
+            font-size: 13px;
+         }
+         span {
+            font-size: 11px;
+         }
+      }
+      .invest-info {
+         padding: 20px 15px;
+         margin: 0 -15px;
+         h2 {
+            font-size: 14px;
+            margin-bottom: 10px;
+         }
+         p {
+            font-size: 12px;
+            font-style: italic;
+         }
+      }
+      .last-invest-info {
+         .date {
+            margin-bottom: 15px;
+            font-size: 11px;
+            .mdi {
+               font-size: 11px;
+            }
+         }
+         table {
+            width: 100%;
+            th {
+               width: auto;
+               font-size: 10px;
+               padding-bottom: 5px;
+            }
+            td {
+               padding-top: 5px;
+               font-size: 13px;
+               font-weight: 700;
+            }
+         }
+      }
+      .invest-rules {
+         a {
+            font-size: 14px;
+            padding: 10px 0px;
+            i.mdi {
+               font-size: 24px;
+            }
+         }
+         .collapse {
+            padding: 10px 0px;
+         }
+      }
+   }
+   .other-product-list {
+      .item {
+         padding: 15px 0;
+      }
+      .image {
+         width: 100px;
+         height: 100px;
+         margin-right: 15px;
+      }
+      .brand {
+         font-size: 16px;
+      }
+      .lot-num {
+         font-size: 12px;
+      }
+      .name {
          font-size: 14px;
       }
    }

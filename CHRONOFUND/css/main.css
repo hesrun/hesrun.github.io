@@ -323,6 +323,29 @@ a {
     display: flex;
 }
 
+/********************back-link*************/
+.back-link {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #818181;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 30px;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    color: #f76844;
+}
+
+.back-link i.mdi {
+    font-size: 24px;
+    line-height: 1;
+}
+
 /********************left-side-navigation*********/
 .left-side-navigation {
     width: 280px;
@@ -1357,10 +1380,16 @@ a {
     -ms-flex-align: start;
     align-items: flex-start;
     padding: 30px 0;
+    border-top: 1px rgba(129, 129, 129, 0.4) solid;
 }
 
-.other-product-list .item + .item {
-    border-top: 1px rgba(129, 129, 129, 0.4) solid;
+.other-product-list .item:first-child {
+    padding-top: 0px;
+    border-top: 0px;
+}
+
+.other-product-list .item:last-child {
+    padding-bottom: 0px;
 }
 
 .other-product-list a {
@@ -2151,6 +2180,34 @@ a {
     .main-content {
         padding: 30px 0 130px;
     }
+  /*****************catalog-item-card**************/
+    .catalog-item-card {
+        margin: 0 auto;
+        max-width: 500px;
+        -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-column-gap: 30px;
+    }
+
+    .product-card-info .digest-catalog-item {
+        position: relative;
+    }
+
+    .product-card-info .digest-item-info {
+        padding: 0;
+    }
+
+    .product-card-info .digest-item-price-table {
+        margin: 15px 0 5px;
+    }
+
+    .product-card-info .digest-item-price-table td {
+        padding-bottom: 15px;
+    }
+
+    .product-card-info .btns {
+        top: 0px;
+    }
   /********************mobile-navigation-bar*****************/
     .mobile-navigation-bar {
         display: block;
@@ -2275,7 +2332,11 @@ a {
     }
   /******************main-section***************/
     .main-section {
-        padding-top: 77px;
+        padding-top: 92px;
+    }
+  /********************back-link*************/
+    .back-link {
+        margin-bottom: 15px;
     }
   /********************left-side-navigation*********/
     .left-side-navigation {
@@ -2284,7 +2345,7 @@ a {
     }
   /********************main-content*********/
     .main-content {
-        padding: 30px 0 80px;
+        padding: 15px 0 80px;
     }
   /****************digest-realease************/
     .digest-realease .search {
@@ -2496,7 +2557,6 @@ a {
 
     .digest-catalog-item .profits-bloks {
         width: 100%;
-        margin-bottom: 15px;
     }
 
     .digest-catalog-item .profit-block {
@@ -2522,6 +2582,126 @@ a {
 
     .digest-catalog-item i.tooltip {
         margin-left: 5px;
+        font-size: 14px;
+    }
+  /*****************catalog-item-card**************/
+    .catalog-item-card {
+        grid-row-gap: 15px;
+        padding: 0 15px;
+        position: relative;
+    }
+
+    .catalog-item-card .invest-now {
+        margin: 20px 0;
+        padding: 10px 15px;
+    }
+
+    .product-card-img {
+        margin: 0 -30px;
+    }
+
+    .product-card-img .btns {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .product-card-info .digest-catalog-item {
+        position: static;
+    }
+
+    .product-card-info .digest-item-info {
+        padding: 0px;
+    }
+
+    .product-card-info .btns {
+        width: auto;
+        top: -48px;
+    }
+
+    .product-card-invest .consultant .logo {
+        height: 40px;
+    }
+
+    .product-card-invest .consultant strong {
+        font-size: 13px;
+    }
+
+    .product-card-invest .consultant span {
+        font-size: 11px;
+    }
+
+    .product-card-invest .invest-info {
+        padding: 20px 15px;
+        margin: 0 -15px;
+    }
+
+    .product-card-invest .invest-info h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .product-card-invest .invest-info p {
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    .product-card-invest .last-invest-info .date {
+        margin-bottom: 15px;
+        font-size: 11px;
+    }
+
+    .product-card-invest .last-invest-info .date .mdi {
+        font-size: 11px;
+    }
+
+    .product-card-invest .last-invest-info table {
+        width: 100%;
+    }
+
+    .product-card-invest .last-invest-info table th {
+        width: auto;
+        font-size: 10px;
+        padding-bottom: 5px;
+    }
+
+    .product-card-invest .last-invest-info table td {
+        padding-top: 5px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .product-card-invest .invest-rules a {
+        font-size: 14px;
+        padding: 10px 0px;
+    }
+
+    .product-card-invest .invest-rules a i.mdi {
+        font-size: 24px;
+    }
+
+    .product-card-invest .invest-rules .collapse {
+        padding: 10px 0px;
+    }
+
+    .other-product-list .item {
+        padding: 15px 0;
+    }
+
+    .other-product-list .image {
+        width: 100px;
+        height: 100px;
+        margin-right: 15px;
+    }
+
+    .other-product-list .brand {
+        font-size: 16px;
+    }
+
+    .other-product-list .lot-num {
+        font-size: 12px;
+    }
+
+    .other-product-list .name {
         font-size: 14px;
     }
   /*****************search-mobile-modal**************/
