@@ -590,10 +590,51 @@
 <script type="text/javascript">
    $(document).ready(function() {
       $('.tooltip').tooltipster({
-         animation: 'fade',
+         animation: 'grow',
          trigger: 'click',
          animationDuration: 100,
-         maxWidth: 200
+         maxWidth: 200,
+         functionAfter: function(instance, helper) {
+            $('body').removeAttr("style");
+         }
+      });
+      anime({
+         targets: '.left-side-navigation strong',
+         translateX: [-150, 0],
+         opacity: [0, 1],
+         duration: 1000,
+         easing: 'easeInOutBack',
+         delay: anime.stagger(200, {start: 1000})
+      });
+      anime({
+         targets: '.left-side-navigation ul',
+         translateX: [-150, 0],
+         opacity: [0, 1],
+         duration: 1000,
+         easing: 'easeInOutBack',
+         delay: anime.stagger(200, {start: 1000})
+      });
+      anime({
+         targets: '.digest-realease, .catalog-tools',
+         opacity: [0, 1],
+         duration: 1000,
+         easing: 'easeInOutBack',
+         delay: 2000
+      });
+      anime({
+         targets: '.catalog-grid .catalog-grid-cell',
+         translateY: [100, 0],
+         opacity: [0, 1],
+         duration: 2000,
+         easing: 'easeInOutBack',
+         delay: anime.stagger(200, {start: 2500})
+      });
+      anime({
+         targets: '.need-help-chat',
+         opacity: [0, 1],
+         duration: 1000,
+         easing: 'easeInOutBack',
+         delay: 5000
       });
    });
 </script>
