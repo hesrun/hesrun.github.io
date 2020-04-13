@@ -51,7 +51,8 @@ a {
 /******************container**************/
 .container {
     margin: auto;
-    width: 1440px;
+    min-width: 1024px;
+    max-width: 1440px;
     padding: 0 30px;
 }
 
@@ -226,6 +227,7 @@ a {
 /********************main-header************/
 .main-header {
     padding: 25px 0;
+    min-width: 1024px;
     background-color: #191933;
     color: #fff;
 }
@@ -388,24 +390,23 @@ a {
     margin-top: 10px;
 }
 
-.left-side-navigation .need-help {
-    position: -webkit-sticky;
-    position: sticky;
-    margin-top: 50px;
-    top: 30px;
-    position: sticky;
+.need-help-chat {
+    position: fixed;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-align: center;
     align-items: center;
+    z-index: 100;
+    left: 30px;
+    bottom: 30px;
 }
 
-.left-side-navigation .need-help:hover i.mdi {
+.need-help-chat:hover i.mdi {
     -ms-transform: rotate(720deg);
     transform: rotate(720deg);
 }
 
-.left-side-navigation .need-help .mdi {
+.need-help-chat .mdi {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -416,14 +417,6 @@ a {
     background: #f76844;
     text-align: center;
     transition: all 1s;
-}
-
-.left-side-navigation .need-help span {
-    color: #818181;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    line-height: 1.5;
 }
 
 /********************main-content***************/
@@ -1056,8 +1049,8 @@ a {
 .catalog-item-card {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (calc(50% - 35px))[2];
+    grid-template-columns: repeat(2, calc(50% - 35px));
     -ms-grid-rows: (auto)[2];
     grid-template-rows: repeat(2, auto);
     grid-column-gap: 70px;
@@ -1084,6 +1077,7 @@ a {
 .catalog-item-card .invest-now {
     margin: 35px 0;
     background: #f76844;
+    border: 2px #f76844 solid;
     color: #fff;
     display: -ms-flexbox;
     display: flex;
@@ -1103,7 +1097,9 @@ a {
 }
 
 .catalog-item-card .invest-now:hover {
-    background: #cc3009;
+    border: 2px #f76844 solid;
+    background: transparent;
+    color: #f76844;
 }
 
 .product-card-img {
@@ -1150,24 +1146,13 @@ a {
     justify-content: center;
 }
 
-.product-card-img .btns a {
-    margin: 0 10px;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    font-weight: 600;
-    color: #818181;
-    font-size: 10px;
-    line-height: 23px;
-    height: 25px;
-    border: 1px solid #cccccc;
-    padding: 0 20px;
-    border-radius: 2px;
-    transition: all 0.3s;
+.product-card-img .btns .small-btn {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
-.product-card-img .btns a:hover {
-    background: #cccccc;
-    color: #000;
+.product-card-img .btns .small-btn + .small-btn {
+    margin-left: 15px;
 }
 
 .product-card-info .digest-catalog-item {
@@ -1226,11 +1211,12 @@ a {
     -ms-flex-align: center;
     align-items: center;
     background: #eaeaea;
-    padding: 15px 10px;
+    padding: 15px 15px;
     border-radius: 20px 20px 0 0;
 }
 
 .product-card-invest .consultant .avatar {
+    width: 50px;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin-right: 10px;
@@ -1242,20 +1228,20 @@ a {
 }
 
 .product-card-invest .consultant .logo {
-    height: 40px;
+    height: 50px;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
 }
 
 .product-card-invest .consultant strong {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .product-card-invest .consultant span {
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     color: #818181;
 }
 
@@ -1433,6 +1419,7 @@ a {
 
 /********************footer*****************/
 .main-footer {
+    min-width: 1024px;
     background: #191933;
     color: #fff;
     padding: 30px 0;
@@ -1977,6 +1964,7 @@ a {
   /*******************container**************/
     .container {
         width: 100%;
+        min-width: 0px;
         padding: 0 30px;
     }
   /******************sign pages*************/
@@ -1989,6 +1977,7 @@ a {
     .main-header {
         position: fixed;
         top: 0px;
+        min-width: 0px;
         width: 100%;
         z-index: 10;
     }
@@ -2040,7 +2029,7 @@ a {
         color: #fff;
     }
 
-    .left-side-navigation .need-help {
+    .need-help-chat {
         display: none;
     }
   /********************main-content*********/

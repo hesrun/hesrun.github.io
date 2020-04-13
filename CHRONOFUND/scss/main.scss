@@ -49,7 +49,8 @@ a {
 /******************container**************/
 .container {
    margin: auto;
-   width: 1440px;
+   min-width: 1024px;
+   max-width: 1440px;
    padding: 0 30px;
 }
 /******************sign pages*************/
@@ -180,6 +181,7 @@ a {
 /********************main-header************/
 .main-header {
    padding: 25px 0;
+   min-width: 1024px;
    background-color: $blue-bg;
    color: #fff;
    .logo {
@@ -312,40 +314,32 @@ a {
          }
       }
    }
-   .need-help {
-      position: sticky;
-      margin-top: 50px;
-      top: 30px;
-      position: sticky;
-      display: inline-flex;
-      align-items: center;
-      &:hover {
-         i.mdi {
-            transform: rotate(720deg);
-         }
-      }
-      .mdi {
-         width: 100px;
-         height: 100px;
-         border-radius: 50%;
-         color: #fff;
-         font-size: 60px;
-         line-height: 100px;
-         margin-right: 20px;
-         background: $orange;
-         text-align: center;
-         transition: all 1s;
-      }
-      span {
-         color: $grey;
-         font-size: 16px;
-         font-weight: 600;
-         letter-spacing: 2px;
-         line-height: 1.5;
+}
+.need-help-chat {
+   position: fixed;
+   display: inline-flex;
+   align-items: center;
+   z-index: 100;
+   left: 30px;
+   bottom: 30px;
+   &:hover {
+      i.mdi {
+         transform: rotate(720deg);
       }
    }
+   .mdi {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 60px;
+      line-height: 100px;
+      margin-right: 20px;
+      background: $orange;
+      text-align: center;
+      transition: all 1s;
+   }
 }
-
 /********************main-content***************/
 .main-content {
    flex: 1 1 auto;
@@ -848,7 +842,7 @@ a {
 /**********************catalog-item-card*******************/
 .catalog-item-card {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(2, calc(50% - 35px));
    grid-template-rows: repeat(2, auto);
    grid-column-gap: 70px;
    grid-row-gap: 45px;
@@ -869,6 +863,7 @@ a {
    .invest-now {
       margin: 35px 0;
       background: $orange;
+      border: 2px $orange solid;
       color: #fff;
       display: flex;
       align-items: center;
@@ -882,7 +877,9 @@ a {
          font-weight: 300;
       }
       &:hover {
-         background: darken($orange,20);
+         border: 2px $orange solid;
+         background: transparent;
+         color: $orange;
       }
    }
 }
@@ -920,21 +917,10 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
-      a {
-         margin: 0 10px;
-         display: inline-flex;
-         font-weight: 600;
-         color: $grey;
-         font-size: 10px;
-         line-height: 23px;
-         height: 25px;
-         border: 1px solid #cccccc;
-         padding: 0 20px;
-         border-radius: 2px;
-         transition: all 0.3s;
-         &:hover {
-            background: #cccccc;
-            color: #000;
+      .small-btn {
+         flex: 1 1 auto;
+         & + .small-btn {
+            margin-left: 15px;
          }
       }
    }
@@ -990,9 +976,10 @@ a {
       display: flex;
       align-items: center;
       background: #eaeaea;
-      padding: 15px 10px;
+      padding: 15px 15px;
       border-radius: 20px 20px 0 0;
       .avatar {
+         width: 50px;
          flex: 0 0 auto;
          margin-right: 10px;
       }
@@ -1000,17 +987,17 @@ a {
          flex: 1 1 auto;
       }
       .logo {
-         height: 40px;
+         height: 50px;
          flex: 0 0 auto;
       }
       strong {
          display: block;
-         font-size: 13px;
+         font-size: 14px;
          font-weight: 600;
       }
       span {
          display: block;
-         font-size: 10px;
+         font-size: 12px;
          color: $grey;
       }
       .rate {
@@ -1157,6 +1144,7 @@ a {
 }
 /********************footer*****************/
 .main-footer {
+   min-width: 1024px;
    background: $blue-bg;
    color: #fff;
    padding: 30px 0;
@@ -1612,6 +1600,7 @@ a {
    /*******************container**************/
    .container {
       width: 100%;
+      min-width: 0px;
       padding: 0 30px;
    }
    /******************sign pages*************/
@@ -1625,6 +1614,7 @@ a {
    .main-header {
       position: fixed;
       top: 0px;
+      min-width: 0px;
       width: 100%;
       z-index: 10;
       .btn-compare,
@@ -1668,9 +1658,9 @@ a {
             color: #fff;
          }
       }
-      .need-help {
-         display: none;
-      }
+   }
+   .need-help-chat {
+      display: none;
    }
    /********************main-content*********/
    .main-content {
