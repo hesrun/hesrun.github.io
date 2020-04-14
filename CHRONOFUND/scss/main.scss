@@ -1225,9 +1225,42 @@ a {
 .products-compare {
    display: flex;
 }
+.products-compare.is-white {
+   .products-compare-params {
+      span {
+         color: $grey;
+         border-right: 1px rgba($grey,0.2) solid;
+         border-bottom: 1px rgba($grey,0.2) solid;
+         &:first-child {
+            border: none;
+         }
+      }
+   }
+   .products-compare-list-item {
+      .params-list {
+         b {
+            border-right: 1px rgba($grey,0.2) solid;
+            border-bottom: 1px rgba($grey,0.2) solid;
+         }
+      }
+   }
+   .add-img {
+      border: 2px rgba($grey,0.2) dashed;
+      a {
+         color: $grey;
+      }
+   }
+   .btns {
+      .link {
+         i.mdi {
+            color: $grey;
+         }
+      }
+   }
+}
 .products-compare-params {
    flex: 0 0 auto;
-   width: 152px;
+   width: 155px;
    float: left;
    span {
       height: 40px;
@@ -1257,6 +1290,7 @@ a {
    }
 }
 .products-compare-list {
+   padding-right: 50px;
    min-width: 0;
    .owl-item:last-child {
       .params-list {
@@ -1272,13 +1306,20 @@ a {
             position: absolute;
             width: 50px;
             height: 50px;
-            background: $blue-bg;
+            border: 2px $brown solid;
+            background: $brown;
             color: #fff;
-            line-height: 50px;
+            line-height: 46px;
             font-size: 36px;
             text-align: center;
             cursor: pointer;
             border-radius: 12px;
+            outline: none;
+            transition: all 0.3s;
+            &:hover {
+               background: none;
+               color: $brown;
+            }
          }
          .owl-prev {
             left: -50px;
@@ -1290,10 +1331,16 @@ a {
    }
 }
 .products-compare-list-item {
-   width: 153px;
+   width: 173px;
    .head {
       padding: 0 15px;
       height: 200px;
+      a {
+         transition: all 0.3s;
+         &:hover {
+            color: $brown;
+         }
+      }
    }
    .image {
       margin: 0 auto;
@@ -1302,10 +1349,17 @@ a {
       overflow: hidden;
       border-radius: 12px;
       margin-bottom: 10px;
+      overflow: hidden;
+      &:hover {
+         img {
+            transform: scale(1.1);
+         }
+      }
       img {
          width: 100%;
          height: 100%;
          object-fit: cover;
+         transition: all 0.3s;
       }
    }
    .add-img {
@@ -1322,6 +1376,7 @@ a {
       }
    }
    .name {
+      margin: 0 auto;
       max-width: 120px;
       display: block;
       font-weight: 600;
@@ -2013,6 +2068,9 @@ a {
    /********************products-compare********************/
    .products-compare {
       margin-right: -30px;
+   }
+   .products-compare-list {
+      padding-right: 0px;
    }
    .products-compare-list-item {
       width: auto;
