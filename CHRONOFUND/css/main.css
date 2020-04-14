@@ -6,10 +6,18 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'SF UI Display';
     font-size: 14px;
     color: #2d2d2d;
+}
+
+body.sign-body {
+    height: 100%;
 }
 
 html.menu-open body {
@@ -26,7 +34,6 @@ a {
 }
 
 .app {
-    min-height: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -60,7 +67,7 @@ a {
 .sign-wrapper {
     display: -ms-flexbox;
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 
 .sign-wrapper .sign-present-column {
@@ -323,6 +330,15 @@ a {
     display: flex;
 }
 
+.main-section.blue-content {
+    background: linear-gradient(to right, #fff 0%, #fff 50%, #23236a 51%, #23236a 100%);
+}
+
+.main-section.blue-content .main-content {
+    background: #23236a;
+    color: #fff;
+}
+
 /********************back-link*************/
 .back-link {
     display: -ms-inline-flexbox;
@@ -483,6 +499,13 @@ a {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 30px 0 30px 30px;
+    min-width: 0;
+}
+
+.main-content h1 {
+    margin-bottom: 60px;
+    font-size: 35px;
+    font-weight: 600;
 }
 
 /************************digest-realease************/
@@ -1511,6 +1534,175 @@ a {
     margin-left: 5px;
 }
 
+/**********************catalog-item-card*******************/
+.products-compare {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.products-compare-params {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 152px;
+    float: left;
+}
+
+.products-compare-params span {
+    height: 40px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #9797fe;
+    font-size: 12px;
+    font-weight: 600;
+    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    letter-spacing: 1px;
+}
+
+.products-compare-params span:first-child {
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 55px;
+    height: 200px;
+    border: none;
+}
+
+.products-compare-params .tooltip {
+    margin-left: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.products-compare-params .tooltip:hover {
+    color: #f76844;
+}
+
+.products-compare-list {
+    min-width: 0;
+}
+
+.products-compare-list .owl-item:last-child .params-list b {
+    border-right: none;
+}
+
+.products-compare-list .owl-carousel .owl-nav button {
+    top: 35px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #191933;
+    color: #fff;
+    line-height: 50px;
+    font-size: 36px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.products-compare-list .owl-carousel .owl-nav .owl-prev {
+    left: -50px;
+}
+
+.products-compare-list .owl-carousel .owl-nav .owl-next {
+    right: -50px;
+}
+
+.products-compare-list-item {
+    width: 153px;
+}
+
+.products-compare-list-item .head {
+    padding: 0 15px;
+    height: 200px;
+}
+
+.products-compare-list-item .image {
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.products-compare-list-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.products-compare-list-item .add-img {
+    border: 2px rgba(255, 255, 255, 0.2) dashed;
+}
+
+.products-compare-list-item .add-img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 120px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #9797fe;
+}
+
+.products-compare-list-item .name {
+    max-width: 120px;
+    display: block;
+    font-weight: 600;
+    text-align: center;
+    line-height: 18px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.products-compare-list-item .params-list b {
+    display: -ms-flexbox;
+    display: flex;
+    height: 40px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+}
+
+.products-compare-list-item .btns {
+    padding: 15px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.products-compare-list-item .btns .small-btn {
+    width: 100%;
+}
+
+.products-compare-list-item .btns .link {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 6px 0;
+}
+
+.products-compare-list-item .btns .link i.mdi {
+    margin-right: 5px;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #fff;
+}
+
 /********************mobile-navigation-bar*****************/
 .mobile-navigation-bar {
     display: none;
@@ -1521,6 +1713,7 @@ a {
     background: #fff;
     padding: 30px 0;
     border-radius: 30px 30px 0 0;
+    z-index: 9;
 }
 
 .mobile-navigation-bar ul {
@@ -2191,6 +2384,10 @@ a {
     .main-section {
         padding-top: 124px;
     }
+
+    .main-section.blue-content {
+        background: #23236a;
+    }
   /********************left-side-navigation*********/
     .left-side-navigation {
         -ms-transform: translateX(-100%);
@@ -2255,6 +2452,14 @@ a {
 
     .product-card-info .btns {
         top: 0px;
+    }
+  /********************products-compare********************/
+    .products-compare {
+        margin-right: -30px;
+    }
+
+    .products-compare-list-item {
+        width: auto;
     }
   /********************mobile-navigation-bar*****************/
     .mobile-navigation-bar {
@@ -2394,6 +2599,16 @@ a {
   /********************main-content*********/
     .main-content {
         padding: 15px 0 80px;
+    }
+
+    .main-content h1 {
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .main-content h1 br {
+        display: none;
     }
   /****************digest-realease************/
     .digest-realease .search {
@@ -2751,6 +2966,22 @@ a {
 
     .other-product-list .name {
         font-size: 14px;
+    }
+  /*********************products-compare*************/
+    .products-compare {
+        margin-right: -15px;
+    }
+
+    .products-compare .products-compare-params {
+        width: 120px;
+    }
+
+    .products-compare .products-compare-params span {
+        font-size: 10px;
+    }
+
+    .products-compare-list-item .params-list b {
+        font-size: 13px;
     }
   /*****************search-mobile-modal**************/
     .search-mobile-modal .mobile-modal-content {
