@@ -27,7 +27,9 @@
             </span>
             <strong>NOW PLAYING</strong>
          </div>
-         <div class="radio-logo-text"><span>RADI</span><span>PESNI</span></div>
+         <div class="radio-logo-text">
+            <img src="img/logo-full.png" alt="">
+         </div>
       </div>
       <ul class="socials">
          <li>
@@ -64,10 +66,10 @@
       $("#handle").roundSlider({
          sliderType: "min-range",
          editableTooltip: false,
-         radius: 293,
-         width: 35,
+         radius: 200,
+         width: 20,
          value: 0,
-         handleSize: 66,
+         handleSize: 40,
          startAngle: 288,
          endAngle: 252
       });
@@ -84,6 +86,13 @@
          $('.on-off').removeClass('push');
       })
 
+      anime({
+        targets: '.mobile-logo',
+        scale: [0.5, 1],
+        opacity: [0,1],
+        duration: 3000,
+        delay: 1000
+      });
       anime({
         targets: '#handle',
         scale: [0.5, 1],
