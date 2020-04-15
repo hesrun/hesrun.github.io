@@ -1752,6 +1752,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     margin: 0 0 40px 0;
+    -ms-flex-align: stretch;
+    align-items: stretch;
 }
 
 .basket-list-item .image {
@@ -1794,7 +1796,6 @@ a {
     align-items: center;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    padding: 15px 0;
 }
 
 .basket-list-item .data:after {
@@ -1900,14 +1901,14 @@ a {
 .basket-profit b {
     font-weight: 600;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 18px;
     display: block;
 }
 
-.basket-total-summ span {
+.basket-total-summ b {
     font-weight: 600;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 18px;
     display: block;
 }
 
@@ -1917,6 +1918,7 @@ a {
     background: #c6a55b;
     border-radius: 20px;
     color: #fff;
+    text-align: center;
     padding: 15px 40px;
     transition: all 0.3s;
     line-height: 1.3;
@@ -1930,6 +1932,10 @@ a {
     display: block;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.basket-to-proceed span {
+    font-weight: 400;
 }
 
 .basket-note {
@@ -2566,6 +2572,10 @@ a {
     color: #0dad11 !important;
 }
 
+.red-text {
+    color: #ff00b6 !important;
+}
+
 @media screen and (max-width: 1024px) {
   /*****************catalog-item-card**************/
     .catalog-item-card {
@@ -2735,6 +2745,10 @@ a {
     .products-compare-list-item {
         width: auto;
     }
+  /*************************basket********************/
+    .basket-total-summ {
+        display: none;
+    }
   /********************mobile-navigation-bar*****************/
     .mobile-navigation-bar {
         display: block;
@@ -2876,9 +2890,8 @@ a {
     }
 
     .main-content h1 {
-        margin-bottom: 30px;
-        text-align: center;
-        font-size: 22px;
+        margin: 10px 0 25px;
+        font-size: 30px;
     }
 
     .main-content h1 br {
@@ -3269,6 +3282,108 @@ a {
 
     .products-compare-list-item .params-list b {
         font-size: 13px;
+    }
+  /*************************basket********************/
+    .basket-list-item {
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .basket-list-item .image {
+        margin-right: 15px;
+    }
+
+    .basket-list-item .image a {
+        width: 80px;
+        height: 80px;
+    }
+
+    .basket-list-item .data {
+        display: block;
+        position: relative;
+        padding-right: 50px;
+    }
+
+    .basket-list-item .data:after {
+        display: none;
+    }
+
+    .basket-list-item .info {
+        width: auto;
+        padding: 0px;
+    }
+
+    .basket-list-item .price {
+        display: block;
+        margin-top: 5px;
+        font-size: 13px;
+        width: auto;
+    }
+
+    .basket-list-item .brand {
+        display: none;
+    }
+
+    .basket-list-item .name {
+        font-size: 13px;
+        line-height: 1.3;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+    .basket-list-item .remove {
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        margin-top: -17px;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .basket-list-item .reference,
+  .basket-list-item .lot-num {
+        display: none;
+    }
+
+    .basket-total {
+        margin: 30px 0 0 0;
+        padding-top: 30px;
+        border-top: 1px rgba(129, 129, 129, 0.3) solid;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .basket-profit {
+        margin-bottom: 30px;
+    }
+
+    .basket-profit .tooltip {
+        margin-left: 10px;
+    }
+
+    .basket-profit b {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 0 10px;
+    }
+
+    .basket-to-proceed {
+        max-width: 100%;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .basket-note p {
+        padding: 15px 20%;
+        line-height: 1.3;
     }
   /*****************search-mobile-modal**************/
     .search-mobile-modal .mobile-modal-content {

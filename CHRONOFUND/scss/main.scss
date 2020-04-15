@@ -7,6 +7,7 @@ $blue:#23236a;
 $orange:#f76844;
 $green:#0dad11;
 $grey: #818181;
+$red: #ff00b6;
 
 * {
    padding: 0px;
@@ -1407,6 +1408,7 @@ a {
 .basket-list-item {
    display: flex;
    margin: 0 0 40px 0;
+   align-items: stretch;
    .image {
       flex: 0 0 auto;
       margin-right: 30px;
@@ -1437,7 +1439,6 @@ a {
       display: flex;
       align-items: center;
       flex: 1 1 auto;
-      padding: 15px 0;
       &:after {
          content: "";
          display: block;
@@ -1526,15 +1527,15 @@ a {
    b {
       font-weight: 600;
       margin-top: 5px;
-      font-size: 16px;
+      font-size: 18px;
       display: block;
    }
 }
 .basket-total-summ {
-   span {
+   b {
       font-weight: 600;
       margin-top: 5px;
-      font-size: 16px;
+      font-size: 18px;
       display: block;
    }
 }
@@ -1544,6 +1545,7 @@ a {
    background: $brown;
    border-radius: 20px;
    color: #fff;
+   text-align: center;
    padding: 15px 40px;
    transition: all 0.3s;
    line-height: 1.3;
@@ -1554,6 +1556,9 @@ a {
       display: block;
       text-transform: uppercase;
       font-weight: 600;
+   }
+   span {
+      font-weight: 400;
    }
 }
 .basket-note {
@@ -2086,6 +2091,9 @@ a {
 .green-text {
    color: $green !important;
 }
+.red-text {
+   color: $red !important;
+}
 @media screen and (max-width:1024px) {
    /*****************catalog-item-card**************/
    .catalog-item-card {
@@ -2237,10 +2245,15 @@ a {
    .products-compare-list-item {
       width: auto;
    }
+   /*************************basket********************/
+   .basket-total-summ {
+      display: none;
+   }
    /********************mobile-navigation-bar*****************/
    .mobile-navigation-bar {
       display: block;
    }
+
    /********************main-footer*********/
    .main-footer {
       display: none;
@@ -2364,9 +2377,8 @@ a {
    .main-content {
       padding: 15px 0 80px;
       h1 {
-         margin-bottom: 30px;
-         text-align: center;
-         font-size: 22px;
+         margin: 10px 0 25px;
+         font-size: 30px;
          br {
             display: none;
          }
@@ -2705,6 +2717,89 @@ a {
          b {
             font-size: 13px;
          }
+      }
+   }
+   /*************************basket********************/
+   .basket-list-item {
+      align-items: center;
+      margin-bottom: 30px;
+      .image {
+         margin-right: 15px;
+         a {
+            width: 80px;
+            height: 80px;
+         }
+      }
+      .data {
+         display: block;
+         position: relative;
+         padding-right: 50px;
+         &:after {
+            display: none;
+         }
+      }
+      .info {
+         width: auto;
+         padding: 0px;
+      }
+      .price {
+         display: block;
+         margin-top: 5px;
+         font-size: 13px;
+         width: auto;
+      }
+      .brand {
+         display: none;
+      }
+      .name {
+         font-size: 13px;
+         line-height: 1.3;
+         font-weight: 600;
+         margin: 0px;
+      }
+      .remove {
+         position: absolute;
+         right: 0px;
+         top: 50%;
+         margin-top: -17px;
+         width: 35px;
+         height: 35px;
+         font-size: 14px;
+      }
+      .reference,
+      .lot-num {
+         display: none;
+      }
+   }
+   .basket-total {
+      margin: 30px 0 0 0;
+      padding-top: 30px;
+      border-top: 1px rgba($grey,0.3) solid;
+      flex-direction: column;
+   }
+   .basket-profit {
+      margin-bottom: 30px;
+      .tooltip {
+         margin-left: 10px;
+      }
+      b {
+         display: inline-block;
+         vertical-align: middle;
+         margin: 0 0 0 10px;
+      }
+   }
+   .basket-to-proceed {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      border-radius: 12px;
+   }
+   .basket-note {
+      p {
+         padding: 15px 20%;
+         line-height: 1.3;
       }
    }
    /*****************search-mobile-modal**************/
