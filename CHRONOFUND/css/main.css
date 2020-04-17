@@ -4,6 +4,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    outline: none;
 }
 
 html {
@@ -67,6 +68,7 @@ a {
 .sign-wrapper {
     display: -ms-flexbox;
     display: flex;
+    min-height: 620px;
     height: 100%;
 }
 
@@ -2414,6 +2416,7 @@ a {
 }
 
 .c-input {
+    position: relative;
     width: 100%;
     display: -ms-flexbox;
     display: flex;
@@ -2441,8 +2444,8 @@ a {
 
 .c-input .c-input-icon-field {
     right: 0px;
-    bottom: 0px;
-    line-height: 35px;
+    top: 0px;
+    line-height: 50px;
     position: absolute;
 }
 
@@ -2478,6 +2481,14 @@ a {
     border-bottom: 2px white solid;
 }
 
+.c-input .err {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 .c-input.no-valid input {
     color: #ff00b6;
     border-color: #ff00b6;
@@ -2507,6 +2518,28 @@ a {
 
 .c-input.dark label {
     color: rgba(35, 35, 106, 0.6);
+}
+
+.c-input .iti__country-list {
+    top: 45px;
+    background: #191933;
+    border-radius: 12px;
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 12px 8px rgba(0, 0, 0, 0.2);
+}
+
+.c-input .iti__arrow {
+    border-top: 4px solid #fff;
+}
+
+.c-input .iti__arrow--up {
+    border-top: none;
+    border-bottom: 4px solid #fff;
+}
+
+.c-input .iti__divider {
+    opacity: 0.1;
 }
 
 .c-checkbox {
@@ -2922,7 +2955,7 @@ a {
         left: 0px;
         top: 0px;
         padding: 30px;
-        z-index: 1;
+        z-index: 5;
     }
 
     .sign-present-column.hidden-in-mobile {
