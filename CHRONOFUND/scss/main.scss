@@ -1608,7 +1608,65 @@ a {
       font-size: 12px;
    }
 }
-/********************mobile-navigation-bar*****************/
+/**********************faq********************/
+.faq-nav {
+   display: flex;
+   align-items: center;
+   list-style: none;
+   padding: 0px;
+   margin-bottom: 50px;
+   li {
+      margin-right: 30px;
+   }
+   a {
+      color: $grey;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+      &:hover, &.active {
+         color: $orange;
+      }
+   }
+}
+.faq-accordion-head {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-top: 1px rgba($grey,0.3) solid;
+   padding: 15px 0;
+   font-size: 20px;
+   transition: all 0.3s;
+   &:first-child {
+      border-top: none;
+   }
+   i.mdi {
+      font-size: 32px;
+      color: $grey;
+   }
+   &:hover {
+      color: $orange;
+      i.mdi {
+         color: $orange;
+      }
+   }
+}
+.faq-accordion-body {
+   display: none;
+   max-width: 80%;
+   padding: 0px 15px 25px 60px;
+   line-height: 1.5;
+   p {
+      margin-bottom: 30px;
+      &:last-child {
+         margin: 0px;
+      }
+   }
+   i {
+      color: $grey;
+   }
+}
+/************mobile-navigation-bar************/
 .mobile-navigation-bar {
    display: none;
    position: fixed;
@@ -2045,6 +2103,10 @@ a {
          color: $grey;
       }
    }
+   &.small-text {
+      font-size: 12px;
+      padding: 0 30px;
+   }
    i.mdi {
       font-size: 20px;
    }
@@ -2270,6 +2332,10 @@ a {
    /*************************basket********************/
    .basket-total-summ {
       display: none;
+   }
+   /**********************faq********************/
+   .faq-accordion-body {
+      max-width: 100%;
    }
    /********************mobile-navigation-bar*****************/
    .mobile-navigation-bar {
@@ -2727,7 +2793,6 @@ a {
          }
       }
    }
-
    .products-compare-list {
       .owl-carousel {
          .owl-nav {
@@ -2832,6 +2897,38 @@ a {
          padding: 15px 20%;
          line-height: 1.3;
       }
+   }
+   /**********************faq********************/
+   .faq-nav {
+      display: block;
+      margin-bottom: 15px;
+      li {
+         margin: 0px;
+         margin-top: -1px;
+      }
+      a {
+         display: block;
+         border: 1px #eee solid;
+         font-size: 12px;
+         text-align: center;
+         padding: 10px;
+         &.active {
+            background: $orange;
+            color: #fff;
+            border-color: $orange;
+         }
+      }
+   }
+   .faq-accordion-head {
+      font-size: 15px;
+      padding: 15px 0;
+      i.mdi {
+         font-size: 24px;
+      }
+   }
+   .faq-accordion-body {
+      padding-left: 0px;
+      padding-right: 0px;
    }
    /*****************search-mobile-modal**************/
    .search-mobile-modal {

@@ -1992,7 +1992,83 @@ a {
     font-size: 12px;
 }
 
-/********************mobile-navigation-bar*****************/
+/**********************faq********************/
+.faq-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.faq-nav li {
+    margin-right: 30px;
+}
+
+.faq-nav a {
+    color: #818181;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.faq-nav a:hover, .faq-nav a.active {
+    color: #f76844;
+}
+
+.faq-accordion-head {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-top: 1px rgba(129, 129, 129, 0.3) solid;
+    padding: 15px 0;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.faq-accordion-head:first-child {
+    border-top: none;
+}
+
+.faq-accordion-head i.mdi {
+    font-size: 32px;
+    color: #818181;
+}
+
+.faq-accordion-head:hover {
+    color: #f76844;
+}
+
+.faq-accordion-head:hover i.mdi {
+    color: #f76844;
+}
+
+.faq-accordion-body {
+    display: none;
+    max-width: 80%;
+    padding: 0px 15px 25px 60px;
+    line-height: 1.5;
+}
+
+.faq-accordion-body p {
+    margin-bottom: 30px;
+}
+
+.faq-accordion-body p:last-child {
+    margin: 0px;
+}
+
+.faq-accordion-body i {
+    color: #818181;
+}
+
+/************mobile-navigation-bar************/
 .mobile-navigation-bar {
     display: none;
     position: fixed;
@@ -2522,6 +2598,11 @@ a {
     color: #818181;
 }
 
+.small-btn.small-text {
+    font-size: 12px;
+    padding: 0 30px;
+}
+
 .small-btn i.mdi {
     font-size: 20px;
 }
@@ -2773,6 +2854,10 @@ a {
   /*************************basket********************/
     .basket-total-summ {
         display: none;
+    }
+  /**********************faq********************/
+    .faq-accordion-body {
+        max-width: 100%;
     }
   /********************mobile-navigation-bar*****************/
     .mobile-navigation-bar {
@@ -3421,6 +3506,44 @@ a {
     .basket-note p {
         padding: 15px 20%;
         line-height: 1.3;
+    }
+  /**********************faq********************/
+    .faq-nav {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .faq-nav li {
+        margin: 0px;
+        margin-top: -1px;
+    }
+
+    .faq-nav a {
+        display: block;
+        border: 1px #eee solid;
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .faq-nav a.active {
+        background: #f76844;
+        color: #fff;
+        border-color: #f76844;
+    }
+
+    .faq-accordion-head {
+        font-size: 15px;
+        padding: 15px 0;
+    }
+
+    .faq-accordion-head i.mdi {
+        font-size: 24px;
+    }
+
+    .faq-accordion-body {
+        padding-left: 0px;
+        padding-right: 0px;
     }
   /*****************search-mobile-modal**************/
     .search-mobile-modal .mobile-modal-content {
