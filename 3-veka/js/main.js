@@ -2,6 +2,11 @@
 $('.toggleMenu button').click(function() {
    $(this).parent().next().slideToggle();
 })
+//поиск
+$('.search-btn').click(function() {
+   $('.search-field').fadeToggle();
+   return false;
+})
 //рекламный слайдер
 $('.main-slider .owl-carousel').owlCarousel({
    autoplay:true,
