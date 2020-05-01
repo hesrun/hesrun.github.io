@@ -5,6 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
    <link rel="stylesheet" href="font/futura.css">
    <link rel="stylesheet" href="css/main.css">
    <title>Document</title>
@@ -74,7 +75,9 @@
                         <img src="img/cat-video.png" alt="">
                      </div>
                      <div class="video-holder">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a data-fancybox href="https://youtu.be/gpQpIejj2Hw">
+                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
                      </div>
                   </div>
                   <div class="item">
@@ -82,7 +85,9 @@
                         <img src="img/cat-filarmony.png" alt="">
                      </div>
                      <div class="video-holder">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a data-fancybox href="https://youtu.be/gpQpIejj2Hw">
+                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
                      </div>
                   </div>
                   <div class="item">
@@ -90,7 +95,9 @@
                         <img src="img/cat-lectory.png" alt="">
                      </div>
                      <div class="video-holder">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a data-fancybox href="https://youtu.be/gpQpIejj2Hw">
+                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
                      </div>
                   </div>
                   <div class="item">
@@ -98,7 +105,9 @@
                         <img src="img/cat-master.png" alt="">
                      </div>
                      <div class="video-holder">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a data-fancybox href="https://youtu.be/gpQpIejj2Hw">
+                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
                      </div>
                   </div>
                   <div class="item">
@@ -106,7 +115,9 @@
                         <img src="img/cat-slukh.png" alt="">
                      </div>
                      <div class="video-holder">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a data-fancybox href="https://youtu.be/gpQpIejj2Hw">
+                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
                      </div>
                   </div>
                   <div class="item">
@@ -114,7 +125,9 @@
                         <img src="img/cat-skazki.png" alt="">
                      </div>
                      <div class="video-holder">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <a data-fancybox href="https://youtu.be/gpQpIejj2Hw">
+                           <iframe width="100%" height="100%" src="https://www.youtube.com/embed/gpQpIejj2Hw?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </a>
                      </div>
                   </div>
                </div>
@@ -371,6 +384,7 @@
       </div>
    </footer>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js" charset="utf-8"></script>
    <script type="text/javascript">
       $('.bxslider').bxSlider({
@@ -421,6 +435,14 @@
          $('.today-programm').fadeOut(300);
          return false;
       })
+
+      $('.video-holder a').fancybox({
+         youtube : {
+            controls : 1,
+            showinfo : 1
+         }
+      });
+
    </script>
 </body>
 </html>

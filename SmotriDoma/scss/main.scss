@@ -127,6 +127,13 @@ body {
    .video-holder {
       height: 174px;
       flex: 1 1 auto;
+      a {
+         height: 100%;
+         display: block;
+         iframe {
+            pointer-events: none;
+         }
+      }
    }
 }
 
@@ -218,6 +225,7 @@ body {
          font-weight: 400;
       }
       span {
+         display: block;
          font-size: 14px;
          font-weight: 400;
       }
@@ -228,7 +236,7 @@ body {
    }
 }
 .today-programm {
-   display: none;
+   //display: none;
    background: #d8effa;
    border: 10px #87c7e5 solid;
    border-radius: 8px;
@@ -298,6 +306,7 @@ body {
 }
 
 .main-footer {
+   min-width: 1366px;
    margin: 50px 0;
    padding: 25px 0;
    background: #fff;
@@ -323,5 +332,187 @@ body {
       transition: all 0.3s;
       vertical-align: middle;
       width: 70%;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .wrapper {
+      width: 100%;
+      padding: 15px;
+   }
+   .main-footer {
+      min-width: 0px;
+   }
+   .schedule-house {
+      width: 100%;
+   }
+   .schedule-table {
+      width: auto;
+      top: 35%;
+      left: 12%;
+      bottom: 4%;
+      right: 10.7%;
+      table {
+         border-spacing: 3px 3px;
+      }
+      td {
+         height: 6.8vw;
+         border-width: 1px;
+         b {
+            margin-top: 0px;
+            font-size: 3vw;
+         }
+         span {
+            font-size: 2vw;
+         }
+      }
+   }
+   .today-programm {
+      width: auto;
+      left: 0px;
+      top: 33%;
+      right: 0px;
+      margin: 0px;
+      .date {
+         .day {
+            font-size: 6vw;
+         }
+         .day-name {
+            margin: 0px;
+            font-size: 3vw;
+         }
+      }
+      .programm-list {
+         margin: 3vw 0 5vw;
+         .time {
+            font-size: 6vw;
+         }
+         .name {
+            font-size: 3.5vw;
+         }
+      }
+   }
+
+
+   .head-banner {
+      margin: 0 0 15px 0;
+      p {
+         font-size: 3vw;
+      }
+   }
+
+   .small-banner {
+      margin-bottom: 20px;
+      p {
+         padding: 15px;
+         font-size: 2.7vw;
+      }
+   }
+
+   .look-at-home-navs {
+      .cols {
+         display: block;
+      }
+      .nav-col {
+         width: auto;
+         margin: 0 0 15px 0;
+      }
+      .video-col {
+         width: auto;
+         margin: 0px;
+      }
+   }
+
+   .video-nav {
+      .item {
+         margin-bottom: 15px;
+      }
+   }
+
+   .divider {
+      margin: 30px auto;
+   }
+
+   .section-full {
+      .section-title {
+         margin: 0px;
+         img {
+            width: 40%;
+         }
+      }
+      .video-info-text {
+         padding: 20px 15px;
+         background: #fff;
+         border-top: 1px #ccc solid;
+      }
+   }
+   .full-video-info {
+      display: block;
+      .video-block {
+         width: auto;
+         margin: 0px;
+      }
+   }
+   .video-info-text {
+      padding: 15px;
+      font-size: 20px;
+   }
+}
+@media screen and (max-width: 420px) {
+   .main-nav {
+      padding: 40px;
+      gap: 40px 40px
+   }
+   .video-nav {
+      .item {
+         padding: 15px 15px 15px 30px;
+      }
+      .icon {
+         width: 70px;
+         height: 70px;
+         margin-right: 30px;
+      }
+   }
+   .section-full {
+      .video-info-text {
+         font-size: 16px;
+      }
+   }
+   .full-video-info {
+      .video {
+         height: auto;
+      }
+      .name {
+         font-size: 17px;
+      }
+      .conts {
+         font-size: 12px;
+      }
+   }
+   .schedule-house {
+      .bg {
+         display: none;
+      }
+   }
+   .today-programm {
+      top: 0;
+   }
+   .schedule-table {
+      position: static;
+      td {
+         height: 11vw;
+         span {
+            margin-top: -5px;
+         }
+      }
+   }
+   .main-footer {
+      margin: 30px 0 0 0;
+      .partners {
+         max-width: 100%;
+      }
+      img {
+         width: 70%;
+      }
    }
 }
