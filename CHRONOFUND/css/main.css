@@ -232,6 +232,20 @@ a {
     align-items: center;
 }
 
+.sign-form-column .form-wrapper .btns .c-btn {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.sign-form-column .form-wrapper .note-text {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 9px;
+    line-height: 1.5;
+    color: #8F92A1;
+    margin-left: 10px;
+}
+
 .sign-form-column .form-wrapper .timer {
     margin-left: 20px;
     font-size: 12px;
@@ -243,6 +257,48 @@ a {
 
 .sign-form-column .form-wrapper .link {
     margin-left: 20px;
+}
+
+.sign-form-column .auth-by-social .c-btn {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.sign-form-column .auth-by-social .c-btn:last-child {
+    margin: 0px;
+}
+
+.sign-form-column .another-nethod {
+    margin: 30px 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.sign-form-column .another-nethod:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    top: 10px;
+    left: 0px;
+}
+
+.sign-form-column .another-nethod span {
+    position: relative;
+    background: #191933;
+    display: inline-block;
+    line-height: 20px;
+    border: 1px #fff solid;
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 15px;
+    z-index: 1;
 }
 
 .sign-form-column .bottom-btn {
@@ -269,8 +325,8 @@ a {
 
 /********************main-header************/
 .main-header {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0px;
     padding: 25px 0;
     min-width: 1024px;
@@ -371,8 +427,49 @@ a {
     background-color: #f76844;
 }
 
+/********************account-actiovation-note***********/
+.account-actiovation-note {
+    padding: 15px 0;
+    background: #c6a55b;
+    color: #fff;
+}
+
+.account-actiovation-note .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.account-actiovation-note .text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.account-actiovation-note .text i.mdi {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.account-actiovation-note .btns a + a {
+    margin-left: 20px;
+}
+
 /********************main-section*************/
-.main-section .container {
+.main-section {
+    padding-top: 123px;
+}
+
+.main-section > .container {
     display: -ms-flexbox;
     display: flex;
 }
@@ -539,10 +636,77 @@ a {
     min-width: 0;
 }
 
-.main-content h1 {
+.main-content > h1 {
     margin-bottom: 50px;
     font-size: 35px;
     font-weight: 600;
+}
+
+/********************article-text***************/
+.article-text a {
+    color: #f76844;
+    text-decoration: underline;
+}
+
+.article-text a:hover {
+    text-decoration: none;
+}
+
+.article-text h1 {
+    font-size: 2rem;
+    margin: 1.6rem 0;
+}
+
+.article-text h2 {
+    font-size: 1.8rem;
+    margin: 1.4rem 0;
+}
+
+.article-text h3 {
+    font-size: 1.6rem;
+    margin: 1.2rem 0;
+}
+
+.article-text h4 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+.article-text h5 {
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+}
+
+.article-text p {
+    margin: 1rem 0;
+    line-height: 1.3;
+}
+
+.article-text blockquote {
+    border-left: 4px #c6a55b solid;
+    padding: 0.5rem 0 0.5rem 1rem;
+    color: #818181;
+    font-style: italic;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.article-text ul {
+    padding-left: 3rem;
+    margin: 1rem 0;
+}
+
+.article-text ul li {
+    margin: 0.5rem 0;
+}
+
+.article-text ol {
+    padding-left: 3rem;
+    margin: 1rem 0;
+}
+
+.article-text ol li {
+    margin: 0.5rem 0;
 }
 
 /************************digest-realease************/
@@ -1813,7 +1977,7 @@ a {
     font-size: 20px;
 }
 
-/********************mobile-navigation-bar*****************/
+/********************basket-list-item*****************/
 .basket-list-item {
     display: -ms-flexbox;
     display: flex;
@@ -2010,7 +2174,8 @@ a {
 }
 
 .page-cap p {
-    padding: 30px 15px;
+    display: inline-block;
+    padding: 30px 15%;
     text-align: center;
     border: 1px rgba(129, 129, 129, 0.3) solid;
     font-size: 12px;
@@ -2216,6 +2381,14 @@ a {
     position: relative;
 }
 
+.mobile-navigation-bar ul a.active i.mdi {
+    display: none;
+}
+
+.mobile-navigation-bar ul a.active span {
+    display: block;
+}
+
 .mobile-navigation-bar ul a.active:after {
     content: "";
     display: block;
@@ -2230,6 +2403,7 @@ a {
 }
 
 .mobile-navigation-bar ul span {
+    display: none;
     line-height: 40px;
     font-size: 16px;
     font-weight: 600;
@@ -2452,8 +2626,6 @@ a {
     font-weight: 600;
     border-radius: 12px;
     line-height: 55px;
-    text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
     color: #000;
     padding: 0 20px;
@@ -2462,6 +2634,12 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
+}
+
+.c-btn.icon-left .mdi {
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 28px;
 }
 
 .c-btn.orange {
@@ -2562,10 +2740,12 @@ a {
 
 .c-input .err {
     display: block;
-    margin-top: 5px;
-    font-size: 10px;
-    letter-spacing: 1px;
+    margin-top: 15px;
+    color: #818181;
     text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .c-input.no-valid input {
@@ -2860,6 +3040,17 @@ a {
     color: #f76844;
 }
 
+.small-btn.white {
+    border-color: #fff;
+    background: #fff;
+    color: #c6a55b;
+}
+
+.small-btn.white:hover {
+    background: transparent;
+    color: #fff;
+}
+
 .small-btn.blue {
     border-color: #23236a;
     background: #23236a;
@@ -3077,6 +3268,14 @@ a {
 
     .main-header .head-btn + .head-btn {
         margin: 0px;
+    }
+  /**********************account-actiovation-note**********/
+    .account-actiovation-note .container {
+        display: block;
+    }
+
+    .account-actiovation-note .text {
+        margin-bottom: 10px;
     }
   /********************left-side-navigation*********/
     .left-side-navigation {
@@ -3323,7 +3522,10 @@ a {
     .main-header .head-btn span {
         display: none;
     }
-  /******************main-section***************/
+  /********************main-section*********/
+    .main-section {
+        padding-top: 91px;
+    }
   /********************back-link*************/
     .back-link {
         margin-bottom: 15px;
