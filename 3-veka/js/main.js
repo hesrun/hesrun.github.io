@@ -7,6 +7,11 @@ $('.search-btn').click(function() {
    $('.search-field').fadeToggle();
    return false;
 })
+//показываем подкатегории
+$('.category-list-item > a').click(function () {
+   $(this).next().slideToggle(300);
+   return false;
+})
 //рекламный слайдер
 $('.main-slider .owl-carousel').owlCarousel({
    autoplay:true,
