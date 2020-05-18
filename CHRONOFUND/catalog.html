@@ -7,6 +7,7 @@
    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.0.45/css/materialdesignicons.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
    <link rel="stylesheet" href="css/main.css">
    <title>Document</title>
 </head>
@@ -214,7 +215,7 @@
                <div class="mobile-catalog-tools">
                   <a href="#" class="link">
                      <i class="mdi mdi-bookmark-outline"></i>
-                     COMPARE ITEMS (0)
+                     COMPARE ITEMS <span class="count">5</span>
                   </a>
                   <a href="#FilterModal" class="link" rel="modal:open">
                      <i class="mdi mdi-filter-variant"></i>
@@ -224,6 +225,12 @@
                      <i class="mdi mdi-magnify"></i>
                      Search
                   </a>
+               </div>
+               <div class="catalog-grid empty">
+                  <div class="page-cap">
+                     <p>THERE IS NO ITEM IN YOUR INVESTMENT CART.</p> <br>
+                     <a href="#" class="small-btn blue">EXPLORE NOW</a>
+                  </div>
                </div>
                <div class="catalog-grid">
                   <div class="catalog-grid-cell">
@@ -240,7 +247,7 @@
                               <span class="lot-num">Lot. #7</span>
                            </b>
                            <strong class="reference">REF.: IW502103</strong>
-                           <a href="#" class="name">Classique Marine Chronograph Rose Gold</a>
+                           <a href="#" class="name">Classique Marine Chronograph Rose Gold Chronograph Rose Gold Chronograph Rose Gold</a>
                            <div class="table-params">
                               <div class="table-params">
                                  <table>
@@ -285,7 +292,7 @@
                               <a href="#" class="small-btn icon blue">
                                  <i class="mdi mdi-bookmark-outline"></i>
                               </a>
-                              <a href="#" class="small-btn orange">INVEST NOW</a>
+                              <a href="#" class="small-btn orange disabled" disabled>INVEST NOW</a>
                            </div>
                         </div>
                      </div>
@@ -612,18 +619,21 @@
                   <a href="#">
                      <i class="mdi mdi-home"></i>
                      <span>Home</span>
+                     <strong class="count">5</strong>
                   </a>
                </li>
                <li>
                   <a href="#">
                      <i class="mdi mdi-bookmark-outline"></i>
                      <span>Compare</span>
+                     <strong class="count">5</strong>
                   </a>
                </li>
                <li>
                   <a href="#" class="active">
                      <i class="mdi mdi-chart-timeline-variant"></i>
                      <span>Investments</span>
+                     <strong class="count">5</strong>
                   </a>
                </li>
                <li>
@@ -787,6 +797,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" charset="utf-8"></script>
 <script src="js/dropkick.js" charset="utf-8"></script>
 <script src="js/main.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -800,6 +811,41 @@
             $('body').removeAttr("style");
          }
       });
+      new Noty({
+         progressBar: true,
+         layout: 'bottomRight',
+         type: 'error',
+         theme: 'sunset',
+         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+      }).show();
+      new Noty({
+         progressBar: true,
+         layout: 'bottomRight',
+         type: 'alert',
+         theme: 'sunset',
+         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+      }).show();
+      new Noty({
+         progressBar: true,
+         layout: 'bottomRight',
+         type: 'success',
+         theme: 'sunset',
+         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+      }).show();
+      new Noty({
+         progressBar: true,
+         layout: 'bottomRight',
+         type: 'warning',
+         theme: 'sunset',
+         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+      }).show();
+      new Noty({
+         progressBar: true,
+         layout: 'bottomRight',
+         type: 'info',
+         theme: 'sunset',
+         text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+      }).show();
    });
 </script>
 </body>
