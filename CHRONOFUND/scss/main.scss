@@ -2050,6 +2050,68 @@ a {
    }
 }
 
+/******************my-investments********************/
+.my-investments-statistic {
+   display: flex;
+   margin: 0 -7.5px 35px;
+   .box {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+      background: #F0F0F0;
+      padding: 20px;
+      margin: 0 7.5px;
+   }
+   strong {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: $grey;
+      font-weight: 400;
+   }
+   b {
+      margin-top: 5px;
+      display: block;
+      font-size: 18px;
+      font-weight: 400;
+   }
+}
+
+.my-investments-list {
+   .basket-list-item {
+      margin: 0px;
+      padding: 40px 0;
+      border-bottom: 1px rgba($grey,0.5) solid;
+   }
+   .data:after {
+      display: none;
+   }
+   .info {
+      width: 46%;
+   }
+   .profits-col {
+      width: 27%;
+      padding-right: 40px;
+      .small-btn {
+         width: 100%;
+      }
+   }
+   .profit {
+      width: auto;
+      margin-bottom: 12px;
+      strong {
+         color: $grey;
+         font-size: 9px;
+         font-weight: 600;
+      }
+      .summ {
+         margin-top: 2px;
+         font-size: 15px;
+      }
+   }
+}
+
 /************mobile-navigation-bar************/
 .mobile-navigation-bar {
    display: none;
@@ -2771,6 +2833,14 @@ a {
       &:hover {
          background: transparent;
          color: $grey;
+      }
+      &.outline {
+         color: $grey;
+         background: none;
+         &:hover {
+            background: $grey;
+            color: #fff;
+         }
       }
    }
    &.brown {
