@@ -66,22 +66,14 @@ a {
 
 /******************sign pages*************/
 .sign-wrapper {
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 800px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     height: 100%;
 }
 
-.sign-wrapper .sign-present-column {
-    width: 50%;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-}
-
 .sign-wrapper .sign-form-column {
-    width: 50%;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
     background: #191933;
 }
 
@@ -262,6 +254,7 @@ a {
 .sign-form-column .auth-by-social .c-btn {
     width: 100%;
     margin-bottom: 25px;
+    text-align: left;
 }
 
 .sign-form-column .auth-by-social .c-btn:last-child {
@@ -306,7 +299,7 @@ a {
     background: #fff;
     width: 100%;
     max-width: 375px;
-    margin: auto;
+    margin: 30px auto 0;
     border-radius: 32px 32px 0 0;
     padding: 50px 30px;
     -ms-transform-origin: center bottom;
@@ -650,7 +643,7 @@ a {
 }
 
 .main-content > h1 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 35px;
     font-weight: 600;
 }
@@ -775,6 +768,7 @@ a {
 }
 
 .digest-realease .search .small-btn {
+    padding: 0px;
     margin-left: 10px;
 }
 
@@ -1013,6 +1007,7 @@ a {
 }
 
 .catalog-grid-item .item-info .brand {
+    margin-bottom: 5px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
@@ -1032,7 +1027,7 @@ a {
 .catalog-grid-item .item-info .reference {
     font-size: 12px;
     font-weight: 600;
-    display: block;
+    display: none;
     margin: 5px 0;
     text-transform: uppercase;
     color: #818181;
@@ -1082,7 +1077,7 @@ a {
     vertical-align: middle;
     text-align: right;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .catalog-grid-item .table-params td:last-child small {
@@ -1118,7 +1113,7 @@ a {
 .catalog-grid-item .profit-block b {
     margin-left: 10px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .catalog-grid-item .btns {
@@ -1191,7 +1186,7 @@ a {
     border-radius: 12px 12px 0 0;
     position: relative;
     overflow: hidden;
-    height: 415px;
+    height: 375px;
 }
 
 .digest-catalog-item .image img {
@@ -1322,7 +1317,7 @@ a {
     text-align: center;
     width: 33.333%;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .digest-catalog-item .digest-item-price-table td:first-child {
@@ -1364,7 +1359,7 @@ a {
 .digest-catalog-item .profit-block b {
     margin-left: 10px;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .digest-catalog-item .btns {
@@ -2115,6 +2110,8 @@ a {
 
 .basket-list-item .profit strong,
 .basket-list-item .price strong {
+    color: #818181;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
@@ -2125,7 +2122,7 @@ a {
     margin-top: 5px;
     display: block;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .basket-list-item .remove {
@@ -2187,6 +2184,8 @@ a {
 }
 
 .basket-total strong {
+    color: #818181;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
@@ -2196,7 +2195,7 @@ a {
     margin-top: 5px;
     display: block;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .page-cap {
@@ -2555,6 +2554,7 @@ a {
 }
 
 .my-investments-statistic strong {
+    line-height: 1.6;
     text-transform: uppercase;
     font-size: 11px;
     letter-spacing: 1px;
@@ -2563,7 +2563,6 @@ a {
 }
 
 .my-investments-statistic b {
-    margin-top: 5px;
     display: block;
     font-size: 18px;
     font-weight: 400;
@@ -2586,6 +2585,8 @@ a {
 .my-investments-list .profits-col {
     width: 27%;
     padding-right: 40px;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
 }
 
 .my-investments-list .profits-col .small-btn {
@@ -2606,6 +2607,62 @@ a {
 .my-investments-list .profit .summ {
     margin-top: 2px;
     font-size: 15px;
+}
+
+.my-investments-list .end-time {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.my-investments-list .invest-date {
+    font-size: 11px;
+}
+
+.investments-progress {
+    width: 220px;
+}
+
+.investments-progress span {
+    font-size: 11px;
+}
+
+.investments-progress .legends {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.investments-progress .progress {
+    overflow: hidden;
+    margin: 5px 0;
+    background: #d8d8d8;
+    height: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.investments-progress .progress:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    width: 1px;
+    height: 10px;
+    background: #fff;
+}
+
+.investments-progress .progress .inner {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #f76844 0%, #f76844 110px, #0dad11 111px, #0dad11 100%);
+}
+
+.investments-progress .progress.blue .inner {
+    background: #23236a;
 }
 
 /************mobile-navigation-bar************/
@@ -3481,6 +3538,27 @@ a {
     color: #fff;
 }
 
+.small-btn.green {
+    border-color: #0dad11;
+    background: #0dad11;
+    color: #fff;
+}
+
+.small-btn.green:hover {
+    background: transparent;
+    color: #0dad11;
+}
+
+.small-btn.green.outline {
+    color: #0dad11;
+    background: none;
+}
+
+.small-btn.green.outline:hover {
+    background: #0dad11;
+    color: #fff;
+}
+
 .small-btn.brown {
     border-color: #c6a55b;
     background: #c6a55b;
@@ -3567,6 +3645,40 @@ a {
     color: #000;
 }
 
+.noty_theme__sunset.noty_type__success {
+    background: #0dad11;
+}
+
+.noty_theme__sunset.noty_type__error {
+    background: #f76844;
+}
+
+.noty_theme__sunset.noty_type__alert, .noty_theme__sunset.noty_type__notification {
+    background: #191933;
+}
+
+.noty_theme__sunset.noty_type__warning {
+    background: #c6a55b;
+}
+
+.noty_theme__sunset.noty_type__warning {
+    background: #c6a55b;
+}
+
+.noty_theme__sunset.noty_type__info, .noty_theme__sunset.noty_type__information {
+    background: #23236a;
+}
+
+.noty_theme__sunset.noty_bar {
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+.noty_theme__sunset.noty_bar .noty_body {
+    padding: 10px 15px;
+    text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.2);
+}
+
 /******************color**************/
 .green-text {
     color: #0dad11 !important;
@@ -3577,7 +3689,11 @@ a {
 }
 
 .red-text {
-    color: #ff00b6 !important;
+    color: #f76844 !important;
+}
+
+.blue-text {
+    color: #23236a !important;
 }
 
 @media screen and (min-width: 769px) {
@@ -3812,6 +3928,11 @@ a {
     .main-footer {
         display: none;
     }
+  /****************ui****************/
+    #noty_layout__bottomLeft {
+        left: 15px;
+        bottom: 115px;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -3823,12 +3944,18 @@ a {
         padding: 0 15px;
     }
   /******************sign pages*************/
+    .sign-wrapper {
+        display: block;
+    }
+
     .sign-wrapper .sign-present-column {
         width: 100%;
+        height: 100%;
     }
 
     .sign-wrapper .sign-form-column {
         width: 100%;
+        height: 100%;
     }
 
     .sign-present-column {
@@ -4762,5 +4889,10 @@ a {
 
     .c-b-input label {
         font-size: 14px;
+    }
+
+    #noty_layout__bottomLeft {
+        left: 15px;
+        bottom: 65px;
     }
 }

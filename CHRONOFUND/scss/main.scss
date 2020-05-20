@@ -61,16 +61,10 @@ a {
 }
 /******************sign pages*************/
 .sign-wrapper {
-   display: flex;
-   min-height: 800px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
    height: 100%;
-   .sign-present-column {
-      width: 50%;
-      flex: 0 0 auto;
-   }
    .sign-form-column {
-      width: 50%;
-      flex: 0 0 auto;
       background: $blue-bg;
    }
 }
@@ -210,6 +204,7 @@ a {
       .c-btn {
          width: 100%;
          margin-bottom: 25px;
+         text-align: left;
       }
       .c-btn:last-child {
          margin: 0px;
@@ -250,7 +245,7 @@ a {
       background: #fff;
       width: 100%;
       max-width: 375px;
-      margin: auto;
+      margin: 30px auto 0;
       border-radius: 32px 32px 0 0;
       padding: 50px 30px;
       transform-origin: center bottom;
@@ -534,7 +529,7 @@ a {
    padding: 30px 0 30px 30px;
    min-width: 0;
    > h1 {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       font-size: 35px;
       font-weight: 600;
    }
@@ -632,6 +627,7 @@ a {
          padding: 0 10px;
       }
       .small-btn {
+         padding: 0px;
          margin-left: 10px;
       }
    }
@@ -829,6 +825,7 @@ a {
    .item-info {
       flex: 1 1 auto;
       .brand {
+         margin-bottom: 5px;
          display: flex;
          justify-content: space-between;
          font-size: 20px;
@@ -843,7 +840,7 @@ a {
       .reference {
          font-size: 12px;
          font-weight: 600;
-         display: block;
+         display: none;
          margin: 5px 0;
          text-transform: uppercase;
          color: $grey;
@@ -885,7 +882,7 @@ a {
          vertical-align: middle;
          text-align: right;
          font-size: 14px;
-         font-weight: 700;
+         font-weight: 500;
          small {
             display: inline-block;
             font-size: 14px;
@@ -911,7 +908,7 @@ a {
       b {
          margin-left: 10px;
          font-size: 16px;
-         font-weight: 700;
+         font-weight: 500;
       }
    }
    .btns {
@@ -973,7 +970,7 @@ a {
       border-radius: 12px 12px 0 0;
       position: relative;
       overflow: hidden;
-      height: 415px;
+      height: 375px;
       img {
          height: 100%;
          object-fit: cover;
@@ -1082,7 +1079,7 @@ a {
          text-align: center;
          width: 33.333%;
          font-size: 18px;
-         font-weight: 700;
+         font-weight: 500;
          &:first-child {
             text-align: left;
          }
@@ -1112,7 +1109,7 @@ a {
       b {
          margin-left: 10px;
          font-size: 16px;
-         font-weight: 700;
+         font-weight: 500;
       }
    }
    .btns {
@@ -1711,6 +1708,8 @@ a {
    .price {
       width: 30%;
       strong {
+         color: $grey;
+         font-weight: 600;
          text-transform: uppercase;
          font-size: 12px;
          letter-spacing: 1px;
@@ -1719,7 +1718,7 @@ a {
          margin-top: 5px;
          display: block;
          font-size: 18px;
-         font-weight: 400;
+         font-weight: 500;
       }
    }
 
@@ -1770,6 +1769,8 @@ a {
       }
    }
    strong {
+      color: $grey;
+      font-weight: 600;
       text-transform: uppercase;
       font-size: 12px;
       letter-spacing: 1px;
@@ -1778,7 +1779,7 @@ a {
       margin-top: 5px;
       display: block;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 500;
    }
 }
 .page-cap {
@@ -2064,6 +2065,7 @@ a {
       margin: 0 7.5px;
    }
    strong {
+      line-height: 1.6;
       text-transform: uppercase;
       font-size: 11px;
       letter-spacing: 1px;
@@ -2071,7 +2073,6 @@ a {
       font-weight: 400;
    }
    b {
-      margin-top: 5px;
       display: block;
       font-size: 18px;
       font-weight: 400;
@@ -2093,6 +2094,7 @@ a {
    .profits-col {
       width: 27%;
       padding-right: 40px;
+      align-self: flex-start;
       .small-btn {
          width: 100%;
       }
@@ -2110,6 +2112,54 @@ a {
          font-size: 15px;
       }
    }
+   .end-time {
+      display: block;
+      margin-top: 5px;
+      font-size: 12px;
+      text-transform: uppercase;
+   }
+   .invest-date {
+      font-size: 11px;
+   }
+}
+.investments-progress {
+   width: 220px;
+   span {
+      font-size: 11px;
+   }
+   .legends {
+      display: flex;
+      justify-content: space-between;
+   }
+   .progress {
+      overflow: hidden;
+      margin: 5px 0;
+      background: #d8d8d8;
+      height: 10px;
+      border-radius: 10px;
+      position: relative;
+      &:after {
+         content: "";
+         display: block;
+         position: absolute;
+         left: 50%;
+         top: 0px;
+         width: 1px;
+         height: 10px;
+         background: #fff;
+      }
+      .inner {
+         height: 100%;
+         border-radius: 10px;
+         background: linear-gradient(90deg, $red 0%, $red 110px, $green 111px, $green 100%);
+      }
+      &.blue {
+         .inner {
+            background: $blue;
+         }
+      }
+   }
+
 }
 
 /************mobile-navigation-bar************/
@@ -2843,6 +2893,23 @@ a {
          }
       }
    }
+   &.green {
+      border-color: $green;
+      background: $green;
+      color: #fff;
+      &:hover {
+         background: transparent;
+         color: $green;
+      }
+      &.outline {
+         color: $green;
+         background: none;
+         &:hover {
+            background: $green;
+            color: #fff;
+         }
+      }
+   }
    &.brown {
       border-color: $brown;
       background: $brown;
@@ -2919,7 +2986,36 @@ a {
    }
 }
 
-
+.noty_theme__sunset {
+   &.noty_type__success {
+      background: $green;
+   }
+   &.noty_type__error {
+      background: $red;
+   }
+   &.noty_type__alert,
+   &.noty_type__notification {
+      background: $blue-bg;
+   }
+   &.noty_type__warning {
+      background: $brown;
+   }
+   &.noty_type__warning {
+      background: $brown;
+   }
+   &.noty_type__info,
+   &.noty_type__information {
+      background: $blue;
+   }
+   &.noty_bar {
+      border-radius: 15px;
+      margin: 10px 0;
+      .noty_body {
+         padding: 10px 15px;
+         text-shadow: -1px -1px 2px rgba(0,0,0,.2);
+      }
+   }
+}
 /******************color**************/
 .green-text {
    color: $green !important;
@@ -2928,7 +3024,10 @@ a {
    color: $grey !important;
 }
 .red-text {
-   color: $pink !important;
+   color: $red !important;
+}
+.blue-text {
+   color: $blue !important;
 }
 @media screen and (min-width:769px) {
    .main-header {
@@ -3147,6 +3246,11 @@ a {
    .main-footer {
       display: none;
    }
+   /****************ui****************/
+   #noty_layout__bottomLeft {
+      left: 15px;
+      bottom: 115px;
+   }
 }
 @media screen and (max-width:420px) {
    body {
@@ -3158,11 +3262,14 @@ a {
    }
    /******************sign pages*************/
    .sign-wrapper {
+      display: block;
       .sign-present-column {
          width: 100%;
+         height: 100%;
       }
       .sign-form-column {
          width: 100%;
+         height: 100%;
       }
    }
    .sign-present-column {
@@ -3963,5 +4070,9 @@ a {
       label {
          font-size: 14px;
       }
+   }
+   #noty_layout__bottomLeft {
+      left: 15px;
+      bottom: 65px;
    }
 }
