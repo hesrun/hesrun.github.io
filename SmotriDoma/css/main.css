@@ -22,7 +22,7 @@ body {
     background-image: url(../img/covid-bg.png);
     background-repeat: repeat-y;
     background-size: 100% auto;
-    font-family: 'Bahnschrift';
+    font-family: 'Exo 2', sans-serif;
 }
 
 .wrapper {
@@ -69,8 +69,8 @@ body {
 
 .small-banner p {
     padding: 30px;
-    font-weight: 300;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 20px;
     color: #fff;
     position: absolute;
     bottom: 0px;
@@ -118,9 +118,9 @@ body {
 .video-nav .icon {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    margin-right: 45px;
-    width: 100px;
-    height: 100px;
+    margin-right: 33px;
+    width: 80px;
+    height: 80px;
     border: 3px #fff solid;
     border-radius: 50%;
 }
@@ -144,18 +144,31 @@ body {
 }
 
 .video-nav .video-holder {
-    height: 174px;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
 }
 
 .video-nav .video-holder a {
-    height: 100%;
+    position: relative;
     display: block;
 }
 
-.video-nav .video-holder a iframe {
-    pointer-events: none;
+.video-nav .video-holder a:hover .fas {
+    color: #009bff;
+}
+
+.video-nav .video-holder .fas {
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.video-nav .video-holder img {
+    width: 100%;
 }
 
 .section-full .section-title {
@@ -179,8 +192,27 @@ body {
     margin-right: 50px;
 }
 
-.full-video-info .video {
-    height: 300px;
+.full-video-info .video-block a {
+    position: relative;
+    display: block;
+}
+
+.full-video-info .video-block a:hover .fas {
+    color: #009bff;
+}
+
+.full-video-info .video-block .fas {
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.full-video-info .video-block img {
+    width: 100%;
 }
 
 .full-video-info .name {
@@ -224,7 +256,7 @@ body {
 
 .schedule-table {
     position: absolute;
-    bottom: 25px;
+    bottom: 20px;
     left: 120px;
     width: 775px;
 }
@@ -235,12 +267,23 @@ body {
     border-spacing: 8px 8px;
 }
 
+.schedule-table th {
+    background: #d8effa;
+    padding: 5px 0;
+    border: 2px #80c3e2 solid;
+}
+
+.schedule-table tr td:nth-child(6),
+.schedule-table tr td:nth-child(7) {
+    background: #fffbe2;
+}
+
 .schedule-table td {
     cursor: pointer;
     background: #d8effa;
     border: 2px #80c3e2 solid;
     border-radius: 2px;
-    height: 65px;
+    height: 56px;
     color: #173d5e;
     text-align: center;
     vertical-align: middle;
@@ -248,15 +291,14 @@ body {
 }
 
 .schedule-table td:not(.today):hover {
-    background: #fff;
+    background: #fff !important;
 }
 
 .schedule-table td b {
-    margin-top: 10px;
-    font-size: 38px;
+    font-size: 30px;
     display: block;
     line-height: 25px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .schedule-table td span {
@@ -266,18 +308,39 @@ body {
 }
 
 .schedule-table .today {
-    background: #6a9eb5;
+    background: #6a9eb5 !important;
+    color: #fff !important;
+}
+
+.schedule-table .fas {
+    position: absolute;
+    font-size: 50px;
+    top: 50%;
+    margin: -25px 0 0 0;
+    color: #6a9eb5;
+}
+
+.schedule-table .fas:hover {
     color: #fff;
 }
 
+.schedule-table .fa-chevron-left {
+    left: -60px;
+}
+
+.schedule-table .fa-chevron-right {
+    right: -60px;
+}
+
 .today-programm {
+    display: none;
     background: #d8effa;
     border: 10px #87c7e5 solid;
     border-radius: 8px;
     box-shadow: 0px 0px 1px 1px #7daabe inset;
     position: absolute;
     width: 740px;
-    top: 200px;
+    bottom: -10px;
     left: 50%;
     margin-left: -363px;
     padding: 15px 25px;
@@ -355,9 +418,17 @@ body {
     color: #173d5e;
 }
 
+.today-programm .programm-list-empty {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 7vw 0;
+    text-align: center;
+    font-size: 32px;
+}
+
 .main-footer {
     min-width: 1366px;
-    margin: 50px 0;
+    margin: 90px 0 50px;
     padding: 25px 0;
     background: #fff;
     border-top: 4px #6fbbdd solid;
@@ -406,7 +477,7 @@ body {
 
     .schedule-table {
         width: auto;
-        top: 35%;
+        top: 33%;
         left: 12%;
         bottom: 4%;
         right: 10.7%;
@@ -416,14 +487,18 @@ body {
         border-spacing: 3px 3px;
     }
 
+    .schedule-table th {
+        border-width: 1px;
+    }
+
     .schedule-table td {
-        height: 6.8vw;
+        height: 5.6vw;
         border-width: 1px;
     }
 
     .schedule-table td b {
-        margin-top: 0px;
         font-size: 3vw;
+        line-height: 20px;
     }
 
     .schedule-table td span {
@@ -490,6 +565,10 @@ body {
         margin: 0px;
     }
 
+    .video-nav .video-holder {
+        height: auto;
+    }
+
     .video-nav .item {
         margin-bottom: 15px;
     }
@@ -533,6 +612,10 @@ body {
         gap: 40px 40px;
     }
 
+    .small-banner p {
+        font-size: 2.5vw;
+    }
+
     .video-nav .item {
         padding: 15px 15px 15px 30px;
     }
@@ -541,6 +624,10 @@ body {
         width: 70px;
         height: 70px;
         margin-right: 30px;
+    }
+
+    .video-nav .video-holder .fas {
+        font-size: 32px;
     }
 
     .section-full .video-info-text {
@@ -567,12 +654,44 @@ body {
         top: 0;
     }
 
+    .today-programm .programm-list-empty {
+        padding: 20vw 0;
+        font-size: 18px;
+    }
+
+    .today-programm .close {
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+    }
+
     .schedule-table {
         position: static;
+        padding: 0 20px;
+    }
+
+    .schedule-table .fas {
+        font-size: 24px;
+        margin-top: -12px;
+    }
+
+    .schedule-table .fa-chevron-left {
+        left: -5px;
+    }
+
+    .schedule-table .fa-chevron-right {
+        right: -5px;
+    }
+
+    .schedule-table th {
+        font-size: 3vw;
     }
 
     .schedule-table td {
         height: 11vw;
+    }
+
+    .schedule-table td b {
+        margin-top: 0px;
     }
 
     .schedule-table td span {
