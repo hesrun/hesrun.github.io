@@ -2,7 +2,6 @@ var scTop;
 
 $(window).scroll(function() {
    scTop = $(this).scrollTop();
-   console.log(scTop);
    if (scTop > 300) {
       $(".main-header").addClass('mini');
    } else {

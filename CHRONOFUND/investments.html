@@ -600,6 +600,21 @@
             $('body').removeAttr("style");
          }
       });
+
+      function ResizeProgress(){
+         $('.progress').each(function() {
+            pWidth = $(this).width();
+            $(this).get(0).style.setProperty("--progress-width", pWidth+'px');
+         })
+
+      }
+      ResizeProgress();
+      $(widnow).resize(function () {
+         ResizeProgress();
+      })
+
+
+
    });
 </script>
 </body>

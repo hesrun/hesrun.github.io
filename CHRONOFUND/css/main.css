@@ -382,6 +382,23 @@ a {
     transition: all 0.5s;
 }
 
+.main-header .head-btn .currency-name {
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    color: #fff;
+    border-radius: 12px;
+    border: 2px #fff solid;
+    font-size: 20px;
+    text-align: center;
+    line-height: 36px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
 .main-header .head-btn.badge .mdi:after {
     content: attr(data-badge);
     position: absolute;
@@ -410,6 +427,12 @@ a {
 
 .main-header .head-btn:hover i.mdi {
     background: #c6a55b;
+}
+
+.main-header .head-btn:hover .currency-name {
+    background: #c6a55b;
+    color: #23236a;
+    border-color: #c6a55b;
 }
 
 .main-header #mobileMenueOpen {
@@ -497,6 +520,37 @@ a {
     flex: 0 0 auto;
     border-right: 1px #efefef solid;
     padding: 30px 30px 30px 0;
+}
+
+.left-side-navigation .currency-toggle {
+    display: none;
+    color: #fff;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 13px;
+    border: 1px rgba(255, 255, 255, 0.5) solid;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.left-side-navigation .currency-toggle:hover {
+    border-color: #c6a55b;
+    background: #c6a55b;
+    color: #191933;
+}
+
+.left-side-navigation .currency-toggle .currency-name {
+    margin-left: auto;
+}
+
+.left-side-navigation .currency-toggle .mdi {
+    font-size: 20px;
 }
 
 .left-side-navigation strong {
@@ -768,7 +822,8 @@ a {
 }
 
 .digest-realease .search .small-btn {
-    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     margin-left: 10px;
 }
 
@@ -1369,6 +1424,10 @@ a {
     align-items: center;
 }
 
+.digest-catalog-item .btns .small-btn {
+    padding: 0px;
+}
+
 .digest-catalog-item .btns .orange {
     min-width: 140px;
     -ms-flex: 1 1 auto;
@@ -1452,6 +1511,16 @@ a {
 .product-card-img .image {
     margin: 0 auto;
     position: relative;
+}
+
+.product-card-img .image a {
+    display: block;
+    height: 400px;
+}
+
+.product-card-img .image a img {
+    height: 100%;
+    object-fit: contain;
 }
 
 .product-card-img .owl-dots {
@@ -1675,7 +1744,7 @@ a {
     font-weight: 600;
 }
 
-.product-card-invest .invest-rules a {
+.invest-rules-accord a {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -1689,15 +1758,15 @@ a {
     padding: 16px 15px;
 }
 
-.product-card-invest .invest-rules a i.mdi {
+.invest-rules-accord a i.mdi {
     font-size: 24px;
 }
 
-.product-card-invest .invest-rules a:hover {
+.invest-rules-accord a:hover {
     color: #f76844;
 }
 
-.product-card-invest .invest-rules .collapse {
+.invest-rules-accord .collapse {
     display: none;
     padding: 15px;
     border-bottom: 1px rgba(129, 129, 129, 0.4) solid;
@@ -2260,7 +2329,12 @@ a {
 .profile h2 {
     font-size: 35px;
     font-weight: 300;
+    margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.profile h2:first-child {
+    margin-top: 0px;
 }
 
 .profile .profile-cols {
@@ -2536,7 +2610,7 @@ a {
 .my-investments-statistic {
     display: -ms-flexbox;
     display: flex;
-    margin: 0 -7.5px 35px;
+    margin: 0 -7.5px 40px;
 }
 
 .my-investments-statistic .box {
@@ -2548,7 +2622,7 @@ a {
     align-items: center;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    background: #F0F0F0;
+    background: rgba(189, 189, 189, 0.2);
     padding: 20px;
     margin: 0 7.5px;
 }
@@ -2556,10 +2630,10 @@ a {
 .my-investments-statistic strong {
     line-height: 1.6;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 1px;
     color: #818181;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .my-investments-statistic b {
@@ -2576,6 +2650,14 @@ a {
     align-items: center;
 }
 
+.my-investments-list .basket-list-item:first-child {
+    padding-top: 0px;
+}
+
+.my-investments-list .basket-list-item:last-child {
+    border: none;
+}
+
 .my-investments-list .data:after {
     display: none;
 }
@@ -2587,10 +2669,24 @@ a {
 .my-investments-list .profits-col {
     width: 27%;
     padding-right: 40px;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
 }
 
 .my-investments-list .profits-col .small-btn {
+    height: auto;
+    min-height: 35px;
+    line-height: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 100%;
+}
+
+.my-investments-list .profits-col.alone {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
 }
 
 .my-investments-list .status-col {
@@ -2598,20 +2694,23 @@ a {
     text-align: right;
 }
 
+.my-investments-list .status-col .small-btn {
+    width: 100%;
+}
+
 .my-investments-list .profit {
     width: auto;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 .my-investments-list .profit strong {
     color: #818181;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 600;
 }
 
 .my-investments-list .profit .summ {
-    margin-top: 2px;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .my-investments-list .end-time {
@@ -2638,8 +2737,12 @@ a {
     font-weight: 500;
 }
 
+.my-investments-list .status + .small-btn {
+    margin-top: 15px;
+}
+
 .investments-progress {
-    width: 220px;
+    max-width: 300px;
 }
 
 .investments-progress span {
@@ -2676,7 +2779,7 @@ a {
 .investments-progress .progress .inner {
     height: 100%;
     border-radius: 10px;
-    background: linear-gradient(90deg, #f76844 0%, #f76844 110px, #0dad11 111px, #0dad11 100%);
+    background: linear-gradient(90deg, #f76844 0%, #f76844 calc(var(--progress-width) / 2), #0dad11 calc(var(--progress-width) / 2 + 1px), #0dad11 100%);
 }
 
 .investments-progress .progress.blue .inner {
@@ -2693,7 +2796,7 @@ a {
     background: #fff;
     padding: 30px 0;
     border-radius: 30px 30px 0 0;
-    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.2);
     z-index: 9;
 }
 
@@ -2711,7 +2814,7 @@ a {
 }
 
 .mobile-navigation-bar i.mdi {
-    font-size: 28px;
+    font-size: 40px;
     line-height: 40px;
 }
 
@@ -3482,7 +3585,8 @@ a {
     border-width: 2px;
     border-style: solid;
     border-radius: 1px;
-    line-height: 15px;
+    height: 35px;
+    line-height: 31px;
     min-width: 35px;
     text-transform: uppercase;
     font-size: 15px;
@@ -3490,7 +3594,7 @@ a {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
-    padding: 8px 15px;
+    padding: 0px 15px;
     transition: all 0.3s;
 }
 
@@ -3802,7 +3906,8 @@ a {
 
     .main-header .btn-compare,
   .main-header .btn-profile,
-  .main-header .ineichen-info {
+  .main-header .ineichen-info,
+  .main-header .btn-currency {
         display: none;
     }
 
@@ -3843,6 +3948,11 @@ a {
         transform: translateX(0);
     }
 
+    .left-side-navigation .currency-toggle {
+        display: -ms-flexbox;
+        display: flex;
+    }
+
     .left-side-navigation strong {
         color: #8b8bf3;
     }
@@ -3865,6 +3975,18 @@ a {
         -ms-grid-columns: 100%;
         grid-template-columns: 100%;
         grid-column-gap: 30px;
+    }
+
+    .catalog-item-card h2 {
+        margin: 30px 0 15px;
+    }
+
+    .catalog-item-card .invest-now {
+        margin-bottom: 0px;
+    }
+
+    .catalog-item-card .tech-params-table {
+        margin-bottom: 30px;
     }
 
     .product-card-info .digest-catalog-item {
@@ -3937,48 +4059,87 @@ a {
         max-width: 100%;
     }
   /*************************my-investments*****************/
+    .my-investments-statistic {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
     .my-investments-statistic .box {
-        padding: 10px;
+        width: 100%;
+        margin: 0 0 15px;
+    }
+
+    .my-investments-statistic .box:last-child {
+        margin: 0px;
     }
 
     .my-investments-statistic strong {
-        line-height: 1;
+        -ms-flex-order: 1;
+        order: 1;
     }
 
     .my-investments-statistic b {
-        font-size: 16px;
+        -ms-flex-order: 3;
+        order: 3;
     }
 
     .my-investments-statistic .small-btn {
-        padding: 0 10px;
+        -ms-flex-order: 2;
+        order: 2;
+        margin-left: auto;
+        margin-right: 15px;
     }
 
-    .my-investments-list .image {
-        margin-right: 20px;
+    .my-investments-list .basket-list-item {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
 
-    .my-investments-list .small-btn {
-        padding: 0 10px;
+    .my-investments-list .basket-list-item:last-child {
+        padding-bottom: 0px;
     }
 
     .my-investments-list .info {
-        padding-right: 20px;
+        width: calc(100% - 150px);
+        padding: 0px;
     }
 
     .my-investments-list .profits-col {
-        padding-right: 20px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        width: 100%;
+        padding: 15px 0;
+        background: rgba(189, 189, 189, 0.2);
     }
 
-    .my-investments-list .profits-col + .profits-col {
-        padding-right: 0px;
+    .my-investments-list .profits-col .small-btn {
+        margin: 15px 15px 0;
     }
 
-    .investments-progress {
-        width: 200px;
+    .my-investments-list .profits-col.alone .profit {
+        width: 100%;
     }
 
-    .investments-progress .progress .inner {
-        background: linear-gradient(90deg, #f76844 0%, #f76844 100px, #0dad11 101px, #0dad11 100%);
+    .my-investments-list .status-col {
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .my-investments-list .status-col .small-btn {
+        width: 100%;
+    }
+
+    .my-investments-list .profit {
+        margin: 0px;
+        text-align: center;
+        width: 33.33%;
     }
   /********************mobile-navigation-bar*****************/
     .mobile-navigation-bar {
@@ -3992,6 +4153,11 @@ a {
     #noty_layout__bottomLeft {
         left: 15px;
         bottom: 115px;
+    }
+
+    .lb-nav a.lb-prev,
+  .lb-nav a.lb-next {
+        opacity: 1;
     }
 }
 
@@ -4840,116 +5006,50 @@ a {
     }
   /*************************my-investments*****************/
     .my-investments-statistic {
-        margin: 0 -15px 15px;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        margin-bottom: 30px;
     }
 
     .my-investments-statistic .box {
-        padding: 10px 15px;
-        margin: 5px 0;
-        width: 50%;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-    }
-
-    .my-investments-statistic .box:last-child {
-        width: 100%;
-    }
-
-    .my-investments-statistic .box:last-child b {
-        margin-left: auto;
-    }
-
-    .my-investments-statistic .box:last-child .small-btn {
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto;
-        margin-left: 30px;
-        width: calc(50% - 15px);
-    }
-
-    .my-investments-statistic .no-btn {
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-
-    .my-investments-statistic .no-btn b {
-        margin-left: 15px !important;
+        padding: 15px;
     }
 
     .my-investments-statistic strong {
-        font-size: 8px;
-        line-height: 1.3;
+        -ms-flex-order: 1;
+        order: 1;
+        font-size: 11px;
     }
 
     .my-investments-statistic b {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .my-investments-statistic ~ .mobile-catalog-tools {
-        margin-bottom: 15px;
         -ms-flex-pack: distribute;
         justify-content: space-around;
     }
 
-    .my-investments-list .basket-list-item {
-        padding: 30px 0;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-    }
-
-    .my-investments-list .basket-list-item:first-child {
-        padding-top: 5px;
-    }
-
-    .my-investments-list .end-time {
-        font-size: 10px;
-    }
-
-    .my-investments-list .profit strong {
-        display: block;
+    .my-investments-list .image a {
+        height: 120px;
     }
 
     .my-investments-list .info {
-        width: calc(100% - 115px);
+        width: calc(100% - 95px);
+        padding: 0px;
     }
 
-    .my-investments-list .image a {
-        height: 140px;
-        width: 100px;
+    .my-investments-list .profits-col.alone .profit {
+        width: 100%;
     }
 
-    .my-investments-list .profits-col {
-        -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-self: stretch;
-        margin-top: 15px;
-        padding: 15px;
-        width: calc(50% - 5px);
-        background: #F0F0F0;
+    .my-investments-list .profit {
+        -ms-flex-order: 0;
+        order: 0;
+        width: 33.33%;
     }
 
-    .my-investments-list .profits-col .profit:last-child {
-        margin-bottom: 0px;
-    }
-
-    .my-investments-list .profits-col:last-child {
-        padding: 15px;
-    }
-
-    .my-investments-list .profits-col .small-btn {
+    .my-investments-list .profit strong {
         font-size: 10px;
-    }
-
-    .my-investments-list .status-col {
-        margin-top: 15px;
-        -ms-flex-item-align: start;
-        align-self: flex-start;
-        width: calc(50% - 5px);
+        display: block;
     }
   /*****************search-mobile-modal**************/
     .search-mobile-modal .mobile-modal-content {
@@ -4967,7 +5067,7 @@ a {
     }
 
     .mobile-navigation-bar ul i.mdi {
-        font-size: 20px;
+        font-size: 30px;
         line-height: 30px;
     }
 

@@ -8,7 +8,6 @@ $orange:#f76844;
 $green:#0dad11;
 $grey: #818181;
 $pink: #ff00b6;
-$red: #f76844;
 
 * {
    padding: 0px;
@@ -312,6 +311,22 @@ a {
          line-height: 40px;
          transition: all 0.5s;
       }
+      .currency-name {
+         margin-bottom: 10px;
+         width: 40px;
+         height: 40px;
+         display: block;
+         color: #fff;
+         border-radius: 12px;
+         border: 2px #fff solid;
+         font-size: 20px;
+         text-align: center;
+         line-height: 36px;
+         text-align: center;
+         font-size: 12px;
+         font-weight: 500;
+         transition: all 0.5s;
+      }
       &.badge .mdi:after{
          content: attr(data-badge);
          position: absolute;
@@ -338,6 +353,11 @@ a {
       &:hover {
          i.mdi {
             background: $brown;
+         }
+         .currency-name {
+            background: $brown;
+            color: $blue;
+            border-color: $brown;
          }
       }
    }
@@ -410,6 +430,32 @@ a {
    flex: 0 0 auto;
    border-right: 1px #efefef solid;
    padding: 30px 30px 30px 0;
+   .currency-toggle {
+      display: none;
+      color: #fff;
+      align-items: center;
+      height: 35px;
+      padding: 0 10px;
+      font-size: 13px;
+      border: 1px rgba(#fff,0.5) solid;
+      border-radius: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      &:hover {
+         border-color: $brown;
+         background: $brown;
+         color: $blue-bg;
+      }
+      .currency-name {
+         margin-left: auto;
+      }
+      .mdi {
+         font-size: 20px;
+      }
+   }
    strong {
       margin-bottom: 10px;
       display: block;
@@ -627,7 +673,8 @@ a {
          padding: 0 10px;
       }
       .small-btn {
-         padding: 0px;
+         padding-left: 0px;
+         padding-right: 0px;
          margin-left: 10px;
       }
    }
@@ -1115,6 +1162,9 @@ a {
    .btns {
       display: flex;
       align-items: center;
+      .small-btn {
+         padding: 0px;
+      }
       .orange {
          min-width: 140px;
          flex: 1 1 auto;
@@ -1182,6 +1232,14 @@ a {
    .image {
       margin: 0 auto;
       position: relative;
+      a {
+         display: block;
+         height: 400px;
+         img {
+            height: 100%;
+            object-fit: contain;
+         }
+      }
    }
    .owl-dots {
       position: absolute;
@@ -1359,28 +1417,28 @@ a {
          }
       }
    }
-   .invest-rules {
-      a {
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         border-bottom: 1px rgba($grey,0.4) solid;
-         color: $grey;
-         font-weight: 600;
-         font-size: 15px;
-         padding: 16px 15px;
-         i.mdi {
-            font-size: 24px;
-         }
-         &:hover {
-            color: $orange;
-         }
+}
+.invest-rules-accord {
+   a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px rgba($grey,0.4) solid;
+      color: $grey;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 16px 15px;
+      i.mdi {
+         font-size: 24px;
       }
-      .collapse {
-         display: none;
-         padding: 15px;
-         border-bottom: 1px rgba($grey,0.4) solid;
+      &:hover {
+         color: $orange;
       }
+   }
+   .collapse {
+      display: none;
+      padding: 15px;
+      border-bottom: 1px rgba($grey,0.4) solid;
    }
 }
 .other-product-list {
@@ -1835,7 +1893,11 @@ a {
    h2 {
       font-size: 35px;
       font-weight: 300;
+      margin-top: 30px;
       margin-bottom: 30px;
+      &:first-child {
+         margin-top: 0px;
+      }
    }
    .profile-cols {
       display: flex;
@@ -2054,23 +2116,23 @@ a {
 /******************my-investments********************/
 .my-investments-statistic {
    display: flex;
-   margin: 0 -7.5px 35px;
+   margin: 0 -7.5px 40px;
    .box {
       justify-content: space-between;
       display: flex;
       align-items: center;
       flex: 1 1 auto;
-      background: #F0F0F0;
+      background: rgba(#BDBDBD,0.2);
       padding: 20px;
       margin: 0 7.5px;
    }
    strong {
       line-height: 1.6;
       text-transform: uppercase;
-      font-size: 11px;
+      font-size: 12px;
       letter-spacing: 1px;
       color: $grey;
-      font-weight: 400;
+      font-weight: 600;
    }
    b {
       display: block;
@@ -2085,6 +2147,12 @@ a {
       padding: 40px 0;
       border-bottom: 1px rgba($grey,0.2) solid;
       align-items: center;
+      &:first-child {
+         padding-top: 0px;
+      }
+      &:last-child {
+         border: none;
+      }
    }
    .data:after {
       display: none;
@@ -2095,25 +2163,36 @@ a {
    .profits-col {
       width: 27%;
       padding-right: 40px;
+      align-self: stretch;
       .small-btn {
+         height: auto;
+         min-height: 35px;
+         line-height: 20px;
+         padding-top: 5px;
+         padding-bottom: 5px;
          width: 100%;
+      }
+      &.alone {
+         align-self: center;
       }
    }
    .status-col {
       width: 27%;
       text-align: right;
+      .small-btn {
+         width: 100%;
+      }
    }
    .profit {
       width: auto;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
       strong {
          color: $grey;
-         font-size: 9px;
+         font-size: 12px;
          font-weight: 600;
       }
       .summ {
-         margin-top: 2px;
-         font-size: 15px;
+         font-size: 18px;
       }
    }
    .end-time {
@@ -2135,10 +2214,13 @@ a {
       font-size: 12px;
       color: rgba($grey,0.5);
       font-weight: 500;
+      & + .small-btn {
+         margin-top: 15px;
+      }
    }
 }
 .investments-progress {
-   width: 220px;
+   max-width: 300px;
    span {
       font-size: 11px;
    }
@@ -2147,6 +2229,7 @@ a {
       justify-content: space-between;
    }
    .progress {
+
       overflow: hidden;
       margin: 5px 0;
       background: #d8d8d8;
@@ -2166,7 +2249,7 @@ a {
       .inner {
          height: 100%;
          border-radius: 10px;
-         background: linear-gradient(90deg, $red 0%, $red 110px, $green 111px, $green 100%);
+         background: linear-gradient(90deg, $orange 0%, $orange calc(var(--progress-width) / 2), $green calc(var(--progress-width) / 2 + 1px), $green 100%);
       }
       &.blue {
          .inner {
@@ -2187,7 +2270,7 @@ a {
    background: #fff;
    padding: 30px 0;
    border-radius: 30px 30px 0 0;
-   box-shadow: 0 0 12px 2px rgba(#000,0.1);
+   box-shadow: 0 0 12px 0px rgba(#000,0.2);
    z-index: 9;
    ul {
       display: flex;
@@ -2199,7 +2282,7 @@ a {
 
    }
    i.mdi {
-      font-size: 28px;
+      font-size: 40px;
       line-height: 40px;
    }
    a {
@@ -2478,19 +2561,19 @@ a {
       }
    }
    &.red {
-      background: $red;
+      background: $orange;
       color: #fff;
       &:hover {
-         background: darken($red, 10);
+         background: darken($orange, 10);
       }
       &.outline {
          line-height: 49px;
-         color: $red;
-         border: 3px $red solid;
+         color: $orange;
+         border: 3px $orange solid;
          background: none;
          &:hover {
             color: #fff;
-            background: $red;
+            background: $orange;
          }
       }
    }
@@ -2846,7 +2929,8 @@ a {
    border-width: 2px;
    border-style: solid;
    border-radius: 1px;
-   line-height: 15px;
+   height: 35px;
+   line-height: 31px;
    min-width: 35px;
    text-transform: uppercase;
    font-size: 15px;
@@ -2854,7 +2938,7 @@ a {
    letter-spacing: 1px;
    text-transform: uppercase;
    text-align: center;
-   padding: 8px 15px;
+   padding: 0px 15px;
    transition: all 0.3s;
    &:disabled,
    &.disabled {
@@ -3004,7 +3088,7 @@ a {
       background: $green;
    }
    &.noty_type__error {
-      background: $red;
+      background: $orange;
    }
    &.noty_type__alert,
    &.noty_type__notification {
@@ -3037,7 +3121,7 @@ a {
    color: $grey !important;
 }
 .red-text {
-   color: $red !important;
+   color: $orange !important;
 }
 .blue-text {
    color: $blue !important;
@@ -3128,7 +3212,8 @@ a {
       z-index: 10;
       .btn-compare,
       .btn-profile,
-      .ineichen-info {
+      .ineichen-info,
+      .btn-currency {
          display: none;
       }
       #mobileMenueOpen {
@@ -3164,6 +3249,9 @@ a {
       &.open {
          transform: translateX(0);
       }
+      .currency-toggle {
+         display: flex;
+      }
       strong {
          color: #8b8bf3;
       }
@@ -3186,6 +3274,15 @@ a {
       max-width: 500px;
       grid-template-columns: 100%;
       grid-column-gap: 30px;
+      h2 {
+         margin: 30px 0 15px;
+      }
+      .invest-now {
+         margin-bottom: 0px;
+      }
+      .tech-params-table {
+         margin-bottom: 30px;
+      }
    }
    .product-card-info {
       .digest-catalog-item {
@@ -3252,44 +3349,70 @@ a {
    }
    /*************************my-investments*****************/
    .my-investments-statistic {
+      flex-wrap: wrap;
+      margin-left: 0px;
+      margin-right: 0px;
       .box {
-         padding: 10px;
+         width: 100%;
+         margin: 0 0 15px;
+         &:last-child {
+            margin: 0px;
+         }
       }
       strong {
-         line-height: 1;
+         order: 1;
       }
       b {
-         font-size: 16px;
+         order: 3;
       }
       .small-btn {
-         padding: 0 10px;
+         order: 2;
+         margin-left: auto;
+         margin-right: 15px;
       }
    }
    .my-investments-list {
-      .image {
-         margin-right: 20px;
-      }
-      .small-btn {
-         padding: 0 10px;
-      }
-      .info {
-         padding-right: 20px;
-      }
-      .profits-col {
-         padding-right: 20px;
-      }
-      .profits-col + .profits-col {
-         padding-right: 0px;
-      }
-   }
-   .investments-progress {
-      width: 200px;
-      .progress {
-         .inner {
-            background: linear-gradient(90deg, #f76844 0%, #f76844 100px, #0dad11 101px, #0dad11 100%);
+      .basket-list-item {
+         flex-wrap: wrap;
+         justify-content: space-between;
+         &:last-child {
+            padding-bottom: 0px;
          }
       }
+      .info {
+         width: calc(100% - 150px);
+         padding: 0px;
+      }
+      .profits-col {
+         display: flex;
+         flex-wrap: wrap;
+         margin-top: 15px;
+         width: 100%;
+         padding: 15px 0;
+         background: rgba(#BDBDBD,0.2);
+         .small-btn {
+            margin: 15px 15px 0;
+         }
+         &.alone {
+            .profit {
+               width: 100%;
+            }
+         }
+      }
+      .status-col {
+         margin-top: 15px;
+         width: 100%;
+         .small-btn {
+            width: 100%;
+         }
+      }
+      .profit {
+         margin: 0px;
+         text-align: center;
+         width: 33.33%;
+      }
    }
+
    /********************mobile-navigation-bar*****************/
    .mobile-navigation-bar {
       display: block;
@@ -3303,6 +3426,10 @@ a {
    #noty_layout__bottomLeft {
       left: 15px;
       bottom: 115px;
+   }
+   .lb-nav a.lb-prev,
+   .lb-nav a.lb-next {
+      opacity: 1;
    }
 }
 @media screen and (max-width:420px) {
@@ -4030,90 +4157,48 @@ a {
    }
    /*************************my-investments*****************/
    .my-investments-statistic {
-      margin: 0 -15px 15px;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      margin-bottom: 30px;
       .box {
-         padding: 10px 15px;
-         margin: 5px 0;
-         width: 50%;
-         flex: 0 0 auto;
-      }
-      .box:last-child {
-         width: 100%;
-         b {
-            margin-left: auto;
-         }
-         .small-btn {
-            flex: 0 0 auto;
-            margin-left: 30px;
-            width: calc(50% - 15px);
-         }
-      }
-      .no-btn {
-         justify-content: center;
-         b {
-            margin-left: 15px !important;
-         }
+         padding: 15px;
       }
       strong {
-         font-size: 8px;
-         line-height: 1.3;
+         order: 1;
+         font-size: 11px;
       }
       b {
-         font-size: 12px;
+         font-size: 16px;
       }
       & ~ .mobile-catalog-tools {
-         margin-bottom: 15px;
          justify-content: space-around;
       }
    }
    .my-investments-list {
-      .basket-list-item {
-         padding: 30px 0;
-         flex-wrap: wrap;
-         justify-content: space-between;
-         &:first-child {
-            padding-top: 5px;
-         }
-      }
-      .end-time {
-         font-size: 10px;
-      }
-      .profit {
-         strong {
-            display: block;
+      .image {
+         a {
+            height: 120px;
          }
       }
       .info {
-         width: calc(100% - 115px);
-      }
-      .image {
-         a {
-            height: 140px;
-            width: 100px;
-         }
+         width: calc(100% - 95px);
+         padding: 0px;
       }
       .profits-col {
-         align-self: stretch;
-         margin-top: 15px;
-         padding: 15px;
-         width: calc(50% - 5px);
-         background: #F0F0F0;
-         .profit:last-child {
-            margin-bottom: 0px;
-         }
-         &:last-child {
-            padding: 15px;
-         }
-         .small-btn {
-            font-size: 10px;
+         &.alone {
+            .profit {
+               width: 100%;
+            }
          }
       }
       .status-col {
-         margin-top: 15px;
-         align-self: flex-start;
-         width: calc(50% - 5px);
+
+      }
+      .profit {
+         strong {
+            font-size: 10px;
+            display: block;
+         }
+         order: 0;
+         width: 33.33%;
       }
    }
    /*****************search-mobile-modal**************/
@@ -4131,7 +4216,7 @@ a {
       padding: 15px 0;
       ul {
          i.mdi {
-            font-size: 20px;
+            font-size: 30px;
             line-height: 30px;
          }
          a {
