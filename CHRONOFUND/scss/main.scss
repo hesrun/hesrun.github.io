@@ -399,6 +399,34 @@ a {
       }
    }
 }
+/********************cookie-note***********/
+.cookie-note {
+   padding: 15px 0;
+   background: $grey;
+   color: #fff;
+   .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   .text {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      i.mdi {
+         flex: 0 0 auto;
+         font-size: 25px;
+         margin-right: 10px;
+      }
+   }
+   .btns {
+      a {
+         color: $grey;
+      }
+   }
+}
 /********************main-section*************/
 .main-section {
    padding-top: 123px;
@@ -2905,6 +2933,9 @@ a {
          &:hover, &.active {
             color: $blue-bg;
          }
+         &.disabled {
+            pointer-events: none;
+         }
          &:after {
             content: '';
             position: absolute;
@@ -3940,8 +3971,8 @@ a {
       .image {
          margin-right: 15px;
          a {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 150px;
          }
       }
       .data {
@@ -3959,7 +3990,6 @@ a {
          padding: 0px;
       }
       .brand {
-         display: none;
       }
       .name {
          order: 1;
@@ -3975,7 +4005,6 @@ a {
          margin-top: -17px;
          width: 35px;
          height: 35px;
-         font-size: 14px;
       }
       .reference,
       .lot-num {
@@ -3985,10 +4014,13 @@ a {
       .price {
          width: auto;
          strong {
-            display: none;
+            display: block;
+            margin-top: 10px;
+            font-size: 8px;
          }
          .summ {
-            font-size: 14px;
+            margin-top: 3px;
+            font-size: 12px;
          }
       }
       .price {
@@ -4170,14 +4202,12 @@ a {
       }
    }
    .my-investments-list {
-      .image {
-         a {
-            height: 120px;
-         }
-      }
       .info {
-         width: calc(100% - 95px);
+         width: calc(100% - 115px);
          padding: 0px;
+      }
+      .name {
+         margin-bottom: 10px;
       }
       .profits-col {
          display: flex;
@@ -4195,8 +4225,23 @@ a {
             }
          }
       }
-      .status-col {
-
+      .line-mob {
+         margin-top: 15px;
+         padding: 0px;
+         width: 100%;
+         flex-direction: row;
+         justify-content: space-between;
+         background: none;
+         .profit {
+            margin: 0px;
+            text-align: center;
+            strong {
+               font-size: 10px;
+            }
+            .summ {
+               font-size: 16px;
+            }
+         }
       }
       .profit {
          strong {

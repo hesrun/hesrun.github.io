@@ -480,6 +480,43 @@ a {
     margin-left: 20px;
 }
 
+/********************cookie-note***********/
+.cookie-note {
+    padding: 15px 0;
+    background: #818181;
+    color: #fff;
+}
+
+.cookie-note .container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.cookie-note .text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.cookie-note .text i.mdi {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.cookie-note .btns a {
+    color: #818181;
+}
+
 /********************main-section*************/
 .main-section {
     padding-top: 123px;
@@ -3563,6 +3600,10 @@ a {
     color: #191933;
 }
 
+.tab-links.checkout-steps a.disabled {
+    pointer-events: none;
+}
+
 .tab-links.checkout-steps a:after {
     content: '';
     position: absolute;
@@ -4747,8 +4788,8 @@ a {
     }
 
     .basket-list-item .image a {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 150px;
     }
 
     .basket-list-item .data {
@@ -4771,10 +4812,6 @@ a {
         padding: 0px;
     }
 
-    .basket-list-item .brand {
-        display: none;
-    }
-
     .basket-list-item .name {
         -ms-flex-order: 1;
         order: 1;
@@ -4791,7 +4828,6 @@ a {
         margin-top: -17px;
         width: 35px;
         height: 35px;
-        font-size: 14px;
     }
 
     .basket-list-item .reference,
@@ -4806,12 +4842,15 @@ a {
 
     .basket-list-item .profit strong,
   .basket-list-item .price strong {
-        display: none;
+        display: block;
+        margin-top: 10px;
+        font-size: 8px;
     }
 
     .basket-list-item .profit .summ,
   .basket-list-item .price .summ {
-        font-size: 14px;
+        margin-top: 3px;
+        font-size: 12px;
     }
 
     .basket-list-item .price {
@@ -5023,13 +5062,13 @@ a {
         justify-content: space-around;
     }
 
-    .my-investments-list .image a {
-        height: 120px;
+    .my-investments-list .info {
+        width: calc(100% - 115px);
+        padding: 0px;
     }
 
-    .my-investments-list .info {
-        width: calc(100% - 95px);
-        padding: 0px;
+    .my-investments-list .name {
+        margin-bottom: 10px;
     }
 
     .my-investments-list .profits-col {
@@ -5050,6 +5089,30 @@ a {
 
     .my-investments-list .profits-col.alone .profit {
         width: 100%;
+    }
+
+    .my-investments-list .line-mob {
+        margin-top: 15px;
+        padding: 0px;
+        width: 100%;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background: none;
+    }
+
+    .my-investments-list .line-mob .profit {
+        margin: 0px;
+        text-align: center;
+    }
+
+    .my-investments-list .line-mob .profit strong {
+        font-size: 10px;
+    }
+
+    .my-investments-list .line-mob .profit .summ {
+        font-size: 16px;
     }
 
     .my-investments-list .profit strong {
