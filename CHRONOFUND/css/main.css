@@ -4015,6 +4015,7 @@ a {
 
     .products-compare-list {
         padding-right: 0px;
+        width: 100%;
     }
 
     .products-compare-list .owl-carousel .owl-nav {
@@ -4026,6 +4027,14 @@ a {
         top: 35px;
         left: -155px;
         width: 145px;
+    }
+
+    .products-compare-list .owl-carousel .owl-nav button.disabled {
+        opacity: 0;
+    }
+
+    .products-compare-list .owl-carousel .owl-nav.disabled {
+        opacity: 0;
     }
 
     .products-compare-list .owl-carousel .owl-nav button {
@@ -4109,18 +4118,10 @@ a {
     }
 
     .my-investments-list .profits-col {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-top: 15px;
-        width: 100%;
-        padding: 15px 0;
+        margin-top: 10px;
+        width: calc(50% - 5px);
+        padding: 15px;
         background: rgba(189, 189, 189, 0.2);
-    }
-
-    .my-investments-list .profits-col .small-btn {
-        margin: 15px 15px 0;
     }
 
     .my-investments-list .profits-col.alone .profit {
@@ -4134,12 +4135,6 @@ a {
 
     .my-investments-list .status-col .small-btn {
         width: 100%;
-    }
-
-    .my-investments-list .profit {
-        margin: 0px;
-        text-align: center;
-        width: 33.33%;
     }
   /********************mobile-navigation-bar*****************/
     .mobile-navigation-bar {
@@ -5037,19 +5032,34 @@ a {
         padding: 0px;
     }
 
+    .my-investments-list .profits-col {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .my-investments-list .profits-col .small-btn {
+        -ms-flex-order: 6;
+        order: 6;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: auto;
+        font-size: 9px;
+    }
+
     .my-investments-list .profits-col.alone .profit {
         width: 100%;
     }
 
-    .my-investments-list .profit {
-        -ms-flex-order: 0;
-        order: 0;
-        width: 33.33%;
+    .my-investments-list .profit strong {
+        margin-top: 3px;
+        display: block;
+        font-size: 8px;
     }
 
-    .my-investments-list .profit strong {
-        font-size: 10px;
-        display: block;
+    .my-investments-list .profit .summ {
+        font-size: 12px;
     }
   /*****************search-mobile-modal**************/
     .search-mobile-modal .mobile-modal-content {

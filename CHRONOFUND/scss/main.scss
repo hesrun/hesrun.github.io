@@ -3307,6 +3307,7 @@ a {
    }
    .products-compare-list {
       padding-right: 0px;
+      width: 100%;
       .owl-carousel {
          .owl-nav {
             display: flex;
@@ -3315,6 +3316,12 @@ a {
             top: 35px;
             left: -155px;
             width: 145px;
+            button.disabled {
+               opacity: 0;
+            }
+            &.disabled {
+               opacity: 0;
+            }
             button {
                top: auto;
                position: static;
@@ -3384,15 +3391,10 @@ a {
          padding: 0px;
       }
       .profits-col {
-         display: flex;
-         flex-wrap: wrap;
-         margin-top: 15px;
-         width: 100%;
-         padding: 15px 0;
+         margin-top: 10px;
+         width: calc(50% - 5px);
+         padding: 15px;
          background: rgba(#BDBDBD,0.2);
-         .small-btn {
-            margin: 15px 15px 0;
-         }
          &.alone {
             .profit {
                width: 100%;
@@ -3405,11 +3407,6 @@ a {
          .small-btn {
             width: 100%;
          }
-      }
-      .profit {
-         margin: 0px;
-         text-align: center;
-         width: 33.33%;
       }
    }
 
@@ -4183,6 +4180,15 @@ a {
          padding: 0px;
       }
       .profits-col {
+         display: flex;
+         flex-direction: column;
+         .small-btn {
+            order: 6;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: auto;
+            font-size: 9px;
+         }
          &.alone {
             .profit {
                width: 100%;
@@ -4194,11 +4200,13 @@ a {
       }
       .profit {
          strong {
-            font-size: 10px;
+            margin-top: 3px;
             display: block;
+            font-size: 8px;
          }
-         order: 0;
-         width: 33.33%;
+         .summ {
+            font-size: 12px;
+         }
       }
    }
    /*****************search-mobile-modal**************/
