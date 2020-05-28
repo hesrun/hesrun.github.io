@@ -677,11 +677,11 @@ a {
    align-items: flex-start;
    .data {
       display: flex;
-   }
-   .name {
-      display: block;
-      font-size: 36px;
-      font-weight: 600;
+      .name {
+         display: block;
+         font-size: 36px;
+         font-weight: 600;
+      }
    }
    .date {
       margin-left: 10px;
@@ -691,12 +691,26 @@ a {
       letter-spacing: 1px;
    }
    .search {
-      max-width: 300px;
+      max-width: 400px;
       width: 100%;
       margin-left: auto;
       display: flex;
       align-items: center;
+      .search-result-list {
+         z-index: 2;
+         padding: 10px;
+         background: #fff;
+         position: absolute;
+         width: 100%;
+         top: 34px;
+         border: 1px solid $grey;
+      }
+      .input {
+         flex: 1 1 auto;
+         position: relative;
+      }
       input {
+         width: 100%;
          font-size: 16px;
          flex: 1 1 auto;
          outline: none;
@@ -704,7 +718,7 @@ a {
          border: 1px solid $grey;
          padding: 0 10px;
       }
-      .small-btn {
+      > .small-btn {
          padding-left: 0px;
          padding-right: 0px;
          margin-left: 10px;
@@ -712,6 +726,48 @@ a {
    }
 }
 
+/************************search-result-list************/
+.search-result-list {
+   > .small-btn {
+      width: 100%;
+   }
+   .item {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: center;
+      &:hover {
+         color: $orange;
+      }
+   }
+   .image {
+      width: 60px;
+      height: 60px;
+      display: block;
+      border: 1px rgba($grey,0.5) solid;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 4px;
+      flex: 0 0 auto;
+      margin-right: 10px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   .brand {
+      display: block;
+   }
+   .name {
+      font-weight: 500;
+      margin: 3px 0;
+      display: block;
+      font-size: 13px;
+   }
+   .price {
+      display: block;
+   }
+}
 /**********************catalog-tools*****************/
 .catalog-tools {
    margin-bottom: 40px;
@@ -2209,7 +2265,7 @@ a {
    .profits-col {
       width: 27%;
       padding-right: 40px;
-      align-self: stretch;
+      align-self: center;
       .small-btn {
          height: auto;
          min-height: 35px;
@@ -3022,6 +3078,14 @@ a {
          background: transparent;
          color: $blue;
       }
+      &.outline {
+         color: $blue;
+         background: none;
+         &:hover {
+            background: $blue;
+            color: #fff;
+         }
+      }
    }
    &.grey {
       border-color: $grey;
@@ -3437,10 +3501,17 @@ a {
          padding: 0px;
       }
       .profits-col {
+         display: flex;
+         flex-direction: column;
          margin-top: 10px;
          width: calc(50% - 5px);
          padding: 15px;
          background: rgba(#BDBDBD,0.2);
+         align-self: stretch;
+         .small-btn {
+            order: 3;
+            margin-top: auto;
+         }
       }
       .line-mob {
          display: flex;
@@ -3647,12 +3718,15 @@ a {
    }
    /****************digest-realease************/
    .digest-realease {
+      .data {
+         .name {
+            font-size: 28px;
+         }
+      }
       .search {
          display: none;
       }
-      .name {
-         font-size: 28px;
-      }
+
    }
    /**********************catalog-tools*****************/
    .catalog-tools {
@@ -4268,6 +4342,13 @@ a {
       }
       .name {
          margin-bottom: 10px;
+      }
+      .profits-col {
+         .small-btn {
+            font-size: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+         }
       }
       .profit {
          strong {

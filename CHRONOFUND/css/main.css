@@ -830,7 +830,7 @@ a {
     display: flex;
 }
 
-.digest-realease .name {
+.digest-realease .data .name {
     display: block;
     font-size: 36px;
     font-weight: 600;
@@ -845,7 +845,7 @@ a {
 }
 
 .digest-realease .search {
-    max-width: 300px;
+    max-width: 400px;
     width: 100%;
     margin-left: auto;
     display: -ms-flexbox;
@@ -854,7 +854,24 @@ a {
     align-items: center;
 }
 
+.digest-realease .search .search-result-list {
+    z-index: 2;
+    padding: 10px;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    top: 34px;
+    border: 1px solid #818181;
+}
+
+.digest-realease .search .input {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    position: relative;
+}
+
 .digest-realease .search input {
+    width: 100%;
     font-size: 16px;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -864,10 +881,61 @@ a {
     padding: 0 10px;
 }
 
-.digest-realease .search .small-btn {
+.digest-realease .search > .small-btn {
     padding-left: 0px;
     padding-right: 0px;
     margin-left: 10px;
+}
+
+/************************search-result-list************/
+.search-result-list > .small-btn {
+    width: 100%;
+}
+
+.search-result-list .item {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.search-result-list .item:hover {
+    color: #f76844;
+}
+
+.search-result-list .image {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border: 1px rgba(129, 129, 129, 0.5) solid;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 4px;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.search-result-list .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search-result-list .brand {
+    display: block;
+}
+
+.search-result-list .name {
+    font-weight: 500;
+    margin: 3px 0;
+    display: block;
+    font-size: 13px;
+}
+
+.search-result-list .price {
+    display: block;
 }
 
 /**********************catalog-tools*****************/
@@ -2729,9 +2797,9 @@ a {
 .my-investments-list .profits-col {
     width: 27%;
     padding-right: 40px;
-    -ms-flex-item-align: stretch;
-    -ms-grid-row-align: stretch;
-    align-self: stretch;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
 }
 
 .my-investments-list .profits-col .small-btn {
@@ -3703,6 +3771,16 @@ a {
     color: #23236a;
 }
 
+.small-btn.blue.outline {
+    color: #23236a;
+    background: none;
+}
+
+.small-btn.blue.outline:hover {
+    background: #23236a;
+    color: #fff;
+}
+
 .small-btn.grey {
     border-color: #818181;
     background: #818181;
@@ -4179,10 +4257,22 @@ a {
     }
 
     .my-investments-list .profits-col {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
         margin-top: 10px;
         width: calc(50% - 5px);
         padding: 15px;
         background: rgba(189, 189, 189, 0.2);
+        -ms-flex-item-align: stretch;
+        align-self: stretch;
+    }
+
+    .my-investments-list .profits-col .small-btn {
+        -ms-flex-order: 3;
+        order: 3;
+        margin-top: auto;
     }
 
     .my-investments-list .line-mob {
@@ -4420,12 +4510,12 @@ a {
         display: none;
     }
   /****************digest-realease************/
-    .digest-realease .search {
-        display: none;
+    .digest-realease .data .name {
+        font-size: 28px;
     }
 
-    .digest-realease .name {
-        font-size: 28px;
+    .digest-realease .search {
+        display: none;
     }
   /**********************catalog-tools*****************/
     .catalog-tools {
@@ -5149,6 +5239,12 @@ a {
 
     .my-investments-list .name {
         margin-bottom: 10px;
+    }
+
+    .my-investments-list .profits-col .small-btn {
+        font-size: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .my-investments-list .profit strong {
