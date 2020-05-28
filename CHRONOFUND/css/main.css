@@ -425,11 +425,11 @@ a {
     margin-left: 40px;
 }
 
-.main-header .head-btn:hover i.mdi {
+.main-header .head-btn:hover i.mdi, .main-header .head-btn.active i.mdi {
     background: #c6a55b;
 }
 
-.main-header .head-btn:hover .currency-name {
+.main-header .head-btn:hover .currency-name, .main-header .head-btn.active .currency-name {
     background: #c6a55b;
     color: #23236a;
     border-color: #c6a55b;
@@ -483,8 +483,11 @@ a {
 /********************cookie-note***********/
 .cookie-note {
     padding: 15px 0;
-    background: #818181;
+    background: #8F92A1;
     color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0px;
 }
 
 .cookie-note .container {
@@ -513,8 +516,11 @@ a {
     margin-right: 10px;
 }
 
-.cookie-note .btns a {
-    color: #818181;
+.cookie-note a.small-btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    color: #8F92A1;
 }
 
 /********************main-section*************/
@@ -2131,8 +2137,8 @@ a {
 
 .basket-list-item .image a {
     display: block;
-    width: 120px;
-    height: 170px;
+    width: 140px;
+    height: 220px;
     border: 1px rgba(129, 129, 129, 0.2) solid;
     border-radius: 12px;
     overflow: hidden;
@@ -2177,7 +2183,8 @@ a {
 
 .basket-list-item .brand {
     display: block;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .basket-list-item .name {
@@ -2188,7 +2195,7 @@ a {
 
 .basket-list-item .reference,
 .basket-list-item .lot-num {
-    margin-top: 5px;
+    margin-top: 10px;
     display: block;
     font-size: 12px;
     color: #818181;
@@ -2514,8 +2521,14 @@ a {
     margin-right: 15px;
 }
 
-.checkout-balance-table td:last-child {
+.checkout-balance-table td:first-child {
     color: #818181;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.checkout-balance-table td:last-child {
     text-align: right;
 }
 
@@ -2662,6 +2675,16 @@ a {
     background: rgba(189, 189, 189, 0.2);
     padding: 20px;
     margin: 0 7.5px;
+    transition: all 0.3s;
+}
+
+.my-investments-statistic a.box:hover {
+    background: #191933;
+    color: #fff;
+}
+
+.my-investments-statistic a.box:hover strong {
+    color: #fff;
 }
 
 .my-investments-statistic strong {
@@ -2783,7 +2806,7 @@ a {
 }
 
 .investments-progress span {
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .investments-progress .legends {
@@ -2795,9 +2818,9 @@ a {
 
 .investments-progress .progress {
     overflow: hidden;
-    margin: 5px 0;
+    margin: 8px 0;
     background: #d8d8d8;
-    height: 10px;
+    height: 18px;
     border-radius: 10px;
     position: relative;
 }
@@ -2809,7 +2832,7 @@ a {
     left: 50%;
     top: 0px;
     width: 1px;
-    height: 10px;
+    height: 100%;
     background: #fff;
 }
 
@@ -3487,9 +3510,9 @@ a {
 .c-b-input .c-input-icon-field {
     padding: 0 5px;
     position: absolute;
+    top: 25px;
     right: 0px;
-    bottom: 0px;
-    line-height: 27px;
+    line-height: 30px;
     cursor: pointer;
 }
 
@@ -3636,6 +3659,7 @@ a {
     text-transform: uppercase;
     text-align: center;
     padding: 0px 15px;
+    cursor: pointer;
     transition: all 0.3s;
 }
 
@@ -3960,12 +3984,8 @@ a {
         margin: 0px;
     }
   /**********************account-actiovation-note**********/
-    .account-actiovation-note .container {
-        display: block;
-    }
-
-    .account-actiovation-note .text {
-        margin-bottom: 10px;
+    .account-actiovation-note .btns {
+        white-space: nowrap;
     }
   /********************left-side-navigation*********/
     .left-side-navigation {
@@ -4154,7 +4174,7 @@ a {
     }
 
     .my-investments-list .info {
-        width: calc(100% - 150px);
+        width: calc(100% - 170px);
         padding: 0px;
     }
 
@@ -4165,8 +4185,30 @@ a {
         background: rgba(189, 189, 189, 0.2);
     }
 
-    .my-investments-list .profits-col.alone .profit {
+    .my-investments-list .line-mob {
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 15px;
+        padding: 0px;
         width: 100%;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        background: none;
+    }
+
+    .my-investments-list .line-mob .profit {
+        margin: 0px;
+        text-align: center;
+    }
+
+    .my-investments-list .line-mob .profit strong {
+        font-size: 10px;
+    }
+
+    .my-investments-list .line-mob .profit .summ {
+        font-size: 16px;
     }
 
     .my-investments-list .status-col {
@@ -4180,6 +4222,10 @@ a {
   /********************mobile-navigation-bar*****************/
     .mobile-navigation-bar {
         display: block;
+    }
+  /********************cookie-note*****************/
+    .cookie-note {
+        bottom: 101px;
     }
   /********************main-footer*********/
     .main-footer {
@@ -4334,6 +4380,25 @@ a {
   /********************back-link*************/
     .back-link {
         margin-bottom: 15px;
+    }
+  /**********************account-actiovation-note**********/
+    .account-actiovation-note .container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .account-actiovation-note .btns {
+        width: 100%;
+        margin-top: 10px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+    .account-actiovation-note .btns .small-btn {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
     }
   /********************left-side-navigation*********/
     .left-side-navigation {
@@ -4844,13 +4909,13 @@ a {
   .basket-list-item .price strong {
         display: block;
         margin-top: 10px;
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .basket-list-item .profit .summ,
   .basket-list-item .price .summ {
         margin-top: 3px;
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .basket-list-item .price {
@@ -4996,6 +5061,7 @@ a {
     }
 
     .checkout-balance-table td {
+        height: 40px;
         font-size: 12px;
         font-weight: 500;
     }
@@ -5008,6 +5074,20 @@ a {
         height: 25px;
         font-size: 10px;
         line-height: 21px;
+    }
+
+    .checkout-balance-table td:last-child {
+        white-space: nowrap;
+        text-align: right;
+        font-size: 16px;
+    }
+
+    .checkout-balance-table td:first-child {
+        color: #818181;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
     }
 
     .checkout-balance-table + h2 {
@@ -5071,58 +5151,14 @@ a {
         margin-bottom: 10px;
     }
 
-    .my-investments-list .profits-col {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .my-investments-list .profits-col .small-btn {
-        -ms-flex-order: 6;
-        order: 6;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin-top: auto;
-        font-size: 9px;
-    }
-
-    .my-investments-list .profits-col.alone .profit {
-        width: 100%;
-    }
-
-    .my-investments-list .line-mob {
-        margin-top: 15px;
-        padding: 0px;
-        width: 100%;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        background: none;
-    }
-
-    .my-investments-list .line-mob .profit {
-        margin: 0px;
-        text-align: center;
-    }
-
-    .my-investments-list .line-mob .profit strong {
-        font-size: 10px;
-    }
-
-    .my-investments-list .line-mob .profit .summ {
-        font-size: 16px;
-    }
-
     .my-investments-list .profit strong {
         margin-top: 3px;
         display: block;
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .my-investments-list .profit .summ {
-        font-size: 12px;
+        font-size: 14px;
     }
   /*****************search-mobile-modal**************/
     .search-mobile-modal .mobile-modal-content {
@@ -5163,6 +5199,21 @@ a {
     .mobile-navigation-bar ul span {
         line-height: 30px;
         font-size: 14px;
+    }
+  /********************cookie-note*****************/
+    .cookie-note {
+        bottom: 60px;
+    }
+
+    .cookie-note .container {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .cookie-note a.small-btn {
+        margin-top: 10px;
+        max-width: 100%;
+        width: 100%;
     }
   /*************************ui*************************/
     .tab-links {

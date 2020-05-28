@@ -350,7 +350,8 @@ a {
       & + .head-btn {
          margin-left: 40px;
       }
-      &:hover {
+      &:hover,
+      &.active {
          i.mdi {
             background: $brown;
          }
@@ -402,8 +403,10 @@ a {
 /********************cookie-note***********/
 .cookie-note {
    padding: 15px 0;
-   background: $grey;
+   background: #8F92A1;
    color: #fff;
+   position: sticky;
+   bottom: 0px;
    .container {
       display: flex;
       align-items: center;
@@ -421,10 +424,11 @@ a {
          margin-right: 10px;
       }
    }
-   .btns {
-      a {
-         color: $grey;
-      }
+   a.small-btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 200px;
+      color: #8F92A1;
    }
 }
 /********************main-section*************/
@@ -1726,8 +1730,8 @@ a {
       margin-right: 30px;
       a {
          display: block;
-         width: 120px;
-         height: 170px;
+         width: 140px;
+         height: 220px;
          border: 1px rgba($grey,0.2) solid;
          border-radius: 12px;
          overflow: hidden;
@@ -1763,7 +1767,8 @@ a {
    }
    .brand {
       display: block;
-      font-size: 20px;
+      font-size: 18px;
+      font-weight: 700;
    }
    .name {
       margin: 10px 0;
@@ -1772,7 +1777,7 @@ a {
    }
    .reference,
    .lot-num {
-      margin-top: 5px;
+      margin-top: 10px;
       display: block;
       font-size: 12px;
       color: $grey;
@@ -2040,8 +2045,13 @@ a {
          margin-right: 15px;
       }
    }
+   td:first-child {
+      color: #818181;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+   }
    td:last-child {
-      color: $grey;
       text-align: right;
    }
    & + h2 {
@@ -2153,6 +2163,14 @@ a {
       background: rgba(#BDBDBD,0.2);
       padding: 20px;
       margin: 0 7.5px;
+      transition: all 0.3s;
+   }
+   a.box:hover {
+      background: $blue-bg;
+      color: #fff;
+      strong {
+         color: #fff;
+      }
    }
    strong {
       line-height: 1.6;
@@ -2250,18 +2268,17 @@ a {
 .investments-progress {
    max-width: 300px;
    span {
-      font-size: 11px;
+      font-size: 13px;
    }
    .legends {
       display: flex;
       justify-content: space-between;
    }
    .progress {
-
       overflow: hidden;
-      margin: 5px 0;
+      margin: 8px 0;
       background: #d8d8d8;
-      height: 10px;
+      height: 18px;
       border-radius: 10px;
       position: relative;
       &:after {
@@ -2271,7 +2288,7 @@ a {
          left: 50%;
          top: 0px;
          width: 1px;
-         height: 10px;
+         height: 100%;
          background: #fff;
       }
       .inner {
@@ -2841,9 +2858,9 @@ a {
    .c-input-icon-field {
       padding: 0 5px;
       position: absolute;
+      top: 25px;
       right: 0px;
-      bottom: 0px;
-      line-height: 27px;
+      line-height: 30px;
       cursor: pointer;
       &:hover {
          color: $orange;
@@ -2970,6 +2987,7 @@ a {
    text-transform: uppercase;
    text-align: center;
    padding: 0px 15px;
+   cursor: pointer;
    transition: all 0.3s;
    &:disabled,
    &.disabled {
@@ -3256,11 +3274,8 @@ a {
    }
    /**********************account-actiovation-note**********/
    .account-actiovation-note {
-      .container {
-         display: block;
-      }
-      .text {
-         margin-bottom: 10px;
+      .btns {
+         white-space: nowrap;
       }
    }
    /********************left-side-navigation*********/
@@ -3418,7 +3433,7 @@ a {
          }
       }
       .info {
-         width: calc(100% - 150px);
+         width: calc(100% - 170px);
          padding: 0px;
       }
       .profits-col {
@@ -3426,9 +3441,23 @@ a {
          width: calc(50% - 5px);
          padding: 15px;
          background: rgba(#BDBDBD,0.2);
-         &.alone {
-            .profit {
-               width: 100%;
+      }
+      .line-mob {
+         display: flex;
+         margin-top: 15px;
+         padding: 0px;
+         width: 100%;
+         flex-direction: row;
+         justify-content: space-between;
+         background: none;
+         .profit {
+            margin: 0px;
+            text-align: center;
+            strong {
+               font-size: 10px;
+            }
+            .summ {
+               font-size: 16px;
             }
          }
       }
@@ -3445,7 +3474,10 @@ a {
    .mobile-navigation-bar {
       display: block;
    }
-
+   /********************cookie-note*****************/
+   .cookie-note {
+      bottom: 101px;
+   }
    /********************main-footer*********/
    .main-footer {
       display: none;
@@ -3580,6 +3612,21 @@ a {
    /********************back-link*************/
    .back-link {
       margin-bottom: 15px;
+   }
+   /**********************account-actiovation-note**********/
+   .account-actiovation-note {
+      .container {
+         flex-wrap: wrap;
+      }
+      .btns {
+         width: 100%;
+         margin-top: 10px;
+         display: flex;
+         flex: 1 1 auto;
+         .small-btn {
+            flex: 1 1 auto;
+         }
+      }
    }
    /********************left-side-navigation*********/
    .left-side-navigation {
@@ -4016,11 +4063,11 @@ a {
          strong {
             display: block;
             margin-top: 10px;
-            font-size: 8px;
+            font-size: 10px;
          }
          .summ {
             margin-top: 3px;
-            font-size: 12px;
+            font-size: 14px;
          }
       }
       .price {
@@ -4144,6 +4191,7 @@ a {
    }
    .checkout-balance-table {
       td {
+         height: 40px;
          font-size: 12px;
          font-weight: 500;
          .small-btn {
@@ -4155,6 +4203,18 @@ a {
             font-size: 10px;
             line-height: 21px;
          }
+      }
+      td:last-child {
+         white-space: nowrap;
+         text-align: right;
+         font-size: 16px;
+      }
+      td:first-child {
+         color: #818181;
+         font-weight: 600;
+         text-transform: uppercase;
+         font-size: 12px;
+         letter-spacing: 1px;
       }
       & + h2 {
          margin: 25px 0 20px;
@@ -4209,48 +4269,14 @@ a {
       .name {
          margin-bottom: 10px;
       }
-      .profits-col {
-         display: flex;
-         flex-direction: column;
-         .small-btn {
-            order: 6;
-            padding-left: 5px;
-            padding-right: 5px;
-            margin-top: auto;
-            font-size: 9px;
-         }
-         &.alone {
-            .profit {
-               width: 100%;
-            }
-         }
-      }
-      .line-mob {
-         margin-top: 15px;
-         padding: 0px;
-         width: 100%;
-         flex-direction: row;
-         justify-content: space-between;
-         background: none;
-         .profit {
-            margin: 0px;
-            text-align: center;
-            strong {
-               font-size: 10px;
-            }
-            .summ {
-               font-size: 16px;
-            }
-         }
-      }
       .profit {
          strong {
             margin-top: 3px;
             display: block;
-            font-size: 8px;
+            font-size: 10px;
          }
          .summ {
-            font-size: 12px;
+            font-size: 14px;
          }
       }
    }
@@ -4289,6 +4315,18 @@ a {
             line-height: 30px;
             font-size: 14px;
          }
+      }
+   }
+   /********************cookie-note*****************/
+   .cookie-note {
+      bottom: 60px;
+      .container {
+         flex-wrap: wrap;
+      }
+      a.small-btn {
+         margin-top: 10px;
+         max-width: 100%;
+         width: 100%;
       }
    }
    /*************************ui*************************/
