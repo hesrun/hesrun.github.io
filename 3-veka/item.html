@@ -111,19 +111,21 @@
                </li>
             </ul>
          </nav>
-         <div class="breadcrumbs">
+         <div class="page-crumbs">
             <img src="svg/Asset.svg" alt="">
-            <ul>
-               <li>
-                  <a href="#">Каталог</a>
-               </li>
-               <li>
-                  <a href="#">Мебель</a>
-               </li>
-               <li>
-                  <a href="#">Стулья, кресла, диваны</a>
-               </li>
-            </ul>
+            <div class="breadcrumbs">
+               <ul>
+                  <li>
+                     <a href="#">Каталог</a>
+                  </li>
+                  <li>
+                     <a href="#">Мебель</a>
+                  </li>
+                  <li>
+                     <a href="#">Стулья, кресла, диваны</a>
+                  </li>
+               </ul>
+            </div>
          </div>
          <div class="section border pad">
             <div class="product-card">
@@ -181,7 +183,6 @@
          </div>
       </div>
    </div>
-
    <footer class="main-footer">
       <div class="container">
          <p class="copy">© 2020 Галерея «Три Века»</p>
@@ -189,8 +190,47 @@
    </footer>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.panzoom/4.0.0/panzoom.js"></script>
    <script src="js/lightbox.js" charset="utf-8"></script>
    <script src="js/owl.carousel2.thumbs.min.js" charset="utf-8"></script>
    <script src="js/main.js" charset="utf-8"></script>
+   <script>
+      
+
+      $(".owl-item a").click(function(){
+         
+
+         $(".lb-nav").before("<div class='pan-controls'><button id='zoomOut'>-</button><input type='range' value='1' min='1' max='5' step='0.1' id='zoomRange'><button id='zoomIn'>+</button></div>");
+         
+         const elem = document.getElementById('panzoom'),
+               rangeInput = document.getElementById('zoomRange');
+
+         const panzoom = Panzoom(elem, {
+            minScale: 1,
+            maxScale: 5
+         });
+
+         rangeInput.addEventListener('input', (change) => {
+            panzoom.zoom(event.target.valueAsNumber);
+         })
+
+         $('#zoomIn, #zoomOut').click(function () {
+            var val = parseFloat($("#zoomRange").val());
+            if (val => 1 || val <= 5) {
+               if ($(this).attr('id') == 'zoomIn') val += 0.1;
+               else val -= 0.1;
+               panzoom.zoom(val);
+               $("#zoomRange").val(val);
+            }
+         });
+
+         $('.lb-close, #lightboxOverlay, #lightbox').click(function(e){
+            $('.pan-controls').remove();
+         })
+      })
+
+      
+      
+   </script>
 </body>
 </html>

@@ -219,6 +219,12 @@ input,select,textarea, button {
    font-size: 22px;
    font-weight: 500;
    margin-bottom: 25px;
+   a {
+      text-decoration: none;
+      &:hover {
+         opacity: 0.5;
+      }
+   }
 }
 /***************menu-carusel****************/
 .menu-carusel {
@@ -516,12 +522,30 @@ input,select,textarea, button {
    }
 }
 /*********************breadcrumbs**********/
-.breadcrumbs {
+.page-crumbs {
    display: flex;
    background: #FFFCF2;
    padding: 15px 20px;
    display: flex;
    align-items: center;
+   .page-controls {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      strong {
+         line-height: 30px;
+         margin: 0 30px;
+         font-size: 20px;
+      }
+      a {
+         padding: 0 5px;
+      }
+      a:hover {
+         color: #dadada;
+      }
+   }
+}
+.breadcrumbs {
    ul {
       margin-left: 20px;
       display: flex;
@@ -547,7 +571,6 @@ input,select,textarea, button {
          color: $brown-t;
       }
       li:last-child {
-         pointer-events: none;
          color: $brown-t;
          &:after {
             visibility: hidden;
@@ -559,22 +582,7 @@ input,select,textarea, button {
          font-weight: 500;
       }
    }
-   .page-controls {
-      display: flex;
-      align-items: center;
-      margin-left: auto;
-      strong {
-         line-height: 30px;
-         margin: 0 30px;
-         font-size: 20px;
-      }
-      a {
-         padding: 0 5px;
-      }
-      a:hover {
-         color: #dadada;
-      }
-   }
+   
 }
 /********************page-navigation********/
 .page-navigation {
@@ -718,7 +726,7 @@ input,select,textarea, button {
 .lightbox {
    .lb-container {
       border-radius: none;
-      padding: 40px 60px;
+      padding: 40px 60px 60px;
       border-radius: 0px;
    }
    .lb-image {
@@ -809,13 +817,86 @@ input,select,textarea, button {
       }
    }
 }
+
+.pan-controls {
+   max-width: 500px;
+   display: flex;
+   align-items: center;
+   margin: 15px auto 0;
+   button {
+      position: relative;
+      flex: 0 0 auto;
+      padding: 0px;
+      width: 25px;
+      height: 25px;
+      border: 1px $brown-t solid;
+      color: $brown-t;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+      &:before,
+      &:after {
+         content: "";
+         display: block;
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         margin: -2px 0 0 -8px;
+         height: 3px;
+         width: 17px;
+         background: #6B2F33;
+      }
+   }
+   #zoomOut {
+      &:before {
+         display: none;
+      }
+   }
+   #zoomIn {
+      &:before {
+         transform: rotate(90deg);
+      }
+   }
+   input {
+      margin: 0 15px;
+      flex: 1 1 auto;
+      -webkit-appearance: none;
+      width: 100%;
+      background: transparent;
+      height: 1px;
+      background: $brown-t;
+   }
+   
+}
+#zoomRange::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   height: 25px;
+   width: 6px;
+   background:$brown-b;
+   cursor: pointer;
+}
+#zoomRange::-moz-range-thumb {
+   -webkit-appearance: none;
+   height: 25px;
+   width: 3px;
+   background:$brown-b;
+   cursor: pointer;
+}
+#zoomRange::-ms-thumb {
+   -webkit-appearance: none;
+   height: 25px;
+   width: 3px;
+   background:$brown-b;
+   cursor: pointer;
+}
+
 /*******************catalog-grid************/
 .catalog-grid {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows: 1fr;
-   gap: 40px 0px;
-   grid-gap: 40px 0px;
+   gap: 40px 40px;
+   grid-gap: 40px 40px;
    .item {
       display: flex;
       align-items: center;
@@ -836,6 +917,7 @@ input,select,textarea, button {
          }
       }
       img {
+         max-width: 100%;
          vertical-align: middle;
          transition: all 0.3s;
       }
@@ -1281,8 +1363,16 @@ input,select,textarea, button {
          }
       }
    }
-   .breadcrumbs {
+   .page-crumbs {
       padding: 15px;
+      img {
+         display: none;
+      }
+      .page-controls {
+         display: none;
+      }
+   }
+   .breadcrumbs {
       ul {
          margin: 0px;
          li:after {
@@ -1292,12 +1382,6 @@ input,select,textarea, button {
          a {
             font-size: 15px;
          }
-      }
-      img {
-         display: none;
-      }
-      .page-controls {
-         display: none;
       }
    }
    .catalog-grid {
@@ -1461,8 +1545,10 @@ input,select,textarea, button {
          min-height: 300px;
       }
    }
-   .breadcrumbs {
+   .page-crumbs {
       padding: 10px 15px;
+   }
+   .breadcrumbs {
       ul {
          li:after {
             margin: 0 15px;
