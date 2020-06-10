@@ -263,7 +263,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="profits-col">
+                     <div class="profits-col top">
                         <div class="profit">
                            <strong>PRICE:</strong>
                            <b class="summ">€ 22’500</b>
@@ -276,9 +276,9 @@
                            <strong>PERIOD / ANNUAL PROFIT:</strong>
                            <b class="summ">13,5% / 12,5%</b>
                         </div>
-                        <a href="#" class="small-btn small-text brown">COLLECT WATCHES</a>
+                        <a href="#" class="small-btn small-text brown">COLLECT</a>
                      </div>
-                     <div class="profits-col">
+                     <div class="profits-col top">
                         <div class="profit">
                            <strong>PROFIT:</strong>
                            <b class="summ">€ 2’500</b>
@@ -318,7 +318,7 @@
                               </div>
                            </div>
                         </div>
-                        <div class="profits-col">
+                        <div class="profits-col top">
                            <div class="profit">
                               <strong>PRICE:</strong>
                               <b class="summ">€ 22’500</b>
@@ -331,9 +331,9 @@
                               <strong>PERIOD / ANNUAL PROFIT:</strong>
                               <b class="summ">13,5% / 12,5%</b>
                            </div>
-                           <a href="#" class="small-btn small-text brown">COLLECT WATCHES</a>
+                           <a href="#" class="small-btn small-text brown">COLLECT</a>
                         </div>
-                        <div class="profits-col">
+                        <div class="profits-col top">
                            <div class="profit">
                               <strong>PROFIT:</strong>
                               <b class="summ">€ 2’500</b>
@@ -364,7 +364,7 @@
                         <span class="invest-date grey-text">23.04.2020</span>
                         <span class="end-time grey-text">Time is up, but this watch is still for sale</span>
                      </div>
-                     <div class="profits-col">
+                     <div class="profits-col top">
                         <div class="profit">
                            <strong>PRICE:</strong>
                            <b class="summ">€ 22’500</b>
@@ -377,9 +377,9 @@
                            <strong>PERIOD / ANNUAL PROFIT:</strong>
                            <b class="summ">13,5% / 12,5%</b>
                         </div>
-                        <a href="#" class="small-btn small-text brown">COLLECT WATCHES</a>
+                        <a href="#" class="small-btn small-text brown">COLLECT</a>
                      </div>
-                     <div class="profits-col">
+                     <div class="profits-col top">
                         <div class="profit">
                            <strong>PROFIT:</strong>
                            <b class="summ">€ 2’500</b>
@@ -506,6 +506,22 @@
          </div>
       </footer>
    </div>
+   <div id="ConfirmModal" class="modal c-modal">
+      <div class="confirm-collects-modal">
+         <div class="title text-center">
+            <strong>Confirm collection</strong>
+         </div>
+         <div class="question text-center">Are you sure you want to collect this watches?</div>
+         <div class="btns">
+            <a href="#" class="small-btn small-text green">CONFIRM</a>
+            <a href="#" class="small-btn small-text orange">CANCEL</a>
+         </div>
+         <p>Watches will be replaced into «Collects» seccion, you will need to pay Choronofund comission to collect them. Delivery and import taxes are not included.  The operation can be undone during 24 hours only!</p>
+         <div class="text-center">
+            <a href="#" class="small-btn small-text blue outline">REQUEST CONSULTATION</a>
+         </div>
+      </div>
+   </div>
    <div id="SearchModal" class="modal mobile-modal search-mobile-modal">
       <div class="mobile-modal-wrapper">
          <div class="mobile-modal-header">
@@ -590,6 +606,9 @@
 <script src="js/main.js" type="text/javascript"></script>
 <script type="text/javascript">
    $(document).ready(function() {
+      $("#ConfirmModal").modal({
+         fadeDuration: 300
+      });
       $('.tooltip').tooltipster({
          animation: 'grow',
          trigger: 'click',

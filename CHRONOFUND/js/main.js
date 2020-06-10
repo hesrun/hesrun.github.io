@@ -45,7 +45,7 @@ $('#ShowPass').click(function() {
    }
 })
 
-$('.filter-drop').dropkick({
+$('.filter-drop, .c-b-input select').dropkick({
    mobile: true
 });
 
