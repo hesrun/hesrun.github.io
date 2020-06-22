@@ -2,9 +2,9 @@ var scTop;
 
 $(window).scroll(function() {
    scTop = $(this).scrollTop();
-   if (scTop > 300) {
+   if (scTop > 350) {
       $(".main-header").addClass('mini');
-   } else {
+   } if (scTop < 300) {
       $(".main-header").removeClass('mini');
    }
 })
