@@ -2277,6 +2277,11 @@ a {
    }
    .info {
       width: 46%;
+      .status {
+         margin-top: 15px;
+         display: inline-block;
+         padding: 10px 20px;
+      }
    }
    .profits-col {
       width: 27%;
@@ -2326,14 +2331,19 @@ a {
       }
    }
    .status {
+      text-transform: uppercase;
       text-align: center;
       border: 2px rgba($grey,0.5) dashed;
       padding: 15px;
       font-size: 12px;
-      color: rgba($grey,0.5);
-      font-weight: 500;
+      color: $grey;
+      font-weight: 400;
+      letter-spacing: 1px;
       & + .small-btn {
          margin-top: 15px;
+      }
+      a:hover {
+         text-decoration: underline;
       }
    }
 }
@@ -2375,6 +2385,46 @@ a {
       }
    }
 
+}
+
+.investments-countdown {
+   max-width: 240px;
+   margin-top: 30px;
+   margin-bottom: 10px;
+   border: 1px rgba($grey,0.2) solid;
+   border-radius: 10px;
+   padding: 10px 25px;
+   > strong {
+      letter-spacing: 1px;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 10px;
+   }
+   .timer-wrap {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      div {
+         text-align: center;
+      }
+      span {
+         font-size: 10px;
+         display: block;
+         font-weight: 600;
+         color: $grey;
+      }
+      b {
+         font-weight: 700;
+         font-size: 20px;
+      }
+   }
+}
+.countdown-note {
+   letter-spacing: 1px;
+   font-weight: 500;
+   text-transform: uppercase;
+   font-size: 10px;
 }
 .confirm-collects-modal {
    .title {
@@ -3510,7 +3560,7 @@ a {
       .to-down {
          position: sticky;
          display: inline-block;
-         bottom: -30px;
+         bottom: 0px;
          color: #fff;
          font-size: 24px;
          left: 100%;
@@ -4505,6 +4555,11 @@ a {
       }
    }
    .my-investments-list {
+      .basket-list-item {
+         .image {
+            align-self: flex-start;
+         }
+      }
       .info {
          width: calc(100% - 115px);
          padding: 0px;
@@ -4529,6 +4584,10 @@ a {
             font-size: 14px;
          }
       }
+   }
+   .investments-countdown {
+      margin-top: 10px;
+      padding: 10px 20px;
    }
    /*****************search-mobile-modal**************/
    /********************mobile-navigation-bar*****************/

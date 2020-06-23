@@ -3029,6 +3029,12 @@ a {
   width: 46%;
 }
 
+.my-investments-list .info .status {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
 .my-investments-list .profits-col {
   width: 27%;
   padding-right: 40px;
@@ -3092,16 +3098,22 @@ a {
 }
 
 .my-investments-list .status {
+  text-transform: uppercase;
   text-align: center;
   border: 2px rgba(129, 129, 129, 0.5) dashed;
   padding: 15px;
   font-size: 12px;
-  color: rgba(129, 129, 129, 0.5);
-  font-weight: 500;
+  color: #818181;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .my-investments-list .status + .small-btn {
   margin-top: 15px;
+}
+
+.my-investments-list .status a:hover {
+  text-decoration: underline;
 }
 
 .investments-progress {
@@ -3149,6 +3161,58 @@ a {
 
 .investments-progress .progress.blue .inner {
   background: #23236a;
+}
+
+.investments-countdown {
+  max-width: 240px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border: 1px rgba(129, 129, 129, 0.2) solid;
+  border-radius: 10px;
+  padding: 10px 25px;
+}
+
+.investments-countdown > strong {
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.investments-countdown .timer-wrap {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.investments-countdown .timer-wrap div {
+  text-align: center;
+}
+
+.investments-countdown .timer-wrap span {
+  font-size: 10px;
+  display: block;
+  font-weight: 600;
+  color: #818181;
+}
+
+.investments-countdown .timer-wrap b {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.countdown-note {
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
 .confirm-collects-modal .title {
@@ -4530,7 +4594,7 @@ a {
     position: -webkit-sticky;
     position: sticky;
     display: inline-block;
-    bottom: -30px;
+    bottom: 0px;
     color: #fff;
     font-size: 24px;
     left: 100%;
@@ -5564,6 +5628,10 @@ a {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .my-investments-list .basket-list-item .image {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
   .my-investments-list .info {
     width: calc(100% - 115px);
     padding: 0px;
@@ -5583,6 +5651,10 @@ a {
   }
   .my-investments-list .profit .summ {
     font-size: 14px;
+  }
+  .investments-countdown {
+    margin-top: 10px;
+    padding: 10px 20px;
   }
   /*****************search-mobile-modal**************/
   /********************mobile-navigation-bar*****************/
