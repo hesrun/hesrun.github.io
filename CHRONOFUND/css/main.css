@@ -69,7 +69,7 @@ a {
 /******************container**************/
 .container {
   margin: auto;
-  min-width: 1024px;
+  min-width: 1280px;
   max-width: 1440px;
   padding: 0 30px;
 }
@@ -355,7 +355,7 @@ a {
   width: 100%;
   top: 0px;
   padding: 25px 0;
-  min-width: 1024px;
+  min-width: 1280px;
   background-color: #191933;
   color: #fff;
   z-index: 100;
@@ -531,7 +531,7 @@ a {
 
 /********************cookie-note***********/
 .cookie-note {
-  min-width: 1024px;
+  min-width: 1280px;
   padding: 15px 0;
   background: #8F92A1;
   color: #fff;
@@ -833,26 +833,31 @@ a {
 .article-text h1 {
   font-size: 2rem;
   margin: 1.6rem 0;
+  font-weight: 600;
 }
 
 .article-text h2 {
   font-size: 1.8rem;
   margin: 1.4rem 0;
+  font-weight: 600;
 }
 
 .article-text h3 {
   font-size: 1.6rem;
   margin: 1.2rem 0;
+  font-weight: 600;
 }
 
 .article-text h4 {
   font-size: 1.4rem;
   margin: 1rem 0;
+  font-weight: 600;
 }
 
 .article-text h5 {
   font-size: 1.2rem;
   margin: 0.8rem 0;
+  font-weight: 600;
 }
 
 .article-text p {
@@ -1714,6 +1719,7 @@ a {
   margin: 35px 0;
   background: #f76844;
   border: 2px #f76844 solid;
+  text-transform: uppercase;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1740,6 +1746,16 @@ a {
   border: 2px #f76844 solid;
   background: transparent;
   color: #f76844;
+}
+
+.catalog-item-card .invest-now.active {
+  display: block;
+  background: none;
+  text-align: center;
+  color: #818181;
+  border-color: #818181;
+  border-width: 3px;
+  pointer-events: none;
 }
 
 .product-card-img {
@@ -2792,6 +2808,171 @@ a {
   margin: 0px;
 }
 
+/******************balance*********************/
+.balance-counts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -7.5px;
+}
+
+.balance-counts .box {
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background: rgba(189, 189, 189, 0.2);
+  padding: 20px;
+  margin: 0 7.5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.balance-counts .box strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.balance-counts .box strong i {
+  color: #818181;
+  font-style: normal;
+  margin-left: 5px;
+}
+
+.balance-counts .box .summ {
+  display: block;
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+.balance-counts .box.and-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+}
+
+.balance-counts .box.and-btn .small-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 10%;
+}
+
+.balance-counts + .catalog-tools {
+  margin: 30px 0;
+}
+
+.balance-counts + .catalog-tools .search {
+  max-width: 250px;
+  width: 100%;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.balance-counts + .catalog-tools .search .input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  position: relative;
+}
+
+.balance-counts + .catalog-tools .search input {
+  width: 100%;
+  font-size: 16px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  outline: none;
+  height: 35px;
+  border: 1px solid rgba(129, 129, 129, 0.5);
+  padding: 0 10px;
+}
+
+.balance-counts + .catalog-tools .search > .small-btn {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 10px;
+}
+
+.transactions-table table {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+.transactions-table tr:first-child td {
+  border-top: 1px rgba(129, 129, 129, 0.2) solid;
+}
+
+.transactions-table td {
+  border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
+  padding: 25px 0;
+  vertical-align: middle;
+}
+
+.transactions-table .name {
+  display: block;
+  font-size: 18px;
+}
+
+.transactions-table .date {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  color: #818181;
+}
+
+.transactions-table .summ {
+  display: block;
+  text-align: right;
+  font-size: 18px;
+}
+
+.transactions-table .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.transactions-table .btns .small-btn + .small-btn {
+  margin-left: 10px;
+  width: 100%;
+  max-width: 130px;
+}
+
+.transactions-table .status {
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px rgba(129, 129, 129, 0.5) dashed;
+  padding: 15px;
+  font-size: 12px;
+  color: #818181;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.transactions-table .status + .small-btn {
+  margin-top: 15px;
+}
+
+.transactions-table .status a:hover {
+  text-decoration: underline;
+}
+
 /******************checkout********************/
 .checkout-balance-table table {
   width: 100%;
@@ -3064,6 +3245,10 @@ a {
 }
 
 .my-investments-list .status-col .small-btn {
+  height: auto;
+  line-height: normal;
+  padding-top: 9px;
+  padding-bottom: 9px;
   width: 100%;
 }
 
@@ -3244,8 +3429,59 @@ a {
   margin-bottom: 15px;
 }
 
+.confirm-collects-modal p a {
+  color: #f76844;
+}
+
 .confirm-collects-modal + .close-modal {
   display: none !important;
+}
+
+.confirm-collects-modal .text-center + .text-center {
+  margin-top: 25px;
+}
+
+.confirm-collects-modal .add-file {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.confirm-collects-modal .add-file i.mdi {
+  font-size: 28px;
+  color: #818181;
+  margin-left: 15px;
+}
+
+.confirm-collects-modal .add-file .field {
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+  height: 35px;
+  line-height: 32px;
+  background: none;
+  border: 1px rgba(129, 129, 129, 0.5) solid;
+  padding: 0 15px;
+  color: #818181;
+}
+
+.confirm-collects-modal .add-file input {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.confirm-collects-modal .add-file input::-webkit-file-upload-button {
+  cursor: pointer;
 }
 
 /************mobile-navigation-bar************/
@@ -3342,7 +3578,7 @@ a {
 
 /********************footer*****************/
 .main-footer {
-  min-width: 1024px;
+  min-width: 1280px;
   background: #191933;
   color: #fff;
   padding: 30px 0;
@@ -3738,6 +3974,30 @@ a {
 
 .c-input input:focus {
   border-bottom: 2px white solid;
+}
+
+.c-input input::-webkit-caps-lock-indicator {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.c-input input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.c-input input::-webkit-textfield-decoration-container {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
 }
 
 .c-input input::-webkit-contacts-auto-fill-button {
@@ -4212,6 +4472,10 @@ a {
   opacity: 0.4;
 }
 
+.small-btn.full {
+  width: 100%;
+}
+
 .small-btn.orange {
   border-color: #f76844;
   background: #f76844;
@@ -4221,6 +4485,37 @@ a {
 .small-btn.orange:hover {
   background: transparent;
   color: #f76844;
+}
+
+.small-btn.orange.outline {
+  color: #f76844;
+  background: none;
+}
+
+.small-btn.orange.outline:hover {
+  background: #f76844;
+  color: #fff;
+}
+
+.small-btn.red {
+  border-color: #f76844;
+  background: #f76844;
+  color: #fff;
+}
+
+.small-btn.red:hover {
+  background: transparent;
+  color: #f76844;
+}
+
+.small-btn.red.outline {
+  color: #f76844;
+  background: none;
+}
+
+.small-btn.red.outline:hover {
+  background: #f76844;
+  color: #fff;
 }
 
 .small-btn.white {
@@ -4481,7 +4776,7 @@ a {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   /*****************catalog-item-card**************/
   .catalog-item-card {
     -ms-grid-columns: (100%)[1];
@@ -4723,6 +5018,77 @@ a {
   }
   .checkout-invoice {
     max-width: 100%;
+  }
+  /*********************balance**************************/
+  .balance-counts {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0px;
+  }
+  .balance-counts .box {
+    width: calc(50% - 7.5px);
+    margin: 0 0 15px 0;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  .balance-counts .box strong i {
+    margin: 0px;
+    display: block;
+  }
+  .balance-counts .box.and-btn {
+    width: 100%;
+  }
+  .balance-counts .box.and-btn .small-btn {
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    max-width: 160px;
+  }
+  .transactions-table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
+  }
+  .transactions-table tr:first-child {
+    border-top: 1px rgba(129, 129, 129, 0.2) solid;
+  }
+  .transactions-table tr:first-child td {
+    border: none;
+  }
+  .transactions-table td {
+    padding: 0px;
+    border: none;
+  }
+  .transactions-table .with-status {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .transactions-table .with-status .status-col {
+    margin-top: 25px;
+    width: 100%;
+  }
+  .transactions-table .with-status .btns-col {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .transactions-table .with-status .btns-col .btns {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   /*************************my-investments*****************/
   .my-investments-statistic {
@@ -5607,6 +5973,73 @@ a {
   }
   .checkout-invoice .invoce-cancle .c-btn {
     width: 100%;
+  }
+  /*********************balance**************************/
+  .balance-counts {
+    display: block;
+  }
+  .balance-counts .box {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .balance-counts .box strong {
+    text-align: left;
+  }
+  .balance-counts .box .summ {
+    margin: 0px;
+    font-size: 18px;
+  }
+  .balance-counts .box.and-btn {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .balance-counts .box.and-btn > div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .balance-counts .box.and-btn .small-btn {
+    margin: 15px 0 0 0;
+    max-width: 100%;
+  }
+  .balance-counts ~ .mobile-catalog-tools {
+    margin-bottom: 15px;
+  }
+  .transactions-table tr {
+    padding: 30px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .transactions-table td:first-child {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .transactions-table .with-status .btns {
+    margin: 15px 0;
+    display: block;
+  }
+  .transactions-table .with-status .btns .small-btn {
+    margin: 0 0 10px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .transactions-table .with-status .status-col {
+    margin-top: 0px;
   }
   /*************************my-investments*****************/
   .my-investments-statistic {

@@ -56,7 +56,7 @@ a {
 /******************container**************/
 .container {
    margin: auto;
-   min-width: 1024px;
+   min-width: 1280px;
    max-width: 1440px;
    padding: 0 30px;
 }
@@ -267,7 +267,7 @@ a {
    width: 100%;
    top: 0px;
    padding: 25px 0;
-   min-width: 1024px;
+   min-width: 1280px;
    background-color: $blue-bg;
    color: #fff;
    z-index: 100;
@@ -406,7 +406,7 @@ a {
 }
 /********************cookie-note***********/
 .cookie-note {
-   min-width: 1024px;
+   min-width: 1280px;
    padding: 15px 0;
    background: #8F92A1;
    color: #fff;
@@ -633,26 +633,30 @@ a {
    h1 {
       font-size: 2rem;
       margin: 1.6rem 0;
+      font-weight: 600;
    }
    h2 {
       font-size: 1.8rem;
       margin: 1.4rem 0;
+      font-weight: 600;
    }
    h3 {
       font-size: 1.6rem;
       margin: 1.2rem 0;
+      font-weight: 600;
    }
    h4 {
       font-size: 1.4rem;
       margin: 1rem 0;
+      font-weight: 600;
    }
    h5 {
       font-size: 1.2rem;
       margin: 0.8rem 0;
+      font-weight: 600;
    }
    p {
       margin: 1rem 0;
-
    }
    blockquote {
       border-left: 4px $brown solid;
@@ -1303,6 +1307,7 @@ a {
       margin: 35px 0;
       background: $orange;
       border: 2px $orange solid;
+      text-transform: uppercase;
       color: #fff;
       display: flex;
       align-items: center;
@@ -1319,6 +1324,15 @@ a {
          border: 2px $orange solid;
          background: transparent;
          color: $orange;
+      }
+      &.active {
+         display: block;
+         background: none;
+         text-align: center;
+         color: $grey;
+         border-color: $grey;
+         border-width: 3px;
+         pointer-events: none;
       }
    }
 }
@@ -2102,6 +2116,129 @@ a {
       }
    }
 }
+/******************balance*********************/
+.balance-counts {
+   display: flex;
+   margin: 0 -7.5px;
+   .box {
+      text-align: center;
+      flex: 1 1 auto;
+      background: rgba(#BDBDBD,0.2);
+      padding: 20px;
+      margin: 0 7.5px;
+      transition: all 0.3s;
+      strong {
+         display: block;
+         font-size: 12px;
+         font-weight: 500;
+         letter-spacing: 1px;
+         i {
+            color: $grey;
+            font-style: normal;
+            margin-left: 5px;
+         }
+      }
+      .summ {
+         display: block;
+         font-size: 28px;
+         margin-top: 4px;
+      }
+   }
+   .box.and-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      .small-btn {
+         flex: 1 1 auto;
+         margin-left: 10%;
+      }
+   }
+}
+.balance-counts + .catalog-tools {
+   margin: 30px 0;
+   .search {
+      max-width: 250px;
+      width: 100%;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      .input {
+         flex: 1 1 auto;
+         position: relative;
+      }
+      input {
+         width: 100%;
+         font-size: 16px;
+         flex: 1 1 auto;
+         outline: none;
+         height: 35px;
+         border: 1px solid rgba($grey,0.5);
+         padding: 0 10px;
+      }
+      > .small-btn {
+         padding-left: 0px;
+         padding-right: 0px;
+         margin-left: 10px;
+      }
+   }
+}
+.transactions-table {
+   table {
+      width: 100%;
+      border-spacing: 0px;
+      border-collapse: collapse;
+   }
+   tr:first-child {
+      td {
+         border-top: 1px rgba($grey,0.2) solid;   
+      }
+   }
+   td {
+      border-bottom: 1px rgba($grey,0.2) solid;
+      padding: 25px 0;
+      vertical-align: middle;
+   }
+   .name {
+      display: block;
+      font-size: 18px;
+   }
+   .date {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+      color: $grey;
+   }
+   .summ {
+      display: block;
+      text-align: right;
+      font-size: 18px;
+   }
+   .btns {
+      display: flex;
+      .small-btn + .small-btn {
+         margin-left: 10px;
+         width: 100%;
+         max-width: 130px;
+      }
+   }
+   .status {
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px rgba($grey,0.5) dashed;
+      padding: 15px;
+      font-size: 12px;
+      color: $grey;
+      font-weight: 400;
+      letter-spacing: 1px;
+      & + .small-btn {
+         margin-top: 15px;
+      }
+      a:hover {
+         text-decoration: underline;
+      }
+   }
+}
 /******************checkout********************/
 .checkout-balance-table {
    table {
@@ -2303,6 +2440,10 @@ a {
       width: 27%;
       text-align: right;
       .small-btn {
+         height: auto;
+         line-height: normal;
+         padding-top: 9px;
+         padding-bottom: 9px;
          width: 100%;
       }
    }
@@ -2446,9 +2587,49 @@ a {
       font-size: 14px;
       line-height: 1.5;
       margin-bottom: 15px;
+      a {
+         color: $orange;
+      }
    }
    & + .close-modal {
       display: none !important;
+   }
+   .text-center + .text-center {
+      margin-top: 25px;
+   }
+   .add-file {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      i.mdi {
+         font-size: 28px;
+         color: $grey;
+         margin-left: 15px;
+      }
+      .field {
+         outline: none;
+         font-size: 14px;
+         width: 100%;
+         height: 35px;
+         line-height: 32px;
+         background: none;
+         border: 1px rgba($grey,0.5) solid;
+         padding: 0 15px;
+         color: $grey;
+      }
+      input {
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         width: 100%;
+         height: 100%;
+         opacity: 0;
+         cursor: pointer;
+      }
+      input::-webkit-file-upload-button {
+         cursor: pointer;
+      }
    }
 }
 /************mobile-navigation-bar************/
@@ -2528,7 +2709,7 @@ a {
 }
 /********************footer*****************/
 .main-footer {
-   min-width: 1024px;
+   min-width: 1280px;
    background: $blue-bg;
    color: #fff;
    padding: 30px 0;
@@ -2831,13 +3012,35 @@ a {
          border-bottom: 2px rgba(#fff,1) solid;
       }
    }
+   input::-webkit-caps-lock-indicator {
+      visibility: hidden;
+      display: none !important;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+   }
+   input::-webkit-credentials-auto-fill-button {
+      visibility: hidden;
+      display: none !important;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+   }
+   input::-webkit-textfield-decoration-container {
+      visibility: hidden;
+      display: none !important;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+   }
    input::-webkit-contacts-auto-fill-button {
-         visibility: hidden;
-         display: none !important;
-         pointer-events: none;
-         position: absolute;
-         right: 0;
-      }    
+      visibility: hidden;
+      display: none !important;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+   }
+
    .err {
       display: block;
       margin-top: 15px;
@@ -3220,6 +3423,9 @@ a {
       border-color: $grey !important;
       opacity: 0.4;
    }
+   &.full {
+      width: 100%;
+   }
    &.orange {
       border-color: $orange;
       background: $orange;
@@ -3227,6 +3433,31 @@ a {
       &:hover {
          background: transparent;
          color: $orange;
+      }
+      &.outline {
+         color: $orange;
+         background: none;
+         &:hover {
+            background: $orange;
+            color: #fff;
+         }
+      }
+   }
+   &.red {
+      border-color: $orange;
+      background: $orange;
+      color: #fff;
+      &:hover {
+         background: transparent;
+         color: $orange;
+      }
+      &.outline {
+         color: $orange;
+         background: none;
+         &:hover {
+            background: $orange;
+            color: #fff;
+         }
       }
    }
    &.white {
@@ -3452,7 +3683,7 @@ a {
       }
    }
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1280px) {
    /*****************catalog-item-card**************/
    .catalog-item-card {
       grid-template-columns: repeat(1, 100%);
@@ -3675,6 +3906,63 @@ a {
    }
    .checkout-invoice {
       max-width: 100%;
+   }
+   /*********************balance**************************/
+   .balance-counts {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0px;
+      .box {
+         width: calc(50% - 7.5px);
+         margin: 0 0 15px 0;
+         flex: 0 0 auto;
+         strong {
+            i {
+               margin: 0px;
+               display: block;
+            }
+         }
+         &.and-btn {
+            width: 100%;
+            .small-btn {
+               width: 100%;
+               flex: 0 0 auto;
+               max-width: 160px;
+            }
+         }
+      }
+   }
+   .transactions-table {
+      tr {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 30px 0;
+         border-bottom: 1px rgba($grey,0.2) solid;
+         &:first-child {
+            border-top: 1px rgba($grey,0.2) solid;
+            td {
+               border: none;      
+            }
+         }
+      }
+      td {
+         padding: 0px;
+         border: none;
+      }
+      .with-status {
+         flex-wrap: wrap;
+         .status-col {
+            margin-top: 25px;
+            width: 100%;
+         }
+         .btns-col {
+            flex: 1 1 auto;
+            .btns {
+               justify-content: flex-end;
+            }
+         }
+      }
    }
    /*************************my-investments*****************/
    .my-investments-statistic {
@@ -4537,6 +4825,65 @@ a {
          }
       }
    }
+   /*********************balance**************************/
+   .balance-counts {
+      display: block;
+      .box {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         strong {
+            text-align: left;
+         }
+         .summ {
+            margin: 0px;
+            font-size: 18px;
+         }
+      }
+      .box.and-btn {
+         flex-wrap: wrap;
+         > div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+         }
+         .small-btn {
+            margin: 15px 0 0 0;
+            max-width: 100%;
+         }
+      }
+   }
+   .balance-counts ~ .mobile-catalog-tools {
+      margin-bottom: 15px;
+   }
+
+   .transactions-table {
+      tr {
+         padding: 30px 0;
+         flex-wrap: wrap;
+      }
+      td:first-child {
+         width: 100%;
+         margin-bottom: 15px;
+      }
+      .with-status {
+         .btns {
+            margin: 15px 0;
+            display: block;
+            .small-btn {
+               margin: 0 0 10px 0;
+               width: 100%;
+               max-width: 100%;
+            }
+         }
+         .status-col {
+            margin-top: 0px;
+         }
+      }
+   }
+
    /*************************my-investments*****************/
    .my-investments-statistic {
       margin-bottom: 30px;
