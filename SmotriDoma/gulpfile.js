@@ -9,7 +9,7 @@ gulp.task('server', function() {
         server: {
             baseDir: "./"
         },
-		notify: false
+		notify: true
     });
 })
 gulp.task('style', function() {

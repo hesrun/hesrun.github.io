@@ -1,124 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>muzlo</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/main.css?v1.1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/utils/Draggable.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" charset="utf-8"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>muzlo</title>
+   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500&amp;subset=cyrillic" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+   <link rel="stylesheet" href="css/fonts.css">
+   <link rel="stylesheet" href="css/main.css?v1.1">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/utils/Draggable.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" charset="utf-8"></script>
+   <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-    <div class="wrap">
-        <div class="head">
-            <a href="#" class="logo">
-                <img width="90px" src="img/logo.svg" alt="">
+   <div class="video-bg">
+      <video id="videoPlayer" autoplay="autoplay" loop="loop" preload="auto">
+         <source src="video/video.mp4" type="video/mp4">
+      </video>
+   </div>
+   <div class="wrap">
+      <div class="head">
+         <a href="#" class="logo">
+            <img src="img/logo.png" alt="">
+         </a>
+      </div>
+      <div class="container">
+         <div class="pleer">
+            <div class="volume active">
+               <div class="knob">
+                  <div class="scale">
+                     <div class="item active"></div>
+                     <div class="item active"></div>
+                     <div class="item active"></div>
+                     <div class="item active"></div>
+                     <div class="item active"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                     <div class="item"></div>
+                  </div>
+                  <div class="base"></div>
+                  <div id="knob" class="knob-rotate">
+                     <div class="knob-inner">
+                        <div class="ring"></div>
+                        <div class="light"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="button-name">Volume</div>
+            </div>
+            <div class="play-btn">
+               <div class="base"></div>
+               <div class="button-name">Pause</div>
+            </div>
+         </div>
+         <div class="track-info">
+            <div class="equalizer off">
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+               <div class="bar"></div>
+            </div>
+            <div class="track-text">
+               <div class="track-text-inner">
+                  <div class="artist">Amon Tobin</div>
+                  <div class="name">Here comes man</div>
+               </div>
+            </div>
+            <div class="timing">5:02</div>
+         </div>
+      </div>
+      <div class="footer">
+         <div class="info-btn to-hide">
+            <a class="icon" href="#">
+               <i class="fa fa-envelope"></i>
             </a>
             <div class="text">
-                <h1>YA<span class="dot"></span>ZA<span class="dot"></span>MUZLO</h1>
-                <span class="sub-title">Новая музыка и суперхиты</span>
+               <a class="icohref" href="mailto:pifm@mkrmedia.ru">
+                  pifm@mkrmedia.ru
+               </a>
             </div>
-        </div>
-        <div class="container">
-            <div class="pleer">
-                <div class="volume active">
-                    <div class="knob">
-                        <div class="scale">
-                            <div class="item active"></div>
-                            <div class="item active"></div>
-                            <div class="item active"></div>
-                            <div class="item active"></div>
-                            <div class="item active"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                        </div>
-                        <div class="base"></div>
-                        <div id="knob" class="knob-rotate">
-                            <div class="knob-inner">
-                                <div class="ring"></div>
-                                <div class="light"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button-name">Volume</div>
-                </div>
-                <div class="play-btn">
-                    <div class="base"></div>
-                    <div class="button-name">Pause</div>
-                </div>
-            </div>
-            <div class="track-info">
-                <div class="equalizer off">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-                <div class="track-text">
-                    <div class="track-text-inner">
-                        <div class="artist">Amon Tobin</div>
-                        <div class="name">Here comes man</div>
-                    </div>
-                </div>
-                <div class="timing">5:02</div>
-            </div>
-        </div>
-        <div class="footer">
-            <a href="mailto:info@yazamuzlo.ru">
-                <img src="img/msg-icon.png" alt="">
-                info@yazamuzlo.ru
+         </div>
+         <div class="info-btn to-hide">
+            <a class="icon" href="#">
+               <i class="fab fa-whatsapp"></i>
             </a>
-            <div class="online">
-                <img src="img/user-icon.png" alt="">
-                109
+            <div class="text">
+               <a class="icohref" target="_blank" href="https://api.whatsapp.com/send?phone=79104124333">
+                  +7 (910) 412-43-33
+               </a>
             </div>
-        </div>
-    </div>
+         </div>
+         <div class="info-btn to-hide">
+            <a class="icon" href="#">
+               <i class="fab fa-viber"></i>
+            </a>
+            <div class="text">
+               <a class="icohref" target="_blank" href="viber://chat?number=+79104124333">
+                  +7 (910) 412-43-33
+               </a>
+            </div>
+         </div>
+         <div class="info-btn to-hide">
+            <a class="icon" target="_blank" href="https://apps.apple.com/ru/app/%D0%BF%D0%B8-%D1%84%D0%BC/id1447812672">
+               <i class="fab fa-app-store"></i>
+            </a>
+            <div class="text">
+               App Store
+            </div>
+         </div>
+         <div class="info-btn to-hide">
+            <a class="icon" target="_blank" href="http://play.google.com/store/apps/details?id=com.luciaya.saunas">
+               <i class="fab fa-google-play"></i>
+            </a>
+            <div class="text">
+               Google Play
+            </div>
+         </div>
+         <div class="info-btn to-hide">
+            <a class="icon" href="#">
+               <i class="fa fa-envelope"></i>
+            </a>
+            <div class="text">
+               <a class="icohref" href="mailto:pifm@mkrmedia.ru">
+                  pifm@mkrmedia.ru
+               </a>
+            </div>
+         </div>
+         <div class="info-btn to-hide">
+            <a class="icon" href="#">
+               <i class="fab fa-whatsapp"></i>
+            </a>
+            <div class="text">
+               <a class="icohref" target="_blank" href="https://api.whatsapp.com/send?phone=79104124333">
+                  +7 (910) 412-43-33
+               </a>
+            </div>
+         </div>
+         <div class="info-btn show-more">
+            <div class="icon">
+               <i class="fas fa-ellipsis-v"></i>
+            </div>
+         </div>
+      </div>
+   </div>
 </body>
-    <script type="text/javascript">
-        var button = $('#knob');
-
-        TweenMax.to(button, 1.5, {rotation:135});
-
-        Draggable.create(button,{
-            bounds:{
-                maxRotation:270,
-                minRotation:0
-            },
-            type: "rotation",
-            onDrag:dragUpdate
-        });
-
-        function dragUpdate(){
-            percent = Math.floor((this.rotation)/2.7)
-            console.log(percent);
-        };
 
 
-
-        $('.play-btn').click(function(){
-            $(this).toggleClass('active');
-            $('.equalizer').toggleClass('off')
-        })
-    </script>
+<script type="text/javascript">
+// var button = $('#knob');
+//
+// TweenMax.to(button, 1.5, {rotation:135});
+//
+// Draggable.create(button,{
+//    bounds:{
+//       maxRotation:270,
+//       minRotation:0
+//    },
+//    type: "rotation",
+//    onDrag:dragUpdate
+// });
+//
+// function dragUpdate(){
+//    percent = Math.floor((this.rotation)/2.7)
+//    console.log(percent);
+// };
+//
+//
+//
+// $('.play-btn').click(function(){
+//    $(this).toggleClass('active');
+//    $('.equalizer').toggleClass('off')
+// })
+</script>
 </html>

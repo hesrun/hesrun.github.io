@@ -1,7 +1,8 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
 }
 
@@ -40,9 +41,15 @@ input, select, textarea, button {
 }
 
 .header-top-line .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 60px;
 }
 
@@ -57,6 +64,7 @@ input, select, textarea, button {
   vertical-align: middle;
   color: #DADADA;
   border-right: 1px #DADADA solid;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding-right: 5px;
   margin-right: 5px;
@@ -75,6 +83,8 @@ input, select, textarea, button {
 }
 
 .header-search a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   background: none;
   height: 60px;
@@ -84,6 +94,7 @@ input, select, textarea, button {
   border-right: 1px #DADADA solid;
   color: #DADADA;
   font-size: 24px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -110,7 +121,9 @@ input, select, textarea, button {
 .header-search .search-field input {
   width: 100%;
   font-weight: 500;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   height: 30px;
   border: 1px #5E292C solid;
   font-size: 18px;
@@ -120,6 +133,21 @@ input, select, textarea, button {
   background: #FFFCF2;
 }
 
+.header-search .search-field input::-webkit-input-placeholder {
+  color: #6B2F33;
+  opacity: 1;
+}
+
+.header-search .search-field input:-ms-input-placeholder {
+  color: #6B2F33;
+  opacity: 1;
+}
+
+.header-search .search-field input::-ms-input-placeholder {
+  color: #6B2F33;
+  opacity: 1;
+}
+
 .header-search .search-field input::placeholder {
   color: #6B2F33;
   opacity: 1;
@@ -127,6 +155,8 @@ input, select, textarea, button {
 
 .navigation-menu ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 50px;
   border: 1px rgba(94, 41, 44, 0.92) solid;
@@ -134,7 +164,9 @@ input, select, textarea, button {
 }
 
 .navigation-menu li {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .navigation-menu a {
@@ -145,6 +177,7 @@ input, select, textarea, button {
   color: rgba(255, 251, 238, 0.7);
   text-align: center;
   text-decoration: none;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -173,8 +206,12 @@ input, select, textarea, button {
 }
 
 .toggleMenu button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
   line-height: 35px;
   padding: 10px 15px;
@@ -251,13 +288,15 @@ input, select, textarea, button {
 
 .menu-carusel .card:hover img {
   opacity: 0.1;
-  filter: blur(5px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 .menu-carusel .card:hover a {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .menu-carusel .image {
@@ -267,14 +306,21 @@ input, select, textarea, button {
 }
 
 .menu-carusel .image img {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .menu-carusel .image a {
   font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 120px;
   height: 120px;
   position: absolute;
@@ -286,7 +332,9 @@ input, select, textarea, button {
   text-decoration: none;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -303,6 +351,7 @@ input, select, textarea, button {
   position: absolute;
   width: 15px;
   height: 140px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -347,6 +396,7 @@ input, select, textarea, button {
   border-right: 12px #dadada solid;
   border-top: 10px transparent solid;
   border-bottom: 10px transparent solid;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -367,31 +417,45 @@ input, select, textarea, button {
   border-left: 12px #dadada solid;
   border-top: 10px transparent solid;
   border-bottom: 10px transparent solid;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 /***************about-greed****************/
 .about-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .about-grid > div {
   width: 50%;
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .about-grid img {
   min-height: 100%;
   max-width: 100%;
   vertical-align: middle;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about-grid .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 30px 35px;
   text-align: center;
   line-height: 1.1;
@@ -410,6 +474,8 @@ input, select, textarea, button {
 
 /***************contacts-grid****************/
 .contacts-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -475,6 +541,8 @@ input, select, textarea, button {
 
 .socials a {
   margin: 0 5px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   text-decoration: none;
   height: 40px;
@@ -483,6 +551,7 @@ input, select, textarea, button {
   font-size: 22px;
   background: #5E292C;
   color: #fff;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -555,17 +624,24 @@ input, select, textarea, button {
 
 /****************partners-list*******************/
 .partners-list {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
   gap: 40px 0px;
   grid-gap: 40px 0px;
 }
 
 .partners-list a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 160px;
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   text-align: center;
 }
 
@@ -577,21 +653,30 @@ input, select, textarea, button {
   margin: auto;
   max-height: 100%;
   max-width: 100%;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 
 /*********************breadcrumbs**********/
 .page-crumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: #FFFCF2;
   padding: 15px 20px;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .page-crumbs .page-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: auto;
 }
 
@@ -611,14 +696,22 @@ input, select, textarea, button {
 
 .breadcrumbs ul {
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
 }
 
 .breadcrumbs ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #d1d1d1;
 }
 
@@ -632,7 +725,8 @@ input, select, textarea, button {
   width: 1px;
   height: 30px;
   background: #d1d1d1;
-  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
 }
 
 .breadcrumbs ul li:hover {
@@ -657,9 +751,15 @@ input, select, textarea, button {
 .page-navigation {
   padding: 17px 20px 35px;
   border-top: 2px #914D51 solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .page-navigation .count {
@@ -678,8 +778,12 @@ input, select, textarea, button {
 
 .page-navigation .pagiantion {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .page-navigation .pagiantion a {
@@ -731,9 +835,15 @@ input, select, textarea, button {
 
 .product-card .owl-thumbs {
   margin: 15px -15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .product-card .owl-thumb-item {
@@ -743,6 +853,7 @@ input, select, textarea, button {
   border: none;
   height: 50px;
   border: 2px transparent solid;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -786,9 +897,15 @@ input, select, textarea, button {
 .product-card-navigation {
   padding: 17px 0 35px;
   border-top: 2px #914D51 solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .product-card-navigation a {
@@ -856,6 +973,7 @@ input, select, textarea, button {
   position: absolute;
   width: 15px;
   height: 140px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -896,6 +1014,7 @@ input, select, textarea, button {
   border-right: 12px #dadada solid;
   border-top: 10px transparent solid;
   border-bottom: 10px transparent solid;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -916,19 +1035,29 @@ input, select, textarea, button {
   border-left: 12px #dadada solid;
   border-top: 10px transparent solid;
   border-bottom: 10px transparent solid;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .pan-controls {
   max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 15px auto 0;
+  -webkit-animation: 0.5s ZoomIn 1s both;
+          animation: 0.5s ZoomIn 1s both;
+  opacity: 0;
 }
 
 .pan-controls button {
   position: relative;
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   padding: 0px;
   width: 25px;
   height: 25px;
@@ -956,17 +1085,38 @@ input, select, textarea, button {
 }
 
 .pan-controls #zoomIn:before {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .pan-controls input {
   margin: 0 15px;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   -webkit-appearance: none;
   width: 100%;
   background: transparent;
   height: 1px;
   background: #6B2F33;
+}
+
+@-webkit-keyframes ZoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ZoomIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #zoomRange::-webkit-slider-thumb {
@@ -995,17 +1145,26 @@ input, select, textarea, button {
 
 /*******************catalog-grid************/
 .catalog-grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   gap: 40px 40px;
   grid-gap: 40px 40px;
 }
 
 .catalog-grid .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .catalog-grid .image {
@@ -1015,27 +1174,36 @@ input, select, textarea, button {
 
 .catalog-grid .image:hover img {
   opacity: 0.1;
-  filter: blur(5px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 .catalog-grid .image:hover a {
   opacity: 1;
   visibility: visible;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .catalog-grid .image img {
   max-width: 100%;
   vertical-align: middle;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .catalog-grid .image a {
   font-size: 16px;
   font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 120px;
   height: 120px;
   position: absolute;
@@ -1047,7 +1215,9 @@ input, select, textarea, button {
   text-decoration: none;
   opacity: 0;
   visibility: hidden;
-  transform: scale(0);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -1058,18 +1228,25 @@ input, select, textarea, button {
 
 .category-cols {
   margin-top: -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .category-grid-col {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding-right: 25px;
 }
 
 .category-grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   gap: 40px 25px;
   grid-gap: 40px 25px;
 }
@@ -1089,18 +1266,25 @@ input, select, textarea, button {
 .category-grid .image img {
   vertical-align: middle;
   max-width: 100%;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .category-grid .name {
   margin-top: -50px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: rgba(255, 248, 226, 0.9);
   height: 50px;
   padding: 0 10px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 16px;
   position: relative;
   font-weight: 500;
@@ -1121,7 +1305,9 @@ input, select, textarea, button {
 }
 
 .category-nav {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: 210px;
   padding-left: 20px;
   border-left: 1px #914D51 solid;
@@ -1148,9 +1334,15 @@ input, select, textarea, button {
   font-weight: 500;
   font-size: 14px;
   text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   line-height: 1;
 }
 
@@ -1167,7 +1359,8 @@ input, select, textarea, button {
   margin-top: 10px;
   padding: 10px;
   text-align: left;
-  box-shadow: 0px 2px 2px #9b9b9b;
+  -webkit-box-shadow: 0px 2px 2px #9b9b9b;
+          box-shadow: 0px 2px 2px #9b9b9b;
   border-top: 1px #6b2f33 solid;
 }
 
@@ -1190,20 +1383,41 @@ input, select, textarea, button {
 .search-form {
   width: 100%;
   max-width: 480px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 15px;
 }
 
 .search-form input {
   font-weight: 500;
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   height: 30px;
   border: 1px #5E292C solid;
   font-size: 18px;
   color: #6B2F33;
   padding: 0 12px;
   border-radius: 3px;
+}
+
+.search-form input::-webkit-input-placeholder {
+  color: #6B2F33;
+  opacity: 1;
+}
+
+.search-form input:-ms-input-placeholder {
+  color: #6B2F33;
+  opacity: 1;
+}
+
+.search-form input::-ms-input-placeholder {
+  color: #6B2F33;
+  opacity: 1;
 }
 
 .search-form input::placeholder {
@@ -1241,6 +1455,7 @@ input, select, textarea, button {
   display: inline-block;
   padding-left: 10px;
   margin-left: 10px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -1252,8 +1467,12 @@ input, select, textarea, button {
   margin: 0 -30px;
   padding: 15px 30px;
   border-top: 1px #914D51 solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .search-result-list-item:first-child {
@@ -1261,7 +1480,9 @@ input, select, textarea, button {
 }
 
 .search-result-list-item .image {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: 110px;
   text-align: center;
   margin-right: 30px;
@@ -1292,8 +1513,12 @@ input, select, textarea, button {
   font-weight: 500;
   font-size: 13px;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .search-result-list-item .crumbs li:first-child:after {
@@ -1312,8 +1537,12 @@ input, select, textarea, button {
 
 /*****************news*************/
 .news-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 40px;
 }
 
@@ -1322,7 +1551,9 @@ input, select, textarea, button {
 }
 
 .news-list-item .image {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: 285px;
   margin-right: 25px;
   overflow: hidden;
@@ -1334,7 +1565,9 @@ input, select, textarea, button {
 }
 
 .news-list-item .info {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .news-list-item .date {
@@ -1429,7 +1662,8 @@ input, select, textarea, button {
 .news-image-thumbs .owl-carousel .owl-nav button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #DADADA;
 }
 
@@ -1455,6 +1689,12 @@ input, select, textarea, button {
 
 .news-image-thumbs .owl-item.current {
   border-color: #5E292C;
+}
+
+.news-image-thumbs img {
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /**************main-footer*****************/
@@ -1532,7 +1772,8 @@ input, select, textarea, button {
     font-size: 15px;
   }
   .catalog-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
   }
   .category-cols {
     margin-top: -15px;
@@ -1543,7 +1784,8 @@ input, select, textarea, button {
   .category-grid {
     gap: 15px 15px;
     grid-gap: 15px 15px;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
   .category-grid .image img {
     width: 100%;
@@ -1605,7 +1847,8 @@ input, select, textarea, button {
   .main-header .logo {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .main-header .logo img {
     height: 25px;
@@ -1645,23 +1888,36 @@ input, select, textarea, button {
     font-size: 14px;
   }
   .about-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .about-grid > div {
     width: auto;
   }
   .about-grid > div:nth-child(1) {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
   .about-grid > div:nth-child(2) {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .about-grid > div:nth-child(3) {
-    order: 4;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
   .about-grid > div:nth-child(4) {
-    order: 3;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .about-grid .text {
     padding: 30px;
@@ -1706,15 +1962,23 @@ input, select, textarea, button {
     display: none;
   }
   .catalog-grid {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     gap: 25px 0px;
     grid-gap: 25px 0px;
   }
+  .category-grid-col {
+    padding: 0px;
+    margin-bottom: 15px;
+  }
   .category-cols {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .category-nav {
-    margin: 0 -15px 15px;
+    margin: 0 -15px -15px;
     border: none;
     border-top: 1px #914D51 solid;
     border-bottom: 1px #914D51 solid;
@@ -1722,10 +1986,13 @@ input, select, textarea, button {
     padding: 15px;
   }
   .category-list-item > a {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .category-grid {
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
   .category-grid .name {
     height: 40px;
@@ -1739,7 +2006,8 @@ input, select, textarea, button {
     margin: 0 2px;
   }
   .product-card .owl-thumb-item img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .news-list-item {
     display: block;
@@ -1766,8 +2034,10 @@ input, select, textarea, button {
     font-size: 14px;
   }
   .partners-list {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     gap: 25px 25px;
     grid-gap: 25px 25px;
   }
@@ -1776,8 +2046,12 @@ input, select, textarea, button {
   }
   .search-res-sort {
     margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .search-res-sort span {
     display: none;
@@ -1789,7 +2063,9 @@ input, select, textarea, button {
     border: none;
   }
   .search-result-list-item {
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .search-result-list-item .image {
     width: 80px;

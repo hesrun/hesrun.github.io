@@ -1,4 +1,17 @@
 $(document).ready(function() {
+
+   $('#ToNews').click(function() {
+      var TopPosNews = $('.news-section').offset().top;
+      $("html, body").stop().animate({scrollTop:TopPosNews}, 500, 'swing');
+
+      return false;
+   })
+
+
+
+   $('.choise-station select').dropkick({
+      mobile: true
+   });
    var windowWidth = $('body').width(),
       mobileMenu = $('#mobileMenu').remodal(),
       mobileAbout = $('#mobileAbout').remodal(),
@@ -7,6 +20,9 @@ $(document).ready(function() {
       mobileContacts = $('#mobileContacts').remodal(),
       mobileFeedback = $('#mobileFeedback').remodal();
 
+
+   //баннер
+   $('#BannerModal').modal();
 
    //тултипы на главной
    $.protip();
@@ -135,6 +151,12 @@ $(document).ready(function() {
    } else {
       anime({
          targets: '.radio-footer',
+         opacity:[0,1],
+         duration: 3000,
+         delay: 4000,
+      });
+      anime({
+         targets: '.choise-station',
          opacity:[0,1],
          duration: 3000,
          delay: 4000,

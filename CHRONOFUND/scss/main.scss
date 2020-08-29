@@ -8,6 +8,7 @@ $green:#0dad11;
 $grey: #818181;
 $pink: #ff00b6;
 
+
 * {
    padding: 0px;
    margin: 0px;
@@ -70,35 +71,45 @@ a {
    }
 }
 .sign-present-column {
-   padding: 60px 45px 35px 45px;
+   padding: 25px 45px 35px 45px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    text-align: center;
    .chorono-info {
-      padding: 30px 0;
+      padding: 0 0 30px;
       margin-top: auto;
       margin-bottom: auto;
       > img {
          max-width: 270px;
       }
       p {
+         margin: 60px 0;
          font-weight: 300;
          color: #2d2d2d;
-         font-size: 18px;
-         margin: 50px 0 70px;
+         font-size: 27px;
          line-height: 1.5;
       }
       strong {
          font-weight: 600;
+         font-size: 36px;
+         a {
+            text-decoration: underline
+         }
       }
       .btns {
+         display: flex;
+         align-items: center;
+         justify-content: center;
          .c-btn {
-            width: 270px;
+            white-space: nowrap;
+            padding: 0 30px;
+            font-size: 18px;
+            margin: 0 15px;
          }
          .blue {
-            display: none;
+            display: none
          }
       }
    }
@@ -118,6 +129,7 @@ a {
    }
    .chrono-footer {
       letter-spacing: 1px;
+      align-items: flex-end;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -127,6 +139,14 @@ a {
       font-weight: 600;
       a {
          font-size: 10px;
+      }
+      div:first-child {
+         text-align: left;
+         line-height: 1.4;
+      }
+      div:last-child {
+         text-align: right;
+         line-height: 1.4;
       }
    }
 }
@@ -244,17 +264,18 @@ a {
    }
    .bottom-btn {
       text-align: center;
-      background: #fff;
+      color: #fff;
+      background: $blue;
       width: 100%;
       max-width: 375px;
       margin: 30px auto 0;
       border-radius: 32px 32px 0 0;
-      padding: 50px 30px;
+      padding: 15px 30px;
       transform-origin: center bottom;
       span {
          font-size: 14px;
          display: block;
-         margin-bottom: 20px;
+         margin-bottom: 15px;
       }
       .c-btn {
          width: 100%;
@@ -1332,7 +1353,10 @@ a {
          color: $grey;
          border-color: $grey;
          border-width: 3px;
-         pointer-events: none;
+         &:hover {
+            background: $grey;
+            color: #fff;
+         }
       }
    }
 }
@@ -1343,9 +1367,15 @@ a {
       position: relative;
       a {
          display: block;
-         height: 400px;
+         height: 500px;
+         position: relative;
          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
             height: 100%;
+            width: 100%;
             object-fit: contain;
          }
       }
@@ -1369,7 +1399,7 @@ a {
          display: block;
          width: 6px;
          height: 6px;
-         background: #fff;
+         background: $brown;
          transition: all 0.3s;
       }
    }
@@ -1401,7 +1431,7 @@ a {
       border: none;
    }
    .digest-item-price-table {
-      margin: 30px 0 5px;
+      margin: 80px 0 0;
       td {
          padding-bottom: 30px;
       }
@@ -1701,6 +1731,13 @@ a {
    }
 }
 .products-compare-list-item {
+   &.reserved {
+      .head,
+      .params-list {
+         opacity: 0.3;
+         pointer-events: none;
+      }
+   }
    .head {
       padding: 0 15px;
       height: 200px;
@@ -1791,6 +1828,15 @@ a {
       align-items: center;
       .small-btn {
          width: 100%;
+         height: 50px;
+         line-height: 46px;
+         &.grey {
+            font-size: 11px;
+            line-height: normal;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            pointer-events: none;
+         }
       }
       .link {
          display: inline-flex;
@@ -1810,6 +1856,13 @@ a {
    display: flex;
    margin: 0 0 40px 0;
    align-items: stretch;
+   &.reserved {
+      .image,
+      .info {
+         opacity: 0.5;
+         pointer-events: none;
+      }
+   }
    .image {
       flex: 0 0 auto;
       margin-right: 30px;
@@ -1897,6 +1950,19 @@ a {
          display: block;
          font-size: 18px;
          font-weight: 500;
+      }
+   }
+
+   .is-reserved {
+      width: 60%;
+      span {
+         font-weight: 600;
+         letter-spacing: 1px;
+         display: inline-block;
+         padding: 20px 20px;
+         color: $grey;
+         border: 2px solid $grey;
+         opacity: 0.6;
       }
    }
 
@@ -2251,8 +2317,11 @@ a {
       height: 50px;
       border-top: 1px rgba($grey,0.5) solid;
       border-bottom: 1px rgba($grey,0.5) solid;
-      .small-btn {
-         margin-right: 15px;
+      .c-checkbox {
+         display: inline-flex;
+         margin: 0 25px 0 0;
+         font-size: 14px;
+         color: #000;
       }
    }
    td:first-child {
@@ -2556,7 +2625,7 @@ a {
          color: $grey;
       }
       b {
-         font-weight: 700;
+         font-weight: 600;
          font-size: 20px;
       }
    }
@@ -2617,6 +2686,14 @@ a {
          border: 1px rgba($grey,0.5) solid;
          padding: 0 15px;
          color: $grey;
+         position: relative;
+         i.mdi {
+            position: absolute;
+            right: 10px;
+            &:before {
+               animation-duration: 0.5s;
+            }
+         }
       }
       input {
          position: absolute;
@@ -2866,9 +2943,30 @@ a {
       display: none;
    }
 }
+/*******************frame-modal*************/
+.frame-modal {
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   border-radius: 0px;
+   border: none;
+   max-width: 100%;
+   padding: 0px;
+   a.close-modal  {
+      display: none;
+   }
+   iframe {
+      width: 100%;
+      height: 100%;
+   }
+}
 /***********************ui*****************/
 .c-btn {
-   display: inline-block;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
    background: none;
    border: none;
    height: 55px;
@@ -2955,7 +3053,7 @@ a {
       border: 2px solid rgba(143, 146, 161, 0.2);
       line-height: 51px;
       &:hover {
-         border-color: $blue;
+         border-color: white;
          background: $blue;
          color: #fff;
       }
@@ -3012,35 +3110,10 @@ a {
          border-bottom: 2px rgba(#fff,1) solid;
       }
    }
-   input::-webkit-caps-lock-indicator {
-      visibility: hidden;
-      display: none !important;
-      pointer-events: none;
-      position: absolute;
-      right: 0;
-   }
    input::-webkit-credentials-auto-fill-button {
-      visibility: hidden;
-      display: none !important;
-      pointer-events: none;
-      position: absolute;
-      right: 0;
+      color: #fff;
+      background: #fff;
    }
-   input::-webkit-textfield-decoration-container {
-      visibility: hidden;
-      display: none !important;
-      pointer-events: none;
-      position: absolute;
-      right: 0;
-   }
-   input::-webkit-contacts-auto-fill-button {
-      visibility: hidden;
-      display: none !important;
-      pointer-events: none;
-      position: absolute;
-      right: 0;
-   }
-
    .err {
       display: block;
       margin-top: 15px;
@@ -3328,6 +3401,14 @@ a {
          background: #191933;
          transform: scale(0);
          transition: all 0.5s;
+      }
+   }
+   &.brown {
+      .icon {
+         background: $brown;
+         &:after {
+            background: #fff;
+         }
       }
    }
 }
@@ -3729,9 +3810,25 @@ a {
       padding: 0 30px;
    }
    /******************sign pages*************/
+   
    .sign-present-column {
+      .chorono-info {
+         p {
+            font-size: 18px;
+            strong {
+               font-size: 20px;
+            }
+         }
+         .btns {
+            display: block;
+            .c-btn {
+               width: 100%;
+               margin: 15px 0 0 0;
+            }
+         }
+      }
+
       .chrono-footer {
-         flex-direction: column;
          line-height: 1.8;
       }
    }
@@ -4099,8 +4196,9 @@ a {
          display: none;
       }
       .logo {
+         display: none;
          img {
-            max-width: 120px;
+            max-width: 80px;
          }
       }
       .chorono-info {
@@ -4115,14 +4213,11 @@ a {
             }
          }
          .btns {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .blue {
-               display: inline-block;
-            }
+            margin-top: 50px;
             .c-btn {
-               width: calc(50% - 5px);
+               display: block;
+               width: 100%;
+               margin-top: 15px;
             }
          }
       }
@@ -4134,10 +4229,6 @@ a {
             margin-top: 15px;
             width: 100%;
          }
-      }
-      .chrono-footer {
-         flex-direction: column;
-         line-height: 1.8;
       }
    }
    .sign-form-column {
@@ -4160,7 +4251,7 @@ a {
       }
       .bottom-btn {
          margin-top: 30px;
-         padding: 30px;
+         padding: 15px 30px;
       }
    }
    /*****************main-header*************/
@@ -4179,9 +4270,6 @@ a {
             display: none;
          }
       }
-   }
-   /********************main-section*********/
-   .main-section {
    }
    /********************back-link*************/
    .back-link {
@@ -4588,6 +4676,7 @@ a {
          }
       }
    }
+   
    /*************************basket********************/
    .basket-list-item {
       align-items: center;
@@ -4613,8 +4702,7 @@ a {
          width: auto;
          padding: 0px;
       }
-      .brand {
-      }
+
       .name {
          order: 1;
          font-size: 14px;
@@ -4652,6 +4740,15 @@ a {
       }
       .profit {
          order: 3;
+      }
+      .is-reserved {
+         width: 100%;
+         margin-top: 15px;
+         span {
+            padding: 5px 5px;
+            text-align: center;
+            font-size: 10px;
+         }
       }
    }
    .basket-total {
@@ -4775,14 +4872,13 @@ a {
          height: 40px;
          font-size: 12px;
          font-weight: 500;
-         .small-btn {
-            margin-right: 5px;
-            border-radius: 5px;
-            font-size: 10px;
-            padding: 0 5px;
-            height: 25px;
-            font-size: 10px;
-            line-height: 21px;
+         position: relative;
+         .c-checkbox {
+            justify-content: flex-end;
+            margin: 0px;
+            position: absolute;
+            right: 0px;
+            top: -30px;
          }
       }
       td:last-child {

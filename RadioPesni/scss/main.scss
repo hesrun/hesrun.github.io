@@ -86,9 +86,11 @@ body {
       transform: translate(-50%, -50%) scale(0.98);
    }
 }
+
 #handle {
    background-image: url('../img/track-empty.png');
    background-size: 100% 100%;
+   position: relative;
    .rs-inner-container {
       visibility: hidden;
    }
@@ -108,6 +110,20 @@ body {
       top: auto;
       bottom: 8px;
       color: #fff;
+   }
+}
+.plus-minus {
+   pointer-events: none;
+   position: absolute;
+   left: 50%;
+   bottom: -30px;
+   display: flex;
+   justify-content: space-between;
+   width: 200px;
+   margin-left: -100px;
+   i.fas {
+      color: #ff872d;
+      font-size: 24px;
    }
 }
 .current-track {
@@ -172,6 +188,9 @@ body {
       img {
          max-width: 250px;
       }
+   }
+   .plus-minus {
+      display: none;
    }
    .radio-logo-text {
       display: none;

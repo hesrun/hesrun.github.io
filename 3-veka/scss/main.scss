@@ -823,6 +823,8 @@ input,select,textarea, button {
    display: flex;
    align-items: center;
    margin: 15px auto 0;
+   animation: 0.5s ZoomIn 1s both;
+   opacity: 0;
    button {
       position: relative;
       flex: 0 0 auto;
@@ -867,6 +869,14 @@ input,select,textarea, button {
       background: $brown-t;
    }
    
+}
+@keyframes ZoomIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;;
+   }  
 }
 #zoomRange::-webkit-slider-thumb {
    -webkit-appearance: none;
@@ -1296,6 +1306,10 @@ input,select,textarea, button {
          border-color: $brown-b;
       }
    }
+   img {
+      height: 50px;
+      object-fit: cover;
+   }
 }
 /**************main-footer*****************/
 .main-footer {
@@ -1579,11 +1593,15 @@ input,select,textarea, button {
       gap: 25px 0px;
       grid-gap: 25px 0px;
    }
+   .category-grid-col {
+      padding: 0px;
+      margin-bottom: 15px;
+   }
    .category-cols {
-      flex-direction: column-reverse;
+      flex-direction: column;
    }
    .category-nav {
-      margin: 0 -15px 15px;
+      margin: 0 -15px -15px;
       border: none;
       border-top: 1px $divider solid;
       border-bottom: 1px $divider solid;

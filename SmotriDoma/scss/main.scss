@@ -2,6 +2,7 @@
    box-sizing: border-box;
    margin: 0px;
    padding: 0px;
+   outline: none;
 }
 
 $futura: 'Futura';
@@ -19,7 +20,7 @@ img {
 }
 body {
    background-color: #f0f1f2;
-   background-image: url(../img/covid-bg.png);
+   //background-image: url(../img/covid-bg.png);
    background-repeat: repeat-y;
    background-size: 100% auto;
    font-family: 'Exo 2', sans-serif;
@@ -37,6 +38,7 @@ body {
       box-shadow: none;
       border: none;
       margin: 0px;
+      font-size: 300;
    }
    .item {
       position: relative;
@@ -55,21 +57,136 @@ body {
    }
 }
 .small-banner {
-   margin-bottom: 20px;
-   position: relative;
+   background: #79B2CD;
+   margin-bottom: 30px;
+   padding: 30px;
+   text-align: center;
    img {
+      max-width: 100%;
       vertical-align: middle;
    }
-   p {
-      padding: 30px;
-      font-weight: 400;
-      font-size: 20px;
+   .go-quest {
+      display: inline-block;
       color: #fff;
-      position: absolute;
-      bottom: 0px;
-      width: 100%;
-      left: 0px;
-      text-shadow: 2px 2px 2px #00334b;
+      background: #8E1F28;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      font-size: 16px;
+      text-shadow: 2px 2px 2px darken(#8E1F28,30);
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 4px 5px 1px rgba(#000,0.1);
+      transition: all 0.3s;
+      &:hover {
+         background: lighten(#8E1F28,10);
+      }
+   }
+}
+.questions-modal {
+   border-radius: 10px;
+   display: none;
+   max-width: 600px;
+   background: #fff;
+   .image {
+      margin-bottom: 30px;
+      img {
+         max-width: 100%;
+      }
+   }
+   .question-text {
+      font-size: 24px;
+      text-align: center;
+   }
+   .unswers {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      input {
+         display: none;
+         &:checked + label {
+            background: darken(#79B2CD,20);
+         }
+      }
+      label {
+         text-align: center;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: calc(50% - 7.5px);
+         flex: 0 0 auto;
+         outline: none;
+         cursor: pointer;
+         font-size: 16px;
+         border-radius: 10px;
+         margin: 15px 0 0 0;
+         background: #79B2CD;
+         color: #fff;
+         border: none;
+         padding: 15px;
+         transition: all 0.3s;
+         &:hover {
+            background: darken(#79B2CD,20);
+         }
+      }
+      label.red {
+         background: red;
+         color: #fff;
+      }
+      label.green {
+         background: green;
+         color: #fff;
+      }
+   }
+}
+.share-modal {
+   strong {
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+   }
+   b {
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      color: #8bc34a;
+      span {
+         color: #000;
+      }
+   }
+   .share-res {
+      margin-top: 30px;
+      text-align: center;
+      color: #00334b;
+      ul {
+         margin-top: 10px;
+         list-style: none;
+         display: flex;
+         justify-content: center
+      }
+      li {
+         margin: 0 10px; 
+      }
+      i {
+         width: 40px;
+         height: 40px;
+         text-align: center;
+         line-height: 40px;
+         border-radius: 50%;
+         color: #fff;
+      }
+      .fa-vk {
+         background: #45668e;
+      }
+      .fa-facebook-f {
+         background: #4267B2;
+      }
+      .fa-instagram {
+         background: #8a3ab9;
+      }
    }
 }
 .look-at-home-navs {
@@ -115,8 +232,8 @@ body {
       }
    }
    .item {
-      padding: 20px 20px 20px 30px;
-      margin-bottom: 20px;
+      padding: 29px 30px 29px 30px;
+      margin-bottom: 30px;
       display: flex;
       align-items: center;
       background: #d1beb7;
@@ -168,25 +285,16 @@ body {
       padding: 15px;
       width: 40%;
       margin-right: 50px;
-      a {
-         position: relative;
-         display: block;
-         &:hover {
-            .fas {
-               color: #009bff;
-            }
-         }
-      }
-      .fas {
-         font-size: 60px;
+   }
+   .video {
+      position: relative;
+      padding-bottom: 56.25%;
+      iframe {
          position: absolute;
-         left: 50%;
-         top: 50%;
-         transform: translate(-50%, -50%);
-         color: #fff;
-      }
-      img {
+         top: 0;
+         left: 0;
          width: 100%;
+         height: 100%;
       }
    }
    .name {
@@ -466,10 +574,6 @@ body {
 
    .small-banner {
       margin-bottom: 20px;
-      p {
-         padding: 15px;
-         font-size: 2.7vw;
-      }
    }
 
    .look-at-home-navs {
@@ -530,8 +634,25 @@ body {
       gap: 40px 40px
    }
    .small-banner {
-      p {
-         font-size: 2.5vw;
+      padding: 30px 15px;
+      img {
+         margin-bottom: 30px;
+      }
+   }
+   .questions-modal {
+      padding: 30px 15px;
+      .image {
+         margin-bottom: 15px;
+      }
+      .question-text {
+         font-size: 16px;
+      }
+      .unswers {
+         margin-top: 0px;
+         label {
+            padding: 10px;
+            font-size: 12px;
+         }
       }
    }
    .video-nav {
