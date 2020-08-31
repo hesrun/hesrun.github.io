@@ -45,23 +45,117 @@ a {
     justify-content: space-between;
     align-items: center;
     flex: 0 0 auto;
+    top: 0px;
+    position: sticky;
+    background: $bg-app;
+    z-index: 100;
+    .link {
+        line-height: 24px;
+        color: #BFBFBF;
+        &:hover {
+            color: $bg-yellow;
+        }
+    }
 }
 
 .main-nav {
     width: 120px;
     flex: 0 0 auto;
-    a {
-        display: block;
+    position: fixed;
+    z-index: 101;
+    .nav-item {
         margin: 0 auto 24px;
         width: 72px;
         height: 72px;
-        background: $bg-content; 
+        position: relative;
+        &:hover {
+            &:before {
+                visibility: visible;
+                opacity: 1;
+            }
+            &:after {
+                visibility: visible;
+                opacity: 1;
+            }
+            .config-preview {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &:after {
+            content: attr(ttip);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            display: block;
+            color: #b2b2b2;
+            background: #0D0D0D;
+            padding: 12px;
+            font-size: 14px;
+            line-height: 16px;
+            transform: translateX(-50%);
+            z-index: 4;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 100%;
+            left: 50%;
+            margin: -12px 0 0 -12px;
+            width: 0px;
+            height: 0px;
+            border-bottom: 12px #0D0D0D solid;
+            border-left: 12px transparent solid;
+            border-right: 12px transparent solid;
+            z-index: 2;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+    }
+    a {
+        display: block;
+        background: $bg-card; 
         text-align: center;
+        &:active {
+            .cicon {
+                opacity: 0.6;
+            }
+        }
+        &.disabled {
+            background: $bg-content;
+            pointer-events: none;
+            .cicon {
+                opacity: 0.38;
+            }
+        }
+        &.done {
+            &:before {
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                font-family: 'icomoon' !important;
+                content: "\e90e";
+                color: #000;
+                width: 20px;
+                height: 20px;
+                line-height: 19px;
+                font-size: 20px;
+                background: $bg-yellow;
+                speak: never;
+                z-index: 3;
+            }
+        }
         &.active {
             background: $bg-yellow;
             position: relative;
             .cicon {
                 color: black;
+                opacity: 1;
             }
             &:after {
                 content: "";
@@ -77,10 +171,23 @@ a {
                 margin-top: -12px;
             }
         }
+        .cicon {
+            font-size: 32px;
+            line-height: 72px;
+        }
     }
-    .cicon {
-        font-size: 32px;
-        line-height: 72px;
+    .config-preview {
+        position: absolute;
+        height: 100vh;
+        top: 0px;
+        left: 72px;
+        background: #000;
+        width: 360px;
+        padding: 24px 24px 24px 36px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 2;
+        transition: all 0.3s;
     }
 }
 
@@ -88,6 +195,7 @@ a {
     background: $bg-content;
     flex: 1 1 auto;
     padding: 48px;
+    margin-left: 120px;
 }
 
 .step-section {
@@ -95,8 +203,12 @@ a {
     &.config-step {
         width: 792px;
     }
-    &.contact-step {
+    &.contact-step,
+    &.result-step {
         width: 744px;
+    }
+    &.final-step {
+        width: 456px;
     }
 }
 
@@ -139,7 +251,7 @@ a {
 .option-toggles {
     display: flex;
     flex-wrap: wrap;
-    input {
+    > input {
         display: none;
     }
     label {
@@ -151,7 +263,7 @@ a {
 }
 .controls-list {
     display: flex;
-    input {
+    input.l-toggle-input {
         display: none;
     }
     .l-toggle {
@@ -161,8 +273,17 @@ a {
 .controls-list.colors {
     flex-wrap: wrap;
     .ral-choise {
+        display: flex;
+        align-items: center;
         margin-top: 24px;
         width: 100%;
+        .l-toggle {
+            margin-right: 16px;
+        }
+        .l-input {
+            width: 168px;
+            margin: 0px;
+        }
     }
 }
 
@@ -179,6 +300,18 @@ a {
         flex: 0 0 auto;
         width: 156px;
         margin-right: 16px;
+    }
+}
+.exit-counts {
+    width: 168px;
+    .l-input {
+        margin-bottom: 8px;
+    }
+    > span {
+        font-weight: 300;
+        color: #F2F2F2;
+        font-size: 14px;
+        opacity: 0.6;
     }
 }
 .current-sizes {
@@ -208,13 +341,198 @@ a {
     .col-2 {
         width: 50%;
     }
-
 }
+
+.params-table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+    tr:last-child {
+        td {
+            border: none;
+        }
+    }
+    td {
+        padding: 8px 0;
+        border-bottom: 1px solid #323232;
+        &:first-child {
+            width: 100%;
+        }
+    }
+    strong {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        color: #bfbfbf;
+        font-weight: 400;
+    }
+    span {
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        color: #6f6f6f;
+        opacity: 0.6;
+    }
+    button {
+        width: 24px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        padding: 0px;
+        text-align: right;
+        line-height: 32px;
+        cursor: pointer;
+        &:hover {
+            .cicon {
+                color: $bg-yellow;
+            }
+        }
+        .cicon {
+            font-size: 14px;
+        }
+    }
+}
+
+.result-size-profile {
+    background: #000;
+    border: 1px solid #1F2021;
+    margin-bottom: 24px;
+    text-align: center;
+    > div {
+        display: block;
+    }
+    .figure-direct {
+        .l1 {
+            left: 70px;
+            top: 50%;
+        }
+    }
+    .figure-angle {
+        .l1 {
+            left: 43px;
+            top: 50%;
+        }
+        .l2 {
+            left: 50%;
+            top: 10px;
+        }
+    }
+    .figure-pi {
+        margin: 15px 0;
+        .l1 {
+            left: 30px;
+            top: 50%;
+        }
+        .l2 {
+            left: 50%;
+            top: 10px;
+            transform: translateX(-50%);
+        }
+        .l3 {
+            right: 30px;
+            top: 50%;
+        }
+    }
+    .figure-square {
+        margin: 15px 0;
+        .l1 {
+            left: 30px;
+            top: 50%;
+        }
+        .l1 + .l1 {
+            left: auto;
+            right: 30px;
+            top: 50%;
+        }
+        .l2 {
+            left: 50%;
+            top: 1px;
+            transform: translateX(-50%);
+        }
+        .l2 + .l2 {
+            left: 50%;
+            top: auto;
+            bottom: 3px;
+            transform: translateX(-50%);
+        }
+    }
+    .image {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        img {
+            vertical-align: middle;
+        }
+        span {
+            position: absolute;
+            font-size: 10px;
+            line-height: 12px;
+        }
+        
+    }
+}
+
+.final-step {
+    .result-size-profile {
+        margin: 0px;
+    }
+    p {
+        color: #6F6F6F;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        span {
+            color: #fff;
+        }
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 24px;
+        td {
+            padding: 8px 0;
+            border-bottom: 1px solid #323232;
+            line-height: 24px;
+        }
+        td:last-child {
+            text-align: right;
+        }
+        tr:last-child {
+            td {
+                border: none;
+            }
+        }
+    }
+    .final-configuration {
+        margin-bottom: 48px;
+    }
+    .final-configuration-params {
+        background: $bg-card;
+        padding: 24px;
+        
+    }
+    .confis-icons {
+        display: flex;
+        margin-bottom: 16px;
+        img {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+
 
 .bottom-nav {
     display: flex;
     justify-content: flex-end;
     margin-top: 24px;
+    &.left {
+        justify-content: flex-start;
+    }
+    .full {
+        width: 100%;
+    }
 }
 
 
@@ -491,6 +809,64 @@ input:disabled + .l-toggle {
             }
         }
     }
+    &.with-drop {
+        .cicon {
+            right: -3px;
+            top: 3px;
+            width: 56px;
+            height: 48px;
+            line-height: 48px;
+            opacity: 1;
+            transform: rotate(90deg);
+            cursor: pointer;
+            &.active {
+                transform: rotate(-90deg);
+            }
+        }
+        .drop {
+            position: absolute;
+            list-style: none;
+            background: #000;
+            color: #B2B2B2;
+            font-size: 14px;
+            line-height: 16px;
+            width: 100%;
+            top: 100%;
+            display: none;
+            li {
+                display: flex;
+                align-items: center;
+                padding: 20px 16px;
+                cursor: pointer;
+                &:hover {
+                    background: #1F2021;
+                }
+            }
+            .color {
+                width: 24px;
+                height: 24px;
+                margin-right: 16px;
+            }
+        }
+    }
+    &.number {
+        .spins-btns {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+            .cicon {
+                display: block;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .up {
+                transform: rotate(-90deg);
+            }
+            .down {
+                transform: rotate(90deg);
+            }
+        }
+    }
 }
 
 .chips {
@@ -508,6 +884,11 @@ input:disabled + .l-toggle {
             width: 20px;
             height: 20px;
             margin-right: 6px;
+        }
+        .cicon {
+            width: 0px;
+            height: 0px;
+            margin-right: 0px;
         }
     }
     .chip {
@@ -536,6 +917,17 @@ input:disabled + .l-toggle {
             width: 0px;
             height: 0px;
             overflow: hidden;
+        }
+        .cicon {
+            width: 18px;
+            height: 18px;
+            display: block;
+            margin-right: 8px;
+            align-self: center;
+            font-size: 18px;
+            overflow: hidden;
+            transition: all 0.3s;
+
         }
     }
 }
