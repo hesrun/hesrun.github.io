@@ -14,6 +14,10 @@
   padding: 75px 140px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 body {
   font-family: 'Helvetica Now Text';
   font-size: 14px;
@@ -220,9 +224,13 @@ body {
 .catalog-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 80px 100px;
+}
+
+.catalog-grid + .text-center {
+  margin-top: 70px;
 }
 
 .catalog-grid-item .image {
@@ -310,6 +318,35 @@ body {
 
 .catalog-grid-item .price .status.reserved {
   color: #3F5692;
+}
+
+.page-counts {
+  max-width: 230px;
+  margin: 0 auto 30px;
+}
+
+.page-counts p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+}
+
+.page-counts .progress {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.page-counts .progress div {
+  width: 20%;
+  height: 1px;
+  background: #000;
+}
+
+.page-counts + .c-button {
+  width: 100%;
+  max-width: 230px;
 }
 
 .brands-section .brands-list {
@@ -482,6 +519,102 @@ body {
   margin-right: auto;
 }
 
+/*****************filters-modal***************/
+.filters-modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  padding: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0px;
+}
+
+.filters-modal a.close-modal {
+  display: none;
+}
+
+.filters-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+
+.filters-header a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.filters-header a.close {
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  color: #C2C2C2;
+  margin-right: 30px;
+}
+
+.filters-header a.close:hover {
+  color: #009bff;
+}
+
+.filters-header .apply, .filters-header .clear {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 35px;
+  border-radius: 30px;
+}
+
+.filters-header .apply {
+  background: #000;
+  color: #fff;
+}
+
+.filters-header .apply:hover {
+  background: #4caf50;
+}
+
+.filters-header .clear:hover {
+  color: #009bff;
+}
+
+.modal-filters-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-filters-list .item {
+  margin-right: 10%;
+}
+
+.modal-filters-list .item strong {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.modal-filters-list .list.double {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 0 50px;
+}
+
 /**********************ui**********************/
 .c-button {
   display: -webkit-inline-box;
@@ -507,6 +640,10 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.c-button.icon-right {
+  padding: 0 30px;
 }
 
 .c-button.icon-right .mdi {
@@ -551,6 +688,65 @@ body {
 
 .c-input.light input {
   border-color: #fff;
+  color: #fff;
+}
+
+.c-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.c-checkbox span {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.c-checkbox input {
+  display: none;
+}
+
+.c-checkbox input:checked + .check {
+  background: #000;
+  border-color: #000;
+}
+
+.c-checkbox input:checked + .check:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.c-checkbox input:checked ~ span {
+  color: #000;
+}
+
+.c-checkbox .check {
+  margin-right: 14px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  border-radius: 2px;
+  text-align: center;
+  line-height: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c-checkbox .check:before {
+  content: "\F012C";
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Design Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
   color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
