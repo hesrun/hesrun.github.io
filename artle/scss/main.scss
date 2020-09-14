@@ -39,7 +39,7 @@ input, select, button {
     position: fixed;
     width: 100%;
     transition: all 0.3s;
-    z-index: 20;
+    z-index: 100;
     .logo {
         height: 75px;
         position: absolute;
@@ -50,6 +50,7 @@ input, select, button {
     }
     &.mini {
         height: 80px;
+        box-shadow: 0 0 10px 10px rgba(#000,0.1);
         .logo {
             overflow: hidden;
             height: 35px;
@@ -91,6 +92,7 @@ input, select, button {
     align-items: center;
     .search,
     .favorite {
+        flex: 0 0 auto;
         text-decoration: none;
         color: inherit;
         padding: 10px;
@@ -105,7 +107,7 @@ input, select, button {
         color: $red;
     }
     .lang-select {
-        
+        flex: 0 0 auto;
         height: 40px;
         margin-right: 15px;
         position: relative;
@@ -135,7 +137,7 @@ input, select, button {
 .artle-office {
     display: flex;
     .image {
-        width: 39%;
+        width: 39vw;
         flex: 0 0 auto;
         img {
             width: 100%;
@@ -350,25 +352,15 @@ input, select, button {
 }
 
 .main-slider {
-    * {
-        outline: none;
-    }
-    .slick-slide {
-        width: 75vw;
+    .swiper-slide {
+        width: 80%;
         position: relative;
-        img {
+        > img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            vertical-align: middle;
         }
     }
-    .slick-active + .slick-slide {
-        .next {
-            display: block;
-        }
-    }
-    .next {
-        display: none;
+    .next-slide {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -376,6 +368,117 @@ input, select, button {
         top: 0px;
         background: rgba(#000,0.8);
         cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            background: rgba(#000,0);
+        }
+    }
+    .swiper-slide-active {
+        .next-slide {
+            display: none;
+        }
+    }
+    .swiper-slide-prev {
+        .next-slide {
+            display: none;
+        }
+    }
+}
+.slider-prodict-item {
+    width: 39vw;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: #fff;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    transition: all 0.6s;
+    .image {
+        flex: 0 0 auto;
+        margin-right: 50px;
+        transition: all 0.6s;
+        img {
+            width: 100%;
+        }
+    }
+    .info {
+        flex: 1 1 auto;
+    }
+    .name {
+        margin-bottom: 15px;
+        font-size: 18px;
+        display: block;
+        text-transform: uppercase;
+        transition: all 0.6s;
+    }
+    .descr {
+        display: block;
+        margin-bottom: 35px;
+        font-size: 11px;
+        color: rgba(#000, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        overflow: hidden;
+        max-height: 50px;
+        transition: all 0.6s;
+    }
+    .show {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        background: #000;
+        color: #fff;
+        width: 100px;
+        transition: all 0.6s;
+        i.mdi {
+            font-size: 24px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:hover {
+            background: #009bff;
+        }
+    }
+    .price {
+        font-size: 15px;
+        overflow: hidden;
+        max-height: 50px;
+        transition: all 0.6s;
+        .status {
+            font-size: 13px;
+            margin-left: 15px;
+            color: #3F5692;
+        }
+    }
+}
+
+.swiper-slide-next {
+    .slider-prodict-item {
+        width: 20vw;
+        padding: 40px;
+        .image {
+            width: 60px;
+            margin-right: 25px;
+        }
+        .name {
+            font-size: 11px;
+            margin: 0px;
+        }
+        .descr {
+            max-height: 0px;
+            margin: 0px;
+        }
+        .price {
+            max-height: 0px;
+        }
+        .show {
+            width: 90px;
+        }
     }
 }
 
@@ -663,6 +766,89 @@ input, select, button {
     }
     &.remodal-is-closing {
         animation-name: FavoriteOut;
+    }
+}
+/*****************navi-modal***************/
+.navi-modal {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0px;
+}
+.navi-modal-links {
+    border-top: 1px rgba(#000,0.09) solid;
+    display: flex;
+    ul {
+        list-style: none;
+        display: flex;
+        flex: 1 1 auto;
+        li {
+            flex: 1 1 auto;
+        }
+        a {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: inherit;
+            strong {
+                margin-top: 20px;
+                display: block;
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
+            &:hover {
+                background: #F7F7F7;
+            }
+        }
+    }
+    .our-club {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 630px;
+        background: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 30px 0 0;
+        }
+        p {
+            font-size: 13px;
+            max-width: 360px;
+            line-height: 2;
+            margin: 30px 0;
+        }
+    }
+}
+.nav-top-brands {
+    border-top: 1px rgba(#000,0.09) solid;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 50px 60px;
+    .list {
+        a {
+            padding: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 13px;
+            color: rgba(#000, 0.3);
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+                color: #000;
+            }
+        }
     }
 }
 @keyframes FavoriteIn {
@@ -1070,7 +1256,11 @@ input, select, button {
 }
 
 .remodal-overlay {
-    background: rgba(#000, 0.8)
+    background: rgba(#000, 0.8);
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 .remodal-wrapper {
     overflow-x: hidden;
