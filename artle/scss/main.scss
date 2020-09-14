@@ -23,6 +23,10 @@ body {
     line-height: 1;
 }
 
+input, select, button {
+    font-family: 'Helvetica Now Text';
+}
+
 .top-divider {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -32,12 +36,24 @@ body {
     display: flex;
     padding: 0 55px;
     align-items: center;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    transition: all 0.3s;
+    z-index: 20;
     .logo {
+        height: 75px;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        transition: all 0.3s;
+    }
+    &.mini {
+        height: 80px;
+        .logo {
+            overflow: hidden;
+            height: 35px;
+        }
     }
     
 }
@@ -71,6 +87,8 @@ body {
 }
 .header-tools {
     flex: 0 0 auto;
+    display: flex;
+    align-items: center;
     .search,
     .favorite {
         text-decoration: none;
@@ -85,6 +103,33 @@ body {
     }
     .favorite.active {
         color: $red;
+    }
+    .lang-select {
+        
+        height: 40px;
+        margin-right: 15px;
+        position: relative;
+        i.mdi {
+            position: absolute;
+            top: 11px;
+            right: 13px;
+            font-size: 18px;
+            pointer-events: none;
+        }
+        select {
+            background: #f5f5f5;
+            padding: 0 35px 0 15px;
+            height: 100%;
+            width: 100%;
+            font-weight: 500;
+            appearance: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                background: #f0f0f0;
+            }
+        }
     }
 }
 .artle-office {
@@ -477,6 +522,185 @@ body {
         grid-gap: 0 50px;
     }
 }
+/*****************search-modal***************/
+.search-modal {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    max-width: 100%;
+    width: 100%;
+    .close {
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #000;
+        font-size: 24px;
+        cursor: pointer;
+        &:hover {
+            color: #009bff;
+        }
+    }
+    .search-field {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        form {
+            display: flex;
+            position: relative;
+        }
+        input {
+            width: 100%;
+            background: none;
+            border: none;
+            border-bottom: 1px rgba(#000,0.17) solid;
+            font-size: 18px;
+            height: 60px;
+            font-weight: 300;
+            transition: all 0.3s;
+            &:focus {
+                border-bottom: 3px rgba(#000,1) solid;
+            }
+        }
+        .search {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #000;
+            color: #fff;
+            border: none;
+            align-self: flex-end;
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            line-height: 50px;
+            &:hover {
+                background: #009bff;
+            }
+        }
+    }
+    .input {
+        flex: 1 1 auto;
+    }
+    .search-drop {
+        position: absolute;
+        background: #F5F5F5;
+        border-radius: 24px;
+        top: 120%;
+        width: 100%;
+        padding: 15px;
+        list-style: none;
+        text-align: left;
+        display: none;
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            img {
+                width: 60px;
+                height: 60px;
+            }
+            .name {
+                width: 40%;
+                padding-right: 20px;
+            }
+            .price {
+                width: 30%;
+            }
+            .status {
+                width: 30%;
+            }
+            &:hover {
+                color: #009bff;
+            }
+        }
+    }
+
+    &.remodal-is-opening {
+        animation-name: SearchIn;
+    }
+    &.remodal-is-closing {
+        animation-name: SearchOut;
+    }
+}
+/*****************favorite-modal***************/
+.favorite-modal {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    min-height: 100%;
+    margin: 0px;
+    padding: 60px 80px;
+    .close {
+        font-size: 24px;
+        cursor: pointer;
+        &:hover {
+            color: #009bff;
+        }
+
+    }
+    .fav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px rgba(#000,0.18) solid;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        strong {
+            font-size: 18px;
+            letter-spacing: 2;
+            text-transform: uppercase;
+        }
+    }
+    .catalog-grid {
+        text-align: left;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+    &.remodal-is-opening {
+        animation-name: FavoriteIn;
+    }
+    &.remodal-is-closing {
+        animation-name: FavoriteOut;
+    }
+}
+@keyframes FavoriteIn {
+    from {
+        transform: translateX(100%)
+    }
+    to {
+        transform: translateX(0%)
+    }
+}
+
+@keyframes FavoriteOut {
+    from {
+        transform: translateX(0%)
+    }
+    to {
+        transform: translateX(100%)
+    }
+}
+
+@keyframes SearchIn {
+    from {
+        transform: translateY(-100%)
+    }
+    to {
+        transform: translateY(0%)
+    }
+}
+@keyframes SearchOut {
+    from {
+        transform: translateY(0%)
+    }
+    to {
+        transform: translateY(-100%)
+    }
+}
+
+
 
 .artle-item-section {
     margin-bottom: 150px;
@@ -845,3 +1069,9 @@ body {
     }
 }
 
+.remodal-overlay {
+    background: rgba(#000, 0.8)
+}
+.remodal-wrapper {
+    overflow-x: hidden;
+}

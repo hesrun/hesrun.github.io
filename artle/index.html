@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
     <link rel="stylesheet" href="font/font.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
@@ -42,13 +44,14 @@
                     <option value="">EUR</option>
                     <option value="">USD</option>
                 </select>
-                <a href="" class="search">
-                    <i class="mdi mdi-magnify"></i>
-                </a>
-                <a href="" class="favorite active">
-                    <i class="mdi mdi-heart-outline"></i>
-                </a>
+                <i class="mdi mdi-chevron-down"></i>
             </div>
+            <a href="#SearchModal" class="search">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="#FavoriteModal" class="favorite active">
+                <i class="mdi mdi-heart-outline"></i>
+            </a>
         </div>
     </header>
 
@@ -99,6 +102,7 @@
             </div>
         </div>
     </section>
+
     <section class="join-our-club">
         <img src="img/corona.png" alt="">
         <h2>Join our club</h2>
@@ -112,6 +116,7 @@
             </button>
         </div>
     </section>
+
     <section class="catalog-section paddings">
         <div class="section-title">
             <h2>Recent Additions</h2>
@@ -335,6 +340,7 @@
             </a>
         </div>
     </section>
+
     <section class="brands-section paddings-half top-divider">
         <div class="section-title">
             <h2>Brands</h2>
@@ -360,6 +366,7 @@
             </a>
         </div>
     </section>
+
     <section class="instagram-section paddings top-divider">
         <div class="section-title">
             <h2>Artle on instagram</h2>
@@ -406,6 +413,7 @@
             </a>
         </div>
     </section>
+
     <footer class="main-footer">
         <div class="main-footer-container">
             <div class="our-properties">
@@ -472,9 +480,290 @@
         </div>
     </footer>
 
+    <div class="remodal search-modal" data-remodal-id="SearchModal">
+        <div class="search-field">
+            <form action="">
+                <div class="input">
+                    <input type="text" placeholder="Search">
+                </div>
+                <button class="search">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+                <ul class="search-drop">
+                    <li>
+                        <a href="#">
+                            <img src="img/search-img.png" alt="">
+                            <span class="name">Rolex GMT Master II</span>
+                            <span class="price">€ 14,124</span>
+                            <span class="status">On Sale</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/search-img.png" alt="">
+                            <span class="name">Rolex GMT Master II</span>
+                            <span class="price">€ 14,124</span>
+                            <span class="status">On Sale</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/search-img.png" alt="">
+                            <span class="name">Rolex GMT Master II</span>
+                            <span class="price">€ 14,124</span>
+                            <span class="status">On Sale</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/search-img.png" alt="">
+                            <span class="name">Rolex GMT Master II</span>
+                            <span class="price">€ 14,124</span>
+                            <span class="status">On Sale</span>
+                        </a>
+                    </li>
+                </ul>
+            </form>
+            <a data-remodal-action="close" class="close">
+                <i class="mdi mdi-close"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="remodal favorite-modal" data-remodal-id="FavoriteModal">
+        <div class="fav-header">
+            <strong>your wishlist (12)</strong>
+            <a data-remodal-action="close" class="close">
+                <i class="mdi mdi-close"></i>
+            </a>
+        </div>
+        <div class="catalog-grid">
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status in-sale">In Sale</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status sold">Sold</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status reserved">Reserved</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status reserved">Reserved</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status in-sale">In Sale</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status sold">Sold</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status reserved">Reserved</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status reserved">Reserved</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status in-sale">In Sale</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status sold">Sold</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status reserved">Reserved</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status reserved">Reserved</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status in-sale">In Sale</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status sold">Sold</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status reserved">Reserved</span>
+                </div>
+            </div>
+            <div class="catalog-grid-item">
+                <a href="" class="image">
+                    <img src="img/grid-item-img.png" alt="">
+                </a>
+                <strong class="name">
+                    <a href="">ROGER DUBUIS</a>
+                </strong>
+                <span class="descr">SYMPATHIE PERPETUAL <br> CALENDAR CHRONOGRAPH</span>
+                <div class="price">
+                    <b>€ 14,124</b>
+                    <span class="status reserved">Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
     <script>
+
+        $(window).scroll(function(){
+            sctop = $(window).scrollTop();
+            console.log(sctop);
+            if (sctop > 300) {
+                $('.main-header').addClass('mini');
+            } else {
+                $('.main-header').removeClass('mini');
+            }
+        })
+
         $('#MainSlider').slick({
             infinite: true,
             speed: 900,
@@ -486,6 +775,8 @@
         $('.main-slider .next').click(function(){
             $('#MainSlider').slick('slickNext');
         })
+
+        
     </script>
 </body>
 </html>
