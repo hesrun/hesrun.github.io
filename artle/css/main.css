@@ -304,37 +304,71 @@ input, select, button {
   margin-top: 70px;
 }
 
+.catalog-grid-item {
+  position: relative;
+}
+
+.catalog-grid-item .action {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1;
+}
+
+.catalog-grid-item .action button {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.catalog-grid-item .action button:hover {
+  background: #eee;
+}
+
+.catalog-grid-item .action button i.mdi {
+  font-size: 20px;
+}
+
+.catalog-grid-item > a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.catalog-grid-item:hover .action button {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.catalog-grid-item:hover .image img {
+  -webkit-transform: scale(1.1) rotate(5deg);
+          transform: scale(1.1) rotate(5deg);
+}
+
+.catalog-grid-item:hover .image:before {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  opacity: 1;
+}
+
+.catalog-grid-item:hover .name {
+  color: #009bff;
+}
+
 .catalog-grid-item .image {
   display: block;
   margin-bottom: 40px;
   position: relative;
   overflow: hidden;
-}
-
-.catalog-grid-item .image:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1px #fff solid;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 0;
-  z-index: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.catalog-grid-item .image:hover img {
-  -webkit-transform: scale(1.1) rotate(5deg);
-          transform: scale(1.1) rotate(5deg);
-}
-
-.catalog-grid-item .image:hover:before {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  opacity: 1;
 }
 
 .catalog-grid-item .image img {
@@ -348,15 +382,6 @@ input, select, button {
   display: block;
   font-size: 13px;
   margin-bottom: 19px;
-}
-
-.catalog-grid-item .name a {
-  text-decoration: none;
-  color: #000;
-}
-
-.catalog-grid-item .name a:hover {
-  color: #009bff;
 }
 
 .catalog-grid-item .descr {
@@ -1130,6 +1155,99 @@ input, select, button {
 
 .nav-top-brands .list a:hover {
   color: #000;
+}
+
+/*****************club-modal***************/
+.club-modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  padding: 0px;
+  max-width: 100%;
+  height: 100%;
+}
+
+.club-modal .close {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 11px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.club-modal .close i.mdi {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.club-modal .close:hover {
+  color: #009bff;
+}
+
+.club-modal .feaures {
+  margin: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.club-modal .feaures div {
+  padding: 0 30px;
+}
+
+.club-modal .feaures .icon {
+  margin: 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 90px;
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 207, 164, 0.09);
+  font-size: 24px;
+}
+
+.club-modal .feaures strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 30px 0;
+}
+
+.club-modal .feaures p {
+  margin: 0px;
+  line-height: 2;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.63);
+}
+
+.club-modal .join-our-club {
+  background: #000;
+  height: 100%;
+  padding: 100px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes FavoriteIn {
