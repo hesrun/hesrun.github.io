@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
     <link rel="stylesheet" href="font/font.css">
     <link rel="stylesheet" href="css/main.css">
@@ -54,6 +55,30 @@
             </a>
         </div>
     </header>
+    <header class="main-header-mobile">
+        <a href="#NaviModalMobile" class="burger-menu">
+            <span></span>
+            <span></span>
+        </a>
+        <a href="" class="logo">
+            <img src="img/logo-mobile.svg" alt="">
+        </a>  
+        <div class="header-tools">
+            <div class="lang-select">
+                <select name="" id="">
+                    <option value="">EUR</option>
+                    <option value="">USD</option>
+                </select>
+                <i class="mdi mdi-chevron-down"></i>
+            </div>
+            <a href="#SearchModal" class="search">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="#FavoriteModal" class="favorite active">
+                <i class="mdi mdi-heart-outline"></i>
+            </a>
+        </div>
+    </header>
 
     <section class="main-slider">
         <div class="swiper-container" id="MainSlider">
@@ -69,14 +94,14 @@
                             <span class="descr">39 mm, 18 ct white gold, polished finish</span>
                             <div class="price">
                                 <b>€ 28, 120</b>
-                                <spa class="status">Reserved until 23.04.2020</spa>
+                                <span class="status">Reserved until 23.04.2020</span>
                             </div>
                         </div>
                         <a href="" class="show">
                             <i class="mdi mdi-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="next-slide"></div>
+                    <div class="next-slide"><i class="mdi mdi-arrow-right"></i></div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/slider-image.jpg" alt="">
@@ -89,14 +114,14 @@
                             <span class="descr">39 mm, 18 ct white gold, polished finish</span>
                             <div class="price">
                                 <b>€ 28, 120</b>
-                                <spa class="status">Reserved until 23.04.2020</spa>
+                                <span class="status">Reserved until 23.04.2020</span>
                             </div>
                         </div>
                         <a href="" class="show">
                             <i class="mdi mdi-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="next-slide"></div>
+                    <div class="next-slide"><i class="mdi mdi-arrow-right"></i></div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/slider-image.jpg" alt="">
@@ -109,14 +134,14 @@
                             <span class="descr">39 mm, 18 ct white gold, polished finish</span>
                             <div class="price">
                                 <b>€ 28, 120</b>
-                                <spa class="status">Reserved until 23.04.2020</spa>
+                                <span class="status">Reserved until 23.04.2020</span>
                             </div>
                         </div>
                         <a href="" class="show">
                             <i class="mdi mdi-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="next-slide"></div>
+                    <div class="next-slide"><i class="mdi mdi-arrow-right"></i></div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/slider-image.jpg" alt="">
@@ -129,14 +154,14 @@
                             <span class="descr">39 mm, 18 ct white gold, polished finish</span>
                             <div class="price">
                                 <b>€ 28, 120</b>
-                                <spa class="status">Reserved until 23.04.2020</spa>
+                                <span class="status">Reserved until 23.04.2020</span>
                             </div>
                         </div>
                         <a href="" class="show">
                             <i class="mdi mdi-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="next-slide"></div>
+                    <div class="next-slide"><i class="mdi mdi-arrow-right"></i></div>
                 </div>
                 <div class="swiper-slide">
                     <img src="img/slider-image.jpg" alt="">
@@ -149,14 +174,14 @@
                             <span class="descr">39 mm, 18 ct white gold, polished finish</span>
                             <div class="price">
                                 <b>€ 28, 120</b>
-                                <spa class="status">Reserved until 23.04.2020</spa>
+                                <span class="status">Reserved until 23.04.2020</span>
                             </div>
                         </div>
                         <a href="" class="show">
                             <i class="mdi mdi-arrow-right"></i>
                         </a>
                     </div>
-                    <div class="next-slide"></div>
+                    <div class="next-slide"><i class="mdi mdi-arrow-right"></i></div>
                 </div>
             </div>
             <div class="slider-button-next"></div>
@@ -165,7 +190,8 @@
 
     <section class="artle-office">
         <div class="image">
-            <img src="img/office-img.png" alt="">
+            <img class="desctop" src="img/office-img.png" alt="">
+            <img class="tablet" src="img/office-img-landscape.png" alt="">
         </div>
         <div class="text">
             <img src="img/Artle-handwrite.png" alt="">
@@ -464,7 +490,7 @@
         </div>
     </footer>
 
-    <div class="remodal navi-modal" data-remodal-id="NaviModal">
+    <div class="remodal navi-modal desktop" data-remodal-id="NaviModal">
         <div class="navi-modal-links">
             <ul>
                 <li>
@@ -501,7 +527,94 @@
         </div>
         <div class="nav-top-brands">
             <span>Top Brands 😎 :</span>
-            <div class="list">
+            <div class="nav-top-brands-list mb--theme">
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="remodal navi-modal mobile" data-remodal-id="NaviModalMobile">
+        <div class="navi-modal-mobile-cols">
+            <div class="links-col">
+                <img src="img/logo.svg" alt="">
+                <ul>
+                    <li>
+                        <a href="">Watches</a>
+                    </li>
+                    <li>
+                        <a href="">Watch Straps</a>
+                    </li>
+                    <li>
+                        <a href="">Accesories</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="">Artle Club</a>
+                    </li>
+                    <li>
+                        <a href="">Consign</a>
+                    </li>
+                    <li>
+                        <a href="">Contacts</a>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="our-club">
+                <img src="img/corona-black.png" alt="">
+                <h2>Join our club</h2>
+                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                <a href="#ClubModal" class="c-button black">SUCSCRIBE</a>
+            </div>
+        </div>
+        <div class="nav-top-brands">
+            <span>Top Brands 😎 :</span>
+            <div class="nav-top-brands-list mb--theme">
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
+                <a href="">ROLEX</a>
                 <a href="">ROLEX</a>
                 <a href="">ROLEX</a>
                 <a href="">ROLEX</a>
@@ -517,6 +630,9 @@
                 <a href="">ROLEX</a>
             </div>
         </div>
+        <a data-remodal-action="close" class="close">
+            <i class="mdi mdi-close"></i>
+        </a>
     </div>
 
     <div class="remodal search-modal" data-remodal-id="SearchModal">
@@ -827,13 +943,21 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"></script>
     <script>
 
-        var inst = $('[data-remodal-id=ClubModal]').remodal();
-        inst.open();
+        // var inst = $('[data-remodal-id=NaviModalMob]').remodal();
+        // inst.open();
 
-        $(document).on('opening', '.navi-modal', function () {
+        $('.nav-top-brands-list').mCustomScrollbar({
+            axis:"x",
+            theme:"dark",
+            scrollInertia: 100
+        });
+
+
+        $(document).on('opening', '.navi-modal.desktop', function () {
             HHeight = $('.main-header').height();
             $('.navi-modal').css({
                 top: HHeight
