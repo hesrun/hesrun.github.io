@@ -31,6 +31,8 @@ input, select, button {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .main-header {
+    top: 0px;
+    left: 0px;
     height: 130px;
     background: #fff;
     display: flex;
@@ -252,6 +254,10 @@ input, select, button {
         font-weight: 400;
         font-size: 32px;
     }
+    h1 {
+        font-size: 64px;
+        font-weight: 300;
+    }
 }
 
 .catalog-grid {
@@ -399,7 +405,7 @@ input, select, button {
     .brands-list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 0 70px;
+        grid-gap: 30px 70px;
         a {
             display: block;
             transition: all 0.4s;
@@ -426,6 +432,10 @@ input, select, button {
             vertical-align: middle;
         }
     }
+}
+
+.main-header + .catalog-section {
+    margin-top: 80px;
 }
 
 .main-slider {
@@ -474,6 +484,7 @@ input, select, button {
     transition: all 0.6s;
     .image {
         flex: 0 0 auto;
+        width: 140px;
         margin-right: 3%;
         transition: all 0.6s;
         img {
@@ -1211,7 +1222,6 @@ input, select, button {
         td {
             font-size: 13px;
             padding: 17px 17px;
-            font-weight: 500;
         }
         td:last-child {
             text-align: right;
@@ -1445,6 +1455,7 @@ input, select, button {
     input {
         width: 100%;
         height: 50px;
+        font-size: 18px;
         border: 1px rgba(#000, 0.4) solid;
         background: none;
         border-radius: 25px;
