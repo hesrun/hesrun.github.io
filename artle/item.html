@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
@@ -176,7 +177,7 @@
     </section>
 
     <section class="about-mechanism">
-        <div class="about-mechanism-wrap">
+        <div class="about-mechanism-wrap scroll-custom">
             <div class="mechanism-info">
                 <div class="image">
                     <img src="img/mechanism.jpg" alt="">
@@ -302,7 +303,7 @@
         <div class="section-title text-center">
             <h2>YOU MIGHT ALSO LIKE</h2>
         </div>
-        <div class="catalog-grid">
+        <div class="catalog-grid scroll-in-mob scroll-custom">
             <div class="catalog-grid-item">
                 <a href="#">
                     <div class="image">
@@ -371,7 +372,7 @@
     </section>
     
     <section class="join-our-club">
-        <img src="img/corona.png" alt="">
+        <img src="img/corona.svg" alt="">
         <h2>Join our club</h2>
         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia <br> consequat duis
             enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
@@ -1024,6 +1025,11 @@
                 }
             }
         });
+
+        const mediaQuery = window.matchMedia('(max-width: 420px)')
+        if (mediaQuery.matches) {
+            swiper.destroy( true, true )
+        }
     </script>
 </body>
 
