@@ -21,6 +21,7 @@
     .main-slider {
         .swiper-slide {
             height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
             > img {
                 height: 100%;
                 width: 100%;
@@ -214,23 +215,29 @@
     }
 
 /***************our club**************/
-.our-club-section {
-    margin-top: 90px;
-    > h2 {
-        margin-top: 50px;
-        font-size: 38px;
-        margin-bottom: 120px;
+    .our-club-section {
+        margin-top: 90px;
+        > h2 {
+            margin-top: 50px;
+            font-size: 38px;
+            margin-bottom: 120px;
+        }
     }
-}
-.join-club-form {
-    margin: 80px 0;
-    h2 {
-        font-size: 36px;
+    .our-club-priorities {
+        span {
+            line-height: 1.6;
+            font-size: 12px;
+        }
     }
-    .c-button {
-        margin-top: 40px;
-    } 
-}
+    .join-club-form {
+        margin: 80px 0;
+        h2 {
+            font-size: 36px;
+        }
+        .c-button {
+            margin-top: 40px;
+        } 
+    }
 /***************footer**************/
     .main-footer-container {
         max-width: 800px;
@@ -238,6 +245,7 @@
             white-space: nowrap;
         }
     }
+
 }
 @media only screen and (max-width: 768px) {
     .main-footer-container {
