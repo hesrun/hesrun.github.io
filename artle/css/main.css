@@ -18,10 +18,15 @@
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 body {
   font-family: 'Helvetica Now Text';
   font-size: 14px;
   line-height: 1;
+  padding-top: 130px;
 }
 
 input, select, button {
@@ -1995,6 +2000,124 @@ input, select, button {
   margin: 0 35px;
 }
 
+/***************consign**************/
+.consign-section {
+  position: relative;
+}
+
+.consign-section .cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.consign-section .cols > div {
+  padding: 100px 8vw;
+  width: 50%;
+}
+
+.consign-section:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 50%;
+  background-image: url(../img/bg-consign.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.consign-form h2 {
+  font-size: 56px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.consign-form .clip-watch-photo {
+  margin: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.consign-form .clip-watch-photo .item {
+  height: 186px;
+  width: calc(33.333% - 10px);
+  background: rgba(196, 196, 196, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.consign-form .clip-watch-photo .item:hover span {
+  color: #009bff;
+  opacity: 1;
+}
+
+.consign-form .clip-watch-photo .item:hover i.mdi {
+  color: #009bff;
+  opacity: 1;
+}
+
+.consign-form .clip-watch-photo .item i.mdi {
+  font-size: 48px;
+  opacity: 0.3;
+}
+
+.consign-form .clip-watch-photo .item span {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.3;
+}
+
+.consign-form .clip-watch-photo .item input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.consign-info {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(rgba(243, 243, 243, 0)));
+  background: linear-gradient(180deg, #F5F5F5 0%, rgba(243, 243, 243, 0) 100%);
+}
+
+.consign-info strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.consign-info p {
+  line-height: 2;
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
 /**********************ui**********************/
 .c-button {
   display: -webkit-inline-box;
@@ -2147,6 +2270,99 @@ input, select, button {
   -webkit-transform: scale(0);
           transform: scale(0);
   color: #fff;
+}
+
+.float-input {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.float-input input {
+  font-size: 14px;
+  height: 60px;
+  border: none;
+  width: 100%;
+  border-bottom: 1px rgba(0, 0, 0, 0.17) solid;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.float-input textarea {
+  font-size: 16px;
+  height: 60px;
+  border: none;
+  width: 100%;
+  border-bottom: 1px rgba(0, 0, 0, 0.17) solid;
+  resize: vertical;
+  padding-top: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.float-input label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  pointer-events: none;
+  opacity: 0.3;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.float-input.active label {
+  line-height: 10px;
+  font-size: 12px;
+  color: #009bff;
+  opacity: 1;
+}
+
+.float-input.active input, .float-input.active textarea {
+  border-bottom: 1px #009bff solid;
+}
+
+fieldset {
+  border: 1px solid #D9D9D9;
+  margin: 50px 0;
+  padding: 35px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+fieldset.active {
+  border-color: #009bff;
+}
+
+fieldset.active legend {
+  color: #009bff;
+  opacity: 1;
+}
+
+fieldset .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+fieldset .list .c-checkbox {
+  margin: 10px 30px 10px 0;
+}
+
+fieldset legend {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 15px;
+  margin-left: 0px;
+  opacity: 0.3;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .remodal-overlay {
