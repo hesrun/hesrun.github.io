@@ -277,8 +277,8 @@ input, select, button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-left: 12%;
-  padding-right: 11%;
+  padding-left: 10%;
+  padding-right: 8%;
 }
 
 .artle-office .text p {
@@ -287,8 +287,53 @@ input, select, button {
   margin: 10% 0;
 }
 
-.artle-office .some-partners img {
-  margin-right: 15px;
+.artle-office .partners-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.artle-office .partners-info .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.artle-office .partners-info .partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.artle-office .partners-info .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.artle-office .partners-info .img img {
+  margin: auto;
+}
+
+.artle-office .partners-info span {
+  display: block;
+  margin-bottom: 15px;
 }
 
 .join-our-club {
@@ -568,14 +613,6 @@ input, select, button {
 .instagram-grid a img {
   width: 100%;
   vertical-align: middle;
-}
-
-.main-header + .catalog-section {
-  margin-top: 80px;
-}
-
-.main-header + .artle-item-section {
-  margin-top: 130px;
 }
 
 .main-slider .swiper-slide {
@@ -1871,7 +1908,6 @@ input, select, button {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  margin-top: 130px;
 }
 
 .our-club-section .wrap {
@@ -2016,20 +2052,6 @@ input, select, button {
   width: 50%;
 }
 
-.consign-section:after {
-  content: "";
-  display: block;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  width: 50%;
-  background-image: url(../img/bg-consign.jpg);
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-}
-
 .consign-form h2 {
   font-size: 56px;
   font-weight: 300;
@@ -2099,8 +2121,10 @@ input, select, button {
 }
 
 .consign-info {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(rgba(243, 243, 243, 0)));
-  background: linear-gradient(180deg, #F5F5F5 0%, rgba(243, 243, 243, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), to(rgba(243, 243, 243, 0))), url(../img/bg-consign.jpg);
+  background-image: linear-gradient(180deg, #F5F5F5 0%, rgba(243, 243, 243, 0) 100%), url(../img/bg-consign.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .consign-info strong {
@@ -2116,6 +2140,43 @@ input, select, button {
   line-height: 2;
   font-size: 15px;
   margin-bottom: 60px;
+}
+
+/***************consign modals**************/
+.consign-result-modal {
+  max-width: 550px;
+  padding: 60px 30px;
+}
+
+.consign-result-modal i.mdi {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-size: 32px;
+}
+
+.consign-result-modal .mdi-check {
+  background: #6CCE49;
+}
+
+.consign-result-modal .mdi-close {
+  background: #E74952;
+}
+
+.consign-result-modal strong {
+  margin: 20px 0;
+  letter-spacing: 2px;
+  font-size: 22px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.consign-result-modal p {
+  margin: 30px 0 40px;
 }
 
 /**********************ui**********************/
@@ -2161,6 +2222,18 @@ input, select, button {
 
 .c-button.light {
   border-color: #fff;
+}
+
+.c-button.white {
+  border-color: #fff;
+  background: #fff;
+  color: #000;
+}
+
+.c-button.white:hover {
+  border-color: #009bff;
+  background: #009bff;
+  color: #fff;
 }
 
 .c-button.black {
@@ -2353,6 +2426,10 @@ fieldset .list .c-checkbox {
   margin: 10px 30px 10px 0;
 }
 
+fieldset .list .c-checkbox:last-child {
+  margin-right: 0px;
+}
+
 fieldset legend {
   font-size: 12px;
   font-weight: 500;
@@ -2378,6 +2455,9 @@ fieldset legend {
 }
 
 @media only screen and (max-width: 1024px) {
+  body {
+    padding-top: 90px;
+  }
   .section-title {
     margin-bottom: 70px;
   }
@@ -2573,9 +2653,6 @@ fieldset legend {
     display: block;
   }
   /***************our club**************/
-  .our-club-section {
-    margin-top: 90px;
-  }
   .our-club-section > h2 {
     margin-top: 50px;
     font-size: 38px;
@@ -2593,6 +2670,23 @@ fieldset legend {
   }
   .join-club-form .c-button {
     margin-top: 40px;
+  }
+  /***************consign**************/
+  .consign-section .cols > div {
+    padding: 5vh 30px;
+  }
+  .consign-form h2 {
+    font-size: 38px;
+  }
+  .consign-form .clip-watch-photo .item {
+    height: 130px;
+    padding: 10px;
+  }
+  .consign-form .clip-watch-photo .item i.mdi {
+    font-size: 32px;
+  }
+  .consign-form .clip-watch-photo .item span {
+    font-size: 11px;
   }
   /***************footer**************/
   .main-footer-container {
@@ -2614,6 +2708,9 @@ fieldset legend {
 }
 
 @media only screen and (max-width: 420px) {
+  body {
+    padding-top: 60px;
+  }
   .paddings {
     padding: 30px;
   }
@@ -2711,6 +2808,21 @@ fieldset legend {
   .artle-office .text p {
     font-size: 14px;
   }
+  .artle-office .partners-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .artle-office .partners-info .partners {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 30px 0 50px;
+  }
+  .artle-office .partners-info .partners .item {
+    margin: 0 15px;
+  }
   .main-header-mobile {
     height: 60px;
   }
@@ -2806,9 +2918,6 @@ fieldset legend {
   .join-our-club p {
     font-size: 14px;
   }
-  .main-header + .artle-item-section {
-    margin-top: 80px;
-  }
   .artle-item-section .back {
     display: none;
   }
@@ -2903,9 +3012,6 @@ fieldset legend {
     margin-top: 50px;
   }
   /***************our club**************/
-  .our-club-section {
-    margin-top: 60px;
-  }
   .our-club-section > h2 {
     margin-top: 50px;
     font-size: 28px;
@@ -2947,6 +3053,68 @@ fieldset legend {
     text-align: center;
     font-size: 12px;
     line-height: 1.4;
+  }
+  /***************consign**************/
+  .consign-section .cols {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .consign-section .cols > div {
+    width: 100%;
+    padding: 5vh 30px;
+  }
+  .consign-form {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .consign-form h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .consign-form .clip-watch-photo {
+    display: block;
+    margin: 30px 0;
+  }
+  .consign-form .clip-watch-photo .item {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .consign-form .clip-watch-photo .item i.mdi {
+    font-size: 32px;
+  }
+  .consign-form .clip-watch-photo .item span {
+    font-size: 11px;
+  }
+  .consign-form .text-right {
+    text-align: center;
+  }
+  .consign-form .text-right .c-button {
+    padding: 0 35px;
+  }
+  .consign-info strong {
+    margin-bottom: 30px;
+  }
+  .consign-info p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  .consign-info > img {
+    width: 70px;
+  }
+  /***************consign modals**************/
+  .consign-result-modal {
+    padding: 30px 30px;
+    width: auto;
+  }
+  .consign-result-modal strong {
+    font-size: 16px;
+  }
+  .consign-result-modal .c-button {
+    padding: 0 40px;
   }
   .main-footer {
     padding: 30px;

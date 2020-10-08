@@ -1,4 +1,8 @@
 @media only screen and (max-width: 1024px) {
+
+    body {
+        padding-top: 90px;
+    }
     .section-title {
         margin-bottom: 70px;
         h1 {
@@ -216,7 +220,6 @@
 
 /***************our club**************/
     .our-club-section {
-        margin-top: 90px;
         > h2 {
             margin-top: 50px;
             font-size: 38px;
@@ -238,6 +241,32 @@
             margin-top: 40px;
         } 
     }
+
+/***************consign**************/
+    .consign-section {
+        .cols > div {
+            padding: 5vh 30px;
+        }
+    }
+    .consign-form {
+        h2 {
+            font-size: 38px;
+        }
+        .clip-watch-photo {
+            .item {
+                height: 130px;
+                padding: 10px;
+                i.mdi {
+                    font-size: 32px;
+                }
+                span {
+                    font-size: 11px;
+                }
+            }
+
+        }
+    }
+
 /***************footer**************/
     .main-footer-container {
         max-width: 800px;
@@ -262,6 +291,9 @@
     
 }
 @media only screen and (max-width: 420px) {
+    body {
+        padding-top: 60px;
+    }
     .paddings {
         padding: 30px;
     }
@@ -361,6 +393,16 @@
             padding: 60px 30px;
             p {
                 font-size: 14px;
+            }
+        }
+        .partners-info {
+            flex-direction: column;
+            .partners {
+                order: -1;
+                margin: 30px 0 50px;
+                .item {
+                    margin: 0 15px;
+                }
             }
         }
     }
@@ -467,10 +509,6 @@
         }
     }
 
-    .main-header + .artle-item-section {
-        margin-top: 80px;
-    }
-
     .artle-item-section {
         .back {
             display: none;
@@ -571,7 +609,6 @@
 
 /***************our club**************/
     .our-club-section {
-        margin-top: 60px;
         > h2 {
             margin-top: 50px;
             font-size: 28px;
@@ -616,7 +653,68 @@
             line-height: 1.4;
         }
     }
+/***************consign**************/
+    .consign-section {
+        .cols {
+            flex-direction: column;
+        }
+        .cols > div {
+            width: 100%;
+            padding: 5vh 30px;
+        }
+    }
+    .consign-form {
+        order: 1;
+        h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .clip-watch-photo {
+            display: block;
+            margin: 30px 0;
+            .item {
+                margin-bottom: 20px;
+                width: 100%;
+                i.mdi {
+                    font-size: 32px;
+                }
+                span {
+                    font-size: 11px;
+                }
+            }
 
+        }
+        .text-right {
+            text-align: center;
+            .c-button {
+                padding: 0 35px;
+            }
+        }
+    }
+    .consign-info {
+        strong {
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        > img {
+            width: 70px;
+        }
+    }
+/***************consign modals**************/
+    .consign-result-modal {
+        padding: 30px 30px;
+        width: auto;
+        strong {
+            font-size: 16px;
+        }
+        .c-button {
+            padding: 0 40px;
+        }
+    }   
 
     .main-footer {
         padding: 30px;

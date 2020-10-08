@@ -196,17 +196,38 @@ input, select, button {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding-left: 12%;
-        padding-right: 11%;
+        padding-left: 10%;
+        padding-right: 8%;
         p {
             font-size: 18px;
             line-height: 1.7;
             margin: 10% 0;
         }
     }
-    .some-partners {
-        img {
-            margin-right: 15px;
+    .partners-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .item {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-left: 30px;
+        }
+        .partners {
+            display: flex;
+        }
+        .img {
+            display: flex;
+            flex: 1 1 auto;
+            img {
+                margin: auto;
+            }
+        }
+        span {
+            display: block;
+            margin-bottom: 15px;
         }
     }
 }
@@ -444,14 +465,6 @@ input, select, button {
         }
     }
 }
-
-.main-header + .catalog-section {
-    margin-top: 80px;
-}
-.main-header + .artle-item-section {
-    margin-top: 130px;
-}
-
 
 .main-slider {
     .swiper-slide {
@@ -1406,7 +1419,6 @@ input, select, button {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    margin-top: 130px;
     .wrap {
         max-width: 1160px;
         margin: 0 auto;
@@ -1507,19 +1519,7 @@ input, select, button {
             width: 50%;
         }
     }
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-        width: 50%;
-        background-image: url(../img/bg-consign.jpg);
-        background-position: center;
-        background-size: cover;
-        z-index: -1;
-    }
+    
 }
 .consign-form {
     h2 {
@@ -1573,7 +1573,9 @@ input, select, button {
     }
 }
 .consign-info {
-    background: linear-gradient(180deg, #F5F5F5 0%, rgba(243, 243, 243, 0) 100%);
+    background-image: linear-gradient(180deg, #F5F5F5 0%, rgba(243, 243, 243, 0) 100%), url(../img/bg-consign.jpg);
+    background-position: center;
+    background-size: cover;
     strong {
         display: block;
         font-size: 16px;
@@ -1588,6 +1590,37 @@ input, select, button {
         margin-bottom: 60px;
     }
 }
+/***************consign modals**************/
+    .consign-result-modal {
+        max-width: 550px;
+        padding: 60px 30px;
+        i.mdi {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            font-size: 32px;
+        }
+        .mdi-check {
+            background: #6CCE49;
+        }
+        .mdi-close {
+            background: #E74952;
+        }
+        strong {
+            margin: 20px 0;
+            letter-spacing: 2px;
+            font-size: 22px;
+            display: block;
+            text-transform: uppercase;
+        }
+        p {
+            margin: 30px 0 40px;
+        }
+    }
 /**********************ui**********************/
 .c-button {
     display: inline-flex;
@@ -1619,6 +1652,16 @@ input, select, button {
     }
     &.light {
         border-color: #fff;
+    }
+    &.white {
+        border-color: #fff;
+        background: #fff;
+        color: #000;
+        &:hover {
+            border-color: #009bff;
+            background: #009bff;
+            color: #fff;
+        }
     }
     &.black {
         background: #000;
@@ -1779,6 +1822,9 @@ fieldset {
         flex-wrap: wrap;
         .c-checkbox {
             margin: 10px 30px 10px 0;
+        }
+        .c-checkbox:last-child {
+            margin-right: 0px;
         }
     }
     legend {

@@ -580,6 +580,29 @@
             </a>
         </div>
     </div>
+
+    <div class="remodal consign-result-modal">
+        <i class="mdi mdi-check"></i>
+        <strong>Successful!</strong>
+        <p>We will contact you within 24 hours</p>
+        <button class="c-button black">SUBMIT</button>
+    </div>
+
+    <div class="remodal consign-result-modal" id="success"> 
+        <i class="mdi mdi-check"></i>
+        <strong>Successful!</strong>
+        <p>We will contact you within 24 hours</p>
+        <button class="c-button black">SUBMIT</button>
+    </div>
+
+    <div class="remodal consign-result-modal" id="fold">
+        <i class="mdi mdi-close"></i>
+        <strong>Something went wrong!</strong>
+        <p>Please fill the form correctly</p>
+        <button class="c-button black">OK</button>
+    </div>
+
+
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -589,8 +612,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script>
 
-        // var inst = $('[data-remodal-id=NaviModalMob]').remodal();
-        // inst.open();
+        var inst = $('#fold').remodal();
+        inst.open();
 
         $('.float-input input, .float-input textarea').focus(function(){
             $(this).parent('.float-input').addClass('active');
