@@ -1078,23 +1078,6 @@ input, select, button {
     height: 100%;
     margin: 0px;
     background: #000;
-    .close {
-        display: inline-flex;
-        align-items: center;
-        font-size: 11px;
-        position: absolute;
-        right: 50px;
-        top: 50px;
-        text-transform: uppercase;
-        cursor: pointer;
-        i.mdi {
-            font-size: 24px;
-            margin-left: 10px;
-        }
-        &:hover {
-            color: #009bff;
-        }
-    }
     .feaures {
         margin: 100px 0;
         display: flex;
@@ -1621,6 +1604,61 @@ input, select, button {
             margin: 30px 0 40px;
         }
     }
+/*****************club-welcome-modal********/
+.club-welcome-modal {
+    margin: 0px;
+    max-width: 960px;
+    margin: 0px;
+    min-height: 100%;
+    padding: 5% 8%;
+    &.welcome-final {
+        .frame-block {
+            p {
+                margin: 60px 0;
+            }
+        }
+    }
+    .frame-block {
+        border: 1px solid #D7D5D3;
+        padding: 60px;
+        img {
+            margin-bottom: 60px;
+        }
+        h2 {
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 50px;
+        }
+        p {
+            line-height: 2;
+        }
+    }
+    .confirm-subscr {
+        margin-top: 10%;
+        h3 {
+            .mdi {
+                margin-right: 15px;
+                font-size: 24px;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        p {
+            line-height: 2;
+            opacity: 0.5;
+            margin: 30px 0;
+        }
+    }
+}
 /**********************ui**********************/
 .c-button {
     display: inline-flex;
@@ -1839,6 +1877,28 @@ fieldset {
     }
 }
 
+.remodal {
+    color: #000;
+    transform: none;
+    .close-remodal {
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        font-size: 11px;
+        position: fixed;
+        right: 50px;
+        top: 50px;
+        text-transform: uppercase;
+        cursor: pointer;
+        i.mdi {
+            font-size: 24px;
+            margin-left: 10px;
+        }
+        &:hover {
+            color: #009bff;
+        }
+    }
+}
 .remodal-overlay {
     background: rgba(#000, 0.8);
     left: 0px;
@@ -1848,6 +1908,7 @@ fieldset {
 }
 .remodal-wrapper {
     overflow-x: hidden;
+    padding: 0px;
 }
 
 @import "responsive";

@@ -712,7 +712,6 @@
         </div>
     </div>
     
-
     <div class="remodal favorite-modal" data-remodal-id="FavoriteModal">
         <div class="fav-header">
             <strong>your wishlist (12)</strong>
@@ -817,10 +816,59 @@
                     <i class="mdi mdi-arrow-right"></i>
                 </button>
             </div>
-            <a data-remodal-action="close" class="close">
+            <a data-remodal-action="close" class="close-remodal">
                 <span>Close</span> <i class="mdi mdi-close"></i>
             </a>
         </div>
+    </div>
+
+    <div class="remodal club-welcome-modal" data-remodal-id="ClubWelcomeModal">
+        <div class="wrapper">
+            <div class="frame-block">
+                <img src="img/corona-black.svg" alt="">
+                <h2>Welcome to Artle Collectors Club!</h2>
+                <h3>We’re glad to have you onboard.</h3>
+                <p>
+                    You will now be one of the first to know about <br> our latest additions and exclusive offers. 
+                </p>
+            </div>
+            <div class="confirm-subscr">
+                <h3>
+                    <i class="mdi mdi-email-check"></i>
+                    confirm your subscription
+                </h3>
+                <p>
+                    Please take a moment to check your Inbox and confirm your subscription. <br>
+                    Remember, you can cancel your subscription anytime by clicking on the “Unsubscribe” link. <br>
+                    Reach out if you have some questions.
+                </p>
+                <a href="#" class="c-button black">OK</a>
+            </div>
+        </div>
+        <a data-remodal-action="close" class="close-remodal">
+            <span>Close</span> <i class="mdi mdi-close"></i>
+        </a>
+    </div>
+
+    <div class="remodal club-welcome-modal welcome-final" data-remodal-id="ClubWelcomeModal">
+        <div class="wrapper">
+            <div class="frame-block">
+                <img src="img/corona-black.svg" alt="">
+                <h2>Welcome to a world of benefits!</h2>
+                <p>
+                    Thank you for confirming your subscription! <br>
+                    It’s time to enjoy the privileges that come with being <br>
+                    an Artle Collectors Club member. <br> <br>
+                    Please stand by for our specially curated collection <br>
+                    of rare luxury watches, which we’re going to email <br>
+                    you within the coming week.
+                </p>
+                <a href="#" class="c-button black">OK</a>
+            </div>
+        </div>
+        <a data-remodal-action="close" class="close-remodal">
+            <span>Close</span> <i class="mdi mdi-close"></i>
+        </a>
     </div>
     
 
@@ -831,8 +879,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script>
 
-        // var inst = $('[data-remodal-id=NaviModalMob]').remodal();
-        // inst.open();
+        var inst = $('.club-welcome-modal').remodal();
+        inst.open();
 
        
         let vh = window.innerHeight * 0.01;
