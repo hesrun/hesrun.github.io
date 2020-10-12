@@ -419,15 +419,15 @@ input, select, button {
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 30px 4%;
         a {
-            display: block;
             border: 1px rgba(#000, 0.07) solid;
             transition: all 0.4s;
             transform: translateZ(0);
             text-decoration: none;
             color: #000;
             display: inline-flex;
+            align-items: center;
+            justify-content: center;
             span {
-                margin: auto;
                 text-transform: uppercase;
                 font-weight: 500;
                 letter-spacing: 2px;
@@ -438,6 +438,7 @@ input, select, button {
             img {
                 vertical-align: middle;
                 width: 100%;
+                height: auto;
             }
         }
     }
@@ -1051,7 +1052,7 @@ input, select, button {
     background: #000;
     overflow: auto;
     .feaures {
-        margin: 100px auto;
+        margin: 60px auto;
         display: flex;
         justify-content: center;
         > div {
@@ -1073,7 +1074,7 @@ input, select, button {
             font-weight: 300;
             letter-spacing: 1px;
             line-height: 1.5;
-            margin: 30px 0;
+            margin: 15px 0;
         }
         p {
             margin: 0px;
@@ -1084,19 +1085,22 @@ input, select, button {
     }
     .join-our-club {
         background: #000;
-        height: 100%;
+        min-height: 100vh;
         padding: 50px 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        img {
+            margin-bottom: 40px;
+        }
     }
     .subscribe {
         width: 100%;
         max-width: 400px;
         margin: 0 auto;
         .c-input {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         .c-button {
             width: 100%;
@@ -1591,7 +1595,7 @@ input, select, button {
 /*****************club-welcome-modal********/
 .club-welcome-modal {
     margin: 0px;
-    max-width: 960px;
+    max-width: 100%;
     margin: 0px;
     min-height: 100%;
     padding: 5% 8%;
@@ -1601,6 +1605,10 @@ input, select, button {
                 margin: 60px 0;
             }
         }
+    }
+    .wrapper {
+        max-width: 660px;
+        margin: 0 auto;
     }
     .frame-block {
         border: 1px solid #D7D5D3;
@@ -1880,6 +1888,12 @@ fieldset {
         }
         &:hover {
             color: #009bff;
+        }
+        &.black {
+            color: #000;
+            &:hover {
+                color: #009bff;
+            }
         }
     }
 }

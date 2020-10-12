@@ -551,7 +551,6 @@ input, select, button {
 }
 
 .brands-section .brands-list a {
-  display: block;
   border: 1px rgba(0, 0, 0, 0.07) solid;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -562,10 +561,15 @@ input, select, button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .brands-section .brands-list a span {
-  margin: auto;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 2px;
@@ -579,6 +583,7 @@ input, select, button {
 .brands-section .brands-list a img {
   vertical-align: middle;
   width: 100%;
+  height: auto;
 }
 
 .instagram-grid {
@@ -1405,7 +1410,7 @@ input, select, button {
 }
 
 .club-modal .feaures {
-  margin: 100px auto;
+  margin: 60px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1438,7 +1443,7 @@ input, select, button {
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 15px 0;
 }
 
 .club-modal .feaures p {
@@ -1450,7 +1455,7 @@ input, select, button {
 
 .club-modal .join-our-club {
   background: #000;
-  height: 100%;
+  min-height: 100vh;
   padding: 50px 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1467,6 +1472,10 @@ input, select, button {
           justify-content: center;
 }
 
+.club-modal .join-our-club img {
+  margin-bottom: 40px;
+}
+
 .club-modal .subscribe {
   width: 100%;
   max-width: 400px;
@@ -1474,7 +1483,7 @@ input, select, button {
 }
 
 .club-modal .subscribe .c-input {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .club-modal .subscribe .c-button {
@@ -2157,7 +2166,7 @@ input, select, button {
 /*****************club-welcome-modal********/
 .club-welcome-modal {
   margin: 0px;
-  max-width: 960px;
+  max-width: 100%;
   margin: 0px;
   min-height: 100%;
   padding: 5% 8%;
@@ -2165,6 +2174,11 @@ input, select, button {
 
 .club-welcome-modal.welcome-final .frame-block p {
   margin: 60px 0;
+}
+
+.club-welcome-modal .wrapper {
+  max-width: 660px;
+  margin: 0 auto;
 }
 
 .club-welcome-modal .frame-block {
@@ -2513,6 +2527,14 @@ fieldset legend {
 }
 
 .remodal .close-remodal:hover {
+  color: #009bff;
+}
+
+.remodal .close-remodal.black {
+  color: #000;
+}
+
+.remodal .close-remodal.black:hover {
   color: #009bff;
 }
 
