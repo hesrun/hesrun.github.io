@@ -198,6 +198,8 @@ input, select, button {
         align-items: flex-start;
         padding-left: 10%;
         padding-right: 8%;
+        padding-top: 30px;
+        padding-bottom: 30px;
         p {
             font-size: 18px;
             line-height: 1.7;
@@ -249,18 +251,6 @@ input, select, button {
         font-size: 16px;
         line-height: 2;
         margin: 40px 0;
-    }
-    .subscribe {
-        display: flex;
-        width: 100%;
-        margin: 0 auto;
-        max-width: 650px;
-        .c-input {
-            flex: 1 1 auto;
-        }
-        .c-button {
-            margin-left: 15px;
-        }
     }
 }
 
@@ -427,7 +417,7 @@ input, select, button {
     .brands-list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 30px 70px;
+        grid-gap: 30px 4%;
         a {
             display: block;
             border: 1px rgba(#000, 0.07) solid;
@@ -467,35 +457,16 @@ input, select, button {
 }
 
 .main-slider {
+    margin-top: -130px;
     .swiper-slide {
         width: 80%;
         position: relative;
+        height: 100vh;
         > img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             vertical-align: middle;
-        }
-    }
-    .next-slide {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0px;
-        top: 0px;
-        background: rgba(#000,0.8);
-        cursor: pointer;
-        transition: all 0.3s;
-        &:hover {
-            background: rgba(#000,0);
-        }
-    }
-    .swiper-slide-active {
-        .next-slide {
-            display: none;
-        }
-    }
-    .swiper-slide-prev {
-        .next-slide {
-            display: none;
         }
     }
 }
@@ -504,17 +475,38 @@ input, select, button {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    background: #fff;
-    padding: 60px 10% 60px 3%;
-    display: flex;
-    align-items: center;
     z-index: 3;
-    transition: all 0.6s;
+    color: inherit;
+    text-decoration: none;
+    .slider-prodict-item-wrap {
+        background: #fff;
+        display: flex;
+        align-items: center;
+        height: 270px;
+        transition: height 0.3s, background 0.3s;
+    }
+    .product-info {
+        padding: 0 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 auto;
+    }
+    .mdi-arrow-right {
+        font-size: 24px;
+        flex: 0 0 auto;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 80px;
+        background: #000;
+        color: #fff;
+        height: 100%;
+    }
     .image {
         flex: 0 0 auto;
         width: 140px;
         margin-right: 3%;
-        transition: all 0.6s;
         img {
             width: 100%;
         }
@@ -527,7 +519,6 @@ input, select, button {
         font-size: 18px;
         display: block;
         text-transform: uppercase;
-        transition: all 0.6s;
     }
     .descr {
         display: block;
@@ -536,35 +527,9 @@ input, select, button {
         color: rgba(#000, 0.4);
         text-transform: uppercase;
         letter-spacing: 1px;
-        overflow: hidden;
-        max-height: 50px;
-        transition: all 0.6s;
-    }
-    .show {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        height: 100%;
-        background: #000;
-        color: #fff;
-        width: 100px;
-        transition: all 0.6s;
-        i.mdi {
-            font-size: 24px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-        }
-        &:hover {
-            background: #009bff;
-        }
     }
     .price {
         font-size: 15px;
-        overflow: hidden;
-        max-height: 50px;
-        transition: all 0.6s;
         b {
             margin-right: 10px;
         }
@@ -578,8 +543,18 @@ input, select, button {
 
 .swiper-slide-next {
     .slider-prodict-item {
+        &:hover {
+            background: rgba(#000, 0);    
+        }
+        background: rgba(#000, 0.5);
+        height: 100%;
         width: 20vw;
-        padding: 40px;
+        display: flex;
+        .slider-prodict-item-wrap {
+            margin-top: auto;
+            height: 150px;
+            width: 100%;
+        }
         .image {
             width: 60px;
             margin-right: 25px;
@@ -589,14 +564,10 @@ input, select, button {
             margin: 0px;
         }
         .descr {
-            max-height: 0px;
-            margin: 0px;
+            display: none;
         }
         .price {
-            max-height: 0px;
-        }
-        .show {
-            width: 90px;
+            display: none;
         }
     }
 }
@@ -1070,36 +1041,38 @@ input, select, button {
 }
 /*****************club-modal***************/
 .club-modal {
-    position: fixed;
+    position: absolute;
     left: 0px;
     top: 0px;
     padding: 0px;
     max-width: 100%;
-    height: 100%;
+    min-height: 100%;
     margin: 0px;
     background: #000;
+    overflow: auto;
     .feaures {
-        margin: 100px 0;
+        margin: 100px auto;
         display: flex;
         justify-content: center;
-        div {
-            padding: 0 30px;
+        > div {
+            padding: 0 20px;
         }
         .icon {
+            display: inline-flex;
             margin: 0 auto;
-            border-radius: 50%;
             text-align: center;
-            line-height: 90px;
             width: 90px;
             height: 90px;
-            background: rgba(255, 207, 164, 0.09);
-            font-size: 24px;
+            img {
+                margin: auto;
+            }
         }
         strong {
             display: block;
-            font-size: 22px;
-            font-weight: 400;
+            font-size: 18px;
+            font-weight: 300;
             letter-spacing: 1px;
+            line-height: 1.5;
             margin: 30px 0;
         }
         p {
@@ -1112,11 +1085,22 @@ input, select, button {
     .join-our-club {
         background: #000;
         height: 100%;
-        padding: 100px 100px;
+        padding: 50px 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .subscribe {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        .c-input {
+            margin-bottom: 30px;
+        }
+        .c-button {
+            width: 100%;
+        }
     }
 }
 @keyframes FavoriteIn {
