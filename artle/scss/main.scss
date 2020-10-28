@@ -39,6 +39,7 @@ input, select, button {
     left: 0px;
     height: 130px;
     background: #fff;
+    border-bottom: 1px rgba(#000, 0.1) solid;
     display: flex;
     padding: 0 55px;
     align-items: center;
@@ -151,6 +152,7 @@ input, select, button {
     width: 100%;
     height: 90px;
     background: #fff;
+    border-bottom: 1px rgba(#000,0.1) solid;
     padding: 0 30px;
     .logo {
         margin-left: 30px;
@@ -271,7 +273,12 @@ input, select, button {
         font-weight: 300;
     }
 }
-
+.catalog-section {
+    padding-top: 60px;
+    .section-title {
+        margin-bottom: 60px;
+    }
+}
 .catalog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -446,7 +453,7 @@ input, select, button {
 
 .instagram-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
     a {
         display: block;
@@ -454,6 +461,9 @@ input, select, button {
             width: 100%;
             vertical-align: middle;
         }
+    }
+    a:nth-child(n+9) {
+        display: none;
     }
 }
 
@@ -1150,6 +1160,7 @@ input, select, button {
     }
 }
 .artle-item-section {
+    padding-top: 30px;
     margin-bottom: 150px;
     .back {
         display: inline-flex;
@@ -1168,10 +1179,12 @@ input, select, button {
     display: flex;
     align-items: center;
     max-width: 1000px;
-    margin: 60px auto 0;
+    margin: 0px auto 60px;
     .image {
+        height: 80vh;
         img {
             max-width: 100%;
+            max-height: 100%;
         }
     }
     .reff {
@@ -1400,6 +1413,7 @@ input, select, button {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+    padding-top: 60px;
     .wrap {
         max-width: 1160px;
         margin: 0 auto;
@@ -1408,7 +1422,7 @@ input, select, button {
         text-align: center;
         font-weight: 300;
         font-size: 64px;
-        margin-bottom: 156px;
+        margin-bottom: 60px;
     }
 }
 .our-club-priorities {
@@ -1432,7 +1446,7 @@ input, select, button {
     }
 }
 .join-club-form {
-    margin: 140px 0;
+    margin: 70px 0;
     background: #fff;
     padding: 60px 30px;
     text-align: center;
@@ -1471,7 +1485,7 @@ input, select, button {
         margin-bottom: 100px;
         li {
             font-size: 18px;
-            margin-bottom: 35px;
+            margin-bottom: 20px;
             font-weight: 400;
         }
     }

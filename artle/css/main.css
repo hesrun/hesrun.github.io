@@ -42,6 +42,7 @@ input, select, button {
   left: 0px;
   height: 130px;
   background: #fff;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,6 +200,7 @@ input, select, button {
   width: 100%;
   height: 90px;
   background: #fff;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
   padding: 0 30px;
 }
 
@@ -387,6 +389,14 @@ input, select, button {
 .section-title h1 {
   font-size: 64px;
   font-weight: 300;
+}
+
+.catalog-section {
+  padding-top: 60px;
+}
+
+.catalog-section .section-title {
+  margin-bottom: 60px;
 }
 
 .catalog-grid {
@@ -589,8 +599,8 @@ input, select, button {
 .instagram-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
 }
 
@@ -601,6 +611,10 @@ input, select, button {
 .instagram-grid a img {
   width: 100%;
   vertical-align: middle;
+}
+
+.instagram-grid a:nth-child(n+9) {
+  display: none;
 }
 
 .main-slider {
@@ -1591,6 +1605,7 @@ input, select, button {
 }
 
 .artle-item-section {
+  padding-top: 30px;
   margin-bottom: 150px;
 }
 
@@ -1620,11 +1635,16 @@ input, select, button {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1000px;
-  margin: 60px auto 0;
+  margin: 0px auto 60px;
+}
+
+.artle-item-wrap .image {
+  height: 80vh;
 }
 
 .artle-item-wrap .image img {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .artle-item-wrap .reff {
@@ -1904,6 +1924,7 @@ input, select, button {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  padding-top: 60px;
 }
 
 .our-club-section .wrap {
@@ -1915,7 +1936,7 @@ input, select, button {
   text-align: center;
   font-weight: 300;
   font-size: 64px;
-  margin-bottom: 156px;
+  margin-bottom: 60px;
 }
 
 .our-club-priorities {
@@ -1950,7 +1971,7 @@ input, select, button {
 }
 
 .join-club-form {
-  margin: 140px 0;
+  margin: 70px 0;
   background: #fff;
   padding: 60px 30px;
   text-align: center;
@@ -2008,7 +2029,7 @@ input, select, button {
 
 .also-in-club ul li {
   font-size: 18px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   font-weight: 400;
 }
 
@@ -2808,8 +2829,14 @@ fieldset legend {
     margin-bottom: 25px;
   }
   .instagram-grid {
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .instagram-grid a:nth-child(n+9) {
+    display: inherit;
+  }
+  .instagram-grid a:nth-child(n+10) {
+    display: none;
   }
   .brands-section .brands-list {
     display: -webkit-box;
@@ -2829,12 +2856,15 @@ fieldset legend {
   .artle-item-section {
     margin-bottom: 50px;
   }
+  .artle-item-section .back {
+    display: none;
+  }
   .artle-item-wrap {
-    display: block;
+    padding: 0 30px;
   }
   .artle-item-wrap .image {
-    max-width: 600px;
-    margin: 0 auto 50px;
+    height: auto;
+    width: 50%;
   }
   .artle-item-wrap .info {
     text-align: center;
@@ -2931,10 +2961,12 @@ fieldset legend {
     display: block;
   }
   /***************our club**************/
+  .our-club-section {
+    padding-top: 60px;
+  }
   .our-club-section > h2 {
-    margin-top: 50px;
+    margin: 0px 0 70px 0;
     font-size: 38px;
-    margin-bottom: 120px;
   }
   .our-club-priorities span {
     line-height: 1.6;
@@ -3254,10 +3286,6 @@ fieldset legend {
   .catalog-grid-item .descr {
     font-size: 9px;
   }
-  .instagram-grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
   .brands-section .brands-list a {
     width: 120px;
     margin-right: 20px;
@@ -3278,9 +3306,10 @@ fieldset legend {
     display: none;
   }
   .artle-item-wrap {
-    margin: 30px 0 0 0;
+    display: block;
   }
   .artle-item-wrap .image {
+    width: auto;
     max-width: 300px;
     margin-bottom: 30px;
   }
@@ -3379,10 +3408,12 @@ fieldset legend {
     margin-top: 50px;
   }
   /***************our club**************/
+  .our-club-section {
+    padding-top: 40px;
+  }
   .our-club-section > h2 {
-    margin-top: 50px;
     font-size: 28px;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
   }
   .our-club-priorities {
     -ms-flex-wrap: wrap;
