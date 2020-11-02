@@ -434,6 +434,7 @@ input, select, button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            height: 150px;
             span {
                 text-transform: uppercase;
                 font-weight: 500;
@@ -445,7 +446,8 @@ input, select, button {
             img {
                 vertical-align: middle;
                 width: 100%;
-                height: auto;
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -492,7 +494,8 @@ input, select, button {
     transition: background 0.3s;
     &:hover {
         .mdi-arrow-right {
-            background: #009bff;
+            background: #fff;
+            color: #000;
         }
     }
     .slider-prodict-item-wrap {
@@ -561,11 +564,13 @@ input, select, button {
 
 .swiper-slide-next {
     .slider-prodict-item {
+        .mdi-arrow-right {
+            background: #fff;
+            color: #000;
+        }
         &:hover {
             background: rgba(#000, 0);    
-            .mdi-arrow-right {
-                background: #000;
-            }
+            
         }
         background: rgba(#000, 0.5);
         height: 100%;

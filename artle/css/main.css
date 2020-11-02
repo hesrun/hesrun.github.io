@@ -577,6 +577,7 @@ input, select, button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 150px;
 }
 
 .brands-section .brands-list a span {
@@ -593,7 +594,9 @@ input, select, button {
 .brands-section .brands-list a img {
   vertical-align: middle;
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .instagram-grid {
@@ -648,7 +651,8 @@ input, select, button {
 }
 
 .slider-prodict-item:hover .mdi-arrow-right {
-  background: #009bff;
+  background: #fff;
+  color: #000;
 }
 
 .slider-prodict-item .slider-prodict-item-wrap {
@@ -759,12 +763,13 @@ input, select, button {
   display: flex;
 }
 
-.swiper-slide-next .slider-prodict-item:hover {
-  background: rgba(0, 0, 0, 0);
+.swiper-slide-next .slider-prodict-item .mdi-arrow-right {
+  background: #fff;
+  color: #000;
 }
 
-.swiper-slide-next .slider-prodict-item:hover .mdi-arrow-right {
-  background: #000;
+.swiper-slide-next .slider-prodict-item:hover {
+  background: rgba(0, 0, 0, 0);
 }
 
 .swiper-slide-next .slider-prodict-item .slider-prodict-item-wrap {
@@ -3638,7 +3643,11 @@ fieldset legend {
   }
   .brands-section .brands-list a {
     width: 120px;
+    height: 80px;
     margin-right: 20px;
+  }
+  .brands-section .brands-list a span {
+    font-size: 10px;
   }
   .join-our-club {
     padding: 70px 30px;
