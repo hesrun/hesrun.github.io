@@ -661,6 +661,113 @@ input, select, button {
     }
 }
 
+/******************cookies**************/
+.cookies-notif {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(#000, 0.8);
+    z-index: 10;
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+        margin-right: 15px;
+        font-weight: 300;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+}
+/***************account-activate-notif**********/
+.main-header ~ .account-activate-notif {
+    top: 130px;
+}
+.main-header.mini ~ .account-activate-notif {
+    top: 80px;
+}
+.account-activate-notif {
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    background: rgba(#000, 0.8);
+    z-index: 10;
+    color: #fff;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    .mdi-email-outline {
+        margin-right: auto;
+        font-size: 24px;
+    }
+    .close {
+        margin-left: auto;
+        color: #fff;
+        font-size: 24px;
+        &:hover {
+            color: #009bff;
+        }
+    }
+    .btns {
+        margin-left: 3%;
+        .c-button {
+            margin-left: 20px;
+        }
+    }
+}
+/******************article******************/
+.article-typo {
+    padding: 60px 30px;
+    max-width: 960px;
+    margin: 0 auto;
+    > * {
+        margin: 40px 0;
+    }
+    h1 {
+        font-size: 64px;
+        font-weight: 300;
+    }
+    h2 {
+        font-size: 32px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    h3 {
+        font-size: 32px;
+        font-weight: 300;
+    }
+    h4 {
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    ul {
+        padding-left: 20px;
+        font-size: 18px;
+        li {
+            margin: 10px 0;
+        }
+    }
+    blockquote, .article-comment {
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 50px 100px;
+    }
+    .article-comment {
+        border: 1px solid #D7D5D3;
+    }
+    blockquote {
+        background: #F5F5F5;
+    }
+}
 
 /*****************filters-modal***************/
 .filters-modal {
@@ -670,12 +777,10 @@ input, select, button {
     width: 100%;
     height: auto;
     max-width: 100%;
-    padding: 0px;
+    padding: 50px 100px;
     box-shadow: none;
     border-radius: 0px;
-    a.close-modal {
-        display: none;
-    }
+    margin: 0px;
 }
 .filters-header {
     display: flex;
@@ -686,18 +791,6 @@ input, select, button {
         text-decoration: none;
         color: inherit;
         transition: all 0.3s;
-    }
-    a.close {
-        text-align: center;
-        line-height: 30px;
-        height: 30px;
-        width: 30px;
-        font-size: 20px;
-        color: #C2C2C2;
-        margin-right: 30px;
-        &:hover {
-            color: #009bff;
-        }
     }
     .apply, .clear {
         height: 50px;
@@ -1181,7 +1274,6 @@ input, select, button {
     max-width: 1000px;
     margin: 0px auto 60px;
     .image {
-        height: 80vh;
         img {
             max-width: 100%;
             max-height: 100%;
@@ -1587,7 +1679,10 @@ input, select, button {
 }
 /***************contact****************/
 .our-contacts {
-    padding: 60px 0;
+    padding: 40px 0;
+    .section-title {
+        margin-bottom: 60px;
+    }
 }
 .contacts-info {
     max-width: 950px;
@@ -1620,6 +1715,9 @@ input, select, button {
         font-size: 18px;
         td {
             padding: 10px 15px;
+        }
+        span {
+            display: inline-block;
         }
     }
 }
@@ -1777,21 +1875,26 @@ input, select, button {
     }
 /*****************club-welcome-modal********/
 .club-welcome-modal {
+    position: fixed;
+    left: 0px;
+    top: 0px;
     margin: 0px;
     max-width: 100%;
     margin: 0px;
-    min-height: 100%;
-    padding: 5% 8%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    overflow: auto;
+    .wrapper {
+        margin: auto;
+        max-width: 660px;
+    }
     &.welcome-final {
         .frame-block {
             p {
-                margin: 60px 0;
+                margin: 50px 0;
             }
         }
-    }
-    .wrapper {
-        max-width: 660px;
-        margin: 0 auto;
     }
     .frame-block {
         border: 1px solid #D7D5D3;
@@ -1832,6 +1935,30 @@ input, select, button {
             opacity: 0.5;
             margin: 30px 0;
         }
+    }
+}
+/*****************CallToActionModal********/
+.call-to-action-modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    max-width: 100%;
+    display: flex;
+    padding: 30px;
+}
+.call-to-action-form {
+    margin: auto;
+    width: 100%;
+    max-width: 610px;
+    h2 {
+        font-size: 64px;
+        font-weight: 300;
+        margin-bottom: 50px;
+    }
+    .c-button {
+        margin-top: 40px;
     }
 }
 /**********************ui**********************/
@@ -2068,14 +2195,21 @@ fieldset {
         color: #fff;
         display: inline-flex;
         align-items: center;
-        font-size: 11px;
-        position: fixed;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        position: absolute;
         right: 50px;
         top: 50px;
         text-transform: uppercase;
         cursor: pointer;
         i.mdi {
-            font-size: 24px;
+            line-height: 24px;
+            width: 24px;
+            height: 24px;
+            background: #000;
+            color: #fff;
+            font-size: 16px;
             margin-left: 10px;
         }
         &:hover {
@@ -2085,6 +2219,9 @@ fieldset {
             color: #000;
             &:hover {
                 color: #009bff;
+                i.mdi {
+                    background: #009bff;
+                }
             }
         }
     }
