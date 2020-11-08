@@ -1310,6 +1310,7 @@ a {
    grid-template-rows: repeat(2, auto);
    grid-column-gap: 70px;
    grid-row-gap: 45px;
+   margin-bottom: 50px;
    h2 {
       font-size: 16px;
       text-transform: uppercase;
@@ -1447,7 +1448,6 @@ a {
    }
 }
 .product-card-descr {
-   padding: 0 30px;
    .tech-params-table {
       table {
          width: 100%;
@@ -1467,183 +1467,16 @@ a {
       }
    }
 }
-.product-card-invest {
-   .consultant {
-      display: flex;
-      align-items: center;
-      background: #eaeaea;
-      padding: 15px 15px;
-      border-radius: 20px 20px 0 0;
-      .avatar {
-         width: 50px;
-         flex: 0 0 auto;
-         margin-right: 10px;
-      }
-      .info {
-         flex: 1 1 auto;
-      }
-      .logo {
-         height: 60px;
-         flex: 0 0 auto;
-      }
-      strong {
-         display: block;
-         font-size: 14px;
-         font-weight: 600;
-      }
-      span {
-         display: block;
-         font-size: 12px;
-         color: $grey;
-      }
-      .rate {
-         display: flex;
-         align-items: center;
-         i.mdi {
-            font-size: 14px;
-            color: $brown;
-         }
-      }
-   }
-   .invest-info {
-      background: $blue;
-      color: #fff;
-      border-radius: 20px;
-      padding: 30px;
-      margin: 0 -15px;
-      p {
-         font-style: italic;
-      }
-   }
-   .last-invest-info {
-      background: #8f92a1;
-      padding: 15px 20px;
-      border-radius: 0 0 20px 20px;
-      color: #fff;
-      .date {
-         margin-bottom: 25px;
-         font-weight: 600;
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         .mdi {
-            font-size: 16px;
-            margin-right: 5px;
-            vertical-align: middle;
-         }
-      }
-      table {
-         width: 100%;
-         border-collapse: collapse;
-         border-spacing: 0px;
-         th {
-            width: 25%;
-            font-size: 12px;
-            text-align: left;
-            font-weight: 600;
-            color: rgba(#fff,0.5);
-            border-bottom: 1px rgba(#fff,0.4) solid;
-            padding-bottom: 10px;
-         }
-         td {
-            padding-top: 10px;
-            font-size: 18px;
-            font-weight: 700;
-            small {
-               margin-right: 5px;
-               font-weight: 600;
-            }
-         }
-      }
-   }
-}
-.invest-rules-accord {
-   a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px rgba($grey,0.4) solid;
-      color: $grey;
-      font-weight: 600;
-      font-size: 15px;
-      padding: 16px 15px;
-      i.mdi {
-         font-size: 24px;
-      }
-      &:hover {
-         color: $orange;
-      }
-   }
-   .collapse {
-      display: none;
-      padding: 15px;
-      border-bottom: 1px rgba($grey,0.4) solid;
-   }
-}
-.other-product-list {
-   .item {
-      display: flex;
-      align-items: flex-start;
-      padding: 30px 0;
-      border-top: 1px rgba($grey,0.4) solid;
-      &:first-child {
-         padding-top: 0px;
-         border-top: 0px;
-      }
-      &:last-child {
-         padding-bottom: 0px;
-      }
-   }
-   a {
-      transition: all 0.2s;
-      &:hover {
-         color: $orange;
-      }
-   }
-   .info {
-      flex:  1 1 auto;
-      align-self: stretch;
-      display: flex;
-      flex-direction: column;
-   }
-   .image {
-      width: 120px;
-      height: 120px;
-      flex: 0 0 auto;
-      margin-right: 15px;
-      overflow: hidden;
-      img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         transition: all 0.2s;
-      }
-      &:hover {
-         img {
-            transform: scale(1.05);
-         }
-      }
-   }
-   .brand {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 18px;
-   }
-   .lot-num {
-      text-transform: uppercase;
-      font-size: 14px;
-   }
-   .name {
-      margin-top: 5px;
+.similar-products {
+   h2 {
       font-size: 16px;
-   }
-   .btns {
-      margin-top: auto;
-      display: flex;
-      .small-btn + .small-btn {
-         flex: 1 1 auto;
-         margin-left: 5px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      margin-top: 40px;
+      &:first-of-type {
+         margin-top: 0px;
       }
    }
 }
@@ -3767,28 +3600,16 @@ a {
 @media screen and (max-width:1280px) {
    /*****************catalog-item-card**************/
    .catalog-item-card {
-      grid-template-columns: repeat(1, 100%);
-      grid-template-areas:
-         "p-image"
-         "p-info"
-         "p-invest"
-         "p-descr";
-
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+      > div {
+         margin-bottom: 30px;
+      }
    }
-   .product-card-img {
-      grid-area: p-image;
-   }
-   .product-card-info {
-      grid-area: p-info;
-   }
-   .product-card-descr {
-      grid-area: p-descr;
-   }
-   .product-card-invest {
-      grid-area: p-invest;
-   }
-   .product-card-descr {
-      padding: 0px;
+   .similar-products {
+      max-width: 500px;
+      margin: 0 auto;
    }
 
 
@@ -3928,8 +3749,6 @@ a {
    .catalog-item-card {
       margin: 0 auto;
       max-width: 500px;
-      grid-template-columns: 100%;
-      grid-column-gap: 30px;
       h2 {
          margin: 30px 0 15px;
       }
@@ -4593,39 +4412,7 @@ a {
             }
          }
       }
-      .invest-rules {
-         a {
-            font-size: 14px;
-            padding: 10px 0px;
-            i.mdi {
-               font-size: 24px;
-            }
-         }
-         .collapse {
-            padding: 10px 0px;
-         }
-      }
    }
-   .other-product-list {
-      .item {
-         padding: 15px 0;
-      }
-      .image {
-         width: 100px;
-         height: 100px;
-         margin-right: 15px;
-      }
-      .brand {
-         font-size: 16px;
-      }
-      .lot-num {
-         font-size: 12px;
-      }
-      .name {
-         font-size: 14px;
-      }
-   }
-
    /*********************products-compare*************/
    .products-compare {
       margin-right: -15px;

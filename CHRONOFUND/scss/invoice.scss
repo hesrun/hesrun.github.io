@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.invoice-document {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 30px;
+    hr {
+        border: none;
+        background: #000;
+        height: 2px;
+        margin: 4px 0 10px;
+    }
+}
+.doc-title {
+    text-align: center;
+    margin-bottom: 20px;
+    h1 {
+        font-size: 28px;
+        font-weight: 300;
+    }
+    h5 {
+        font-weight: 600;
+    }
+}
+.doc-num {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.contacts {
+    overflow: hidden;
+    margin-bottom: 15px;
+    .box {
+        float: left;
+        width: 100%;
+        max-width: 40%;
+        & + .box {
+            float: right;
+        }
+    }
+}
+
+.datas {
+    margin-bottom: 30px;
+    overflow: hidden;
+    .box {
+        float: left;
+    }
+    .box + .box {
+        margin-left: 30px;
+    }
+}
+
+.goods {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    tbody {
+        tr:first-child {
+            td {
+                padding-top: 10px;
+            }
+        }
+    }
+    th {
+        border-bottom: 2px #000 solid;
+        vertical-align: top;
+        padding-bottom: 10px;
+    }
+    td {
+        vertical-align: top;
+        padding: 20px 0 0 0;
+    }
+    tr {
+        th:last-child {
+            text-align: right;
+        }
+        th:nth-child(2) {
+            text-align: left;
+        }
+    }
+    tr {
+        td:last-child {
+            text-align: right;
+        }
+        td:first-child {
+            width: 200px;
+            text-align: center;
+        }
+    }
+}
+
+.final-summ {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    th {
+        border-bottom: 2px #000 solid;
+        vertical-align: top;
+        padding-bottom: 10px;
+    }
+    td {
+        vertical-align: top;
+        padding: 10px 0 0 0;
+    }
+    td:first-child,
+    th:first-child {
+        text-align: left;
+    }
+    td:last-child,
+    th:last-child {
+        text-align: right;
+    }
+}
+
+.total-summ {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    th {
+        border-bottom: 2px #000 solid;
+        vertical-align: top;
+        padding-bottom: 10px;
+    }
+    td:first-child {
+        width: 200px;
+    }
+    td:last-child {
+        text-align: right;
+    }
+}
