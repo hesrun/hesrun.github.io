@@ -276,7 +276,7 @@ input, select, button {
 .catalog-section {
     padding-top: 60px;
     .section-title {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
 }
 .catalog-grid {
@@ -1750,6 +1750,9 @@ input, select, button {
     max-width: 1500px;
     padding: 0 30px;
     margin: 100px auto 0;
+    .section-title {
+        display: block;
+    }
     h1 {
         font-size: 64px;
         font-weight: 300;
@@ -1761,26 +1764,21 @@ input, select, button {
     }
     .row {
         display: flex;
-        margin-top: -30px;
         > div {
             width: 50%;
             flex: 0 0 auto;
         }
     }
-    .row + .row {
-        margin-top: -80px;
-    }
     .text {
-        padding: 10% 15% 10% 0;
+        padding: 0px 15% 0px 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         p {
             font-size: 16px;
             line-height: 1.6;
         }
         p + p {
-            margin-top: 30%;
+            margin-top: 25px;
         }
     }
     .image {
@@ -1791,41 +1789,49 @@ input, select, button {
         }
     }
     .revers {
+        margin-top: -10%;
         .image {
             padding-right: 15%; 
         }
         .text {
+            justify-content: center;
             padding-right: 0px;
         }
     }
-    .row + .right-row {
-        margin-top: -150px;
-    }
     .right-row {
+        margin: 90px 10% 0 10%;
         display: flex;
-        margin-left: 20%;
         background: #F5F5F5;
         position: relative;
         z-index: 2;
         .text {
             padding: 0 8%;
+            justify-content: center;
+            align-items: flex-start;
+            img {
+                margin-top: 70px;
+            }
         }
     }
     .frame-row {
         max-width: 1200px;
-        margin: 100px auto;
+        margin: 100px 0 0 250px;
         display: flex;
         align-items: center;
+        position: relative;
         .image {
+            position: absolute;
             flex: 0 0 auto;
-            transform: translateX(50%);
+            top: 10%;
+            bottom: 10%;
+            transform: translateX(-50%);
             img {
                 width: auto;
-                height: auto;
+                height: 100%;
             }
         }
         .text {
-            padding: 10% 60px 10% 200px;
+            padding: 10% 60px 10% 300px;
             display: block;
             border: 1px solid #D7D5D3;
             h2 {
@@ -1952,6 +1958,7 @@ input, select, button {
     max-width: 100%;
     display: flex;
     padding: 30px;
+    overflow: auto;
 }
 .call-to-action-form {
     margin: auto;
@@ -2241,6 +2248,19 @@ fieldset {
 .remodal-wrapper {
     overflow-x: hidden;
     padding: 0px;
+}
+
+.scroll-custom {
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.09);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #000;
+    }
 }
 
 @import "responsive";

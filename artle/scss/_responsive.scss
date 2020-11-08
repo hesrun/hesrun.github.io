@@ -19,10 +19,10 @@
         }
     }
     .paddings {
-        padding: 70px 50px;
+        padding: 50px 50px;
     }
     .paddings-half {
-        padding: 70px 50px;
+        padding: 50px 50px;
     }
     .main-header {
         display: none;
@@ -106,6 +106,18 @@
     .catalog-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 40px;
+    }
+
+    .catalog-grid.scroll-in-tablet {
+        display: flex;
+        overflow: auto;
+        grid-gap: inherit;
+        .catalog-grid-item {
+            width: calc(33.333% - 12px);
+            flex: 0 0 auto;
+            margin-bottom: 25px;
+            margin-right: 25px;
+        }
     }
 
     .catalog-grid-item {
@@ -256,7 +268,65 @@
             display: block;
         }
     }
-
+    /***************about-artle**************/
+    .about-artle {
+        margin-top: 50px;
+        .row {
+            margin-top: 0px;
+        }
+        .row + .row {
+            margin-top: 50px;
+        }
+        .row + .right-row {
+            margin-top: -60px;
+        }
+        h1 {
+            font-size: 38px;
+        }
+        .text {
+            padding: 0px 50px 0 0;
+            p {
+                font-size: 14px;
+                line-height: 2;
+            }
+        }
+        .revers {
+            .image {
+                padding-right: 50px;
+            }
+            .text {
+                padding-right: 50px;
+            }
+        }
+        .right-row {
+            
+            .text {
+                padding: 30px;
+                p {
+                    line-height: 1.6;
+                }
+            }
+        }
+        .frame-row {
+            margin-top: 50px;
+            margin-left: 100px;
+            position: relative;
+            .image {
+                width: 300px;
+                transform: translateX(-20%);
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .text {
+                padding-top: 5%;
+                padding-bottom: 5%;
+                margin-left: 0px;
+            }
+        }
+    }
 /***************our club**************/
     .our-club-section {
         padding-top: 60px;
@@ -401,61 +471,11 @@
 
 }
 @media only screen and (max-width: 768px) {
-    /***************about-artle**************/
-    .about-artle {
-        .row {
-            margin-top: -15px;
-        }
-        .row + .row {
-            margin-top: -15px;
-        }
-        h1 {
-            font-size: 38px;
-        }
-        .text {
-            padding: 20% 50px 20% 0;
-            p {
-                font-size: 14px;
-                line-height: 2;
-            }
-        }
-        .revers {
-            .image {
-                padding-right: 50px;
-            }
-            .text {
-                padding-right: 50px;
-            }
-        }
-        .right-row {
-            margin-left: 10%;
-            .text {
-                padding: 30px;
-                p {
-                    line-height: 1.6;
-                }
-            }
-        }
-        .frame-row {
-            margin-top: 50px;
-            position: relative;
-            .image {
-                position: absolute;
-                width: 130px;
-                height: 80%;
-                transform: none;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            .text {
-                margin-left: 10%;
-                padding-left: 100px;
-            }
-        }
+    /*****************club-welcome-modal********/
+    .call-to-action-form {
+        padding: 50px 0;
     }
+
     /***************footer**************/
     .main-footer-container {
         .our-properties {
@@ -674,7 +694,7 @@
         overflow: auto;
         grid-gap: inherit;
         .catalog-grid-item {
-            width: calc(50% - 12px);
+            width: calc(50% - 17px);
             flex: 0 0 auto;
             margin-bottom: 25px;
             margin-right: 25px;
@@ -971,13 +991,16 @@
 /***************about-artle**************/
     .about-artle {
         overflow: hidden;
-        h1 {
-            margin-bottom: 100px;
-        }
         .row {
             position: relative;
             display: block;
             margin-top: 0px;
+            .text {
+                padding: 0px;
+            }
+            .image {
+                display: none;
+            }
             > div {
                 width: auto;
             }
@@ -995,28 +1018,36 @@
             transform: translateX(-60px);
         }
         .row + .row {
-            margin-top: -60px;
+            margin-top: 30px;
         }
         .row.revers{
             .text {
-                padding: 50% 0px 50% 100px;
+                padding: 20% 0px 20% 100px;
             }
             .image {
+                display: block;
                 left: auto;
                 right: 100%;
-                transform: translateX(60px);
+                transform: translateX(70px);
             }
         }
         .right-row {
             display: block;
-            margin-left: 0px;
-            margin-top: -100px;
+            margin: 50px 0 0 0;
+            background: none;
             .text {
+                padding: 30px 30px 50% 30px;
+                background: #F5F5F5;
+                img {
+                    display: none;
+                }
                 p {
                     line-height: 2;
                 }
             }
             .image {
+                margin: -35% 30px 0;
+                display: block;
                 position: static;
                 width: auto;
                 height: auto;
@@ -1024,13 +1055,15 @@
             }
         }
         .frame-row {
+            margin-top: -50px;
             margin-bottom: 30px;
+            margin-left: auto;
             .image {
                 display: none;
             }
             .text {
                 margin: 0px;
-                padding: 30px;
+                padding: 90px 30px 30px 30px;
             }
             .text-right {
                 text-align: center;
@@ -1229,6 +1262,7 @@
     }
     /*****************club-welcome-modal********/
     .call-to-action-form {
+        padding: 0px;
         h2 {
             font-size: 28px;
             margin-top: 50px;
@@ -1355,19 +1389,6 @@
         }
         i.mdi {
             margin-left: 2px;
-        }
-    }
-
-    .scroll-custom {
-        &::-webkit-scrollbar {
-            width: 4px;
-            height: 4px;
-        }
-        &::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.09);
-        }
-        &::-webkit-scrollbar-thumb {
-            background: #000;
         }
     }
 
