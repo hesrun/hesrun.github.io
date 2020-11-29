@@ -252,7 +252,7 @@ a {
 
 .sign-form-column .form-wrapper h2 ~ span {
   margin: -30px 0 30px;
-  color: #818181;
+  color: #8F92A1;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -306,7 +306,7 @@ a {
 .sign-form-column .form-wrapper .timer {
   margin-left: 20px;
   font-size: 12px;
-  color: #818181;
+  color: #8F92A1;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
@@ -629,7 +629,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  color: #818181;
+  color: #8F92A1;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 30px;
@@ -691,7 +691,7 @@ a {
 .left-side-navigation strong {
   margin-bottom: 10px;
   display: block;
-  color: #818181;
+  color: #8F92A1;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -779,7 +779,7 @@ a {
 }
 
 .need-help-chat span {
-  color: #818181;
+  color: #8F92A1;
   font-size: 18px;
   font-weight: 600;
 }
@@ -901,7 +901,7 @@ a {
 .article-text blockquote {
   border-left: 4px #c6a55b solid;
   padding: 0.5rem 0 0.5rem 1rem;
-  color: #818181;
+  color: #8F92A1;
   font-style: italic;
   font-size: 1rem;
   margin: 1rem 0;
@@ -927,6 +927,9 @@ a {
 
 /************************digest-realease************/
 .digest-realease {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -951,7 +954,7 @@ a {
 .digest-realease .date {
   margin-left: 10px;
   font-size: 13px;
-  color: #818181;
+  color: #8F92A1;
   font-weight: 500;
   letter-spacing: 1px;
 }
@@ -969,13 +972,14 @@ a {
 }
 
 .digest-realease .search .search-result-list {
+  display: none;
   z-index: 2;
   padding: 10px;
   background: #fff;
   position: absolute;
   width: 100%;
   top: 34px;
-  border: 1px solid rgba(129, 129, 129, 0.5);
+  border: 1px solid rgba(143, 146, 161, 0.5);
 }
 
 .digest-realease .search .input {
@@ -993,7 +997,7 @@ a {
           flex: 1 1 auto;
   outline: none;
   height: 35px;
-  border: 1px solid rgba(129, 129, 129, 0.5);
+  border: 1px solid rgba(143, 146, 161, 0.5);
   padding: 0 10px;
 }
 
@@ -1026,7 +1030,7 @@ a {
   width: 60px;
   height: 60px;
   display: block;
-  border: 1px rgba(129, 129, 129, 0.2) solid;
+  border: 1px rgba(143, 146, 161, 0.2) solid;
   border-radius: 8px;
   overflow: hidden;
   padding: 4px;
@@ -1060,6 +1064,9 @@ a {
 
 /**********************catalog-tools*****************/
 .catalog-tools {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
 }
 
@@ -1084,8 +1091,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-top: 1px #cbcbcb solid;
   border-bottom: 1px #cbcbcb solid;
-  padding-bottom: 15px;
+  padding: 15px 0;
   margin-bottom: 15px;
 }
 
@@ -1130,7 +1138,7 @@ a {
   font-weight: 600;
   display: block;
   font-size: 14px;
-  color: #818181;
+  color: #8F92A1;
   outline: none;
   position: relative;
   white-space: nowrap;
@@ -1220,10 +1228,13 @@ a {
 
 /***********************catalog-grid*****************/
 .catalog-grid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 850px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(440px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 60px 60px;
   grid-auto-rows: minmax(180px, auto);
   grid-auto-flow: dense;
@@ -1253,59 +1264,42 @@ a {
           align-items: stretch;
 }
 
-.catalog-grid-item.disabled {
-  pointer-events: none;
-  opacity: 0.5;
-}
-
 .catalog-grid-item .item-image {
+  width: 160px;
+  height: 253px;
+  border: 1px #F1F1F1 solid;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 210px;
-  margin-right: 15px;
-  border: 1px solid #dcdcdc;
-  border-radius: 12px;
+  margin-right: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   overflow: hidden;
-  position: relative;
 }
 
-.catalog-grid-item .item-image .badge {
-  display: none;
-  background: #fff;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  border: 1px solid #c3c3c3;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  line-height: 22px;
-  font-size: 7px;
-  text-align: center;
-  font-weight: 700;
+.catalog-grid-item .item-image:hover {
+  border-color: #f76844;
+  border-radius: 10px;
 }
 
 .catalog-grid-item .item-image img {
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  vertical-align: middle;
-  max-width: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.catalog-grid-item .item-image a:hover img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 
 .catalog-grid-item .item-info {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  position: relative;
+}
+
+.catalog-grid-item .item-info a:hover .brand, .catalog-grid-item .item-info a:hover .name {
+  color: #f76844;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .catalog-grid-item .item-info .brand {
@@ -1316,48 +1310,38 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.catalog-grid-item .item-info .lot-num {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.catalog-grid-item .item-info .reference {
-  font-size: 12px;
-  font-weight: 600;
-  display: none;
-  margin: 5px 0;
-  text-transform: uppercase;
-  color: #818181;
-}
-
 .catalog-grid-item .item-info .name {
-  height: 40px;
-  line-height: 20px;
-  font-weight: 500;
+  line-height: 14px;
+  height: 28px;
   overflow: hidden;
+  font-weight: 400;
   display: block;
+  font-size: 12px;
+}
+
+.catalog-grid-item .add-to-compare {
   font-size: 18px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.catalog-grid-item .item-info a:not(.small-btn) {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.catalog-grid-item .item-info a:not(.small-btn):hover {
-  color: #f76844;
+.catalog-grid-item .add-to-compare:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .catalog-grid-item .table-params {
-  margin: 8px 0 13px;
+  margin: 10px 0;
 }
 
 .catalog-grid-item .table-params table {
@@ -1367,13 +1351,17 @@ a {
 }
 
 .catalog-grid-item .table-params td {
-  padding: 4px 0;
+  padding: 5px 0;
   border-bottom: 1px #f5f5f5 solid;
+}
+
+.catalog-grid-item .table-params tr:first-child td {
+  border-top: 1px #f5f5f5 solid;
 }
 
 .catalog-grid-item .table-params td:first-child {
   text-align: left;
-  color: #818181;
+  color: #8F92A1;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -1383,81 +1371,43 @@ a {
   vertical-align: middle;
   text-align: right;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .catalog-grid-item .table-params td:last-child small {
   display: inline-block;
-  font-size: 14px;
-}
-
-.catalog-grid-item .profits-bloks {
-  margin-bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.catalog-grid-item .profit-block {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 1px;
-}
-
-.catalog-grid-item .profit-block span {
+  font-size: 10px;
   font-weight: 600;
+}
+
+.catalog-grid-item .table-params td:last-child span {
+  font-weight: 600;
+}
+
+.catalog-grid-item .final-profit {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.catalog-grid-item .final-profit strong {
   font-size: 12px;
-  color: #818181;
-  letter-spacing: 1px;
+  display: block;
+  font-weight: 600;
 }
 
-.catalog-grid-item .profit-block b {
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.catalog-grid-item .btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.catalog-grid-item .btns .small-btn + .small-btn {
-  margin-left: 5px;
+.catalog-grid-item .final-profit b {
+  font-size: 18px;
 }
 
 .catalog-grid-item .btns .small-btn {
-  padding: 0px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.catalog-grid-item .btns .small-btn.icon {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  width: 100%;
 }
 
 .catalog-grid-item i.tooltip {
   margin-left: 5px;
   font-size: 16px;
   vertical-align: middle;
-  color: #818181;
+  color: #8F92A1;
   cursor: pointer;
 }
 
@@ -1466,258 +1416,24 @@ a {
 }
 
 .catalog-grid-item.is-solded .table-params {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .catalog-grid-item.is-solded .table-params td {
-  padding: 13px 0;
-  border-bottom: 1px #f5f5f5 solid;
-}
-
-.catalog-grid-item.is-solded .table-params tr:last-child td {
-  border-bottom: none;
+  padding: 8px 0;
 }
 
 .catalog-grid-item.is-solded .sold-date {
   line-height: 36px;
   height: 38px;
   text-align: center;
-  color: #818181;
+  color: #8F92A1;
   letter-spacing: 1px;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 600;
   display: block;
-  border: 1px rgba(129, 129, 129, 0.5) solid;
-}
-
-.digest-catalog-item {
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-}
-
-.digest-catalog-item .image {
-  border-radius: 12px 12px 0 0;
-  position: relative;
-  overflow: hidden;
-  height: 375px;
-}
-
-.digest-catalog-item .image img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  max-width: 100%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.digest-catalog-item .image a:hover img {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.digest-catalog-item .image .badge {
-  display: none;
-  background: #fff;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  border: 1px solid #c3c3c3;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  line-height: 22px;
-  font-size: 7px;
-  text-align: center;
-  font-weight: 700;
-}
-
-.digest-catalog-item .digest-item-info {
-  padding: 30px;
-  border: 1px solid #e1e1e1;
-  background-color: rgba(216, 216, 216, 0.4);
-  border-radius: 0 0 12px 12px;
-}
-
-.digest-catalog-item .digest-item-info-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.digest-catalog-item .digest-item-info-head a {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.digest-catalog-item .digest-item-info-head a:hover {
-  color: #f76844;
-}
-
-.digest-catalog-item .digest-item-info-head .properties-column {
-  width: 30%;
-}
-
-.digest-catalog-item .digest-item-info-head .name-column {
-  width: 70%;
-  padding-right: 30px;
-}
-
-.digest-catalog-item .digest-item-info-head .brand {
-  display: block;
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 3px;
-}
-
-.digest-catalog-item .digest-item-info-head .name {
-  line-height: 1.3;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.digest-catalog-item .digest-item-info-head .lot-num {
-  text-transform: uppercase;
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.digest-catalog-item .digest-item-info-head .reference {
-  margin: 10px 0;
-  display: block;
-  font-weight: 600;
-  font-size: 11px;
-  color: #818181;
-}
-
-.digest-catalog-item .digest-item-info-head .condition {
-  display: block;
-  font-weight: 600;
-  font-size: 11px;
-}
-
-.digest-catalog-item .digest-item-price-table {
-  margin: 20px 0 0px;
-}
-
-.digest-catalog-item .digest-item-price-table table {
-  width: 100%;
-  border-spacing: 0px;
-  border-collapse: collapse;
-}
-
-.digest-catalog-item .digest-item-price-table th {
-  font-size: 12px;
-  color: #818181;
-  letter-spacing: 1px;
-  font-weight: 600;
-  border-bottom: 1px rgba(143, 146, 161, 0.7) solid;
-  padding: 0 0 4px 0;
-}
-
-.digest-catalog-item .digest-item-price-table th:first-child {
-  text-align: left;
-}
-
-.digest-catalog-item .digest-item-price-table th:last-child {
-  text-align: right;
-}
-
-.digest-catalog-item .digest-item-price-table td {
-  padding-top: 5px;
-  padding-bottom: 15px;
-  text-align: center;
-  width: 33.333%;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.digest-catalog-item .digest-item-price-table td:first-child {
-  text-align: left;
-}
-
-.digest-catalog-item .digest-item-price-table td:last-child {
-  text-align: right;
-}
-
-.digest-catalog-item .digest-item-price-table td small {
-  margin-right: 4px;
-}
-
-.digest-catalog-item .profits-bloks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.digest-catalog-item .profit-block {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.digest-catalog-item .profit-block span {
-  font-weight: 600;
-  font-size: 12px;
-  color: #818181;
-  letter-spacing: 1px;
-}
-
-.digest-catalog-item .profit-block b {
-  margin-left: 10px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.digest-catalog-item .btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.digest-catalog-item .btns .small-btn {
-  padding: 0px;
-}
-
-.digest-catalog-item .btns .small-btn + .small-btn {
-  min-width: 140px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  margin-left: 5px;
-}
-
-.digest-catalog-item i.tooltip {
-  margin-left: 5px;
-  font-size: 16px;
-  vertical-align: middle;
-  color: #818181;
-  cursor: pointer;
-}
-
-.digest-catalog-item i.tooltip:hover {
-  color: #f76844;
+  border: 1px rgba(143, 146, 161, 0.5) solid;
 }
 
 /**********************catalog-item-card*******************/
@@ -1748,53 +1464,6 @@ a {
 
 .catalog-item-card p {
   line-height: 1.5;
-}
-
-.catalog-item-card .invest-now {
-  margin: 35px 0;
-  background: #f76844;
-  border: 2px #f76844 solid;
-  text-transform: uppercase;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  padding: 30px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.catalog-item-card .invest-now span {
-  font-weight: 300;
-}
-
-.catalog-item-card .invest-now:hover {
-  border: 2px #f76844 solid;
-  background: transparent;
-  color: #f76844;
-}
-
-.catalog-item-card .invest-now.active {
-  display: block;
-  background: none;
-  text-align: center;
-  color: #818181;
-  border-color: #818181;
-  border-width: 3px;
-}
-
-.catalog-item-card .invest-now.active:hover {
-  background: #818181;
-  color: #fff;
 }
 
 .product-card-img {
@@ -1883,36 +1552,111 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.product-card-info .digest-catalog-item {
   position: relative;
-  margin: 0;
 }
 
-.product-card-info .digest-item-info {
-  padding: 15px 0 0 0;
-  background: none;
-  border: none;
-}
-
-.product-card-info .digest-item-price-table {
-  margin: 80px 0 0;
-}
-
-.product-card-info .digest-item-price-table td {
-  padding-bottom: 30px;
-}
-
-.product-card-info .btns {
+.product-card-info .add-to-compare {
   position: absolute;
   right: 0px;
-  top: 15px;
+  font-size: 32px;
 }
 
-.product-card-info .invest-now {
+.product-card-info .brand {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.product-card-info .name {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.product-card-info .ref-and-lot {
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-card-info .ref-and-lot .reference {
+  font-weight: 600;
+}
+
+.product-card-info .ref-and-lot .lot {
+  padding: 5px 10px;
+  border: 1px #ccc solid;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.product-card-info .params {
+  border: 1px #ccc solid;
+  padding: 10px 25px;
+  margin: 15px 0;
+}
+
+.product-card-info .params table {
+  width: 100%;
+}
+
+.product-card-info .params td {
+  font-weight: 500;
+  width: 50%;
+  padding: 5px 0;
+}
+
+.product-card-info .params td:first-child {
+  color: #8F92A1;
+  letter-spacing: 1px;
+}
+
+.product-card-info .table-params {
+  padding: 0 25px;
+}
+
+.product-card-info .table-params .final {
+  margin-left: -17px;
+  font-size: 20px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.product-card-info .table-params table {
+  width: 100%;
+}
+
+.product-card-info .table-params td {
+  font-weight: 500;
+  width: 50%;
+  padding: 5px 0;
+}
+
+.product-card-info .table-params td:first-child {
+  color: #8F92A1;
+  letter-spacing: 1px;
+}
+
+.product-card-info .table-params i.mdi {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.product-card-info .table-params i.mdi:hover {
+  color: #f76844;
+}
+
+.product-card-info .c-btn {
   margin-top: auto;
-  margin-bottom: 0px;
+  border-radius: 0px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .product-card-descr .tech-params-table table {
@@ -1923,12 +1667,12 @@ a {
 
 .product-card-descr .tech-params-table td {
   padding: 10px 0;
-  border-bottom: 1px rgba(129, 129, 129, 0.3) solid;
+  border-bottom: 1px rgba(143, 146, 161, 0.3) solid;
 }
 
 .product-card-descr .tech-params-table td:first-child {
   font-size: 12px;
-  color: #818181;
+  color: #8F92A1;
   font-weight: 600;
   text-transform: uppercase;
   padding-right: 15px;
@@ -1945,6 +1689,10 @@ a {
 
 .similar-products h2:first-of-type {
   margin-top: 0px;
+}
+
+.similar-products .catalog-grid {
+  max-width: 100%;
 }
 
 /**********************catalog-item-card*******************/
@@ -1970,11 +1718,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #818181;
+  color: #8F92A1;
   font-size: 12px;
   font-weight: 500;
-  border-right: 1px rgba(129, 129, 129, 0.2) solid;
-  border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
+  border-right: 1px rgba(143, 146, 161, 0.2) solid;
+  border-bottom: 1px rgba(143, 146, 161, 0.2) solid;
   letter-spacing: 1px;
 }
 
@@ -2078,7 +1826,7 @@ a {
   border-radius: 12px;
   margin-bottom: 10px;
   overflow: hidden;
-  border: 1px rgba(129, 129, 129, 0.2) solid;
+  border: 1px rgba(143, 146, 161, 0.2) solid;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -2104,7 +1852,7 @@ a {
 }
 
 .products-compare-list-item .add-img {
-  border: 2px rgba(129, 129, 129, 0.2) dashed;
+  border: 2px rgba(143, 146, 161, 0.2) dashed;
 }
 
 .products-compare-list-item .add-img:hover {
@@ -2119,7 +1867,7 @@ a {
   line-height: 120px;
   font-size: 12px;
   font-weight: 600;
-  color: #818181;
+  color: #8F92A1;
 }
 
 .products-compare-list-item .name {
@@ -2134,7 +1882,7 @@ a {
 }
 
 .products-compare-list-item .lot-num {
-  color: #818181;
+  color: #8F92A1;
   letter-spacing: 1px;
   font-size: 13px;
   display: block;
@@ -2156,8 +1904,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-right: 1px rgba(129, 129, 129, 0.2) solid;
-  border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
+  border-right: 1px rgba(143, 146, 161, 0.2) solid;
+  border-bottom: 1px rgba(143, 146, 161, 0.2) solid;
 }
 
 .products-compare-list-item .btns {
@@ -2236,7 +1984,7 @@ a {
   display: block;
   width: 140px;
   height: 220px;
-  border: 1px rgba(129, 129, 129, 0.2) solid;
+  border: 1px rgba(143, 146, 161, 0.2) solid;
   border-radius: 12px;
   overflow: hidden;
   -webkit-transition: all 0.3s;
@@ -2283,7 +2031,7 @@ a {
   bottom: -20px;
   height: 1px;
   width: 100%;
-  background: rgba(129, 129, 129, 0.3);
+  background: rgba(143, 146, 161, 0.3);
 }
 
 .basket-list-item .brand {
@@ -2303,7 +2051,7 @@ a {
   margin-top: 10px;
   display: block;
   font-size: 12px;
-  color: #818181;
+  color: #8F92A1;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -2329,7 +2077,7 @@ a {
 
 .basket-list-item .profit strong,
 .basket-list-item .price strong {
-  color: #818181;
+  color: #8F92A1;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 12px;
@@ -2353,8 +2101,8 @@ a {
   letter-spacing: 1px;
   display: inline-block;
   padding: 20px 20px;
-  color: #818181;
-  border: 2px solid #818181;
+  color: #8F92A1;
+  border: 2px solid #8F92A1;
   opacity: 0.6;
 }
 
@@ -2366,7 +2114,7 @@ a {
   width: 40px;
   height: 40px;
   border: none;
-  background: rgba(129, 129, 129, 0.8);
+  background: rgba(143, 146, 161, 0.8);
   color: #fff;
   border-radius: 8px;
   font-size: 20px;
@@ -2403,7 +2151,7 @@ a {
 .basket-total .tooltip {
   vertical-align: middle;
   font-size: 16px;
-  color: #818181;
+  color: #8F92A1;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -2423,7 +2171,7 @@ a {
 }
 
 .basket-total strong {
-  color: #818181;
+  color: #8F92A1;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 12px;
@@ -2446,7 +2194,7 @@ a {
   display: inline-block;
   padding: 30px 15%;
   text-align: center;
-  border: 1px rgba(129, 129, 129, 0.3) solid;
+  border: 1px rgba(143, 146, 161, 0.3) solid;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -2469,7 +2217,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-top: 1px rgba(129, 129, 129, 0.3) solid;
+  border-top: 1px rgba(143, 146, 161, 0.3) solid;
   padding: 15px 0;
   font-size: 20px;
   -webkit-transition: all 0.3s;
@@ -2482,7 +2230,7 @@ a {
 
 .faq-accordion-head i.mdi {
   font-size: 32px;
-  color: #818181;
+  color: #8F92A1;
 }
 
 .faq-accordion-head:hover {
@@ -2550,7 +2298,7 @@ a {
 
 .profile .send-code span {
   font-size: 12px;
-  color: #818181;
+  color: #8F92A1;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -2666,7 +2414,7 @@ a {
 }
 
 .balance-counts .box strong i {
-  color: #818181;
+  color: #8F92A1;
   font-style: normal;
   margin-left: 5px;
 }
@@ -2728,7 +2476,7 @@ a {
           flex: 1 1 auto;
   outline: none;
   height: 35px;
-  border: 1px solid rgba(129, 129, 129, 0.5);
+  border: 1px solid rgba(143, 146, 161, 0.5);
   padding: 0 10px;
 }
 
@@ -2745,11 +2493,11 @@ a {
 }
 
 .transactions-table tr:first-child td {
-  border-top: 1px rgba(129, 129, 129, 0.2) solid;
+  border-top: 1px rgba(143, 146, 161, 0.2) solid;
 }
 
 .transactions-table td {
-  border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
+  border-bottom: 1px rgba(143, 146, 161, 0.2) solid;
   padding: 25px 0;
   vertical-align: middle;
 }
@@ -2763,7 +2511,7 @@ a {
   display: block;
   font-size: 12px;
   margin-top: 5px;
-  color: #818181;
+  color: #8F92A1;
 }
 
 .transactions-table .summ {
@@ -2787,10 +2535,10 @@ a {
 .transactions-table .status {
   text-transform: uppercase;
   text-align: center;
-  border: 2px rgba(129, 129, 129, 0.5) dashed;
+  border: 2px rgba(143, 146, 161, 0.5) dashed;
   padding: 15px;
   font-size: 12px;
-  color: #818181;
+  color: #8F92A1;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -2813,8 +2561,8 @@ a {
 .checkout-balance-table td {
   font-size: 17px;
   height: 50px;
-  border-top: 1px rgba(129, 129, 129, 0.5) solid;
-  border-bottom: 1px rgba(129, 129, 129, 0.5) solid;
+  border-top: 1px rgba(143, 146, 161, 0.5) solid;
+  border-bottom: 1px rgba(143, 146, 161, 0.5) solid;
 }
 
 .checkout-balance-table td .c-checkbox {
@@ -2878,7 +2626,7 @@ a {
   margin-top: 4px;
   font-weight: 300;
   display: block;
-  color: #818181;
+  color: #8F92A1;
   font-size: 14px;
 }
 
@@ -2919,7 +2667,7 @@ a {
 
 .checkout-step-note small {
   font-size: 15px;
-  color: #818181;
+  color: #8F92A1;
 }
 
 .checkout-invoice {
@@ -3010,7 +2758,7 @@ a {
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1px;
-  color: #818181;
+  color: #8F92A1;
   font-weight: 600;
 }
 
@@ -3023,7 +2771,7 @@ a {
 .my-investments-list .basket-list-item {
   margin: 0px;
   padding: 40px 0;
-  border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
+  border-bottom: 1px rgba(143, 146, 161, 0.2) solid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3093,7 +2841,7 @@ a {
 }
 
 .my-investments-list .profit strong {
-  color: #818181;
+  color: #8F92A1;
   font-size: 12px;
   font-weight: 600;
 }
@@ -3120,10 +2868,10 @@ a {
 .my-investments-list .status {
   text-transform: uppercase;
   text-align: center;
-  border: 2px rgba(129, 129, 129, 0.5) dashed;
+  border: 2px rgba(143, 146, 161, 0.5) dashed;
   padding: 15px;
   font-size: 12px;
-  color: #818181;
+  color: #8F92A1;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -3187,7 +2935,7 @@ a {
   max-width: 240px;
   margin-top: 30px;
   margin-bottom: 10px;
-  border: 1px rgba(129, 129, 129, 0.2) solid;
+  border: 1px rgba(143, 146, 161, 0.2) solid;
   border-radius: 10px;
   padding: 10px 25px;
 }
@@ -3220,7 +2968,7 @@ a {
   font-size: 10px;
   display: block;
   font-weight: 600;
-  color: #818181;
+  color: #8F92A1;
 }
 
 .investments-countdown .timer-wrap b {
@@ -3289,7 +3037,7 @@ a {
 
 .confirm-collects-modal .add-file i.mdi {
   font-size: 28px;
-  color: #818181;
+  color: #8F92A1;
   margin-left: 15px;
 }
 
@@ -3300,9 +3048,9 @@ a {
   height: 35px;
   line-height: 32px;
   background: none;
-  border: 1px rgba(129, 129, 129, 0.5) solid;
+  border: 1px rgba(143, 146, 161, 0.5) solid;
   padding: 0 15px;
-  color: #818181;
+  color: #8F92A1;
   position: relative;
 }
 
@@ -3866,7 +3614,7 @@ a {
 .c-input .err {
   display: block;
   margin-top: 15px;
-  color: #818181;
+  color: #8F92A1;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -3991,7 +3739,7 @@ a {
   width: 100%;
   height: 35px;
   background: none;
-  border: 1px rgba(129, 129, 129, 0.5) solid;
+  border: 1px rgba(143, 146, 161, 0.5) solid;
   padding: 0 15px;
   -webkit-transition: all 0.6S;
   transition: all 0.6S;
@@ -4027,7 +3775,7 @@ a {
   width: 100%;
   min-height: 200px;
   background: none;
-  border: 1px rgba(129, 129, 129, 0.5) solid;
+  border: 1px rgba(143, 146, 161, 0.5) solid;
   padding: 10px 15px;
   -webkit-transition: all 0.6S;
   transition: all 0.6S;
@@ -4058,7 +3806,7 @@ a {
   position: relative;
   width: 100%;
   background: #d8d8d8;
-  border: 1px rgba(129, 129, 129, 0.5) solid;
+  border: 1px rgba(143, 146, 161, 0.5) solid;
   line-height: 32px;
   height: 35px;
   font-size: 16px;
@@ -4092,7 +3840,7 @@ a {
   right: -1px;
   position: absolute;
   background: #FFF;
-  border: 1px rgba(129, 129, 129, 0.5) solid;
+  border: 1px rgba(143, 146, 161, 0.5) solid;
   z-index: 1;
   list-style: none;
   -webkit-transition: all 0.2s;
@@ -4115,7 +3863,7 @@ a {
   cursor: pointer;
   width: 100%;
   background: #d8d8d8;
-  border: 1px rgba(129, 129, 129, 0.5) solid;
+  border: 1px rgba(143, 146, 161, 0.5) solid;
   line-height: 35px;
   height: 35px;
   font-size: 16px;
@@ -4229,7 +3977,7 @@ a {
 .link {
   letter-spacing: 1px;
   font-size: 12px;
-  color: #818181;
+  color: #8F92A1;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration: none;
@@ -4259,7 +4007,7 @@ a {
 }
 
 .tab-links a {
-  color: #818181;
+  color: #8F92A1;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 1px;
@@ -4329,9 +4077,9 @@ a {
 }
 
 .small-btn:disabled, .small-btn.disabled {
-  background-color: #818181 !important;
+  background-color: #8F92A1 !important;
   pointer-events: none !important;
-  border-color: #818181 !important;
+  border-color: #8F92A1 !important;
   opacity: 0.4;
 }
 
@@ -4414,23 +4162,23 @@ a {
 }
 
 .small-btn.grey {
-  border-color: #818181;
-  background: #818181;
+  border-color: #8F92A1;
+  background: #8F92A1;
   color: #fff;
 }
 
 .small-btn.grey:hover {
   background: transparent;
-  color: #818181;
+  color: #8F92A1;
 }
 
 .small-btn.grey.outline {
-  color: #818181;
+  color: #8F92A1;
   background: none;
 }
 
 .small-btn.grey.outline:hover {
-  background: #818181;
+  background: #8F92A1;
   color: #fff;
 }
 
@@ -4479,7 +4227,7 @@ a {
   border-radius: 0px;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 3px rgba(129, 129, 129, 0.5) solid;
+  border: 3px rgba(143, 146, 161, 0.5) solid;
 }
 
 .tooltipster-base.tooltipster-default {
@@ -4586,12 +4334,16 @@ a {
 }
 
 /******************color**************/
+.brown-text {
+  color: #c6a55b !important;
+}
+
 .green-text {
   color: #0dad11 !important;
 }
 
 .grey-text {
-  color: #818181 !important;
+  color: #8F92A1 !important;
 }
 
 .red-text {
@@ -4797,35 +4549,6 @@ a {
   .digest-realease .data .name {
     font-size: 28px;
   }
-  /*****************catalog-item-card**************/
-  .catalog-item-card {
-    margin: 0 auto;
-    max-width: 500px;
-  }
-  .catalog-item-card h2 {
-    margin: 30px 0 15px;
-  }
-  .catalog-item-card .invest-now {
-    margin-bottom: 0px;
-  }
-  .catalog-item-card .tech-params-table {
-    margin-bottom: 30px;
-  }
-  .product-card-info .digest-catalog-item {
-    position: relative;
-  }
-  .product-card-info .digest-item-info {
-    padding: 0;
-  }
-  .product-card-info .digest-item-price-table {
-    margin: 15px 0 5px;
-  }
-  .product-card-info .digest-item-price-table td {
-    padding-bottom: 15px;
-  }
-  .product-card-info .btns {
-    top: 0px;
-  }
   /********************products-compare********************/
   .products-compare {
     margin-right: -30px;
@@ -4913,10 +4636,10 @@ a {
         -ms-flex-align: center;
             align-items: center;
     padding: 30px 0;
-    border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
+    border-bottom: 1px rgba(143, 146, 161, 0.2) solid;
   }
   .transactions-table tr:first-child {
-    border-top: 1px rgba(129, 129, 129, 0.2) solid;
+    border-top: 1px rgba(143, 146, 161, 0.2) solid;
   }
   .transactions-table tr:first-child td {
     border: none;
@@ -5253,8 +4976,8 @@ a {
     opacity: 0.5;
   }
   .catalog-grid-item .item-image {
-    width: 50%;
-    margin-right: 10px;
+    width: 40%;
+    margin-right: 15px;
   }
   .catalog-grid-item .item-image img {
     height: 100%;
@@ -5271,31 +4994,11 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  .catalog-grid-item .item-info .lot-num {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .catalog-grid-item .item-info .reference {
-    font-size: 10px;
-    font-weight: 600;
-    display: block;
-    margin: 5px 0;
-    text-transform: uppercase;
-    color: #818181;
-  }
-  .catalog-grid-item .item-info .name {
-    height: auto;
-    line-height: normal;
-    font-weight: 500;
-    display: block;
-    font-size: 14px;
-  }
   .catalog-grid-item .table-params {
-    margin: 10px 0 8px;
+    margin: 12px 0;
   }
   .catalog-grid-item .table-params td {
-    padding: 4px 0;
+    padding: 6px 0;
   }
   .catalog-grid-item .table-params td:first-child {
     font-size: 10px;
@@ -5324,173 +5027,13 @@ a {
     margin-left: 5px;
     font-size: 14px;
   }
-  .catalog-grid-item.is-solded .table-params {
-    margin: 8px 0;
-  }
-  .catalog-grid-item.is-solded .table-params td {
-    white-space: nowrap;
-    padding: 9px 0;
-  }
-  .catalog-grid-item.is-solded .sold-date {
-    line-height: 34px;
-    height: 36px;
-    font-size: 10px;
-  }
-  .digest-catalog-item {
-    width: 100%;
-    max-width: 100%;
-  }
-  .digest-catalog-item .image {
-    border-radius: 12px 12px 0 0;
-    height: 250px;
-  }
-  .digest-catalog-item .digest-item-info {
-    padding: 15px;
-    border-radius: 0 0 12px 12px;
-  }
-  .digest-catalog-item .digest-item-info-head .properties-column {
-    width: 35%;
-  }
-  .digest-catalog-item .digest-item-info-head .name-column {
-    width: 65%;
-    padding-right: 15px;
-  }
-  .digest-catalog-item .digest-item-info-head .brand {
-    font-size: 16px;
-    margin-bottom: 3px;
-  }
-  .digest-catalog-item .digest-item-info-head .name {
-    line-height: 1.3;
-    font-size: 14px;
-  }
-  .digest-catalog-item .digest-item-info-head .lot-num {
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  .digest-catalog-item .digest-item-info-head .reference {
-    margin: 5px 0;
-    font-size: 10px;
-    color: #818181;
-  }
-  .digest-catalog-item .digest-item-info-head .condition {
-    font-size: 10px;
-  }
-  .digest-catalog-item .digest-item-price-table {
-    margin: 15px 0 0;
-  }
-  .digest-catalog-item .digest-item-price-table th {
-    font-size: 10px;
-    letter-spacing: 1px;
-    padding: 0 0 4px 0;
-  }
-  .digest-catalog-item .digest-item-price-table td {
-    padding-top: 4px;
-    padding-bottom: 15px;
-    font-size: 13px;
-  }
-  .digest-catalog-item .digest-item-price-table td small {
-    margin-right: 4px;
-    font-size: 13px;
-  }
-  .digest-catalog-item .digest-item-info-footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .digest-catalog-item .profits-bloks {
-    width: 100%;
-  }
-  .digest-catalog-item .profit-block {
-    margin-right: 0px;
-  }
-  .digest-catalog-item .profit-block span {
-    font-size: 10px;
-  }
-  .digest-catalog-item .profit-block span br {
-    display: none;
-  }
-  .digest-catalog-item .profit-block b {
-    margin-left: 10px;
-    font-size: 13px;
-  }
-  .digest-catalog-item .btns {
-    width: 100%;
-  }
-  .digest-catalog-item i.tooltip {
-    margin-left: 5px;
-    font-size: 14px;
-  }
   /*****************catalog-item-card**************/
-  .catalog-item-card {
-    grid-row-gap: 15px;
-    padding: 0 15px;
-    position: relative;
-  }
-  .catalog-item-card .invest-now {
-    margin: 20px 0;
-    padding: 10px 15px;
-  }
   .product-card-img {
     margin: 0 -30px;
   }
   .product-card-img .btns {
     margin-left: 15px;
     margin-right: 15px;
-  }
-  .product-card-info .digest-catalog-item {
-    position: static;
-  }
-  .product-card-info .digest-item-info {
-    padding: 0px;
-  }
-  .product-card-info .btns {
-    width: auto;
-    top: -48px;
-  }
-  .product-card-invest .consultant .logo {
-    height: 50px;
-  }
-  .product-card-invest .consultant strong {
-    font-size: 13px;
-  }
-  .product-card-invest .consultant span {
-    font-size: 11px;
-  }
-  .product-card-invest .invest-info {
-    padding: 20px 15px;
-    margin: 0 -15px;
-  }
-  .product-card-invest .invest-info h2 {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  .product-card-invest .invest-info p {
-    font-size: 13px;
-    font-style: italic;
-  }
-  .product-card-invest .last-invest-info .date {
-    margin-bottom: 15px;
-    font-size: 11px;
-  }
-  .product-card-invest .last-invest-info .date .mdi {
-    font-size: 11px;
-  }
-  .product-card-invest .last-invest-info table {
-    width: 100%;
-  }
-  .product-card-invest .last-invest-info table th {
-    width: auto;
-    font-size: 10px;
-    padding-bottom: 5px;
-  }
-  .product-card-invest .last-invest-info table td {
-    padding-top: 5px;
-    font-size: 13px;
-    font-weight: 700;
   }
   /*********************products-compare*************/
   .products-compare {
@@ -5640,7 +5183,7 @@ a {
   .basket-total .basket-profit,
   .basket-total .basket-total-summ {
     height: 40px;
-    border-top: 1px rgba(129, 129, 129, 0.5) solid;
+    border-top: 1px rgba(143, 146, 161, 0.5) solid;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5655,7 +5198,7 @@ a {
     margin: 0 0 0 auto;
   }
   .basket-total .basket-total-summ {
-    border-bottom: 1px rgba(129, 129, 129, 0.5) solid;
+    border-bottom: 1px rgba(143, 146, 161, 0.5) solid;
     margin-bottom: 30px;
   }
   .page-cap p {
