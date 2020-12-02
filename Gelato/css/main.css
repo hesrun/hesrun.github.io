@@ -5317,31 +5317,85 @@ a.search-open-btn:hover img {
 }
 
 @media screen and (max-width: 500px) {
+  body {
+    padding-top: 138px;
+  }
   /*****************header*********/
+  .main-header {
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .main-header:after {
+    height: 35px;
+  }
   .main-header .top-line {
-    margin-bottom: 60px;
+    margin-bottom: 42px;
   }
   .main-header .logo {
-    width: auto;
-    top: 40px;
+    max-width: 100%;
+    width: 140px;
+    top: 20px;
   }
   .main-header .logo img {
-    height: 60px;
+    height: auto;
   }
   .main-header .our-tel {
-    top: 95px;
+    top: 60px;
+    font-size: 16px;
+  }
+  .main-header .our-tel i.mdi {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  .favorites-count i.mdi {
+    font-size: 25px;
+  }
+  .favorites-count span {
+    font-size: 8px;
+  }
+  .burger-menu-btn {
+    height: 35px;
+  }
+  .burger-menu-btn span {
+    font-size: 12px;
+  }
+  .burger-menu-btn i.mdi {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    font-size: 24px;
+  }
+  .sales-and-new {
+    height: 35px;
+    padding-right: 0px;
+    padding-left: 10px;
+  }
+  .sales-and-new div:last-child {
+    margin-right: 0px;
+  }
+  .sales-and-new img {
+    height: 27px;
+  }
+  .sales-and-new a {
+    font-size: 10px;
+    margin-top: 13px;
+  }
+  .header-account > * {
+    margin-left: 5px;
   }
   .header-account > * .icon {
     margin-right: 5px;
   }
   .header-account > * .icon span {
-    height: 20px;
-    min-width: 20px;
-    line-height: 20px;
+    height: 15px;
+    min-width: 15px;
+    line-height: 15px;
     font-size: 8px;
   }
   .header-account > * .icon img {
-    width: 50px;
+    width: 35px;
+    height: 35px;
   }
   .header-account > * .icon i.mdi {
     width: 40px;
@@ -5352,11 +5406,11 @@ a.search-open-btn:hover img {
   .header-account > * strong {
     font-size: 14px;
   }
-  .search-open-btn img {
-    width: 50px;
+  .header-account .profile {
+    font-size: 10px;
   }
   .search-wrapper {
-    padding-top: 78px;
+    padding-top: 60px;
   }
   .search-wrapper .search-form {
     padding: 15px;
@@ -5372,6 +5426,10 @@ a.search-open-btn:hover img {
     font-size: 14px;
     padding: 0 15px;
   }
+  .search-open-btn img {
+    width: 35px;
+    height: 35px;
+  }
   .search-open-btn.active i {
     display: none;
   }
@@ -5383,8 +5441,8 @@ a.search-open-btn:hover img {
     position: absolute;
     left: -3px;
     top: -3px;
-    width: 56px;
-    height: 56px;
+    width: 41px;
+    height: 41px;
     background: #fff;
     border-radius: 50%;
   }
@@ -5396,8 +5454,8 @@ a.search-open-btn:hover img {
     position: absolute;
     left: -9px;
     top: -9px;
-    width: 68px;
-    height: 68px;
+    width: 53px;
+    height: 53px;
     background: #ed008c;
     border-radius: 50% 50% 0 0;
   }
@@ -5405,13 +5463,130 @@ a.search-open-btn:hover img {
     margin-right: 0px;
   }
   .basket-link .current-price {
-    padding-top: 5px;
-    padding-bottom: 3px;
-    font-size: 10px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    font-size: 8px;
+  }
+  .main-header.mob-scrolled {
+    height: 50px;
+    padding: 0px;
+    -webkit-animation: MenuIn 1s both;
+            animation: MenuIn 1s both;
+  }
+  .main-header.mob-scrolled:after {
+    display: none;
+  }
+  .main-header.mob-scrolled .our-tel {
+    display: none;
+  }
+  .main-header.mob-scrolled .sales-and-new {
+    display: none;
+  }
+  .main-header.mob-scrolled > .container {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-header.mob-scrolled .header-bottom-line {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    margin: 0px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+  }
+  .main-header.mob-scrolled .top-line {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin: 0px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .main-header.mob-scrolled .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    position: static;
+    width: 80px;
+    height: 37px;
+    background: url(../img/logo-small.png) no-repeat center;
+    background-size: contain;
+  }
+  .main-header.mob-scrolled .logo img {
+    display: none;
+  }
+  .main-header.mob-scrolled .burger-menu-btn {
+    background: none;
+    margin-right: 15px;
+  }
+  .main-header.mob-scrolled .burger-menu-btn span {
+    display: none;
+  }
+  .main-header.mob-scrolled .burger-menu-btn i.mdi {
+    width: 27px;
+    height: 27px;
+    font-size: 18px;
+    line-height: 27px;
+    background: none;
+    color: #000;
+    -webkit-box-shadow: 0px 0px 0px 2px #000 inset;
+            box-shadow: 0px 0px 0px 2px #000 inset;
+  }
+  .main-header.mob-scrolled .search-open-btn {
+    width: 30px;
+    height: 30px;
+    background: url(../img/search-small.png) no-repeat center;
+  }
+  .main-header.mob-scrolled .search-open-btn img {
+    display: none;
+  }
+  .main-header.mob-scrolled .search-open-btn.active:after {
+    display: none;
+  }
+  .main-header.mob-scrolled .search-open-btn.active:before {
+    display: none;
+  }
+  @-webkit-keyframes MenuIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes MenuIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   /******************product-card**************/
+  .product-card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .product-card .product-img {
     height: 150px;
+  }
+  .product-action .to-favorite {
+    line-height: 34px;
+    margin: 0 10px 0 15px;
+    font-size: 18px;
+  }
+  .product-action .btn {
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    border-width: 0px;
   }
   /*****************free-delivery-info*********/
   .free-delivery-info {

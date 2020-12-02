@@ -2812,12 +2812,26 @@
    <script src="js/anime.min.js" charset="utf-8"></script>
    <script type="text/javascript">
 
+      var sctop = 0;
+
       $('.burger-menu-btn').click(function(){
          $('.main-navigation').fadeIn(300);
       })
       $('.mobile-nav-header .mdi').click(function(){
          $('.main-navigation').fadeOut(300);
       })
+
+      if (window.matchMedia("(max-width: 500px)").matches) {
+         $(window).scroll(function(){
+            sctop = $(window).scrollTop();
+            if (sctop > 200) {
+               console.log(sctop);
+               $('.main-header').addClass('mob-scrolled');
+            } else {
+               $('.main-header').removeClass('mob-scrolled');
+            }
+         })
+      }
 
       if (window.matchMedia("(max-width: 768px)").matches) {
          $('.main-navigation > ul > li > a').click(function(){

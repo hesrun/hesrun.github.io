@@ -4350,34 +4350,87 @@ a.search-open-btn {
 
 }
 @media screen and (max-width: 500px) {
+   body {
+      padding-top: 138px;
+   }
    /*****************header*********/
+
    .main-header {
+      position: fixed;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      &:after {
+         height: 35px;
+      }
       .top-line {
-         margin-bottom: 60px;
+         margin-bottom: 42px;
       }
       .logo {
-         width: auto;
-         top: 40px;
+         max-width: 100%;
+         width: 140px;
+         top: 20px;
          img {
-            height: 60px;
+            height: auto;
          }
       }
       .our-tel {
-         top: 95px;
+         top: 60px;
+         font-size: 16px;
+         i.mdi {
+            font-size: 18px;
+            margin-right: 5px;
+         }
+      }
+   }
+   .favorites-count {
+      i.mdi {
+         font-size: 25px;
+      }
+      span {
+         font-size: 8px;
+      }
+   }
+   .burger-menu-btn {
+      height: 35px;
+      span {
+         font-size: 12px;
+      }
+      i.mdi {
+         height: 35px;
+         width: 35px;
+         line-height: 35px;
+         font-size: 24px;
+      }
+   }
+   .sales-and-new {
+      height: 35px;
+      padding-right: 0px;
+      padding-left: 10px;
+      div:last-child {
+       margin-right: 0px;  
+      }
+      img {
+         height: 27px;
+      }
+      a {
+         font-size: 10px;
+         margin-top: 13px;
       }
    }
    .header-account {
       > * {
+         margin-left: 5px;
          .icon {
             margin-right: 5px;
             span {
-               height: 20px;
-               min-width: 20px;
-               line-height: 20px;
+               height: 15px;
+               min-width: 15px;
+               line-height: 15px;
                font-size: 8px;
             }
             img {
-               width: 50px;
+               width: 35px;
+               height: 35px;
             }
             i.mdi {
                width: 40px;
@@ -4390,14 +4443,12 @@ a.search-open-btn {
             font-size: 14px;
          }
       }
-   }
-   .search-open-btn {
-      img {
-         width: 50px;
+      .profile {
+         font-size: 10px;
       }
    }
    .search-wrapper {
-      padding-top: 78px;
+      padding-top: 60px;
       .search-form {
          padding: 15px;
       }
@@ -4414,49 +4465,152 @@ a.search-open-btn {
       }
 
    }
-   .search-open-btn.active {
-      i {
-         display: none;
+   .search-open-btn {
+      img {
+         width: 35px;
+         height: 35px;
       }
-      &:after {
-         content: "";
-         box-sizing: border-box;
-         display: block;
-         position: absolute;
-         left: -3px;
-         top: -3px;
-         width: 56px;
-         height: 56px;
-         background: #fff;
-         border-radius: 50%;
-      }
-      &:before {
-         content: "";
-         box-sizing: border-box;
-         display: block;
-         position: absolute;
-         left: -9px;
-         top: -9px;
-         width: 68px;
-         height: 68px;
-         background: $pink;
-         border-radius: 50% 50% 0 0;
+      &.active {  
+         i {
+            display: none;
+         }
+         &:after {
+            content: "";
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            left: -3px;
+            top: -3px;
+            width: 41px;
+            height: 41px;
+            background: #fff;
+            border-radius: 50%;
+         }
+         &:before {
+            content: "";
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            left: -9px;
+            top: -9px;
+            width: 53px;
+            height: 53px;
+            background: $pink;
+            border-radius: 50% 50% 0 0;
+         }
       }
    }
+   
    .basket-link {
       span.icon  {
          margin-right: 0px;
       }
       .current-price {
-         padding-top: 5px;
-         padding-bottom: 3px;
-         font-size: 10px;
+         padding-top: 3px;
+         padding-bottom: 1px;
+         font-size: 8px;
+      }
+   }
+
+   .main-header.mob-scrolled {
+      height: 50px;
+      padding: 0px;
+      animation: MenuIn 1s both;
+      &:after {
+         display: none;
+      }
+      .our-tel {
+         display: none;
+      }
+      .sales-and-new {
+         display: none;
+      }
+      > .container {
+         height: 100%;
+         display: flex;
+         align-items: center;
+      }
+      .header-bottom-line {
+         order: 0;
+         margin: 0px;
+         flex: 0 0 auto;
+      }
+      .top-line {
+         flex: 1 1 auto;
+         margin: 0px;
+         order: 1;
+      }
+      .logo {
+         flex: 0 0 auto;
+         position: static;
+         width: 80px;
+         height: 37px;
+         background: url(../img/logo-small.png) no-repeat center;
+         background-size: contain;
+         img {
+            display: none;
+         }     
+      }
+      .burger-menu-btn {
+         background: none;
+         margin-right: 15px;
+         span {
+            display: none;
+         }
+         i.mdi {
+            width: 27px;
+            height: 27px;
+            font-size: 18px;
+            line-height: 27px;
+            background: none;
+            color: #000;
+            box-shadow: 0px 0px 0px 2px #000 inset;
+         }
+      }
+      .search-open-btn {
+         width: 30px;
+         height: 30px;
+         background: url(../img/search-small.png) no-repeat center;
+         img {
+            display: none;
+         }
+         &.active {
+            &:after {
+               display: none;
+            }
+            &:before {
+               display: none;
+            }
+         }
+      }
+   }
+   @keyframes MenuIn {
+      from {
+         opacity: 0;
+      }
+      to {
+         opacity: 1;
       }
    }
    /******************product-card**************/
    .product-card {
+      padding-left: 10px;
+      padding-right: 10px;
       .product-img {
          height: 150px;
+      }
+   }
+   .product-action {
+      .to-favorite {
+         line-height: 34px;
+         margin: 0 10px 0 15px;
+         font-size: 18px;
+      }
+      .btn {
+         height: 35px;
+         line-height: 35px;
+         font-size: 12px;
+         border-width: 0px;
       }
    }
    /*****************free-delivery-info*********/
