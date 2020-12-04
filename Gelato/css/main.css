@@ -1851,23 +1851,10 @@ a.search-open-btn:hover img {
   margin-bottom: 25px;
 }
 
-.product-view .product-info {
-  margin: 25px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.product-view .product-rate {
-  margin: 0 30px 0 0;
-}
-
 .product-property .product-description {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
+  color: #989898;
 }
 
 .product-property .product-description p {
@@ -1876,6 +1863,7 @@ a.search-open-btn:hover img {
 }
 
 .product-property .product-description b {
+  color: #000;
   font-weight: 800;
 }
 
@@ -1912,10 +1900,9 @@ a.search-open-btn:hover img {
 }
 
 .product-col-wrap .product-tags span {
-  width: 140px;
-  height: 140px;
-  line-height: 140px;
-  font-size: 46px;
+  padding: 0 30px;
+  line-height: 60px;
+  font-size: 45px;
 }
 
 .product-col-wrap .product-property {
@@ -1989,13 +1976,23 @@ a.search-open-btn:hover img {
 
 .product-count-and-params .tech-params {
   list-style: none;
-  margin-left: 115px;
+  margin-left: 20%;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .product-count-and-params .tech-params li {
   margin: 5px 0 20px;
+}
+
+.product-count-and-params .tech-params span {
+  color: #989898;
+}
+
+.product-count-and-params .price-per-pieces {
+  margin: 10px 0 15px;
+  font-size: 16px;
+  color: #989898;
 }
 
 .product-count-and-params .product-count {
@@ -2009,13 +2006,28 @@ a.search-open-btn:hover img {
 }
 
 .product-count-and-params .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   margin-top: 15px;
   width: 100%;
+  -webkit-box-shadow: 0 0 0 4px #ececec inset;
+          box-shadow: 0 0 0 4px #ececec inset;
+  border-radius: 30px;
+}
+
+.product-count-and-params .action .to-favorite {
+  font-size: 24px;
+  padding: 0 10px 0 20px;
 }
 
 .product-count-and-params .action .btn {
   width: 100%;
+  padding: 0px;
 }
 
 .product-count-and-params .price {
@@ -3834,6 +3846,10 @@ a.search-open-btn:hover img {
   position: absolute;
 }
 
+.main-footer .our-tel b {
+  white-space: nowrap;
+}
+
 .main-footer .our-tel i.mdi {
   margin-right: 10px;
 }
@@ -5030,10 +5046,8 @@ a.search-open-btn:hover img {
     margin-bottom: 30px;
   }
   .product-col-wrap .product-tags span {
-    width: 70px;
-    height: 70px;
     font-size: 24px;
-    line-height: 70px;
+    line-height: 40px;
   }
   .product-col-wrap .thumbs {
     top: 10px;
@@ -5568,6 +5582,22 @@ a.search-open-btn:hover img {
     to {
       opacity: 1;
     }
+  }
+  /*****************catalog**************/
+  .category-carousel {
+    margin-bottom: 15px;
+  }
+  .category-carousel .item a {
+    padding: 10px 5px 5px;
+  }
+  .category-carousel .item a img {
+    margin: 0 auto;
+    width: 80%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .category-carousel .item a span {
+    font-size: 8px;
   }
   /******************product-card**************/
   .product-card {

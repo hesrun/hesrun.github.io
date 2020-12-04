@@ -56,7 +56,15 @@
             </div>
          </div>
          <div class="header-bottom-line">
+            <div class="burger-menu-btn">
+               <span>Каталог</span>
+               <i class="mdi mdi-menu"></i>
+            </div>
             <div class="main-navigation">
+               <div class="mobile-nav-header">
+                  Каталог товаров
+                  <i class="mdi mdi-close"></i>
+               </div>
                <ul>
                   <li>
                      <a href="#">Бренды</a>
@@ -118,7 +126,7 @@
                               <div class="width-banners">
                                  <ul class="categoty-name-list">
                                     <li>
-                                       <a href="" class="active">All <i class="mdi mdi-chevron-right"></i></a>
+                                       <a href="">All <i class="mdi mdi-chevron-right"></i></a>
                                     </li>
                                     <li>
                                        <a href="">до 500 <i class="mdi mdi-chevron-right"></i></a>
@@ -152,7 +160,7 @@
                                     </li>
                                  </ul>
                                  <div class="categoty-links-block">
-                                    <div class="categoty-links-block-item show">
+                                    <div class="categoty-links-block-item">
                                        <ul>
                                           <li>
                                              <a href="">1 MASU MASU</a>
@@ -2930,6 +2938,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
    <script type="text/javascript">
 
+      var sctop = 0;
+
+      $('.burger-menu-btn').click(function(){
+         $('.main-navigation').fadeIn(300);
+      })
+      $('.mobile-nav-header .mdi').click(function(){
+         $('.main-navigation').fadeOut(300);
+      })
+
+      if (window.matchMedia("(max-width: 500px)").matches) {
+         $(window).scroll(function(){
+            sctop = $(window).scrollTop();
+            if (sctop > 200) {
+               console.log(sctop);
+               $('.main-header').addClass('mob-scrolled');
+            } else {
+               $('.main-header').removeClass('mob-scrolled');
+            }
+         })
+      }
+
+      if (window.matchMedia("(max-width: 768px)").matches) {
+         $('.main-navigation > ul > li > a').click(function(){
+            $(this).next().slideToggle();
+         })
+      } else {
+         $('.categoty-name-list a').click(function(e){
+            indexLink = $(this).parent().index();
+            $('.categoty-name-list a').removeClass('active');
+            $('.categoty-links-block-item').removeClass('show');
+            $(this).addClass('active')
+            $('.categoty-links-block-item').eq(indexLink).addClass('show');
+            return false;
+         })
+      }
+
       var carouselCategory = $('#CategoryCarousel').owlCarousel({
          loop:true,
          margin:10,
@@ -2937,9 +2981,9 @@
          dots: false,
          responsive:{
             0:{
-                  items:1
+                  items:3
             },
-            600:{
+            500:{
                   items:3
             },
             1000:{
