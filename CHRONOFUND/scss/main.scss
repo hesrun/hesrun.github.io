@@ -932,7 +932,7 @@ a {
 /***********************catalog-grid*****************/
 .catalog-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
    grid-gap: 60px 60px;
    grid-auto-rows: minmax(180px, auto);
    grid-auto-flow: dense;
@@ -952,7 +952,7 @@ a {
    align-items: stretch;
    .item-image {
       width: 200px;
-      height: 280px;
+      height: 290px;
       border: 1px #F1F1F1 solid;
       flex: 0 0 auto;
       margin-right: 20px;
@@ -1043,13 +1043,20 @@ a {
       }
    }
    .final-profit {
-      text-align: center;
-      margin: 10px 0;
-      line-height: 1.5;
+      margin: 15px 0;
+      > div {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+      .head {
+         margin-bottom: 7px;
+      }
       strong {
          font-size: 12px;
          display: block;
-         font-weight: 600;
+         font-weight: 700;
+         letter-spacing: 1px;
       }
       b {
          font-size: 18px;
@@ -1058,6 +1065,8 @@ a {
    .btns {
       .small-btn {
          width: 100%;
+         height: 40px;
+         line-height: 36px;
       }
    }
    i.tooltip {
@@ -1089,6 +1098,36 @@ a {
       font-weight: 600;
       display: block;
       border: 1px rgba($grey,0.5) solid;
+   }
+}
+/**********************work-steps************************/
+.work-steps {
+   display: flex;
+   align-items: center;
+   margin-bottom: 30px;
+   div {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+      width: 33.333%;
+      padding-right: 30px;
+   }
+   .num {
+      flex: 0 0 auto;
+      margin-right: 10px;
+      font-weight: 600;
+      font-size: 30px;
+      text-align: center;
+      line-height: 46px;
+      display: block;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      border: 2px rgba($grey,0.2) solid;
+   }
+   p {
+      font-size: 16px;
+      font-weight: 500;
    }
 }
 /**********************catalog-item-card*******************/
@@ -1178,10 +1217,12 @@ a {
    position: relative;
    .add-to-compare {
       position: absolute;
+      top: 0px;
       right: 0px;
       font-size: 32px;
    }
    .brand {
+      display: block;
       font-size: 30px;
       font-weight: 700;
    }
@@ -1191,7 +1232,7 @@ a {
       font-weight: 500;
    }
    .ref-and-lot {
-      margin: 25px 0;
+      margin: 25px 0 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1205,41 +1246,19 @@ a {
          font-weight: 600;
       }
    }
-   .params {
-      border: 1px #ccc solid;
-      padding: 10px 25px;
-      margin: 15px 0;
-      table {
-         width: 100%;
-      }
-      td {
-         font-weight: 500;
-         width: 50%;
-         padding: 5px 0;
-      }
-      td:first-child {
-         color: $grey;
-         letter-spacing: 1px;
-      }
-   }
    .table-params {
-      padding: 0 25px;
-      .final {
-         margin-left: -17px;
-         font-size: 20px;
-         line-height: 16px;
-         font-weight: 700;
-      }
+      margin-top: auto;
       table {
          width: 100%;
       }
       td {
-         font-weight: 500;
+         font-weight: 700;
          width: 50%;
-         padding: 5px 0;
+         padding: 8px 0;
       }
       td:first-child {
          color: $grey;
+         font-weight: 500;
          letter-spacing: 1px;
       }
       i.mdi {
@@ -1248,6 +1267,34 @@ a {
          &:hover {
             color: $orange;
          }
+      }
+   }
+   .final-profit {
+      border: 2px rgba(#8F92A1,0.2) solid;
+      margin-top: auto;
+      padding: 25px 15px;
+      > div {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+      .head {
+         margin-bottom: 15px;
+      }
+      strong {
+         flex: 0 0 auto;
+         width: 50%;
+         text-align: center;
+         font-size: 18px;
+         display: block;
+         font-weight: 700;
+         letter-spacing: 1px;
+      }
+      b {
+         flex: 0 0 auto;
+         width: 50%;
+         text-align: center;
+         font-size: 18px;
       }
    }
    .c-btn {
@@ -3574,6 +3621,20 @@ a {
          }
       }
    }
+   /**********************work-steps************************/
+   .work-steps {
+      div {
+         padding-right: 15px;
+      }
+      .num {
+      }
+      p {
+         font-size: 14px;
+         br {
+            display: none;
+         }
+      }
+   }
    /********************products-compare********************/
    .products-compare {
       margin-right: -30px;
@@ -3996,20 +4057,13 @@ a {
             }
          }
       }
-      .profits-bloks {
-         margin-bottom: 8px;
-      }
-      .profit-block {
-         span {
-            font-size: 8px;
-            letter-spacing: normal;
+      .final-profit {
+         margin: 12px 0;
+         strong {
+            font-size: 10px;
          }
          b {
-            margin-left: 8px;
-            font-size: 13px;
-         }
-         i.tooltip {
-            display: none;
+            font-size: 14px;
          }
       }
       i.tooltip {
@@ -4021,8 +4075,64 @@ a {
    .product-card-img {
       margin: 0 -30px;
       .btns {
-         margin-left: 15px;
-         margin-right: 15px;
+         margin-left: 30px;
+         margin-right: 30px;
+      }
+   }
+   .product-card-info {
+      display: block;
+      .brand {
+         font-size: 24px;
+         margin-bottom: 10px;
+      }
+      .table-params {
+         margin: 15px 0;
+         td:last-child {
+            text-align: right;
+         }
+      }
+      .add-to-compare {
+         font-size: 28px;
+      }
+      .final-profit {
+         margin: 15px 0 20px;
+         padding: 15px;
+         strong {
+            font-size: 14px;
+         }
+         .head {
+            margin-bottom: 5px;
+         }
+         b {
+            font-size: 14px;
+         }
+      }
+      .c-btn {
+         font-size: 14px;
+         width: 100%;
+      }
+   }
+   /**********************work-steps************************/
+   .work-steps {
+      display: block;
+      div {
+         width: auto;
+         padding-right: 0px;
+         margin-bottom: 15px;
+      }
+      .num {
+         width: 40px;
+         height: 40px;
+         line-height: 28px;
+         border-width: 1px;
+         line-height: 38px;
+         font-size: 20px;
+      }
+      p {
+         font-size: 14px;
+         br {
+            display: none;
+         }
       }
    }
    /*********************products-compare*************/
