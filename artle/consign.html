@@ -86,7 +86,7 @@
                 <h2>Consign your watch</h2>
                 <form action="">
                     <div class="float-input">
-                        <input type="text">
+                        <input type="text" class="error">
                         <label for="">Name</label>
                     </div>
                     <div class="float-input">
@@ -100,6 +100,18 @@
                     <div class="float-input">
                         <input type="text">
                         <label for="">Brand *</label>
+                        <div class="drop-list">
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                            <a href="">Brand 1</a>
+                        </div>
                     </div>
                     <div class="float-input">
                         <input type="text">
@@ -173,7 +185,7 @@
                         <label for="">Reference number</label>
                     </div>
                     <div class="clip-watch-photo">
-                        <div class="item">
+                        <div class="item active" style="background-image: url(img/grid-item-img.png);">
                             <i class="mdi mdi-camera"></i>
                             <span>FRONT OF WATCH</span>
                             <input type="file" name="" id="">
@@ -620,8 +632,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script>
 
-        var inst = $('#fold').remodal();
-        inst.open();
+        // var inst = $('#fold').remodal();
+        // inst.open();
 
         $('.float-input input, .float-input textarea').focus(function(){
             $(this).parent('.float-input').addClass('active');
