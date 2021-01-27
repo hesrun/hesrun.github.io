@@ -60,7 +60,6 @@ a {
 /******************container**************/
 .container {
    margin: auto;
-   min-width: 1280px;
    max-width: 1440px;
    padding: 0 30px;
 }
@@ -291,7 +290,6 @@ a {
    width: 100%;
    top: 0px;
    padding: 35px 0;
-   min-width: 1280px;
    background-color: $blue-bg;
    color: #fff;
    z-index: 100;
@@ -417,12 +415,12 @@ a {
 }
 /********************cookie-note***********/
 .cookie-note {
-   min-width: 1280px;
    padding: 15px 0;
-   background: $grey;
+   background: $grey-bg;
    color: #fff;
    position: sticky;
    bottom: 0px;
+   z-index: 1;
    .container {
       display: flex;
       align-items: center;
@@ -509,7 +507,7 @@ a {
       display: block;
       color: $grey;
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 500;
       letter-spacing: 1px;
       text-transform: uppercase;
    }
@@ -764,10 +762,8 @@ a {
 /***********************catalog-grid*****************/
 .catalog-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+   grid-template-columns: repeat(2, 1fr);
    grid-gap: 60px 6vw;
-   grid-auto-rows: minmax(180px, auto);
-   grid-auto-flow: dense;
    align-items: center;
    &.empty {
       display: block;
@@ -813,18 +809,18 @@ a {
          margin-bottom: 5px;
          display: flex;
          justify-content: space-between;
-         font-size: 14px;
+         font-size: 16px;
          font-weight: 500;
          align-items: center;
       }
       .name {
          padding-right: 30px;
-         line-height: 14px;
-         height: 28px;
+         line-height: 16px;
+         height: 32px;
          overflow: hidden;
          font-weight: 400;
          display: block;
-         font-size: 12px;
+         font-size: 14px;
       }
    }
    .add-to-compare {
@@ -838,7 +834,7 @@ a {
       }
    }
    .params-price {
-      border: 2px $line solid;
+      border: 1px $line solid;
       border-radius: 5px;
       margin: 12px 0;
       padding: 5px 10px;
@@ -912,7 +908,7 @@ a {
    border: 3px $brown solid;
    margin: 50px 0;
    .item {
-      padding: 30px 0;
+      padding: 30px 30px;
       color: $brown;
       h2 {
          font-size: 16px;
@@ -2330,7 +2326,6 @@ a {
 }
 /********************footer*****************/
 .main-footer {
-   min-width: 1280px;
    background: $blue-bg;
    color: #fff;
    padding: 30px 0;
@@ -2344,8 +2339,8 @@ a {
    margin-right: 5%;
    border-right: 1px rgba($line,0.5) solid;
    .copy {
-      font-size: 12px;
-      margin-top: 40px;
+      font-size: 10px;
+      margin-top: 30px;
       color: rgba(#fff,0.5);
       text-transform: uppercase;
       font-weight: 300;
@@ -2355,7 +2350,7 @@ a {
 }
 .footer-company-contacts {
    strong {
-      font-size: 12px;
+      font-size: 10px;
       display: block;
       color: rgba(#fff,0.5);
       text-transform: uppercase;
@@ -2373,7 +2368,7 @@ a {
    }
    b {
       display: block;
-      font-size: 16px;
+      font-size: 14px;
       text-transform: uppercase;
       font-weight: 600;
       letter-spacing: 1.5px;
@@ -2383,7 +2378,7 @@ a {
 .footer-company-links {
    margin-left: auto;
    strong {
-      font-size: 12px;
+      font-size: 10px;
       display: block;
       color: rgba(#fff,0.5);
       text-transform: uppercase;
@@ -2413,6 +2408,7 @@ a {
       }
    }
    .link {
+      font-size: 12px;
       display: block;
       color: #fff;
       font-weight: 300;

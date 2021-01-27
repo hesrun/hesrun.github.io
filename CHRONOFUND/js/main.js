@@ -1,13 +1,15 @@
-var scTop;
-
-$(window).scroll(function() {
-   scTop = $(this).scrollTop();
-   if (scTop > 250) {
-      $(".main-header").addClass('mini');
-   } if (scTop < 180) {
-      $(".main-header").removeClass('mini');
-   }
-})
+var scTop,
+    WWidth = $(window).width();
+if (WWidth > 1024) {
+   $(window).scroll(function() {
+      scTop = $(this).scrollTop();
+      if (scTop > 250) {
+         $(".main-header").addClass('mini');
+      } if (scTop < 180) {
+         $(".main-header").removeClass('mini');
+      }
+   })
+}
 
 $('.c-btn.blue').click(function () {
    anime({
