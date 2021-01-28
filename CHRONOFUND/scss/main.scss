@@ -951,7 +951,7 @@ a {
 .work-steps {
    display: flex;
    align-items: center;
-   margin-bottom: 30px;
+   margin-bottom: 60px;
    div {
       display: flex;
       align-items: center;
@@ -962,19 +962,20 @@ a {
    .num {
       flex: 0 0 auto;
       margin-right: 10px;
-      font-weight: 600;
-      font-size: 30px;
+      font-weight: 500;
+      font-size: 24px;
       text-align: center;
-      line-height: 46px;
+      line-height: 43px;
       display: block;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      border: 2px rgba($grey,0.2) solid;
+      width: 45px;
+      height: 45px;
+      border: 1px $brown solid;
+      color: $brown;
    }
    p {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 500;
+      line-height: 20px;
    }
 }
 /**********************catalog-item-card*******************/
@@ -1043,20 +1044,6 @@ a {
          transition: all 0.3s;
       }
    }
-   .btns {
-      margin-top: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .small-btn {
-         opacity: 0.7;
-         font-size: 12px;
-         flex: 1 1 auto;
-         & + .small-btn {
-            margin-left: 15px;
-         }
-      }
-   }
 }
 .product-card-info {
    display: flex;
@@ -1064,33 +1051,49 @@ a {
    position: relative;
    .add-to-compare {
       position: absolute;
-      top: 0px;
+      top: 8px;
       right: 0px;
-      font-size: 32px;
+      font-size: 24px;
+      color: $grey;
    }
    .brand {
       display: block;
-      font-size: 30px;
-      font-weight: 700;
-   }
-   .name {
-      margin-top: 10px;
-      font-size: 20px;
+      font-size: 28px;
       font-weight: 500;
    }
+   .name {
+      margin-top: 5px;
+      font-size: 18px;
+      font-weight: 400;
+   }
    .ref-and-lot {
-      margin: 25px 0 0;
+      margin: 10px 0 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       .reference {
-         font-weight: 600;
+         font-weight: 500;
       }
       .lot {
          padding: 5px 10px;
          border: 1px #ccc solid;
          text-transform: uppercase;
-         font-weight: 600;
+         font-weight: 500;
+      }
+   }
+   .table-condition {
+      border: 1px $line solid;
+      padding: 10px 15px;
+      table {
+         width: 100%;
+         td:first-child {
+            font-weight: 600;
+            color: $grey;
+         }
+         td:last-child {
+            font-weight: 600;
+            text-align: right;
+         }
       }
    }
    .table-params {
@@ -1099,14 +1102,17 @@ a {
          width: 100%;
       }
       td {
-         font-weight: 700;
-         width: 50%;
+         font-weight: 600;
          padding: 8px 0;
       }
       td:first-child {
          color: $grey;
-         font-weight: 500;
+         font-weight: 600;
          letter-spacing: 1px;
+      }
+      td:last-child {
+         text-align: right;
+         font-weight: 600;
       }
       i.mdi {
          cursor: pointer;
@@ -1114,34 +1120,6 @@ a {
          &:hover {
             color: $orange;
          }
-      }
-   }
-   .final-profit {
-      border: 2px rgba(#8F92A1,0.2) solid;
-      margin-top: auto;
-      padding: 25px 15px;
-      > div {
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-      }
-      .head {
-         margin-bottom: 15px;
-      }
-      strong {
-         flex: 0 0 auto;
-         width: 50%;
-         text-align: center;
-         font-size: 18px;
-         display: block;
-         font-weight: 700;
-         letter-spacing: 1px;
-      }
-      b {
-         flex: 0 0 auto;
-         width: 50%;
-         text-align: center;
-         font-size: 18px;
       }
    }
    .c-btn {
@@ -1152,22 +1130,92 @@ a {
    }
 }
 .product-card-descr {
-   .tech-params-table {
-      table {
-         width: 100%;
-         border-collapse: collapse;
-         border-spacing: 0px;
+   .btns {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      a {
+         flex: 1 1 auto;
+         & + a {
+            margin-left: 15px;
+         }
       }
+   }
+}
+.tech-params-table {
+   table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0px;
+   }
+   td {
+      padding: 6px 5px;
+      border-bottom: 1px rgba($grey,0.3) solid;
+   }
+   tr:last-child {
       td {
-         padding: 10px 0;
-         border-bottom: 1px rgba($grey,0.3) solid;
+         border-bottom: none;
       }
-      td:first-child {
-         font-size: 12px;
-         color: $grey;
-         font-weight: 600;
-         text-transform: uppercase;
-         padding-right: 15px;
+   }
+   td:first-child {
+      font-size: 12px;
+      color: $grey;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding-right: 15px;
+   }
+   td:last-child {
+      font-size: 12px;
+   }
+}
+.product-card-additional-photo {
+   margin-bottom: 50px;
+   h2 {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      margin-top: 40px;
+   }
+   .list {
+      width: 100%;
+      display: flex;
+      list-style: none;
+      overflow: auto;
+      .item {
+         width: calc(33.333% - 10px);
+         flex: 0 0 auto;
+         margin-bottom: 15px;
+      }
+      .item + .item {
+         margin-left: 15px;
+      }
+   }
+   img {
+      vertical-align: middle;
+      width: 100%;
+   }
+}
+.product-card-brand-story {
+   margin-bottom: 50px;
+   border: 3px $brown solid;
+   text-align: center;
+   color: $brown;
+   padding: 30px;
+   h2 {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+   }
+   .text {
+      max-width: 700px;
+      margin: 30px auto;
+      text-align: left;
+      line-height: 1.5;
+      p + p {
+         margin-top: 15px;
       }
    }
 }
@@ -3151,6 +3199,20 @@ a {
    }
    i.mdi {
       font-size: 20px;
+   }
+}
+.hor-scroll {
+   &::-webkit-scrollbar {
+      height: 6px;
+   }
+   &::-webkit-scrollbar-track {
+      background: rgba($blue,0.1); 
+      border-radius: 3px;
+   }
+   &::-webkit-scrollbar-thumb {
+      background:  $brown;
+      border-radius: 3px;
+      cursor: pointer;
    }
 }
 .c-modal {
