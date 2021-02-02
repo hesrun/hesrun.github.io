@@ -90,18 +90,21 @@ a {
          max-width: 270px;
       }
       p {
-         margin: 60px 0;
+         margin: 70px 0;
          font-weight: 300;
          color: #2d2d2d;
-         font-size: 27px;
+         font-size: 22px;
          line-height: 1.5;
       }
       strong {
+         display: block;
          font-weight: 600;
-         font-size: 36px;
-         a {
-            text-decoration: underline
-         }
+         font-size: 44px;
+         line-height: 1;
+         margin-bottom: 20px;
+      }
+      span {
+         display: inline-block;
       }
       .btns {
          display: flex;
@@ -113,8 +116,8 @@ a {
             font-size: 18px;
             margin: 0 15px;
          }
-         .blue {
-            display: none
+         .hide-desctop {
+            display: none;
          }
       }
    }
@@ -134,24 +137,26 @@ a {
    }
    .chrono-footer {
       letter-spacing: 1px;
-      align-items: flex-end;
+
+      align-items: center;
       width: 100%;
       display: flex;
       justify-content: space-between;
       font-size: 10px;
       color: #8f92a1;
       text-transform:uppercase;
-      font-weight: 600;
+      font-weight: 400;
       a {
          font-size: 10px;
+         font-weight: 400;
       }
       div:first-child {
          text-align: left;
-         line-height: 1.4;
+         line-height: 2;
       }
       div:last-child {
          text-align: right;
-         line-height: 1.4;
+         line-height: 2;
       }
    }
 }
@@ -190,7 +195,7 @@ a {
          border: 2px $pink solid;
          padding: 9px 10px;
          color: $pink;
-         font-weight: 600;
+         font-weight: 400;
          text-transform: uppercase;
          letter-spacing: 1px;
          & + span {
@@ -275,7 +280,7 @@ a {
       max-width: 375px;
       margin: 30px auto 0;
       border-radius: 32px 32px 0 0;
-      padding: 15px 30px;
+      padding: 0px 60px 50px;
       transform-origin: center bottom;
       span {
          font-size: 14px;
@@ -628,7 +633,7 @@ a {
    padding: 0 0 0 5vw;
    margin: 40px 0;
    min-width: 0;
-   > h1 {
+   h1 {
       margin-bottom: 30px;
       font-size: 40px;
       font-weight: 500;
@@ -1519,138 +1524,6 @@ a {
    }
 }
 /********************basket-list-item*****************/
-.basket-list-item {
-   display: flex;
-   margin: 0 0 40px 0;
-   align-items: stretch;
-   &.reserved {
-      .image,
-      .info {
-         opacity: 0.5;
-         pointer-events: none;
-      }
-   }
-   .image {
-      flex: 0 0 auto;
-      margin-right: 30px;
-      a {
-         display: block;
-         width: 140px;
-         height: 220px;
-         border: 1px rgba($grey,0.2) solid;
-         border-radius: 12px;
-         overflow: hidden;
-         transition: all 0.3s;
-         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: relative;
-            z-index: -1;
-            transition: all 0.3s;
-         }
-         &:hover {
-            border: 1px rgba($orange,0.8) solid;
-            img {
-               transform: scale(1.1);
-            }
-         }
-      }
-   }
-   .data {
-      position: relative;
-      display: flex;
-      align-items: center;
-      flex: 1 1 auto;
-      &:after {
-         content: "";
-         display: block;
-         position: absolute;
-         bottom: -20px;
-         height: 1px;
-         width: 100%;
-         background: rgba($grey,0.3);
-      }
-   }
-   .brand {
-      display: block;
-      font-size: 18px;
-      font-weight: 600;
-   }
-   .name {
-      margin: 10px 0;
-      display: block;
-      font-size: 18px;
-   }
-   .reference,
-   .lot-num {
-      margin-top: 10px;
-      display: block;
-      font-size: 12px;
-      color: $grey;
-      text-transform: uppercase;
-      font-weight: 600;
-   }
-   .info {
-      width: 40%;
-      padding-right: 30px;
-      a {
-         transition: all 0.3s;
-         &:hover {
-            color: $orange;
-         }
-      }
-   }
-
-   .profit,
-   .price {
-      width: 30%;
-      strong {
-         color: $grey;
-         font-weight: 600;
-         text-transform: uppercase;
-         font-size: 12px;
-         letter-spacing: 1px;
-      }
-      .summ {
-         margin-top: 5px;
-         display: block;
-         font-size: 18px;
-         font-weight: 500;
-      }
-   }
-
-   .is-reserved {
-      width: 60%;
-      span {
-         font-weight: 600;
-         letter-spacing: 1px;
-         display: inline-block;
-         padding: 20px 20px;
-         color: $grey;
-         border: 2px solid $grey;
-         opacity: 0.6;
-      }
-   }
-
-   .remove {
-      flex: 0 0 auto;
-      text-align: center;
-      width: 40px;
-      height: 40px;
-      border: none;
-      background: rgba($grey,0.8);
-      color: #fff;
-      border-radius: 8px;
-      font-size: 20px;
-      cursor: pointer;
-      transition: all 0.3s;
-      &:hover {
-         border-color: $orange;
-         background: $orange;
-      }
-   }
-}
 .basket-total {
    margin-top: 70px;
    padding-right: 40px;
@@ -2097,212 +1970,67 @@ a {
 }
 
 /******************my-investments********************/
-.my-investments-statistic {
+.investments-header {
    display: flex;
-   margin: 0 -7.5px 40px;
-   .box {
-      justify-content: space-between;
-      display: flex;
-      align-items: center;
-      flex: 1 1 auto;
-      background: rgba(#BDBDBD,0.2);
-      padding: 20px;
-      margin: 0 7.5px;
-      transition: all 0.3s;
+   align-items: center;
+   margin-bottom: 50px;
+   h1 {
+      margin-bottom: 0px;
    }
-   a.box:hover {
-      background: $blue-bg;
-      color: #fff;
-      strong {
-         color: #fff;
+}
+.links-in-head {
+   margin-left: auto;
+   display: flex;
+   a {
+      font-size: 12px;
+      margin-left: 15px;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+      display: inline-block;
+      border: 1px $blue-bg solid;
+      color: $blue-bg;
+      text-transform: uppercase;
+      font-weight: 600;
+      &:hover {
+         border-color: $brown;
+         color: $brown;
+      }
+      &.active {
+         border-color: transparent;
+         color: $grey;
       }
    }
-   strong {
-      line-height: 1.6;
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 1px;
-      color: $grey;
-      font-weight: 600;
+   
+}
+
+.my-investments-statistic {
+   margin-bottom: 50px;
+   border: 3px $brown solid;
+   padding: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   .box {
+      text-align: center;
+      position: relative;
    }
    b {
-      display: block;
-      font-size: 18px;
-      font-weight: 400;
+      font-size: 22px;
+   }
+   strong {
+      line-height: 30px;
+      color: $brown;
+      position: absolute;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background: #fff;
+      padding: 0 30px;
    }
 }
 
-.my-investments-list {
-   .basket-list-item {
-      margin: 0px;
-      padding: 40px 0;
-      border-bottom: 1px rgba($grey,0.2) solid;
-      align-items: center;
-      &:first-child {
-         padding-top: 0px;
-      }
-      &:last-child {
-         border: none;
-      }
-   }
-   .data:after {
-      display: none;
-   }
-   .info {
-      width: 46%;
-      .status {
-         margin-top: 15px;
-         display: inline-block;
-         padding: 10px 20px;
-      }
-   }
-   .profits-col {
-      width: 27%;
-      padding-right: 40px;
-      align-items: center;
-      .small-btn {
-         height: auto;
-         min-height: 35px;
-         line-height: 20px;
-         padding-top: 5px;
-         padding-bottom: 5px;
-         width: 100%;
-      }
-      &.top {
-         align-self: stretch;
-      }
-   }
-   .status-col {
-      width: 27%;
-      text-align: right;
-      .small-btn {
-         height: auto;
-         line-height: normal;
-         padding-top: 9px;
-         padding-bottom: 9px;
-         width: 100%;
-      }
-   }
-   .profit {
-      width: auto;
-      margin-bottom: 15px;
-      strong {
-         color: $grey;
-         font-size: 12px;
-         font-weight: 600;
-      }
-      .summ {
-         font-size: 18px;
-      }
-   }
-   .end-time {
-      display: block;
-      margin-top: 5px;
-      font-size: 12px;
-      text-transform: uppercase;
-   }
-   .invest-date {
-      font-size: 11px;
-      & + .cancle-invest {
-         margin-top: 15px;
-      }
-   }
-   .status {
-      text-transform: uppercase;
-      text-align: center;
-      border: 2px rgba($grey,0.5) dashed;
-      padding: 15px;
-      font-size: 12px;
-      color: $grey;
-      font-weight: 400;
-      letter-spacing: 1px;
-      & + .small-btn {
-         margin-top: 15px;
-      }
-      a:hover {
-         text-decoration: underline;
-      }
-   }
-}
-.investments-progress {
-   max-width: 300px;
-   span {
-      font-size: 13px;
-   }
-   .legends {
-      display: flex;
-      justify-content: space-between;
-   }
-   .progress {
-      overflow: hidden;
-      margin: 8px 0;
-      background: #d8d8d8;
-      height: 18px;
-      border-radius: 10px;
-      position: relative;
-      &:after {
-         content: "";
-         display: block;
-         position: absolute;
-         left: 50%;
-         top: 0px;
-         width: 1px;
-         height: 100%;
-         background: #fff;
-      }
-      .inner {
-         height: 100%;
-         border-radius: 10px;
-         background: linear-gradient(90deg, $orange 0%, $orange calc(var(--progress-width) / 2), $green calc(var(--progress-width) / 2 + 1px), $green 100%);
-      }
-      &.blue {
-         .inner {
-            background: $blue;
-         }
-      }
-   }
-
-}
-
-.investments-countdown {
-   max-width: 240px;
-   margin-top: 30px;
-   margin-bottom: 10px;
-   border: 1px rgba($grey,0.2) solid;
-   border-radius: 10px;
-   padding: 10px 25px;
-   > strong {
-      letter-spacing: 1px;
-      font-weight: 500;
-      text-transform: uppercase;
-      font-size: 10px;
-   }
-   .timer-wrap {
-      margin-top: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      div {
-         text-align: center;
-      }
-      span {
-         font-size: 10px;
-         display: block;
-         font-weight: 600;
-         color: $grey;
-      }
-      b {
-         font-weight: 600;
-         font-size: 20px;
-      }
-   }
-}
-.countdown-note {
-   letter-spacing: 1px;
-   font-weight: 500;
-   text-transform: uppercase;
-   font-size: 10px;
-}
 .confirm-collects-modal {
    .title {
       font-size: 25px;
@@ -2735,6 +2463,16 @@ a {
       &:hover {
          background: lighten($blue, 10);
       }
+      &.outline {
+         line-height: 49px;
+         color: $blue;
+         border: 3px $blue solid;
+         background: none;
+         &:hover {
+            color: #fff;
+            background: $blue;
+         }
+      }
    }
    &.green {
       background: $green;
@@ -2814,7 +2552,7 @@ a {
       color: #8f92a1;
       display: block;
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 400;
       text-transform: uppercase;
       line-height: 15px;
    }
@@ -2842,7 +2580,7 @@ a {
       color: $grey;
       text-transform: uppercase;
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 400;
       letter-spacing: 1px;
    }
    &.no-valid {

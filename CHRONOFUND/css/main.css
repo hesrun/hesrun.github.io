@@ -120,20 +120,23 @@ a {
 }
 
 .sign-present-column .chorono-info p {
-  margin: 60px 0;
+  margin: 70px 0;
   font-weight: 300;
   color: #2d2d2d;
-  font-size: 27px;
+  font-size: 22px;
   line-height: 1.5;
 }
 
 .sign-present-column .chorono-info strong {
+  display: block;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 44px;
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
-.sign-present-column .chorono-info strong a {
-  text-decoration: underline;
+.sign-present-column .chorono-info span {
+  display: inline-block;
 }
 
 .sign-present-column .chorono-info .btns {
@@ -155,7 +158,7 @@ a {
   margin: 0 15px;
 }
 
-.sign-present-column .chorono-info .btns .blue {
+.sign-present-column .chorono-info .btns .hide-desctop {
   display: none;
 }
 
@@ -179,9 +182,9 @@ a {
 
 .sign-present-column .chrono-footer {
   letter-spacing: 1px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,21 +195,22 @@ a {
   font-size: 10px;
   color: #8f92a1;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .sign-present-column .chrono-footer a {
   font-size: 10px;
+  font-weight: 400;
 }
 
 .sign-present-column .chrono-footer div:first-child {
   text-align: left;
-  line-height: 1.4;
+  line-height: 2;
 }
 
 .sign-present-column .chrono-footer div:last-child {
   text-align: right;
-  line-height: 1.4;
+  line-height: 2;
 }
 
 .sign-form-column {
@@ -270,7 +274,7 @@ a {
   border: 2px #ff00b6 solid;
   padding: 9px 10px;
   color: #ff00b6;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -371,7 +375,7 @@ a {
   max-width: 375px;
   margin: 30px auto 0;
   border-radius: 32px 32px 0 0;
-  padding: 15px 30px;
+  padding: 0px 60px 50px;
   -webkit-transform-origin: center bottom;
           transform-origin: center bottom;
 }
@@ -853,7 +857,7 @@ a {
   min-width: 0;
 }
 
-.main-content > h1 {
+.main-content h1 {
   margin-bottom: 30px;
   font-size: 40px;
   font-weight: 500;
@@ -1986,177 +1990,6 @@ a {
 }
 
 /********************basket-list-item*****************/
-.basket-list-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 40px 0;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.basket-list-item.reserved .image,
-.basket-list-item.reserved .info {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.basket-list-item .image {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  margin-right: 30px;
-}
-
-.basket-list-item .image a {
-  display: block;
-  width: 140px;
-  height: 220px;
-  border: 1px rgba(129, 129, 129, 0.2) solid;
-  border-radius: 12px;
-  overflow: hidden;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.basket-list-item .image a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
-  z-index: -1;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.basket-list-item .image a:hover {
-  border: 1px rgba(247, 104, 68, 0.8) solid;
-}
-
-.basket-list-item .image a:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.basket-list-item .data {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.basket-list-item .data:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -20px;
-  height: 1px;
-  width: 100%;
-  background: rgba(129, 129, 129, 0.3);
-}
-
-.basket-list-item .brand {
-  display: block;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.basket-list-item .name {
-  margin: 10px 0;
-  display: block;
-  font-size: 18px;
-}
-
-.basket-list-item .reference,
-.basket-list-item .lot-num {
-  margin-top: 10px;
-  display: block;
-  font-size: 12px;
-  color: #818181;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.basket-list-item .info {
-  width: 40%;
-  padding-right: 30px;
-}
-
-.basket-list-item .info a {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.basket-list-item .info a:hover {
-  color: #f76844;
-}
-
-.basket-list-item .profit,
-.basket-list-item .price {
-  width: 30%;
-}
-
-.basket-list-item .profit strong,
-.basket-list-item .price strong {
-  color: #818181;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.basket-list-item .profit .summ,
-.basket-list-item .price .summ {
-  margin-top: 5px;
-  display: block;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.basket-list-item .is-reserved {
-  width: 60%;
-}
-
-.basket-list-item .is-reserved span {
-  font-weight: 600;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 20px 20px;
-  color: #818181;
-  border: 2px solid #818181;
-  opacity: 0.6;
-}
-
-.basket-list-item .remove {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: rgba(129, 129, 129, 0.8);
-  color: #fff;
-  border-radius: 8px;
-  font-size: 20px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.basket-list-item .remove:hover {
-  border-color: #f76844;
-  background: #f76844;
-}
-
 .basket-total {
   margin-top: 70px;
   padding-right: 40px;
@@ -2746,270 +2579,84 @@ a {
 }
 
 /******************my-investments********************/
-.my-investments-statistic {
+.investments-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -7.5px 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.investments-header h1 {
+  margin-bottom: 0px;
+}
+
+.links-in-head {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.links-in-head a {
+  font-size: 12px;
+  margin-left: 15px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  display: inline-block;
+  border: 1px #24236A solid;
+  color: #24236A;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.links-in-head a:hover {
+  border-color: #C6A55B;
+  color: #C6A55B;
+}
+
+.links-in-head a.active {
+  border-color: transparent;
+  color: #818181;
+}
+
+.my-investments-statistic {
+  margin-bottom: 50px;
+  border: 3px #C6A55B solid;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .my-investments-statistic .box {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  background: rgba(189, 189, 189, 0.2);
-  padding: 20px;
-  margin: 0 7.5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.my-investments-statistic a.box:hover {
-  background: #24236A;
-  color: #fff;
-}
-
-.my-investments-statistic a.box:hover strong {
-  color: #fff;
-}
-
-.my-investments-statistic strong {
-  line-height: 1.6;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #818181;
-  font-weight: 600;
-}
-
-.my-investments-statistic b {
-  display: block;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.my-investments-list .basket-list-item {
-  margin: 0px;
-  padding: 40px 0;
-  border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.my-investments-list .basket-list-item:first-child {
-  padding-top: 0px;
-}
-
-.my-investments-list .basket-list-item:last-child {
-  border: none;
-}
-
-.my-investments-list .data:after {
-  display: none;
-}
-
-.my-investments-list .info {
-  width: 46%;
-}
-
-.my-investments-list .info .status {
-  margin-top: 15px;
-  display: inline-block;
-  padding: 10px 20px;
-}
-
-.my-investments-list .profits-col {
-  width: 27%;
-  padding-right: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.my-investments-list .profits-col .small-btn {
-  height: auto;
-  min-height: 35px;
-  line-height: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  width: 100%;
-}
-
-.my-investments-list .profits-col.top {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
-}
-
-.my-investments-list .status-col {
-  width: 27%;
-  text-align: right;
-}
-
-.my-investments-list .status-col .small-btn {
-  height: auto;
-  line-height: normal;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  width: 100%;
-}
-
-.my-investments-list .profit {
-  width: auto;
-  margin-bottom: 15px;
-}
-
-.my-investments-list .profit strong {
-  color: #818181;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.my-investments-list .profit .summ {
-  font-size: 18px;
-}
-
-.my-investments-list .end-time {
-  display: block;
-  margin-top: 5px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.my-investments-list .invest-date {
-  font-size: 11px;
-}
-
-.my-investments-list .invest-date + .cancle-invest {
-  margin-top: 15px;
-}
-
-.my-investments-list .status {
-  text-transform: uppercase;
   text-align: center;
-  border: 2px rgba(129, 129, 129, 0.5) dashed;
-  padding: 15px;
-  font-size: 12px;
-  color: #818181;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-.my-investments-list .status + .small-btn {
-  margin-top: 15px;
-}
-
-.my-investments-list .status a:hover {
-  text-decoration: underline;
-}
-
-.investments-progress {
-  max-width: 300px;
-}
-
-.investments-progress span {
-  font-size: 13px;
-}
-
-.investments-progress .legends {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.investments-progress .progress {
-  overflow: hidden;
-  margin: 8px 0;
-  background: #d8d8d8;
-  height: 18px;
-  border-radius: 10px;
   position: relative;
 }
 
-.investments-progress .progress:after {
-  content: "";
-  display: block;
+.my-investments-statistic b {
+  font-size: 22px;
+}
+
+.my-investments-statistic strong {
+  line-height: 30px;
+  color: #C6A55B;
   position: absolute;
+  top: -45px;
   left: 50%;
-  top: 0px;
-  width: 1px;
-  height: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: nowrap;
   background: #fff;
-}
-
-.investments-progress .progress .inner {
-  height: 100%;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #f76844 0%, #f76844 calc(var(--progress-width) / 2), #0dad11 calc(var(--progress-width) / 2 + 1px), #0dad11 100%);
-}
-
-.investments-progress .progress.blue .inner {
-  background: #23236a;
-}
-
-.investments-countdown {
-  max-width: 240px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  border: 1px rgba(129, 129, 129, 0.2) solid;
-  border-radius: 10px;
-  padding: 10px 25px;
-}
-
-.investments-countdown > strong {
-  letter-spacing: 1px;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 10px;
-}
-
-.investments-countdown .timer-wrap {
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.investments-countdown .timer-wrap div {
-  text-align: center;
-}
-
-.investments-countdown .timer-wrap span {
-  font-size: 10px;
-  display: block;
-  font-weight: 600;
-  color: #818181;
-}
-
-.investments-countdown .timer-wrap b {
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.countdown-note {
-  letter-spacing: 1px;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 10px;
+  padding: 0 30px;
 }
 
 .confirm-collects-modal .title {
@@ -3582,6 +3229,18 @@ a {
   background: #303090;
 }
 
+.c-btn.blue.outline {
+  line-height: 49px;
+  color: #23236a;
+  border: 3px #23236a solid;
+  background: none;
+}
+
+.c-btn.blue.outline:hover {
+  color: #fff;
+  background: #23236a;
+}
+
 .c-btn.green {
   background: #0dad11;
   color: #fff;
@@ -3688,7 +3347,7 @@ a {
   color: #8f92a1;
   display: block;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 15px;
 }
@@ -3721,7 +3380,7 @@ a {
   color: #818181;
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 
@@ -4552,11 +4211,14 @@ a {
     padding: 0 30px;
   }
   /******************sign pages*************/
+  .sign-present-column {
+    padding: 30px;
+  }
   .sign-present-column .chorono-info p {
     font-size: 18px;
   }
   .sign-present-column .chorono-info p strong {
-    font-size: 20px;
+    font-size: 32px;
   }
   .sign-present-column .chorono-info .btns {
     display: block;
@@ -4823,107 +4485,6 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  /*************************my-investments*****************/
-  .my-investments-statistic {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .my-investments-statistic .box {
-    width: 100%;
-    margin: 0 0 15px;
-  }
-  .my-investments-statistic .box:last-child {
-    margin: 0px;
-  }
-  .my-investments-statistic strong {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .my-investments-statistic b {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  .my-investments-statistic .small-btn {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    margin-left: auto;
-    margin-right: 15px;
-  }
-  .my-investments-list .basket-list-item {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .my-investments-list .basket-list-item:last-child {
-    padding-bottom: 0px;
-  }
-  .my-investments-list .info {
-    width: calc(100% - 170px);
-    padding: 0px;
-  }
-  .my-investments-list .profits-col {
-    padding: 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 10px;
-    width: calc(50% - 10px);
-    -ms-flex-item-align: stretch;
-        align-self: stretch;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .my-investments-list .profits-col .small-btn {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    margin-top: auto;
-  }
-  .my-investments-list .line-mob {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-top: 15px;
-    padding: 0px;
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background: none;
-  }
-  .my-investments-list .line-mob .profit {
-    margin: 0px;
-    text-align: center;
-  }
-  .my-investments-list .line-mob .profit strong {
-    font-size: 10px;
-  }
-  .my-investments-list .line-mob .profit .summ {
-    font-size: 16px;
-  }
-  .my-investments-list .status-col {
-    margin-top: 15px;
-    width: 100%;
-  }
-  .my-investments-list .status-col .small-btn {
-    width: 100%;
-  }
   /********************mobile-navigation-bar*****************/
   .mobile-navigation-bar {
     display: none;
@@ -5050,7 +4611,7 @@ a {
     max-width: 200px;
   }
   .sign-present-column .chorono-info p {
-    margin: 30px 0;
+    margin: 60px 0 0;
     font-size: 14px;
   }
   .sign-present-column .chorono-info p br {
@@ -5061,7 +4622,7 @@ a {
   }
   .sign-present-column .chorono-info .btns .c-btn {
     display: block;
-    width: 100%;
+    width: auto;
     margin-top: 15px;
   }
   .sign-present-column .chrono-account {
@@ -5656,55 +5217,6 @@ a {
   .transactions-table .with-status .status-col {
     margin-top: 0px;
   }
-  /*************************my-investments*****************/
-  .my-investments-statistic {
-    margin-bottom: 30px;
-  }
-  .my-investments-statistic .box {
-    padding: 15px;
-  }
-  .my-investments-statistic strong {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    font-size: 11px;
-  }
-  .my-investments-statistic b {
-    font-size: 16px;
-  }
-  .my-investments-statistic ~ .mobile-catalog-tools {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .my-investments-list .basket-list-item .image {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-  .my-investments-list .info {
-    width: calc(100% - 115px);
-    padding: 0px;
-  }
-  .my-investments-list .name {
-    margin-bottom: 10px;
-  }
-  .my-investments-list .profits-col .small-btn {
-    font-size: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .my-investments-list .profit strong {
-    margin-top: 3px;
-    display: block;
-    font-size: 10px;
-  }
-  .my-investments-list .profit .summ {
-    font-size: 14px;
-  }
-  .investments-countdown {
-    margin-top: 10px;
-    padding: 10px 20px;
-  }
-  /*****************iframe-mobile-modal**************/
   /********************mobile-navigation-bar*****************/
   .mobile-navigation-bar {
     padding: 15px 0;

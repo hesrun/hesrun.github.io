@@ -18,7 +18,7 @@ $('.btn-search').click(function(event) {
    });
  });
 
-$('.c-btn.blue').click(function () {
+$('.c-btn.hide-desctop').click(function () {
    anime({
      targets: '.sign-present-column',
      translateX: '-100%',
