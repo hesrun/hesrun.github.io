@@ -2659,6 +2659,151 @@ a {
   padding: 0 30px;
 }
 
+.investments-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.investments-list-item + .investments-list-item {
+  margin-top: 50px;
+}
+
+.investments-list-item .image {
+  width: 160px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 30px;
+}
+
+.investments-list-item .image img {
+  width: 100%;
+}
+
+.investments-list-item .description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.investments-list-item .description a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.investments-list-item .description a:hover {
+  color: #C6A55B;
+}
+
+.investments-list-item .lot-num {
+  font-size: 12px;
+  border: 1px #D8D8D8 solid;
+  padding: 3px 10px;
+}
+
+.investments-list-item .lot-num span {
+  color: #818181;
+}
+
+.investments-list-item .brand {
+  font-size: 24px;
+  margin: 10px 0 5px;
+}
+
+.investments-list-item .name {
+  font-size: 16px;
+  margin: 5px 0 10px;
+}
+
+.investments-list-item .reference {
+  font-size: 12px;
+}
+
+.investments-info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 290px;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.investments-info .status {
+  display: block;
+  text-transform: uppercase;
+}
+
+.investments-info .date {
+  display: block;
+  text-transform: uppercase;
+}
+
+.investments-info .text {
+  display: block;
+  text-transform: uppercase;
+  margin: 15px 0;
+}
+
+.investments-info .btns {
+  margin-top: 15px;
+}
+
+.investments-info .btns .small-btn {
+  display: block;
+  max-width: 180px;
+}
+
+.investments-info .btns .small-btn + .small-btn {
+  margin-top: 5px;
+}
+
+.investments-info .profits-table {
+  border: 1px #D8D8D8 solid;
+  padding: 5px 10px;
+}
+
+.investments-info .profits-table table {
+  width: 100%;
+}
+
+.investments-info .profits-table td {
+  width: 50%;
+  font-size: 10px;
+  padding: 2px 0;
+}
+
+.investments-info .profits-table td:first-child {
+  color: #818181;
+}
+
+.investments-info .countdown {
+  margin: 15px 0;
+}
+
+.investments-info .countdown span {
+  color: #818181;
+}
+
+.investments-info .countdown .countdown-digits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.investments-info .countdown .countdown-digits div:nth-child(n+3) {
+  color: #727272;
+}
+
+.investments-info .countdown div {
+  margin-right: 7px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .confirm-collects-modal .title {
   font-size: 25px;
   margin-bottom: 15px;
@@ -3088,7 +3233,7 @@ a {
   border: none;
   border-bottom: 3px #24236A solid;
   font-size: 20px;
-  padding: 10px 0;
+  padding: 10px 50px 10px 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -3115,6 +3260,23 @@ a {
 .search-modal .search input::placeholder {
   color: #23236a;
   opacity: 0.5;
+}
+
+.search-modal .search > button {
+  border: none;
+  background: none;
+  color: #C6A55B;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 47px;
+  width: 47px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.search-modal .search > button:hover {
+  color: #23236a;
 }
 
 .search-result-list {

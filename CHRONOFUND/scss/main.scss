@@ -2030,6 +2030,112 @@ a {
       padding: 0 30px;
    }
 }
+.investments-list-item {
+   display: flex;
+   align-items: center;
+   & + .investments-list-item {
+      margin-top: 50px;
+   }
+   .image {
+      width: 160px;
+      flex: 0 0 auto;
+      margin-right: 30px;
+      img {
+         width: 100%;
+      }
+   }
+   .description {
+      flex: 1 1 auto;
+      a {
+         transition: all 0.3s;
+      }
+      a:hover {
+         color: $brown;
+      }
+   }
+   .lot-num {
+      font-size: 12px;
+      border: 1px $line solid;
+      padding: 3px 10px;
+      span {
+         color: $grey;
+         
+      }
+   }
+   .brand {
+      font-size: 24px;
+      margin: 10px 0 5px;
+   }
+   .name {
+      font-size: 16px;
+      margin: 5px 0 10px;
+   }
+   .reference {
+      font-size: 12px;
+   }
+}
+.investments-info {
+   flex: 0 0 auto;
+   width: 290px;
+   font-size: 10px;
+   line-height: 1.5;
+   .status {
+      display: block;
+      text-transform: uppercase;
+   }
+   .date {
+      display: block;
+      text-transform: uppercase;
+   }
+   .text {
+      display: block;
+      text-transform: uppercase;
+      margin: 15px 0;
+   }
+   .btns {
+      margin-top: 15px;
+      .small-btn {
+         display: block;
+         max-width: 180px;
+      }
+      .small-btn + .small-btn {
+         margin-top: 5px;
+      }
+   }
+   .profits-table {
+      border: 1px $line solid;
+      padding: 5px 10px;
+      table {
+         width: 100%;
+      }
+      td {
+         width: 50%;
+         font-size: 10px;
+         padding: 2px 0;
+      }
+      td:first-child {
+         color: $grey;
+      }
+   }
+   .countdown {
+      margin: 15px 0;
+      span {
+         color: $grey;
+      }
+      .countdown-digits {
+         display: flex;
+         div:nth-child(n+3) {
+            color:#727272;
+         }
+      }
+      div {
+         margin-right: 7px;
+         font-size: 24px;
+         font-weight: 600;
+      }
+      
+   }
+}
 
 .confirm-collects-modal {
    .title {
@@ -2366,7 +2472,7 @@ a {
          border: none;
          border-bottom: 3px $blue-bg solid;
          font-size: 20px;
-         padding: 10px 0;
+         padding: 10px 50px 10px 0;
          transition: all 0.3s;
          &:focus {
             border-color: $brown;
@@ -2374,6 +2480,21 @@ a {
          &::placeholder {
             color: $blue;
             opacity: 0.5;
+         }
+      }
+      > button {
+         border: none;
+         background: none;
+         color: $brown;
+         position: absolute;
+         right: 0px;
+         top: 0px;
+         height: 47px;
+         width: 47px;
+         font-size: 32px;
+         cursor: pointer;
+         &:hover {
+            color: $blue;
          }
       }
    }
