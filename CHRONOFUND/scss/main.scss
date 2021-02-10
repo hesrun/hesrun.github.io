@@ -1,9 +1,9 @@
 @import url(../font/gt.css);
 
-$blue-bg: #24236A;
+$blue-bg: #1A2282;
 $blue-light: #2E2E7B;
 $brown:#C6A55B;
-$blue:#23236a;
+$blue:#14145C;
 $orange:#f76844;
 $green:#0dad11;
 $grey: #818181;
@@ -28,6 +28,10 @@ body {
 }
 body.sign-body {
    height: 100%;
+   .cookie-note {
+      position: fixed;
+      width: 100%;
+   }
 }
 html.menu-open {
    body {
@@ -113,7 +117,6 @@ a {
          .c-btn {
             white-space: nowrap;
             padding: 0 30px;
-            font-size: 18px;
             margin: 0 15px;
          }
          .hide-desctop {
@@ -275,7 +278,6 @@ a {
    .bottom-btn {
       text-align: center;
       color: #fff;
-      background: $blue;
       width: 100%;
       max-width: 375px;
       margin: 30px auto 0;
@@ -342,7 +344,7 @@ a {
          display: block;
          color: #fff;
          border-radius: 12px;
-         background: $blue-light;
+         background: $blue;
          font-size: 20px;
          text-align: center;
          line-height: 40px;
@@ -896,9 +898,15 @@ a {
       position: absolute;
       right: 0px;
       top: -5px;
-      transition: all 0.6s;
+      transition: all 0.2s;
+      &.active {
+         color: $brown;
+         i.mdi:before {
+            content: "\F04CE";
+         }
+      }
       &:hover {
-         transform: rotate(360deg)
+         transform: scale(1.2);
       }
    }
    .params-price {
@@ -1117,6 +1125,16 @@ a {
       right: 0px;
       font-size: 24px;
       color: $grey;
+      transition: all 0.2s;
+      &.active {
+         color: $brown;
+         i.mdi:before {
+            content: "\F04CE";
+         }
+      }
+      &:hover {
+         transform: scale(1.2);
+      }
    }
    .brand {
       display: block;
@@ -1192,6 +1210,24 @@ a {
 .product-card-descr {
    .descr-text {
       font-size: 12px;
+      max-height: 2000px;
+      overflow: hidden;
+      transition: max-height 0.3s;
+      position: relative;
+      
+      &.hide {
+         max-height: 200px;
+         &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: 40px;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+         }
+      }
       p + p {
          margin-top: 12px;
       }
@@ -1288,7 +1324,7 @@ a {
    color: $brown;
    padding: 30px;
    h2 {
-      font-size: 16px;
+      font-size: 18px;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 1px;
@@ -1300,6 +1336,10 @@ a {
       line-height: 1.5;
       p + p {
          margin-top: 15px;
+      }
+      h2 {
+         font-size: 14px;
+         margin-bottom: 10px;
       }
    }
 }
@@ -1500,13 +1540,7 @@ a {
       align-items: center;
       .small-btn {
          width: 100%;
-         height: 50px;
-         line-height: 46px;
          &.grey {
-            font-size: 11px;
-            line-height: normal;
-            padding-top: 10px;
-            padding-bottom: 10px;
             pointer-events: none;
          }
       }
@@ -1524,46 +1558,54 @@ a {
    }
 }
 /********************basket-list-item*****************/
-.basket-total {
-   margin-top: 70px;
-   padding-right: 40px;
+.basket-section {
    display: flex;
-   align-items: center;
-   margin-left: 150px;
-   justify-content: space-between;
-   .basket-profit,
-   .basket-total-summ {
-      width: 30%;
+   .investments-list {
+      flex: 1 1 auto;
+      padding-right: 30px;
    }
-   .tooltip {
-      vertical-align: middle;
-      font-size: 16px;
-      color: $grey;
-      cursor: pointer;
-      transition: all 0.3s;
-      &:hover {
-         color: $orange;
-      }
+}
+.basket-total {
+   flex: 0 0 auto;
+   width: 250px;
+   position: relative;
+   .btns {
+      text-align: center;
    }
-   .continue {
-      width: 40%;
-      padding-right: 40px;
-      .c-btn {
-         width: 100%;
-      }
+   .green {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+}
+.basket-total-sticky {
+   position: sticky;
+   top: 150px;
+   right: 0px;
+}
+.count-blocks {
+   .item {
+      width: 100%;
+      position: relative;
+      padding: 25px 20px;
+      border: 3px $brown solid;
+      margin-bottom: 30px;
    }
    strong {
-      color: $grey;
-      font-weight: 600;
-      text-transform: uppercase;
       font-size: 12px;
-      letter-spacing: 1px;
+      line-height: 30px;
+      color: #C6A55B;
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background: #fff;
+      padding: 0 10px;
    }
-   .summ {
-      margin-top: 5px;
+   b {
       display: block;
-      font-size: 18px;
-      font-weight: 500;
+      text-align: center;
+      font-size: 22px;
    }
 }
 .page-cap {
@@ -1580,7 +1622,8 @@ a {
    }
    .small-btn {
       margin-top: 20px;
-      padding: 0 30px;
+      padding-left: 30px;
+      padding-right: 30px;
       font-size: 12px;
    }
 }
@@ -1970,6 +2013,7 @@ a {
 }
 
 /******************my-investments********************/
+
 .investments-header {
    display: flex;
    align-items: center;
@@ -1984,9 +2028,7 @@ a {
    a {
       font-size: 12px;
       margin-left: 15px;
-      height: 30px;
-      line-height: 30px;
-      padding: 0 10px;
+      padding: 7px 10px;
       display: inline-block;
       border: 1px $blue-bg solid;
       color: $blue-bg;
@@ -2003,7 +2045,6 @@ a {
    }
    
 }
-
 .my-investments-statistic {
    margin-bottom: 50px;
    border: 3px $brown solid;
@@ -2057,6 +2098,7 @@ a {
       font-size: 12px;
       border: 1px $line solid;
       padding: 3px 10px;
+      vertical-align: middle;
       span {
          color: $grey;
          
@@ -2073,15 +2115,31 @@ a {
    .reference {
       font-size: 12px;
    }
+   .remove {
+      margin-left: 10px;
+      flex: 0 0 auto;
+      font-size: 20px;
+      border: none;
+      color: $grey;
+      background: none;
+      cursor: pointer;
+      vertical-align: middle;
+      &:hover {
+         color: $orange;
+      }
+   }
 }
 .investments-info {
    flex: 0 0 auto;
    width: 290px;
    font-size: 10px;
    line-height: 1.5;
+   margin-left: 30px;
    .status {
-      display: block;
       text-transform: uppercase;
+   }
+   .status + .text {
+      margin-top: 0px;
    }
    .date {
       display: block;
@@ -2127,13 +2185,12 @@ a {
          div:nth-child(n+3) {
             color:#727272;
          }
+         div {
+            margin-right: 7px;
+            font-size: 24px;
+            font-weight: 600;
+         }
       }
-      div {
-         margin-right: 7px;
-         font-size: 24px;
-         font-weight: 600;
-      }
-      
    }
 }
 
@@ -2428,17 +2485,15 @@ a {
 /*******************frame-modal*************/
 .frame-modal {
    position: fixed;
-   left: 0px;
-   top: 0px;
-   width: 100%;
-   height: 100%;
+   width: auto;
+   left: 10vw;
+   right: 10vw;
+   top: 10vh;
+   bottom: 10vh;
    border-radius: 0px;
    border: none;
    max-width: 100%;
    padding: 0px;
-   a.close-modal  {
-      display: none;
-   }
    &.close-visible {
       a.close-modal  {
          display: block;
@@ -2449,6 +2504,8 @@ a {
    iframe {
       width: 100%;
       height: 100%;
+      vertical-align: middle;
+      border: none;
    }
 }
 /*******************search-modal*************/
@@ -2504,8 +2561,30 @@ a {
    top: 100%;
    background: #fff;
    width: 100%;
-   max-height: 416px;
-   overflow: auto;
+   .empty {
+      text-align: center;
+      padding: 50px 15px;
+      font-size: 18px;
+      i.mdi {
+         color: $blue;
+         display: inline-block;
+         margin-bottom: 10px;
+         font-size: 32px;
+      }
+   }
+   .show-more {
+      text-align: center;
+      display: block;
+      padding: 15px;
+      color: $blue;
+      &:hover {
+         color: $brown;
+      }
+   }
+   .list {
+      max-height: 416px;
+      overflow: auto;
+   }
    .item {
       display: flex;
       align-items: center;
@@ -2533,6 +2612,77 @@ a {
       margin: 5px 0;
    }
 }
+/*******************code-confirm-modal*************/
+.change-saved-modal {
+   max-width: 700px;
+   padding: 5% 30px;
+   text-align: center;
+   a.close-modal {
+      display: none;
+   }
+   b {
+      margin-bottom: 20px;
+      display: block;
+      font-size: 32px;
+   }
+   .small-btn {
+      width: 100%;
+      max-width: 140px;
+   }
+}
+/*******************code-confirm-modal*************/
+.code-confirm-modal {
+   max-width: 700px;
+   padding: 60px 30px;
+   a.close-modal {
+      display: none;
+   }
+   b {
+      display: block;
+      font-size: 32px;
+      text-align: center;
+   }
+   p {
+      margin: 20px 0;
+      font-size: 12px;
+      text-align: center;
+      color: $grey;
+      line-height: 1.4;
+   }
+}
+.code-confirm-form {
+   max-width: 320px;
+   margin: 0 auto;
+   .code-inputs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      input {
+         width: calc(25% - 15px);
+         min-width: 0;
+         border: 1px $line solid;
+         height: 80px;
+         text-align: center;
+         font-size: 40px;
+         caret-color: transparent;
+         cursor: pointer;
+         transition: all 0.3s;
+         &:focus {
+            background: rgba($brown, 0.1);
+         }
+      }
+   }
+   .code-inputs + .btns {
+      justify-content: space-between;
+      .small-btn {
+         width: calc(50% - 10px);
+      }
+   }
+   .btns {
+      display: flex;
+      justify-content: center;
+   }
+}
 /***********************ui*****************/
 .c-btn {
    display: inline-flex;
@@ -2553,7 +2703,13 @@ a {
    overflow: hidden;
    text-overflow: ellipsis;
    text-align: center;
+   text-transform: uppercase;
    cursor: pointer;
+   &:disabled,
+   &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+   }
    &.icon-left {
       .mdi {
          vertical-align: middle;
@@ -2626,6 +2782,23 @@ a {
          &:hover {
             color: #fff;
             background: $orange;
+         }
+      }
+   }
+   &.grey {
+      background: $grey;
+      color: #fff;
+      &:hover {
+         background: darken($grey, 10);
+      }
+      &.outline {
+         line-height: 49px;
+         color: $grey;
+         border: 3px $grey solid;
+         background: none;
+         &:hover {
+            color: #fff;
+            background: $grey;
          }
       }
    }
@@ -3061,8 +3234,10 @@ a {
    border: none;
    background: none;
    text-decoration: none;
-   display: inline-block;
+   display: inline-flex;
    vertical-align: middle;
+   align-items: center;
+   justify-content: center;
    border-width: 1px;
    border-style: solid;
    border-radius: 2px;
@@ -3079,10 +3254,20 @@ a {
    transition: all 0.3s;
    &:disabled,
    &.disabled {
-      background-color: $grey !important;
       pointer-events: none !important;
-      border-color: $grey !important;
       opacity: 0.4;
+   }
+   &.icon-left {
+      padding: 2px 15px;
+      i.mdi {
+         margin-right: 5px;
+      }
+   }
+   &.icon-right {
+      padding: 2px 15px;
+      i.mdi {
+         margin-left: 5px;
+      }
    }
    &.full {
       width: 100%;

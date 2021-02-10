@@ -285,20 +285,31 @@
                            </tr>
                         </table>
                      </div>
-                     <a href="" class="add-to-compare">
+                     <a href="" class="add-to-compare active">
                         <i class="mdi mdi-star-outline"></i>
                      </a>
                      <a href="#" class="c-btn green">BUY THIS WATCHES</a>
+                     <a href="#" class="c-btn grey">In cart</a>
+                     <a href="#" class="c-btn grey disabled">reserved</a>
                   </div>
                   <div class="product-card-descr">
                      <h2>DESCRIPTION</h2>
-                     <div class="descr-text">
+                     <div id="SpoilerText" class="descr-text hide">
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
+                        <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
                         <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
                         <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
                         <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
                      </div>
                      <div class="btns">
-                        <a href="#" class="small-btn grey outline">READ MORE</a>
+                        <a id="SpoilerOpen" href="#" class="small-btn grey outline">READ MORE</a>
                         <a href="#" class="small-btn grey outline">EXPLORE CHRONO24 PRICES</a>
                      </div>
                   </div>
@@ -374,6 +385,7 @@
                <div class="product-card-brand-story">
                   <h2>BRAND STORY</h2>
                   <div class="text">
+                     <h2>Lorem ipsum, dolor sit amet consectetur</h2>
                      <p>Discover our collections of fine watches for men and ladies and experience the enduring appeal of the Patek Philippe universe. Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen. </p>
                   <p>Start your journey by exploring our hand-finished timepieces, the history of our brand and the savoir-faire of our artists and craftsmen.</p>
                   </div>
@@ -672,6 +684,13 @@
 <script src="js/main.js" type="text/javascript"></script>
 <script type="text/javascript">
    $(document).ready(function() {
+
+      $('#SpoilerOpen').click(function(){
+         $('#SpoilerText').toggleClass('hide');
+         return false;
+      })
+
+
       $('.tooltip').tooltipster({
          animation: 'grow',
          trigger: 'click',
