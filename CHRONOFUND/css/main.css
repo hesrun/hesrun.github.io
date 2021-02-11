@@ -275,9 +275,9 @@ a {
   font-size: 12px;
   margin: -30px 0 30px;
   width: 100%;
-  border: 2px #ff00b6 solid;
+  border: 2px #C6A55B solid;
   padding: 9px 10px;
-  color: #ff00b6;
+  color: #C6A55B;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -912,15 +912,12 @@ a {
 }
 
 .article-text p {
-  margin: 1rem 0;
+  margin: 1.2rem 0;
 }
 
 .article-text blockquote {
-  border-left: 4px #C6A55B solid;
-  padding: 0.5rem 0 0.5rem 1rem;
   color: #818181;
   font-style: italic;
-  font-size: 1rem;
   margin: 1rem 0;
 }
 
@@ -1796,6 +1793,7 @@ a {
 }
 
 .products-compare-params span {
+  text-transform: uppercase;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1816,8 +1814,9 @@ a {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-top: 55px;
-  height: 200px;
+  height: 180px;
   border: none;
+  border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
 }
 
 .products-compare-params .tooltip {
@@ -1849,9 +1848,7 @@ a {
   position: absolute;
   width: 50px;
   height: 50px;
-  border: 2px #C6A55B solid;
-  background: #C6A55B;
-  color: #fff;
+  color: #C6A55B;
   line-height: 46px;
   font-size: 36px;
   text-align: center;
@@ -1863,8 +1860,7 @@ a {
 }
 
 .products-compare-list .owl-carousel .owl-nav button:hover {
-  background: none;
-  color: #C6A55B;
+  opacity: 0.5;
 }
 
 .products-compare-list .owl-carousel .owl-nav button.disabled {
@@ -1883,15 +1879,10 @@ a {
   right: -50px;
 }
 
-.products-compare-list-item.reserved .head,
-.products-compare-list-item.reserved .params-list {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
 .products-compare-list-item .head {
   padding: 0 15px;
-  height: 200px;
+  height: 180px;
+  border-bottom: 1px rgba(129, 129, 129, 0.2) solid;
 }
 
 .products-compare-list-item .head a {
@@ -1966,17 +1957,6 @@ a {
   overflow: hidden;
 }
 
-.products-compare-list-item .lot-num {
-  color: #818181;
-  letter-spacing: 1px;
-  font-size: 13px;
-  display: block;
-  text-align: center;
-  margin-top: 8px;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
 .products-compare-list-item .params-list b {
   font-weight: 600;
   display: -webkit-box;
@@ -1994,7 +1974,7 @@ a {
 }
 
 .products-compare-list-item .btns {
-  padding: 15px;
+  padding: 25px 15px 15px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2012,27 +1992,6 @@ a {
 
 .products-compare-list-item .btns .small-btn {
   width: 100%;
-}
-
-.products-compare-list-item .btns .small-btn.grey {
-  pointer-events: none;
-}
-
-.products-compare-list-item .btns .link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 10px;
-  padding: 6px 0;
-}
-
-.products-compare-list-item .btns .link i.mdi {
-  margin-right: 5px;
-  vertical-align: middle;
-  font-size: 20px;
 }
 
 /********************basket-list-item*****************/
@@ -2124,6 +2083,12 @@ a {
 }
 
 /**********************faq********************/
+.faq > h2 {
+  font-size: 30px;
+  margin: 40px 0;
+  font-weight: 500;
+}
+
 .faq-accordion-head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2135,27 +2100,18 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-top: 1px rgba(129, 129, 129, 0.3) solid;
-  padding: 15px 0;
+  padding: 20px 0;
   font-size: 20px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.faq-accordion-head:first-child {
-  border-top: none;
-}
-
-.faq-accordion-head i.mdi {
-  font-size: 32px;
-  color: #818181;
+.faq-accordion-head.active {
+  color: #C6A55B;
 }
 
 .faq-accordion-head:hover {
-  color: #f76844;
-}
-
-.faq-accordion-head:hover i.mdi {
-  color: #f76844;
+  color: #C6A55B;
 }
 
 .faq-accordion-body {
@@ -2725,6 +2681,37 @@ a {
   margin-top: 50px;
 }
 
+.investments-list-item.reserved .image {
+  pointer-events: none;
+  position: relative;
+}
+
+.investments-list-item.reserved .image img {
+  opacity: 0.5;
+}
+
+.investments-list-item.reserved .small-btn.grey.outline {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0px;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+}
+
+.investments-list-item.reserved .description a {
+  pointer-events: none;
+}
+
+.investments-list-item.reserved .lot-num,
+.investments-list-item.reserved .brand,
+.investments-list-item.reserved .name,
+.investments-list-item.reserved .price {
+  opacity: 0.5;
+}
+
 .investments-list-item .image {
   width: 160px;
   -webkit-box-flex: 0;
@@ -3270,12 +3257,6 @@ a {
   padding: 0px;
 }
 
-.frame-modal.close-visible a.close-modal {
-  display: block;
-  right: 30px;
-  top: 30px;
-}
-
 .frame-modal iframe {
   width: 100%;
   height: 100%;
@@ -3540,7 +3521,7 @@ a {
   border: none;
   height: 55px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 12px;
   line-height: 55px;
   text-decoration: none;
@@ -3594,7 +3575,7 @@ a {
 }
 
 .c-btn.blue:hover {
-  background: #1d1d86;
+  background: #C6A55B;
 }
 
 .c-btn.blue.outline {
@@ -3733,7 +3714,7 @@ a {
 
 .c-input label {
   letter-spacing: 1px;
-  color: #8f92a1;
+  color: #fff;
   display: block;
   font-size: 12px;
   font-weight: 400;
@@ -3749,7 +3730,7 @@ a {
   height: 35px;
   background: none;
   border: none;
-  border-bottom: 2px rgba(255, 255, 255, 0.2) solid;
+  border-bottom: 2px white solid;
   -webkit-transition: all 0.6S;
   transition: all 0.6S;
 }

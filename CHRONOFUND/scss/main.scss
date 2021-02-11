@@ -195,9 +195,9 @@ a {
          font-size: 12px;
          margin: -30px 0 30px;
          width: 100%;
-         border: 2px $pink solid;
+         border: 2px $brown solid;
          padding: 9px 10px;
-         color: $pink;
+         color: $brown;
          font-weight: 400;
          text-transform: uppercase;
          letter-spacing: 1px;
@@ -678,14 +678,11 @@ a {
       font-weight: 600;
    }
    p {
-      margin: 1rem 0;
+      margin: 1.2rem 0;
    }
    blockquote {
-      border-left: 4px $brown solid;
-      padding: 0.5rem 0 0.5rem 1rem;
       color: $grey;
       font-style: italic;
-      font-size: 1rem;
       margin: 1rem 0;
    }
    ul {
@@ -1368,6 +1365,7 @@ a {
    width: 155px;
    float: left;
    span {
+      text-transform: uppercase;
       height: 40px;
       display: flex;
       align-items: center;
@@ -1380,8 +1378,9 @@ a {
       &:first-child {
          align-items: flex-start;
          padding-top: 55px;
-         height: 200px;
+         height: 180px;
          border: none;
+         border-bottom: 1px rgba($grey,0.2) solid;
       }
    }
    .tooltip {
@@ -1412,9 +1411,7 @@ a {
             position: absolute;
             width: 50px;
             height: 50px;
-            border: 2px $brown solid;
-            background: $brown;
-            color: #fff;
+            color: $brown;
             line-height: 46px;
             font-size: 36px;
             text-align: center;
@@ -1423,8 +1420,7 @@ a {
             outline: none;
             transition: all 0.3s;
             &:hover {
-               background: none;
-               color: $brown;
+               opacity: 0.5;
             }
          }
          button.disabled {
@@ -1443,16 +1439,10 @@ a {
    }
 }
 .products-compare-list-item {
-   &.reserved {
-      .head,
-      .params-list {
-         opacity: 0.3;
-         pointer-events: none;
-      }
-   }
    .head {
       padding: 0 15px;
-      height: 200px;
+      height: 180px;
+      border-bottom: 1px rgba($grey,0.2) solid;
       a {
          transition: all 0.3s;
          &:hover {
@@ -1511,16 +1501,6 @@ a {
       height: 36px;
       overflow: hidden;
    }
-   .lot-num {
-      color: $grey;
-      letter-spacing: 1px;
-      font-size: 13px;
-      display: block;
-      text-align: center;
-      margin-top: 8px;
-      font-weight: 600;
-      text-transform: uppercase;
-   }
    .params-list {
       b {
          font-weight: 600;
@@ -1533,27 +1513,13 @@ a {
       }
    }
    .btns {
-      padding: 15px;
+      padding: 25px 15px 15px 15px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       .small-btn {
          width: 100%;
-         &.grey {
-            pointer-events: none;
-         }
-      }
-      .link {
-         display: inline-flex;
-         align-items: center;
-         margin-top: 10px;
-         padding: 6px 0;
-         i.mdi {
-            margin-right: 5px;
-            vertical-align: middle;
-            font-size: 20px;
-         }
       }
    }
 }
@@ -1628,26 +1594,26 @@ a {
    }
 }
 /**********************faq********************/
+.faq {
+   > h2 {
+      font-size: 30px;
+      margin: 40px 0;
+      font-weight: 500;
+   }
+}
 .faq-accordion-head {
    display: flex;
    align-items: center;
    justify-content: space-between;
    border-top: 1px rgba($grey,0.3) solid;
-   padding: 15px 0;
+   padding: 20px 0;
    font-size: 20px;
    transition: all 0.3s;
-   &:first-child {
-      border-top: none;
-   }
-   i.mdi {
-      font-size: 32px;
-      color: $grey;
+   &.active {
+      color: $brown;
    }
    &:hover {
-      color: $orange;
-      i.mdi {
-         color: $orange;
-      }
+      color: $brown;
    }
 }
 .faq-accordion-body {
@@ -2077,6 +2043,35 @@ a {
    & + .investments-list-item {
       margin-top: 50px;
    }
+   &.reserved {
+      .image {
+         pointer-events: none;
+         position: relative;
+         img {
+            opacity: 0.5;
+         }
+      }
+      .small-btn.grey.outline {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 0px;
+         width: 100%;
+         z-index: 1;
+         background: #fff;
+      }
+      .description {
+         a {
+            pointer-events: none;
+         }
+      }
+      .lot-num,
+      .brand,
+      .name,
+      .price {
+         opacity: 0.5;
+      }
+   }
    .image {
       width: 160px;
       flex: 0 0 auto;
@@ -2496,13 +2491,6 @@ a {
    border: none;
    max-width: 100%;
    padding: 0px;
-   &.close-visible {
-      a.close-modal  {
-         display: block;
-         right: 30px;
-         top: 30px;
-      }
-   }
    iframe {
       width: 100%;
       height: 100%;
@@ -2694,7 +2682,7 @@ a {
    border: none;
    height: 55px;
    font-size: 14px;
-   font-weight: 600;
+   font-weight: 500;
    border-radius: 12px;
    line-height: 55px;
    text-decoration: none;
@@ -2740,7 +2728,7 @@ a {
       background: $blue;
       color: #fff;
       &:hover {
-         background: lighten($blue, 10);
+         background: $brown;
       }
       &.outline {
          line-height: 49px;
@@ -2845,7 +2833,7 @@ a {
    }
    label {
       letter-spacing: 1px;
-      color: #8f92a1;
+      color: #fff;
       display: block;
       font-size: 12px;
       font-weight: 400;
@@ -2860,7 +2848,7 @@ a {
       height: 35px;
       background: none;
       border: none;
-      border-bottom: 2px rgba(#fff,0.2) solid;
+      border-bottom: 2px rgba(#fff,1) solid;
       transition: all 0.6S;
       &:focus {
          border-bottom: 2px rgba(#fff,1) solid;
