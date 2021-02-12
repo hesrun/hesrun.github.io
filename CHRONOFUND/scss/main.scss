@@ -743,6 +743,13 @@ a {
             display: block;
          }
       }
+      &.dk-select-open-up {
+         .dk-select-options {
+            display: block;
+            top: auto;
+            bottom: 100%;
+         }
+      }
       .dk-selected {
          cursor: pointer;
          padding: 5px 20px 5px 0;
@@ -842,6 +849,12 @@ a {
    max-width: 500px;
    margin: auto;
    align-items: center;
+   &.reserved {
+      .item-image {
+         opacity: 0.5;
+         pointer-events: none;
+      }
+   }
    .item-image {
       width: 160px;
       height: 240px;
@@ -1626,20 +1639,29 @@ a {
 /******************profile********************/
 .profile {
    h2 {
-      font-size: 35px;
-      font-weight: 300;
+      font-size: 30px;
+      font-weight: 500;
       margin-top: 30px;
       margin-bottom: 30px;
       &:first-child {
          margin-top: 0px;
       }
    }
+   .note {
+      font-size: 14px;
+      line-height: 1.4;
+   }
    .profile-cols {
       display: flex;
       justify-content: space-between;
+      
    }
    .profile-col {
       width: calc(50% - 60px);
+      > .small-btn {
+         width: 100%;
+         max-width: 200px;
+      }
       .c-btn {
          width: 100%;
          & + .c-btn {
@@ -1647,32 +1669,8 @@ a {
          }
       }
    }
-   .article-text {
-      margin-bottom: 40px;
-      p {
-         font-size: 18px;
-      }
-   }
-   .send-code {
-      margin-bottom: 30px;
-      .link {
-         color: $brown;
-      }
-      span {
-         font-size: 12px;
-         color: $grey;
-         font-weight: 600;
-         letter-spacing: 1px;
-         text-transform: uppercase;
-      }
-   }
-   .c-b-input {
-      .small-btn {
-         margin-top: 15px;
-      }
-      textarea {
-         min-height: 123px;
-      }
+   .c-b-input + .note {
+      margin-top: 50px;
    }
    label + select {
       margin: 0px;
@@ -1680,97 +1678,14 @@ a {
    select {
       margin-top: 24px;
    }
-   .code-form {
-      margin: 10px 0;
-      display: flex;
-      align-items: flex-start;
-      .c-b-input {
-         flex: 1 1 auto;
-         margin: 0px;
-      }
-      .small-btn {
-         margin-left: 10px;
-      }
-   }
    .basket-to-proceed {
       max-width: 100%;
    }
 
 }
-.profile-subscription-options {
-   background: #e7e7e7;
-   padding: 30px;
-   margin-top: 30px;
-}
-.subscription-table {
-   width: 100%;
-   max-width: 300px;
-   margin-bottom: 30px;
-   th {
-      font-size: 12px;
-      color: #818181;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding-bottom: 10px;
-   }
-   td {
-      font-size: 16px;
-      vertical-align: middle;
-      text-align: center;
-      padding-bottom: 15px;
-      &:first-child {
-         text-align: left;
-      }
-   }
-   .c-checkbox {
-      margin: 0px;
-      display: inline-block;
-      .icon {
-         margin: 0px;
-      }
-   }
-}
 /******************balance*********************/
-.balance-counts {
-   display: flex;
-   margin: 0 -7.5px;
-   .box {
-      text-align: center;
-      flex: 1 1 auto;
-      background: rgba(#BDBDBD,0.2);
-      padding: 20px;
-      margin: 0 7.5px;
-      transition: all 0.3s;
-      strong {
-         display: block;
-         font-size: 12px;
-         font-weight: 500;
-         letter-spacing: 1px;
-         i {
-            color: $grey;
-            font-style: normal;
-            margin-left: 5px;
-         }
-      }
-      .summ {
-         display: block;
-         font-size: 28px;
-         margin-top: 4px;
-      }
-   }
-   .box.and-btn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      text-align: left;
-      .small-btn {
-         flex: 1 1 auto;
-         margin-left: 10%;
-      }
-   }
-}
-.balance-counts + .catalog-tools {
+
+.my-investments-statistic + .catalog-tools {
    margin: 30px 0;
    .search {
       max-width: 250px;
@@ -1798,60 +1713,35 @@ a {
       }
    }
 }
-.transactions-table {
-   table {
-      width: 100%;
-      border-spacing: 0px;
-      border-collapse: collapse;
+.billing-list-item {
+   display: flex;
+   align-items: center;
+   border-top: 1px $line solid;
+   padding: 25px 0;
+   &:last-child {
+      border-bottom: 1px $line solid;
    }
-   tr:first-child {
-      td {
-         border-top: 1px rgba($grey,0.2) solid;   
+   .number {
+      width: 150px;
+      flex: 0 0 auto;
+      font-size: 12px;
+      line-height: 1.5;
+      strong {
+         display: block;
+         font-weight: 600;
       }
-   }
-   td {
-      border-bottom: 1px rgba($grey,0.2) solid;
-      padding: 25px 0;
-      vertical-align: middle;
    }
    .name {
-      display: block;
+      flex: 1 1 auto;
+      font-weight: 500;
       font-size: 18px;
-   }
-   .date {
-      display: block;
-      font-size: 12px;
-      margin-top: 5px;
-      color: $grey;
    }
    .summ {
-      display: block;
-      text-align: right;
+      font-weight: 500;
       font-size: 18px;
-   }
-   .btns {
-      display: flex;
-      .small-btn + .small-btn {
-         margin-left: 10px;
-         width: 100%;
-         max-width: 130px;
-      }
-   }
-   .status {
-      text-transform: uppercase;
-      text-align: center;
-      border: 2px rgba($grey,0.5) dashed;
-      padding: 15px;
-      font-size: 12px;
-      color: $grey;
-      font-weight: 400;
-      letter-spacing: 1px;
-      & + .small-btn {
-         margin-top: 15px;
-      }
-      a:hover {
-         text-decoration: underline;
-      }
+      text-align: right;
+      width: 140px;
+      flex: 0 0 auto;
    }
 }
 /******************checkout********************/
@@ -2034,6 +1924,22 @@ a {
       transform: translateX(-50%);
       white-space: nowrap;
       background: #fff;
+      padding: 0 30px;
+   }
+   .withdraw {
+      text-decoration: none;
+      font-size: 12px;
+      line-height: 26px;
+      color: $brown;
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background: $brown;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 500;
       padding: 0 30px;
    }
 }
@@ -2947,13 +2853,13 @@ a {
    > span {
       text-align: right;
       width: 100%;
-      bottom: -5px;
+      top: 6px;
       position: absolute;
       display: block;
       height: 0px;
-      font-size: 12px;
+      font-size: 10px;
       color: #818181;
-      font-weight: 600;
+      font-weight: 400;
       letter-spacing: 1px;
       text-transform: uppercase;
    }
@@ -2961,7 +2867,7 @@ a {
       display: block;
       font-size: 16px;
       font-weight: 500;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
    }
    input {
       outline: none;
@@ -3102,9 +3008,9 @@ a {
    .c-input-icon-field {
       padding: 0 5px;
       position: absolute;
-      top: 25px;
+      top: 30px;
       right: 0px;
-      line-height: 30px;
+      line-height: 32px;
       cursor: pointer;
       &:hover {
          color: $orange;
@@ -3153,6 +3059,43 @@ a {
          &:after {
             background: #fff;
          }
+      }
+   }
+}
+.c-radio {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   margin-bottom: 15px;
+   &:hover {
+      color: $brown;
+   }
+   input {
+      display: none;
+   }
+   input:checked + .icon:after {
+      opacity: 1;
+   }
+   .icon {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1px $grey solid;
+      position: relative;
+      flex: 0 0 auto;
+      margin-right: 10px;
+      &:after {
+         content: "";
+         position: absolute;
+         display: block;
+         left: 6px;
+         top: 6px;
+         width: 11px;
+         height: 11px;
+         background: $blue;
+         border-radius: 50%;
+         opacity: 0;
+         transition: all 0.3s;
       }
    }
 }
@@ -3258,6 +3201,11 @@ a {
       i.mdi {
          margin-left: 5px;
       }
+   }
+   &.icon {
+      padding: 0px;
+      width: 35px;
+      height: 35px;
    }
    &.full {
       width: 100%;
@@ -3372,9 +3320,6 @@ a {
             color: #fff;
          }
       }
-   }
-   &.small-text {
-      font-size: 12px;
    }
    i.mdi {
       font-size: 20px;
