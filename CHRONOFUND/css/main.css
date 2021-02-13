@@ -2029,11 +2029,20 @@ a {
 
 .basket-total .btns {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.basket-total .green {
-  width: 100%;
-  margin-bottom: 30px;
+.basket-total .btns .small-btn + .small-btn {
+  margin-top: 15px;
 }
 
 .basket-total-sticky {
@@ -2069,6 +2078,10 @@ a {
   display: block;
   text-align: center;
   font-size: 22px;
+}
+
+.count-blocks .c-checkbox {
+  margin-left: 40px;
 }
 
 .page-cap {
@@ -2143,9 +2156,16 @@ a {
   margin-top: 0px;
 }
 
+.profile .basket-total {
+  padding-top: 66px;
+  height: 100%;
+  margin-left: auto;
+}
+
 .profile .note {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 22px;
+  margin-bottom: 30px;
 }
 
 .profile .profile-cols {
@@ -2280,168 +2300,67 @@ a {
 }
 
 /******************checkout********************/
-.checkout-balance-table table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0px;
+.invoce-whaiting p {
+  margin-block: 30px;
 }
 
-.checkout-balance-table td {
-  font-size: 17px;
-  height: 50px;
-  border-top: 1px rgba(129, 129, 129, 0.5) solid;
-  border-bottom: 1px rgba(129, 129, 129, 0.5) solid;
-}
-
-.checkout-balance-table td .c-checkbox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0 25px 0 0;
-  font-size: 14px;
-  color: #000;
-}
-
-.checkout-balance-table td:first-child {
-  color: #818181;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.checkout-balance-table td:last-child {
-  text-align: right;
-}
-
-.checkout-balance-table + h2 {
-  margin: 35px 0 25px;
-  text-align: center;
-  font-size: 35px;
-  font-weight: 400;
-}
-
-.payment-methods-toggle {
-  margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.payment-methods-toggle input {
-  display: none;
-}
-
-.payment-methods-toggle i.mdi {
-  font-size: 54px;
-  margin-right: 20px;
-}
-
-.payment-methods-toggle .c-btn {
-  width: calc(50% - 15px);
-}
-
-.payment-methods-toggle span {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.payment-methods-toggle small {
-  margin-top: 4px;
-  font-weight: 300;
-  display: block;
-  color: #818181;
-  font-size: 14px;
-}
-
-.payment-methods-toggle label {
-  color: #1A2282;
-  width: calc(50% - 15px);
-  margin-bottom: 30px;
+.invoce-whaiting .actions > div {
+  margin-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.invoce-whaiting .actions .small-btn {
+  max-width: 300px;
+}
+
+.invoce-whaiting .actions .countdown {
+  margin: 0 0 0 25px;
+  text-align: center;
+}
+
+.invoce-whaiting .actions .countdown span {
+  display: block;
+  font-size: 12px;
+}
+
+.invoce-whaiting .actions .countdown-digits {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px #979797 solid;
-  border-radius: 50px;
-  height: 100px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
-.payment-methods-toggle input:checked + label {
-  color: #C6A55B;
+.invoce-whaiting .cancle {
+  margin: 50px 0;
+}
+
+.invoce-whaiting .cancle .link {
+  margin-left: 15px;
+}
+
+.invoce-whaiting .invoice-preview {
   border: 3px #C6A55B solid;
+  position: relative;
 }
 
-.checkout-step-note {
-  line-height: 1.6;
+.invoce-whaiting .invoice-preview span {
+  font-weight: 500;
+  line-height: 30px;
+  color: #C6A55B;
+  position: absolute;
+  top: -16px;
+  left: 30px;
+  white-space: nowrap;
+  background: #fff;
+  padding: 0 30px;
 }
 
-.checkout-step-note p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.checkout-step-note small {
-  font-size: 15px;
-  color: #818181;
-}
-
-.checkout-invoice {
-  max-width: 650px;
-}
-
-.checkout-invoice .btns {
-  margin: 30px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.checkout-invoice .btns .c-btn {
-  width: calc(50% - 15px);
-}
-
-.checkout-invoice p {
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-.checkout-invoice p a {
-  text-decoration: underline;
-}
-
-.checkout-invoice .invoice-document {
-  margin: 30px 0;
-  -webkit-box-shadow: 8px 8px 19px rgba(0, 0, 0, 0.3);
-          box-shadow: 8px 8px 19px rgba(0, 0, 0, 0.3);
-}
-
-.checkout-invoice .invoice-document img {
-  max-width: 100%;
-}
-
-.checkout-invoice .invoce-cancle {
-  text-align: right;
-}
-
-.checkout-invoice .invoce-cancle .c-btn {
-  width: 50%;
+.invoce-whaiting .invoice-preview img {
+  width: 100%;
 }
 
 /******************my-investments********************/
@@ -2691,7 +2610,7 @@ a {
 
 .investments-info .btns .small-btn {
   display: block;
-  max-width: 180px;
+  max-width: 210px;
 }
 
 .investments-info .btns .small-btn + .small-btn {
@@ -2717,25 +2636,25 @@ a {
   color: #818181;
 }
 
-.investments-info .countdown {
+.countdown {
   margin: 15px 0;
 }
 
-.investments-info .countdown span {
+.countdown span {
   color: #818181;
 }
 
-.investments-info .countdown .countdown-digits {
+.countdown .countdown-digits {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.investments-info .countdown .countdown-digits div:nth-child(n+3) {
+.countdown .countdown-digits div:nth-child(n+3) {
   color: #727272;
 }
 
-.investments-info .countdown .countdown-digits div {
+.countdown .countdown-digits div {
   margin-right: 7px;
   font-size: 24px;
   font-weight: 600;
@@ -3743,7 +3662,7 @@ a {
   outline: none;
   font-size: 14px;
   width: 100%;
-  height: 35px;
+  height: 43px;
   background: none;
   border: 1px rgba(129, 129, 129, 0.5) solid;
   padding: 0 15px;
@@ -3813,15 +3732,15 @@ a {
   width: 100%;
   background: #d8d8d8;
   border: 1px rgba(129, 129, 129, 0.5) solid;
-  line-height: 32px;
-  height: 35px;
+  line-height: 41px;
+  height: 43px;
   font-size: 16px;
   padding: 0 15px;
   cursor: pointer;
 }
 
 .c-b-input .dk-select.dk-select-open-down .dk-select-options {
-  top: 33px;
+  top: 41px;
   display: block;
 }
 
@@ -3831,7 +3750,7 @@ a {
 }
 
 .c-b-input .dk-select.dk-select-open-up .dk-select-options {
-  bottom: 33px;
+  bottom: 41px;
   display: block;
 }
 
@@ -3900,7 +3819,7 @@ a {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  line-height: 34px;
+  line-height: 41px;
   font-size: 28px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -3927,11 +3846,14 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 12px;
   line-height: 20px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 30px;
-  color: #8f92a1;
+  color: #818181;
   cursor: pointer;
 }
 
@@ -3939,45 +3861,32 @@ a {
   display: none;
 }
 
-.c-checkbox input:checked + .icon:after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.c-checkbox input:checked + .icon:before {
+  opacity: 1;
 }
 
 .c-checkbox .icon {
-  margin-top: 2px;
-  margin-right: 15px;
-  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 2px;
+  border: 1px #818181 solid;
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 15px;
-  height: 15px;
-  background: #fff;
-  position: relative;
+  margin-right: 10px;
 }
 
-.c-checkbox .icon:after {
-  position: absolute;
-  left: 4px;
-  bottom: 4px;
-  content: "";
-  display: block;
-  width: 7px;
-  height: 7px;
-  background: #191933;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+.c-checkbox .icon:before {
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Design Icons";
+  font-size: 24px;
+  line-height: 23px;
+  color: #C6A55B;
+  content: "\F012C";
+  opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-.c-checkbox.brown .icon {
-  background: #C6A55B;
-}
-
-.c-checkbox.brown .icon:after {
-  background: #fff;
 }
 
 .c-radio {
@@ -4033,6 +3942,7 @@ a {
 .link {
   letter-spacing: 1px;
   font-size: 12px;
+  vertical-align: middle;
   color: #818181;
   text-transform: uppercase;
   font-weight: 600;
@@ -4044,68 +3954,6 @@ a {
 
 .link:hover {
   color: #f76844;
-}
-
-.tab-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  list-style: none;
-  padding: 0px;
-  margin-bottom: 50px;
-}
-
-.tab-links li {
-  margin-right: 30px;
-}
-
-.tab-links a {
-  color: #818181;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.tab-links a:hover, .tab-links a.active {
-  color: #f76844;
-}
-
-.tab-links.checkout-steps li {
-  margin-right: 40px;
-}
-
-.tab-links.checkout-steps li:last-child a:after {
-  display: none;
-}
-
-.tab-links.checkout-steps a {
-  position: relative;
-}
-
-.tab-links.checkout-steps a:hover, .tab-links.checkout-steps a.active {
-  color: #1A2282;
-}
-
-.tab-links.checkout-steps a.disabled {
-  pointer-events: none;
-}
-
-.tab-links.checkout-steps a:after {
-  content: '';
-  position: absolute;
-  right: -23px;
-  top: 2px;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 6px #1A2282 solid;
-  border-bottom: 6px transparent solid;
-  border-top: 6px transparent solid;
 }
 
 .small-btn {
@@ -4128,12 +3976,13 @@ a {
   min-height: 30px;
   min-width: 35px;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1px;
+  line-height: 15px;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
-  padding: 8px 15px;
+  padding: 13px 15px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -4144,16 +3993,8 @@ a {
   opacity: 0.4;
 }
 
-.small-btn.icon-left {
-  padding: 2px 15px;
-}
-
 .small-btn.icon-left i.mdi {
   margin-right: 5px;
-}
-
-.small-btn.icon-right {
-  padding: 2px 15px;
 }
 
 .small-btn.icon-right i.mdi {
@@ -4305,6 +4146,12 @@ a {
 .small-btn.brown.outline:hover {
   background: #C6A55B;
   color: #fff;
+}
+
+.small-btn.extra-small {
+  font-size: 12px;
+  padding: 8px 15px;
+  letter-spacing: 0.5px;
 }
 
 .small-btn i.mdi {
@@ -4727,9 +4574,6 @@ a {
   /***************profile******************/
   .profile .profile-col {
     width: calc(50% - 30px);
-  }
-  .checkout-invoice {
-    max-width: 100%;
   }
   /*********************balance**************************/
   /********************mobile-navigation-bar*****************/
@@ -5278,99 +5122,6 @@ a {
     font-size: 14px;
   }
   /*******************checkout***************/
-  .payment-methods-toggle {
-    margin-bottom: 15px;
-  }
-  .payment-methods-toggle input:checked + label {
-    border-width: 2px;
-  }
-  .payment-methods-toggle label {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 15px;
-    padding: 15px 0;
-    border-radius: 8px;
-    width: calc(50% - 5px);
-    height: auto;
-    border: 2px rgba(151, 151, 151, 0.2) solid;
-  }
-  .payment-methods-toggle label .mdi {
-    font-size: 26px;
-    margin: 0px;
-  }
-  .payment-methods-toggle label span {
-    font-size: 14px;
-  }
-  .payment-methods-toggle label small {
-    margin: 5px;
-    font-size: 12px;
-  }
-  .payment-methods-toggle .c-btn {
-    width: 100%;
-  }
-  .checkout-step-note p {
-    font-size: 14px;
-  }
-  .checkout-step-note small {
-    font-size: 12px;
-  }
-  .checkout-balance-table td {
-    height: 40px;
-    font-size: 12px;
-    font-weight: 500;
-    position: relative;
-  }
-  .checkout-balance-table td .c-checkbox {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin: 0px;
-    position: absolute;
-    right: 0px;
-    top: -30px;
-  }
-  .checkout-balance-table td:last-child {
-    white-space: nowrap;
-    text-align: right;
-    font-size: 16px;
-  }
-  .checkout-balance-table td:first-child {
-    color: #818181;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
-  .checkout-balance-table + h2 {
-    margin: 25px 0 20px;
-    font-size: 24px;
-  }
-  .checkout-invoice p {
-    font-size: 14px;
-  }
-  .checkout-invoice .btns {
-    display: block;
-    margin: 15px 0;
-  }
-  .checkout-invoice .btns .c-btn {
-    font-size: 12px;
-    margin: 5px 0;
-    width: 100%;
-  }
-  .checkout-invoice .invoice-document {
-    margin: 15px 0;
-    -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .checkout-invoice .invoce-cancle .c-btn {
-    width: 100%;
-  }
   /*********************balance**************************/
   /********************mobile-navigation-bar*****************/
   .mobile-navigation-bar {
@@ -5408,49 +5159,6 @@ a {
     width: 100%;
   }
   /*************************ui*************************/
-  .tab-links {
-    display: block;
-    margin-bottom: 15px;
-  }
-  .tab-links li {
-    margin: 0px;
-    margin-top: -1px;
-  }
-  .tab-links a {
-    display: block;
-    border: 1px #eee solid;
-    font-size: 12px;
-    text-align: center;
-    padding: 10px;
-  }
-  .tab-links a.active {
-    background: #f76844;
-    color: #fff;
-    border-color: #f76844;
-  }
-  .tab-links.checkout-steps {
-    display: none;
-  }
-  .tab-links.checkout-steps li {
-    margin: 0px;
-  }
-  .tab-links.checkout-steps a {
-    border: none;
-  }
-  .tab-links.checkout-steps a:after {
-    top: auto;
-    bottom: -6px;
-    right: 50%;
-    margin-right: -3px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    opacity: 0.3;
-  }
-  .tab-links.checkout-steps a.active {
-    background: none;
-    color: #f76844;
-    border: none;
-  }
   .small-btn {
     font-size: 12px;
   }
