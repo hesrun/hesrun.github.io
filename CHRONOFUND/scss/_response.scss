@@ -136,9 +136,9 @@
       padding: 30px;
       position: fixed;
       left: 0px;
-      top: 122px;
+      top: 120px;
       bottom: 0px;
-      background: $blue;
+      background: $blue-bg;
       z-index: 10;
       overflow: auto;
       margin: 0px;
@@ -444,6 +444,11 @@
          text-align: center;
          font-size: 22px;
       }
+      .withdraw {
+         font-size: 10px;
+         line-height: 20px;
+         bottom: -12px;
+      }
    }
 
    /*******************basket**************/
@@ -457,7 +462,21 @@
    .basket-total {
       width: 100%;
    }
+   /******************profile***************/
+   .profile {
+      h2 {
+         font-size: 22px;
 
+      }
+      .profile-cols {
+         display: block;
+      }
+      .profile-col {
+         width: auto;
+         margin-bottom: 30px;
+      }
+
+   }
 }
 
 @media screen and (max-width: 700px) {
@@ -955,10 +974,35 @@
             font-size: 14px;
          }
       }
+      .basket-total {
+         padding-top: 15px;
+      }
    }
-
+   .billing-list-item {
+      padding: 15px 0;
+      display: block;
+      position: relative;
+      .number {
+         width: auto;
+         display: flex;
+         justify-content: space-between;
+      }
+      .name {
+         font-size: 16px;
+         margin: 5px 0;
+         padding-right: 85px;
+      }
+      .summ {
+         right: 0px;
+         bottom: 22px;
+         position: absolute;
+         font-size: 12px;
+         width: auto;
+      }
+   }
    /*******************checkout***************/
    /*********************balance**************************/
+
    /********************mobile-navigation-bar*****************/
    .mobile-navigation-bar {
       padding: 15px 0;
@@ -1009,7 +1053,7 @@
    /*************************ui*************************/
    .small-btn {
       font-size: 12px;
-
+      padding: 9px 15px;
       i.mdi {
          font-size: 16px;
       }
@@ -1017,13 +1061,22 @@
 
    .c-b-input {
       margin-bottom: 15px;
-
+      input {
+         height: 35px;
+      }
       select {
          font-size: 14px;
       }
 
       label {
          font-size: 14px;
+      }
+      .dk-select {
+         height: 35px;
+         line-height: 32px;
+      }
+      .mdi-chevron-down {
+         line-height: 32px;
       }
    }
 
