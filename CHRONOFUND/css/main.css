@@ -378,7 +378,7 @@ a {
   max-width: 375px;
   margin: 30px auto 0;
   border-radius: 32px 32px 0 0;
-  padding: 0px 60px 50px;
+  padding: 0px 0px 50px;
   -webkit-transform-origin: center bottom;
           transform-origin: center bottom;
 }
@@ -641,7 +641,7 @@ a {
   color: #818181;
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 30px;
+  font-size: 12px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -1146,6 +1146,20 @@ a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
+  position: relative;
+}
+
+.catalog-grid-item .item-image:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(10%, rgba(255, 255, 255, 0)), color-stop(90%, rgba(255, 255, 255, 0)), to(white));
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, white 100%);
+  pointer-events: none;
 }
 
 .catalog-grid-item .item-image:hover {
@@ -1154,8 +1168,8 @@ a {
 }
 
 .catalog-grid-item .item-image:hover img {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .catalog-grid-item .item-image img {
@@ -1609,7 +1623,8 @@ a {
 }
 
 .product-card-descr .descr-text {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.6;
   max-height: 2000px;
   overflow: hidden;
   -webkit-transition: max-height 0.3s;
@@ -1769,6 +1784,7 @@ a {
 .product-card-brand-story .text h2 {
   font-size: 14px;
   margin-bottom: 10px;
+  margin-top: 15px;
 }
 
 .similar-products h2 {
@@ -1969,7 +1985,7 @@ a {
 }
 
 .products-compare-list-item .params-list b {
-  font-weight: 600;
+  font-weight: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2078,6 +2094,7 @@ a {
   display: block;
   text-align: center;
   font-size: 22px;
+  font-weight: 500;
 }
 
 .count-blocks .c-checkbox {
@@ -2427,6 +2444,7 @@ a {
 
 .my-investments-statistic b {
   font-size: 22px;
+  font-weight: 500;
 }
 
 .my-investments-statistic strong {
@@ -5167,6 +5185,35 @@ a {
     width: auto;
   }
   /*******************checkout***************/
+  .invoce-whaiting p {
+    margin-bottom: 15px;
+  }
+  .invoce-whaiting p br {
+    display: none;
+  }
+  .invoce-whaiting .actions > div {
+    display: block;
+    margin-top: 15px;
+  }
+  .invoce-whaiting .actions .small-btn {
+    max-width: 100%;
+  }
+  .invoce-whaiting .actions .countdown {
+    margin: 15px 0 0 0;
+  }
+  .invoce-whaiting .cancle {
+    margin-bottom: 30px;
+    display: block;
+  }
+  .invoce-whaiting .cancle .small-btn {
+    width: 100%;
+  }
+  .invoce-whaiting .cancle .link {
+    margin: 15px 0 0 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
   /*********************balance**************************/
   /********************mobile-navigation-bar*****************/
   .mobile-navigation-bar {
