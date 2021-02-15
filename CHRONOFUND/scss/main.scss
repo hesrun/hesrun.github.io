@@ -834,6 +834,15 @@ a {
    }
 }
 /***********************catalog-grid*****************/
+.bordered-note {
+   margin: 30px 0;
+   border: 3px $brown solid;
+   font-size: 16px;
+   padding: 20px 30px;
+   color: $brown;
+   font-weight: 500;
+   line-height: 1.5;
+}
 .catalog-grid {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
@@ -2124,6 +2133,72 @@ a {
       }
    }
 }
+/******************request-to-sell********************/
+.request-to-sell {
+   display: flex;
+   .text-info {
+      width: 40%;
+      p {
+         margin: 15px 0;
+         line-height: 1.5;
+      }
+      img {
+         display: block;
+         margin: 30px 0;
+         width: 100%;
+      }
+   }
+   .request-to-sell-form {
+      width: 60%;
+      padding-left: 10%;
+   }
+   .check-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 0;
+      .c-checkbox {
+         margin: 0px;
+      }
+   }
+}
+.clip-photos {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 30px;
+   .item {
+      width: calc(33.333% - 20px);
+      background: $line;
+      position: relative;
+      padding-top: 25%;
+      cursor: pointer;
+   }
+   .text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: $grey;
+      i.mdi {
+         display: block;
+         font-size: 32px;
+      }
+   }
+   input {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+   }
+   img {
+      display: none;
+
+   }
+}
 /************mobile-navigation-bar************/
 .mobile-navigation-bar {
    display: none;
@@ -2463,27 +2538,16 @@ a {
    }
 }
 /*******************code-confirm-modal*************/
-.change-saved-modal {
-   max-width: 700px;
-   padding: 5% 30px;
-   text-align: center;
-   a.close-modal {
-      display: none;
-   }
-   b {
-      margin-bottom: 20px;
-      display: block;
-      font-size: 32px;
-   }
-   .small-btn {
-      width: 100%;
-      max-width: 140px;
-   }
-}
-/*******************code-confirm-modal*************/
 .code-confirm-modal {
-   max-width: 700px;
-   padding: 60px 30px;
+   max-width: 790px;
+   padding: 60px 120px;
+   &.success {
+      padding-top: 7%;
+      padding-bottom: 7%;
+      b {
+         margin-bottom: 30px;
+      }
+   }
    a.close-modal {
       display: none;
    }
@@ -2497,16 +2561,19 @@ a {
       font-size: 12px;
       text-align: center;
       color: $grey;
-      line-height: 1.4;
+      line-height: 1.7;
+      text-transform: uppercase;
    }
 }
 .code-confirm-form {
-   max-width: 320px;
    margin: 0 auto;
    .code-inputs {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
       input {
          width: calc(25% - 15px);
          min-width: 0;
@@ -2522,15 +2589,75 @@ a {
          }
       }
    }
-   .code-inputs + .btns {
-      justify-content: space-between;
-      .small-btn {
-         width: calc(50% - 10px);
+   .fields-form {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      textarea {
+         min-height: 100px;
+      }
+   }
+   .browse-file {
+      display: flex;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      .c-b-input {
+         flex: 1 1 auto;
+         margin-right: 20px;
+         margin-bottom:0px;
+         input {
+            pointer-events: none;
+         }
+      }
+      .browse-btn {
+         position: relative;
+         input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+         }
       }
    }
    .btns {
       display: flex;
-      justify-content: center;
+      width: 100%;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-between;
+      .small-btn {
+         width: calc(50% - 10px);
+      }
+      &.vertical {
+         flex-direction: column;
+         .small-btn {
+            width: auto;
+            & + .small-btn {
+               margin-top: 20px;
+            }
+         }
+      }
+      &.single {
+         justify-content: center;
+         .small-btn {
+            width: 100%;
+            max-width: 210px;
+         }
+      }
+   }
+   .text-center {
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .btns + .text-center {
+      margin-top: 40px;
+      
    }
 }
 /***********************ui*****************/
@@ -2979,6 +3106,7 @@ a {
    font-weight: 500;
    margin-bottom: 30px;
    color: $grey;
+   text-transform: uppercase;
    cursor: pointer;
    input {
       display: none;
@@ -3249,6 +3377,22 @@ a {
       background:  $blue;
       border-radius: 3px;
       cursor: pointer;
+   }
+}
+
+.c-fieldset {
+   border: 3px $brown solid;
+   padding: 30px;
+   margin-bottom: 30px;
+   legend {
+      font-size: 12px;
+      color: $brown;
+      padding: 0 15px;
+      text-transform: uppercase;
+      font-weight: 500;
+   }
+   .c-checkbox:last-child {
+      margin-bottom: 0px;
    }
 }
 
