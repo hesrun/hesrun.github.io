@@ -1312,9 +1312,18 @@ a {
       margin-bottom: 20px;
       margin-top: 40px;
    }
+   .item {
+      display: block;
+      padding-top: 100%;
+   }
    img {
+      position: absolute;
+      left: 0px;
+      top: 0px;
       vertical-align: middle;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
    }
    .owl-carousel {
       .owl-nav {
@@ -1331,6 +1340,9 @@ a {
          .owl-next {
             right: 0px;
          }
+         &.disabled {
+            display: none
+         }
       }
       .owl-dots {
          margin-top: 15px;
@@ -1345,6 +1357,9 @@ a {
             &.active {
                opacity: 1;
             }
+         }
+         &.disabled {
+            display: none
          }
       }
    }
@@ -2204,6 +2219,7 @@ a {
 }
 /******************chronofund-team********************/
 .chronofund-team {
+   overflow: hidden;
    .team-image {
       position: relative;
       img {
@@ -2254,6 +2270,20 @@ a {
       span {
          font-size: 12px;
          margin-top: 10px;
+      }
+   }
+}
+.video-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 30px;
+   .item {
+      padding-top: 56.25%;
+      position: relative;
+      iframe {
+         position: absolute;
+         top: 0px;
+         left: 0px;
       }
    }
 }
@@ -3472,9 +3502,9 @@ a {
 .tooltipster-base.tooltipster-default {
    border-radius: 5px;
    border: none;
-   background: $blue-bg;
+   background: $brown;
    color: #fff;
-   box-shadow: 0 4px 8px 0 rgba($blue-bg,0.6);
+   box-shadow: 0 4px 8px 0 rgba(#000,0.2);
    .tooltipster-content {
       font-family: 'GT America Extended';
       font-size: 13px;
