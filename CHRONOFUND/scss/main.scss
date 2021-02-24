@@ -38,7 +38,7 @@ html.menu-open {
       overflow: hidden;
    }
 }
-input,select,textarea,select {
+input,select,textarea,button {
    font-family: 'GT America Extended';
 }
 a {
@@ -852,6 +852,73 @@ a {
       display: block;
    }
 }
+
+.catalog-grid.sing-col {
+   display: block;
+   .catalog-grid-cell {
+      margin-bottom: 50px;
+   }
+   .catalog-grid-item {
+      max-width: 100%;
+   }
+   .item-image {
+      margin-right: 10%;
+      width: 40%;
+      height: auto;
+      border: 1px $line solid;
+
+   }
+   .item-info {
+      .brand {
+         font-size: 32px;
+      }
+      .name {
+         font-size: 20px;
+         line-height: 24px;
+         height: 50px;
+      }
+   }
+   .ref-and-lot {
+      margin: 20px 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .reference {
+         font-weight: 500;
+      }
+      .lot {
+         padding: 5px 10px;
+         border: 1px #ccc solid;
+         text-transform: uppercase;
+         font-weight: 500;
+      }
+   }
+   .table-params {
+      margin: 15px 0;
+      table {
+         width: 100%;
+      }
+      td {
+         font-weight: 500;
+         padding: 8px 0;
+      }
+      td:first-child {
+         color: $grey;
+         letter-spacing: 1px;
+      }
+      td:last-child {
+         text-align: right;
+      }
+      i.mdi {
+         cursor: pointer;
+         margin-left: 5px;
+         &:hover {
+            color: $orange;
+         }
+      }
+   }
+}
+
 .catalog-grid-item {
    display: flex;
    width: 100%;
@@ -885,7 +952,6 @@ a {
       }
       &:hover {
          border-color: $orange;
-         border-radius: 10px;
          img {
             transform: scale(1.1);
          }
@@ -3603,4 +3669,12 @@ a {
    color: $blue !important;
 }
 
-@import 'response'
+
+@import 'response';
+
+.nextHide{
+   display: none;
+}
+
+
+
