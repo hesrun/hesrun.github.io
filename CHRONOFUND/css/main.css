@@ -1139,27 +1139,43 @@ a {
 
 .catalog-grid.sing-col .catalog-grid-item {
   max-width: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .catalog-grid.sing-col .item-image {
-  margin-right: 10%;
-  width: 40%;
+  margin-right: 50px;
+  width: 45%;
   height: auto;
   border: 1px #D8D8D8 solid;
 }
 
+.catalog-grid.sing-col .item-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .catalog-grid.sing-col .item-info .brand {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .catalog-grid.sing-col .item-info .name {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 24px;
   height: 50px;
 }
 
 .catalog-grid.sing-col .ref-and-lot {
-  margin: 20px 0 20px;
+  margin: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1183,7 +1199,7 @@ a {
 }
 
 .catalog-grid.sing-col .table-params {
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
 
 .catalog-grid.sing-col .table-params table {
@@ -1202,6 +1218,7 @@ a {
 
 .catalog-grid.sing-col .table-params td:last-child {
   text-align: right;
+  font-weight: 600;
 }
 
 .catalog-grid.sing-col .table-params i.mdi {
@@ -3638,6 +3655,7 @@ a {
 
 .code-confirm-form .browse-file .browse-btn {
   position: relative;
+  cursor: pointer;
 }
 
 .code-confirm-form .browse-file .browse-btn input {
@@ -3647,6 +3665,11 @@ a {
   left: 0px;
   top: 0px;
   opacity: 0;
+  cursor: pointer;
+}
+
+.code-confirm-form .browse-file .browse-btn input::-webkit-file-upload-button {
+  cursor: pointer;
 }
 
 .code-confirm-form .btns {
@@ -4399,11 +4422,11 @@ a {
 }
 
 .small-btn.icon-left i.mdi {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .small-btn.icon-right i.mdi {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .small-btn.icon {
@@ -4561,6 +4584,11 @@ a {
 
 .small-btn i.mdi {
   font-size: 20px;
+}
+
+.mdi-spin:before {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .hor-scroll::-webkit-scrollbar {

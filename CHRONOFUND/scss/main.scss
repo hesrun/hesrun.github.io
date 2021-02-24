@@ -860,26 +860,30 @@ a {
    }
    .catalog-grid-item {
       max-width: 100%;
+      align-items: stretch;
    }
    .item-image {
-      margin-right: 10%;
-      width: 40%;
+      margin-right: 50px;
+      width: 45%;
       height: auto;
       border: 1px $line solid;
 
    }
    .item-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       .brand {
-         font-size: 32px;
+         font-size: 28px;
       }
       .name {
-         font-size: 20px;
+         font-size: 18px;
          line-height: 24px;
          height: 50px;
       }
    }
    .ref-and-lot {
-      margin: 20px 0 20px;
+      margin: 15px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -894,7 +898,7 @@ a {
       }
    }
    .table-params {
-      margin: 15px 0;
+      margin-bottom: 15px;
       table {
          width: 100%;
       }
@@ -908,6 +912,7 @@ a {
       }
       td:last-child {
          text-align: right;
+         font-weight: 600;
       }
       i.mdi {
          cursor: pointer;
@@ -2775,6 +2780,7 @@ a {
       }
       .browse-btn {
          position: relative;
+         cursor: pointer;
          input {
             position: absolute;
             width: 100%;
@@ -2782,7 +2788,11 @@ a {
             left: 0px;
             top: 0px;
             opacity: 0;
+            cursor: pointer;
          }
+         input::-webkit-file-upload-button {
+            cursor: pointer; 
+        }
       }
    }
    .btns {
@@ -3377,12 +3387,12 @@ a {
    }
    &.icon-left {
       i.mdi {
-         margin-right: 5px;
+         margin-right: 10px;
       }
    }
    &.icon-right {
       i.mdi {
-         margin-left: 5px;
+         margin-left: 10px;
       }
    }
    &.icon {
@@ -3512,6 +3522,9 @@ a {
    i.mdi {
       font-size: 20px;
    }
+}
+.mdi-spin:before {
+   animation-duration: 0.5s;
 }
 .hor-scroll {
    &::-webkit-scrollbar {
