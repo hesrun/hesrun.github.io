@@ -20,7 +20,7 @@ a:hover {
 }
 
 .paddings {
-  padding: 50px 140px;
+  padding: 75px 140px;
 }
 
 .paddings-half {
@@ -36,14 +36,18 @@ a:hover {
 }
 
 body {
-  font-family: 'Helvetica Now Text';
+  font-family: 'BodoniC';
   font-size: 14px;
   line-height: 1;
   padding-top: 130px;
 }
 
 input, select, button, textarea {
-  font-family: 'Helvetica Now Text';
+  font-family: 'BodoniC';
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
 }
 
 .top-divider {
@@ -1961,7 +1965,7 @@ input, select, button, textarea {
 
 .artle-item-section {
   padding-top: 30px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
 .artle-item-title {
@@ -2006,7 +2010,7 @@ input, select, button, textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 900px;
-  margin: 0px auto 100px;
+  margin: 0px auto 0px;
 }
 
 .artle-item-wrap .image {
@@ -2107,10 +2111,10 @@ input, select, button, textarea {
   margin: 60px auto 0;
 }
 
-.tech-params-table h2 {
+.tech-params-table h3 {
   text-align: center;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 32px;
+  text-transform: uppercase;
   margin-bottom: 55px;
 }
 
@@ -2168,9 +2172,7 @@ input, select, button, textarea {
   text-align: center;
   text-transform: uppercase;
   font-size: 32px;
-  font-weight: 400;
   margin-bottom: 50px;
-  letter-spacing: 2px;
 }
 
 .item-banner h2 {
@@ -2197,7 +2199,7 @@ input, select, button, textarea {
 }
 
 .item-priority {
-  padding: 100px 0 0;
+  padding: 75px 0 0;
 }
 
 .item-priority .text {
@@ -2238,10 +2240,14 @@ input, select, button, textarea {
 }
 
 .mechanism-info {
-  margin: 0 0 50px 0;
+  margin: 0 auto 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1300px;
 }
 
 .mechanism-info + span {
@@ -2250,33 +2256,67 @@ input, select, button, textarea {
   margin-bottom: 35px;
 }
 
+.mechanism-info.no-image {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mechanism-info.no-image .image {
+  display: none;
+}
+
+.mechanism-info.no-image .text h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+.mechanism-info.no-image .text p {
+  line-height: 1.7;
+}
+
 .mechanism-info .image {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   width: 100%;
   max-width: 420px;
-  margin-right: 125px;
+  margin-right: 10%;
+}
+
+.mechanism-info .image .image-holder {
+  padding-top: 100%;
+  position: relative;
 }
 
 .mechanism-info .image img {
+  left: 0px;
+  top: 0px;
+  position: absolute;
   vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 
 .mechanism-info .text h3 {
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 32px;
+  text-transform: uppercase;
   margin-bottom: 50px;
 }
 
 .mechanism-info .text p {
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.6;
 }
 
 .mechanism-info .text p + p {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .mechanism-slider {
@@ -3745,29 +3785,9 @@ fieldset legend {
   }
   .tech-params-table {
     margin-top: 80px;
-    padding: 0 30px;
   }
   .about-mechanism {
     padding: 50px 30px;
-  }
-  .mechanism-info {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .mechanism-info .image {
-    margin-right: 30px;
-    width: 240px;
-  }
-  .mechanism-info .text h3 {
-    margin-bottom: 22px;
-  }
-  .mechanism-info .text p {
-    font-size: 13px;
-    line-height: 1.4;
-  }
-  .mechanism-info .text p + p {
-    margin-top: 20px;
   }
   .mechanism-slider {
     margin-bottom: 50px;
@@ -4422,38 +4442,6 @@ fieldset legend {
   .about-mechanism-wrap .btn-prev,
   .about-mechanism-wrap .btn-next {
     display: none;
-  }
-  .about-mechanism-wrap .mechanism-info {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    margin-bottom: 0px;
-  }
-  .about-mechanism-wrap .mechanism-info + span {
-    display: none;
-  }
-  .about-mechanism-wrap .mechanism-info .text {
-    width: 210px;
-    margin-right: 30px;
-    max-height: 500px;
-    overflow: hidden;
-  }
-  .about-mechanism-wrap .mechanism-info .text p + p {
-    display: none;
-  }
-  .about-mechanism-wrap .mechanism-info .text h3 {
-    font-size: 24px;
-  }
-  .about-mechanism-wrap .mechanism-info .image {
-    height: 320px;
-    margin-right: 15px;
-  }
-  .about-mechanism-wrap .mechanism-info .image img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
   .mechanism-slider {
     margin-bottom: 30px;

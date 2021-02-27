@@ -21,7 +21,7 @@ a {
 }
 
 .paddings {
-    padding: 50px 140px;
+    padding: 75px 140px;
 }
 .paddings-half {
     padding: 50px 140px;
@@ -33,14 +33,17 @@ a {
     text-align: right;
 }
 body {
-    font-family: 'Helvetica Now Text';
+    font-family: 'BodoniC';
     font-size: 14px;
     line-height: 1;
     padding-top: 130px;
 }
 
 input, select, button, textarea {
-    font-family: 'Helvetica Now Text';
+    font-family: 'BodoniC';
+}
+h1,h2,h3,h4 {
+    font-weight: 400;
 }
 
 .top-divider {
@@ -1432,7 +1435,7 @@ input, select, button, textarea {
 }
 .artle-item-section {
     padding-top: 30px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 .artle-item-title {
     display: flex;
@@ -1457,7 +1460,7 @@ input, select, button, textarea {
     align-items: center;
     justify-content: space-between;
     max-width: 900px;
-    margin: 0px auto 100px;
+    margin: 0px auto 0px;
     .image {
         max-width: 400px;
         img {
@@ -1534,10 +1537,10 @@ input, select, button, textarea {
 .tech-params-table {
     max-width: 920px;
     margin: 60px auto 0;
-    h2 {
+    h3 {
         text-align: center;
-        font-size: 24px;
-        font-weight: 500;
+        font-size: 32px;
+        text-transform: uppercase;
         margin-bottom: 55px;
     }
     table {
@@ -1588,9 +1591,7 @@ input, select, button, textarea {
         text-align: center;
         text-transform: uppercase;
         font-size: 32px;
-        font-weight: 400;
         margin-bottom: 50px;
-        letter-spacing: 2px;
     }
     h2 {
         margin-bottom: 15px;
@@ -1614,7 +1615,7 @@ input, select, button, textarea {
     }
 }
 .item-priority {
-    padding: 100px 0 0;
+    padding: 75px 0 0;
     .text {
         display: flex;
         align-items: center;
@@ -1645,35 +1646,67 @@ input, select, button, textarea {
     margin: 0 auto;
 }
 .mechanism-info {
-    margin: 0 0 50px 0;
+    margin: 0 auto 100px;
     display: flex;
+    align-items: center;
+    max-width: 1300px;
     & + span {
         font-size: 18px;
         display: block;
         margin-bottom: 35px;
     }
+    &.no-image {
+        max-width: 920px;
+        margin-left: auto;
+        margin-right: auto;
+        .image {
+            display: none;
+        }
+        .text {
+            h3 {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 32px;
+                font-weight: 400;
+                margin-bottom: 50px;
+                letter-spacing: 2px;
+            }
+            p {
+                line-height: 1.7;
+            }
+        }
+    }
     .image {
         flex: 0 0 auto;
         width: 100%;
         max-width: 420px;
-        margin-right: 125px;
+        margin-right: 10%;
+        .image-holder {
+            padding-top: 100%;
+            position: relative;
+        }
         img {
+            left: 0px;
+            top: 0px;
+            position: absolute;
             vertical-align: middle;
+            object-fit: cover;
+            height: 100%;
             width: 100%;
         }
     }
     .text {
         h3 {
-            font-size: 48px;
-            font-weight: 400;
+            font-size: 32px;
+            text-transform: uppercase;
             margin-bottom: 50px;
         }
         p {
             font-size: 16px;
-            line-height: 2;
+            line-height: 1.6;
         }
         p + p {
-            margin-top: 50px;
+            margin-top: 30px;
         }
     }
 }
