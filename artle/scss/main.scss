@@ -33,16 +33,17 @@ a {
     text-align: right;
 }
 body {
-    font-family: 'BodoniC';
+    font-family: 'Bodoni72C';
     font-size: 14px;
     line-height: 1;
     padding-top: 130px;
 }
 
 input, select, button, textarea {
-    font-family: 'BodoniC';
+    font-family: 'Bodoni72C';
 }
 h1,h2,h3,h4 {
+    font-family: 'BodoniC';
     font-weight: 400;
 }
 
@@ -1644,6 +1645,50 @@ h1,h2,h3,h4 {
 .about-mechanism-wrap {
     max-width: 1400px;
     margin: 0 auto;
+    position: relative;
+    .swiper-pagination-progressbar {
+        width: 100%;
+        height: 5px;
+        top: auto;
+        bottom: -40px;
+        background: rgba(#000,0.09);
+    }
+    .swiper-pagination-progressbar.hidden {
+        display: none;
+    }
+    .swiper-pagination-progressbar-fill {
+        background: #000;
+    }
+    .btn-next,
+    .btn-prev {
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        line-height: 60px;
+        font-size: 24px;
+        top: 50%;
+        margin: -30px 0 0 0;
+        z-index: 1;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            background: #009bff;
+        }
+        &.swiper-button-disabled {
+            opacity: 0;
+        }
+    }
+    .btn-next {
+        right: -30px;
+    }
+    .btn-prev {
+        left: -30px;
+    }
 }
 .mechanism-info {
     margin: 0 auto 100px;
@@ -1712,52 +1757,12 @@ h1,h2,h3,h4 {
 }
 .mechanism-slider {
     overflow: visible;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     img {
         vertical-align: middle;
         max-width: 100%;
     }
-    .swiper-pagination-progressbar {
-        top: auto;
-        bottom: -80px;
-        background: rgba(#000,0.09);
-    }
-    .swiper-pagination-progressbar.hidden {
-        display: none;
-    }
-    .swiper-pagination-progressbar-fill {
-        background: #000;
-    }
-    .btn-next,
-    .btn-prev {
-        position: absolute;
-        display: block;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background: #000;
-        color: #fff;
-        text-align: center;
-        line-height: 60px;
-        font-size: 24px;
-        top: 50%;
-        margin: -30px 0 0 0;
-        z-index: 1;
-        cursor: pointer;
-        transition: all 0.3s;
-        &:hover {
-            background: #009bff;
-        }
-        &.swiper-button-disabled {
-            opacity: 0;
-        }
-    }
-    .btn-next {
-        right: -30px;
-    }
-    .btn-prev {
-        left: -30px;
-    }
+    
 }
 .warranty-returns {
     padding: 140px 0;

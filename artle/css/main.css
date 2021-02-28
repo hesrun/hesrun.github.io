@@ -36,17 +36,18 @@ a:hover {
 }
 
 body {
-  font-family: 'BodoniC';
+  font-family: 'Bodoni72C';
   font-size: 14px;
   line-height: 1;
   padding-top: 130px;
 }
 
 input, select, button, textarea {
-  font-family: 'BodoniC';
+  font-family: 'Bodoni72C';
 }
 
 h1, h2, h3, h4 {
+  font-family: 'BodoniC';
   font-weight: 400;
 }
 
@@ -2237,6 +2238,61 @@ h1, h2, h3, h4 {
 .about-mechanism-wrap {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+}
+
+.about-mechanism-wrap .swiper-pagination-progressbar {
+  width: 100%;
+  height: 5px;
+  top: auto;
+  bottom: -40px;
+  background: rgba(0, 0, 0, 0.09);
+}
+
+.about-mechanism-wrap .swiper-pagination-progressbar.hidden {
+  display: none;
+}
+
+.about-mechanism-wrap .swiper-pagination-progressbar-fill {
+  background: #000;
+}
+
+.about-mechanism-wrap .btn-next,
+.about-mechanism-wrap .btn-prev {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  top: 50%;
+  margin: -30px 0 0 0;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.about-mechanism-wrap .btn-next:hover,
+.about-mechanism-wrap .btn-prev:hover {
+  background: #009bff;
+}
+
+.about-mechanism-wrap .btn-next.swiper-button-disabled,
+.about-mechanism-wrap .btn-prev.swiper-button-disabled {
+  opacity: 0;
+}
+
+.about-mechanism-wrap .btn-next {
+  right: -30px;
+}
+
+.about-mechanism-wrap .btn-prev {
+  left: -30px;
 }
 
 .mechanism-info {
@@ -2321,64 +2377,12 @@ h1, h2, h3, h4 {
 
 .mechanism-slider {
   overflow: visible;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .mechanism-slider img {
   vertical-align: middle;
   max-width: 100%;
-}
-
-.mechanism-slider .swiper-pagination-progressbar {
-  top: auto;
-  bottom: -80px;
-  background: rgba(0, 0, 0, 0.09);
-}
-
-.mechanism-slider .swiper-pagination-progressbar.hidden {
-  display: none;
-}
-
-.mechanism-slider .swiper-pagination-progressbar-fill {
-  background: #000;
-}
-
-.mechanism-slider .btn-next,
-.mechanism-slider .btn-prev {
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #000;
-  color: #fff;
-  text-align: center;
-  line-height: 60px;
-  font-size: 24px;
-  top: 50%;
-  margin: -30px 0 0 0;
-  z-index: 1;
-  cursor: pointer;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.mechanism-slider .btn-next:hover,
-.mechanism-slider .btn-prev:hover {
-  background: #009bff;
-}
-
-.mechanism-slider .btn-next.swiper-button-disabled,
-.mechanism-slider .btn-prev.swiper-button-disabled {
-  opacity: 0;
-}
-
-.mechanism-slider .btn-next {
-  right: -30px;
-}
-
-.mechanism-slider .btn-prev {
-  left: -30px;
 }
 
 .warranty-returns {
@@ -3781,10 +3785,16 @@ fieldset legend {
     padding: 10px;
   }
   .item-banner {
-    padding: 120px 60px;
+    padding: 50px 60px;
   }
   .tech-params-table {
-    margin-top: 80px;
+    margin-top: 50px;
+  }
+  .mechanism-info .image {
+    display: none;
+  }
+  .mechanism-info .text h3 {
+    text-align: center;
   }
   .about-mechanism {
     padding: 50px 30px;
@@ -4433,31 +4443,32 @@ fieldset legend {
     right: 20px;
     padding: 10px;
   }
-  .about-mechanism-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: auto;
+  .about-mechanism {
+    overflow: visible;
   }
-  .about-mechanism-wrap .btn-prev,
-  .about-mechanism-wrap .btn-next {
-    display: none;
+  .about-mechanism .mechanism-slider {
+    overflow: hidden;
   }
-  .mechanism-slider {
+  .mechanism-info {
+    margin-bottom: 50px;
+  }
+  .mechanism-info .text h3 {
+    font-size: 24px;
     margin-bottom: 30px;
   }
-  .mechanism-slider .swiper-slide {
-    margin-right: 15px;
-  }
   .item-banner {
-    padding: 50px 30px;
+    padding: 30px 30px;
   }
   .item-banner h3 {
     font-size: 24px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
   .item-banner p {
     font-size: 13px;
+  }
+  .tech-params-table h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
   }
   .item-priority {
     padding: 30px 30px;

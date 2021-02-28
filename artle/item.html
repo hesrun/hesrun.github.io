@@ -177,14 +177,15 @@
                         </a>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                
+            </div>
+            <div class="swiper-pagination"></div>
                 <div class="btn-next">
                     <i class="mdi mdi-arrow-right"></i>
                 </div>
                 <div class="btn-prev">
                     <i class="mdi mdi-arrow-left"></i>
                 </div>
-            </div>
         </div>
     </section>
 
@@ -920,22 +921,16 @@
                 prevEl: '.btn-prev',
             },
             breakpoints: {
-                480: {
-                    slidesPerView: 'auto',
-                    spaceBetween: 50
+                420: {
+                    slidesPerView: '2',
+                    spaceBetween: 30
                 },
-                // when window width is >= 640px
                 1024: {
                     slidesPerView: 3,
                     spaceBetween: 70,
                 }
             }
         });
-
-        const mediaQuery = window.matchMedia('(max-width: 420px)')
-        if (mediaQuery.matches) {
-            swiper.destroy( true, true )
-        }
     </script>
 </body>
 
