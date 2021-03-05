@@ -163,8 +163,8 @@
       }
 
       .powered-by {
-         border-top: 1px rgba(#fff,0.5) solid;
-         border-bottom: 1px rgba(#fff,0.5) solid;
+         border-top: 1px rgba(#fff,0.1) solid;
+         border-bottom: 1px rgba(#fff,0.1) solid;
          margin: 30px -30px;
          padding: 30px 30px;
          text-align: center;
@@ -324,9 +324,6 @@
    }
 
    .faq-slider {
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
       .item {
          h2 {
             font-size: 14px;
@@ -341,27 +338,6 @@
          }
          .owl-next {
             right: 0px;
-         }
-      }
-   }
-   
-   /*******************catalog-item-card**************/
-
-   .catalog-item-card {
-      display: block;
-      > div {
-         margin-bottom: 30px;
-      }
-      .product-card-img {
-         margin-bottom: 30px;
-      }
-   }
-   .product-card-info {
-      .table-condition {
-         table {
-            td {
-               padding: 5px 0;
-            }
          }
       }
    }
@@ -458,11 +434,15 @@
       display: block;
       .investments-list {
          padding: 0px;
-         margin-bottom: 30px;
+         margin-bottom: 60px;
       }
    }
    .basket-total {
       width: 100%;
+      .small-btn.green {
+         padding-top: 15px;
+         padding-bottom: 15px;
+      }
    }
 
    /********************chronofund-team************/
@@ -530,6 +510,26 @@
    .catalog-grid {
       grid-template-columns: 1fr;
       grid-gap: 30px;
+   }
+   /*******************catalog-item-card**************/
+
+   .catalog-item-card {
+      display: block;
+      > div {
+         margin-bottom: 30px;
+      }
+      .product-card-img {
+         margin-bottom: 30px;
+      }
+   }
+   .product-card-info {
+      .table-condition {
+         table {
+            td {
+               padding: 5px 0;
+            }
+         }
+      }
    }
 }
 
@@ -637,7 +637,7 @@
 
       .chorono-info {
          img {
-            max-width: 200px;
+            max-width: 260px;
          }
 
          p {
@@ -753,8 +753,16 @@
 
    /********************left-side-navigation*********/
    .left-side-navigation {
+      width: 100%;
       top: 70px;
       height: calc(100vh - 70px);
+      padding-bottom: 0px;
+      .soc-and-apps {
+         display: none;
+      }
+      .powered-by {
+         margin-bottom: 0px;
+      }
    }
 
    /********************main-content*********/
@@ -884,12 +892,17 @@
    /*********************products-compare*************/
    .products-compare {
       margin-right: -15px;
+      margin-left: -15px;
 
       .products-compare-params {
          width: 120px;
 
          span {
             font-size: 10px;
+            padding-left: 10px;
+            i {
+               display: none;
+            }
          }
 
          span:first-child {
@@ -938,6 +951,11 @@
       .params-list {
          b {
             font-size: 13px;
+         }
+      }
+      .btns {
+         i.mdi {
+            display: none;
          }
       }
    }
@@ -1166,6 +1184,10 @@
 
       label {
          font-size: 14px;
+      }
+      .c-input-icon-field {
+         top: 27px;
+         line-height: 35px;
       }
       .dk-select {
          height: 35px;
