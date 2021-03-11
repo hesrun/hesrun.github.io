@@ -3162,11 +3162,10 @@ h1, h2, h3, h4 {
 
 /**********************ui**********************/
 .c-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: inline-block;
   background: none;
   height: 50px;
+  line-height: 48px;
   border: 1px rgba(0, 0, 0, 0.4) solid;
   font-size: 12px;
   text-transform: uppercase;
@@ -3174,12 +3173,6 @@ h1, h2, h3, h4 {
   letter-spacing: 2px;
   color: inherit;
   text-decoration: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-radius: 30px;
   padding: 0 60px;
   cursor: pointer;
@@ -3211,6 +3204,7 @@ h1, h2, h3, h4 {
 }
 
 .c-button.icon-right .mdi {
+  vertical-align: top;
   margin-left: 5px;
 }
 
@@ -4324,6 +4318,9 @@ fieldset legend {
     text-transform: uppercase;
     font-size: 12px;
   }
+  .made-by-with img {
+    margin-top: -4px;
+  }
   .nav-top-brands-list a {
     padding-left: 10px;
     padding-right: 10px;
@@ -4375,6 +4372,12 @@ fieldset legend {
     margin: 0px;
   }
   .catalog-grid-item .name {
+    font-size: 12px;
+  }
+  .catalog-grid-item .price b {
+    font-size: 12px;
+  }
+  .catalog-grid-item .price .status {
     font-size: 12px;
   }
   .catalog-grid-item .descr {
@@ -4892,7 +4895,6 @@ fieldset legend {
     display: block;
   }
   .club-modal .join-our-club {
-    display: block;
     padding: 40px 30px 30px;
   }
   .club-modal .join-our-club h2 {
@@ -5097,6 +5099,7 @@ fieldset legend {
   .c-button {
     padding: 0 15px;
     height: 45px;
+    line-height: 43px;
     font-size: 12px;
   }
   .c-button.icon {
