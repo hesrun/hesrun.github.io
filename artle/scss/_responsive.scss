@@ -28,9 +28,6 @@
     }
     .section-title {
         margin-bottom: 70px;
-        h1 {
-            font-size: 38px;
-        }
     }
     .paddings {
         padding: 50px 50px;
@@ -321,9 +318,6 @@
         .row + .right-row {
             margin-top: -60px;
         }
-        h1 {
-            font-size: 38px;
-        }
         .text {
             padding: 0px 50px 0 0;
             p {
@@ -373,7 +367,6 @@
         padding-top: 60px;
         > h2 {
             margin: 0px 0 70px 0;
-            font-size: 38px;
         }
     }
     .our-club-priorities {
@@ -384,9 +377,6 @@
     }
     .join-club-form {
         margin: 80px 0;
-        h2 {
-            font-size: 36px;
-        }
         .c-button {
             margin-top: 0px;
         } 
@@ -562,9 +552,11 @@
         margin-bottom: 40px;
         h2 {
             font-size: 20px;
+            letter-spacing: 2px;
         }
         h1 {
-            font-size: 28px;
+            font-size: 20px;
+            letter-spacing: 2px;
         }
     }
 
@@ -694,22 +686,8 @@
         }
         .partners-info {
             flex-direction: column-reverse;
-            
             .partner {
                 margin-bottom: 45px;
-                padding-bottom: 45px;
-                position: relative;
-                &:after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0px;
-                    left: 50%;
-                    margin-left: -40px;
-                    display: block;
-                    width: 80px;
-                    height: 2px;
-                    background: rgba(#000,0.18);
-                }
             }
         }
     }
@@ -777,7 +755,11 @@
     }
     
     .made-by-with {
+        letter-spacing: 1px;
         display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 12px;
     }
 
     .nav-top-brands-list a {
@@ -875,7 +857,8 @@
             margin-bottom: 40px;
         }
         h2 {
-            font-size: 28px;
+            font-size: 20px;
+            letter-spacing: 2px;
         }
         p {
             font-size: 14px;
@@ -927,27 +910,39 @@
         margin-bottom: 50px;
         .text {
             h3 {
-                font-size: 24px;
-                margin-bottom: 30px;
+                font-size: 20px;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 14px;
             }
         }
     }
 
     .item-banner {
         h3 {
-            font-size: 24px;
-            margin-bottom: 30px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
         p {
-            font-size: 13px;
+            font-size: 14px;
         }
     }
 
     .tech-params-table {
         h3 {
-            font-size: 24px;
-            margin-bottom: 30px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
+        table {
+            td {
+                font-size: 14px;
+            }
+        }
+        
     }
 
     .item-priority {
@@ -981,6 +976,7 @@
             margin-bottom: 30px;
         }
         p {
+            font-size: 14px;
             line-height: 1.7;
         }
         .blocks {
@@ -999,8 +995,9 @@
     .our-club-section {
         padding-top: 40px;
         > h2 {
-            font-size: 28px;
-            margin-bottom: 60px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
         }
     }
     .our-club-priorities {
@@ -1017,9 +1014,9 @@
         margin: 0 0 60px;
         padding: 30px;
         h2 {
-            font-size: 24px;
-            letter-spacing: 1px;
-            margin: 30px 0 50px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin: 0px 0 30px;
         }
         .c-button {
             margin-top: 10px;
@@ -1027,7 +1024,8 @@
     }
     .also-in-club {
         h2 {
-            font-size: 24px;
+            font-size: 20px;
+            letter-spacing: 2px;
         }
         ul {
             margin-bottom: 40px;
@@ -1155,6 +1153,11 @@
 /***************about-artle**************/
     .about-artle {
         overflow: hidden;
+        padding: 0 30px;
+        margin: 30px 0;
+        .section-title {
+            margin-bottom: 30px;
+        }
         .row {
             position: relative;
             display: block;
@@ -1171,6 +1174,9 @@
         }
         .text {
             padding: 0px 100px 50% 0;
+            p {
+                line-height: 1.7;
+            }
         }
         .row .image {
             padding: 0px;
@@ -1255,7 +1261,7 @@
     .main-footer-container {
         .our-properties {
             display: block;
-            margin: 0 0 40px 0;
+            margin: 0 0 30px 0;
             width: 100%;
             .item {
                 width: 100%;
@@ -1265,6 +1271,16 @@
     }
     .footer-info-links {
         display: block;
+        strong {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        a {
+            font-size: 14px;
+        }
         .item {
             margin: 0 0 40px 0;
             width: auto;
@@ -1543,11 +1559,18 @@
             }
         }
     }
+    /**************empty-cap***************/
+    .empty-cap {
+        h2 {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+    }
     /*******************ui*****************/
     .c-button {
         padding: 0 15px;
         height: 45px;
-        font-size: 11px;
+        font-size: 12px;
         &.icon {
             width: 45px;
         }
@@ -1555,7 +1578,7 @@
     .c-input {
         input {
             height: 45px;
-            font-size: 14px;
+            font-size: 12px;
         }
         textarea {
             font-size: 14px;
