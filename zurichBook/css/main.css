@@ -274,11 +274,11 @@ button, input, select, textarea {
 }
 
 .goods-list.by-3 .goods-list-item {
-    height: 33.333%;
+    height: calc(33.333% - 16.666px);
 }
 
 .goods-list.by-2 .goods-list-item {
-    height: 50%;
+    height: calc(50% - 12.5px);
 }
 
 .goods-list.by-1 .goods-list-item {
@@ -286,6 +286,7 @@ button, input, select, textarea {
 }
 
 .goods-list-item {
+    flex: 0 0 auto;
     position: relative;
     margin-top: 25px;
 }
@@ -610,7 +611,7 @@ button, input, select, textarea {
     flex: 1 1 auto;
 }
 
-.goods-item-info .text:after {
+/* .goods-item-info .text:after {
     content: "";
     display: block;
     position: absolute;
@@ -620,7 +621,7 @@ button, input, select, textarea {
     height: 1px;
     background: #fff;
     box-shadow: 0 0 10px 10px #fff;
-}
+} */
 
 .goods-item-info .goods-footer {
     margin-top: auto;
@@ -738,6 +739,8 @@ button, input, select, textarea {
 .full-page-image {
     padding: 20px 20px 0px 20px;
     position: relative;
+    flex: 1 1 auto;
+    overflow: hidden;
 }
 .full-page-image .btn {
     position: absolute;
