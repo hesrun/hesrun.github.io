@@ -125,8 +125,25 @@
                            <div class="categoty-navigation-menu">
                               <div class="width-banners">
                                  <ul class="categoty-name-list">
-                                    <li>
+                                    <li class="has-sublinks">
                                        <a href="">All <i class="mdi mdi-chevron-right"></i></a>
+                                       <ul class="nav-lvl-3-list">
+                                          <li>
+                                             <a href="">nav-lvl-3</a>
+                                          </li>
+                                          <li>
+                                             <a href="">nav-lvl-3</a>
+                                          </li>
+                                          <li>
+                                             <a href="">nav-lvl-3</a>
+                                          </li>
+                                          <li>
+                                             <a href="">nav-lvl-3</a>
+                                          </li>
+                                          <li>
+                                             <a href="">nav-lvl-3</a>
+                                          </li>
+                                       </ul>
                                     </li>
                                     <li>
                                        <a href="">до 500 <i class="mdi mdi-chevron-right"></i></a>
@@ -2962,6 +2979,10 @@
       if (window.matchMedia("(max-width: 768px)").matches) {
          $('.main-navigation > ul > li > a').click(function(){
             $(this).next().slideToggle();
+         })
+         $('.has-sublinks > a').click(function(){
+            $(this).next().slideToggle();
+            return false;
          })
       } else {
          $('.categoty-name-list a').click(function(e){

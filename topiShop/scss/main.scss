@@ -378,10 +378,16 @@ input,select,textarea,button,a {
 		position: relative;
 		margin-bottom: 20px;
 		transition: all 0.2s;
-		img {
-			width: 100%;
+		a {
+			display: block;
+			height: 400px;
 		}
-		.sale,.price {
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		.sale,.price,.hit {
 			font-family: "PT Serif";
 			font-weight: 600;
 			right: 13px;
@@ -399,6 +405,13 @@ input,select,textarea,button,a {
 		.price {
 			bottom: -10px;
 			background: $salat;
+		}
+		.hit {
+			background: #009bff;
+			color: #fff;
+			right: auto;
+			top: -15px;
+			left: 10px;
 		}
 	}
 	.product-descr {
@@ -596,6 +609,16 @@ input,select,textarea,button,a {
 	}
 	.image {
 		margin-right: 25px;
+		a {
+			display: block;
+			width: 200px;
+			height: 200px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 	h2 {
 		font-size: 20px;
@@ -606,7 +629,9 @@ input,select,textarea,button,a {
 		font-weight: 400;
 	}
 	a {
+		
 		text-decoration: none;
+		
 		&:hover {
 			color: $salat;
 		}
@@ -755,6 +780,14 @@ input,select,textarea,button,a {
 		}
 	}
 }
+.user-adress.first {
+	display: flex;
+	flex-direction: column;
+	.next.bot {
+		margin-top: auto;
+	}
+}
+
 .profile-data-agree {
 	display: flex;
 	justify-content: space-between;
@@ -847,6 +880,69 @@ input,select,textarea,button,a {
 	margin-bottom: 50px;
 	.pay-methods-item {
 		width: 250px;
+	}
+}
+/*-------------------profile-data-agree--------------------*/
+.checkout-page {
+	.section-title {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.checks-toggle,
+	.data-form {
+		margin-bottom: 50px;
+	}
+	.final {
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 50px;
+		span {
+			color: #5a9500;
+			font-weight: 900;
+		}
+	}
+}
+.checkout-page-center {
+	max-width: 700px;
+	margin: 0 auto;
+}
+.checks-toggle {
+	display: flex;
+	border-radius: 10px;
+	overflow: hidden;
+	input {
+		display: none;
+	}
+	label {
+		width: 50%;
+		text-align: center;
+		padding: 30px 15px;
+		flex: 1 1 auto;
+		background: #5a9500;
+		color: #fff;
+		cursor: pointer;
+		transition: all 0.3s;
+		&:hover {
+			background: rgba(#5a9500, 0.8);
+		}
+		b {
+			font-size: 20px;
+		}
+		p {
+			font-size: 12px;
+			margin-top: 5px;
+		}
+		strong {
+			display: block;
+			font-size: 18px;
+			margin-top: 5px;
+		}
+	}
+	input:checked + label {
+		background: rgba(#5a9500, 0.8);
+	}
+	label ~ label {
+		border-left: 1px rgba(#fff,.2) solid;
 	}
 }
 /*-------------------user-parlour--------------------*/
@@ -1593,8 +1689,6 @@ textarea.topi-input {
 		}
 	}
 	/*-------------------topi-reviews--------------------*/
-	.topi-reviews-grid {
-	}
 	.review-item {
 		.image {
 			width: 70px;
