@@ -1,0 +1,204 @@
+@import url(../font/font.css);
+*, *:before, *:after {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'GT America Extended';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.container {
+  max-width: 1500px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*****************header****************/
+.main-header {
+  height: 120px;
+  width: 100%;
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  color: #fff;
+}
+
+.header-logo {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 340px;
+  height: 75px;
+  background-image: url(../img/logo-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-main-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.header-main-links a {
+  text-decoration: none;
+}
+
+.header-main-links > li {
+  margin-right: 20px;
+}
+
+.header-main-links li > a {
+  color: #fff;
+}
+
+.header-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-tools .header-btn {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.header-select {
+  margin-left: 20px;
+}
+
+.header-select select {
+  color: #fff;
+  background: none;
+  border: none;
+}
+
+.header-select option {
+  color: #000;
+}
+
+/****************caatalog-grid************/
+.products-section {
+  padding: 50px 0;
+  background-color: #F3F3F5;
+}
+
+.product-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.product-grid-item {
+  background: #fff;
+  position: relative;
+}
+
+.product-grid-item:hover:before, .product-grid-item:hover:after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.product-grid-item:hover .image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.product-grid-item:before, .product-grid-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.product-grid-item:before {
+  left: 0px;
+  top: 0px;
+  border-left: 1px #0D0859 solid;
+  border-top: 1px #0D0859 solid;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.product-grid-item:after {
+  right: 0px;
+  bottom: 0px;
+  border-right: 1px #0D0859 solid;
+  border-bottom: 1px #0D0859 solid;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+.product-grid-item .image {
+  display: block;
+  overflow: hidden;
+}
+
+.product-grid-item .image img {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+.product-grid-item .data {
+  padding: 0 35px 35px 35px;
+}
+
+.product-grid-item .brand {
+  display: block;
+  color: rgba(13, 8, 89, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.product-grid-item .name {
+  display: block;
+  color: #0D0859;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0 20px;
+}
+
+.product-grid-item .price {
+  color: #B7933D;
+  font-size: 16px;
+  font-weight: 500;
+}
+/*# sourceMappingURL=main.css.map */

@@ -2523,6 +2523,13 @@ a {
       display: none;
    }
 }
+/*******************search-modal*************/
+.search-mobile-modal {
+   .search-result-list {
+      position: static;
+   }
+}
+
 /*******************frame-modal*************/
 .frame-modal {
    position: fixed;
@@ -2805,6 +2812,19 @@ a {
    &.disabled {
       opacity: 0.5;
       pointer-events: none;
+      .mdi-loading {
+         display: inline-block;
+      }
+   }
+   .mdi-loading {
+      display: none;
+   }
+   &.icon-right {
+      .mdi {
+         vertical-align: middle;
+         margin-left: 10px;
+         font-size: 28px;
+      }
    }
    &.icon-left {
       .mdi {

@@ -197,10 +197,14 @@ button, input, select, textarea {
     margin: 0 auto 10px;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
     -ms-flex-pack: justify;
     justify-content: space-between;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
+}
+.main-content .top-nav .text {
+    font-size: 22px;
 }
 
 .page-title {
@@ -264,31 +268,30 @@ button, input, select, textarea {
 }
 
 .goods-list {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    display: grid;
     padding: 20px 20px 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
-
-.goods-list.by-3 .goods-list-item {
-    height: calc(33.333% - 16.666px);
-}
-
-.goods-list.by-2 .goods-list-item {
-    height: calc(50% - 12.5px);
-}
-
-.goods-list.by-1 .goods-list-item {
     height: 100%;
+    gap: 20px 0;
+}
+
+.goods-list.by-3 {
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.goods-list.by-2 {
+    grid-template-rows: 1fr 1fr;
+}
+.goods-list.by-2 .goods-item-info .text {
+    max-height: 240px;
+}
+
+.goods-list.by-1 {
+    grid-template-rows: 1fr;
 }
 
 .goods-list-item {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     position: relative;
-    margin-top: 25px;
 }
 
 .goods-list-item:first-child {
@@ -597,6 +600,7 @@ button, input, select, textarea {
 
 .goods-item-info h2 {
     margin: -5px 0 10px;
+    padding-right: 60px;
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -648,7 +652,7 @@ button, input, select, textarea {
     padding: 0 10px;
 }
 
-.goods-item-info .goods-footer .btns .btn.icon {
+.goods-item-info .goods-footer .btns > .btn {
     margin-left: 10px;
 }
 
@@ -1112,6 +1116,8 @@ button, input, select, textarea {
 
 .modal-add-wrap .info {
     font-size: 20px;
+    flex: 1 1 auto;
+    padding-right: 20px;
 }
 
 .modal-add-wrap .info .name {
@@ -1119,9 +1125,13 @@ button, input, select, textarea {
 }
 
 .modal-add-wrap .btns {
-    position: absolute;
-    right: 0px;
-    bottom: 15px;
+    flex: 0 0 auto;
+}
+
+.modal-add-wrap .btns .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
 }
 /********************qr modal**************/
 .modal-qr-code {
@@ -1145,14 +1155,13 @@ button, input, select, textarea {
     background: none;
     text-align: center;
     display: inline-block;
-    height: 34px;
-    line-height: 30px;
+    line-height: 20px;
+    padding: 6px 20px;
     font-size: 15px;
     border-width: 2px;
     border-style: solid;
     text-decoration: none;
     font-weight: 600;
-    padding: 0 20px;
     color: #25254a;
     text-transform: uppercase;
     cursor: pointer;
@@ -1211,6 +1220,26 @@ button, input, select, textarea {
 .btn.btn-red.filled:hover {
     border-color: #740303;
     background: #740303;
+}
+
+.btn.btn-green.outline {
+    border-color: #34a300;
+}
+
+.btn.btn-green.outline:hover {
+    background-color: #34a300;
+    color: #fff;
+}
+
+.btn.btn-green.filled {
+    border-color: #34a300;
+    background: #34a300;
+    color: #fff;
+}
+
+.btn.btn-green.filled:hover {
+    border-color: #34a300;
+    background: #34a300;
 }
 
 .btn.icon {

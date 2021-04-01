@@ -907,21 +907,22 @@ input,select,textarea,button,a {
 	margin: 0 auto;
 }
 .checks-toggle {
-	display: flex;
 	border-radius: 10px;
 	overflow: hidden;
 	input {
 		display: none;
 	}
 	label {
-		width: 50%;
+		display: block;
 		text-align: center;
-		padding: 30px 15px;
-		flex: 1 1 auto;
+		padding: 15px 15px;
 		background: #5a9500;
 		color: #fff;
 		cursor: pointer;
 		transition: all 0.3s;
+		~ label {
+			border-top: 1px rgba(#fff, 0.1) solid;
+		}
 		&:hover {
 			background: rgba(#5a9500, 0.8);
 		}
@@ -944,6 +945,10 @@ input,select,textarea,button,a {
 	label ~ label {
 		border-left: 1px rgba(#fff,.2) solid;
 	}
+}
+.shipping-information {
+	margin: -30px 0 50px;
+	padding: 0 30px;
 }
 /*-------------------user-parlour--------------------*/
 .user-parlour-wrap {
@@ -1337,17 +1342,47 @@ textarea.topi-input {
 .form-item {
 	display: flex;
 	margin-bottom: 25px;
-   &.vertical {
-      flex-direction: column;
-      label {
-         width: auto;
-         margin-bottom: 10px;
-      }
-   }
+	&.vertical {
+		flex-direction: column;
+		label {
+			width: auto;
+			margin-bottom: 10px;
+		}
+	}
 	label {
 		width: 120px;
 		padding: 12px 15px 0 0;
 		flex: 0 0 auto;
+	}
+	&.floating {
+		position: relative;
+		margin-bottom: 35px;
+		input:focus,
+		textarea:focus {
+			& + label {
+				top: -20px;	
+				color: #5a9500;
+				font-size: 12px;
+			}
+		}
+		&.active {
+			label {
+				top: -20px;	
+				color: #5a9500;
+				font-size: 12px;
+			}
+		}
+		label {
+			pointer-events: none;
+			padding: 0px;
+			width: auto;
+			position: absolute;
+			left: 21px;
+			top: 12px;
+			white-space: nowrap;
+			transition: all 0.3s;
+			
+		}
 	}
 }
 .topi-toggle {
