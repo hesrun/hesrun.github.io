@@ -31,6 +31,8 @@ body {
     justify-content: space-between;
     position: fixed;
     color: #fff;
+    z-index: 100;
+    transition: all 0.3s;
 }
 .header-logo {
     display: block;
@@ -43,6 +45,7 @@ body {
     background-image: url(../img/logo-white.svg);
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 0.3s;
 }
 
 .header-main-links {
@@ -66,6 +69,7 @@ body {
         text-decoration: none;
         font-size: 24px;
         margin-left: 20px;
+        transition: all 0.3s;
     }
 }
 .header-select {
@@ -74,12 +78,101 @@ body {
         color: #fff;
         background: none;
         border: none;
+        transition: all 0.3s;
     }
     option {
         color: #000;
     }
 }
-
+.main-header.white {
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba($blue,0.5);
+    .header-logo {
+        background-image: url(../img/logo-color.svg);
+    }
+    .header-main-links {
+        li > a {
+            color: #000;
+        }
+    }
+    .header-tools {
+        .header-btn {
+            color: #000;
+        }
+    }
+    .header-select {
+        select {
+            color: #000;
+        }
+    }
+    &.mini {
+        height: 60px;
+        .header-logo {
+            background-image: url(../img/logo-color-mini.svg);
+        }
+    }
+}
+/*****************dont-miss-section*******/
+.line-header {
+    font-size: 18px;
+    font-weight: 500;
+    color: $blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 80px;
+        height: 1px;
+        background: $brown;
+        margin-right: 20px;
+        vertical-align: top;
+    }
+}
+.dont-miss-section {
+    padding: 50px 0 30px;
+}
+.dont-miss-text {
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    justify-content: space-between;
+    margin-bottom: 110px;
+    strong {
+        font-size: 40px;
+        flex: 0 0 auto;
+        font-weight: 500;
+        color: $blue;
+        line-height: 1.2;
+    }
+    p {
+        max-width: 600px;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+.link-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+        color: $grey;
+        border-bottom: 2px transparent solid;
+        padding: 5px 0;
+        transition: all 0.3s;
+        &:hover {
+            color: $blue;
+        }
+        &.active {
+            color: $blue;
+            border-color: rgba($brown,0.5);
+        }
+    }
+}
 /****************caatalog-grid************/
 .products-section {
     padding: 50px 0;
@@ -94,41 +187,12 @@ body {
     background: #fff;
     position: relative;
     &:hover {
-        &:before,
-        &:after {
-            transform: scale(1,1);
-        }
+
         .image {
             img {
                 transform: scale(1.1);
             }
         }
-    }
-    &:before,
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.7s;
-        transform: scale(0,0);
-        z-index: 1;
-        pointer-events: none;
-    }
-    &:before {
-        left: 0px;
-        top: 0px;
-        border-left: 1px rgba($blue,0.3) solid;
-        border-top: 1px rgba($blue,0.3) solid;
-        transform-origin: 0 0;
-    }
-    &:after {
-        right: 0px;
-        bottom: 0px;
-        border-right: 1px rgba($blue,0.3) solid;
-        border-bottom: 1px rgba($blue,0.3) solid;
-        transform-origin: 100% 100%;
     }
     .image {
         display: block;
