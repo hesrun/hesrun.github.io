@@ -15,7 +15,13 @@ body {
     font-weight: 400;
     line-height: 1;
 }
-
+input, button, textarea {
+    font-family: 'GT America Extended';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    outline: none;
+}
 .container {
     max-width: 1500px;
     padding: 0 15px;
@@ -223,5 +229,147 @@ body {
         color: $brown;
         font-size: 16px;
         font-weight: 500;
+    }
+}
+/*****************about-ineichen-section*************/
+.about-ineichen-section {
+    padding: 50px 0;
+    background: linear-gradient(to bottom, #fff 50%, #fff 50%, $grey-bg 50%, $grey-bg 100%);
+}
+.about-ineichen-land {
+    margin: 50px 0;
+    display: flex;
+    align-items: stretch;
+    .text {
+        color: #fff;
+        padding: 70px;
+        background: #0D0859;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        line-height: 2;
+    }
+    h3 {
+        margin-bottom: auto;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .image {
+        flex: 0 0 auto;
+        width: 60%;
+    }
+    img {
+        vertical-align: middle;
+        width: 100%;
+    }
+}
+.our-advantage-land {
+    margin: 50px 0;
+    display: flex;
+    align-items: stretch;
+    .image {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+    img {
+        vertical-align: middle;
+        width: 100%;
+    }
+    .text {
+        color: $blue;
+        padding: 70px;
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    ul {
+        margin-top: 10%;
+        padding-left: 60px;
+        li {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+    }
+}
+.stay-informed-land {
+    margin: 50px 0;
+    display: flex;
+    align-items: stretch;
+    .image {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+    img {
+        vertical-align: middle;
+        width: 100%;
+    }
+    .informed-form {
+        text-align: center;
+        flex: 1 1 auto;
+        background: $blue;
+        padding: 70px;
+        color: #fff;
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-bottom: 50px;
+    }
+}
+
+/*********************ui*****************/
+.c-input {
+    margin-bottom: 20px;
+    input {
+        width: 100%;
+        background: none;
+        padding: 0 30px;
+        height: 55px;
+        border: 1px transparent solid;
+        font-size: 16px;
+    }
+    &.white {
+        input {
+            border-color: rgba(#fff,0.2);
+            color: #fff;
+        }
+    }
+}
+.c-btn {
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    border: 1px transparent solid;
+    padding: 17px 30px;
+    line-height: 19px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: all 0.4s;
+    &.brown {
+        border-color: $brown;
+        color: $brown;
+        &:hover {
+            color: #fff;
+            background-color: $brown;
+        }
+        &.filled {
+            background-color: $brown;
+            color: #fff;
+            &:hover {
+                background-color: darken($brown,10);
+                border-color: darken($brown,10);
+            }
+        }
+    }
+    &.full-width {
+        width: 100%;
     }
 }
