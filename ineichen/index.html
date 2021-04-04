@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css">
 </head>
 <body>
     <header class="main-header">
@@ -58,7 +59,70 @@
         </div>
     </header>
     <div class="main-slider">
-        <img src="img/banner-img-1.jpg" alt="" style="width: 100%">
+        <div id="MainSlider" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="img/banner-img-1.jpg" alt="">
+                        <div class="splide_watch_text">
+                            <span class="brand">Rolex</span>
+                            <h2 class="name">OYSTer perpetual</h2>
+                            <span class="price">
+                                120’000 CHF
+                                <i class="mdi mdi-arrow-right"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <img src="img/banner-img-2.jpg" alt="">
+                        <div class="splide_watch_text">
+                            <span class="brand">Breguet</span>
+                            <h2 class="name">Breguet Reine De Naples</h2>
+                            <span class="price">
+                                120’000 CHF
+                                <i class="mdi mdi-arrow-right"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <img src="img/banner-img-1.jpg" alt="">
+                        <div class="splide_watch_text">
+                            <span class="brand">JAEGER</span>
+                            <h2 class="name">Girard-Perregaux Laureato</h2>
+                            <span class="price">
+                                120’000 CHF
+                                <i class="mdi mdi-arrow-right"></i>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="ThumbSlider" class="splide main-thumbs">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="splide_thumb">
+                            <span class="brand">Rolex</span>
+                            <span class="name">Submariner</span>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="splide_thumb">
+                            <span class="brand">Breguet</span>
+                            <span class="name">Breguet Reine De Naples</span>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="splide_thumb">
+                            <span class="brand">JAEGER</span>
+                            <span class="name">Girard-Perregaux Laureato</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <section class="dont-miss-section">
@@ -223,22 +287,89 @@
                 <div class="image">
                     <img src="img/our-office-image.jpg" alt="" class="">
                 </div>
-                <form action="" class="informed-form">
+                <div class="informed-form">
                     <h2>STAY INFORMED</h2>
-                    <div class="c-input white">
-                        <input type="text" placeholder="Your name">
+                    <form action="">
+                        <div class="c-input white">
+                            <input type="text" placeholder="Your name">
+                        </div>
+                        <div class="c-input white">
+                            <input type="text" placeholder="Your email">
+                        </div>
+                        <button class="c-btn brown filled full-width">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="ineichen-instagram">
+                <div class="title">
+                    <h3 class="line-header">OUR INSTAGRAM</h3>
+                    <button class="c-btn grey icon-left">
+                        <i class="mdi mdi-instagram"></i>
+                        Open Instagram
+                    </button>
+                </div>
+                <div class="instagram-grid">
+                    <div class="col">
+                        <img src="img/inst-img.png" alt="">
                     </div>
-                    <div class="c-input white">
-                        <input type="text" placeholder="Your email">
+                    <div class="col sub-grid">
+                        <div class="row">
+                            <div class="col">
+                                <img src="img/inst-img.png" alt="">
+                            </div>
+                            <div class="col">
+                                <img src="img/inst-img.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <img src="img/inst-img.png" alt="">
+                            </div>
+                            <div class="col">
+                                <img src="img/inst-img.png" alt="">
+                            </div>
+                        </div>
                     </div>
-                    <button class="c-btn brown filled full-width">Subscribe</button>
-                </form>
+                    <div class="col">
+                        <img src="img/inst-img.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
         
     </section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function () {
+            var secondarySlider = new Splide( '#ThumbSlider', {
+                height      : 75,
+                autoWidth: true,
+                gap         : 0,
+                pagination : false,
+                cover       : true,
+                isNavigation: true,
+                arrows     : false,
+                breakpoints : {
+                    '600': {
+                        fixedWidth: 66,
+                        height    : 40,
+                    }
+                },
+            } ).mount();
+            
+            var primarySlider = new Splide( '#MainSlider', {
+                type       : 'fade',
+                heightRatio: 0.5,
+                pagination : false,
+                arrows     : false,
+                cover      : true,
+            } ); // do not call mount() here.
+            
+            primarySlider.sync( secondarySlider ).mount();
+        } );
+    </script>
 </body>
 </html>

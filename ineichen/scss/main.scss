@@ -118,6 +118,75 @@ input, button, textarea {
         }
     }
 }
+/*******************main-slider**********/
+.main-slider {
+    position: relative;
+}
+.splide_watch_text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    .brand {
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .name {
+        font-size: 32px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 20px 0;
+    }
+    .price {
+        font-size: 18px;
+        color: $brown;
+        font-weight: 500;
+    }
+}
+.main-thumbs {
+    width: 100%;
+    max-width: 1200px;
+    position: absolute;
+    bottom: 20vh;
+    left: 50%;
+    margin-left: -600px;
+    z-index: 1;
+    .splide__list {
+        width: 100%;
+    }
+    .splide__slide {
+        color: #fff;
+        width: 33.333%;
+        border: none !important;
+        border-bottom: 2px rgba(#fff,0.2) solid !important;
+        cursor: pointer;
+        &:hover {
+            border-bottom: 2px rgba(#fff,1) solid !important;
+        }
+        &.is-active {
+            border-bottom: 2px rgba(#fff,1) solid !important;
+        }
+    }
+    .brand {
+        display: block;
+        color: rgba(#fff,0.5);
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+    .name {
+        font-size: 18px;
+    }
+}
 /*****************dont-miss-section*******/
 .line-header {
     font-size: 18px;
@@ -125,7 +194,7 @@ input, button, textarea {
     color: $blue;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 50px;
+    margin: 50px 0;
     &:before {
         content: "";
         display: inline-block;
@@ -133,7 +202,9 @@ input, button, textarea {
         height: 1px;
         background: $brown;
         margin-right: 20px;
+        margin-top: -30px;
         vertical-align: top;
+
     }
 }
 .dont-miss-section {
@@ -314,6 +385,10 @@ input, button, textarea {
         padding: 70px;
         color: #fff;
     }
+    form {
+        margin: 0 auto;
+        max-width: 500px;
+    }
     h2 {
         font-size: 30px;
         font-weight: 500;
@@ -321,7 +396,33 @@ input, button, textarea {
         margin-bottom: 50px;
     }
 }
-
+/********************ineichen-instagram**********/
+.ineichen-instagram {
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.instagram-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .sub-grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+    }
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
 /*********************ui*****************/
 .c-input {
     margin-bottom: 20px;
@@ -353,6 +454,12 @@ input, button, textarea {
     font-weight: 500;
     letter-spacing: 2px;
     transition: all 0.4s;
+    &.icon-left {
+        i.mdi {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    }
     &.brown {
         border-color: $brown;
         color: $brown;
@@ -367,6 +474,13 @@ input, button, textarea {
                 background-color: darken($brown,10);
                 border-color: darken($brown,10);
             }
+        }
+    }
+    &.grey {
+        border-color: rgba(#000,0.1);
+        &:hover {
+            border-color: $blue;
+            color: $blue;
         }
     }
     &.full-width {
