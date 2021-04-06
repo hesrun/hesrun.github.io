@@ -316,7 +316,10 @@
 }
 
 @media screen and (max-width: 768px) {
-
+   /*****************intro*************/
+   .intro-wrapper {
+      background-image: none;
+   }
    /*******************catalog-grid**************/
 
    .catalog-grid {
@@ -540,6 +543,67 @@
 }
 
 @media screen and (max-width: 520px) {
+   /*****************intro*************/
+   .intro-wrapper {
+      background-image: url(../img/sign-watch-mobile.png);
+      background-size: 100% auto;
+      background-position: bottom;
+      padding: 30px;
+      .logo {
+         text-align: center;
+      }
+      .intro-text {
+         margin-top: 30px;
+         text-align: center;
+         h2 {
+            font-size: 32px;
+         }
+         p {
+            margin-top: 20px;
+            font-size: 18px;
+            br {
+               display: none;
+            }
+         }
+      }
+      .privacy {
+         margin-top: 100vw;
+         display: block;
+         text-align: right;
+         img {
+            width: 110px;
+            margin-bottom: 5px;
+         }
+         .links {
+            margin: 0px;
+            text-align: right;
+         }
+      }
+      .btns {
+         margin-top: 30px;
+         font-size: 0px;
+         flex-wrap: wrap;
+         .c-btn {
+            max-width: none;
+            width: calc(50% - 10px);
+         }
+         .c-btn + .c-btn {
+            margin: 0px;
+         }
+         .c-btn:last-child {
+            margin-left: 20px;
+         }
+         .c-btn:first-child {
+            width: 100%;
+            margin-bottom: 20px;
+         }
+      }
+   }
+
+
+
+
+
    .catalog-grid-item {
       max-width: 100%;
       &.disabled {

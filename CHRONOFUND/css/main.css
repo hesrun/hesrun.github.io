@@ -401,6 +401,102 @@ a {
   width: 100%;
 }
 
+/******************intro*************/
+.intro-body {
+  height: 100%;
+}
+
+.intro-wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 60px;
+  background-image: url(../img/sign-watch-desktop.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+}
+
+.intro-wrapper.blue {
+  background-color: #131E32;
+  color: #fff;
+}
+
+.intro-wrapper.white .links a {
+  color: #8F92A1;
+}
+
+.intro-wrapper .intro-text {
+  margin: auto 0;
+}
+
+.intro-wrapper .intro-text h2 {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.intro-wrapper .intro-text h2 span {
+  color: #C6A55B;
+}
+
+.intro-wrapper .intro-text p {
+  font-weight: 500;
+  font-size: 23px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.intro-wrapper .btns {
+  margin-top: 50px;
+}
+
+.intro-wrapper .btns .c-btn {
+  border-radius: 0px;
+  width: 100%;
+  max-width: 190px;
+}
+
+.intro-wrapper .btns .c-btn + .c-btn {
+  margin-left: 20px;
+}
+
+.intro-wrapper .btns .clear-link {
+  color: #C6A55B;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.intro-wrapper .privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro-wrapper .links {
+  margin-left: 40px;
+}
+
+.intro-wrapper .links a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.intro-wrapper .links a:hover {
+  color: #C6A55B;
+}
+
 /********************main-header************/
 .main-header {
   position: -webkit-sticky;
@@ -5003,6 +5099,10 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  /*****************intro*************/
+  .intro-wrapper {
+    background-image: none;
+  }
   /*******************catalog-grid**************/
   .catalog-grid {
     grid-gap: 45px;
@@ -5202,6 +5302,63 @@ a {
 }
 
 @media screen and (max-width: 520px) {
+  /*****************intro*************/
+  .intro-wrapper {
+    background-image: url(../img/sign-watch-mobile.png);
+    background-size: 100% auto;
+    background-position: bottom;
+    padding: 30px;
+  }
+  .intro-wrapper .logo {
+    text-align: center;
+  }
+  .intro-wrapper .intro-text {
+    margin-top: 30px;
+    text-align: center;
+  }
+  .intro-wrapper .intro-text h2 {
+    font-size: 32px;
+  }
+  .intro-wrapper .intro-text p {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .intro-wrapper .intro-text p br {
+    display: none;
+  }
+  .intro-wrapper .privacy {
+    margin-top: 100vw;
+    display: block;
+    text-align: right;
+  }
+  .intro-wrapper .privacy img {
+    width: 110px;
+    margin-bottom: 5px;
+  }
+  .intro-wrapper .privacy .links {
+    margin: 0px;
+    text-align: right;
+  }
+  .intro-wrapper .btns {
+    margin-top: 30px;
+    font-size: 0px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .intro-wrapper .btns .c-btn {
+    max-width: none;
+    width: calc(50% - 10px);
+  }
+  .intro-wrapper .btns .c-btn + .c-btn {
+    margin: 0px;
+  }
+  .intro-wrapper .btns .c-btn:last-child {
+    margin-left: 20px;
+  }
+  .intro-wrapper .btns .c-btn:first-child {
+    width: 100%;
+    margin-bottom: 20px;
+  }
   .catalog-grid-item {
     max-width: 100%;
   }

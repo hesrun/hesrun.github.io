@@ -300,6 +300,82 @@ a {
       }
    }
 }
+
+/******************intro*************/
+.intro-body {
+   height: 100%;
+}
+.intro-wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 60px;
+   background-image: url(../img/sign-watch-desktop.png);
+   background-repeat: no-repeat;
+   background-position: right center;
+   background-size: auto 100%;
+   &.blue {
+      background-color: #131E32;
+      color: #fff;
+   }
+   &.white {
+      .links {
+         a {
+            color: #8F92A1;
+         }
+      }
+   }
+   .intro-text {
+      margin: auto 0;
+      h2 {
+         font-size: 60px;
+         line-height: 1;
+         span {
+            color: $brown;
+         }
+      }
+      p {
+         font-weight: 500;
+         font-size: 23px;
+         margin-top: 20px;
+         line-height: 1.5;
+      }
+   }
+   .btns {
+      margin-top: 50px;
+      .c-btn {
+         border-radius: 0px;
+         width: 100%;
+         max-width: 190px;
+         & + .c-btn {
+            margin-left: 20px;
+         }
+      }
+      .clear-link {
+         color: $brown;
+         font-size: 16px;
+         text-decoration: underline;
+         margin-left: 20px;
+         font-weight: 500;
+      }
+   }
+   .privacy {
+      display: flex;
+      align-items: center;
+   }
+   .links {
+      margin-left: 40px;
+      a {
+         text-transform: uppercase;
+         font-weight: 700;
+         font-size: 10px;
+         line-height: 1.8;
+         &:hover {
+            color: $brown;
+         }
+      }
+   }
+}
 /********************main-header************/
 .main-header {
    position: sticky;
