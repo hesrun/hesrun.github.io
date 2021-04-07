@@ -376,6 +376,134 @@ a {
       }
    }
 }
+
+.intro-modal {
+   position: fixed;
+   width: 100%;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   height: 100%;
+   background: #131E32;
+   border-radius: 0px;
+   max-width: 100%;
+   color: #fff;
+   padding: 0px;
+   .c-btn {
+      border-radius: 0px;
+      text-transform: none;
+   }
+   a.close-modal {
+      display: none;
+   }
+   .close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-size: 32px;
+      &:hover {
+         color: $brown;
+      }
+   }
+   .error {
+      top: 30px;
+      width: 100%;
+      position: absolute;
+      padding: 0 30px;
+      .error-item {
+         margin: 0 auto 10px;
+         max-width: 800px;
+         display: block;
+         margin-bottom: 10px;
+      }
+      span {
+         padding: 5px;
+         display: inline-block;
+         font-size: 12px;
+         font-weight: 500;
+         color: #F76844;
+         border: 1px #F76844 solid;
+         text-transform: uppercase;
+      }
+   }
+   .invite-info {
+      margin-top: 70px;
+      p {
+         font-size: 13px;
+         margin-top: 20px;
+         line-height: 1.4;
+      }
+   }
+   .folow-links {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      a {
+         margin-right: 10px;
+         display: block;
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         border: 2px #fff solid;
+         text-align: center;
+         line-height: 46px;
+         font-size: 24px;
+         transition: all 0.3s;
+         &:hover {
+            border-color: $brown;
+            background: $brown;
+         }
+      }
+      
+   }
+}
+
+.intro-modal-form {
+   height: 100%;
+   display: flex;
+   padding: 0 30px;
+   .title {
+      display: block;
+      font-size: 30px;
+      margin-bottom: 40px;
+   }
+   .form-row {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      .form-col {
+         width: 100%;
+         max-width: 320px;
+      }
+   }
+   .auth-by-social {
+      margin-top: 50px;
+      .c-btn {
+         width: 100%;
+         margin-bottom: 20px;
+      }
+   }
+   .have-account {
+      margin-top: 30px;
+      font-weight: 500;
+      a {
+         font-weight: 500;
+         color: $brown;
+         text-decoration: underline;
+      }
+   }
+   .btns {
+      .clear {
+         font-weight: 500;
+         margin-left: 20px;
+         color: $brown;
+         text-decoration: underline;
+      }
+   }
+}
+
 /********************main-header************/
 .main-header {
    position: sticky;
@@ -3002,6 +3130,15 @@ a {
          border-color: white;
          background: $blue;
          color: #fff;
+      }
+      &.outline {
+         background: transparent;
+         border-color: #fff;
+         color: #fff;
+         &:hover {
+            background: #fff;
+            color: $blue;
+         }
       }
    }
 }
