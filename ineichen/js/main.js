@@ -1,16 +1,16 @@
-var scTop = 0,
-    header = $('.main-header');
+var scTop = 0;
+
 
 $(window).scroll(function(){
     scTop = $(this).scrollTop();
     if (scTop > 400) {
-        header.addClass('white');
+        $('.main-header.clear').addClass('white');
         if (scTop > 800) {
-            header.addClass('mini');
+            $('.main-header').addClass('mini');
         } else {
-            header.removeClass('mini');    
+            $('.main-header').removeClass('mini');    
         }
     } else {
-        header.removeClass('white');
+        $('.main-header.clear').removeClass('white');
     }
 })
