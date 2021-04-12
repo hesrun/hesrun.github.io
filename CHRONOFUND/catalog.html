@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css">
    <link rel="stylesheet" href="css/main.css">
    <title>Document</title>
 </head>
@@ -60,6 +61,76 @@
                </div>
             </div>
          </div>
+         <div class="main-slider">
+            <div id="MainSlider" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="img/banner-img-1.jpg" alt="">
+                            <div class="splide_watch_text">
+                                <span class="brand">Rolex</span>
+                                <h2 class="name">
+                                 Classique Marine <br>
+                                 Chronograph Rose Gold
+                                </h2>
+                                <span class="price">
+                                    + CHF 2’000
+                                    <i class="mdi mdi-menu-right"></i>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/banner-img-2.jpg" alt="">
+                            <div class="splide_watch_text">
+                                <span class="brand">Breguet</span>
+                                <h2 class="name">Breguet Reine De Naples</h2>
+                                <span class="price">
+                                    120’000 CHF
+                                    <i class="mdi mdi-menu-right"></i>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <img src="img/banner-img-1.jpg" alt="">
+                            <div class="splide_watch_text">
+                                <span class="brand">JAEGER</span>
+                                <h2 class="name">Girard-Perregaux Laureato</h2>
+                                <span class="price">
+                                    120’000 CHF
+                                    <i class="mdi mdi-menu-right"></i>
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-thumbs-wrap">
+               <div id="ThumbSlider" class="splide main-thumbs">
+                  <div class="splide__track">
+                     <ul class="splide__list">
+                           <li class="splide__slide">
+                              <div class="splide_thumb">
+                                 <span class="brand">Rolex</span>
+                                 <span class="name">Classique Marine <br> Chronograph Rose Gold</span>
+                              </div>
+                           </li>
+                           <li class="splide__slide">
+                              <div class="splide_thumb">
+                                 <span class="brand">Breguet</span>
+                                 <span class="name">Breguet Reine De Naples</span>
+                              </div>
+                           </li>
+                           <li class="splide__slide">
+                              <div class="splide_thumb">
+                                 <span class="brand">JAEGER</span>
+                                 <span class="name">Girard-Perregaux Laureato</span>
+                              </div>
+                           </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+        </div>
          <div class="container">
             <aside class="left-side-navigation">
                <div class="side-search">
@@ -1014,11 +1085,37 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js" charset="utf-8"></script>
 <script src="js/dropkick.js" charset="utf-8"></script>
 <script src="js/main.js" type="text/javascript"></script>
 <script type="text/javascript">
    $(document).ready(function() {
+
+      var secondarySlider = new Splide( '#ThumbSlider', {
+            autoWidth: true,
+            gap         : 0,
+            pagination : false,
+            cover       : true,
+            isNavigation: true,
+            arrows     : false,
+            breakpoints : {
+               '600': {
+                  fixedWidth: 66,
+                  height    : 40,
+               }
+            },
+      } ).mount();
+      
+      var primarySlider = new Splide( '#MainSlider', {
+            type       : 'fade',
+            heightRatio: 0.5,
+            pagination : false,
+            arrows     : false,
+            cover      : true,
+      } ); // do not call mount() here.
+      
+      primarySlider.sync( secondarySlider ).mount();
 
       $(".modal").modal({
          fadeDuration: 1000
