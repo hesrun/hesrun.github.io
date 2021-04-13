@@ -106,24 +106,44 @@
             </div>
             <div class="main-thumbs-wrap">
                <div id="ThumbSlider" class="splide main-thumbs">
+                  <div class="splide__arrows">
+                     <button class="splide__arrow splide__arrow--prev">
+                        <i class="mdi mdi-chevron-left"></i>
+                     </button>
+                     <button class="splide__arrow splide__arrow--next">
+                        <i class="mdi mdi-chevron-right"></i>
+                     </button>
+                  </div>
                   <div class="splide__track">
                      <ul class="splide__list">
                            <li class="splide__slide">
                               <div class="splide_thumb">
                                  <span class="brand">Rolex</span>
                                  <span class="name">Classique Marine <br> Chronograph Rose Gold</span>
+                                 <span class="price">
+                                    + CHF 2’000
+                                    <i class="mdi mdi-menu-right"></i>
+                                </span>
                               </div>
                            </li>
                            <li class="splide__slide">
                               <div class="splide_thumb">
                                  <span class="brand">Breguet</span>
                                  <span class="name">Breguet Reine De Naples</span>
+                                 <span class="price">
+                                    + CHF 2’000
+                                    <i class="mdi mdi-menu-right"></i>
+                                </span>
                               </div>
                            </li>
                            <li class="splide__slide">
                               <div class="splide_thumb">
                                  <span class="brand">JAEGER</span>
                                  <span class="name">Girard-Perregaux Laureato</span>
+                                 <span class="price">
+                                    + CHF 2’000
+                                    <i class="mdi mdi-menu-right"></i>
+                                </span>
                               </div>
                            </li>
                      </ul>
@@ -1093,16 +1113,22 @@
    $(document).ready(function() {
 
       var secondarySlider = new Splide( '#ThumbSlider', {
-            autoWidth: true,
+            perPage: 3,
             gap         : 0,
             pagination : false,
             cover       : true,
             isNavigation: true,
-            arrows     : false,
+            arrows     : true,
             breakpoints : {
-               '600': {
-                  fixedWidth: 66,
-                  height    : 40,
+               '768': {
+                  perPage: 1,
+                  pagination : true,
+                  arrows     : true
+               },
+               '520': {
+                  perPage: 1,
+                  pagination : true,
+                  arrows     : true
                }
             },
       } ).mount();
