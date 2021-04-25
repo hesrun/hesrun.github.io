@@ -24,8 +24,8 @@ input, button, textarea, select {
     outline: none;
 }
 .container {
-    max-width: 1500px;
-    padding: 0 15px;
+    max-width: 1530px;
+    padding: 0 30px;
     margin: 0 auto;
 }
 /*****************header****************/
@@ -56,19 +56,68 @@ input, button, textarea, select {
     transition: all 0.3s;
 }
 
+.main-sub-menu {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    padding: 40px 10%;
+    a {
+        color: #000;
+    }
+}
+.sub-menu-cols {
+    display: flex;
+}
+.sub-menu-col-item {
+    flex: 1 1 auto;
+    margin-right: 40px;
+    strong {
+        padding: 0 0 15px 0;
+        margin-bottom: 25px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        display: block;
+        border-bottom: 1px rgba(#000,0.1) solid;
+    }
+    li {
+        list-style: none;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        a:hover {
+            color: $blue;
+            text-shadow: 0 0 1px $blue;
+        }
+    }
+    .all {
+        font-weight: 500;
+        color: $brown;
+    }
+}
 .header-main-links {
     display: flex;
     list-style: none;
     a {
         text-decoration: none;
     }
+    .double {
+        display: flex;
+        flex-wrap: wrap;
+        > li {
+            width: 50%;
+        }
+    }
     > li {
         margin-right: 20px;
     }
-    li > a {
+    > li > a {
         color: #fff;
     }
 }
+
 .header-tools {
     display: flex;
     align-items: center;
@@ -431,7 +480,25 @@ input, button, textarea, select {
         gap: 30px;
     }
 }
-
+/**********************page cap****************/
+.page-cap {
+    text-align: center;
+    padding: 10vh;
+    i.mdi {
+        font-size: 56px;
+        color: $blue;
+    }
+    b {
+        font-weight: 500;
+        color: $blue;
+        display: block;
+        margin: 20px 0;
+        font-size: 24px;
+    }
+    p {
+        color: $blue;
+    }
+}
 /**********************catalog****************/
 .catalog-section {
     background: #E9E9EF;
@@ -455,13 +522,55 @@ input, button, textarea, select {
                 transform: rotate(5deg) scale(1.1);
             }
         }
+        .catalog-item-info {
+            padding-bottom: 30px;
+        }
+        .price {
+            opacity: 1;
+        }
         
+    }
+    &.empty {
+        .catalog-item-info {
+            background: none;
+        }
+        &:hover {
+            img {
+                transform: rotate(0deg) scale(1.1);
+            }
+        }
+    }
+    &.load {
+        .image {
+            min-height: 400px;
+            position: relative;
+            background: rgba(#B4B4C8,0.5);
+            &:after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin: -20px 0 0 -20px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 2px $blue solid;
+                border-right-color: transparent;
+                animation: 1s Spin infinite linear;
+            }
+        }
+        .catalog-item-info {
+            background: none;
+        }
     }
     .image {
         overflow: hidden;
+        height: 100%;
         img {
             vertical-align: middle;
+            height: 100%;
             width: 100%;
+            object-fit: cover;
             transition: all 1s;
         }
     }
@@ -471,7 +580,9 @@ input, button, textarea, select {
         left: 0px;
         width: 100%;
         color: #fff;
-        padding: 0 30px 30px 30px;
+        padding: 30px 30px 0px 30px;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        transition: all 0.3s;
     }
     .lot-num {
         display: block;
@@ -489,6 +600,8 @@ input, button, textarea, select {
         font-size: 18px;
         color: $brown;
         font-weight: 500;
+        opacity: 0;
+        transition: all 0.3s;
     }
 }
 .catalog-pagination {
@@ -514,6 +627,7 @@ input, button, textarea, select {
 .search-in-catalog {
     flex: 1 1 auto;
     max-width: 500px;
+    margin-right: 30px;
     span {
         font-size: 20px;
         color: $blue;
@@ -530,13 +644,53 @@ input, button, textarea, select {
     }
 }
 /**********************catalog-item****************/
+.product-card-section {
+    padding: 50px 0;
+}
 .product-card-cols {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 600px;
+    .back-page {
+        color: $blue;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        i.mdi {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+    }
+}
+.product-card-params {
+    width: 50%;
+    padding-left: 10%;
+    strong {
+        display: block;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $blue;
+        margin-bottom: 30px;
+    }
+    ul {
+        list-style: none;
+    }
+    li {
+        line-height: 1.5;
+        margin: 3px 0;
+    }
 }
 .product-card-info {
     flex: 0 0 50%;
+    padding-left: 100px;
+    
     .lot-num {
         font-size: 18px;
         color: $blue;
@@ -567,55 +721,38 @@ input, button, textarea, select {
         }
     }
 }
-.product-card-image {
-    flex: 0 0 50%;
-    text-align: center;
-    img {
-        max-width: 100%;
-    }
-    
-}
 
-.product-card-description {
+.product-card-photos {
     background: #E9E9EF;
     padding: 50px 0;
-}
-.product-description-cols {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    .image {
-        width: 40%;
-        flex: 0 0 auto;
-        img {
-            vertical-align: middle;
-        }
-    }
-    .descr-text {
-        width: 40%;
-        flex: 0 0 auto;
-        strong {
-            display: block;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-        ul {
-            list-style: none;
-        }
-        li {
-            margin: 10px 0;
-            line-height: 1.5;
-        }
-    }
 }
 .additional-photo-grid {
     display: grid;
     grid-template-columns: 1fr 1.363fr 1fr;
     gap: 30px;
+    &.single {
+        display: block;
+        a {
+            padding: 0px;
+            width: 100%;
+        }
+        img {
+            position: static;
+            width: 100%;
+        }
+    }
+    a {
+        position: relative;
+        padding-top: 73%;
+    }
     img {
+        position: absolute;
         vertical-align: middle;
         width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        object-fit: cover;
     }
 }
 
@@ -623,7 +760,8 @@ input, button, textarea, select {
     padding: 50px 0;
     .line-header, .text {
         max-width: 1000px;
-        margin: 0 auto
+        margin-left: auto;
+        margin-right: auto;
     }
     .text {
         column-count: 2;
@@ -653,6 +791,7 @@ input, button, textarea, select {
     .image {
         width: 250px;
         flex: 0 0 auto;
+        margin-right: 30px;
         img {
             width: 100%;
         }
@@ -847,6 +986,30 @@ input, button, textarea, select {
     letter-spacing: 2px;
     text-decoration: none;
     transition: all 0.4s;
+    &.loading {
+        text-indent: -9999px;
+        width: 200px;
+        position: relative;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 3px $blue solid;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            margin: -15px 0 0 -15px;
+            animation: 0.3s Spin linear infinite;
+        }
+    }
+    @keyframes Spin {
+        from {transform: rotate(0)}
+        to {transform: rotate(360deg)}
+      }
     &.icon {
         padding: 0px;
         width: 55px;
@@ -920,3 +1083,5 @@ input, button, textarea, select {
         pointer-events: none;
     }
 }
+
+@import '_response.scss';

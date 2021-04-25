@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
     <header class="main-header white">
-        <ul class="header-main-links">
+        <ul class="header-main-links" style="display: none">
             <li>
                 <a href="">AUCTION</a>
             </li>
@@ -32,7 +34,7 @@
             </li>
         </ul>
         <a href="" class="header-logo"></a>
-        <div class="header-tools">
+        <div class="header-tools" style="display: none">
             <div class="header-select">
                 <select name="" id="">
                     <option value="">GER</option>
@@ -73,19 +75,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="product-card-image">
-                    <img src="img/item-card-img.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="product-card-description">
-        <div class="container">
-            <div class="product-description-cols">
-                <div class="image">
-                    <img src="img/descr-image.jpg" alt="">
-                </div>
-                <div class="descr-text">
+                <div class="product-card-params">
                     <strong>DESCRIPTION</strong>
                     <ul>
                         <li>
@@ -133,35 +123,47 @@
                         </li>
                     </ul>
                 </div>
+                <a href="" class="back-page">
+                    <i class="mdi mdi-arrow-left"></i>Back to list 
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="product-card-photos">
+        <div class="container">
+            <div class="additional-photo-grid single">
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
             </div>
             <div class="additional-photo-grid">
-                <div>
-                    <img src="img/photo-grid-1.jpg" alt="">
-                </div>
-                <div>
-                    <img src="img/photo-grid-2.jpg" alt="">
-                </div>
-                <div>
-                    <img src="img/photo-grid-3.jpg" alt="">
-                </div>
-                <div>
-                    <img src="img/photo-grid-1.jpg" alt="">
-                </div>
-                <div>
-                    <img src="img/photo-grid-2.jpg" alt="">
-                </div>
-                <div>
-                    <img src="img/photo-grid-3.jpg" alt="">
-                </div>
-                <div>
-                    <img src="img/photo-grid-1.jpg" alt="">
-                </div>
-                <div>
-                    <img src="img/photo-grid-2.jpg" alt="">
-                </div>
-                <div>
-                    <img src="img/photo-grid-3.jpg" alt="">
-                </div>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
+                <a data-fancybox="gallery" href="img/descr-image.jpg">
+                    <img src="img/descr-image.jpg" alt="">
+                </a>
             </div>
         </div>
     </section>
@@ -189,7 +191,7 @@
             <div class="product-card-mini">
                 <div class="product">
                     <div class="image">
-                        <img src="img/item-card-img.png" alt="">
+                        <img src="https://catalog.ineichen.com/img/1/data_res_6079dee7b279f_1.jpeg" alt="">
                     </div>
                     <div class="info">
                         <span class="lot-num">LOT №1</span>
@@ -359,6 +361,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         $(document).ready(function(){
@@ -366,7 +369,18 @@
                 type   : 'loop',
                 perPage: 4,
                 gap: '30px',
-                perMove: 1
+                perMove: 1,
+                breakpoints: {
+                    640: {
+                        perPage: 1,
+                    },
+                    768: {
+                        perPage: 2,
+                    },
+                    1024: {
+                        perPage: 3,
+                    },
+                }
             } ).mount();
         })
     </script>
