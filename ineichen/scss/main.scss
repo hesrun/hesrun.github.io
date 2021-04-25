@@ -42,6 +42,34 @@ input, button, textarea, select {
     z-index: 100;
     transition: all 0.3s;
 }
+.header-search {
+    display: none;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background: #fff;
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    input {
+        flex: 1 1 auto;
+        color: $blue;
+        border: none;
+        font-size: 16px;
+        padding: 20px 20px 20px 0;
+    }
+    .close {
+        color: $blue;
+        font-size: 32px;
+        &:hover {
+            color: $brown;
+        }
+    }
+}
 .header-logo {
     display: block;
     position: absolute;
@@ -121,12 +149,16 @@ input, button, textarea, select {
 .header-tools {
     display: flex;
     align-items: center;
+    margin-left: auto;
     .header-btn {
         color: #fff;
         text-decoration: none;
         font-size: 24px;
         margin-left: 20px;
         transition: all 0.3s;
+        &:hover {
+            color: $brown;
+        }
     }
 }
 .header-select {
@@ -155,6 +187,9 @@ input, button, textarea, select {
     .header-tools {
         .header-btn {
             color: #000;
+            &:hover {
+                color: $brown;
+            }
         }
     }
     .header-select {
@@ -480,6 +515,139 @@ input, button, textarea, select {
         gap: 30px;
     }
 }
+/********************ineichen-reviews**********/
+.ineichen-reviews-section {
+    background: linear-gradient(to bottom, #fff 50%, #fff 50%, $grey-bg 50%, $grey-bg 100%);
+}
+.ineichen-reviews-cols {
+    display: flex;
+    padding: 50px 0;
+    > img {
+        flex: 0 0 auto;
+        margin-right: 120px;
+    }
+}
+.ineichen-reviews-slider {
+    flex: 1 1 auto;
+    max-width: auto;
+    min-width: 0;
+    .splide {
+        background: $blue;
+        color: #fff;
+    }
+    .splide__arrow {
+        width: 50px;
+        height: 50px;
+        border: 1px #fff solid;
+        border-radius: 0;
+        background: none;
+        color: #fff;
+        font-size: 24px;
+    }
+}
+.ineichen-reviews-item {
+    padding: 60px 100px;
+    .rate {
+        margin-bottom: 10px;
+        display: flex;
+        color: $brown;
+        font-size: 18px;
+        i.mdi {
+            margin-right: 3px;
+        }
+    }
+    .user {
+        margin-bottom: 50px;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: rgba(#fff,0.5);
+        letter-spacing: 1px;
+    }
+    p {
+        line-height: 2;
+    }
+}
+/**********************footer****************/
+.main-footer {
+    background: #0D0C19;
+    color: #fff;
+    padding: 70px 0;
+    .footer-cols {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        align-self: center;
+    }
+    h5 {
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 50px;
+        opacity: 0.5;
+    }
+    ul {
+        list-style: none;
+        li {
+            margin-top: 15px;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+                color: $brown;
+            }
+        }
+    }
+    .social {
+        margin-top: -5px;
+        margin-bottom: 35px;
+        a {    
+            color: inherit;
+            text-decoration: none;
+            margin-right: 30px;
+            &:hover {
+                color: $brown;
+            }
+        }
+        .mdi {
+            font-size: 24px;
+        }
+    }
+    .adress {
+        line-height: 29px;
+        opacity: 0.5;
+    }
+}
+/*********************bottom-subscribe***********/
+.bottom-subscribe {
+    background: #000;
+    color: #fff;
+    padding: 50px 0;
+    h5 {
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        opacity: 0.5;
+    }
+    .subscribe-cols {
+        display: flex;
+        align-items: center;
+    }
+    .text {
+        flex: 0 0 auto;
+    }
+    form {
+        flex: 1 1 auto;
+        margin-left: 15%;
+        display: flex;
+    }
+    .c-input {
+        flex: 1 1 auto;
+        margin: 0 20px 0 0;
+    }
+}
 /**********************page cap****************/
 .page-cap {
     text-align: center;
@@ -503,6 +671,9 @@ input, button, textarea, select {
 .catalog-section {
     background: #E9E9EF;
     padding: 50px 0;
+    .line-header {
+        padding-right: 250px;
+    }
 }
 .catalog-grid {
     display: grid;
@@ -619,24 +790,13 @@ input, button, textarea, select {
     }
 }
 .catalog-filter {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin: 50px 0;
-}
-.search-in-catalog {
-    flex: 1 1 auto;
-    max-width: 500px;
-    margin-right: 30px;
-    span {
-        font-size: 20px;
-        color: $blue;
-    }
-    .c-input {
-        margin: 20px auto 0;
-    }
+    position: relative
 }
 .sorting-in-catalog {
+    position: absolute;
+    right: 0px;
+    bottom: 50px;
+    margin-left: auto;
     display: flex;
     align-items: center;
     .c-select {
@@ -728,9 +888,29 @@ input, button, textarea, select {
 }
 .additional-photo-grid {
     display: grid;
-    grid-template-columns: 1fr 1.363fr 1fr;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 350px;
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    justify-items: stretch;
+    align-items: stretch;
+
+    a {
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .big {
+        grid-column: 1/span 2;
+        grid-row: 1/span 3;
+    }
+
     &.single {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
         display: block;
         a {
             padding: 0px;
@@ -740,19 +920,6 @@ input, button, textarea, select {
             position: static;
             width: 100%;
         }
-    }
-    a {
-        position: relative;
-        padding-top: 73%;
-    }
-    img {
-        position: absolute;
-        vertical-align: middle;
-        width: 100%;
-        height: 100%;
-        left: 0px;
-        top: 0px;
-        object-fit: cover;
     }
 }
 
@@ -996,14 +1163,14 @@ input, button, textarea, select {
             position: absolute;
             width: 30px;
             height: 30px;
-            border: 3px $blue solid;
+            border: 2px $blue solid;
             border-right-color: transparent;
             border-bottom-color: transparent;
             border-radius: 50%;
             top: 50%;
             left: 50%;
             margin: -15px 0 0 -15px;
-            animation: 0.3s Spin linear infinite;
+            animation: 1s Spin linear infinite;
         }
     }
     @keyframes Spin {
