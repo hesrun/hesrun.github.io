@@ -4,6 +4,25 @@ $brown: #B7933D;
 $blue: #0D0859;
 $grey: rgba(#0D0859,0.5);
 
+/**********************mixin************/
+@mixin aspect-ratio($width, $height, $container) {
+    position: relative;
+    &:before{
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    > #{$container} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
 *,*:before,*:after {
     margin: 0px;
     padding: 0px;
@@ -544,6 +563,9 @@ input, button, textarea, select {
         color: #fff;
         font-size: 24px;
     }
+    .splide__arrow--prev {
+        display: none;
+    }
 }
 .ineichen-reviews-item {
     padding: 60px 100px;
@@ -579,6 +601,9 @@ input, button, textarea, select {
     }
     .logo {
         align-self: center;
+    }
+    .link-block {
+        margin: 0 10px;
     }
     h5 {
         font-weight: 400;
@@ -678,6 +703,7 @@ input, button, textarea, select {
 .catalog-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 450px;
     gap: 40px 15px;
 }
 .catalog-grid-item {
@@ -889,13 +915,12 @@ input, button, textarea, select {
 .additional-photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 350px;
     grid-gap: 20px;
     grid-auto-flow: dense;
     justify-items: stretch;
     align-items: stretch;
-
-    a {
+    .small {
+        @include aspect-ratio(1,1, a);  
     }
     img {
         width: 100%;
@@ -930,13 +955,11 @@ input, button, textarea, select {
         margin-left: auto;
         margin-right: auto;
     }
-    .text {
-        column-count: 2;
-        column-gap: 100px;
-        line-height: 2;
-        p {
-            margin-bottom: 20px;
-        }
+    .product-card-params {
+        width: auto;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0px;
     }
     hr {
         margin: 70px 0;

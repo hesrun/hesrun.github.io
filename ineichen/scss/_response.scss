@@ -21,6 +21,36 @@
     .product-card-info {
         padding-left: 40px;
     }
+    /********************ineichen-reviews**********/
+    .ineichen-reviews-cols > img {
+        display: none;
+    }
+    /**********************footer****************/
+    .main-footer {
+        .footer-cols {
+            flex-wrap: wrap;
+        }
+        .logo {
+            order: 4;
+        }
+        .link-block {
+            width: 33.333%;
+            margin: 0 0 30px;
+        }
+        .contact-block {
+            order: 5;
+        }
+    }
+    /******************bottom-subscribe*************/
+    .bottom-subscribe {
+        .subscribe-cols {
+            display: block;
+        }
+        form {
+            margin-left: 0px;
+            margin-top: 30px;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -37,6 +67,26 @@
             position: absolute;
             bottom: 0px;
 
+        }
+    }
+    /********************ineichen-reviews**********/
+    .ineichen-reviews-item {
+        padding: 30px 50px;
+    }
+    .ineichen-reviews-slider {
+        .splide__arrow--next,
+        .splide__arrow--prev {
+            
+            background: $brown;
+            opacity: 1;
+            border-color: $brown;
+        }
+        .splide__arrow--prev {
+            display: block;
+            left: -25px;
+        }
+        .splide__arrow--next {
+            right: -25px;
         }
     }
     /*********************catalog**************/
@@ -107,6 +157,50 @@
             }
         }
         
+    }
+
+    /**********************footer****************/
+    .main-footer {
+        .footer-cols {
+            flex-direction: column;
+        }
+        .logo {
+            margin-bottom: 50px;
+            display: block;
+            text-align: center;
+        }
+        .link-block {
+            text-align: center;
+            width: 100%;
+            margin: 0 0 50px;
+        }
+        h5 {
+            margin-bottom: 20px;
+        }
+        .contact-block {
+            order: 5;
+            text-align: center;
+        }
+    }
+    /******************bottom-subscribe*************/
+    .bottom-subscribe {
+        .subscribe-cols {
+            display: block;
+        }
+        form {
+            margin-left: 0px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            .c-input {
+                margin-right: 0px;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .c-input:nth-child(2) {
+                margin-right: 20px;
+                width: calc(100% - 100px);
+            }
+        }
     }
 
     
@@ -195,9 +289,6 @@
         }
     }
     .condition-report {
-        .text {
-            column-count: auto;
-        }
         hr {
             margin: 30px 0;
         }
@@ -272,5 +363,11 @@
             line-height: 45px;
             font-size: 18px;
         }
-    }   
+    }
+    .c-input {
+        input {
+            font-size: 14px;
+            height: 45px;
+        }
+    }
 }
