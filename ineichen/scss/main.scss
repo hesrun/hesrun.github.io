@@ -58,42 +58,17 @@ input, button, textarea, select {
     justify-content: space-between;
     position: fixed;
     color: #fff;
-    z-index: 100;
-    transition: all 0.3s;
-}
-.main-header.white {
     background: #fff;
     box-shadow: 0 0 10px 0 rgba($blue,0.2);
-    .header-logo {
-        background-image: url(../img/logo-color.svg);
-    }
-    .header-main-links {
-        li > a {
-            color: #000;
-        }
-    }
-    .header-tools {
-        .header-btn {
-            color: #000;
-            &:hover {
-                color: $brown;
-            }
-        }
-    }
-    .header-select {
-        select {
-            color: #000;
-        }
-    }
+    z-index: 100;
+    transition: all 0.3s;
     &.mini {
         height: 60px;
         .header-logo {
             background-image: url(../img/logo-color-mini.svg);
         }
-    }
-    .burger-btn {
-        span {
-            background: $blue;
+        ~ .side-menu {
+            top: 60px;
         }
     }
 }
@@ -103,9 +78,10 @@ input, button, textarea, select {
     height: 18px;
     border: none;
     background: none;
+    cursor: pointer;
     span {
         height: 2px;
-        background: #fff;
+        background: $blue;
         display: block;
         &:nth-child(2) {
             margin: 6px 0;
@@ -148,12 +124,58 @@ input, button, textarea, select {
     transform: translate(-50%, -50%);
     width: 340px;
     height: 75px;
-    background-image: url(../img/logo-white.svg);
+    background-image: url(../img/logo-color.svg);
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.3s;
 }
-
+.header-main-links {
+    display: flex;
+    list-style: none;
+    a {
+        text-decoration: none;
+    }
+    .double {
+        display: flex;
+        flex-wrap: wrap;
+        > li {
+            width: 50%;
+        }
+    }
+    > li {
+        margin-right: 20px;
+    }
+    > li > a {
+        color: #000;
+    }
+}
+.header-tools {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    .header-btn {
+        color: $blue;
+        text-decoration: none;
+        font-size: 24px;
+        margin-left: 20px;
+        transition: all 0.3s;
+        &:hover {
+            color: $brown;
+        }
+    }
+}
+.header-select {
+    margin-left: 20px;
+    select {
+        color: #fff;
+        background: none;
+        border: none;
+        transition: all 0.3s;
+    }
+    option {
+        color: #000;
+    }
+}
 .main-sub-menu {
     display: none;
     position: absolute;
@@ -195,55 +217,65 @@ input, button, textarea, select {
         color: $brown;
     }
 }
-.header-main-links {
-    display: flex;
-    list-style: none;
-    a {
-        text-decoration: none;
+/**********************side-menu*****************/
+.side-menu {
+    top: 120px;
+    bottom: 0px;
+    position: fixed;
+    background: $blue;
+    color: #fff;
+    z-index: 50;
+    padding: 30px;
+    overflow: auto;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    &.open {
+        transform: translateX(0%);
     }
-    .double {
+    .selects {
         display: flex;
-        flex-wrap: wrap;
-        > li {
-            width: 50%;
-        }
+        justify-content: flex-end;
     }
-    > li {
-        margin-right: 20px;
-    }
-    > li > a {
-        color: #fff;
-    }
-}
-
-.header-tools {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    .header-btn {
+    a {
         color: #fff;
         text-decoration: none;
-        font-size: 24px;
-        margin-left: 20px;
-        transition: all 0.3s;
         &:hover {
             color: $brown;
         }
     }
-}
-.header-select {
-    margin-left: 20px;
-    select {
-        color: #fff;
-        background: none;
-        border: none;
-        transition: all 0.3s;
+    .contact-block {
+        margin-bottom: 70px;
     }
-    option {
-        color: #000;
+    .social {
+        margin-bottom: 20px;
+        a {
+            font-size: 24px;
+        }
+        a +a {
+            margin-left: 20px;
+        }
+    }
+    .adress {
+        line-height: 2;
+        opacity: 0.7;
+    }
+    .logo {
+        display: block;
+        text-align: center;
     }
 }
-
+.side-menu-links {
+    margin: 30px 0 50px;
+    list-style: none;
+    text-transform: uppercase;
+    a {
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        display: block;
+        margin: 20px 0;
+        font-size: 16px;
+    }
+}
 /*******************main-slider**********/
 .main-slider {
     margin-top: -120px;

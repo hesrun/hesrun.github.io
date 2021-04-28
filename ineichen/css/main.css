@@ -46,47 +46,24 @@ input, button, textarea, select {
           justify-content: space-between;
   position: fixed;
   color: #fff;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px 0 rgba(13, 8, 89, 0.2);
+          box-shadow: 0 0 10px 0 rgba(13, 8, 89, 0.2);
   z-index: 100;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.main-header.white {
-  background: #fff;
-  -webkit-box-shadow: 0 0 10px 0 rgba(13, 8, 89, 0.2);
-          box-shadow: 0 0 10px 0 rgba(13, 8, 89, 0.2);
-}
-
-.main-header.white .header-logo {
-  background-image: url(../img/logo-color.svg);
-}
-
-.main-header.white .header-main-links li > a {
-  color: #000;
-}
-
-.main-header.white .header-tools .header-btn {
-  color: #000;
-}
-
-.main-header.white .header-tools .header-btn:hover {
-  color: #B7933D;
-}
-
-.main-header.white .header-select select {
-  color: #000;
-}
-
-.main-header.white.mini {
+.main-header.mini {
   height: 60px;
 }
 
-.main-header.white.mini .header-logo {
+.main-header.mini .header-logo {
   background-image: url(../img/logo-color-mini.svg);
 }
 
-.main-header.white .burger-btn span {
-  background: #0D0859;
+.main-header.mini ~ .side-menu {
+  top: 60px;
 }
 
 .burger-btn {
@@ -95,11 +72,12 @@ input, button, textarea, select {
   height: 18px;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .burger-btn span {
   height: 2px;
-  background: #fff;
+  background: #0D0859;
   display: block;
 }
 
@@ -155,11 +133,81 @@ input, button, textarea, select {
           transform: translate(-50%, -50%);
   width: 340px;
   height: 75px;
-  background-image: url(../img/logo-white.svg);
+  background-image: url(../img/logo-color.svg);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.header-main-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.header-main-links a {
+  text-decoration: none;
+}
+
+.header-main-links .double {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header-main-links .double > li {
+  width: 50%;
+}
+
+.header-main-links > li {
+  margin-right: 20px;
+}
+
+.header-main-links > li > a {
+  color: #000;
+}
+
+.header-tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.header-tools .header-btn {
+  color: #0D0859;
+  text-decoration: none;
+  font-size: 24px;
+  margin-left: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header-tools .header-btn:hover {
+  color: #B7933D;
+}
+
+.header-select {
+  margin-left: 20px;
+}
+
+.header-select select {
+  color: #fff;
+  background: none;
+  border: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header-select option {
+  color: #000;
 }
 
 .main-sub-menu {
@@ -216,74 +264,83 @@ input, button, textarea, select {
   color: #B7933D;
 }
 
-.header-main-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-}
-
-.header-main-links a {
-  text-decoration: none;
-}
-
-.header-main-links .double {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.header-main-links .double > li {
-  width: 50%;
-}
-
-.header-main-links > li {
-  margin-right: 20px;
-}
-
-.header-main-links > li > a {
+/**********************side-menu*****************/
+.side-menu {
+  top: 120px;
+  bottom: 0px;
+  position: fixed;
+  background: #0D0859;
   color: #fff;
-}
-
-.header-tools {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
-}
-
-.header-tools .header-btn {
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
-  margin-left: 20px;
+  z-index: 50;
+  padding: 30px;
+  overflow: auto;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.header-tools .header-btn:hover {
+.side-menu.open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.side-menu .selects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.side-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.side-menu a:hover {
   color: #B7933D;
 }
 
-.header-select {
+.side-menu .contact-block {
+  margin-bottom: 70px;
+}
+
+.side-menu .social {
+  margin-bottom: 20px;
+}
+
+.side-menu .social a {
+  font-size: 24px;
+}
+
+.side-menu .social a + a {
   margin-left: 20px;
 }
 
-.header-select select {
-  color: #fff;
-  background: none;
-  border: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.side-menu .adress {
+  line-height: 2;
+  opacity: 0.7;
 }
 
-.header-select option {
-  color: #000;
+.side-menu .logo {
+  display: block;
+  text-align: center;
+}
+
+.side-menu-links {
+  margin: 30px 0 50px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.side-menu-links a {
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  display: block;
+  margin: 20px 0;
+  font-size: 16px;
 }
 
 /*******************main-slider**********/
@@ -1814,9 +1871,6 @@ input, button, textarea, select {
   .main-header .header-logo {
     width: 60px;
     height: 60px;
-    background-image: url(../img/logo-color-mini-white.svg);
-  }
-  .main-header.white .header-logo {
     background-image: url(../img/logo-color-mini.svg);
   }
   .line-header {
@@ -1832,6 +1886,10 @@ input, button, textarea, select {
   .line-header:before {
     position: absolute;
     bottom: 0px;
+  }
+  /********************side-menu*****************/
+  .side-menu {
+    top: 60px;
   }
   /********************ineichen-reviews**********/
   .ineichen-reviews-item {
@@ -1975,6 +2033,11 @@ input, button, textarea, select {
 @media screen and (max-width: 520px) {
   .header-search input {
     font-size: 14px;
+  }
+  /******************side menu***********/
+  .side-menu {
+    width: 100%;
+    padding: 30px;
   }
   /*****************catalog***************/
   .catalog-section .line-header {
