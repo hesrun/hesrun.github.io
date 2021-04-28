@@ -30,6 +30,15 @@
     .catalog-grid {
         grid-template-columns: repeat(3, 1fr)
     }
+    .catalog-section {
+        .line-header {
+            padding-right: 0px;
+        }
+    }
+    .sorting-in-catalog {
+        position: static;
+        margin-bottom: 30px;
+    }
     /*****************catalog-item***************/
     .product-card-mini {
         padding: 0px;
@@ -37,6 +46,7 @@
     .product-card-info {
         padding-left: 40px;
     }
+
     /********************ineichen-reviews**********/
     .ineichen-reviews-cols > img {
         display: none;
@@ -135,8 +145,16 @@
     .catalog-section {
         padding: 30px 0;
     }
-    .catalog-filter {
-        margin: 30px 0;
+
+    .sorting-in-catalog {
+        display: block;
+        .c-select {
+            margin-right: 0px;
+        }
+        .c-btn {
+            width: 100%;
+            margin-top: 15px;
+        }
     }
 
     .catalog-grid {
@@ -270,11 +288,8 @@
             padding-right: 0px;
         }
     }
-    .catalog-filter {
-        display: flex;
-    }
     .sorting-in-catalog {
-        margin-left: auto;
+        margin-left: 0;
         position: static;
     }
     .catalog-grid {
@@ -406,6 +421,18 @@
         input {
             font-size: 14px;
             height: 45px;
+        }
+    }
+    .c-select {
+        select {
+            height: 45px;
+            font-size: 14px;
+            line-height: normal;
+        }
+        .mdi {
+            height: 45px;
+            line-height: 45px;
+            font-size: 28px;
         }
     }
 }

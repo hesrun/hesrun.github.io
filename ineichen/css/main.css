@@ -1001,7 +1001,7 @@ input, button, textarea, select {
 }
 
 .catalog-section .line-header {
-  padding-right: 250px;
+  padding-right: 550px;
 }
 
 .catalog-grid {
@@ -1155,7 +1155,7 @@ input, button, textarea, select {
 }
 
 .sorting-in-catalog .c-select {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /**********************catalog-item****************/
@@ -1257,10 +1257,21 @@ input, button, textarea, select {
 
 .product-card-info .btns {
   margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .product-card-info .btns .c-btn + .c-btn {
   margin-left: 15px;
+}
+
+.product-card-info .bid-by-tel {
+  font-weight: 500;
+  color: #0D0859;
+  font-size: 16px;
+}
+
+.product-card-info .bid-by-tel:hover {
+  color: #B7933D;
 }
 
 .product-card-photos {
@@ -1462,6 +1473,9 @@ input, button, textarea, select {
 
 .additional-items-carusel .data .name {
   margin: 10px 0;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
 }
 
 .additional-items-carusel li {
@@ -1773,6 +1787,7 @@ input, button, textarea, select {
   border-radius: 0px;
   background: #fff;
   cursor: pointer;
+  width: 100%;
 }
 
 .c-select .mdi {
@@ -1817,6 +1832,13 @@ input, button, textarea, select {
   .catalog-grid {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+  }
+  .catalog-section .line-header {
+    padding-right: 0px;
+  }
+  .sorting-in-catalog {
+    position: static;
+    margin-bottom: 30px;
   }
   /*****************catalog-item***************/
   .product-card-mini {
@@ -1918,8 +1940,15 @@ input, button, textarea, select {
   .catalog-section {
     padding: 30px 0;
   }
-  .catalog-filter {
-    margin: 30px 0;
+  .sorting-in-catalog {
+    display: block;
+  }
+  .sorting-in-catalog .c-select {
+    margin-right: 0px;
+  }
+  .sorting-in-catalog .c-btn {
+    width: 100%;
+    margin-top: 15px;
   }
   .catalog-grid {
     -ms-grid-columns: (1fr)[2];
@@ -2043,13 +2072,8 @@ input, button, textarea, select {
   .catalog-section .line-header {
     padding-right: 0px;
   }
-  .catalog-filter {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .sorting-in-catalog {
-    margin-left: auto;
+    margin-left: 0;
     position: static;
   }
   .catalog-grid {
@@ -2174,6 +2198,16 @@ input, button, textarea, select {
   .c-input input {
     font-size: 14px;
     height: 45px;
+  }
+  .c-select select {
+    height: 45px;
+    font-size: 14px;
+    line-height: normal;
+  }
+  .c-select .mdi {
+    height: 45px;
+    line-height: 45px;
+    font-size: 28px;
   }
 }
 /*# sourceMappingURL=main.css.map */
