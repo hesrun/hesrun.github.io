@@ -221,65 +221,92 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <img src="img/banner-img-1.jpg" alt="">
+                        <img src="https://chronofund.com/upload/iblock/11c/11c3085f229692864e6165f95b7a5ab7.jpeg" alt="">
+                        <a href="" class="slide-link"></a>
                         <div class="splide_watch_text">
                             <span class="brand">Rolex</span>
-                            <h2 class="name">OYSTer perpetual</h2>
-                            <span class="price">
-                                120’000 CHF
+                            <h2 class="name">
+                             Classique Marine <br>
+                             Chronograph Rose Gold
+                            </h2>
+                            <a href="#" class="price">
+                                + CHF 2’000
                                 <i class="mdi mdi-arrow-right"></i>
-                            </span>
+                            </a>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <img src="img/banner-img-2.jpg" alt="">
+                        <img src="https://chronofund.com/upload/iblock/e9f/e9f02ad20c04267a1bf1fa29fbb05cc4.jpeg" alt="">
+                        <a href="" class="slide-link"></a>
                         <div class="splide_watch_text">
                             <span class="brand">Breguet</span>
                             <h2 class="name">Breguet Reine De Naples</h2>
-                            <span class="price">
-                                120’000 CHF
+                            <a href="#" class="price">
+                                + CHF 2’000
                                 <i class="mdi mdi-arrow-right"></i>
-                            </span>
+                             </a>
                         </div>
                     </li>
                     <li class="splide__slide">
                         <img src="img/banner-img-1.jpg" alt="">
+                        <a href="" class="slide-link"></a>
                         <div class="splide_watch_text">
                             <span class="brand">JAEGER</span>
                             <h2 class="name">Girard-Perregaux Laureato</h2>
-                            <span class="price">
-                                120’000 CHF
+                            <a href="#" class="price">
+                                + CHF 2’000
                                 <i class="mdi mdi-arrow-right"></i>
-                            </span>
+                             </a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-
-        <div id="ThumbSlider" class="splide main-thumbs">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <div class="splide_thumb">
-                            <span class="brand">Rolex</span>
-                            <span class="name">Submariner</span>
-                        </div>
-                    </li>
-                    <li class="splide__slide">
-                        <div class="splide_thumb">
-                            <span class="brand">Breguet</span>
-                            <span class="name">Breguet Reine De Naples</span>
-                        </div>
-                    </li>
-                    <li class="splide__slide">
-                        <div class="splide_thumb">
-                            <span class="brand">JAEGER</span>
-                            <span class="name">Girard-Perregaux Laureato</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        <div class="main-thumbs-wrap">
+           <div id="ThumbSlider" class="splide main-thumbs">
+              <div class="splide__arrows">
+                 <button class="splide__arrow splide__arrow--prev">
+                    <i class="mdi mdi-chevron-left"></i>
+                 </button>
+                 <button class="splide__arrow splide__arrow--next">
+                    <i class="mdi mdi-chevron-right"></i>
+                 </button>
+              </div>
+              <div class="splide__track">
+                 <ul class="splide__list">
+                       <li class="splide__slide">
+                          <div class="splide_thumb">
+                             <span class="brand">Rolex</span>
+                             <span class="name">Classique Marine <br> Chronograph Rose Gold</span>
+                             <a href="#" class="price">
+                                + CHF 2’000
+                                <i class="mdi mdi-arrow-right"></i>
+                             </a>
+                          </div>
+                       </li>
+                       <li class="splide__slide">
+                          <div class="splide_thumb">
+                             <span class="brand">Breguet</span>
+                             <span class="name">Breguet Reine De Naples</span>
+                             <a href="#" class="price">
+                                + CHF 2’000
+                                <i class="mdi mdi-arrow-right"></i>
+                             </a>
+                          </div>
+                       </li>
+                       <li class="splide__slide">
+                          <div class="splide_thumb">
+                             <span class="brand">JAEGER</span>
+                             <span class="name">Girard-Perregaux Laureato</span>
+                             <a href="#" class="price">
+                                + CHF 2’000
+                                <i class="mdi mdi-arrow-right"></i>
+                             </a>
+                          </div>
+                       </li>
+                 </ul>
+              </div>
+           </div>
         </div>
     </div>
 
@@ -679,27 +706,32 @@
 
 
             var secondarySlider = new Splide( '#ThumbSlider', {
-                height      : 75,
-                autoWidth: true,
-                gap         : 0,
-                pagination : false,
-                cover       : true,
-                isNavigation: true,
-                arrows     : false,
-                breakpoints : {
-                    '600': {
-                        fixedWidth: 66,
-                        height    : 40,
+                    perPage: 3,
+                    gap         : 0,
+                    pagination : false,
+                    cover       : true,
+                    isNavigation: true,
+                    arrows     : true,
+                    breakpoints : {
+                    '768': {
+                        perPage: 1,
+                        pagination : true,
+                        arrows     : true
+                    },
+                    '520': {
+                        perPage: 1,
+                        pagination : true,
+                        arrows     : true
                     }
-                },
+                    },
             } ).mount();
             
             var primarySlider = new Splide( '#MainSlider', {
-                type       : 'fade',
-                heightRatio: 0.5,
-                pagination : false,
-                arrows     : false,
-                cover      : true,
+                    type       : 'fade',
+                    heightRatio: 0.4,
+                    pagination : false,
+                    arrows     : false,
+                    cover      : true,
             } ); // do not call mount() here.
             
             primarySlider.sync( secondarySlider ).mount();

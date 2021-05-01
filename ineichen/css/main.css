@@ -199,7 +199,7 @@ input, button, textarea, select {
 }
 
 .header-select select {
-  color: #fff;
+  color: #0D0859;
   background: none;
   border: none;
   -webkit-transition: all 0.3s;
@@ -303,6 +303,10 @@ input, button, textarea, select {
   color: #B7933D;
 }
 
+.side-menu .header-select select {
+  color: #fff;
+}
+
 .side-menu .contact-block {
   margin-bottom: 70px;
 }
@@ -344,9 +348,24 @@ input, button, textarea, select {
 }
 
 /*******************main-slider**********/
+#MainSlider .splide__slide:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
 .main-slider {
-  margin-top: -120px;
   position: relative;
+}
+
+.main-slider .slide-link {
+  display: none;
 }
 
 .splide_watch_text {
@@ -354,7 +373,7 @@ input, button, textarea, select {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,36 +388,53 @@ input, button, textarea, select {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
+  text-align: center;
+  z-index: 1;
 }
 
 .splide_watch_text .brand {
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .splide_watch_text .name {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 2px;
   margin: 20px 0;
 }
 
 .splide_watch_text .price {
-  font-size: 18px;
+  font-size: 40px;
   color: #B7933D;
   font-weight: 500;
+}
+
+.splide_watch_text .price .mdi {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.splide_watch_text .price:hover .mdi {
+  margin-left: 10px;
+}
+
+.main-thumbs-wrap {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
 }
 
 .main-thumbs {
   width: 100%;
   max-width: 1200px;
-  position: absolute;
-  bottom: 20vh;
-  left: 50%;
-  margin-left: -600px;
+  margin: 0 auto;
   z-index: 1;
+}
+
+.main-thumbs .splide__arrows {
+  display: none;
 }
 
 .main-thumbs .splide__list {
@@ -406,6 +442,7 @@ input, button, textarea, select {
 }
 
 .main-thumbs .splide__slide {
+  min-height: 80px;
   color: #fff;
   width: 33.333%;
   border: none !important;
@@ -422,16 +459,21 @@ input, button, textarea, select {
 }
 
 .main-thumbs .brand {
+  font-size: 12px;
   display: block;
-  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-bottom: 10px;
 }
 
 .main-thumbs .name {
-  font-size: 18px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.main-thumbs .price {
+  display: none;
 }
 
 /*****************dont-miss-section*******/
@@ -599,7 +641,7 @@ input, button, textarea, select {
 }
 
 .about-ineichen-land {
-  margin: 50px 0;
+  margin: 0 0 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,10 +668,12 @@ input, button, textarea, select {
 }
 
 .about-ineichen-land h3 {
+  display: block;
   margin-bottom: auto;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 2px;
+  padding-bottom: 20px;
 }
 
 .about-ineichen-land .image {
@@ -642,6 +686,9 @@ input, button, textarea, select {
 .about-ineichen-land img {
   vertical-align: middle;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .our-advantage-land {
@@ -664,6 +711,9 @@ input, button, textarea, select {
 .our-advantage-land img {
   vertical-align: middle;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .our-advantage-land .text {
@@ -707,6 +757,9 @@ input, button, textarea, select {
 .stay-informed-land img {
   vertical-align: middle;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .stay-informed-land .informed-form {
@@ -1137,14 +1190,14 @@ input, button, textarea, select {
   color: #0D0859;
 }
 
-.catalog-filter {
+.catalog-properties {
   position: relative;
 }
 
 .sorting-in-catalog {
   position: absolute;
   right: 0px;
-  bottom: 50px;
+  top: -110px;
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1156,6 +1209,49 @@ input, button, textarea, select {
 
 .sorting-in-catalog .c-select {
   margin-right: 20px;
+}
+
+.auction-schedule {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 0 15px;
+  margin-bottom: 50px;
+}
+
+.auction-schedule strong {
+  font-size: 18px;
+  font-weight: 500;
+  color: #0D0859;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.auction-schedule p {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.auction-schedule .box {
+  border: 1px #B3B3C5 solid;
+  padding: 20px;
+}
+
+.auction-schedule .box:last-child {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/span 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.auction-schedule .box:last-child .c-btn {
+  margin-left: auto;
+  margin-top: auto;
 }
 
 /**********************catalog-item****************/
@@ -1759,6 +1855,16 @@ input, button, textarea, select {
   color: #0D0859;
 }
 
+.c-btn.blue {
+  border-color: #0D0859;
+  color: #0D0859;
+}
+
+.c-btn.blue:hover {
+  background: #0D0859;
+  color: #fff;
+}
+
 .c-btn.blue.filled {
   background: #0D0859;
   color: #fff;
@@ -1828,6 +1934,51 @@ input, button, textarea, select {
 }
 
 @media screen and (max-width: 1024px) {
+  /*****************dont-miss-section*******/
+  .dont-miss-text {
+    padding: 0px;
+    display: block;
+    padding-left: 100px;
+  }
+  .dont-miss-text strong {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .dont-miss-section .link-tabs {
+    white-space: nowrap;
+    overflow: auto;
+    padding-bottom: 0px;
+  }
+  .dont-miss-section .link-tabs::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  .dont-miss-section .link-tabs::-webkit-scrollbar-thumb {
+    background: #0D0859;
+  }
+  .dont-miss-section .link-tabs::-webkit-scrollbar-track {
+    background: rgba(13, 8, 89, 0.3);
+  }
+  .dont-miss-section .link-tabs {
+    scrollbar-face-color: #0D0859;
+    scrollbar-track-color: rgba(13, 8, 89, 0.3);
+  }
+  .dont-miss-section .link-tabs a {
+    margin-right: 30px;
+  }
+  .dont-miss-section .link-tabs a:last-child {
+    margin-right: 0px;
+  }
+  /***************product-grid*************/
+  .product-grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  /***************main slider************/
+  .main-thumbs-wrap {
+    bottom: 0px;
+    padding: 15px;
+  }
   /*********************catalog**************/
   .catalog-grid {
     -ms-grid-columns: (1fr)[3];
@@ -1839,6 +1990,17 @@ input, button, textarea, select {
   .sorting-in-catalog {
     position: static;
     margin-bottom: 30px;
+  }
+  .auction-schedule {
+    margin-bottom: 30px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .auction-schedule .box:last-child {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/span 2;
   }
   /*****************catalog-item***************/
   .product-card-mini {
@@ -1912,6 +2074,182 @@ input, button, textarea, select {
   /********************side-menu*****************/
   .side-menu {
     top: 60px;
+  }
+  /***************main slider************/
+  #MainSlider .splide__slide {
+    height: 80vh !important;
+  }
+  #MainSlider .splide__slide img {
+    height: 100%;
+  }
+  #MainSlider .slide-link {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+  }
+  .splide_watch_text {
+    display: none;
+  }
+  .main-thumbs-wrap {
+    padding: 0 30px 10px 30px;
+  }
+  .main-thumbs {
+    padding-bottom: 70px;
+  }
+  .main-thumbs .splide__track {
+    pointer-events: none;
+  }
+  .main-thumbs .splide__slide {
+    min-height: 0px;
+    border: none !important;
+  }
+  .main-thumbs .splide__slide.is-active {
+    border: none !important;
+  }
+  .main-thumbs .splide__arrows {
+    display: block;
+  }
+  .main-thumbs .splide__arrow {
+    border-radius: 0px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    -webkit-transform: none;
+            transform: none;
+    bottom: 10px;
+    top: auto;
+  }
+  .main-thumbs .splide__arrow--prev {
+    left: 0;
+  }
+  .main-thumbs .splide__arrow--next {
+    right: 0;
+  }
+  .main-thumbs .splide__pagination {
+    position: static;
+    left: auto;
+    top: auto;
+    width: 100%;
+    -webkit-transform: none;
+            transform: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main-thumbs .splide__pagination li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+  .main-thumbs .splide__pagination .splide__pagination__page {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-radius: 0px;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-transform: none;
+            transform: none;
+  }
+  .main-thumbs .splide__pagination .splide__pagination__page.is-active {
+    background: #fff;
+    height: 2px;
+  }
+  .main-thumbs .brand {
+    opacity: 0.8;
+  }
+  .main-thumbs .name {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+  .main-thumbs .name br {
+    display: none;
+  }
+  .main-thumbs .price {
+    margin: 15px 0;
+    display: block;
+    color: #B7933D;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  /*****************dont-miss-section*******/
+  .dont-miss-text {
+    padding-left: 0px;
+    margin-bottom: 50px;
+  }
+  .dont-miss-text strong {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .dont-miss-text strong br {
+    display: none;
+  }
+  /*****************about-ineichen-section*************/
+  .about-ineichen-section {
+    padding: 30px 0 0px;
+    background: #fff;
+  }
+  .about-ineichen-land {
+    display: block;
+    margin-bottom: 0;
+  }
+  .about-ineichen-land .text {
+    padding: 30px;
+  }
+  .about-ineichen-land .image {
+    width: auto;
+  }
+  .about-ineichen-land .image img {
+    height: auto;
+    width: 100%;
+  }
+  .our-advantage-land {
+    margin: 0px;
+    display: block;
+  }
+  .our-advantage-land .text {
+    padding: 50px 30px 30px;
+  }
+  .our-advantage-land .text h2 {
+    text-align: center;
+  }
+  .our-advantage-land .text ul {
+    margin-top: 30px;
+    padding: 0px;
+  }
+  .our-advantage-land .image {
+    width: 100%;
+  }
+  .stay-informed-land {
+    display: block;
+    margin: 0 0 50px 0;
+  }
+  .stay-informed-land h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  .stay-informed-land .image {
+    width: 100%;
+  }
+  .stay-informed-land .informed-form {
+    padding: 30px;
+  }
+  .instagram-grid {
+    display: block;
+  }
+  .instagram-grid .sub-grid {
+    margin: 30px 0;
+  }
+  /***************product-grid*************/
+  .product-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
   /********************ineichen-reviews**********/
   .ineichen-reviews-item {
@@ -2068,6 +2406,32 @@ input, button, textarea, select {
     width: 100%;
     padding: 30px;
   }
+  /*************.dont-miss-text***********/
+  .dont-miss-text strong {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 1px;
+  }
+  /*****************about-ineichen-section*************/
+  .our-advantage-land .text h2 {
+    font-size: 22px;
+  }
+  .stay-informed-land h2 {
+    font-size: 18px;
+  }
+  .ineichen-instagram .title {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .ineichen-instagram .title .c-btn {
+    width: 100%;
+  }
+  /***************product-grid*************/
+  .product-grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
   /*****************catalog***************/
   .catalog-section .line-header {
     padding-right: 0px;
@@ -2082,6 +2446,25 @@ input, button, textarea, select {
   }
   .catalog-pagination .visibile-count {
     display: none;
+  }
+  .auction-schedule {
+    display: block;
+  }
+  .auction-schedule .box {
+    text-align: center;
+  }
+  .auction-schedule .box:last-child {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/span 2;
+    display: block;
+  }
+  .auction-schedule .box:last-child .c-btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .auction-schedule .box + .box {
+    margin-top: 15px;
   }
   /*****************catalog-item***************/
   .product-card-cols .back-page {

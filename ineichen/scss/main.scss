@@ -22,6 +22,24 @@ $grey: rgba(#0D0859,0.5);
         bottom: 0;
     }
 }
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+    &::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: $background-color;
+    }
+    & {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+}
 
 *,*:before,*:after {
     margin: 0px;
@@ -167,7 +185,7 @@ input, button, textarea, select {
 .header-select {
     margin-left: 20px;
     select {
-        color: #fff;
+        color: $blue;
         background: none;
         border: none;
         transition: all 0.3s;
@@ -243,6 +261,12 @@ input, button, textarea, select {
             color: $brown;
         }
     }
+    .header-select {
+        select {
+            color: #fff;
+        }
+    }
+
     .contact-block {
         margin-bottom: 70px;
     }
@@ -277,51 +301,81 @@ input, button, textarea, select {
     }
 }
 /*******************main-slider**********/
-.main-slider {
-    margin-top: -120px;
+#MainSlider {
+    .splide__slide:after {
+       content: '';
+       display: block;
+       position: absolute;
+       left: 0px;
+       top: 0px;
+       width: 100%;
+       height: 100%;
+       background: rgba(#000, 0.5);
+       z-index: 0;
+    }
+ }
+ .main-slider {
     position: relative;
-}
-.splide_watch_text {
+    .slide-link {
+       display: none;
+    }
+ }
+ .splide_watch_text {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #fff;
+    text-align: center;
+    z-index: 1;
     .brand {
-        font-size: 16px;
+        font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 2px;
     }
     .name {
-        font-size: 32px;
+        font-size: 25px;
         font-weight: 500;
-        text-transform: uppercase;
         letter-spacing: 2px;
         margin: 20px 0;
     }
     .price {
-        font-size: 18px;
+        font-size: 40px;
         color: $brown;
         font-weight: 500;
+        .mdi {
+          transition: all 0.3s;
+        }
+        &:hover {
+          .mdi {
+             margin-left: 10px;
+          }
+        }
     }
-}
-.main-thumbs {
+ }
+ .main-thumbs-wrap {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+ }
+ .main-thumbs {
     width: 100%;
     max-width: 1200px;
-    position: absolute;
-    bottom: 20vh;
-    left: 50%;
-    margin-left: -600px;
+    margin: 0 auto;
     z-index: 1;
+    .splide__arrows {
+       display: none;
+    }
     .splide__list {
         width: 100%;
     }
     .splide__slide {
+       min-height: 80px;
         color: #fff;
         width: 33.333%;
         border: none !important;
@@ -335,17 +389,21 @@ input, button, textarea, select {
         }
     }
     .brand {
+       font-size: 12px;
         display: block;
-        color: rgba(#fff,0.5);
         text-transform: uppercase;
         font-weight: 500;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         margin-bottom: 10px;
     }
     .name {
-        font-size: 18px;
+        font-size: 14px;
+        line-height: 1.3;
     }
-}
+    .price {
+       display: none;
+    }
+ }
 /*****************dont-miss-section*******/
 .line-header {
     font-size: 18px;
@@ -472,7 +530,7 @@ input, button, textarea, select {
     background: linear-gradient(to bottom, #fff 50%, #fff 50%, $grey-bg 50%, $grey-bg 100%);
 }
 .about-ineichen-land {
-    margin: 50px 0;
+    margin: 0 0 50px;
     display: flex;
     align-items: stretch;
     .text {
@@ -486,10 +544,12 @@ input, button, textarea, select {
         line-height: 2;
     }
     h3 {
+        display: block;
         margin-bottom: auto;
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 2px;
+        padding-bottom: 20px;
     }
     .image {
         flex: 0 0 auto;
@@ -498,6 +558,8 @@ input, button, textarea, select {
     img {
         vertical-align: middle;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 .our-advantage-land {
@@ -511,6 +573,8 @@ input, button, textarea, select {
     img {
         vertical-align: middle;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .text {
         color: $blue;
@@ -541,6 +605,8 @@ input, button, textarea, select {
     img {
         vertical-align: middle;
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     .informed-form {
         text-align: center;
@@ -868,18 +934,50 @@ input, button, textarea, select {
         color: $blue;
     }
 }
-.catalog-filter {
+.catalog-properties {
     position: relative
 }
 .sorting-in-catalog {
     position: absolute;
     right: 0px;
-    bottom: 50px;
+    top: -110px;
     margin-left: auto;
     display: flex;
     align-items: center;
     .c-select {
         margin-right: 20px;
+    }
+}
+
+.auction-schedule {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 15px;
+    margin-bottom: 50px;
+    strong {
+        font-size: 18px;
+        font-weight: 500;
+        color: #0D0859;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 20px;
+    }
+    p {
+        line-height: 1.5;
+        font-weight: 500;
+    }
+    .box {
+        border: 1px #B3B3C5 solid;
+        padding: 20px;
+    }
+    .box:last-child {
+        grid-column: 3/span 2;
+        display: flex;
+        .c-btn {
+            margin-left: auto;
+            margin-top: auto;
+        }
     }
 }
 /**********************catalog-item****************/
@@ -1323,6 +1421,12 @@ input, button, textarea, select {
         }
     }
     &.blue {
+        border-color: $blue;
+        color: $blue;
+        &:hover {
+            background: $blue;
+            color: #fff;
+        }
         &.filled {
             background: $blue;
             color: #fff;
