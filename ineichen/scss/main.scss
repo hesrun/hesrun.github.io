@@ -1285,6 +1285,74 @@ input, button, textarea, select {
         }
     }
 }
+/*******************modals**************/
+.blocker {
+    background: rgba(#040225, 0.7);
+}
+.sign-modal {
+    width: 100%;
+    max-width: 870px;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0px;
+    a.close-modal {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: 1px #E9E9EF solid;
+        color: $blue;
+        font-size: 24px;
+        text-align: center;
+        background: none;
+        text-indent: 0;
+        right: 20px;
+        top: 20px;
+        transition: all 0.5s;
+        &:hover {
+            border-color: $blue;
+            color: #fff;
+            background: $blue;
+        }
+    }
+}
+.sign-modal-container {
+    padding: 15% 20%;
+    .title {
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        color: $blue;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 70px;
+    }
+    .title + p {
+        margin-bottom: 45px;
+        line-height: 1.5;
+    }
+    .no-account {
+        color: $blue;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 16px;
+        a {
+            color: $brown;
+            text-decoration: none;
+        }
+    }
+    .forgot {
+        margin-top: 10px;
+        text-align: right;
+        color: $brown;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .form {
+        .c-btn {
+            margin-top: 30px;
+        }
+    }
+}
 /*********************ui*****************/
 .c-input {
     margin-bottom: 20px;
@@ -1461,6 +1529,43 @@ input, button, textarea, select {
         right: 10px;
         color: $grey;
         pointer-events: none;
+    }
+}
+
+.c-checkbox {
+    display: flex;
+    margin-bottom: 20px;
+    cursor: pointer;
+    input {
+        display: none;
+    }
+    input:checked {
+        & + .icon {
+            .mdi {
+                opacity: 1;
+                transform: rotateY(0deg)
+            }
+        }
+    }
+    span {
+        line-height: 25px;
+    }
+    .icon {
+        margin-right: 15px;
+        display: flex;
+        flex: 0 0 auto;
+        width: 50px;
+        height: 50px;
+        border: 1px rgba($blue, 0.3) solid;  
+        i.mdi {
+            color: $blue;
+            font-size: 24px;
+            text-align: center;
+            margin: auto;
+            opacity: 0;
+            transform: rotateY(90deg);
+            transition: all 0.3s;
+        }
     }
 }
 

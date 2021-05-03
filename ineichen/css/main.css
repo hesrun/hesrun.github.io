@@ -1683,6 +1683,85 @@ input, button, textarea, select {
   width: calc(50% - 10px);
 }
 
+/*******************modals**************/
+.blocker {
+  background: rgba(4, 2, 37, 0.7);
+}
+
+.sign-modal {
+  width: 100%;
+  max-width: 870px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0px;
+}
+
+.sign-modal a.close-modal {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px #E9E9EF solid;
+  color: #0D0859;
+  font-size: 24px;
+  text-align: center;
+  background: none;
+  text-indent: 0;
+  right: 20px;
+  top: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.sign-modal a.close-modal:hover {
+  border-color: #0D0859;
+  color: #fff;
+  background: #0D0859;
+}
+
+.sign-modal-container {
+  padding: 15% 20%;
+}
+
+.sign-modal-container .title {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: #0D0859;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 70px;
+}
+
+.sign-modal-container .title + p {
+  margin-bottom: 45px;
+  line-height: 1.5;
+}
+
+.sign-modal-container .no-account {
+  color: #0D0859;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.sign-modal-container .no-account a {
+  color: #B7933D;
+  text-decoration: none;
+}
+
+.sign-modal-container .forgot {
+  margin-top: 10px;
+  text-align: right;
+  color: #B7933D;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sign-modal-container .form .c-btn {
+  margin-top: 30px;
+}
+
 /*********************ui*****************/
 .c-input {
   margin-bottom: 20px;
@@ -1904,6 +1983,53 @@ input, button, textarea, select {
   right: 10px;
   color: rgba(13, 8, 89, 0.5);
   pointer-events: none;
+}
+
+.c-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.c-checkbox input {
+  display: none;
+}
+
+.c-checkbox input:checked + .icon .mdi {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.c-checkbox span {
+  line-height: 25px;
+}
+
+.c-checkbox .icon {
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  border: 1px rgba(13, 8, 89, 0.3) solid;
+}
+
+.c-checkbox .icon i.mdi {
+  color: #0D0859;
+  font-size: 24px;
+  text-align: center;
+  margin: auto;
+  opacity: 0;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 1630px) {
@@ -2203,6 +2329,7 @@ input, button, textarea, select {
     padding: 30px;
   }
   .about-ineichen-land .image {
+    display: none;
     width: auto;
   }
   .about-ineichen-land .image img {
@@ -2395,6 +2522,21 @@ input, button, textarea, select {
     margin-right: 20px;
     width: calc(100% - 100px);
   }
+  /*******************modals***************/
+  .sign-modal a.close-modal {
+    right: 0px;
+    top: 0px;
+  }
+  .sign-modal-container {
+    padding: 30px 15px;
+  }
+  .sign-modal-container .title {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+  .sign-modal-container a.close {
+    right: 0px;
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -2578,6 +2720,12 @@ input, button, textarea, select {
     line-height: 45px;
     font-size: 18px;
   }
+  .c-input.icon-right i.mdi {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 24px;
+  }
   .c-input input {
     font-size: 14px;
     height: 45px;
@@ -2591,6 +2739,13 @@ input, button, textarea, select {
     height: 45px;
     line-height: 45px;
     font-size: 28px;
+  }
+  .c-checkbox .icon {
+    width: 45px;
+    height: 45px;
+  }
+  .c-checkbox span {
+    line-height: 22px;
   }
 }
 /*# sourceMappingURL=main.css.map */
