@@ -20,6 +20,8 @@ $grey: rgba(#0D0859,0.5);
         left: 0;
         right: 0;
         bottom: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
@@ -68,20 +70,23 @@ input, button, textarea, select {
 /*****************header****************/
 .main-header {
     top: 0px;
-    height: 120px;
     width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: fixed;
     color: #fff;
     background: #fff;
     box-shadow: 0 0 10px 0 rgba($blue,0.2);
     z-index: 100;
-    transition: all 0.3s;
+    .main-header-wrap {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s;
+    }
     &.mini {
-        height: 60px;
+        .main-header-wrap {
+            height: 60px;
+        }
         .header-logo {
             background-image: url(../img/logo-color-mini.svg);
         }
@@ -165,6 +170,9 @@ input, button, textarea, select {
     }
     > li > a {
         color: #000;
+        &:hover {
+            color: $brown;
+        }
     }
 }
 .header-tools {
@@ -1024,6 +1032,24 @@ input, button, textarea, select {
         line-height: 1.5;
         margin: 3px 0;
     }
+    .play-video {
+        margin-top: 30px;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: $blue;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+        &:hover {
+            color: $brown;
+        }
+        i.mdi {
+            margin-left: 10px;
+            font-size: 48px;
+        }
+    }
 }
 .product-card-info {
     flex: 0 0 50%;
@@ -1289,12 +1315,7 @@ input, button, textarea, select {
 .blocker {
     background: rgba(#040225, 0.7);
 }
-.sign-modal {
-    width: 100%;
-    max-width: 870px;
-    border-radius: 0px;
-    box-shadow: none;
-    padding: 0px;
+.modal {
     a.close-modal {
         width: 40px;
         height: 40px;
@@ -1315,8 +1336,15 @@ input, button, textarea, select {
         }
     }
 }
+.sign-modal {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0px;
+}
 .sign-modal-container {
-    padding: 15% 20%;
+    padding: 10% 15%;
     .title {
         display: block;
         text-align: center;
@@ -1327,7 +1355,7 @@ input, button, textarea, select {
         margin-bottom: 70px;
     }
     .title + p {
-        margin-bottom: 45px;
+        margin-bottom: 70px;
         line-height: 1.5;
     }
     .no-account {
@@ -1351,6 +1379,33 @@ input, button, textarea, select {
         .c-btn {
             margin-top: 30px;
         }
+    }
+    .cheks {
+        margin-top: 50px;
+    }
+}
+
+.video-modal {
+    background: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+    padding: 0px;
+    a.close-modal {
+        background: #fff;
+    }
+    .video-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+        @include aspect-ratio(16,9, iframe);
     }
 }
 /*********************ui*****************/
@@ -1409,6 +1464,11 @@ input, button, textarea, select {
             height: 55px;
             width: 55px;
             line-height: 55px;
+        }
+    }
+    &.with-code {
+        .iti {
+            width: 100%;
         }
     }
 }
@@ -1567,6 +1627,13 @@ input, button, textarea, select {
             transition: all 0.3s;
         }
     }
+}
+
+
+.iti__flag {background-image: url("../img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../img/flags@2x.png");}
 }
 
 @import '_response.scss';

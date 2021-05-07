@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/intlTelInput.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -65,20 +66,22 @@
                 <div class="c-input grey">
                     <input type="text" placeholder="Last Name">
                 </div>
-                <label class="c-checkbox" for="chek-1">
-                    <input type="checkbox" id="chek-1">
-                    <div class="icon">
-                        <i class="mdi mdi-check"></i>
-                    </div>
-                    <span>Yes, I would like to receive email communications from Ineichen Zurich</span>
-                </label>
-                <label class="c-checkbox" for="chek-2">
-                    <input type="checkbox" id="chek-2">
-                    <div class="icon">
-                        <i class="mdi mdi-check"></i>
-                    </div>
-                    <span>I have read and agree to the Terms and Conditions and Privacy Policy</span>
-                </label>
+                <div class="cheks">
+                    <label class="c-checkbox" for="chek-1">
+                        <input type="checkbox" id="chek-1">
+                        <div class="icon">
+                            <i class="mdi mdi-check"></i>
+                        </div>
+                        <span>Yes, I would like to receive email communications from Ineichen Zurich</span>
+                    </label>
+                    <label class="c-checkbox" for="chek-2">
+                        <input type="checkbox" id="chek-2">
+                        <div class="icon">
+                            <i class="mdi mdi-check"></i>
+                        </div>
+                        <span>I have read and agree to the Terms and Conditions and Privacy Policy</span>
+                    </label>
+                </div>
                 <button class="c-btn blue filled full-width">SING UP</button>
             </form>
             <div class="no-account">
@@ -86,8 +89,61 @@
             </div>
         </div>
     </div>
+    <div id="video" class="modal video-modal">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/zf--3cOEo3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="SignUpAuction" class="modal sign-modal">
+        <div class="sign-modal-container">
+            <strong class="title">REGISTER TO AUCTION 174</strong>
+            <form action="" class="form">
+                <div class="c-input grey">
+                    <input type="text" placeholder="Name">
+                </div>
+                <div class="c-input grey">
+                    <input type="text" placeholder="Last Name">
+                </div>
+                <div class="c-input grey">
+                    <input type="text" placeholder="Email address">
+                </div>
+                <div class="c-input with-code grey">
+                    <input id="PhoneCode" type="tel" placeholder="Phone">
+                </div>
+                <div class="cheks">
+                    <label class="c-checkbox" for="chek-1">
+                        <input type="checkbox" id="chek-1">
+                        <div class="icon">
+                            <i class="mdi mdi-check"></i>
+                        </div>
+                        <span>Yes, I would like to receive email communications from Ineichen Zurich</span>
+                    </label>
+                    <label class="c-checkbox" for="chek-2">
+                        <input type="checkbox" id="chek-2">
+                        <div class="icon">
+                            <i class="mdi mdi-check"></i>
+                        </div>
+                        <span>I have read and agree to the Terms and Conditions and Privacy Policy</span>
+                    </label>
+                </div>
+                <button class="c-btn blue filled full-width">REGISTER NOW</button>
+            </form>
+        </div>
+    </div>
+    <div id="Success" class="modal sign-modal">
+        <div class="sign-modal-container">
+            <strong class="title">THANK YOU</strong>
+            <p>
+                Ineichen Zurich will contact you within 24 hours to confirm <br>
+                your participation in the auction. 
+            </p>
+            <button class="c-btn blue filled full-width">CLOSE</button>
+
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" charset="utf-8"></script>
+    <script src="js/intlTelInput.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         $(document).ready(function() {
@@ -106,8 +162,29 @@
                 closeClass: 'mdi mdi-close',
                 closeText: ''
             });
-
+            $('#video').modal({
+                closeExisting: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
+            $('#SignUpAuction').modal({
+                closeExisting: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
+            $('#Success').modal({
+                closeExisting: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
             
+
+            var inputCode = document.querySelector("#PhoneCode");
+            window.intlTelInput(inputCode, {
+                // any initialisation options go here
+            });
+
+
         });
     </script>
 </body>

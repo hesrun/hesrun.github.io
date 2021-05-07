@@ -32,9 +32,17 @@ input, button, textarea, select {
 /*****************header****************/
 .main-header {
   top: 0px;
-  height: 120px;
   width: 100%;
-  padding: 20px 40px;
+  position: fixed;
+  color: #fff;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px 0 rgba(13, 8, 89, 0.2);
+          box-shadow: 0 0 10px 0 rgba(13, 8, 89, 0.2);
+  z-index: 100;
+}
+
+.main-header .main-header-wrap {
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,17 +52,11 @@ input, button, textarea, select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: fixed;
-  color: #fff;
-  background: #fff;
-  -webkit-box-shadow: 0 0 10px 0 rgba(13, 8, 89, 0.2);
-          box-shadow: 0 0 10px 0 rgba(13, 8, 89, 0.2);
-  z-index: 100;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.main-header.mini {
+.main-header.mini .main-header-wrap {
   height: 60px;
 }
 
@@ -169,6 +171,10 @@ input, button, textarea, select {
 
 .header-main-links > li > a {
   color: #000;
+}
+
+.header-main-links > li > a:hover {
+  color: #B7933D;
 }
 
 .header-tools {
@@ -1315,6 +1321,32 @@ input, button, textarea, select {
   margin: 3px 0;
 }
 
+.product-card-params .play-video {
+  margin-top: 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #0D0859;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.product-card-params .play-video:hover {
+  color: #B7933D;
+}
+
+.product-card-params .play-video i.mdi {
+  margin-left: 10px;
+  font-size: 48px;
+}
+
 .product-card-info {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
@@ -1405,6 +1437,8 @@ input, button, textarea, select {
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .additional-photo-grid img {
@@ -1688,16 +1722,7 @@ input, button, textarea, select {
   background: rgba(4, 2, 37, 0.7);
 }
 
-.sign-modal {
-  width: 100%;
-  max-width: 870px;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 0px;
-}
-
-.sign-modal a.close-modal {
+.modal a.close-modal {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -1713,14 +1738,23 @@ input, button, textarea, select {
   transition: all 0.5s;
 }
 
-.sign-modal a.close-modal:hover {
+.modal a.close-modal:hover {
   border-color: #0D0859;
   color: #fff;
   background: #0D0859;
 }
 
+.sign-modal {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0px;
+}
+
 .sign-modal-container {
-  padding: 15% 20%;
+  padding: 10% 15%;
 }
 
 .sign-modal-container .title {
@@ -1734,7 +1768,7 @@ input, button, textarea, select {
 }
 
 .sign-modal-container .title + p {
-  margin-bottom: 45px;
+  margin-bottom: 70px;
   line-height: 1.5;
 }
 
@@ -1760,6 +1794,55 @@ input, button, textarea, select {
 
 .sign-modal-container .form .c-btn {
   margin-top: 30px;
+}
+
+.sign-modal-container .cheks {
+  margin-top: 50px;
+}
+
+.video-modal {
+  background: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0px;
+}
+
+.video-modal a.close-modal {
+  background: #fff;
+}
+
+.video-modal .video-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 80%;
+  position: relative;
+}
+
+.video-modal .video-container:before {
+  display: block;
+  content: " ";
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video-modal .video-container > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*********************ui*****************/
@@ -1822,6 +1905,10 @@ input, button, textarea, select {
   height: 55px;
   width: 55px;
   line-height: 55px;
+}
+
+.c-input.with-code .iti {
+  width: 100%;
 }
 
 .c-btn {
@@ -2032,6 +2119,16 @@ input, button, textarea, select {
   transition: all 0.3s;
 }
 
+.iti__flag {
+  background-image: url("../img/flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../img/flags@2x.png");
+  }
+}
+
 @media screen and (max-width: 1630px) {
   .additional-items-carusel {
     padding: 0 60px;
@@ -2173,10 +2270,8 @@ input, button, textarea, select {
     padding-top: 60px;
   }
   /*******************header************/
-  .main-header {
+  .main-header .main-header-wrap {
     height: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   .main-header .header-logo {
     width: 60px;
@@ -2537,6 +2632,9 @@ input, button, textarea, select {
   .sign-modal-container a.close {
     right: 0px;
   }
+  .sign-modal-container .cheks {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -2741,11 +2839,11 @@ input, button, textarea, select {
     font-size: 28px;
   }
   .c-checkbox .icon {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
   }
   .c-checkbox span {
-    line-height: 22px;
+    line-height: 18px;
   }
 }
 /*# sourceMappingURL=main.css.map */
