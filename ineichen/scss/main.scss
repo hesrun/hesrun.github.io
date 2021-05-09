@@ -491,26 +491,47 @@ input, button, textarea, select {
     gap: 30px;
 }
 .product-grid-item {
-    background: #fff;
     position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: #FFF;
+        z-index: 1;
+        transition: all 0.3s;
+    }
     &:hover {
-
         .image {
             img {
                 transform: scale(1.1);
             }
         }
+        &:after {
+            left: -10px;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            box-shadow: 0 0 20px 0px rgba(#000, 0.05)
+        }
     }
     .image {
         display: block;
         overflow: hidden;
+        position: relative;
+        z-index: 2;
         img {
             width: 100%;
-            transition: transform 0.7s;
+            transition: transform 0.3s;
         }
     }
     .data {
         padding: 0 35px 35px 35px;
+        position: relative;
+        z-index: 2;
     }
     .brand {
         display: block;
@@ -530,6 +551,23 @@ input, button, textarea, select {
         color: $brown;
         font-size: 16px;
         font-weight: 500;
+    }
+    .add-to-fav {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: 2;
+        color: $grey;
+        font-size: 24px;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        &.active {
+            color: $brown;
+            .mdi:before {
+                content: "\F02D1";
+            }
+        }
     }
 }
 /*****************about-ineichen-section*************/
@@ -1311,9 +1349,91 @@ input, button, textarea, select {
         }
     }
 }
+/********************products************/
+.products-banner {
+    padding: 100px 0;
+    background: url(../img/products-banner.jpg);
+    color: #fff;
+    h1 {
+        font-size: 50px;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+    }
+    .name {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .price {
+        display: block;
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: 40px 0 45px;
+    }
+}
+.sorting-in-products {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    .item {
+        display: flex;
+        align-items: center;
+        span {
+            margin-right: 15px;
+        }
+    }
+    .item + .item {
+        margin-left: 30px;
+    }
+    .item:last-child {
+        margin-left: auto;
+    }
+    .c-select {
+        width: 200px;
+    }
+}
+.pagination {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        color: $blue;
+        background: #fff;
+        text-decoration: none;
+        margin: 0 3px;
+        transition: all 0.3s;
+        &:hover {
+            background: $brown;
+            color: #fff;
+        }
+    }
+    .dots {
+        pointer-events: none;
+    }
+    .prev {
+        font-size: 24px;
+        margin-right: 15px;
+    }
+    .next {
+        font-size: 24px;
+        margin-left: 15px;
+    }
+}
 /*******************modals**************/
 .blocker {
     background: rgba(#040225, 0.7);
+    z-index: 999;
 }
 .modal {
     a.close-modal {
@@ -1563,6 +1683,14 @@ input, button, textarea, select {
             }
         }
     }
+    &.white {
+        border-color: white;
+        color: white;
+        &:hover {
+            background: white;
+            color: $blue;
+        }
+    }
     &.full-width {
         width: 100%;
     }
@@ -1571,7 +1699,7 @@ input, button, textarea, select {
 .c-select {
     position: relative;
     select {
-        font-size: 16px;
+        font-size: 14px;
         height: 55px;
         border: none;
         appearance: none;
@@ -1589,6 +1717,43 @@ input, button, textarea, select {
         right: 10px;
         color: $grey;
         pointer-events: none;
+    }
+    .ms-choice {
+        height: 55px;
+        border: none;
+        border-radius: 0px;
+        color: #000;
+        > span {
+            top: 15px;
+            font-size: 14px;
+            left: 0px;
+            right: 50px;
+            padding-left: 20px;
+        }
+        div.icon-caret {
+            display: none;
+        }
+    }
+    .ms-drop {
+        border-radius: 0px;
+        border: none;
+        ul>li {
+            padding: 0px;
+        }
+        ul>li:hover {
+            background: #CCB585;
+            color: #fff;
+        }
+        ul>li.selected {
+            background: $brown;
+            color: #fff;
+        }
+        ul>li label {
+            padding: 20px 15px;
+        }
+        input {
+            display: none;
+        }
     }
 }
 

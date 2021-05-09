@@ -591,8 +591,21 @@ input, button, textarea, select {
 }
 
 .product-grid-item {
-  background: #fff;
   position: relative;
+}
+
+.product-grid-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: #FFF;
+  z-index: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .product-grid-item:hover .image img {
@@ -600,21 +613,34 @@ input, button, textarea, select {
           transform: scale(1.1);
 }
 
+.product-grid-item:hover:after {
+  left: -10px;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.05);
+}
+
 .product-grid-item .image {
   display: block;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
 .product-grid-item .image img {
   width: 100%;
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: -webkit-transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .product-grid-item .data {
   padding: 0 35px 35px 35px;
+  position: relative;
+  z-index: 2;
 }
 
 .product-grid-item .brand {
@@ -637,6 +663,26 @@ input, button, textarea, select {
   color: #B7933D;
   font-size: 16px;
   font-weight: 500;
+}
+
+.product-grid-item .add-to-fav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  color: rgba(13, 8, 89, 0.5);
+  font-size: 24px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.product-grid-item .add-to-fav.active {
+  color: #B7933D;
+}
+
+.product-grid-item .add-to-fav.active .mdi:before {
+  content: "\F02D1";
 }
 
 /*****************about-ineichen-section*************/
@@ -1717,9 +1763,122 @@ input, button, textarea, select {
   width: calc(50% - 10px);
 }
 
+/********************products************/
+.products-banner {
+  padding: 100px 0;
+  background: url(../img/products-banner.jpg);
+  color: #fff;
+}
+
+.products-banner h1 {
+  font-size: 50px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.products-banner .name {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.products-banner .price {
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 40px 0 45px;
+}
+
+.sorting-in-products {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sorting-in-products .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sorting-in-products .item span {
+  margin-right: 15px;
+}
+
+.sorting-in-products .item + .item {
+  margin-left: 30px;
+}
+
+.sorting-in-products .item:last-child {
+  margin-left: auto;
+}
+
+.sorting-in-products .c-select {
+  width: 200px;
+}
+
+.pagination {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: #0D0859;
+  background: #fff;
+  text-decoration: none;
+  margin: 0 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.pagination a:hover {
+  background: #B7933D;
+  color: #fff;
+}
+
+.pagination .dots {
+  pointer-events: none;
+}
+
+.pagination .prev {
+  font-size: 24px;
+  margin-right: 15px;
+}
+
+.pagination .next {
+  font-size: 24px;
+  margin-left: 15px;
+}
+
 /*******************modals**************/
 .blocker {
   background: rgba(4, 2, 37, 0.7);
+  z-index: 999;
 }
 
 .modal a.close-modal {
@@ -2040,6 +2199,16 @@ input, button, textarea, select {
   background: #1b10b7;
 }
 
+.c-btn.white {
+  border-color: white;
+  color: white;
+}
+
+.c-btn.white:hover {
+  background: white;
+  color: #0D0859;
+}
+
 .c-btn.full-width {
   width: 100%;
 }
@@ -2049,7 +2218,7 @@ input, button, textarea, select {
 }
 
 .c-select select {
-  font-size: 16px;
+  font-size: 14px;
   height: 55px;
   border: none;
   -webkit-appearance: none;
@@ -2070,6 +2239,52 @@ input, button, textarea, select {
   right: 10px;
   color: rgba(13, 8, 89, 0.5);
   pointer-events: none;
+}
+
+.c-select .ms-choice {
+  height: 55px;
+  border: none;
+  border-radius: 0px;
+  color: #000;
+}
+
+.c-select .ms-choice > span {
+  top: 15px;
+  font-size: 14px;
+  left: 0px;
+  right: 50px;
+  padding-left: 20px;
+}
+
+.c-select .ms-choice div.icon-caret {
+  display: none;
+}
+
+.c-select .ms-drop {
+  border-radius: 0px;
+  border: none;
+}
+
+.c-select .ms-drop ul > li {
+  padding: 0px;
+}
+
+.c-select .ms-drop ul > li:hover {
+  background: #CCB585;
+  color: #fff;
+}
+
+.c-select .ms-drop ul > li.selected {
+  background: #B7933D;
+  color: #fff;
+}
+
+.c-select .ms-drop ul > li label {
+  padding: 20px 15px;
+}
+
+.c-select .ms-drop input {
+  display: none;
 }
 
 .c-checkbox {
