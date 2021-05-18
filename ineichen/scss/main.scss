@@ -412,6 +412,71 @@ input, button, textarea, select {
        display: none;
     }
  }
+/*************upcoming-auction*************/
+.upcoming-auction {
+    display: flex;
+    align-items: flex-end;
+    height: 100vh;
+    margin-top: -120px;
+    background: url(../img/action-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.subscribe-auction {
+    width: 50%;
+    background: #0D0C19;
+    padding: 60px 10%;
+    color: #fff;
+    text-align: center;
+    h3 {
+        font-size: 34px;
+    }
+    p {
+        margin: 30px 0;
+    }
+}
+.upcoming-auction-date {
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    padding: 85px 0;
+    h3 {
+        font-size: 50px;
+        line-height: 1.3;
+    }
+    span {
+        display: block;
+        margin: 30px 0;
+        font-size: 20px;
+    }
+}
+/*****************top-lots****************/
+.top-lots-section {
+    padding: 50px 0;
+    overflow: hidden;
+}
+.top-lots-carusel {
+    .splide__track {
+        overflow: visible;
+    }
+    .splide__arrow {
+        width: 50px;
+        height: 50px;
+        border-radius: 0px;
+        border: 2px #fff solid;
+        background: none;
+        color: #fff;
+        font-size: 24px;
+        &:disabled {
+            opacity: 0;
+        }
+    }
+    .splide__arrow:hover {
+        background: #fff;
+        color: $blue;
+    }
+}
 /*****************dont-miss-section*******/
 .line-header {
     font-size: 18px;
@@ -434,7 +499,7 @@ input, button, textarea, select {
         font-size: 40px;
         font-weight: 500;
         margin-left: 110px;
-        margin-top: 20px;
+        margin-top: 50px;
     }
 }
 .dont-miss-section {
@@ -570,6 +635,7 @@ input, button, textarea, select {
         }
     }
 }
+
 /*****************about-ineichen-section*************/
 .about-ineichen-section {
     padding: 50px 0;
@@ -1430,6 +1496,45 @@ input, button, textarea, select {
         margin-left: 15px;
     }
 }
+.products-filters {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-start;
+}
+.open-filters {
+    margin-right: 30px;
+    .mdi-tune {
+        margin-right: 10px;
+        font-size: 24px;
+    }
+    .mdi-chevron-down {
+        margin-left: 20px;
+        font-size: 24px;
+    }
+}
+.choised-filters {
+    display: flex;
+    flex-wrap: wrap;
+    div {
+        display: inline-flex;
+        align-items: center;
+        height: 55px;
+        background: #fff;
+        padding: 0 15px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+    }
+    i.mdi {
+        opacity: 0.5;
+        font-size: 24px;
+        margin-left: 10px;
+        cursor: pointer;
+        &:hover {
+            color: $blue;
+            opacity: 1;
+        }
+    }
+}
 /*******************modals**************/
 .blocker {
     background: rgba(#040225, 0.7);
@@ -1689,6 +1794,15 @@ input, button, textarea, select {
         &:hover {
             background: white;
             color: $blue;
+        }
+        &.filled {
+            color: #000;
+            background: #fff;
+            &:hover {
+                background: $brown;
+                border-color: $brown;
+                color: #fff;
+            }
         }
     }
     &.full-width {
