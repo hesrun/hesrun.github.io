@@ -1972,7 +1972,8 @@ input, button, textarea, select {
   font-size: 24px;
 }
 
-.open-filters .mdi-chevron-down {
+.open-filters .mdi-chevron-down,
+.open-filters .mdi-chevron-up {
   margin-left: 20px;
   font-size: 24px;
 }
@@ -2009,6 +2010,171 @@ input, button, textarea, select {
 .choised-filters i.mdi:hover {
   color: #0D0859;
   opacity: 1;
+}
+
+/****************filter-modal************/
+.filters-modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.choised-filters.in-modal div {
+  background: #EDECF3;
+}
+
+.products-filters-wrap {
+  border-top: 1px #D9D7E3 solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.products-filters-nav {
+  width: 300px;
+  padding-top: 60px;
+  border-right: 1px #D9D7E3 solid;
+}
+
+.products-filters-nav a {
+  padding: 0 20px;
+  color: #0D0859;
+  height: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px #D9D7E3 solid;
+  font-weight: 500;
+}
+
+.products-filters-nav a:last-child {
+  border-bottom: 1px #D9D7E3 solid;
+}
+
+.products-filters-blocks {
+  padding: 60px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.filters-blocks-item h2 {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0D0859;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+
+.filters-blocks-item h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0D0859;
+  margin: 40px 0 20px;
+}
+
+.gender-filter {
+  max-width: 800px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.gender-filter input {
+  display: none;
+}
+
+.gender-filter label {
+  display: block;
+}
+
+.gender-filter label span {
+  margin-top: 10px;
+  display: block;
+}
+
+.gender-filter label i.mdi {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  opacity: 0;
+  color: #B7933D;
+}
+
+.gender-filter .gender-box {
+  border: 1px #D9D7E3 solid;
+  text-align: center;
+  position: relative;
+  padding: 30px 0;
+  cursor: pointer;
+}
+
+.gender-filter label:hover .gender-box,
+.gender-filter input:checked + .gender-box {
+  border-color: #B7933D;
+}
+
+.gender-filter label:hover .gender-box .svg path,
+.gender-filter input:checked + .gender-box .svg path {
+  stroke: #B7933D;
+}
+
+.gender-filter label:hover .gender-box .svg circle,
+.gender-filter input:checked + .gender-box .svg circle {
+  stroke: #B7933D;
+}
+
+.gender-filter input:checked + .gender-box i.mdi {
+  opacity: 1;
+}
+
+.hot-filters input {
+  display: none;
+}
+
+.hot-filters input:checked + span {
+  border-color: #B7933D;
+  color: #B7933D;
+}
+
+.hot-filters span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  border: 1px #D9D7E3 solid;
+  cursor: pointer;
+}
+
+.filter-checks-list {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr auto;
+      grid-template-columns: 1fr 1fr auto;
 }
 
 /*******************modals**************/
@@ -2438,6 +2604,9 @@ input, button, textarea, select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 20px;
   cursor: pointer;
 }
@@ -2453,7 +2622,12 @@ input, button, textarea, select {
 }
 
 .c-checkbox span {
-  line-height: 25px;
+  line-height: 20px;
+}
+
+.c-checkbox span i {
+  font-style: normal;
+  opacity: 0.6;
 }
 
 .c-checkbox .icon {
@@ -2464,8 +2638,8 @@ input, button, textarea, select {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: 1px rgba(13, 8, 89, 0.3) solid;
 }
 
@@ -2479,6 +2653,55 @@ input, button, textarea, select {
           transform: rotateY(90deg);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.c-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.c-toggle:hover span {
+  color: #B7933D;
+}
+
+.c-toggle input {
+  display: none;
+}
+
+.c-toggle input:checked + .c-toggle-btn:after {
+  left: 27px;
+  background: #B7933D;
+}
+
+.c-toggle span {
+  font-size: 16px;
+}
+
+.c-toggle .c-toggle-btn {
+  width: 60px;
+  height: 30px;
+  border: 1px #D9D7E3 solid;
+  border-radius: 30px;
+  position: relative;
+  margin-right: 15px;
+}
+
+.c-toggle .c-toggle-btn:after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: -4px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #D9D7E3;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .iti__flag {

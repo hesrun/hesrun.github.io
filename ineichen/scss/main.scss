@@ -1507,7 +1507,8 @@ input, button, textarea, select {
         margin-right: 10px;
         font-size: 24px;
     }
-    .mdi-chevron-down {
+    .mdi-chevron-down,
+    .mdi-chevron-up {
         margin-left: 20px;
         font-size: 24px;
     }
@@ -1534,6 +1535,136 @@ input, button, textarea, select {
             opacity: 1;
         }
     }
+}
+
+/****************filter-modal************/
+.filters-modal {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+    max-width: 100%;
+    overflow: auto;
+}
+.choised-filters.in-modal {
+    div {
+        background: #EDECF3;
+    }
+}
+.products-filters-wrap {
+    border-top: 1px #D9D7E3 solid;
+    display: flex;
+}
+.products-filters-nav {
+    width: 300px;
+    padding-top: 60px;
+    border-right: 1px #D9D7E3 solid;
+    a {
+        padding: 0 20px;
+        color: $blue;
+        height: 60px;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        display: flex;
+        border-top: 1px #D9D7E3 solid;
+        font-weight: 500;
+        &:last-child {
+            border-bottom: 1px #D9D7E3 solid;
+        }
+    }
+}
+.products-filters-blocks {
+    padding: 60px;
+    flex: 1 1 auto;
+}
+.filters-blocks-item {
+    h2 {
+        font-size: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $blue;
+        line-height: 60px;
+        margin-bottom: 30px;
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: $blue;
+        margin: 40px 0 20px;
+    }
+}
+.gender-filter {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    input {
+        display: none;
+    }
+    label {
+        display: block;
+        span  {
+            margin-top: 10px;
+            display: block;
+        }
+        i.mdi {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 20px;
+            opacity: 0;
+            color: $brown;
+        }
+    }
+    .gender-box {
+        border: 1px #D9D7E3 solid;
+        text-align: center;
+        position: relative;
+        padding: 30px 0;
+        cursor: pointer;
+    }
+    label:hover .gender-box,
+    input:checked + .gender-box {
+        border-color: $brown;
+        .svg {
+            path {
+                stroke: $brown;
+            }
+            circle {
+                stroke: $brown;
+            }
+        }
+    }
+    input:checked + .gender-box i.mdi {
+        opacity: 1;
+    }
+}
+.hot-filters {
+    input {
+        display: none;
+        &:checked + span {
+            border-color: $brown;
+            color: $brown;
+        }
+    }
+    span {
+        display: inline-flex;
+        align-items: center;
+        padding: 0 20px;
+        height: 50px;
+        border: 1px #D9D7E3 solid;
+        cursor: pointer;
+    }
+}
+.filter-checks-list {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
 }
 /*******************modals**************/
 .blocker {
@@ -1633,6 +1764,8 @@ input, button, textarea, select {
         @include aspect-ratio(16,9, iframe);
     }
 }
+
+
 /*********************ui*****************/
 .c-input {
     margin-bottom: 20px;
@@ -1873,6 +2006,7 @@ input, button, textarea, select {
 
 .c-checkbox {
     display: flex;
+    align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
     input {
@@ -1887,14 +2021,18 @@ input, button, textarea, select {
         }
     }
     span {
-        line-height: 25px;
+        line-height: 20px;
+        i {
+            font-style: normal;
+            opacity: 0.6;
+        }
     }
     .icon {
         margin-right: 15px;
         display: flex;
         flex: 0 0 auto;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border: 1px rgba($blue, 0.3) solid;  
         i.mdi {
             color: $blue;
@@ -1908,6 +2046,45 @@ input, button, textarea, select {
     }
 }
 
+.c-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+        span {
+            color: $brown;
+        }
+    }
+    input {
+        display: none;
+    }
+    input:checked + .c-toggle-btn:after {
+        left: 27px;
+        background: $brown;
+    }
+    span {
+        font-size: 16px;
+    }
+    .c-toggle-btn {
+        width: 60px;
+        height: 30px;
+        border: 1px #D9D7E3 solid;
+        border-radius: 30px;
+        position: relative;
+        margin-right: 15px;
+        &:after {
+            content: "";
+            position: absolute;
+            left: -3px;
+            top: -4px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #D9D7E3;
+            transition: all 0.2s;
+        }
+    }
+}
 
 .iti__flag {background-image: url("../img/flags.png");}
 

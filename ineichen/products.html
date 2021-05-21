@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/multiple-select@1.5.2/dist/multiple-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -552,6 +553,7 @@
             </div>
         </div>
     </footer>
+
     <section class="bottom-subscribe">
         <div class="container">
             <div class="subscribe-cols">
@@ -573,14 +575,349 @@
             </div>
         </div>
     </section>
+
+    <div id="FiltersModal" class="modal filters-modal">
+        <div class="container">
+            <div class="products-filters">
+                <a href="#" class="c-btn brown outline open-filters">
+                    <i class="mdi mdi-tune"></i>
+                    Filters
+                    <i class="mdi mdi-chevron-up"></i>
+                </a>
+                <div class="choised-filters in-modal">
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                    <div>
+                        A. Lange & Söhne
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+                <a href="#" class="c-btn grey outline">
+                    Clear
+                </a>
+            </div>
+            <div class="products-filters-wrap">
+                <div class="products-filters-nav">
+                    <a href="">
+                        Gender
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Year
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Movement & Functions
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Style
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Dial
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Case
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Bracelet material
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Clasp
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Condition
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="">
+                        Box / papers
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="products-filters-blocks">
+                    <div class="filters-blocks-item">
+                        <h2>Gender</h2>
+                        <div class="gender-filter">
+                            <label for="man">
+                                <input type="checkbox" name="gender" id="man">
+                                <div class="gender-box">
+                                    <img class="svg" src="img/gender-man.svg" alt="">
+                                    <span>Men's watch</span>
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                            </label>
+                            <label for="women">
+                                <input type="checkbox" name="gender" id="women">
+                                <div class="gender-box">
+                                    <img class="svg" src="img/gender-women.svg" alt="">
+                                    <span>Women's watch</span>
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                            </label>
+                            <label for="unisex">
+                                <input type="checkbox" name="gender" id="unisex">
+                                <div class="gender-box">
+                                    <img class="svg" src="img/gender-unisex.svg" alt="">
+                                    <span>Unisex</span>
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                            </label>
+                            <label for="NotSet">
+                                <input type="checkbox" name="gender" id="NotSet">
+                                <div class="gender-box">
+                                    <img class="svg" src="img/gender-notset.svg" alt="">
+                                    <span>Not set</span>
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filters-blocks-item">
+                        <h2>Year</h2>
+                        <label for="YearAvailable" class="c-toggle">
+                            <input type="checkbox" id="YearAvailable" name="YearAvailable">
+                            <div class="c-toggle-btn"></div>
+                            <span>Only display available options</span>
+                        </label>
+                        <h3>Popular years of production</h3>
+                        <div class="hot-filters">
+                            <label for="2010_2019">
+                                <input type="checkbox" name="HotYear" id="2010_2019">
+                                <span>2010 - 2019</span>
+                            </label>
+                            <label for="2000_2009">
+                                <input type="checkbox" name="HotYear" id="2000_2009">
+                                <span>2000 - 2009</span>
+                            </label>
+                            <label for="1990_1999">
+                                <input type="checkbox" name="HotYear" id="1990_1999">
+                                <span>1990 - 1999</span>
+                            </label>
+                            <label for="1980_1989">
+                                <input type="checkbox" name="HotYear" id="1980_1989">
+                                <span>1980 - 1989</span>
+                            </label>
+                            <label for="1970_1979">
+                                <input type="checkbox" name="HotYear" id="1970_1979">
+                                <span>1970 - 1979</span>
+                            </label>
+                            <label for="1960_1969">
+                                <input type="checkbox" name="HotYear" id="1960_1969">
+                                <span>1960 - 1969</span>
+                            </label>
+                            <label for="1950_1959">
+                                <input type="checkbox" name="HotYear" id="1950_1959">
+                                <span>1950 - 1959</span>
+                            </label>
+                        </div>
+                        <h3>Popular years of production</h3>
+                        <div class="c-input grey icon-right">
+                            <input type="text" name="" id="" placeholder="Search for a specific year">
+                            <i class="mdi mdi-magnify"></i>
+                        </div>
+                        <div class="filter-checks-list">
+                            <label class="c-checkbox" for="2020y">
+                                <input type="checkbox" name="yearList" id="2020y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2020 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2021y">
+                                <input type="checkbox" name="yearList" id="2021y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2021 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2022y">
+                                <input type="checkbox" name="yearList" id="2022y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2022 <i>(066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2020y">
+                                <input type="checkbox" name="yearList" id="2020y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2020 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2021y">
+                                <input type="checkbox" name="yearList" id="2021y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2021 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2022y">
+                                <input type="checkbox" name="yearList" id="2022y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2022 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2020y">
+                                <input type="checkbox" name="yearList" id="2020y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2020 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2021y">
+                                <input type="checkbox" name="yearList" id="2021y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2021 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2022y">
+                                <input type="checkbox" name="yearList" id="2022y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2022 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2020y">
+                                <input type="checkbox" name="yearList" id="2020y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2020 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2021y">
+                                <input type="checkbox" name="yearList" id="2021y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2021 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2022y">
+                                <input type="checkbox" name="yearList" id="2022y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2022 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2020y">
+                                <input type="checkbox" name="yearList" id="2020y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2020 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2021y">
+                                <input type="checkbox" name="yearList" id="2021y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2021 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2022y">
+                                <input type="checkbox" name="yearList" id="2022y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2022 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2020y">
+                                <input type="checkbox" name="yearList" id="2020y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2020 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2021y">
+                                <input type="checkbox" name="yearList" id="2021y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2021 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2022y">
+                                <input type="checkbox" name="yearList" id="2022y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2022 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2020y">
+                                <input type="checkbox" name="yearList" id="2020y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2020 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2021y">
+                                <input type="checkbox" name="yearList" id="2021y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2021 <i>(80066)</i></span>
+                            </label>
+                            <label class="c-checkbox" for="2022y">
+                                <input type="checkbox" name="yearList" id="2022y">
+                                <div class="icon">
+                                    <i class="mdi mdi-check"></i>
+                                </div>
+                                <span>2022 <i>(80066)</i></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/multiple-select@1.5.2/dist/multiple-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" charset="utf-8"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     
     <script src="js/main.js"></script>
     <script>
+        $('#FiltersModal').modal({
+            closeExisting: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
         $('.js-select').multipleSelect({
             placeholder: 'Choise',
             selectAll: false
