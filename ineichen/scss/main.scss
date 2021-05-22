@@ -1497,7 +1497,7 @@ input, button, textarea, select {
     }
 }
 .products-filters {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: flex;
     align-items: flex-start;
 }
@@ -1515,16 +1515,29 @@ input, button, textarea, select {
 }
 .choised-filters {
     display: flex;
-    flex-wrap: wrap;
-    div {
-        display: inline-flex;
-        align-items: center;
-        height: 55px;
-        background: #fff;
-        padding: 0 15px;
-        margin-right: 15px;
-        margin-bottom: 15px;
+    position: relative;
+    margin-right: auto;
+    padding-right: 30px;
+    .filter-count {
+        white-space: nowrap;
+        line-height: 55px;
     }
+}
+.choised-filters-list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 55px;
+    overflow: hidden;
+    position: relative;
+}
+.choised-filters-item {
+    display: inline-flex;
+    align-items: center;
+    height: 55px;
+    background: #fff;
+    padding: 0 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
     i.mdi {
         opacity: 0.5;
         font-size: 24px;
@@ -1537,8 +1550,10 @@ input, button, textarea, select {
     }
 }
 
+
 /****************filter-modal************/
 .filters-modal {
+    padding: 30px 0;
     position: fixed;
     left: 0px;
     top: 0px;
@@ -1547,21 +1562,29 @@ input, button, textarea, select {
     border-radius: 0px;
     box-shadow: none;
     max-width: 100%;
-    overflow: auto;
+}
+.filters-modal-wrapper {
+    max-width: 1530px;
+    padding: 0 30px;
+    margin: 0 auto;
 }
 .choised-filters.in-modal {
-    div {
+    .choised-filters-item {
         background: #EDECF3;
     }
 }
 .products-filters-wrap {
     border-top: 1px #D9D7E3 solid;
+    border-bottom: 1px #D9D7E3 solid;
     display: flex;
+    height: calc(100vh - 230px);
 }
 .products-filters-nav {
     width: 300px;
-    padding-top: 60px;
     border-right: 1px #D9D7E3 solid;
+    height: 100%;
+    overflow: auto;
+    @include scrollbars(2px, $blue, rgba($blue,0.3));
     a {
         padding: 0 20px;
         color: $blue;
@@ -1570,18 +1593,35 @@ input, button, textarea, select {
         align-items: center;
         text-decoration: none;
         display: flex;
-        border-top: 1px #D9D7E3 solid;
+        border-bottom: 1px #D9D7E3 solid;
         font-weight: 500;
-        &:last-child {
-            border-bottom: 1px #D9D7E3 solid;
+        i.mdi {
+            font-size: 20px;
+            display: none;
+        }
+    }
+    a.active,
+    a:hover {
+        border-color: $brown;
+        background: $brown;
+        color: #fff;
+        i.mdi {
+            display: inline;
         }
     }
 }
 .products-filters-blocks {
-    padding: 60px;
+    padding: 30px 60px;
     flex: 1 1 auto;
+    height: 100%;
+    overflow: auto;
+    @include scrollbars(2px, $blue, rgba($blue,0.3));
 }
 .filters-blocks-item {
+    display: none;
+    &.active {
+        display: block;
+    }
     h2 {
         font-size: 30px;
         font-weight: 500;
@@ -1596,6 +1636,9 @@ input, button, textarea, select {
         font-weight: 500;
         color: $blue;
         margin: 40px 0 20px;
+    }
+    h3 + .filter-checks-list {
+        margin-top: 30px;
     }
 }
 .gender-filter {
@@ -1647,10 +1690,11 @@ input, button, textarea, select {
 .hot-filters {
     input {
         display: none;
-        &:checked + span {
-            border-color: $brown;
-            color: $brown;
-        }
+    }
+    input:checked + span,
+    span:hover {
+        border-color: $brown;
+        color: $brown;
     }
     span {
         display: inline-flex;
@@ -1664,7 +1708,13 @@ input, button, textarea, select {
 .filter-checks-list {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr 200px;
+}
+.filters-modal-btns {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 /*******************modals**************/
 .blocker {

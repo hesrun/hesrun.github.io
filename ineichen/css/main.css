@@ -1954,7 +1954,7 @@ input, button, textarea, select {
 }
 
 .products-filters {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1982,11 +1982,28 @@ input, button, textarea, select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  position: relative;
+  margin-right: auto;
+  padding-right: 30px;
 }
 
-.choised-filters div {
+.choised-filters .filter-count {
+  white-space: nowrap;
+  line-height: 55px;
+}
+
+.choised-filters-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 55px;
+  overflow: hidden;
+  position: relative;
+}
+
+.choised-filters-item {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2000,20 +2017,21 @@ input, button, textarea, select {
   margin-bottom: 15px;
 }
 
-.choised-filters i.mdi {
+.choised-filters-item i.mdi {
   opacity: 0.5;
   font-size: 24px;
   margin-left: 10px;
   cursor: pointer;
 }
 
-.choised-filters i.mdi:hover {
+.choised-filters-item i.mdi:hover {
   color: #0D0859;
   opacity: 1;
 }
 
 /****************filter-modal************/
 .filters-modal {
+  padding: 30px 0;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -2023,24 +2041,50 @@ input, button, textarea, select {
   -webkit-box-shadow: none;
           box-shadow: none;
   max-width: 100%;
-  overflow: auto;
 }
 
-.choised-filters.in-modal div {
+.filters-modal-wrapper {
+  max-width: 1530px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.choised-filters.in-modal .choised-filters-item {
   background: #EDECF3;
 }
 
 .products-filters-wrap {
   border-top: 1px #D9D7E3 solid;
+  border-bottom: 1px #D9D7E3 solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: calc(100vh - 230px);
 }
 
 .products-filters-nav {
   width: 300px;
-  padding-top: 60px;
   border-right: 1px #D9D7E3 solid;
+  height: 100%;
+  overflow: auto;
+}
+
+.products-filters-nav::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.products-filters-nav::-webkit-scrollbar-thumb {
+  background: #0D0859;
+}
+
+.products-filters-nav::-webkit-scrollbar-track {
+  background: rgba(13, 8, 89, 0.3);
+}
+
+.products-filters-nav {
+  scrollbar-face-color: #0D0859;
+  scrollbar-track-color: rgba(13, 8, 89, 0.3);
 }
 
 .products-filters-nav a {
@@ -2057,19 +2101,60 @@ input, button, textarea, select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-top: 1px #D9D7E3 solid;
+  border-bottom: 1px #D9D7E3 solid;
   font-weight: 500;
 }
 
-.products-filters-nav a:last-child {
-  border-bottom: 1px #D9D7E3 solid;
+.products-filters-nav a i.mdi {
+  font-size: 20px;
+  display: none;
+}
+
+.products-filters-nav a.active,
+.products-filters-nav a:hover {
+  border-color: #B7933D;
+  background: #B7933D;
+  color: #fff;
+}
+
+.products-filters-nav a.active i.mdi,
+.products-filters-nav a:hover i.mdi {
+  display: inline;
 }
 
 .products-filters-blocks {
-  padding: 60px;
+  padding: 30px 60px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  height: 100%;
+  overflow: auto;
+}
+
+.products-filters-blocks::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+.products-filters-blocks::-webkit-scrollbar-thumb {
+  background: #0D0859;
+}
+
+.products-filters-blocks::-webkit-scrollbar-track {
+  background: rgba(13, 8, 89, 0.3);
+}
+
+.products-filters-blocks {
+  scrollbar-face-color: #0D0859;
+  scrollbar-track-color: rgba(13, 8, 89, 0.3);
+}
+
+.filters-blocks-item {
+  display: none;
+}
+
+.filters-blocks-item.active {
+  display: block;
 }
 
 .filters-blocks-item h2 {
@@ -2087,6 +2172,10 @@ input, button, textarea, select {
   font-weight: 500;
   color: #0D0859;
   margin: 40px 0 20px;
+}
+
+.filters-blocks-item h3 + .filter-checks-list {
+  margin-top: 30px;
 }
 
 .gender-filter {
@@ -2151,7 +2240,8 @@ input, button, textarea, select {
   display: none;
 }
 
-.hot-filters input:checked + span {
+.hot-filters input:checked + span,
+.hot-filters span:hover {
   border-color: #B7933D;
   color: #B7933D;
 }
@@ -2173,8 +2263,21 @@ input, button, textarea, select {
   margin-top: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr auto;
-      grid-template-columns: 1fr 1fr auto;
+  -ms-grid-columns: 1fr 1fr 200px;
+      grid-template-columns: 1fr 1fr 200px;
+}
+
+.filters-modal-btns {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /*******************modals**************/
