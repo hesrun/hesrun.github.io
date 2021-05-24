@@ -1562,6 +1562,9 @@ input, button, textarea, select {
     border-radius: 0px;
     box-shadow: none;
     max-width: 100%;
+    a.close-modal {
+        display: none;
+    }
 }
 .filters-modal-wrapper {
     max-width: 1530px;
@@ -1580,28 +1583,33 @@ input, button, textarea, select {
     height: calc(100vh - 230px);
 }
 .products-filters-nav {
+    flex: 0 0 auto;
     width: 300px;
     border-right: 1px #D9D7E3 solid;
     height: 100%;
     overflow: auto;
     @include scrollbars(2px, $blue, rgba($blue,0.3));
-    a {
-        padding: 0 20px;
-        color: $blue;
-        height: 60px;
-        justify-content: space-between;
-        align-items: center;
-        text-decoration: none;
-        display: flex;
-        border-bottom: 1px #D9D7E3 solid;
-        font-weight: 500;
-        i.mdi {
-            font-size: 20px;
-            display: none;
-        }
+    
+}
+.filters-nav-item {
+    padding: 0 20px;
+    color: $blue;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    border-bottom: 1px #D9D7E3 solid;
+    font-weight: 500;
+    &.mob {
+        display: none;
     }
-    a.active,
-    a:hover {
+    i.mdi {
+        font-size: 20px;
+        display: none;
+    }
+    &.active,
+    &:hover {
         border-color: $brown;
         background: $brown;
         color: #fff;
@@ -1609,6 +1617,7 @@ input, button, textarea, select {
             display: inline;
         }
     }
+
 }
 .products-filters-blocks {
     padding: 30px 60px;
@@ -1688,6 +1697,13 @@ input, button, textarea, select {
     }
 }
 .hot-filters {
+    font-size: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    label {
+        display: block;
+        margin: 0 5px 5px 0;
+    }
     input {
         display: none;
     }
@@ -1697,6 +1713,10 @@ input, button, textarea, select {
         color: $brown;
     }
     span {
+        justify-content: center;
+        width: 140px;
+        flex: 0 0 auto;
+        font-size: 14px;
         display: inline-flex;
         align-items: center;
         padding: 0 20px;

@@ -118,6 +118,13 @@
             margin-top: 30px;
         }
     }
+    /****************filter-modal************/
+    .products-filters-nav {
+        width: 250px;
+    }
+    .products-filters-blocks {
+        padding: 30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -513,6 +520,106 @@
         }
     }
 
+    /*****************sorting-in-products********/
+    .sorting-in-products {
+        display: block;
+        .c-select {
+            width: 100%;
+        }
+        .show-drop {
+            display: none;
+        }
+        .availability-drop {
+            display: none;
+        }
+    }
+
+    /****************filter-modal************/
+    .filters-modal {
+        padding: 20px;
+        overflow: auto;
+    }
+    .filters-modal-wrapper {
+        padding: 0px;
+    }
+    .products-filters {
+        display: block;
+        margin-bottom: 15px;
+        .open-filters {
+            width: 100%;
+            margin-bottom: 15px;
+            margin-right: 0px;
+        }
+        .choised-filters {
+            display: none;
+        }
+        .clear-filters {
+            width: 100%;
+        }
+    }
+    .products-filters-wrap {
+        border: none;
+        height: auto;
+    }
+    .products-filters-nav {
+        display: none;
+        width: 250px;
+    }
+    .filters-nav-item.mob {
+        display: flex;
+        span {
+            margin-left: auto;
+        }
+        i.mdi {
+            margin-right: 10px;
+        }
+        &:hover {
+            border-color: #D9D7E3;
+            background: none;
+            color: $blue;
+            i.mdi {
+                display: none;
+            }
+        }
+        &.active {
+            border-color: #B7933D;
+            background: #B7933D;
+            color: #fff;
+            justify-content: flex-start;
+            i.mdi {
+                display: inline;
+            }
+        }
+        
+    }
+    .products-filters-blocks {
+        padding: 0px;
+        overflow: visible;
+        height: auto;
+    }
+    .filters-blocks-item {
+        padding: 30px 0;
+        h2 {
+            display: none;
+        }
+    }
+    .filters-modal-btns {
+        flex-direction: column;
+        span {
+            margin: 15px 0;
+        }
+        .c-btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .c-btn.blue {
+            order: -1;
+        }
+    }
+    .filter-checks-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
 
     
 }
@@ -746,6 +853,13 @@
         }
     }
 
+    /****************filter-modal************/
+    .filter-checks-list {
+        grid-template-columns: 1fr;
+    }
+    .gender-filter {
+        grid-template-columns: 1fr;
+    }
     /****************ui*************/
     .c-btn {
         font-size: 14px;
