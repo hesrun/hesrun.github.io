@@ -1,6 +1,8 @@
 @import url(../font/font.css);
 /**********************mixin************/
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
@@ -15,7 +17,10 @@ body {
   padding-top: 120px;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font-family: 'GT America Extended';
   font-size: 14px;
   font-weight: 400;
@@ -1445,6 +1450,11 @@ input, button, textarea, select {
   margin: 3px 0;
 }
 
+.product-card-params p {
+  line-height: 1.5;
+  font-size: 16px;
+}
+
 .product-card-params .play-video {
   margin-top: 30px;
   display: -webkit-inline-box;
@@ -1602,7 +1612,8 @@ input, button, textarea, select {
   padding: 50px 0;
 }
 
-.condition-report .line-header, .condition-report .text {
+.condition-report .line-header,
+.condition-report .text {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
@@ -1621,6 +1632,33 @@ input, button, textarea, select {
   height: 2px;
   background: rgba(13, 8, 89, 0.5);
   opacity: 0.1;
+}
+
+.warranty-condition {
+  padding: 50px 0;
+}
+
+.warranty-condition-cols {
+  max-width: 800px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0 12%;
+}
+
+.warranty-condition-cols h3 {
+  color: #0D0859;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+.warranty-condition-cols p {
+  line-height: 1.8;
 }
 
 .product-card-mini {
@@ -1839,6 +1877,41 @@ input, button, textarea, select {
 
 .recive-question-form .row .col {
   width: calc(50% - 10px);
+}
+
+.tech-params-section {
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #E9E9EF 0, #E9E9EF 130px, #fff 131px);
+}
+
+.tech-params-box {
+  background: #0D0859;
+  color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+.tech-params-box h2 {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+.tech-params-box table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tech-params-box td {
+  border-bottom: 1px rgba(134, 132, 172, 0.5) solid;
+  padding: 15px 0;
+}
+
+.tech-params-box td:last-child {
+  text-align: right;
 }
 
 /********************products************/
@@ -3312,6 +3385,22 @@ input, button, textarea, select {
   .additional-items-carusel .splide__arrow {
     display: none;
   }
+  .tech-params-section {
+    padding: 30px 0;
+  }
+  .tech-params-box {
+    padding: 30px;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  .tech-params-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.4;
+  }
+  .warranty-condition {
+    padding: 30px 0;
+  }
   /**********************footer****************/
   .main-footer .footer-cols {
     -webkit-box-orient: vertical;
@@ -3693,6 +3782,22 @@ input, button, textarea, select {
   }
   .recive-question-wrap .recive-question-form {
     padding-left: 0px;
+  }
+  .tech-params-box td {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .tech-params-box td:last-child {
+    padding-left: 15px;
+  }
+  .warranty-condition-cols {
+    display: block;
+  }
+  .warranty-condition-cols h3 {
+    margin-bottom: 30px;
+  }
+  .warranty-condition-item + .warranty-condition-item {
+    margin-top: 30px;
   }
   /****************filter-modal************/
   .filter-checks-list {
