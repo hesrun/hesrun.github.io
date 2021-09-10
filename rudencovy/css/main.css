@@ -915,8 +915,16 @@ textarea {
   color: #6B2F33;
 }
 
-.article-content h1, .article-content h2, .article-content h3 {
+.article-content h1, .article-content h2, .article-content h3, .article-content h4 {
   color: #6B2F33;
+}
+
+.article-content ul {
+  padding-left: 30px;
+}
+
+.article-content li {
+  margin: 5px 0;
 }
 
 .article-content h3 {
@@ -933,6 +941,10 @@ textarea {
   height: 10px;
   background: #6B2F33;
   margin-right: 10px;
+}
+
+.article-content h4 {
+  font-size: 18px;
 }
 
 .about-work {
@@ -1244,6 +1256,70 @@ textarea {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                    sign                                    */
+/* -------------------------------------------------------------------------- */
+.sign {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 420px auto;
+      grid-template-columns: 420px auto;
+}
+
+.sign__captcha {
+  margin-bottom: 20px;
+}
+
+.sign__note {
+  margin-bottom: 20px;
+  color: #9B9B9B;
+  font-size: 12px;
+}
+
+.sign__note a {
+  color: inherit;
+}
+
+.sign__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sign__asks {
+  padding-left: 30px;
+}
+
+.sign__ask-card {
+  display: inline-block;
+  border: 1px #6B2F33 solid;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 0px #6B2F33;
+          box-shadow: 2px 2px 0px #6B2F33;
+  padding: 12px 16px;
+  font-size: 16px;
+}
+
+.sign__ask-card span {
+  color: #6B2F33;
+}
+
+.sign__ask-card strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.sign__ask-card a {
+  font-size: 18px;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                     ui                                     */
 /* -------------------------------------------------------------------------- */
 .r-button {
@@ -1351,6 +1427,65 @@ textarea {
   content: "*";
   color: #B0000C;
   margin-left: 3px;
+}
+
+.r-checkbox {
+  display: block;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 17px;
+}
+
+.r-checkbox input {
+  display: none;
+}
+
+input:checked + .r-checkbox__lbl {
+  color: #6B2F33;
+}
+
+input:checked + .r-checkbox__lbl:before {
+  border-color: #6B2F33;
+}
+
+input:checked + .r-checkbox__lbl:after {
+  opacity: 1;
+}
+
+.r-checkbox__lbl {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #9B9B9B;
+}
+
+.r-checkbox__lbl:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  left: 0px;
+  width: 12px;
+  height: 12px;
+  border: 1px #9B9B9B solid;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.r-checkbox__lbl:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #6B2F33;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  opacity: 0;
 }
 
 .r-download {
