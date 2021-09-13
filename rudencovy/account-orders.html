@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
+    <link rel="stylesheet" href="font/font.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top-line">
+            <div class="container container_flex container_align_center">
+                <a href="" class="header__tel">
+                    +7 (495) 775-90-13
+                </a>
+                <div class="header__search">
+                   <div class="header__search-input">
+                       <input type="text" placeholder="Поиск">
+                   </div>
+                   <button class="button header__search-button">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                   </button>
+                </div>
+                <div class="header__socials">
+                    <a href="" class="header__socials-item">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="" class="header__socials-item">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="" class="header__socials-item">
+                        <i class="fa fa-vk" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle-line">
+            <div class="container container_flex container_align_center">
+                <a href="" class="header__logo">
+                    <img src="svg/logo-header.svg" alt="">
+                </a>
+                <div class="header__account">
+                    <img src="svg/icon-user.svg" alt="">
+                    <a href="" class="header__account-link">
+                        Вход
+                    </a>
+                    /
+                    <a href="" class="header__account-link">
+                        Регистрация
+                    </a>
+                </div>
+                <div class="header__cart">
+                    <img src="svg/icon-cart.svg" alt="">
+                    <a href="" class="header__cart-count">
+                        82
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="main-nav__list">
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link main-nav__link_active">Книги</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Выставки</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Доставка и оплата</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Издательство</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Скидки и акции</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="" class="breadcrumbs__link">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="" class="breadcrumbs__link">Личный кабинет</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="" class="breadcrumbs__link">История заказов</a>
+                </li>
+            </ul>
+            <div class="page-title">
+                <h1 class="page-title__header">Личный кабинет</h1>
+            </div>
+            <div class="inner-wrap">
+                <div class="inner-wrap__left">
+                    <aside class="left-nav left-nav_account">
+                        <a href="#" class="left-nav__link">Мой профиль</a>
+                        <a href="#" class="left-nav__link">Смена пароля</a>
+                        <a href="#" class="left-nav__link">Адреса доставки</a>
+                        <a href="#" class="left-nav__link left-nav__link_active">История заказов</a>
+                    </aside>
+                </div>
+                <div class="inner-wrap__right">
+                    <h2 class="account-title">История заказов</h2>
+                    <div class="orders">
+                        <div class="orders__title">
+                            <b>Номер заказа</b>
+                            <b>Дата заказа</b>
+                            <b>Сумма</b>
+                        </div>
+                        <div class="orders__item">
+                            <div class="orders__item-head">
+                                <div class="orders__num">145987</div>
+                                <div class="orders__date">21.04.2021</div>
+                                <div class="orders__summ">18 025 ₽</div>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="orders__body">
+                                <table class="order-table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Наименование</th>
+                                            <th>Цена</th>
+                                            <th>Скидка</th>
+                                            <th>Количество</th>
+                                            <th>Сумма</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="final-amounts">
+                                    <tr>
+                                        <td>Сумма заказа:</td>
+                                        <td>17 500 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Скидка:</td>
+                                        <td>-175 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Доставка:</td>
+                                        <td>700 ₽</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>Общая стоимость:</td>
+                                        <td>18 025 ₽</td>
+                                    </tr>
+                                </table>
+                                <ul class="adress-data orders__adress">
+                                    <li><b>Получатель:</b> Петров Александр Сергеевич</li>
+                                    <li><b>Адрес доставки:</b> Россия — Москва, 115035, Москва, Б. Ордынка, 16/4, стр. 3</li>
+                                    <li><b>Контакный телефон:</b> +7 (495) 953-72-48</li>
+                                    <li><b>Дополнительно:</b> Двухэтажное желтое здание, слева от шлагбаума, вход БЕЗ лестницы, НЕ ФМС :)</li> 
+                                 </ul>
+                            </div>
+                        </div>
+                        <div class="orders__item">
+                            <div class="orders__item-head">
+                                <div class="orders__num">145987</div>
+                                <div class="orders__date">21.04.2021</div>
+                                <div class="orders__summ">18 025 ₽</div>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="orders__body">
+                                <table class="order-table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Наименование</th>
+                                            <th>Цена</th>
+                                            <th>Скидка</th>
+                                            <th>Количество</th>
+                                            <th>Сумма</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="final-amounts">
+                                    <tr>
+                                        <td>Сумма заказа:</td>
+                                        <td>17 500 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Скидка:</td>
+                                        <td>-175 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Доставка:</td>
+                                        <td>700 ₽</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>Общая стоимость:</td>
+                                        <td>18 025 ₽</td>
+                                    </tr>
+                                </table>
+                                <ul class="adress-data orders__adress">
+                                    <li><b>Получатель:</b> Петров Александр Сергеевич</li>
+                                    <li><b>Адрес доставки:</b> Россия — Москва, 115035, Москва, Б. Ордынка, 16/4, стр. 3</li>
+                                    <li><b>Контакный телефон:</b> +7 (495) 953-72-48</li>
+                                    <li><b>Дополнительно:</b> Двухэтажное желтое здание, слева от шлагбаума, вход БЕЗ лестницы, НЕ ФМС :)</li> 
+                                 </ul>
+                            </div>
+                        </div>
+                        <div class="orders__item">
+                            <div class="orders__item-head">
+                                <div class="orders__num">145987</div>
+                                <div class="orders__date">21.04.2021</div>
+                                <div class="orders__summ">18 025 ₽</div>
+                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                            </div>
+                            <div class="orders__body">
+                                <table class="order-table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Наименование</th>
+                                            <th>Цена</th>
+                                            <th>Скидка</th>
+                                            <th>Количество</th>
+                                            <th>Сумма</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="" >
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__price">
+                                                3500 ₽
+                                            </td>
+                                            <td class="order-table__discount">
+                                                5%
+                                            </td>
+                                            <td class="order-table__quantity">
+                                                1
+                                            </td>
+                                            <td class="order-table__summ">
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="final-amounts">
+                                    <tr>
+                                        <td>Сумма заказа:</td>
+                                        <td>17 500 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Скидка:</td>
+                                        <td>-175 ₽</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Доставка:</td>
+                                        <td>700 ₽</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td>Общая стоимость:</td>
+                                        <td>18 025 ₽</td>
+                                    </tr>
+                                </table>
+                                <ul class="adress-data orders__adress">
+                                    <li><b>Получатель:</b> Петров Александр Сергеевич</li>
+                                    <li><b>Адрес доставки:</b> Россия — Москва, 115035, Москва, Б. Ордынка, 16/4, стр. 3</li>
+                                    <li><b>Контакный телефон:</b> +7 (495) 953-72-48</li>
+                                    <li><b>Дополнительно:</b> Двухэтажное желтое здание, слева от шлагбаума, вход БЕЗ лестницы, НЕ ФМС :)</li> 
+                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__blocks">
+                <div class="footer__logo">
+                    <a href="">
+                        <img src="svg/logo-footer.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer__nav">
+                    <div class="footer__nav-col">
+                        <strong class="footer__col-title">Каталог</strong>
+                        <a href="" class="footer__nav-link">Книги ИД Руденцовых</a>
+                        <a href="" class="footer__nav-link">Книги партнёров</a>
+                        <a href="" class="footer__nav-link">Антикварная книга</a>
+                        <a href="" class="footer__nav-link">Журнал «Антикватория»</a>
+                    </div>
+                    <div class="footer__nav-col">
+                        <strong class="footer__col-title">Издательство</strong>
+                        <a href="" class="footer__nav-link">О нас</a>
+                        <a href="" class="footer__nav-link">Награды</a>
+                        <a href="" class="footer__nav-link">Выставки</a>
+                        <a href="" class="footer__nav-link">Вопрос-ответ</a>
+                    </div>
+                    <div class="footer__nav-col">
+                        <strong class="footer__col-title">Полезная информация</strong>
+                        <a href="" class="footer__nav-link">Доставка и оплата</a>
+                        <a href="" class="footer__nav-link">Скидки и акции</a>
+                        <a href="" class="footer__nav-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <strong class="footer__col-title">Контакты</strong>
+                    +7 (495) 775-90-13 <br>
+                    +7 (495) 953-72-48 <br>
+                    <span class="footer__adress">
+                        115035, Москва, <br>
+                        3-й Кадашёвский пер., 6 
+                    </span>
+                    <a href="mailto:i_d_r@bk.ru ">i_d_r@bk.ru </a>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                © 2021 Издательский дом Руденцовых | При перепечатке материалов ссылка на сайт обязательна
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.main-banner').slick({
+                autoplay: true,
+                arrows: false,
+                dots: true
+            });
+
+            $('.orders__item-head').click(function(){
+                $(this).toggleClass('orders__item-head_active');
+                $(this).next().slideToggle(300);
+            })
+        });
+        $('.r-select').select2({
+            dropdownCssClass: 'select',
+            width: 'style'
+        });
+    </script>
+</body>
+</html>

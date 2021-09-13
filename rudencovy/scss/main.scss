@@ -9,6 +9,7 @@ $brown: #6B2F33;
 $brown-hover-color: #E7C5C7;
 $brown-active-color: #5E292C;
 $grey: #9B9B9B;
+$grey-light: #DADADA;
 $red: #B0000C;
 $orange: #F16D00;
 
@@ -591,6 +592,9 @@ textarea {
             color: #fff;
         }
     }
+    &_account {
+        margin-top: 0px;
+    }
 }
 .page-title {
     border-bottom: 1px $brown solid;
@@ -1052,6 +1056,199 @@ textarea {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                   account                                  */
+/* -------------------------------------------------------------------------- */
+
+.account-title {
+    margin: 0 0 25px 0;
+    line-height: 32px;
+    color: $brown;
+    border-bottom: 1px $brown solid;
+    font-size: 16px;
+}
+
+.account-data {
+    dt {
+        color: $brown;
+        margin: 0 0 20px 0;
+    }
+}
+.account-edit-form {
+    max-width: 420px;
+}
+
+.account-adress {
+    &__item {
+        position: relative;
+        border-bottom: 1px $grey solid;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+    &__name {
+        display: block;
+        font-size: 22px;
+        color: $brown;
+        margin: 0 0 20px 0;
+        padding: 0 220px 0 0 0;
+    }
+    &__action {
+        position: absolute;
+        right: 0px;
+        top: 5px;
+    }
+    &__btn {
+        text-decoration: none;
+        color: $grey;
+        margin: 0 0 0 10px;
+        &:hover {
+            color: $brown;
+        }
+    }
+}
+.adress-data {
+    li {
+        display: flex;
+        align-items: baseline;
+        margin: 0 0 5px 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    b {
+        margin-right: 10px;
+        flex: 0 0 auto;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   orders                                   */
+/* -------------------------------------------------------------------------- */
+
+.orders {
+    &__title {
+        display: grid;
+        grid-template-columns: 150px 150px auto;
+        gap: 0 10px;
+        padding: 0px 10px 10px;;
+    }
+    &__body {
+        display: none;
+        padding: 10px 0 25px;
+    }
+    &__item-head {
+        display: grid;
+        grid-template-columns: 150px 150px auto;
+        gap: 0 10px;
+        background: #F4ECEC;
+        color: $brown;
+        padding: 10px;
+        position: relative;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.2s;
+        &_active {
+            color: #fff;
+            background: $brown;
+            .fa {
+                transform: rotateX(180deg);
+            }
+        }
+        &:hover {
+            color: #fff;
+            background: $brown;
+        }
+        .fa {
+            font-size: 24px;
+            position: absolute;
+            right: 15px;
+            top: 7px;
+            transition: all 0.2s;
+        }
+    }
+    &__adress {
+        margin: 20px 0 0 130px;
+        font-size: 13px;
+        border: 1px $brown solid;
+        padding: 8px 12px;
+    }
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    th {
+        font-size: 12px;
+        text-align: left;
+        color: $brown;
+        padding: 0px 20px 10px 0;
+    }
+    td {
+        vertical-align: top;
+        border-bottom: 1px $grey-light solid;
+        padding: 20px 20px 20px 0;
+    }
+    tbody tr:first-child td {
+        padding-top: 0;
+    }
+    tbody tr:last-child td {
+        border: none;
+    }
+    &__image {
+        width: 110px;
+    }
+    &__descr {
+        width: 330px;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    &__author {
+        display: block;
+        font-size: 12px;
+        color: $grey;
+    }
+    &__price {
+        width: 80px;
+    }
+    &__summ {
+        font-weight: 500;
+    }
+}
+
+.final-amounts {
+    width: 100%;
+    border-top: 1px $grey-light solid;
+    font-size: 14px;
+    td {
+        padding: 4px 0;
+    }
+    tr:first-child td {
+        padding-top: 10px
+    }
+    tr:last-child td {
+        font-size: 20px;
+        color: $brown;
+        font-weight: 600;
+    }
+    td:first-child {
+        text-align: right;
+    }
+    td:last-child {
+        font-weight: 600;
+        width: 110px;
+        white-space: nowrap;
+        padding-left: 20px;
+    }
+}
+/* -------------------------------------------------------------------------- */
 /*                                     ui                                     */
 /* -------------------------------------------------------------------------- */
 .r-button {
@@ -1100,8 +1297,11 @@ textarea {
 .r-input {
     margin-bottom: 17px;
     position: relative;
-    &:last-of-type {
+    &:last-child {
         margin-bottom: 0;
+    }
+    &__dropdown {
+        width: 100%;
     }
     &__field {
         font-size: 12px;
@@ -1141,9 +1341,13 @@ textarea {
     }
     &__label_required:after {
         content: "*";
+        font-weight: 500;
         color: $red;
         margin-left: 3px;
     } 
+    .select2 {
+        width: 100%;
+    }
 }
 
 .r-checkbox {
@@ -1356,16 +1560,16 @@ textarea {
 
 .select2-container--default {
     font-size: 12px;
-
     .select2-results__option--highlighted.select2-results__option--selectable {
         background: none;
         color: $brown;
     }
     .select2-results__option--selected {
-        background: none;
+        background: #E7C5C7 !important;
+        color: $brown !important;
     }
     .select2-selection--single {
-        border: 1px $grey solid;
+        border: 1px #DADADA solid;
         border-radius: 2px;
         height: 26px;
         .select2-selection__arrow {
@@ -1382,7 +1586,7 @@ textarea {
                 margin: 0px;
                 left: 2px;
                 top: 6px;
-                color: $grey;
+                color: #DADADA;
                 &:before {
                     content: "\f078";
                 }
@@ -1421,10 +1625,12 @@ textarea {
     }
 }
 
-.select2-results__options {
-    padding: 5px 0;
+.select2-search--dropdown {
+    padding-left: 8px;
+    padding-right: 8px;
 }
-.select2-results__option {
+
+.select2-results__options {
     padding: 6px 8px;
     color: $grey;
 }
