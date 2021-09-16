@@ -198,7 +198,7 @@ textarea {
 .r-checkbox {
     display: block;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 17px;
     input {
         display: none;
@@ -234,15 +234,24 @@ textarea {
             content: "";
             display: inline-block;
             position: absolute;
-            width: 6px;
-            height: 6px;
-            background: $brown;
+            width: 3px;
+            height: 7px;
+            border-right: 1px $brown solid;
+            border-bottom: 1px $brown solid;
             position: absolute;
-            left: 4px;
-            top: 4px;
+            transform: rotate(30deg);
+            left: 5px;
+            top: 2px;
             opacity: 0;
-        } 
+        }
+        &_bolder {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+        }
     }
+    
+    
 }
 
 .r-download {
@@ -1034,7 +1043,7 @@ textarea {
         text-decoration: underline;
         position: relative;
         &:hover {
-            color: #e7c5e7;
+            color: #e7c5c7;
         }
         .fa {
             font-size: 11px;
@@ -1714,6 +1723,56 @@ textarea {
 .sign {
     display: grid;
     grid-template-columns: 420px auto;
+    &__ask-card {
+        display: inline-block;
+        border: 1px $brown solid;
+        border-radius: 3px;
+        box-shadow: 2px 2px 0px $brown;
+        padding: 12px 16px;
+        font-size: 16px;
+        > span {
+            color: $brown;
+        }
+        > strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        > a {
+            font-size: 18px;
+        }
+        &_form {
+            padding: 30px;
+            width: 100%;
+            max-width: 486px;
+        }
+        &_order {
+            padding: 24px;
+        }
+    }
+    &__asks {
+        padding-left: 30px;
+    }
+}
+
+.sign-form-title {
+    color: $brown;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    &_square {
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #6B2F33;
+            margin-right: 10px;
+        }
+    }
+}
+
+.sign-form {
     &__captcha {
         margin-bottom: 20px;
     }
@@ -1730,27 +1789,45 @@ textarea {
         align-items: center;
         justify-content: space-between;
     }
-    &__asks {
-        padding-left: 30px;
+    &__check {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    &__ask-card {
-        display: inline-block;
-        border: 1px $brown solid;
-        border-radius: 3px;
-        box-shadow: 2px 2px 0px $brown;
-        padding: 12px 16px;
-        font-size: 16px;
-        span {
-            color: $brown;
+    &__col-title {
+        color: $brown;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        &_square {
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background: #6B2F33;
+                margin-right: 10px;
+            }
         }
-        strong {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        a {
-            font-size: 18px;
-        }
+    }
+}
+
+.ship-pay {
+    &__item {
+        position: relative;
+        margin-bottom: 17px;
+    }
+    &__descr {
+        font-size: 12px;
+    }
+    &__check {
+        margin-bottom: 10px;
+    }
+    &__price {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        font-weight: 500;
     }
 }
 
@@ -1777,7 +1854,7 @@ textarea {
     max-width: 420px;
 }
 
-.account-adress {
+.account-address {
     &__item {
         position: relative;
         border-bottom: 1px $grey solid;
@@ -1810,7 +1887,7 @@ textarea {
     }
 }
 
-.adress-data {
+.address-data {
     li {
         display: flex;
         align-items: baseline;
@@ -1871,7 +1948,7 @@ textarea {
             transition: all 0.2s;
         }
     }
-    &__adress {
+    &__address {
         margin: 20px 0 0 130px;
         font-size: 13px;
         border: 1px $brown solid;
@@ -1949,6 +2026,26 @@ textarea {
             width: 100px;
         }
     }
+    &__count {
+        white-space: nowrap;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &__multiplier {
+        i {
+            font-style: normal;
+            height: 25px;
+            line-height: 25px;
+            display: inline-block;
+            width: 35px;
+            font-weight: 500;
+            background: #DADADA;
+            border: none;
+            text-align: center;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+    }
     &__action {
         width: 110px;
         text-align: right;
@@ -1978,7 +2075,7 @@ textarea {
         color: $brown;
         font-weight: 600;
     }
-    td:first-child {
+    td:first-child:not(&__change) {
         text-align: right;
     }
     td:last-child {
@@ -1990,6 +2087,15 @@ textarea {
     small {
         display: block;
         font-size: 14px;
+    }
+    &__change {
+        text-align: left;
+        + td {
+            text-align: right;
+        }
+    }
+    &__change-link {
+        color: $grey;
     }
 }
 
@@ -2028,6 +2134,24 @@ textarea {
     text-align: right;
     &__link {
         margin-left: 20px;
+    }
+}
+
+.shipping-address {
+    border: 1px $grey solid;
+    border-radius: 3px;
+    box-shadow: 2px 2px 0px $grey;
+    padding: 15px 14px 30px;
+    margin: 0 20px 30px;
+    &__title {
+        color: $brown;
+        font-weight: 500;
+    }
+    &__descr {
+        font-size: 12px;
+    }
+    &__check {
+        margin-bottom: 10px;
     }
 }
 

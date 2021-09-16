@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
+    <link rel="stylesheet" href="font/font.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top-line">
+            <div class="container container_flex container_align_center">
+                <a href="" class="header__tel">
+                    +7 (495) 775-90-13
+                </a>
+                <div class="header__search">
+                   <div class="header__search-input">
+                       <input type="text" placeholder="Поиск">
+                   </div>
+                   <button class="button header__search-button">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                   </button>
+                </div>
+                <div class="header__socials">
+                    <a href="" class="header__socials-item">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="" class="header__socials-item">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="" class="header__socials-item">
+                        <i class="fa fa-vk" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header__middle-line">
+            <div class="container container_flex container_align_center">
+                <a href="" class="header__logo">
+                    <img src="svg/logo-header.svg" alt="">
+                </a>
+                <div class="header__account">
+                    <img src="svg/icon-user.svg" alt="">
+                    <a href="" class="header__account-link">
+                        Вход
+                    </a>
+                    /
+                    <a href="" class="header__account-link">
+                        Регистрация
+                    </a>
+                </div>
+                <div class="header__cart">
+                    <img src="svg/icon-cart.svg" alt="">
+                    <a href="" class="header__cart-count">
+                        82
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="main-nav__list">
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link main-nav__link_active">Книги</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Выставки</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Доставка и оплата</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Издательство</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Скидки и акции</a>
+                    </li>
+                    <li class="main-nav__list-item">
+                        <a href="" class="main-nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="" class="breadcrumbs__link">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="" class="breadcrumbs__link">Оформление заказа</a>
+                </li>
+            </ul>
+            <div class="inner-wrap">
+                <div class="inner-wrap__right">
+                    <div class="page-title">
+                        <h1 class="page-title__header">Оформление заказа</h1>
+                    </div>
+                    <div class="sign">
+                        <form action="" class="sign-form">
+                            <div class="sign-form-title sign-form-title_square">Покупатель</div>
+                            <div class="r-input">
+                                <label class="r-input__label r-input__label_required" for="">Фамилия Имя Отчество</label>
+                                <input class="r-input__field" type="text" placeholder="Руденцов Андрей Владимирович">
+                            </div>
+                            <div class="r-input">
+                                <label class="r-input__label r-input__label_required" for="">Адрес электронной почты</label>
+                                <input class="r-input__field" type="email" placeholder="name@example.com">
+                            </div>
+                            <div class="r-input">
+                                <label class="r-input__label r-input__label_required" for="">Доставки</label>
+                                <input class="r-input__field" type="tel" placeholder="+7 (495) 495 95 95">
+                            </div>
+                            <div class="sign-form-title sign-form-title_square">Доставки</div>
+                            <div class="ship-pay">
+                                <div class="ship-pay__item">
+                                    <label for="ship1" class="r-checkbox ship-pay__check">
+                                        <input id="ship1" type="checkbox">
+                                        <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                            Самовывоз
+                                        </div>
+                                    </label>
+                                    <div class="ship-pay__descr">г. Москва, 3-й Кадашёвский пер., 6. </div>
+                                    <div class="ship-pay__price">+ 0 ₽</div>
+                                </div>
+                                <div class="ship-pay__item">
+                                    <label for="ship2" class="r-checkbox ship-pay__check">
+                                        <input id="ship2" type="checkbox">
+                                        <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                            Курьер издательского дома
+                                        </div>
+                                    </label>
+                                    <div class="ship-pay__descr">Доставка по Москве (в пределах МКАД) производится в течение 1-2 рабочих дней, в удобное для Вас время и место.
+                                        Так же по договоренности можно осуществить экспресс-доставку
+                                        в будние дни, цена остается прежней.
+                                    </div>
+                                    <div class="ship-pay__price">+ 700 ₽</div>
+                                </div>
+                                <div class="shipping-address">
+                                    <div class="shipping-address__title">Адрес доставки*</div>
+                                    <div class="shipping-address__item">
+                                        <label for="shipaddress1" class="r-checkbox shipping-address__check">
+                                            <input id="shipaddress1" type="checkbox">
+                                            <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                                Б. Ордынка
+                                            </div>
+                                        </label>
+                                        <div class="shipping-address__descr">Россия — Москва, 115035, Москва, Б. Ордынка, 16/4, стр. 3
+                                        </div>
+                                    </div>
+                                    <div class="shipping-address__item">
+                                        <label for="shipaddress2" class="r-checkbox shipping-address__check">
+                                            <input id="shipaddress2" type="checkbox">
+                                            <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                                Какое-то название адрес-профиля
+                                            </div>
+                                        </label>
+                                        <div class="shipping-address__descr">Россия — Москва, 101000, Москва, Центральный проезд Хорошёвского Серебряного Бора, д. 225А, стр. 145, подъезд 15, этаж 43, кв. 745</div>
+                                    </div>
+                                    <div class="shipping-address__item">
+                                        <label for="shipaddressNew" class="r-checkbox shipping-address__check">
+                                            <input id="shipaddressNew" type="checkbox">
+                                            <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                                Новый адрес
+                                            </div>
+                                        </label>
+                                        <div class="r-input">
+                                            <input class="r-input__field" type="text" placeholder="Адрес доставки">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ship-pay__item">
+                                    <label for="ship3" class="r-checkbox ship-pay__check">
+                                        <input id="ship3" type="checkbox">
+                                        <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                            Транспортная компания
+                                        </div>
+                                    </label>
+                                    <div class="ship-pay__descr">Экспресс-доставка почтовых отправлений от двери до двери.
+                                        Стоимость зависит от города и габаритов заказа. Рассчитывается автоматически во время оформления заказа.</div>
+                                    <div class="ship-pay__price">+ 988 ₽</div>
+                                </div>
+                                <div class="shipping-address">
+                                    <div class="shipping-address__title">Адрес доставки*</div>
+                                    <div class="shipping-address__item">
+                                        <label for="shipaddress1" class="r-checkbox shipping-address__check">
+                                            <input id="shipaddress1" type="checkbox">
+                                            <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                                Б. Ордынка
+                                            </div>
+                                        </label>
+                                        <div class="shipping-address__descr">Россия — Москва, 115035, Москва, Б. Ордынка, 16/4, стр. 3
+                                        </div>
+                                    </div>
+                                    <div class="shipping-address__item">
+                                        <label for="shipaddress2" class="r-checkbox shipping-address__check">
+                                            <input id="shipaddress2" type="checkbox">
+                                            <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                                Какое-то название адрес-профиля
+                                            </div>
+                                        </label>
+                                        <div class="shipping-address__descr">Россия — Москва, 101000, Москва, Центральный проезд Хорошёвского Серебряного Бора, д. 225А, стр. 145, подъезд 15, этаж 43, кв. 745</div>
+                                    </div>
+                                    <div class="shipping-address__item">
+                                        <label for="shipaddressNew" class="r-checkbox shipping-address__check">
+                                            <input id="shipaddressNew" type="checkbox">
+                                            <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                                Новый адрес
+                                            </div>
+                                        </label>
+                                        <div class="r-input">
+                                            <label class="r-input__label r-input__label_required" for="">Регион доставки</label>
+                                            <select class="r-select">
+                                                <option value="">Москва</option>
+                                                <option value="">Омск</option>
+                                                <option value="">Тверь</option>
+                                                <option value="">Новгород</option>
+                                                <option value="">Ростов на дому</option>
+                                            </select>
+                                            <span class="r-input__field-error-text">Выберите регион</span>
+                                        </div>
+                                        <div class="r-input">
+                                            <label class="r-input__label r-input__label_required" for="">Индекс</label>
+                                            <input class="r-input__field" type="text" placeholder="Индекс">
+                                        </div>
+                                        <div class="r-input">
+                                            <label class="r-input__label r-input__label_required" for="">Город</label>
+                                            <input class="r-input__field" type="text" placeholder="Город">
+                                        </div>
+                                        <div class="r-input">
+                                            <label class="r-input__label r-input__label_required" for="">Адрес доставки</label>
+                                            <input class="r-input__field" type="text" placeholder="Адрес доставки">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sign-form-title sign-form-title_square">Способ оплаты</div>
+                            <div class="ship-pay">
+                                <div class="ship-pay__item">
+                                    <label for="pay1" class="r-checkbox ship-pay__check">
+                                        <input id="pay1" type="checkbox">
+                                        <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                            Наличными при получении
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="ship-pay__item">
+                                    <label for="pay2" class="r-checkbox ship-pay__check">
+                                        <input id="pay2" type="checkbox">
+                                        <div class="r-checkbox__lbl r-checkbox__lbl_bolder">
+                                            Оплата онлайн
+                                        </div>
+                                    </label>
+                                    <div class="ship-pay__descr">ROBOKASSA (электронный платёж). Более 40 способов оплаты</div>
+                                </div>
+                            </div>
+                            <div class="sign-form-title sign-form-title_square">Дополнительно</div>
+                            <div class="r-input">
+                                <textarea class="r-input__field r-input__field_textarea" placeholder="Дополнительная информация"></textarea>
+                            </div>
+                            <div class="sign-form__note">
+                                Нажимая на кнопку, вы даёте согласие на обработку персональных данных <br> и <a href="#">соглашаетесь с политикой конфиденциальности</a> 
+                            </div>
+                            <div class="sign-form__btns">
+                                <button type="submit" class="r-button">подтвердить заказ</button>
+                            </div>
+                        </form>
+                        <div class="sign__asks">
+                            <div class="sign-form-title sign-form-title_square">Ваш заказ</div>
+                            <div class="sign__ask-card sign__ask-card_order">
+                                <table class="order-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="">
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__count">
+                                                <span class="order-table__multiplier">
+                                                    <i>2</i>&times;
+                                                </span>
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="">
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__count">
+                                                <span class="order-table__multiplier">
+                                                    <i>2</i>&times;
+                                                </span>
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="order-table__image">
+                                                <img src="img/books/order-item-img.jpg" alt="">
+                                            </td>
+                                            <td class="order-table__descr">
+                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                            </td>
+                                            <td class="order-table__count">
+                                                <span class="order-table__multiplier">
+                                                    <i>2</i>&times;
+                                                </span>
+                                                3 500 ₽
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="final-amounts">
+                                    <tbody>
+                                        <tr>
+                                            <td class="final-amounts__change">
+                                                <a href="" class="final-amounts__change-link">Изменить состав заказа</a>
+                                            </td>
+                                            <td>Сумма заказа:</td>
+                                            <td>17 500 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Скидка:</td>
+                                            <td>-175 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Доставка</td>
+                                            <td>988 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Общая стоимость:</td>
+                                            <td>18 025 ₽</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__blocks">
+                <div class="footer__logo">
+                    <a href="">
+                        <img src="svg/logo-footer.svg" alt="">
+                    </a>
+                </div>
+                <div class="footer__nav">
+                    <div class="footer__nav-col">
+                        <strong class="footer__col-title">Каталог</strong>
+                        <a href="" class="footer__nav-link">Книги ИД Руденцовых</a>
+                        <a href="" class="footer__nav-link">Книги партнёров</a>
+                        <a href="" class="footer__nav-link">Антикварная книга</a>
+                        <a href="" class="footer__nav-link">Журнал «Антикватория»</a>
+                    </div>
+                    <div class="footer__nav-col">
+                        <strong class="footer__col-title">Издательство</strong>
+                        <a href="" class="footer__nav-link">О нас</a>
+                        <a href="" class="footer__nav-link">Награды</a>
+                        <a href="" class="footer__nav-link">Выставки</a>
+                        <a href="" class="footer__nav-link">Вопрос-ответ</a>
+                    </div>
+                    <div class="footer__nav-col">
+                        <strong class="footer__col-title">Полезная информация</strong>
+                        <a href="" class="footer__nav-link">Доставка и оплата</a>
+                        <a href="" class="footer__nav-link">Скидки и акции</a>
+                        <a href="" class="footer__nav-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <strong class="footer__col-title">Контакты</strong>
+                    +7 (495) 775-90-13 <br>
+                    +7 (495) 953-72-48 <br>
+                    <span class="footer__address">
+                        115035, Москва, <br>
+                        3-й Кадашёвский пер., 6 
+                    </span>
+                    <a href="mailto:i_d_r@bk.ru ">i_d_r@bk.ru </a>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                © 2021 Издательский дом Руденцовых | При перепечатке материалов ссылка на сайт обязательна
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.main-banner').slick({
+                autoplay: true,
+                arrows: false,
+                dots: true
+            });
+        });
+        $('.r-select').select2({
+            dropdownCssClass: 'select',
+            width: 'style'
+        });
+    </script>
+</body>
+</html>
