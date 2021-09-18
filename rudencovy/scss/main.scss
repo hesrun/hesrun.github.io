@@ -249,9 +249,63 @@ textarea {
             font-weight: 500;
             color: #000;
         }
+    }  
+}
+
+.r-radio {
+    display: block;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 17px;
+    input {
+        display: none;
     }
-    
-    
+    input:checked + &__lbl {
+        color: $brown;
+        &:before {
+            border-color: $brown;
+        }
+        &:after {
+            opacity: 1;
+        }
+    }
+    &__lbl {
+        position: relative;
+        display: flex;
+        padding-left: 20px;
+        font-size: 12px;
+        line-height: 14px;
+        color: $grey;
+        &:before {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            left: 0px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px $grey solid;
+            cursor: pointer;
+        }
+        &:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: $brown;
+            position: absolute;
+            border-radius: 50%;
+            left: 4px;
+            top: 4px;
+            opacity: 0;
+        }
+        &_bolder {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+        }
+    }  
 }
 
 .r-download {
@@ -274,7 +328,7 @@ textarea {
         &:after {
             content: "";
             position: absolute;
-            right: -30px;
+            right: -28px;
             top: 0px;
             height: 100%;
             width: 30px;
@@ -290,7 +344,7 @@ textarea {
             background: #000;
             filter: blur(1px);
             transform: rotate(130deg);
-            right: -21px;
+            right: -19px;
             top: 8px;
             opacity: 0.7;
         }
@@ -300,7 +354,7 @@ textarea {
         &:after {
             content: "";
             position: absolute;
-            right: -30px;
+            right: -28px;
             top: 0px;
             height: 100%;
             width: 30px;
@@ -316,7 +370,7 @@ textarea {
             background: #000;
             filter: blur(1px);
             transform: rotate(130deg);
-            right: -21px;
+            right: -19px;
             top: 8px;
             opacity: 0.7;
         }
@@ -960,6 +1014,9 @@ textarea {
         display: block;
         position: relative;
         overflow: hidden;
+        img {
+            max-width: 100%;
+        }
         &:hover {
             img,
             .sticker {
@@ -996,6 +1053,7 @@ textarea {
         display: flex;
         visibility: hidden;
         opacity: 0;
+        z-index: 1;
         span {
             margin: auto;
             display: flex;
@@ -1320,6 +1378,9 @@ textarea {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px 15px;
+    &_4-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
     &_journal {
         display: block;
     }
@@ -1770,6 +1831,16 @@ textarea {
             margin-right: 10px;
         }
     }
+    &_black {
+        color: black;
+        a {
+            color: $brown;
+            text-decoration: none;
+        }
+        span {
+            color: $brown;
+        }
+    }
 }
 
 .sign-form {
@@ -2136,12 +2207,11 @@ textarea {
         margin-left: 20px;
     }
 }
-
 .shipping-address {
     border: 1px $grey solid;
     border-radius: 3px;
     box-shadow: 2px 2px 0px $grey;
-    padding: 15px 14px 30px;
+    padding: 15px;
     margin: 0 20px 30px;
     &__title {
         color: $brown;
@@ -2155,3 +2225,84 @@ textarea {
     }
 }
 
+
+.order-info {
+    padding: 25px;
+    border: 1px $brown solid;
+    max-width: 410px;
+    margin-bottom: 30px;
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        font-size: 18px;
+        display: flex;
+        padding: 3px 0;
+        &:first-child {
+            border-bottom: 1px $grey-light solid;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            b {
+                color: $brown;
+            }
+        }
+        b {
+            margin-left: 10px;
+        }
+    }
+    &__note {
+        margin-top: 10px;
+        padding-top: 12px;
+        border-top: 1px $grey-light solid;
+        color: $brown;
+        font-size: 20px;
+    }
+    &__payment {
+        margin-top: 10px;
+        span {
+            display: block;
+            margin-top: 14px;
+            font-size: 12px;
+            color: $grey;
+        }
+    }
+}
+
+.basket-empty {
+    font-weight: 500;
+    a {
+        text-decoration: none;
+    }
+}
+
+.pagination {
+    border-top: 1px $grey-light solid;
+    padding: 15px 0 0 0;
+    margin: 30px 0 0 0;
+    display: flex;
+    align-items: center;
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 25px;
+        &_active {
+            background: $brown;
+            color: #fff;
+        }
+    }
+    &__next {
+        text-decoration: none;
+        margin-left: 10px;
+    }
+    &__all {
+        text-decoration: none;
+        margin-left: auto;
+    }
+}
