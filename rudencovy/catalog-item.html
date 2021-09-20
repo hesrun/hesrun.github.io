@@ -273,34 +273,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('.main-banner').slick({
-                autoplay: true,
-                arrows: false,
-                dots: true
-            });
-        });
-        lightbox.option({
+            $('.header__search-button').click(function(){
+                $('.header__search-input').fadeToggle(200);
+                return false
+            })
+            lightbox.option({
             'disableScrolling': true,
             'fadeDuration': 200,
-        })
-        $('.photo-gallery__main').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            asNavFor: '.photo-gallery__thumbs'
+            })
+            $('.photo-gallery__main').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                asNavFor: '.photo-gallery__thumbs'
+            });
+            $('.photo-gallery__thumbs').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                customPaging: 15,
+                asNavFor: '.photo-gallery__main',
+                dots: false,
+                variableWidth: true,
+                centerMode: true,
+                focusOnSelect: true,
+                prevArrow: '<button type="button" class="t-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
+                nextArrow: '<button type="button" class="t-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
+            });
         });
-        $('.photo-gallery__thumbs').slick({
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            customPaging: 15,
-            asNavFor: '.photo-gallery__main',
-            dots: false,
-            variableWidth: true,
-            centerMode: true,
-            focusOnSelect: true,
-            prevArrow: '<button type="button" class="t-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
-            nextArrow: '<button type="button" class="t-next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>'
-        });
+        
     </script>
 </body>
 </html>

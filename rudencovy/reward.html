@@ -311,11 +311,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('.main-banner').slick({
-                autoplay: true,
-                arrows: false,
-                dots: true
-            });
+            $('.header__search-button').click(function(){
+                $('.header__search-input').fadeToggle(200);
+                return false
+            })
             lightbox.option({
                 'disableScrolling': true,
                 'fadeDuration': 200,

@@ -373,11 +373,15 @@
                 arrows: false,
                 dots: true
             });
-        });
-        $('.r-select').select2({
-            dropdownCssClass: 'select',
-            minimumResultsForSearch: Infinity,
-            width: 'style'
+            $('.r-select').select2({
+                dropdownCssClass: 'select',
+                minimumResultsForSearch: Infinity,
+                width: 'style'
+            });
+            $('.header__search-button').click(function(){
+                $('.header__search-input').fadeToggle(200);
+                return false
+            })
         });
     </script>
 </body>

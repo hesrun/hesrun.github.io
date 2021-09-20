@@ -512,20 +512,14 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('.main-banner').slick({
-                autoplay: true,
-                arrows: false,
-                dots: true
-            });
-
             $('.orders__item-head').click(function(){
                 $(this).toggleClass('orders__item-head_active');
                 $(this).next().slideToggle(300);
             })
-        });
-        $('.r-select').select2({
-            dropdownCssClass: 'select',
-            width: 'style'
+            $('.header__search-button').click(function(){
+                $('.header__search-input').fadeToggle(200);
+                return false
+            })
         });
     </script>
 </body>

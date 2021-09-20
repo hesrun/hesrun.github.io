@@ -516,13 +516,19 @@
                 arrows: false,
                 dots: true
             });
-        });
-
-        $(document).ready(function(){
             $('.book-carusel').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1
             });
+            $('.header__search-button').click(function(){
+                $('.header__search-input').fadeToggle(200);
+                return false
+            })
+            $('.goTop').click(function(){
+                $("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+                return false
+            })
+            
         });
     </script>
 </body>

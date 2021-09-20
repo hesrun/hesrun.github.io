@@ -378,6 +378,61 @@ input:checked + .r-radio__lbl:after {
   color: #6B2F33;
 }
 
+.r-modal {
+  max-width: 550px;
+  padding: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0px;
+  border: 1px #6B2F33 solid;
+  -webkit-box-shadow: 2px 2px 0px #6b2f33;
+          box-shadow: 2px 2px 0px #6b2f33;
+}
+
+.r-modal__header {
+  background: #6B2F33;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 25px;
+}
+
+.r-modal__body {
+  padding: 25px;
+}
+
+.r-modal a.close-modal {
+  background: none;
+  width: 44px;
+  height: 44px;
+  right: 0px;
+  top: 0px;
+}
+
+.r-modal a.close-modal:after, .r-modal a.close-modal:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 13px;
+  top: 20px;
+  width: 18px;
+  height: 1px;
+  background: #fff;
+}
+
+.r-modal a.close-modal:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.r-modal a.close-modal:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.r-modal a.close-modal:hover:after, .r-modal a.close-modal:hover:before {
+  background: #481f22;
+}
+
 .sticker {
   position: absolute;
   font-size: 14px;
@@ -1028,6 +1083,7 @@ input:checked + .r-radio__lbl:after {
   position: absolute;
   top: 12px;
   right: 63px;
+  display: none;
 }
 
 .header__search-input input {
@@ -1429,7 +1485,7 @@ input:checked + .r-radio__lbl:after {
   display: flex;
   margin-bottom: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px #9B9B9B solid;
+  border-bottom: 1px #DADADA solid;
   display: flex;
 }
 
@@ -2003,7 +2059,7 @@ input:checked + .r-radio__lbl:after {
 /*                                   rewards                                  */
 /* -------------------------------------------------------------------------- */
 .rewards__item {
-  border-bottom: 1px rgba(155, 155, 155, 0.5) solid;
+  border-bottom: 1px #DADADA solid;
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
@@ -2092,7 +2148,7 @@ input:checked + .r-radio__lbl:after {
 .faq__item {
   margin-bottom: 30px;
   padding-bottom: 30px;
-  border-bottom: 1px #9B9B9B solid;
+  border-bottom: 1px #DADADA solid;
 }
 
 .faq__item:last-child {
@@ -2177,7 +2233,7 @@ input:checked + .r-radio__lbl:after {
 .exhibitions__item {
   margin: 0 0 30px 0;
   padding: 0 0 30px 0;
-  border-bottom: 1px solid #9B9B9B;
+  border-bottom: 1px solid #DADADA;
 }
 
 .exhibitions__item:last-child {
@@ -2446,7 +2502,7 @@ input:checked + .r-radio__lbl:after {
 
 .account-address__item {
   position: relative;
-  border-bottom: 1px #9B9B9B solid;
+  border-bottom: 1px #DADADA solid;
   padding-bottom: 30px;
   margin-bottom: 30px;
 }
@@ -2580,6 +2636,7 @@ input:checked + .r-radio__lbl:after {
 }
 
 .order-table td {
+  font-size: 18px;
   vertical-align: top;
   border-bottom: 1px #DADADA solid;
   padding: 20px 20px 20px 0;
@@ -2640,6 +2697,7 @@ input:checked + .r-radio__lbl:after {
 }
 
 .order-table__price {
+  white-space: nowrap;
   width: 80px;
 }
 
@@ -2697,6 +2755,7 @@ input:checked + .r-radio__lbl:after {
 }
 
 .final-amounts td {
+  font-size: 18px;
   padding: 4px 0;
   vertical-align: baseline;
 }
@@ -2737,6 +2796,7 @@ td:first-child:not(.final-amounts__change) {
 
 .final-amounts__change-link {
   color: #9B9B9B;
+  font-size: 14px;
 }
 
 .coupon {
@@ -2816,6 +2876,12 @@ td:first-child:not(.final-amounts__change) {
   margin-bottom: 30px;
 }
 
+.order-info_modal {
+  margin: 0px;
+  border: none;
+  padding: 0px 20px;
+}
+
 .order-info__list {
   list-style: none;
 }
@@ -2848,6 +2914,12 @@ td:first-child:not(.final-amounts__change) {
   border-top: 1px #DADADA solid;
   color: #6B2F33;
   font-size: 20px;
+}
+
+.order-info__note_modal {
+  border: none;
+  margin: 0px;
+  padding: 0;
 }
 
 .order-info__payment {
@@ -2912,5 +2984,14 @@ td:first-child:not(.final-amounts__change) {
 .pagination__all {
   text-decoration: none;
   margin-left: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   modals                                   */
+/* -------------------------------------------------------------------------- */
+.modal-form {
+  background: #F4ECEC;
+  padding: 25px;
+  margin-top: 30px;
 }
 /*# sourceMappingURL=main.css.map */
