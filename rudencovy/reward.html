@@ -89,6 +89,33 @@
     </header>
     <div class="content">
         <div class="container">
+            <section class="main-banner">
+                <div class="main-banner__slide-item">
+                    <a href="" class="main-banner__link">
+                        <img class="main-banner__image" src="img/banner/1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="main-banner__slide-item">
+                    <a href="" class="main-banner__link">
+                        <img class="main-banner__image" src="img/banner/2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="main-banner__slide-item">
+                    <a href="" class="main-banner__link">
+                        <img class="main-banner__image" src="img/banner/3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="main-banner__slide-item">
+                    <a href="" class="main-banner__link">
+                        <img class="main-banner__image" src="img/banner/4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="main-banner__slide-item">
+                    <a href="" class="main-banner__link">
+                        <img class="main-banner__image" src="img/banner/5.jpg" alt="">
+                    </a>
+                </div>
+            </section>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
                     <a href="" class="breadcrumbs__link">
@@ -250,7 +277,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a href="" class="show-more-arrow">Все книги</a>
+                        <a href="" class="show-more-arrow">Все награды</a>
                     </div>
                     
                 </div>
@@ -311,6 +338,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
         $(document).ready(function(){
+            $('.main-banner').slick({
+                autoplay: true,
+                arrows: false,
+                dots: true
+            });
             $('.header__search-button').click(function(){
                 $('.header__search-input').fadeToggle(200);
                 return false

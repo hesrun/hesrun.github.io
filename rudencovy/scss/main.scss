@@ -29,10 +29,12 @@ h2 {
 p {
     margin-bottom: 10px;
 }
+b {
+    font-weight: 500;
+}
 a {
     color: $brown;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
+    text-decoration: none;
 }
 small {
     color: $brown;
@@ -326,7 +328,7 @@ textarea {
     box-shadow: 2px 2px 0px #6b2f33;
     &__header {
         background: $brown;
-        color: #fff;
+        color: $brown-hover-color;
         font-size: 20px;
         padding: 10px 25px;
     }
@@ -1043,10 +1045,10 @@ textarea {
         transform: none;
     }
     .slick-prev {
-        left: -30px;
+        left: -44px;
     }
     .slick-next {
-        right: -30px;
+        right: -44px;
     }
 }
 
@@ -1084,6 +1086,13 @@ textarea {
         line-height: 18px;
         height: 36px;
         overflow: hidden;
+        a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                color: $brown;
+            }
+        }
     }
     &__author {
         margin: 10px 0 0 0;
@@ -1429,10 +1438,10 @@ textarea {
     }
     &_bordered {
         border: 1px $brown solid;
+        box-shadow: 2px 2px 0px $brown;
         width: 500px;
         margin: 30px auto 0;
         padding: 20px 35px;
-        border-radius: 5px;
         h2 {
             text-align: center;
             color: $brown;
@@ -1555,6 +1564,10 @@ textarea {
         padding-left: 30px;
         margin-left: 30px;
         font-size: 18px;
+        a {
+            font-weight: 500;
+            font-style: italic;
+        }
     }
     &__adress {
         display: block;
@@ -1645,6 +1658,12 @@ textarea {
     }
     sup {
         color: $red;
+    }
+    a {
+        font-weight: 500;
+    }
+    small {
+        font-weight: 500;
     }
 }
 
@@ -2007,8 +2026,11 @@ textarea {
     }
     &__check {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: baseline;
+        a {
+            text-decoration: underline
+        }
     }
     &__col-title {
         color: $brown;
@@ -2219,20 +2241,25 @@ textarea {
         color: $grey;
     }
     &__discount {
+        font-weight: 500;
         width: 80px;
+        line-height: 25px;
         &_basket {
             width: 70px;
         }
     }
     &__quantity {
+        font-weight: 500;
         width: 80px;
         &_basket {
             width: 120px;
         }
     }
     &__price {
+        font-weight: 500;
         white-space: nowrap;
         width: 80px;
+        line-height: 25px;
         &_basket {
             width: 90px;
         }
@@ -2240,6 +2267,7 @@ textarea {
     &__summ {
         font-weight: 500;
         white-space: nowrap;
+        line-height: 25px;
         &_basket {
             width: 100px;
         }
@@ -2248,8 +2276,11 @@ textarea {
         white-space: nowrap;
         font-size: 18px;
         font-weight: 500;
+        line-height: 25px;
     }
     &__multiplier {
+        display: inline-block;
+        line-height: 25px;
         i {
             font-style: normal;
             height: 25px;
@@ -2257,7 +2288,7 @@ textarea {
             display: inline-block;
             width: 35px;
             font-weight: 500;
-            background: #DADADA;
+            background: rgba($grey,0.2);
             border: none;
             text-align: center;
             font-size: 14px;
@@ -2278,21 +2309,28 @@ textarea {
 }
 
 .final-amounts {
+    border-spacing: 0;
+    border-collapse: collapse;
     width: 100%;
     border-top: 1px $grey-light solid;
     font-size: 14px;
     td {
         font-size: 18px;
-        padding: 4px 0;
+        padding: 5px 0 5px;
         vertical-align: baseline;
     }
     tr:first-child td {
-        padding-top: 10px
+      padding-top: 12px;  
+    }
+    tr:nth-last-child(2) td {
+        padding-bottom: 12px;  
     }
     tr:last-child td {
+        border-top: 1px $grey-light solid;
         font-size: 20px;
         color: $brown;
         font-weight: 600;
+        padding-top: 15px;
     }
     td:first-child:not(&__change) {
         text-align: right;
@@ -2378,12 +2416,15 @@ textarea {
 .order-info {
     padding: 25px;
     border: 1px $brown solid;
-    max-width: 410px;
+    box-shadow: 2px 2px 0px $brown;
+    max-width: 400px;
     margin-bottom: 30px;
     &_modal {
         margin: 0px;
         border: none;
+        box-shadow: none;
         padding: 0px 20px;
+        max-width: 465px;
     }
     &__list {
         list-style: none;
@@ -2397,7 +2438,7 @@ textarea {
             padding-bottom: 10px;
             margin-bottom: 10px;
             b {
-                color: $brown;
+                color: $red;
             }
         }
         b {
@@ -2421,7 +2462,7 @@ textarea {
         span {
             display: block;
             margin-top: 14px;
-            font-size: 12px;
+            font-size: 14px;
             color: $grey;
         }
     }

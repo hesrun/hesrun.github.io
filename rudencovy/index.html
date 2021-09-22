@@ -128,7 +128,9 @@
                             <div class="sticker sticker_red sticker_bottom_left">новинка</div>
                         </a>
                         <h3 class="product-item__name">
-                            Историко-художественная выставка русских…
+                            <a href="">
+                                Историко-художественная выставка русских…
+                            </a>
                         </h3>
                         <span class="product-item__author">
                             Автор: Н.В. Окуренкова
@@ -157,7 +159,9 @@
                             <div class="sticker sticker_red sticker_bottom_left">новинка</div>
                         </a>
                         <h3 class="product-item__name">
-                            Дегустация греха
+                            <a href="">
+                                Дегустация греха
+                            </a>
                         </h3>
                         <span class="product-item__author">
                             Автор: А.В. Руденцов
@@ -187,7 +191,9 @@
                             <div class="sticker sticker_red sticker_bottom_left">новинка</div>
                         </a>
                         <h3 class="product-item__name">
-                            Архитектурное наследие России, Пётр Бойцов
+                            <a href="">
+                                Архитектурное наследие России, Пётр Бойцов
+                            </a>
                         </h3>
                         <span class="product-item__author">
                             Автор: М.В. Нащокина
@@ -216,7 +222,9 @@
                             <div class="sticker sticker_red sticker_bottom_left">новинка</div>
                         </a>
                         <h3 class="product-item__name">
-                            Храм Христа Спасителя. Фотохроника разрушения
+                            <a href="">
+                                Храм Христа Спасителя. Фотохроника разрушения
+                            </a>
                         </h3>
                         <span class="product-item__author">
                             
@@ -245,7 +253,9 @@
                             <div class="sticker sticker_red sticker_bottom_left">новинка</div>
                         </a>
                         <h3 class="product-item__name">
-                            Книжные переплёты генерала А.П. Ермолова
+                            <a href="">
+                                Книжные переплёты генерала А.П. Ермолова
+                            </a>
                         </h3>
                         <span class="product-item__author">
                             Автор: А.И. Маркова / <br> Научн. ред. И.Л. Великодная
@@ -274,7 +284,9 @@
                             <div class="sticker sticker_red sticker_bottom_left">новинка</div>
                         </a>
                         <h3 class="product-item__name">
-                            Мейсенская пластикав русской коллекции
+                            <a href="">
+                                Мейсенская пластикав русской коллекции
+                            </a>
                         </h3>
                         <span class="product-item__author">
                             Автор: М.А. Выборнов
@@ -384,20 +396,20 @@
                                     <div class="make-request__col">
                                         <div class="r-input">
                                             <label class="r-input__label r-input__label_required" for="">Фамилия Имя</label>
-                                            <input class="r-input__field" type="text">
+                                            <input class="r-input__field" type="text" placeholder="Фамилия Имя">
                                         </div>
                                     </div>
                                     <div class="make-request__col">
                                         <div class="r-input">
                                             <label class="r-input__label r-input__label_required" for="">E-mail</label>
-                                            <input class="r-input__field r-input__field_error" type="email">
+                                            <input class="r-input__field r-input__field_error" type="email" placeholder="name@example.com">
                                             <span class="r-input__field-error-text">Укажите корректный E-mail</span>
                                         </div>
                                     </div>
                                     <div class="make-request__col">
                                         <div class="r-input">
                                             <label class="r-input__label" for="">Телефон</label>
-                                            <input class="r-input__field" type="tel">
+                                            <input class="r-input__field" type="tel" placeholder="+7 (999) 999-99-99">
                                         </div>
                                     </div>
                                 </div>
@@ -526,6 +538,10 @@
             })
             $('.goTop').click(function(){
                 $("html, body").stop().animate({scrollTop:0}, 500, 'swing');
+                return false
+            })
+            $('.cookie-note .r-button').click(function(){
+                $('.cookie-note').fadeOut();
                 return false
             })
             
