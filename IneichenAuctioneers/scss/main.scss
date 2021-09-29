@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(../font/font.css);
+
+*,
+*:before,
+*:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------- vars ---------------------------------- */
+@import '_vars.scss';
+$america: 'GT America Extended', sans-serif;
+$blue-bg: #1C2473;
+$blue-text: #1C2473;
+$grey-text: #676767;
+$green-text: #529959;
+$red-text: #B54C4C;
+$grey-line: #DFDFDF;
+/* --------------------------------- mixins --------------------------------- */
+@import '_mixins.scss';
+/* --------------------------------- global --------------------------------- */
+@import '_global.scss';
+/* ----------------------------------- ui ----------------------------------- */
+@import '_ui.scss';
+/* --------------------------------- header --------------------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: #fff;
+    padding: 30px 60px;
+    z-index: 100;
+    transition: padding 0.5s, box-shadow 1s;
+    &_mini {
+        padding: 15px 30px;
+        box-shadow: 0 0 10px 6px rgba($blue-bg,0.2);
+    }
+    &__logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    &__nav-link {
+        color: $grey-text;
+        text-decoration: none;
+        font-weight: 600;
+        &:hover {
+            color: $blue-text;
+        }
+        & + & {
+            margin-left: 40px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+    &__button {
+        display: inline-flex;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        color: #000;
+        margin-right: 15px;
+        transition: all 0.2s;
+        i.mdi {
+            margin: auto;
+            font-size: 20px;
+        }
+        &:hover {
+            background: $blue-bg;
+            color: #fff;
+        }
+        &:active {
+            transform: scale(0.8);
+        }
+    }
+    &__account {
+        height: 45px;
+        border: 1px $grey-line solid;
+        border-radius: 30px;
+        font-weight: 500;
+        padding: 0 25px;
+        line-height: 42px;
+        color: #000;
+        text-decoration: none;
+        transition: all 0.3s;
+        &:hover {
+            background: $blue-bg;
+            border-color: $blue-bg;
+            color: #fff;
+        }
+    }
+}
+/* --------------------------------- content -------------------------------- */
+.content {
+    padding-top: 220px;
+}
+/* ------------------------------ auctions-list ----------------------------- */
+.auctions-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px 65px;
+}
+/* ------------------------------ auction-item ------------------------------ */
+.auction-item {
+    $root: &;
+    &__image {
+        display: block;
+        overflow: hidden;
+        border-radius: 20px;
+        height: 15vw;
+        margin-bottom: 35px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1) rotate(-2deg);
+                filter: sepia(100%);
+            }
+        }
+    }
+    &:nth-child(2n+0):hover {
+        #{$root}__image {
+            img {
+                transform: scale(1.1) rotate(2deg);
+                filter: sepia(100%);
+            }
+        }
+    }
+    &:nth-child(3n+0):hover {
+        #{$root}__image {
+            img {
+                transform: scale(1.1) rotate(0deg);
+                filter: sepia(100%);
+            }
+        }
+    }
+    &__title {
+        position: relative;
+        margin-bottom: 55px;
+    }
+    &__name {
+        font-family: $america;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 0 0 18px 0;
+        transition: all 0.3s;
+        &:hover {
+            color: $blue-text;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    &__lots {
+        color: $grey-text;
+        font-weight: 500;
+    }
+    &__date {
+        right: 0px;
+        top: 0px;
+        position: absolute;
+        display: flex;
+        height: 48px;
+        line-height: 30px;
+        border-radius: 14px;
+        color: #fff;
+        background: #000;
+        padding: 9px 24px;
+        i.mdi {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+    &__params {
+        margin-bottom: 40px;
+    }
+    &__params-item {
+        display: flex;
+        align-items: center;
+        i.mdi {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+        span {
+            font-size: 13px;
+        }
+        span + span:before {
+            content: "—";
+            display: inline-block;
+            margin: 0 10px;
+        }
+        & + & {
+            margin-top: 15px;
+        }
+    }
+}

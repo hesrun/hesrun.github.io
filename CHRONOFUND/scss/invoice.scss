@@ -34,7 +34,7 @@
 
 .contacts {
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     .box {
         float: left;
         width: 100%;
@@ -46,7 +46,7 @@
 }
 
 .datas {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     overflow: hidden;
     .box {
         float: left;
@@ -77,6 +77,9 @@
         padding: 20px 0 0 0;
     }
     tr {
+        th:first-child {
+            text-align: left;
+        }
         th:last-child {
             text-align: right;
         }
@@ -89,34 +92,11 @@
             text-align: right;
         }
         td:first-child {
-            width: 200px;
-            text-align: center;
+            width: 130px;
         }
     }
 }
 
-.final-summ {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    th {
-        border-bottom: 2px #000 solid;
-        vertical-align: top;
-        padding-bottom: 10px;
-    }
-    td {
-        vertical-align: top;
-        padding: 10px 0 0 0;
-    }
-    td:first-child,
-    th:first-child {
-        text-align: left;
-    }
-    td:last-child,
-    th:last-child {
-        text-align: right;
-    }
-}
 
 .total-summ {
     width: 100%;
@@ -127,10 +107,39 @@
         vertical-align: top;
         padding-bottom: 10px;
     }
+    td {
+        font-weight: bold;
+        padding: 0 0 10px 0;
+    }
     td:first-child {
-        width: 200px;
+        width: 130px;
     }
     td:last-child {
         text-align: right;
     }
+}
+
+.signs {
+    margin-top: 50px;
+    margin-bottom: 120px;
+    .item {
+        display: inline-block;
+        width: 35%;
+        border-bottom: 1px #000 solid;
+    }
+    span {
+        background: #fff;
+        position: relative;
+        bottom: -3px;
+    }
+    .item + .item {
+        margin-left: 29%;
+    }
+}
+.footer {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    bottom: 10px;
 }

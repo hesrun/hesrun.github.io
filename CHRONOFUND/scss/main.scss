@@ -4,7 +4,7 @@ $blue-bg: #1A2282;
 $blue-light: #2E2E7B;
 $blue-dark: #131E32;
 $brown:#C6A55B;
-$blue:#14145C;
+$blue:#253758;
 $orange:#f76844;
 $green:#0dad11;
 $grey: #818181;
@@ -41,6 +41,7 @@ html.menu-open {
 }
 input,select,textarea,button {
    font-family: 'GT America Extended';
+   filter: none;
 }
 a {
    text-decoration: none;
@@ -332,6 +333,7 @@ a {
          font-size: 60px;
          line-height: 1;
          span {
+            display: inline-block;
             color: $brown;
          }
       }
@@ -348,6 +350,7 @@ a {
          border-radius: 0px;
          width: 100%;
          max-width: 190px;
+         text-transform: none;
          & + .c-btn {
             margin-left: 20px;
          }
@@ -486,6 +489,9 @@ a {
          max-width: 320px;
       }
    }
+   .form-col + .form-col {
+      margin-left: 30px;
+   }
    .auth-by-social {
       margin-top: 50px;
       .c-btn {
@@ -538,6 +544,7 @@ a {
    .logo {
       img {
          width: 260px;
+         vertical-align: middle;
       }
       .mobile {
          display: none;
@@ -571,24 +578,10 @@ a {
          display: block;
          color: #fff;
          border-radius: 12px;
-         background: #253758;
+         background: $blue;
          font-size: 20px;
          text-align: center;
          line-height: 40px;
-         transition: all 0.5s;
-      }
-      .currency-name {
-         width: 40px;
-         height: 40px;
-         display: block;
-         color: #fff;
-         border-radius: 12px;
-         border: 1px #fff solid;
-         text-align: center;
-         line-height: 38px;
-         text-align: center;
-         font-size:10px;
-         font-weight: 500;
          transition: all 0.5s;
       }
       &.badge .mdi:after{
@@ -613,19 +606,13 @@ a {
          i.mdi {
             background: $brown;
          }
-         .currency-name {
-            background: $brown;
-            color: $blue;
-            border-color: $brown;
-         }
       }
    }
-
    #mobileMenueOpen {
       display: none;
       &:hover {
          i.mdi {
-            background: $blue-bg;
+            background: $blue;
          }
       }
       &.active {
@@ -633,6 +620,30 @@ a {
             background-color: $brown;
          }
       }
+   }
+}
+.currency-select {
+   vertical-align: middle;
+   display: inline-flex;
+   margin-right: 30px;
+   position: relative;
+   color: #fff;
+   select {
+      padding: 10px 15px 10px 10px;
+      border: none;
+      appearance: none;
+      color: #fff;
+      background: none;
+   }
+   option {
+      color: #000;
+   }
+   i.mdi {
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      pointer-events: none;
+      transform: translateY(-50%);
    }
 }
 /********************account-actiovation-note***********/
@@ -696,21 +707,38 @@ a {
    }
 }
 /*******************main-slider**********/
+#MainSlider {
+   .splide__slide:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background: rgba(#000, 0.5);
+      z-index: 0;
+   }
+}
 .main-slider {
    position: relative;
+   .slide-link {
+      display: none;
+   }
 }
 .splide_watch_text {
    position: absolute;
    left: 0;
    top: 0;
    width: 100%;
-   height: 100%;
+   height: 80%;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    color: #fff;
    text-align: center;
+   z-index: 1;
    .brand {
        font-size: 12px;
        text-transform: uppercase;
@@ -726,6 +754,14 @@ a {
        font-size: 40px;
        color: $brown;
        font-weight: 500;
+       .mdi {
+         transition: all 0.3s;
+       }
+       &:hover {
+         .mdi {
+            margin-left: 10px;
+         }
+       }
    }
 }
 .main-thumbs-wrap {
@@ -825,31 +861,6 @@ a {
             color: #fff;
             opacity: 0.5;
          }
-      }
-   }
-   .currency-toggle {
-      color: #fff;
-      display: flex;
-      align-items: center;
-      height: 35px;
-      padding: 0 5px 0 15px;
-      font-size: 13px;
-      border: 1px rgba(#fff,0.5) solid;
-      border-radius: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      cursor: pointer;
-      &:hover {
-         border-color: $brown;
-         background: $brown;
-         color: $blue-bg;
-      }
-      .currency-name {
-         margin-left: auto;
-      }
-      .mdi {
-         font-size: 20px;
       }
    }
    strong {
@@ -1095,7 +1106,7 @@ a {
          display: none;
          position: absolute;
          top: 110%;
-         background: $blue-bg;
+         background: #131E32;
          z-index: 2;
          white-space: nowrap;
          list-style: none;
@@ -1155,7 +1166,7 @@ a {
 }
 .catalog-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)) ;
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)) ;
    grid-gap: 60px 2vw;
    align-items: center;
    &.empty {
@@ -1176,7 +1187,7 @@ a {
       }
    }
    .item-image {
-      width: 200px;
+      width: 280px;
       height: 280px;
       flex: 0 0 auto;
       margin-right: 20px;
@@ -1425,8 +1436,8 @@ a {
             top: 50%;
             transform: translate(-50%, -50%);
             height: 100%;
+            width: 100%;
             margin: auto;
-            max-width: 300px;
             object-fit: cover;
          }
       }
@@ -3288,7 +3299,8 @@ a {
       background: none;
       border: none;
       border-bottom: 2px rgba(#fff,1) solid;
-      transition: all 0.6S;
+      transition: all 0.6s;
+
       &:focus {
          border-bottom: 2px rgba(#fff,1) solid;
       }
@@ -3377,7 +3389,10 @@ a {
    input:-webkit-autofill:hover,
    input:-webkit-autofill:focus {
       -webkit-text-fill-color: #fff !important;
-      box-shadow: 0 0 0px 1000px #191933 inset;
+      box-shadow: 0 0 0px 1000px #131E32 inset;
+   }
+   input::autofill {
+      background: none;
    }
 }
 .c-b-input {

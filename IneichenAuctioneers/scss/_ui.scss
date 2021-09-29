@@ -1,0 +1,44 @@
+.container {
+    padding: 0 150px;
+}
+
+.c-button {
+    $root: &;
+    border: none;
+    background: none;
+    text-align: center;
+    display: inline-flex;
+    border: none;
+    height: 60px;
+    border-radius: 14px;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    padding: 0 30px;
+    transition: 0.2s all;
+    &_full {
+        width: 100%;
+    }
+    &_blue {
+        color: $blue-bg;
+        border: 2px $blue-bg solid;
+        &:hover {
+            background: $blue-bg;
+            color: #fff;
+        }
+        &#{$root}_filled {
+            color: #fff;
+            background: $blue-bg;
+            &:hover {
+                background: lighten($blue-bg,20);
+                border-color: lighten($blue-bg,20);
+            }
+        }
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
