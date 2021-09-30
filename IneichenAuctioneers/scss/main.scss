@@ -185,10 +185,11 @@ $grey-line: #DFDFDF;
             margin-right: 10px;
         }
     }
-    &__params {
-        margin-bottom: 40px;
-    }
-    &__params-item {
+}
+
+.auction-date-location {
+    margin-bottom: 40px;
+    &__item {
         display: flex;
         align-items: center;
         i.mdi {
@@ -207,4 +208,223 @@ $grey-line: #DFDFDF;
             margin-top: 15px;
         }
     }
+
+}
+
+/* ------------------------------ auction item ------------------------------ */
+.auction-teaser {
+    margin-bottom: 40px;
+    img {
+        width: 100%;
+    }
+}
+/* ---------------------------------- lots ---------------------------------- */
+.lots-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 5px;
+}
+.lot-item {
+    $root: &;
+    transition: all 0.5s;
+    &__image {
+        img {
+            max-width: 100%;
+            transition: all 0.8s;
+        }
+    }
+    &__body {
+        margin-bottom: 15px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+    &__price {
+        padding: 0 15px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__price-range {
+        color: $grey-text;
+    }
+    &__info {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(black,0.5);
+        padding: 30px;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &__count {
+        position: absolute;
+        display: block;
+        width: 35px;
+        height: 35px;
+        left: 25px;
+        bottom: 25px;
+        background: black;
+        color: #fff;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 50%;
+        font-size: 13px;
+        transition: all 0.2s;
+    }
+    &__name {
+        font-size: 22px;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 30px;
+        line-height: 1.3;
+        text-shadow: 0 0 4px rgba(#000, 0.5);
+        transform: translateY(-30px);
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &__brand {
+        font-family: $inter;
+        color: #fff;
+        margin-bottom: auto;
+        font-weight: 500;
+        font-size: 13px;
+        letter-spacing: 1px;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &__link {
+        position: relative;
+        display: block;
+        margin: 0 auto auto;
+        width: 55px;
+        height: 55px;
+        background: white;
+        color: black;
+        border-radius: 50%;
+        line-height: 55px;
+        font-size:32px;
+        opacity: 0;
+        top: 30px;
+        transition: all 0.5s;
+        &:hover {
+            transform: scale(1.2) rotate(360deg);
+            transition-duration: 0.3s;
+        }
+    }
+    &__favorite {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        border: none;
+        margin-left: -90px;
+        border-radius: 50px;
+        width: 180px;
+        height: 35px;
+        background: #000;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        cursor: pointer;
+        white-space: nowrap;
+        opacity: 0;
+        transition: all 0.3s;
+        i.mdi {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -12px 0 0 -12px;
+            color: $pink-text;
+            font-size: 24px;
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s;
+        }
+        span {
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        &:hover {
+            background: $blue-bg;
+        }
+        &_active {
+            margin: 0 0 -10px -25px;
+            width: 50px;
+            height: 50px;
+            span {
+                transform: scale(0);
+            }
+            i.mdi {
+                visibility: visible;
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+    &:hover {
+        transform: scale(0.97);
+        transform-origin: 50% 30%;
+        #{$root}__brand {
+            opacity: 1;
+        }
+        #{$root}__name {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        #{$root}__link {
+            opacity: 1;
+            top: 0px;
+        }
+        #{$root}__favorite {
+            opacity: 1;
+        }
+        #{$root}__info {
+            opacity: 1;
+        }
+        #{$root}__count {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+    }
+    &:nth-child(n+0):hover {
+        #{$root}__image {
+            img {
+                transform: scale(1.2) rotate(0deg);
+                filter: blur(3px)
+            }
+        }
+    }
+    &:nth-child(2n+0):hover {
+        #{$root}__image {
+            img {
+                transform: scale(1.2) rotate(10deg);
+                filter: blur(3px)
+            }
+        }
+    }
+    &:nth-child(3n+0):hover {
+        #{$root}__image {
+            img {
+                transform: scale(1.2) rotate(-10deg);
+                filter: blur(3px)
+            }
+        }
+    }
+    &:nth-child(4n+0):hover {
+        #{$root}__image {
+            img {
+                transform: scale(1.4) rotate(0deg);
+                filter: blur(3px)
+            }
+        }
+    }
+    
 }
