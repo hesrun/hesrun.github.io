@@ -145,36 +145,8 @@ a {
 }
 
 .c-button:active {
-  -webkit-animation: 1s ButtonClick;
-          animation: 1s ButtonClick;
-}
-
-@-webkit-keyframes ButtonClick {
-  30% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes ButtonClick {
-  30% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 /* --------------------------------- header --------------------------------- */
@@ -915,5 +887,103 @@ a {
 .lot-item-small__price {
   font-size: 13px;
   font-weight: 500;
+}
+
+/* --------------------------------- footer --------------------------------- */
+.footer {
+  margin: 130px 0 0 0;
+  padding: 60px 0;
+}
+
+.footer__top-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.footer__nav-title {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.footer__nav-link {
+  font-weight: 500%;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__nav-link + .footer__nav-link {
+  margin-top: 15px;
+}
+
+.footer__nav-link:hover {
+  color: #1C2473;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.footer__contacts {
+  font-size: 14px;
+  margin-left: 10%;
+  margin-top: 56px;
+  line-height: 28px;
+  text-align: right;
+}
+
+.footer__bottom-line {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  width: 200px;
+}
+
+.footer__logo img {
+  width: 100%;
+}
+
+.footer__lang {
+  height: 40px;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  background: black;
+  line-height: 40px;
+  padding: 0 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__lang:hover {
+  background: #1C2473;
 }
 /*# sourceMappingURL=main.css.map */
