@@ -226,20 +226,23 @@ $grey-line: #DFDFDF;
 }
 .lot-item {
     $root: &;
-    transition: all 0.5s;
     &__image {
         img {
             max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
             transition: all 0.8s;
         }
     }
     &__body {
-        margin-bottom: 15px;
         position: relative;
         overflow: hidden;
         border-radius: 15px;
+        max-height: 100%;
+        transition: all 0.5s;
     }
     &__price {
+        margin: 15px 0 0 0;
         padding: 0 15px;
         font-size: 13px;
         display: flex;
@@ -369,12 +372,15 @@ $grey-line: #DFDFDF;
             }
         }
     }
-    &:hover {
-        transform: scale(0.97);
-        transform-origin: 50% 30%;
+    &:not(#{$root}_static):hover {
         #{$root}__brand {
             opacity: 1;
         }
+        #{$root}__body {
+            transform: scale(0.97);
+            transform-origin: 50% 70%;
+        }
+
         #{$root}__name {
             opacity: 1;
             transform: translateY(0px);
@@ -394,7 +400,7 @@ $grey-line: #DFDFDF;
             opacity: 0;
         }
     }
-    &:nth-child(n+0):hover {
+    &:not(#{$root}_static):nth-child(n+0):hover {
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(0deg);
@@ -402,23 +408,23 @@ $grey-line: #DFDFDF;
             }
         }
     }
-    &:nth-child(2n+0):hover {
+    &:not(#{$root}_static):nth-child(2n+0):hover {
         #{$root}__image {
             img {
-                transform: scale(1.2) rotate(10deg);
+                transform: scale(1.2) rotate(5deg);
                 filter: blur(3px)
             }
         }
     }
-    &:nth-child(3n+0):hover {
+    &:not(#{$root}_static):nth-child(3n+0):hover {
         #{$root}__image {
             img {
-                transform: scale(1.2) rotate(-10deg);
+                transform: scale(1.2) rotate(-5deg);
                 filter: blur(3px)
             }
         }
     }
-    &:nth-child(4n+0):hover {
+    &:not(#{$root}_static):nth-child(4n+0):hover {
         #{$root}__image {
             img {
                 transform: scale(1.4) rotate(0deg);
@@ -427,4 +433,168 @@ $grey-line: #DFDFDF;
         }
     }
     
+}
+
+.live-auction {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    &__video-col,
+    &__current-lot-col,
+    &__current-lots-col {
+        position: relative;
+    }
+    &__current-lot-col,
+    &__current-lots-col {
+        border-left: 1px $grey-line solid;
+    }
+    &__col-holder {
+        position: sticky;
+        top: 0
+    }
+    &__counts {
+        line-height: 20px;
+        align-self: baseline;
+        font-weight: 500;
+        display: flex;
+        align-items: baseline;
+        font-size: 13px;
+    }
+    &__users {
+        color: $red-text;
+        margin-right: 15px;
+        i.mdi {
+            font-size: 20px;
+            vertical-align: middle;
+        }
+    }
+    &__col-head {
+        padding: 30px 30px 0;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0px;
+        background: #fff;
+        z-index: 1;
+    }
+    &__col-body {
+        padding: 0 30px 30px 30px;
+    }
+    &__stream {
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 0 0 20px 0;
+        video {
+            vertical-align: middle;
+            width: 100%;
+        }
+    }
+    &__stream_buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+    &__bids {
+        border: 1px $grey-line solid;
+        border-radius: 15px;
+        margin: 0 0 20px 0;
+    }
+    &__bids-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px;
+        font-size: 13px;
+        font-weight: 500;
+        div:first-child {
+            color: $grey-text;
+        }
+        i.mdi {
+            color: black;
+            font-size: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        & + & {
+            border-top: 1px $grey-line solid;
+        }
+    }
+    &__lot {
+        margin: 0 0 20px 0;
+        height: calc(100vh - 335px);
+    }
+}
+
+.lots-list {
+    display: grid;
+    row-gap: 30px;
+}
+.lot-item-small {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: all 0.2s;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -15px;
+        top: -15px;
+        bottom: -15px;
+        right: -15px;
+        background: rgba($blue-bg, 0.05);
+        border-radius: 8px;
+        z-index: -1;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.3s;
+    }
+    &:hover {
+        &:before {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+    &__image {
+        flex: 0 0 auto;
+        width: 80px;
+        height: 110px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-right: 30px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__status {
+        display: inline-block;
+        line-height: 23px;
+        padding: 0 15px;
+        font-size: 11px;
+        border-radius: 10px;
+        margin: 0 0 15px 0;
+        &_grey {
+            background: #D8D8D8;
+        }
+        &_red {
+            background: $red-bg;
+            color: #fff;
+        }
+    }
+    &__name {
+        font-size: 14px;
+        color: $grey-text;
+        margin: 0 0 15px 0;
+    }
+    &__price {
+        font-size: 13px;
+        font-weight: 500;
+    }
 }
