@@ -599,6 +599,62 @@ $grey-line: #DFDFDF;
     }
 }
 
+/* ---------------------------------- sign ---------------------------------- */
+.sign-wrapper {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+}
+.sign-back {
+    position: absolute;
+    left: 65px;
+    top: 60px;
+    color: $grey-text;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    &:hover {
+        color: $blue-text;
+        transform: scale(1.1);
+    }
+}
+.sign-form {
+    margin: auto;
+    width: 100%;
+    max-width: 460px;
+    &__title {
+        font-size: 42px;
+        font-weight: 400;
+        margin: 0 0 60px 0;
+    }
+    &__fields {
+        margin-bottom: 60px;
+    }
+    &__btns {
+        margin-bottom: 60px;
+    }
+    &__btn + &__btn {
+        margin-top: 25px;
+    }
+    &__sub-link {
+        color: $grey-text;
+        a {
+            text-decoration: none;
+            color: $blue-text;
+            font-weight: 500;
+        }
+    }
+    &__note {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 60px;
+        &_small {
+            margin-top: -30px;
+            color: #4A4848;
+        }
+    }
+}
+
 
 
 /* --------------------------------- footer --------------------------------- */

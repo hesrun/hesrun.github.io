@@ -59,6 +59,10 @@ a {
   color: #1C2473;
 }
 
+input, textarea {
+  font-family: "Inter", sans-serif;
+}
+
 .title {
   font-family: "GT America Extended", sans-serif;
   font-size: 24px;
@@ -144,9 +148,109 @@ a {
   background: #DFDFDF;
 }
 
+.c-button_loading {
+  text-indent: -9999px;
+  position: relative;
+}
+
+.c-button_loading:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 2px transparent solid;
+  border-right: 2px transparent solid;
+  border-bottom: 2px #fff solid;
+  border-left: 2px #fff solid;
+  -webkit-animation: 0.5s Spin infinite linear;
+          animation: 0.5s Spin infinite linear;
+}
+
 .c-button:active {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.c-field {
+  position: relative;
+  margin-top: 20px;
+}
+
+.c-field:after, .c-field:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 2px;
+}
+
+.c-field:after {
+  width: 100%;
+  background: #DFDFDF;
+}
+
+.c-field:before {
+  width: 0;
+  background: #1C2473;
+  z-index: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c-field.active .c-field__label {
+  top: -10px;
+  color: #1C2473;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.c-field.active:before {
+  width: 100%;
+}
+
+.c-field__input {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 0px;
+  font-size: 18px;
+  outline: none;
+}
+
+.c-field__label {
+  color: #676767;
+  pointer-events: none;
+  top: 20px;
+  line-height: 20px;
+  left: 0px;
+  position: absolute;
+  font-size: 18px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+@-webkit-keyframes Spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes Spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 /* --------------------------------- header --------------------------------- */
@@ -887,6 +991,77 @@ a {
 .lot-item-small__price {
   font-size: 13px;
   font-weight: 500;
+}
+
+/* ---------------------------------- sign ---------------------------------- */
+.sign-wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.sign-back {
+  position: absolute;
+  left: 65px;
+  top: 60px;
+  color: #676767;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.sign-back:hover {
+  color: #1C2473;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.sign-form {
+  margin: auto;
+  width: 100%;
+  max-width: 460px;
+}
+
+.sign-form__title {
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0 0 60px 0;
+}
+
+.sign-form__fields {
+  margin-bottom: 60px;
+}
+
+.sign-form__btns {
+  margin-bottom: 60px;
+}
+
+.sign-form__btn + .sign-form__btn {
+  margin-top: 25px;
+}
+
+.sign-form__sub-link {
+  color: #676767;
+}
+
+.sign-form__sub-link a {
+  text-decoration: none;
+  color: #1C2473;
+  font-weight: 500;
+}
+
+.sign-form__note {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+
+.sign-form__note_small {
+  margin-top: -30px;
+  color: #4A4848;
 }
 
 /* --------------------------------- footer --------------------------------- */

@@ -18,10 +18,35 @@ $(document).ready(function() {
         AOS.init({
             once: true
         });
-    })
+    });
 
     $('.lot-item__favorite').click(function() {
         $(this).toggleClass('lot-item__favorite_active')
         return false;
-    })
+    });
+
+
+    
+  
+    $('.c-field').each(function() {
+        var field = $(this);
+        var input = field.find('.c-field__input');
+        function checkInput() {
+            var valueLength = input.val().length;
+            console.log(valueLength);
+            if (valueLength > 0 ) {
+                field.addClass('active')
+            } else {
+                field.removeClass('active')
+            }
+        }
+        $('.c-field__input').blur(function() {
+            checkInput()
+        })
+        $('.c-field__input').focus(function() {
+            checkInput();
+            $(this).parent().addClass('active');
+        })       
+    });
+    
 });
