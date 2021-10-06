@@ -4,6 +4,7 @@
 
 .c-button {
     $root: &;
+    font-family: $inter;
     border: none;
     background: none;
     text-align: center;
@@ -13,17 +14,16 @@
     border-radius: 14px;
     align-items: center;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 600;
     justify-content: center;
     text-decoration: none;
     color: black;
     padding: 0 30px;
     transition: 0.2s all;
-    &_small {
-        height: 30px;
-        border-radius: 30px;
-        font-size: 13px;
+    i.mdi {
+        font-size: 18px;
     }
+    
     &_full {
         width: 100%;
     }
@@ -49,6 +49,29 @@
         &:hover {
             background: $grey-line;
         } 
+    }
+    &_medium {
+        height: 42px;
+        border-radius: 30px;
+        font-size: 15px;
+        border-width: 1px;
+        padding: 0 20px;
+        font-size: 13px;
+    }
+    &_small {
+        height: 30px;
+        border-radius: 30px;
+        font-size: 13px;
+    }
+    &_icon-left {
+        .mdi:first-child {
+            margin-right: 10px;
+        }
+    }
+    &_icon-right {
+        .mdi:last-child {
+            margin-left: 10px;
+        }
     }
     &_loading {
         text-indent: -9999px;

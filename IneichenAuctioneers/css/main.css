@@ -67,16 +67,32 @@ input, textarea {
   font-family: "GT America Extended", sans-serif;
   font-size: 24px;
   font-weight: 500;
-  margin: 150px 0 70px;
+  margin: 150px 0 50px;
 }
 
 .title:first-of-type {
   margin-top: 0;
 }
 
+.title_big {
+  font-size: 34px;
+}
+
 .title_small {
   font-size: 20px;
   margin: 0 0 30px 0;
+}
+
+.title_with-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* ----------------------------------- ui ----------------------------------- */
@@ -85,6 +101,7 @@ input, textarea {
 }
 
 .c-button {
+  font-family: "Inter", sans-serif;
   border: none;
   background: none;
   text-align: center;
@@ -98,7 +115,7 @@ input, textarea {
       -ms-flex-align: center;
           align-items: center;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -109,10 +126,8 @@ input, textarea {
   transition: 0.2s all;
 }
 
-.c-button_small {
-  height: 30px;
-  border-radius: 30px;
-  font-size: 13px;
+.c-button i.mdi {
+  font-size: 18px;
 }
 
 .c-button_full {
@@ -146,6 +161,29 @@ input, textarea {
 
 .c-button_grey:hover {
   background: #DFDFDF;
+}
+
+.c-button_medium {
+  height: 42px;
+  border-radius: 30px;
+  font-size: 15px;
+  border-width: 1px;
+  padding: 0 20px;
+  font-size: 13px;
+}
+
+.c-button_small {
+  height: 30px;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.c-button_icon-left .mdi:first-child {
+  margin-right: 10px;
+}
+
+.c-button_icon-right .mdi:last-child {
+  margin-left: 10px;
 }
 
 .c-button_loading {
@@ -393,27 +431,6 @@ input, textarea {
   transition: all 0.5s;
 }
 
-.auction-item__image:hover img {
-  -webkit-transform: scale(1.1) rotate(-2deg);
-          transform: scale(1.1) rotate(-2deg);
-  -webkit-filter: sepia(100%);
-          filter: sepia(100%);
-}
-
-.auction-item:nth-child(2n+0):hover .auction-item__image img {
-  -webkit-transform: scale(1.1) rotate(2deg);
-          transform: scale(1.1) rotate(2deg);
-  -webkit-filter: sepia(100%);
-          filter: sepia(100%);
-}
-
-.auction-item:nth-child(3n+0):hover .auction-item__image img {
-  -webkit-transform: scale(1.1) rotate(0deg);
-          transform: scale(1.1) rotate(0deg);
-  -webkit-filter: sepia(100%);
-          filter: sepia(100%);
-}
-
 .auction-item__title {
   position: relative;
   margin-bottom: 55px;
@@ -424,6 +441,7 @@ input, textarea {
   font-size: 24px;
   font-weight: 500;
   margin: 0 0 18px 0;
+  padding-right: 210px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -462,8 +480,50 @@ input, textarea {
   margin-right: 10px;
 }
 
+/* ----------------------------- auction-detail ----------------------------- */
+.auction-detail__teaser {
+  border-radius: 24px;
+  margin-bottom: 50px;
+  height: 30vh;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auction-detail__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.auction-detail__start {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.auction-detail__start > span {
+  font-weight: 500;
+  color: #676767;
+  margin: 3px 35px 0 0;
+}
+
+.auction-detail__buttons .c-button + .c-button {
+  margin-top: 15px;
+}
+
 .auction-date-location {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .auction-date-location__item {
@@ -494,13 +554,37 @@ input, textarea {
   margin-top: 15px;
 }
 
-/* ------------------------------ auction item ------------------------------ */
-.auction-teaser {
-  margin-bottom: 40px;
+.start-timer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 0 20px;
+  text-align: center;
+  overflow: hidden;
 }
 
-.auction-teaser img {
-  width: 100%;
+.start-timer__digits {
+  font-weight: 500;
+  font-family: "GT America Extended", sans-serif;
+  font-size: 20px;
+  display: block;
+  position: relative;
+}
+
+.start-timer__digits:before {
+  content: ":";
+  position: absolute;
+  left: -13px;
+  top: -1px;
+}
+
+.start-timer__name {
+  font-weight: 500;
+  margin-top: 10px;
+  display: block;
+  color: #676767;
+  font-size: 13px;
 }
 
 /* ---------------------------------- lots ---------------------------------- */
@@ -594,9 +678,13 @@ input, textarea {
   margin-bottom: 30px;
   line-height: 1.3;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-  opacity: 0;
+  overflow: hidden;
+}
+
+.lot-item__name span {
+  display: block;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -718,10 +806,9 @@ input, textarea {
           transform-origin: 50% 70%;
 }
 
-.lot-item:not(.lot-item_static):hover .lot-item__name {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+.lot-item:not(.lot-item_static):hover .lot-item__name span {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .lot-item:not(.lot-item_static):hover .lot-item__link {
@@ -746,29 +833,21 @@ input, textarea {
 .lot-item:not(.lot-item_static):nth-child(n+0):hover .lot-item__image img {
   -webkit-transform: scale(1.2) rotate(0deg);
           transform: scale(1.2) rotate(0deg);
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
 }
 
 .lot-item:not(.lot-item_static):nth-child(2n+0):hover .lot-item__image img {
   -webkit-transform: scale(1.2) rotate(5deg);
           transform: scale(1.2) rotate(5deg);
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
 }
 
 .lot-item:not(.lot-item_static):nth-child(3n+0):hover .lot-item__image img {
   -webkit-transform: scale(1.2) rotate(-5deg);
           transform: scale(1.2) rotate(-5deg);
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
 }
 
 .lot-item:not(.lot-item_static):nth-child(4n+0):hover .lot-item__image img {
   -webkit-transform: scale(1.4) rotate(0deg);
           transform: scale(1.4) rotate(0deg);
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
 }
 
 .live-auction {
@@ -993,6 +1072,215 @@ input, textarea {
   font-weight: 500;
 }
 
+/* --------------------------------- product -------------------------------- */
+.product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% auto;
+      grid-template-columns: 35% auto;
+  gap: 0 60px;
+  padding: 60px;
+}
+
+.product__image-link {
+  display: block;
+  vertical-align: middle;
+}
+
+.product__image-link + .product__image-link {
+  margin-top: 15px;
+}
+
+.product__image-link img {
+  width: 100%;
+}
+
+.product__header {
+  margin-bottom: 60px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  padding: 20px 0 20px;
+  z-index: 1;
+}
+
+.product__num {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: black;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 13px;
+  margin-right: auto;
+}
+
+.product__nav-link {
+  line-height: 38px;
+  text-align: center;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px #DFDFDF solid;
+  font-size: 24px;
+  color: #000;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.product__nav-link + .product__nav-link {
+  margin-left: 15px;
+}
+
+.product__nav-link:hover {
+  border-color: #1C2473;
+  background: #1C2473;
+  color: #fff;
+}
+
+.product__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product__close {
+  margin-left: 30px;
+  line-height: 38px;
+  text-align: center;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 32px;
+  color: black;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.product__close:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.product__brand {
+  font-weight: 500;
+  color: #676767;
+  margin-bottom: 30px;
+}
+
+.product__name {
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+
+.product__price {
+  margin-bottom: 40px;
+}
+
+.product__price div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product__price div + div {
+  margin-top: 40px;
+}
+
+.product__price span {
+  color: #676767;
+}
+
+.product__price strong {
+  font-family: "GT America Extended", sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #1C2473;
+}
+
+.product__bids {
+  border-top: 1px #DFDFDF solid;
+  border-bottom: 1px #DFDFDF solid;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.product__bids strong {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.product__bids-select {
+  max-width: 300px;
+  margin-left: 6%;
+  margin-right: 30px;
+}
+
+.product__btns {
+  margin-bottom: 40px;
+}
+
+.product__btns .c-button + .c-button {
+  margin-top: 15px;
+}
+
+.product__other-links {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px #DFDFDF solid;
+}
+
+.product__other-links a {
+  color: #676767;
+  font-weight: 500;
+  margin-right: 30px;
+}
+
+.product__other-links a:hover {
+  color: #1C2473;
+  text-decoration: none;
+}
+
+.product__params {
+  width: 100%;
+  max-width: 700px;
+}
+
+.product__params td {
+  font-size: 14px;
+  vertical-align: top;
+  padding-bottom: 40px;
+  line-height: 1.5;
+}
+
+.product__params td:first-child {
+  width: 200px;
+  color: #676767;
+}
+
 /* ---------------------------------- sign ---------------------------------- */
 .sign-wrapper {
   min-height: 100vh;
@@ -1054,7 +1342,6 @@ input, textarea {
 }
 
 .sign-form__note {
-  font-size: 15px;
   line-height: 1.5;
   margin-bottom: 60px;
 }

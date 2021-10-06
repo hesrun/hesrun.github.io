@@ -124,28 +124,6 @@ $grey-line: #DFDFDF;
             object-fit: cover;
             transition: all 0.5s;
         }
-        &:hover {
-            img {
-                transform: scale(1.1) rotate(-2deg);
-                filter: sepia(100%);
-            }
-        }
-    }
-    &:nth-child(2n+0):hover {
-        #{$root}__image {
-            img {
-                transform: scale(1.1) rotate(2deg);
-                filter: sepia(100%);
-            }
-        }
-    }
-    &:nth-child(3n+0):hover {
-        #{$root}__image {
-            img {
-                transform: scale(1.1) rotate(0deg);
-                filter: sepia(100%);
-            }
-        }
     }
     &__title {
         position: relative;
@@ -156,6 +134,7 @@ $grey-line: #DFDFDF;
         font-size: 24px;
         font-weight: 500;
         margin: 0 0 18px 0;
+        padding-right: 210px;
         transition: all 0.3s;
         &:hover {
             color: $blue-text;
@@ -187,8 +166,41 @@ $grey-line: #DFDFDF;
     }
 }
 
+/* ----------------------------- auction-detail ----------------------------- */
+.auction-detail {
+    &__teaser {
+        border-radius: 24px;
+        margin-bottom: 50px;
+        height: 30vh;
+        max-width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__start {
+        align-self: flex-start;
+        display: flex;
+        > span {
+            font-weight: 500;
+            color: $grey-text;
+            margin: 3px 35px 0 0;
+        }
+    }
+    &__buttons {
+        .c-button + .c-button {
+            margin-top: 15px;
+        }
+    }
+}
+
 .auction-date-location {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     &__item {
         display: flex;
         align-items: center;
@@ -208,15 +220,35 @@ $grey-line: #DFDFDF;
             margin-top: 15px;
         }
     }
-
 }
 
-/* ------------------------------ auction item ------------------------------ */
-.auction-teaser {
-    margin-bottom: 40px;
-    img {
-        width: 100%;
+.start-timer {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 0 20px;
+    text-align: center;
+    overflow: hidden;
+    &__digits {
+        font-weight: 500;
+        font-family: $america;
+        font-size: 20px;
+        display: block;
+        position: relative;
+        &:before {
+            content: ":";
+            position: absolute;
+            left: -13px;
+            top: -1px;
+        }
     }
+    &__name {
+        font-weight: 500;
+        margin-top: 10px;
+        display: block;
+        color: $grey-text;
+        font-size: 13px;
+    }
+
 }
 /* ---------------------------------- lots ---------------------------------- */
 .lots-grid {
@@ -288,9 +320,12 @@ $grey-line: #DFDFDF;
         margin-bottom: 30px;
         line-height: 1.3;
         text-shadow: 0 0 4px rgba(#000, 0.5);
-        transform: translateY(-30px);
-        opacity: 0;
-        transition: all 0.5s;
+        overflow: hidden;
+        span {
+            display: block;
+            transform: translateY(100%);
+            transition: all 0.5s;
+        }
     }
     &__brand {
         font-family: $inter;
@@ -380,10 +415,10 @@ $grey-line: #DFDFDF;
             transform: scale(0.97);
             transform-origin: 50% 70%;
         }
-
         #{$root}__name {
-            opacity: 1;
-            transform: translateY(0px);
+            span {
+                transform: translateY(0);
+            }
         }
         #{$root}__link {
             opacity: 1;
@@ -404,7 +439,7 @@ $grey-line: #DFDFDF;
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(0deg);
-                filter: blur(3px)
+                //filter: blur(3px)
             }
         }
     }
@@ -412,7 +447,7 @@ $grey-line: #DFDFDF;
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(5deg);
-                filter: blur(3px)
+                //filter: blur(3px)
             }
         }
     }
@@ -420,7 +455,7 @@ $grey-line: #DFDFDF;
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(-5deg);
-                filter: blur(3px)
+                //filter: blur(3px)
             }
         }
     }
@@ -428,7 +463,7 @@ $grey-line: #DFDFDF;
         #{$root}__image {
             img {
                 transform: scale(1.4) rotate(0deg);
-                filter: blur(3px)
+                //filter: blur(3px)
             }
         }
     }
@@ -599,6 +634,173 @@ $grey-line: #DFDFDF;
     }
 }
 
+
+/* --------------------------------- product -------------------------------- */
+.product {
+    display: grid;
+    grid-template-columns: 35% auto;
+    gap: 0 60px;
+    padding: 60px;
+    &__gallery-col {
+        //padding: 60px 0;
+    }
+    &__info-col {
+        //padding: 40px 0 60px;
+    }
+    &__image-link {
+        display: block;
+        & + & {
+            margin-top: 15px;
+        }
+        vertical-align: middle;
+        img {
+            width: 100%;
+        }
+    }
+    &__header {
+        margin-bottom: 60px;
+        position: sticky;
+        top: 0px;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 20px 0 20px;
+        z-index: 1;
+    }
+    &__num {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: black;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        font-size: 13px;
+        margin-right: auto;
+    }
+    &__nav-link {
+        line-height: 38px;
+        text-align: center;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px $grey-line solid;
+        font-size: 24px;
+        color: #000;
+        transition: all 0.3s;
+        & + & {
+            margin-left: 15px;
+        }
+        &:hover {
+            border-color: $blue-bg;
+            background: $blue-bg;
+            color: #fff;
+        }
+    }
+    &__nav {
+        display: flex;
+    }
+    &__close {
+        margin-left: 30px;
+        line-height: 38px;
+        text-align: center;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 32px;
+        color: black;
+        transition: all 0.3s;
+        &:hover {
+            transform: rotate(180deg)
+        }
+    }
+    &__brand {
+        font-weight: 500;
+        color: $grey-text;
+        margin-bottom: 30px;
+    }
+    &__name {
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
+    &__price {
+        margin-bottom: 40px;
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        div + div {
+            margin-top: 40px;
+        }
+        span {
+            color: $grey-text;
+        }
+        strong {
+            font-family: $america;
+            font-size: 17px;
+            text-transform: uppercase;
+            color: $blue-text;
+        }
+    }
+    &__bids {
+        border-top: 1px $grey-line solid;
+        border-bottom: 1px $grey-line solid;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        strong {
+            flex: 0 0 auto;
+        }
+    }
+    &__bids-select {
+        max-width: 300px;
+        margin-left: 6%;
+        margin-right: 30px;
+    }
+    &__btns {
+        margin-bottom: 40px;
+        .c-button + .c-button {
+            margin-top: 15px;
+        }
+    }
+    &__other-links {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px $grey-line solid;
+        a {
+            color: $grey-text;
+            font-weight: 500;
+            margin-right: 30px;
+            &:hover {
+                color: $blue-text;
+                text-decoration: none;
+            }
+        }
+    }
+    &__params {
+        width: 100%;
+        max-width: 700px;
+        td {
+            font-size: 14px;
+            vertical-align: top;
+            padding-bottom: 40px;
+            line-height: 1.5;
+        }
+        td:first-child {
+            width: 200px;
+            color: $grey-text;
+        }
+
+    }
+}
+
+
+
+
 /* ---------------------------------- sign ---------------------------------- */
 .sign-wrapper {
     min-height: 100vh;
@@ -645,7 +847,6 @@ $grey-line: #DFDFDF;
         }
     }
     &__note {
-        font-size: 15px;
         line-height: 1.5;
         margin-bottom: 60px;
         &_small {
