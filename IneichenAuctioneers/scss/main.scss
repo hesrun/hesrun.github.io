@@ -83,6 +83,7 @@ $grey-line: #DFDFDF;
         }
     }
     &__account {
+        display: block;
         height: 45px;
         border: 1px $grey-line solid;
         border-radius: 30px;
@@ -93,15 +94,227 @@ $grey-line: #DFDFDF;
         text-decoration: none;
         transition: all 0.3s;
         &:hover {
-            background: $blue-bg;
-            border-color: $blue-bg;
+            background: #000;
+            border-color: #000;
             color: #fff;
         }
     }
 }
 /* --------------------------------- content -------------------------------- */
 .content {
-    padding-top: 220px;
+    padding-top: 105px;
+}
+/* ---------------------------------- index --------------------------------- */
+.main-banner {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: calc(100vh - 105px);
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 30px 50px 30px 150px;
+        background: $blue-bg;
+        color: #fff;
+        min-height: 100%;
+    }
+    &__image {
+        min-height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            object-fit:cover; 
+        }
+    }
+    &__auction {
+        margin: 60px 0;
+        font-size: 40px;
+        max-width: 360px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    &__title {
+        display: inline-block;
+        height: 48px;
+        line-height: 30px;
+        border-radius: 14px;
+        color: #fff;
+        background: #000;
+        padding: 9px 24px;
+    }
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 30px;
+    &__item {
+        text-decoration: none;
+        color: #000;
+        border-radius: 12px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border: 1px $grey-line solid;
+        padding: 30px;
+        height: 290px;
+        transition: all 0.3s;
+        span {
+            margin-top: auto;
+            font-size: 15px;
+            color: $grey-text;
+            font-weight: 500;
+            line-height: 1.2;
+            transition: all 0.3s;
+        }
+        &:hover {
+            background: $blue-bg;
+            border-color: $blue-bg;
+            color: #fff;
+            span {
+                color: #fff;
+            }
+            svg path {
+                stroke: #fff;
+            }
+        }
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+    &__image {
+        position: absolute;
+        right: 30px;
+        bottom: 50px;
+        &_3 {
+            width: 233px;
+            height: 172px;
+        }
+    }
+
+}
+
+.world-records {
+    background: #F5F5F5;
+    padding: 80px 0;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0 5%;
+    }
+    &__year {
+        color: $blue-text;
+        font-size: 44px;
+        font-weight: 400;
+        margin-bottom: 50px;
+    }
+    &__descr {
+        display: grid;
+        grid-row-gap: 30px;
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: 15px;
+        color: #444;
+        strong {
+            font-weight: 600;
+            display: block;
+        }
+    }
+}
+
+.our-team {
+    $root: &;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0 30px;
+    &__body {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        margin: 0 0 30px 0;
+        &:hover {
+            #{$root}__descr {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+    &__image {
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+    &__descr {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: rgba(#000, 0.66);
+        color: #fff;
+        padding: 25px;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s;
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+    &__video {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+        &:hover {
+            i.mdi {
+                background: $blue-bg;
+            }    
+        }
+        i.mdi {
+            text-align: center;
+            line-height: 45px;
+            background: $brown-bg;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+    }
+    &__name {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    &__rank {
+        font-size: 13px;
+        color: #B0B0B0;
+    }
+}
+
+.another-questions {
+    margin-top: 100px;
+    background: $blue-bg;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    h2 {
+        font-size: 34px;
+        margin-bottom: 40px;
+    }
 }
 /* ------------------------------ auctions-list ----------------------------- */
 .auctions-list {
@@ -219,6 +432,15 @@ $grey-line: #DFDFDF;
         & + & {
             margin-top: 15px;
         }
+    }
+    &__live {
+        margin-left: 15px;
+        color: $red-text;
+        border: 1px $red-text solid;
+        border-radius: 5px;
+        font-size: 13px;
+        padding: 5px 10px;
+        font-weight: 500;
     }
 }
 
@@ -760,6 +982,7 @@ $grey-line: #DFDFDF;
         }
     }
     &__bids-select {
+        width: 100%;
         max-width: 300px;
         margin-left: 6%;
         margin-right: 30px;
@@ -802,25 +1025,196 @@ $grey-line: #DFDFDF;
 }
 
 
+/* --------------------------------- account -------------------------------- */
+.profile {
+    padding: 0 60px 60px;
+    &__title {
+        font-size: 34px;
+        color: $blue-text;
+        margin-bottom: 120px;
+
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 220px auto;
+        gap: 0 7%;
+    }
+    &__title-small {
+        color: $blue-text;
+        font-weight: 700;
+        margin: 100px 0 70px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.bids-list {
+    max-width: 1100px;
+    &__item {
+        line-height: 1.4;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 25% 20% 15% 10%;
+        gap: 0 10%;
+        padding: 30px 35px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s;
+        &:hover {
+            background: rgba($grey-text, 0.05);
+        }
+        span {
+            display: block;
+            color: $grey-text;
+        }
+        strong {
+            display: block;
+            & + span {
+                margin-top: 10px;
+            }
+        }
+    }
+    &__auction-price {
+        text-align: right;
+    }
+}
+
+.invoice-list {
+    max-width: 700px;
+    &__item {
+        line-height: 1.4;
+        font-size: 14px;
+        display: grid;
+        gap: 0 10%;
+        grid-template-columns: 2fr 1.5fr 1fr;
+        padding: 30px 35px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s;
+        &:hover {
+            background: rgba($grey-text, 0.05);
+        }
+        b {
+            font-size: 15px;
+            line-height: 17px;
+        }
+        span {
+            display: block;
+            margin-top: 10px;
+            color: $grey-text;
+        }
+    }
+    &__btn {
+        text-align: right;
+    }
+}
+
+.profile-general {
+    max-width: 700px;
+    &__row {
+        display: grid;
+        grid-template-columns: 2fr 3fr 2fr;
+        gap: 0 30px;
+        margin-bottom: 50px;
+        span {
+            color: $grey-text;
+        }
+        a {
+            justify-content: flex-end;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s;
+            i.mdi {
+                margin-left: 10px;
+            }
+            &:hover {
+                transform: translateX(10px);
+            }
+        }
+    }
+    &__note {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 0 30px;
+    }
+    &__verify {
+        width: 100%;
+        max-width: 270px;
+    }
+}
+
+
+.credit-cards {
+    max-width: 700px;
+    &__list-item {
+        cursor: pointer;
+        padding: 12px 30px;
+        display: flex;
+        align-items: center;
+        border-radius: 14px;
+        border: 1px $grey-line solid;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        &:hover {
+            background: rgba($grey-text, 0.05);
+        }
+    }
+    &__type {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        i.mdi {
+            line-height: 35px;
+            color: $blue-text;
+            font-size: 24px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__stars {
+        letter-spacing: 1px;
+        color: $grey-text;
+        opacity: 0.5;
+    }
+    &__num {
+        font-weight: 500;
+        margin-left: 30px;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 12px;
+    }
+    &__date {
+        font-weight: 500;
+        margin-right: 50px;
+    }
+    &__arrow {
+        font-size: 28px;
+        color: $grey-text;
+        opacity: 0.5;
+        line-height: 35px;
+    }
+}
 
 
 /* ---------------------------------- sign ---------------------------------- */
 .sign-wrapper {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     position: relative;
 }
 .sign-back {
-    position: absolute;
-    left: 65px;
-    top: 60px;
+    padding: 60px 0 60px 65px;
     color: $grey-text;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.2s;
     &:hover {
         color: $blue-text;
-        transform: scale(1.1);
     }
 }
 .sign-form {
@@ -831,6 +1225,12 @@ $grey-line: #DFDFDF;
         font-size: 42px;
         font-weight: 400;
         margin: 0 0 60px 0;
+        &_small {
+            color: $blue-text;
+            font-size: 28px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
     }
     &__fields {
         margin-bottom: 60px;
@@ -857,6 +1257,132 @@ $grey-line: #DFDFDF;
             color: #4A4848;
         }
     }
+    &__profile-note {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 40px 0;
+    }
+    &__double {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 15px;
+    }
+    &__birthday {
+        display: grid;
+        grid-template-columns: 2.2fr 1fr 1fr;
+        gap: 0 15px;
+    }
+    &__phone {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 0 15px;
+    }
+}
+
+.drop-zone {
+    margin-bottom: 50px;
+    &__label {
+        border: 2px $grey-line dashed;
+        border-radius: 12px;
+        display: grid;
+        grid-row-gap: 20px;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+        padding: 8vh 15px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s;
+        &:hover {
+            border: 2px $blue-bg solid;
+            background: rgba($blue-bg, 0.05);
+        }
+    }
+    input {
+        left: 0px;
+        top: 0px;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+    i.mdi {
+        color: $blue-bg;
+        font-size: 28px;
+    }
+    
+}
+
+.upload-files {
+    display: grid;
+    grid-row-gap: 20px;
+    margin-bottom: 50px;
+    &__item {
+        display: grid;
+        grid-template-columns: 50px 1fr 32px;
+        align-items: center;
+    }
+    &__image {
+        width: 50px;
+        height: 50px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        padding: 0 50px 0 15px;
+        font-size: 13px;
+        font-weight: 500;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px 0px;
+    }
+    &__progress {
+        height: 4px;
+        background: rgba($grey-text, 0.1);
+        border-radius: 2px;
+        grid-column: 1 / span 2;
+        div {
+            background: $blue-bg;
+            height: 100%;
+        }
+    }
+    &__weight {
+        font-size: 11px;
+        font-weight: 500;
+        color: $grey-text;
+    }
+    &__remove {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 24px;
+        &:hover {
+            background: rgba($grey-text, 0.1);
+        }
+    }
+}
+
+/* --------------------------------- modals --------------------------------- */
+.card-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 30px;
+    .c-field:first-child {
+        grid-column: 1 / span 2;
+    }
+}
+.card-remove-btn {
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+    color: $grey-text;
 }
 
 
