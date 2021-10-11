@@ -22,6 +22,27 @@ $(document).ready(function() {
         });
     });
 
+    $('.mobile-menu__link_sub').click(function() {
+        $(this).next().slideToggle();
+        return false;
+    });
+
+    $('.burger-btn').click(function () {
+        $('.mobile-menu').fadeToggle().toggleClass('mobile-menu_show');
+        return false;
+    })
+    
+
+    $('#SearchOpen').click(function() {
+        $('.header__search').fadeIn();
+        return false;
+    });
+    $('#SearchClose').click(function() {
+        $('.header__search').fadeOut();
+        return false;
+    });
+    
+
     $('.lot-item__favorite').click(function() {
         $(this).toggleClass('lot-item__favorite_active')
         return false;

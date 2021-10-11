@@ -6,21 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
         <div class="header__nav">
             <a href="" class="header__nav-link">Auctions</a>
             <a href="" class="header__nav-link">Services</a>
             <a href="" class="header__nav-link">Contacts</a>
         </div>
         <a href="" class="header__logo">
-            <img src="svg/head-logo.svg" alt="">
+            <img class="header__logo_desctop" src="svg/head-logo.svg" alt="">
+            <img class="header__logo_tablet" src="svg/footer-logo.svg" alt="">
+            <img class="header__logo_mobile" src="svg/icon-logo.svg" alt="">
         </a>
         <div class="header__buttons">
-            <a href="" class="header__button">
+            <a href="" id="SearchOpen" class="header__button">
                 <i class="mdi mdi-magnify"></i>
             </a>
             <a href="" class="header__button">
@@ -28,7 +36,8 @@
             </a>
             <div class="c-dropdown">
                 <a href="#" class="c-dropdown__button header__account">
-                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
                 </a>
                 <div class="c-dropdown__list c-dropdown__list_right">
                     <div class="c-dropdown__scroll">
@@ -51,7 +60,62 @@
                 </div>
             </div>
         </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__head">
+                <a href="" class="mobile-menu__burger burger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <img class="mobile-menu__logo_tablet" src="svg/footer-logo.svg" alt="">
+                <img class="mobile-menu__logo_mobile" src="svg/icon-logo.svg" alt="">
+            </div>
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">Germany</option>
+                        <option value="">English</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main class="content">
         <div class="main-banner">
             <div class="main-banner__info">
@@ -81,13 +145,13 @@
                 <a href="#" class="services-list__item" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <h3>Sell <br> your Watches</h3>
                     <span>Discover <br>service</span>
-                    <div class="services-list__image services-list__image_3" id="my-div"></div>
+                    <div class="services-list__image services-list__image_1" id="my-div"></div>
                 </a>
                 <a href="#" class="services-list__item" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <h3>Auction <br>
                         sale</h3>
                     <span>Discover <br>service</span>
-                    <div class="services-list__image services-list__image_3" id="my-div2"></div>
+                    <div class="services-list__image services-list__image_2" id="my-div2"></div>
                 </a>
                 <a href="#" class="services-list__item" data-aos-delay="400" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <h3>Collection <br>
@@ -123,7 +187,9 @@
                             <span>Saal Metropol Zürich Stadthausquai 11-13, CH-8001 Zürich</span>
                         </div>
                     </div>
-                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    <div class="auction-item__btns">
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    </div>
                 </div>
                 <div class="auction-item" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="#" class="auction-item__image">
@@ -150,7 +216,9 @@
                             <span>Saal Metropol Zürich Stadthausquai 11-13, CH-8001 Zürich</span>
                         </div>
                     </div>
-                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    <div class="auction-item__btns">
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    </div>
                 </div>
                 <div class="auction-item" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="#" class="auction-item__image">
@@ -177,7 +245,9 @@
                             <span>Saal Metropol Zürich Stadthausquai 11-13, CH-8001 Zürich</span>
                         </div>
                     </div>
-                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    <div class="auction-item__btns">
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    </div>
                 </div>
                 <div class="auction-item" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="#" class="auction-item__image">
@@ -204,7 +274,9 @@
                             <span>Saal Metropol Zürich Stadthausquai 11-13, CH-8001 Zürich</span>
                         </div>
                     </div>
-                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    <div class="auction-item__btns">
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    </div>
                 </div>
                 <div class="auction-item" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="#" class="auction-item__image">
@@ -231,7 +303,9 @@
                             <span>Saal Metropol Zürich Stadthausquai 11-13, CH-8001 Zürich</span>
                         </div>
                     </div>
-                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    <div class="auction-item__btns">
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    </div>
                 </div>
                 <div class="auction-item" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="#" class="auction-item__image">
@@ -258,7 +332,9 @@
                             <span>Saal Metropol Zürich Stadthausquai 11-13, CH-8001 Zürich</span>
                         </div>
                     </div>
-                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    <div class="auction-item__btns">
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    </div>
                 </div>
                 <div class="auction-item" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="#" class="auction-item__image">
@@ -285,7 +361,9 @@
                             <span>Saal Metropol Zürich Stadthausquai 11-13, CH-8001 Zürich</span>
                         </div>
                     </div>
-                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    <div class="auction-item__btns">
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    </div>
                 </div>
                 <div class="auction-item" data-aos-delay="200" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="#" class="auction-item__image">
@@ -312,10 +390,11 @@
                             <span>Saal Metropol Zürich Stadthausquai 11-13, CH-8001 Zürich</span>
                         </div>
                     </div>
-                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    <div class="auction-item__btns">
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Open auction</a>
+                    </div>
                 </div>
             </div>
-            
         </div>
         <div class="container">
             <div class="title title_big">Ineichen’s world records</div>
@@ -532,28 +611,31 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
-        new Vivus('my-div', {
-            type: 'sync',
-            duration: 100,
-            file: '/img/main/service-3.svg'
+        $( document ).ready(function() {
+            var Vivus1 = new Vivus('my-div', {
+                type: 'oneByOne',
+                duration: 200,
+                file: '/img/main/service-1.svg',
+            });
+            var Vivus2 = new Vivus('my-div2', {
+                type: 'oneByOne',
+                duration: 200,
+                file: '/img/main/service-2.svg'
+            });
+            var Vivus3 = new Vivus('my-div3', {
+                type: 'oneByOne',
+                duration: 200,
+                file: '/img/main/service-3.svg'
+            });
         });
-        new Vivus('my-div2', {
-            type: 'sync',
-            duration: 100,
-            file: '/img/main/service-3.svg'
-        });
-        new Vivus('my-div3', {
-            type: 'sync',
-            duration: 100,
-            file: '/img/main/service-3.svg'
-        });
+        
     </script>
 </body>
 </html>

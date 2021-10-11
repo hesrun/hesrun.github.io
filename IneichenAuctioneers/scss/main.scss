@@ -46,6 +46,12 @@ $grey-line: #DFDFDF;
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
+        &_mobile {
+            display: none;
+        }
+        &_tablet {
+            display: none;
+        }
     }
     &__nav-link {
         color: $grey-text;
@@ -93,10 +99,130 @@ $grey-line: #DFDFDF;
         color: #000;
         text-decoration: none;
         transition: all 0.3s;
+        .mdi-account-outline {
+            display: none;
+        }
         &:hover {
             background: #000;
             border-color: #000;
             color: #fff;
+        }
+    }
+    &__search {
+        display: none;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        .container {
+            height: 100%;
+        }
+    }
+    &__search-form {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        input {
+            font-size: 20px;
+            border: none;
+            height: 40px;
+            flex: 1 1 auto;
+            margin-right: 30px;
+            outline: none;
+        }
+        a {
+            font-size: 32px;
+        }
+    }
+    &__burger {
+        display: none;
+    }
+}
+
+/* ------------------------------- mobile-menu ------------------------------ */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(#000,0.5);
+    &__aside {
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        max-width: 400px;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+    &__head {
+        height: 80px;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+    }
+    &__body {
+        padding: 30px;
+    }
+    &__footer {
+        padding: 30px;
+    }
+    &__burger {
+        margin-right: 30px;
+    }
+    &__logo {
+        &_tablet {
+            height: 40px;
+        }
+        &_mobile {
+            display: none
+        }
+    }
+    &__link {
+        display: flex;
+        font-weight: 500;
+        align-items: center;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        margin-bottom: 15px;
+        line-height: 25px;
+        &:hover {
+            color: $blue-text;
+        }
+        i.mdi {
+            opacity: 0.6;
+            font-size: 24px;
+        }
+    }
+    &__sub-nav {
+        display: none;
+        opacity: 0.6;
+    }
+    &__select {
+        display: inline-block;
+        position: relative;
+        margin-right: 30px;
+        select {
+            font-weight: 500;
+            height: 30px;
+            font-size: 15px;
+            appearance: none;
+            border: none;
+            padding: 0 20px 0 0;
+            outline: none;
+            cursor: pointer;
+        }
+        i.mdi {
+            pointer-events: none;
+            font-size: 20px;
+            position: absolute;
+            right: 0px;
+            top: 7px;
         }
     }
 }
@@ -151,6 +277,7 @@ $grey-line: #DFDFDF;
     grid-template-columns: repeat(3, 1fr);
     gap: 0 30px;
     &__item {
+        overflow: hidden;
         text-decoration: none;
         color: #000;
         border-radius: 12px;
@@ -188,11 +315,23 @@ $grey-line: #DFDFDF;
     }
     &__image {
         position: absolute;
-        right: 30px;
-        bottom: 50px;
+        &_1 {
+            width: 285px;
+            height: 212px;
+            right: 10px;
+            bottom: 30px;
+        }
+        &_2 {
+            width: 354px;
+            height: 238px;
+            right: -50px;
+            bottom: 20px;
+        }
         &_3 {
             width: 233px;
             height: 172px;
+            right: 20px;
+            bottom: 60px;
         }
     }
 
@@ -1454,3 +1593,7 @@ $grey-line: #DFDFDF;
         }
     }
 }
+
+@import '_responsive.scss';
+
+

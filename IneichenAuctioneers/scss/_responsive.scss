@@ -1,0 +1,406 @@
+@media screen and (max-width: 1366px) {
+    .container {
+        padding: 0 30px;
+    }
+    .main-banner {
+        &__info {
+            padding: 30px;
+        }
+    }
+    .header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .services-list {
+        &__image {
+            &_1 {
+                transform: scale(0.7);
+                transform-origin: right center;
+            }
+            &_2 {
+                transform: scale(0.7);
+                transform-origin: right center;
+            }
+            &_3 {
+                transform: scale(0.7);
+                transform-origin: right center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        padding-top: 80px;
+    }
+    .header {
+        height: 80px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        &__burger {
+            display: block;
+        }
+        &__nav {
+            display:none;
+        }
+        &__logo {
+            position:static;
+            transform: none;
+            margin: 0 auto 0 30px;
+            &_desctop {
+                display: none;
+            }
+            &_tablet {
+                height: 40px;
+                display: block;
+
+            }
+        }
+    }
+    .main-banner {
+        grid-template-columns: 65% 35%;
+        height: calc(100vh - 80px);
+    }
+    .services-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 30px;
+        &__item:nth-child(1){
+            grid-column: 1 / span 2;
+        }
+    }
+
+    .auctions-list {
+        gap: 50px 30px;
+    }
+
+    .world-records {
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px 10%;
+        }
+    }
+
+    .our-team {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .footer {
+        &__top-line {
+            display: block;
+        }
+        &__contacts {
+            display: none;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        &__account {
+            position: relative;
+            padding: 0 20px;
+            min-width: 45px;
+            .mdi-account-outline {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                position: absolute;
+                display: inline;
+                font-size: 24px;
+            }
+            span {   
+                display: none;
+            }
+        }
+    }
+    .title {
+        font-size: 24px;
+        margin: 60px 0 40px;
+        &_big {
+            font-size: 32px;
+        }
+        &_small {
+            font-size: 20px;
+            margin: 0 0 30px 0;
+        }
+    }
+    .main-banner {
+        display: block;
+        position: relative;
+        &__info {
+            text-align: center;
+            align-items: center;
+            position: relative;
+            background: rgba(darken($blue-bg,15), 0.9);
+            z-index: 1;
+        }
+        &__image {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        gap: 30px 0px;
+        &__item:nth-child(1){
+            grid-column: 1 / span 1;
+        }
+    }
+
+    .auctions-list {
+        grid-template-columns: 1fr;
+    }
+    .auction-item {
+        &__image {
+            height: 20vh;
+        }
+    }
+
+    .world-records {
+        padding: 30px 0;
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 10%;
+        }
+    }
+    .our-team {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .title {
+        font-size: 24px;
+        margin: 45px 0 30px;
+        &_big {
+            font-size: 24px;
+        }
+        &_small {
+            font-size: 20px;
+            margin: 0 0 30px 0;
+        }
+    }
+    .header {
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 70px;
+        &__account {
+            border: none;
+        }
+        &__logo {
+            &_tablet {
+                display: none;
+            }
+            &_mobile {
+                display: block;
+            }
+        }
+        &__search-form {
+            input {
+                font-size: 15px;
+            }
+        }
+        &__button {
+            margin-right: 0;
+        }
+    }
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .content {
+        padding-top: 70px;
+    }
+    .main-banner {
+        height: calc(100vh - 70px);
+        .auction-date-location {
+            display: none;
+        }
+        &__title {
+            height: auto;
+            padding: 5px 15px;
+        }
+        &__auction {
+            margin: 50px 0;
+            font-size: 32px;
+        }
+    }
+    .mobile-menu {
+        &__aside {
+            max-width: 100%;
+        }
+        &__head {
+            height: 70px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &__logo {
+            &_tablet {
+                display: none
+            }
+            &_mobile {
+                margin-left: auto;
+                display: block;
+            }
+        }
+    }
+    .services-list {
+        gap: 15px 0px;
+        &__item {
+            height: auto;
+            padding: 20px;
+            h3 {
+                text-align: center;
+                font-size: 18px;
+                br {
+                    display: none;
+                }
+            }
+            span {
+                display: none;
+            }
+        }
+        &__image {
+            margin: 30px auto 0;
+            position: static;
+            width: 60%;
+
+                &_1 {
+                    transform: scale(1);
+                    transform-origin: right center;
+                }
+                &_2 {
+                    transform: scale(1);
+                    transform-origin: right center;
+                }
+                &_3 {
+                    transform: scale(1);
+                    transform-origin: right center;
+                }
+        }
+        
+    }
+    .auction-item {
+        border: 1px $grey-line solid;
+        border-radius: 12px;
+        padding-top: 50px;
+        &__image {
+            border-radius: 0px;
+            height: 200px;
+            margin: 0;
+        }
+        &__title {
+            margin: 0px;
+            padding: 30px 20px;
+            position: static;
+            border-bottom: 1px $grey-line solid;
+        }
+        &__name {
+            padding: 0px;
+            font-size: 18px;
+        }
+        &__lots {
+            font-size: 13px;
+        }
+        &__date {
+            font-size: 13px;
+            height: 50px;
+            align-items: center;
+            padding: 0 15px;
+            width: 100%;
+            background: none;
+            color: black;
+            i.mdi {
+                color: rgba($grey-text, .5);
+            }
+        }
+        &__btns {
+            padding: 0 20px 20px;
+        }
+        .auction-date-location {
+            padding: 30px 20px;
+            margin: 0px;
+        }
+    }
+    .auction-date-location {
+        margin-bottom: 30px;
+        &__item {
+            display: block;
+            line-height: 20px;
+            padding-left: 30px;
+            position: relative;
+            i.mdi {
+                color: rgba($grey-text, .5);
+                left: 0px;
+                top: 1px;
+                position: absolute;
+                font-size: 18px;
+                margin-right: 5px;
+            }
+            span {
+                display: block;
+                font-size: 13px;
+            }
+            span + span:before {
+                display: none;
+            }
+            & + & {
+                margin-top: 15px;
+            }
+        }
+    }
+    .our-team {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        &__body {
+            margin-bottom: 15px;
+        }
+    }
+    .another-questions {
+        padding: 40px 0;
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    .footer {
+        padding: 40px 0;
+        &__nav {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px 30px;
+        }
+        &__nav-title {
+            margin-bottom: 15px;
+        }
+        &__bottom-line {
+            margin-top: 40px;
+        }
+        &__logo {
+            width: 150px;
+        }
+    }
+
+
+    /* ----------------------------------- ui ----------------------------------- */
+    .c-dropdown {
+        &__list {
+            &_right {
+                right: 0px;
+                width: 320px;
+            }
+        }
+    }
+}
+
