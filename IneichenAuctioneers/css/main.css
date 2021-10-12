@@ -572,6 +572,8 @@ input, textarea, select {
   top: 0px;
   border-radius: 0px;
   max-width: 100%;
+  padding: 0px;
+  overflow: auto;
 }
 
 .sign-modal a.close-modal {
@@ -1462,6 +1464,9 @@ input, textarea, select {
 }
 
 .start-timer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -1504,6 +1509,7 @@ input, textarea, select {
 }
 
 .lot-item__image img {
+  width: 100%;
   max-width: 100%;
   max-height: 100%;
   -o-object-fit: cover;
@@ -2823,6 +2829,7 @@ input, textarea, select {
     height: 40px;
     display: block;
   }
+  /* ---------------------------------- index --------------------------------- */
   .main-banner {
     -ms-grid-columns: 65% 35%;
         grid-template-columns: 65% 35%;
@@ -2851,6 +2858,12 @@ input, textarea, select {
         grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
+  /* --------------------------------- auction -------------------------------- */
+  .lots-grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  /* --------------------------------- footer --------------------------------- */
   .footer__top-line {
     display: block;
   }
@@ -2888,6 +2901,7 @@ input, textarea, select {
     font-size: 20px;
     margin: 0 0 30px 0;
   }
+  /* ---------------------------------- index --------------------------------- */
   .main-banner {
     display: block;
     position: relative;
@@ -2938,12 +2952,51 @@ input, textarea, select {
         grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  /* --------------------------------- auction -------------------------------- */
+  .lots-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .auction-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .auction-detail .auction-date-location {
+    margin-bottom: 30px;
+  }
+  .auction-detail__teaser {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 0 -30px 30px;
+    max-width: none;
+    border-radius: 0px;
+    height: 50vh;
+  }
+  .auction-detail__title {
+    margin: 0 0 30px 0;
+  }
+  .auction-detail__info {
+    display: block;
+  }
+  .auction-detail__start {
+    margin-bottom: 30px;
+  }
+  /* --------------------------------- footer --------------------------------- */
   .footer {
     margin-top: 0px;
   }
 }
 
 @media screen and (max-width: 520px) {
+  .mob-hidden {
+    display: none;
+  }
   .title {
     font-size: 24px;
     margin: 45px 0 30px;
@@ -3136,6 +3189,35 @@ input, textarea, select {
   .another-questions h2 {
     font-size: 25px;
   }
+  /* --------------------------------- auction -------------------------------- */
+  .lots-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .auction-detail__teaser {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .auction-detail__title {
+    margin: 0 0 30px 0;
+  }
+  .auction-detail__title .c-button {
+    display: none;
+  }
+  .auction-detail__start {
+    border-top: 1px #DFDFDF solid;
+    padding-top: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .auction-detail__start > span {
+    margin-right: auto;
+    font-size: 13px;
+    max-width: 100px;
+    line-height: 20px;
+  }
+  /* --------------------------------- footer --------------------------------- */
   .footer {
     padding: 40px 0;
   }
@@ -3155,10 +3237,50 @@ input, textarea, select {
   .footer__logo {
     width: 150px;
   }
+  /* ---------------------------------- sign ---------------------------------- */
+  .sign-back {
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  .sign-form {
+    margin: 0;
+    padding: 0 30px 30px 30px;
+  }
+  .sign-form__title {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+  }
+  .sign-form__btns {
+    margin-bottom: 30px;
+  }
+  .sign-form__sub-link {
+    text-align: center;
+  }
+  .sign-form__note {
+    margin-bottom: 30px;
+  }
+  .sign-form__note_small {
+    margin-top: 0;
+  }
+  .sign-form__fields {
+    margin-bottom: 40px;
+  }
   /* ----------------------------------- ui ----------------------------------- */
   .c-dropdown__list_right {
     right: 0px;
     width: 320px;
+  }
+  .c-button_mob-mini {
+    border-radius: 50px;
+  }
+  .c-button_mob-mini i.mdi {
+    margin: 0 !important;
+  }
+  .c-button_mob-mini.c-button_medium {
+    border-color: transparent;
+    padding: 0px;
+    min-width: 50px;
   }
 }
 /*# sourceMappingURL=main.css.map */
