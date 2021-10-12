@@ -114,7 +114,7 @@
                     <a href="" class="c-button c-button_grey c-button_outline c-button_full c-button_medium c-button_icon-left">
                         <i class="mdi mdi-book-open-page-variant-outline"></i>Read about this watches in our Journal
                     </a>
-                    <a href="" class="c-button c-button_grey c-button_outline c-button_full c-button_medium c-button_icon-left">
+                    <a href="" id="addToFav" class="c-button c-button_grey c-button_outline c-button_full c-button_medium c-button_icon-left">
                         <i class="mdi mdi-plus"></i>Add to favorites
                     </a>
                 </div>
@@ -162,6 +162,17 @@
                 offset_top: 100
             });
         }
+        $('#addToFav').click(function(){
+            
+            if ($(this).hasClass('c-button_grey')) {
+                $(this).html('<i class="mdi mdi-heart-outline"></i>In favorites')
+            } else if ($(this).hasClass('c-button_pink')) {
+                $(this).html('<i class="mdi mdi-plus"></i>Add to favorites')
+                
+            }
+            $(this).toggleClass('c-button_grey c-button_pink c-button_filled');
+            return false 
+        })
         
     </script>
 </body>

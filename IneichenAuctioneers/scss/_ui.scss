@@ -82,6 +82,22 @@
             }
         }
     }
+    &_pink {
+        color: $pink-text;
+        border: 2px $pink-text solid;
+        &:hover {
+            background: $pink-text;
+            color: #fff;
+        }
+        &#{$root}_filled {
+            color: #fff;
+            background: $pink-text;
+            &:hover {
+                background: darken($pink-text,5);
+                border-color: darken($pink-text,5);
+            }
+        }
+    }
     &_medium {
         height: 50px;
         border-radius: 12px;
