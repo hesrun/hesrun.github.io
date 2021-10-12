@@ -87,6 +87,12 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    /* --------------------------------- product -------------------------------- */
+    .product {
+        padding: 30px;
+        gap: 0 30px;
+    }
+
 
     /* --------------------------------- footer --------------------------------- */
 
@@ -205,6 +211,39 @@
         }
         &__start {
             margin-bottom: 30px;
+        }
+    }
+
+    .product {
+        display: block;
+        padding: 0px;
+        &__header {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            padding: 20px;
+        }
+        &__gallery-col {
+            position: relative;
+        }
+        &__gallery-swipe {
+            left: 50%;
+            bottom: 50px;
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            transform: translateX(-50%);
+        }
+        &__image-link {
+            img {
+                height: 70vh;
+                object-fit: cover;
+            }
+        }
+        &__info-col {
+            padding: 30px;
         }
     }
     /* --------------------------------- footer --------------------------------- */
@@ -440,6 +479,109 @@
         }
     }
 
+    /* --------------------------------- product -------------------------------- */
+    .product {
+        &__num {
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 12px;
+        }
+        &__gallery-swipe {
+            bottom: 30px;
+        }
+        &__nav-link {
+            width: 32px;
+            height: 32px;
+            line-height: 30px;
+            font-size: 18px;
+        }
+        &__close {
+            margin-left: 15px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            font-size: 24px;
+        }
+        &__info-col {
+            padding: 30px 20px 100px;
+        }
+        &__brand {
+            margin-bottom: 15px;
+        }
+        &__name {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        &__price {
+            border-top: 1px rgba($grey-line, .5) solid;
+            padding: 30px 20px;
+            margin: 0 -20px;
+            div + div {
+                margin-top: 15px;
+            }
+            span {
+                font-size: 13px;
+                font-weight: 500;
+            }
+            strong {
+                font-size: 14px;
+            }
+        }
+        &__bids {
+            border-color: rgba($grey-line, .5);
+            grid-template-columns: 80px 1fr;
+            padding: 20px 20px;
+            margin: 0 -20px 0px;
+            strong {
+                line-height: 1.5;
+                font-size: 13px;
+                opacity: 0.5;
+            }
+        }
+        &__other-links {
+            display: flex;
+            justify-content: space-evenly;
+            border-bottom: 1px rgba($grey-line, 0.5) solid;
+            padding: 20px 20px;
+            margin: 0 -20px 30px;
+            a {
+                margin: 0px;
+                font-size: 13px;
+            }
+        }
+        &__prams-title {
+            margin: 30px 0 20px;
+        }
+
+        &__bids-btn {
+            background: #fff;
+            position: fixed;
+            width: 100%;
+            left: 0px;
+            bottom: 0px;
+            padding: 20px;
+
+        }
+        &__params {
+            display: block;
+            tr {
+                display: block;
+            }
+            td {
+                display: block;
+                padding: 0px;
+            }
+            td:first-child {
+                width: auto;
+                padding: 30px 0 15px;
+            }
+        }
+        &__btns {
+            grid-template-columns: 1fr;
+            gap: 15px 0;
+        }
+    }
 
     /* --------------------------------- footer --------------------------------- */
 
