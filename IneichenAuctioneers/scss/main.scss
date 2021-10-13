@@ -940,6 +940,42 @@ $grey-line: #DFDFDF;
     }
 }
 
+.bottom-navigation {
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 6px 5px rgba($blue-bg,0.05);
+    &__links {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+        text-decoration: none;
+        color: inherit;
+        text-align: center;
+        i.mdi {
+            font-size: 20px;
+        }
+        span {
+            margin-top: 5px;
+            font-size: 10px;
+            display: block;
+            color: $grey-text;
+        }
+        &_active {
+            color: $blue-text;
+            span {
+                color: $blue-text;
+            }
+        }
+    }
+}
+
 .lots-list {
     display: grid;
     row-gap: 30px;
@@ -1190,7 +1226,7 @@ $grey-line: #DFDFDF;
 
 /* --------------------------------- account -------------------------------- */
 .profile {
-    padding: 0 60px 60px;
+    padding: 60px 60px;
     &__title {
         font-size: 34px;
         color: $blue-text;

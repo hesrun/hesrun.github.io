@@ -231,11 +231,58 @@
                 </div>
             </div>
         </div>
+        <div class="bottom-navigation">
+            <div class="bottom-navigation__links ">
+                <a href="#" id="CurrentLot" class="bottom-navigation__link bottom-navigation__link_active">
+                    <i class="mdi mdi-watch"></i>
+                    <span>Current lot</span>
+                </a>
+                <a href="#" id="LiveStream" class="bottom-navigation__link">
+                    <i class="mdi mdi-video-outline red-text"></i>
+                    <span>Live Stream</span>
+                </a>
+                <a href="#" id="OtherLots" class="bottom-navigation__link">
+                    <i class="mdi mdi-watch"></i>
+                    <span>Other Lots</span>
+                </a>
+                <a href="#" class="bottom-navigation__link">
+                    <i class="mdi mdi-headset"></i>
+                    <span>Live support</span>
+                </a>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        $('#CurrentLot').click(function(){
+            $('.bottom-navigation__link').removeClass('bottom-navigation__link_active');
+            $(this).addClass('bottom-navigation__link_active');
+            $('.live-auction__video-col').hide();
+            $('.live-auction__current-lot-col').fadeIn(400);
+            $('.live-auction__current-lots-col').hide();
+            return false
+        })
+        $('#LiveStream').click(function(){
+            $('.bottom-navigation__link').removeClass('bottom-navigation__link_active');
+            $(this).addClass('bottom-navigation__link_active');
+            $('.live-auction__video-col').fadeIn(400);
+            $('.live-auction__current-lot-col').hide();
+            $('.live-auction__current-lots-col').hide();
+            return false
+        })
+        $('#OtherLots').click(function(){
+            $('.bottom-navigation__link').removeClass('bottom-navigation__link_active');
+            $(this).addClass('bottom-navigation__link_active');
+            $('.live-auction__video-col').hide();
+            $('.live-auction__current-lot-col').hide();
+            $('.live-auction__current-lots-col').fadeIn(400);
+            return false
+        })
+    </script>
 </body>
 </html>

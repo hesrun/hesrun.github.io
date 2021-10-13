@@ -11,24 +11,111 @@
 </head>
 <body>
     <header class="header">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
         <div class="header__nav">
             <a href="" class="header__nav-link">Auctions</a>
             <a href="" class="header__nav-link">Services</a>
             <a href="" class="header__nav-link">Contacts</a>
         </div>
         <a href="" class="header__logo">
-            <img src="svg/head-logo.svg" alt="">
+            <img class="header__logo_desctop" src="svg/head-logo.svg" alt="">
+            <img class="header__logo_tablet" src="svg/footer-logo.svg" alt="">
+            <img class="header__logo_mobile" src="svg/icon-logo.svg" alt="">
         </a>
         <div class="header__buttons">
-            <a href="" class="header__button">
+            <a href="" id="SearchOpen" class="header__button">
                 <i class="mdi mdi-magnify"></i>
+               
             </a>
             <a href="" class="header__button">
                 <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
             </a>
-            <a href="#" class="c-dropdown header__account">Login</a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button header__account">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__head">
+                <a href="" class="mobile-menu__burger burger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <img class="mobile-menu__logo_tablet" src="svg/footer-logo.svg" alt="">
+                <img class="mobile-menu__logo_mobile" src="svg/icon-logo.svg" alt="">
+            </div>
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">Germany</option>
+                        <option value="">English</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
     <main class="content">
         <div class="profile">
             <h1 class="profile__title">Good day, Mr Zolotov ;)</h1>
@@ -381,27 +468,27 @@
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
-        $('#AddCard').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
-        $('#EditCard').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
-        $('#ChangePass').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
+        // $('#AddCard').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+        // $('#EditCard').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+        // $('#ChangePass').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
 
         
 
