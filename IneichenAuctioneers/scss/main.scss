@@ -26,6 +26,7 @@ $grey-line: #DFDFDF;
 @import '_ui.scss';
 /* --------------------------------- header --------------------------------- */
 .header {
+    $root: &;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +37,7 @@ $grey-line: #DFDFDF;
     background: #fff;
     padding: 30px 60px;
     z-index: 100;
-    transition: padding 0.5s, box-shadow 1s;
+    transition: padding 0.3s, box-shadow 1s;
     &_mini {
         padding: 15px 30px;
         box-shadow: 0 0 10px 6px rgba($blue-bg,0.2);
@@ -46,6 +47,12 @@ $grey-line: #DFDFDF;
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
+        img {
+            height: 50px;
+        }
+        &_white {
+            display: none;
+        }
     }
     &__nav {
         display: flex;
@@ -195,6 +202,43 @@ $grey-line: #DFDFDF;
     }
     &__burger {
         display: none;
+    }
+    &_blue {
+        background: $blue-bg;
+        #{$root}__logo {
+            &_blue {
+                display: none;
+            }
+            &_white {
+                display: block;
+            }
+        }
+        #{$root}__nav-link {
+            color: #fff;
+            &:hover {
+                color: $brown-text;
+            }
+        }
+        #{$root}__currency {
+            color: #fff;
+        }
+        #{$root}__button {
+            color: #fff;
+            &:hover {
+                background: $brown-bg;
+            }
+        
+        }
+        .account-drop {
+            background: $brown-bg;
+            color: #fff;
+            border-color: $blue-bg;
+        }
+        .burger-btn {
+            span {
+                background: #fff;
+            }
+        }
     }
 }
 
@@ -1465,6 +1509,54 @@ $grey-line: #DFDFDF;
 }
 
 
+/* --------------------------------- contact -------------------------------- */
+.blue-banner {
+    text-align: center;
+    padding: 150px 30px;
+    background: $blue-bg;
+    margin-bottom: 100px;
+    color: #fff;
+    &__title {
+        font-size: 43px;
+        font-weight: 400;
+    }
+    .c-button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+.contact-text {
+    font-family: $america;
+    margin: 45px 0;
+    line-height: 1.5;
+    font-size: 20px;
+    strong {
+        font-size: 30px;
+    }
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px 80px;
+    &__form {
+        h2 {
+            margin-bottom: 45px;
+        }
+    }
+    &__image {
+        border: 1px $grey-line solid;
+        border-radius: 16px;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
 /* ---------------------------------- sign ---------------------------------- */
 .sign-wrapper {
     min-height: 100vh;
@@ -1681,6 +1773,7 @@ $grey-line: #DFDFDF;
 
 /* --------------------------------- footer --------------------------------- */
 .footer {
+    border-top: 1px $grey-line solid;
     margin: 130px 0 0 0;
     padding: 60px 0;
     &__top-line {
