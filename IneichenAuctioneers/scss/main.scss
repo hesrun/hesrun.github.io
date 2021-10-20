@@ -46,22 +46,69 @@ $grey-line: #DFDFDF;
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
-        &_mobile {
-            display: none;
-        }
-        &_tablet {
-            display: none;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+    &__nav-item {
+        margin-right: 10px;
+        position: relative;
+        padding: 15px 10px;
+        &:hover {
+            .header__sub-nav {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
         }
     }
     &__nav-link {
         color: $grey-text;
         text-decoration: none;
         font-weight: 600;
+        position: relative;
         &:hover {
             color: $blue-text;
         }
-        & + & {
-            margin-left: 40px;
+    }
+    &__sub-nav {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0.5);
+        transform-origin: 30px top;
+        position: absolute;
+        left: -30px;
+        top: 100%;
+        background: #fff;
+        border: 1px solid #F1F1F1;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+        border-radius: 15px;
+        width: 400px;
+        padding: 20px;
+        z-index: 1;
+        transition: all 0.3s;
+    }
+    &__sub-nav-link {
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s;
+        i.mdi {
+            opacity: 0;
+            color: $blue-text;
+            font-size: 24px;
+            transition: all 0.3s;
+        }
+        &:hover {
+            border-radius: 5px;
+            background: #F5F5F5;
+            i.mdi {
+                opacity: 1;
+            }
         }
     }
     &__buttons {
@@ -102,24 +149,20 @@ $grey-line: #DFDFDF;
             font-size: 10px;
         }
     }
-    &__account {
-        display: block;
-        height: 45px;
-        border: 1px $grey-line solid;
-        border-radius: 30px;
-        font-weight: 500;
-        padding: 0 25px;
-        line-height: 42px;
-        color: #000;
-        text-decoration: none;
-        transition: all 0.3s;
-        .mdi-account-outline {
-            display: none;
+    &__currency {
+        margin-right: 10px;
+        .c-dropdown__list {
+            left: -40px;
+            width: 140px;
         }
-        &:hover {
-            background: #000;
-            border-color: #000;
-            color: #fff;
+    }
+    &__currency-btn {
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        strong {
+            margin: 0 5px;
         }
     }
     &__search {
@@ -155,14 +198,35 @@ $grey-line: #DFDFDF;
     }
 }
 
+.account-drop {
+    display: block;
+    height: 45px;
+    border: 1px $grey-line solid;
+    border-radius: 30px;
+    font-weight: 500;
+    padding: 0 25px;
+    line-height: 42px;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s;
+    .mdi-account-outline {
+        display: none;
+    }
+    &:hover {
+        background: #000;
+        border-color: #000;
+        color: #fff;
+    }
+}
+
 /* ------------------------------- mobile-menu ------------------------------ */
 .mobile-menu {
     display: none;
     position: fixed;
     left: 0px;
-    top: 0px;
+    top: 80px;
     width: 100%;
-    height: 100%;
+    bottom: 0px;
     z-index: 100;
     background: rgba(#000,0.5);
     &__aside {
@@ -171,30 +235,23 @@ $grey-line: #DFDFDF;
         width: 100%;
         max-width: 400px;
         display: grid;
-        grid-template-rows: auto 1fr auto;
-    }
-    &__head {
-        height: 80px;
-        padding: 0 30px;
-        display: flex;
-        align-items: center;
+        grid-template-rows: 1fr auto;
     }
     &__body {
+        flex: 1 1 auto;
         padding: 30px;
     }
     &__footer {
+        flex: 0 0 auto;
         padding: 30px;
     }
     &__burger {
         margin-right: 30px;
     }
-    &__logo {
-        &_tablet {
-            height: 40px;
-        }
-        &_mobile {
-            display: none
-        }
+    &__nav {
+        border-bottom: 1px $grey-line solid;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
     }
     &__link {
         display: flex;
@@ -224,19 +281,19 @@ $grey-line: #DFDFDF;
         select {
             font-weight: 500;
             height: 30px;
-            font-size: 15px;
+            font-size: 18px;
             appearance: none;
             border: none;
-            padding: 0 20px 0 0;
+            padding: 0 25px 0 0;
             outline: none;
             cursor: pointer;
         }
         i.mdi {
             pointer-events: none;
-            font-size: 20px;
+            font-size: 22px;
             position: absolute;
             right: 0px;
-            top: 7px;
+            top: 5px;
         }
     }
 }
@@ -418,11 +475,12 @@ $grey-line: #DFDFDF;
         opacity: 0;
         transition: all 0.3s;
         p {
-            font-size: 16px;
+            font-size: 12px;
             line-height: 1.5;
         }
     }
     &__video {
+        font-size: 12px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1472,9 +1530,9 @@ $grey-line: #DFDFDF;
         gap: 0 15px;
     }
     &__phone {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 0 15px;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // gap: 0 15px;
     }
 }
 
@@ -1584,7 +1642,34 @@ $grey-line: #DFDFDF;
     color: $grey-text;
 }
 
-
+.bids-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    th {
+        background: rgba($blue-bg, 0.05);
+        font-size: 13px;
+        padding: 10px;
+        border-top: 1px rgba($grey-line, 0.5) solid;
+        border-bottom: 1px rgba($grey-line, 0.5) solid;
+        border-left: 1px rgba($grey-line, 0.5) solid;
+        &:last-child {
+            border-right: 1px rgba($grey-line, 0.5) solid;
+        }
+    }
+    tr:nth-child(even) {
+        background: rgba($grey-text, 0.05);
+    }
+    td {
+        font-size: 12px;
+        padding: 15px 10px;
+        border-bottom: 1px rgba($grey-line, 0.5) solid;
+        border-left: 1px rgba($grey-line, 0.5) solid;
+        &:last-child {
+            border-right: 1px rgba($grey-line, 0.5) solid;
+        }
+    }
+}
 
 /* --------------------------------- footer --------------------------------- */
 .footer {
@@ -1634,9 +1719,9 @@ $grey-line: #DFDFDF;
         
     }
     &__logo {
-        width: 200px;
+        height: 50px;
         img {
-            width: 100%;
+            height: 100%;
         }
     }
     &__lang {

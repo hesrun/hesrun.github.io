@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -67,17 +68,8 @@
                     </div>
                 </div>
                 <div class="sign-form__phone">
-                    <div class="c-select">
-                        <select name="" id="">
-                            <option value="">+7</option>
-                            <option value="">+1</option>
-                            <option value="">+420</option>
-                            <option value="">+421</option>
-                        </select>
-                        <label class="c-select__label">Country code</label>
-                    </div>
-                    <div class="c-field">
-                        <input type="text" class="c-field__input">
+                    <div class="c-field c-field_code-drop">
+                        <input id="phone" type="tel" class="c-field__input">
                         <label class="c-field__label">Phone number</label>
                     </div>
                 </div>
@@ -93,7 +85,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            // any initialisation options go here
+        });
+    </script>
 </body>
 </html>

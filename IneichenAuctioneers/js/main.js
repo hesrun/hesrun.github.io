@@ -28,6 +28,8 @@ $(document).ready(function() {
     });
 
     $('.burger-btn').click(function () {
+        $('body').toggleClass('noscroll');
+        $(this).toggleClass('burger-btn_active');
         $('.mobile-menu').fadeToggle().toggleClass('mobile-menu_show');
         return false;
     })
@@ -65,7 +67,7 @@ $(document).ready(function() {
         })
         $('.c-field__input').focus(function() {
             checkInput();
-            $(this).parent().addClass('active');
+            $(this).parents('.c-field').addClass('active');
         })       
     });
 
