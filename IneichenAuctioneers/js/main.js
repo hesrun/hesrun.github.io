@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 
     $('.burger-btn').click(function () {
-        $('body').toggleClass('noscroll');
+        $('body, html').toggleClass('noscroll');
         $(this).toggleClass('burger-btn_active');
         $('.mobile-menu').fadeToggle().toggleClass('mobile-menu_show');
         return false;
