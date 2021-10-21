@@ -160,6 +160,22 @@
         &__item:nth-child(1){
             grid-column: 1 / span 1;
         }
+        &__image {
+            &_1 {
+                right: 50px;
+                transform: scale(1);
+                transform-origin: right center;
+            }
+            &_2 {
+                transform: scale(1);
+                transform-origin: right center;
+            }
+            &_3 {
+                right: 50px;
+                transform: scale(1);
+                transform-origin: right center;
+            }
+        }
     }
 
     .auctions-list {
@@ -451,16 +467,47 @@
     }
     .main-banner {
         height: calc(100vh - 70px);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
         .auction-date-location {
-            display: none;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            span {
+                display: none;
+            }
+            i.mdi {
+                display: none;
+            }
+        }
+        &__info {
+            padding: 20px;
+            order: 1;
+            background: $blue-bg;
+        }
+        &__image {
+            position: static;
+            order: 0;
         }
         &__title {
+            font-size: 13px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
             height: auto;
-            padding: 5px 15px;
+            padding: 0px;
+            line-height: 32px;
+            border-radius: 8px;
+            width: 40%;
         }
         &__auction {
+            text-align: left;
             margin: 50px 0;
-            font-size: 32px;
+            font-size: 28px;
+        }
+        .c-button {
+            width: 100%;
         }
     }
     .mobile-menu {
@@ -471,11 +518,17 @@
     .services-list {
         gap: 15px 0px;
         &__item {
-            height: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            height: 150px;
             padding: 20px;
+            overflow: hidden;
             h3 {
-                text-align: center;
-                font-size: 18px;
+                text-align: left;
+                max-width: 120px;
+                flex: 0 0 auto;
+                font-size: 16px;
                 br {
                     display: none;
                 }
@@ -485,22 +538,22 @@
             }
         }
         &__image {
-            margin: 30px auto 0;
+            padding-left: 50px;
+            margin: 0;
             position: static;
-            width: 60%;
-
-                &_1 {
-                    transform: scale(1);
-                    transform-origin: right center;
-                }
-                &_2 {
-                    transform: scale(1);
-                    transform-origin: right center;
-                }
-                &_3 {
-                    transform: scale(1);
-                    transform-origin: right center;
-                }
+            flex: 1 1 auto;
+            &_1 {
+                transform: scale(1);
+                transform-origin: right center;
+            }
+            &_2 {
+                transform: scale(1)  translateX(40px);
+                transform-origin: right center;
+            }
+            &_3 {
+                transform: scale(1);
+                transform-origin: right center;
+            }
         }
         
     }
