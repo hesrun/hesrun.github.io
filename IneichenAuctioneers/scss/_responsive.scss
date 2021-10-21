@@ -124,11 +124,8 @@
 
 @media screen and (max-width: 768px) {
     .title {
-        font-size: 24px;
-        margin: 60px 0 40px;
-        &_big {
-            font-size: 32px;
-        }
+        font-size: 28px;
+        margin: 80px 0 40px;
         &_small {
             font-size: 20px;
             margin: 0 0 30px 0;
@@ -138,6 +135,7 @@
     .main-banner {
         display: block;
         position: relative;
+        margin-bottom: 80px;
         &__info {
             text-align: center;
             align-items: center;
@@ -181,6 +179,7 @@
     .auctions-list {
         grid-template-columns: 1fr;
     }
+
     .auction-item {
         &__image {
             height: 20vh;
@@ -189,9 +188,13 @@
 
     .world-records {
         padding: 30px 0;
+        margin-bottom: 80px;
         &__list {
             grid-template-columns: repeat(2, 1fr);
             gap: 60px 10%;
+        }
+        &__item:last-child {
+            grid-column: 1 / 2 span;
         }
     }
     .our-team {
@@ -417,14 +420,15 @@
         display: none;
     }
     .title {
-        font-size: 24px;
-        margin: 45px 0 30px;
-        &_big {
-            font-size: 24px;
-        }
+        text-align: center;
+        font-size: 22px;
+        margin: 40px 0 20px;
         &_small {
             font-size: 20px;
             margin: 0 0 30px 0;
+        }
+        &_with-buttons {
+            text-align: left;
         }
     }
     .header {
@@ -470,6 +474,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
+        margin-bottom: 40px;
         .auction-date-location {
             position: absolute;
             right: 20px;
@@ -649,6 +654,9 @@
                 height: 35px;
             }
         }
+    }
+    .world-records {
+        margin-bottom: 40px;
     }
     .another-questions {
         padding: 40px 0;
@@ -987,6 +995,13 @@
         &__logo {
             height: 40px;
         }
+    }
+
+
+    /* -------------------------------- page-cap -------------------------------- */
+
+    .page-cap {
+        text-align: center;
     }
 
 

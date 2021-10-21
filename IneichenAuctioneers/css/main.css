@@ -80,18 +80,22 @@ input, textarea, select {
 
 .title {
   font-family: "GT America Extended", sans-serif;
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 500;
-  margin: 40px 0 50px;
+  margin: 120px 0 50px;
 }
 
-.title_big {
-  font-size: 34px;
+.title:first-of-type {
+  margin-top: 40px;
 }
 
 .title_small {
   font-size: 20px;
   margin: 0 0 30px 0;
+}
+
+.title_small:first-of-type {
+  margin-top: 0px;
 }
 
 .title_with-buttons {
@@ -757,6 +761,29 @@ input, textarea, select {
   color: #1C2473;
 }
 
+.modal-video {
+  padding: 3px;
+  max-width: 900px;
+  width: 100%;
+}
+
+.modal-video__wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.modal-video iframe {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+
 .notice-list {
   position: fixed;
   top: 0px;
@@ -1339,6 +1366,7 @@ input, textarea, select {
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   height: calc(100vh - 105px);
+  margin-bottom: 120px;
 }
 
 .main-banner__info {
@@ -1477,6 +1505,7 @@ input, textarea, select {
 .world-records {
   background: #F5F5F5;
   padding: 80px 0;
+  margin-bottom: 120px;
 }
 
 .world-records__list {
@@ -1697,6 +1726,10 @@ input, textarea, select {
 }
 
 /* ----------------------------- auction-detail ----------------------------- */
+.auction-detail__title {
+  margin-top: 30px;
+}
+
 .auction-detail__teaser {
   border-radius: 24px;
   margin-bottom: 50px;
@@ -2888,6 +2921,28 @@ input, textarea, select {
   color: #676767;
 }
 
+/* -------------------------------- page-cap -------------------------------- */
+.page-cap {
+  padding: 50px 0;
+}
+
+.page-cap__text {
+  font-size: 24px;
+  color: #1C2473;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.page-cap__link {
+  font-weight: 500;
+  color: #676767;
+  text-decoration: none;
+}
+
+.page-cap__link:hover {
+  color: #1C2473;
+}
+
 /* ---------------------------------- sign ---------------------------------- */
 .sign-wrapper {
   min-height: 100vh;
@@ -3380,11 +3435,8 @@ input, textarea, select {
 
 @media screen and (max-width: 768px) {
   .title {
-    font-size: 24px;
-    margin: 60px 0 40px;
-  }
-  .title_big {
-    font-size: 32px;
+    font-size: 28px;
+    margin: 80px 0 40px;
   }
   .title_small {
     font-size: 20px;
@@ -3394,6 +3446,7 @@ input, textarea, select {
   .main-banner {
     display: block;
     position: relative;
+    margin-bottom: 80px;
   }
   .main-banner__info {
     text-align: center;
@@ -3450,11 +3503,15 @@ input, textarea, select {
   }
   .world-records {
     padding: 30px 0;
+    margin-bottom: 80px;
   }
   .world-records__list {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     gap: 60px 10%;
+  }
+  .world-records__item:last-child {
+    grid-column: 1 / 2 span;
   }
   .our-team {
     -ms-grid-columns: (1fr)[2];
@@ -3687,15 +3744,16 @@ input, textarea, select {
     display: none;
   }
   .title {
-    font-size: 24px;
-    margin: 45px 0 30px;
-  }
-  .title_big {
-    font-size: 24px;
+    text-align: center;
+    font-size: 22px;
+    margin: 40px 0 20px;
   }
   .title_small {
     font-size: 20px;
     margin: 0 0 30px 0;
+  }
+  .title_with-buttons {
+    text-align: left;
   }
   .header {
     padding-left: 15px;
@@ -3747,6 +3805,7 @@ input, textarea, select {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    margin-bottom: 40px;
   }
   .main-banner .auction-date-location {
     position: absolute;
@@ -3945,6 +4004,9 @@ input, textarea, select {
     line-height: 35px;
     width: 35px;
     height: 35px;
+  }
+  .world-records {
+    margin-bottom: 40px;
   }
   .another-questions {
     padding: 40px 0;
@@ -4282,6 +4344,10 @@ input, textarea, select {
   }
   .footer__logo {
     height: 40px;
+  }
+  /* -------------------------------- page-cap -------------------------------- */
+  .page-cap {
+    text-align: center;
   }
   /* ---------------------------------- sign ---------------------------------- */
   .sign-back {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -213,7 +214,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="title title_big">Ineichen auctioneers services</div>
+            <div class="title">Ineichen auctioneers services</div>
             <div class="services-list">
                 <a href="#" class="services-list__item" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <h3>Sell <br> your Watches</h3>
@@ -233,7 +234,7 @@
                     <div class="services-list__image services-list__image_3" id="my-div3"></div>
                 </a>
             </div>
-            <div class="title title_big">More upcoming auctions</div>
+            <div class="title">More upcoming auctions</div>
             <div class="auctions-list">
                 <div class="auction-item" data-aos-duration="1000" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <a href="#" class="auction-item__image">
@@ -468,9 +469,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="title title_big">Ineichen’s world records</div>
+            <div class="title">Ineichen’s world records</div>
         </div>
         <div class="world-records">
             <div class="container">
@@ -545,7 +544,7 @@
                             </div>
                         </div>
                         <br>
-                        <a href="https://www.youtube.com/watch?v=iHOEJ8OhexQ" target="_blank" class="c-button c-button_blue c-button_filled c-button_full c-button_icon-left">
+                        <a href="https://www.youtube.com/embed/iHOEJ8OhexQ" target="_blank" class="c-button c-button_blue c-button_filled c-button_full c-button_icon-left">
                             <i class="mdi mdi-24px mdi-play"></i>
                             PLAY VIDEO
                         </a>
@@ -554,7 +553,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="title title_big">Our team of experts</div>
+            <div class="title">Our team of experts</div>
             <div class="our-team">
                 <div class="our-team__item">
                     <div class="our-team__body">
@@ -563,7 +562,7 @@
                         </div>
                         <div class="our-team__descr">
                             <p>What motivates me about my job is the history behind watches, the complexity of the mechanisms, and the design incoporated within</p>
-                            <a href="https://www.youtube.com/watch?v=wuR1fp7mxuU" target="_blank" class="our-team__video">
+                            <a href="https://www.youtube.com/embed/wuR1fp7mxuU" target="_blank" class="our-team__video">
                                 Play Video <i class="mdi mdi-play"></i>
                             </a>
                         </div>
@@ -578,7 +577,7 @@
                         </div>
                         <div class="our-team__descr">
                             <p>What motivates me about my job is the history behind watches, the complexity of the mechanisms, and the design incoporated within</p>
-                            <a href="https://www.youtube.com/watch?v=t4zL-5fJGnc" target="_blank" class="our-team__video">
+                            <a href="https://www.youtube.com/embed/t4zL-5fJGnc" target="_blank" class="our-team__video">
                                 Play Video <i class="mdi mdi-play"></i>
                             </a>
                         </div>
@@ -593,7 +592,7 @@
                         </div>
                         <div class="our-team__descr">
                             <p>What motivates me about my job is the history behind watches, the complexity of the mechanisms, and the design incoporated within</p>
-                            <a href="https://www.youtube.com/watch?v=A8Ns3N-ot4Y" target="_blank" class="our-team__video">
+                            <a href="https://www.youtube.com/embed/A8Ns3N-ot4Y" target="_blank" class="our-team__video">
                                 Play Video <i class="mdi mdi-play"></i>
                             </a>
                         </div>
@@ -608,7 +607,7 @@
                         </div>
                         <div class="our-team__descr">
                             <p>What motivates me about my job is the history behind watches, the complexity of the mechanisms, and the design incoporated within</p>
-                            <a href="https://www.youtube.com/watch?v=XTia4e4GSGI" target="_blank" class="our-team__video">
+                            <a href="https://www.youtube.com/embed/XTia4e4GSGI" target="_blank" class="our-team__video">
                                 Play Video <i class="mdi mdi-play"></i>
                             </a>
                         </div>
@@ -623,7 +622,7 @@
                         </div>
                         <div class="our-team__descr">
                             <p>What motivates me about my job is the history behind watches, the complexity of the mechanisms, and the design incoporated within</p>
-                            <a href="https://www.youtube.com/watch?v=q7zGJU7nAYc" target="_blank" class="our-team__video">
+                            <a href="https://www.youtube.com/embed/q7zGJU7nAYc" target="_blank" class="our-team__video">
                                 Play Video <i class="mdi mdi-play"></i>
                             </a>
                         </div>
@@ -640,6 +639,7 @@
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__top-line">
@@ -689,10 +689,18 @@
             </div>
         </div>
     </footer>
+
+    <div id="VideoModal" class="modal modal-video">
+        <div class="modal-video__wrapper">
+            <iframe id="FrameVideo" width="100%" height="100%" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
@@ -712,7 +720,21 @@
                 duration: 200,
                 file: 'img/main/service-3.svg'
             });
+
+            $('.our-team__video').click(function(){
+                linkVideo = $(this).attr('href');
+                $('#FrameVideo').attr('src',linkVideo);
+                $('#VideoModal').modal({
+                    fadeDuration: 100,
+                    closeExisting: false,
+                    escapeClose: false
+                });
+                return false;
+            })
         });
+        
+
+        
         
     </script>
 </body>
