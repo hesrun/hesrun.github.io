@@ -755,12 +755,14 @@ $grey-line: #DFDFDF;
         transition: all 0.5s;
     }
     &__price {
-        margin: 15px 0 0 0;
-        padding: 0 15px;
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        margin: 10px 0 0 0;
+        font-size: 14px;
+        grid-template-columns: 1fr;
+        row-gap: 5px;
+    }
+    &__price-single {
+        font-weight: 500;
     }
     &__price-range {
         color: $grey-text;
@@ -1554,6 +1556,30 @@ $grey-line: #DFDFDF;
             width: 100%;
             object-fit: cover;
         }
+    }
+}
+
+/* -------------------------------- textpage -------------------------------- */
+.products-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    &__image {
+        display: block;
+        margin-bottom: 30px;
+        img {
+            vertical-align: middle;
+            border-radius: 15px;
+            width: 100%;
+        }
+    }
+    &__brand {
+        margin: 0 0 10px 0;
+        font-size: 17px;
+    }
+    &__name {
+        font-size: 15px;
+        color: $grey-text;
     }
 }
 
