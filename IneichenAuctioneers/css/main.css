@@ -123,7 +123,7 @@ input, textarea, select {
   margin: 60px 0 30px;
 }
 
-.article-text h1:first-of-type {
+.article-text h1:first-child {
   margin-top: 0px;
 }
 
@@ -134,7 +134,7 @@ input, textarea, select {
   margin: 50px 0 30px;
 }
 
-.article-text h2:first-of-type {
+.article-text h2:first-child {
   margin-top: 0px;
 }
 
@@ -145,7 +145,7 @@ input, textarea, select {
   margin: 40px 0 20px;
 }
 
-.article-text h3:first-of-type {
+.article-text h3:first-child {
   margin-top: 0px;
 }
 
@@ -156,7 +156,7 @@ input, textarea, select {
   margin: 30px 0 20px;
 }
 
-.article-text h4:first-of-type {
+.article-text h4:first-child {
   margin-top: 0px;
 }
 
@@ -167,7 +167,7 @@ input, textarea, select {
   margin: 30px 0 20px;
 }
 
-.article-text h5:first-of-type {
+.article-text h5:first-child {
   margin-top: 0px;
 }
 
@@ -517,6 +517,7 @@ input, textarea, select {
   display: inline-block;
   white-space: nowrap;
   position: relative;
+  z-index: 1;
 }
 
 .c-dropdown_full {
@@ -1317,7 +1318,7 @@ input, textarea, select {
   display: block;
   height: 45px;
   border: 1px #DFDFDF solid;
-  border-radius: 30px;
+  border-radius: 12px;
   font-weight: 500;
   padding: 0 25px;
   line-height: 42px;
@@ -1409,6 +1410,7 @@ input, textarea, select {
 }
 
 .mobile-menu__sub-nav {
+  padding-left: 20px;
   display: none;
   opacity: 0.6;
 }
@@ -3707,11 +3709,25 @@ input, textarea, select {
     margin-top: 30px;
   }
   /* --------------------------------- global --------------------------------- */
+  .article-text h1 {
+    font-size: 26px;
+    margin: 30px 0 15px;
+  }
   .article-text h2 {
-    font-weight: 500;
     font-size: 24px;
-    margin-top: 45px;
-    margin-bottom: 20px;
+    margin: 30px 0 15px;
+  }
+  .article-text h3 {
+    font-size: 22px;
+    margin: 30px 0 15px;
+  }
+  .article-text h4 {
+    font-size: 20px;
+    margin: 30px 0 15px;
+  }
+  .article-text h5 {
+    font-size: 18px;
+    margin: 30px 0 15px;
   }
   .article-text p {
     margin: 15px 0;
@@ -3795,6 +3811,7 @@ input, textarea, select {
   }
   .mobile-menu__footer .c-dropdown {
     width: 100%;
+    border-width: 2px;
   }
   .mobile-menu__footer .account-drop {
     width: 100%;
