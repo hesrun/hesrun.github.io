@@ -465,6 +465,11 @@ input, textarea, select {
   position: relative;
 }
 
+.c-dropdown_full {
+  display: block;
+  width: 100%;
+}
+
 .c-dropdown__list {
   display: none;
   top: calc(100% + 10px);
@@ -707,6 +712,24 @@ input, textarea, select {
   background: transparent;
 }
 
+.modal::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: #1c2473;
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background-color: #1c2473;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .sign-modal {
   position: fixed;
   width: 100%;
@@ -733,6 +756,17 @@ input, textarea, select {
 
 .modal-small_2x {
   max-width: 900px;
+}
+
+.modal-small_fs {
+  overflow: auto;
+  border-radius: 0px;
+  max-width: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .modal-small__title {
@@ -1478,34 +1512,27 @@ input, textarea, select {
 }
 
 .services-list__image {
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+  width: 60%;
   position: absolute;
-}
-
-.services-list__image_1 {
-  width: 285px;
-  height: 212px;
-  right: 10px;
-  bottom: 30px;
-}
-
-.services-list__image_2 {
-  width: 354px;
-  height: 238px;
-  right: -50px;
-  bottom: 20px;
-}
-
-.services-list__image_3 {
-  width: 233px;
-  height: 172px;
-  right: 20px;
-  bottom: 60px;
 }
 
 .world-records {
   background: #F5F5F5;
   padding: 80px 0;
   margin-bottom: 120px;
+}
+
+.world-records__item .c-button {
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.world-records__item .c-button i.mdi {
+  font-size: 16px;
 }
 
 .world-records__list {
@@ -1541,8 +1568,8 @@ input, textarea, select {
 .our-team {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   gap: 0 30px;
 }
 
@@ -1686,7 +1713,7 @@ input, textarea, select {
   font-size: 24px;
   font-weight: 500;
   margin: 0 0 18px 0;
-  padding-right: 210px;
+  padding-right: 150px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -2922,25 +2949,11 @@ input, textarea, select {
 }
 
 /* -------------------------------- page-cap -------------------------------- */
-.page-cap {
-  padding: 50px 0;
-}
-
 .page-cap__text {
-  font-size: 24px;
-  color: #1C2473;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   margin-bottom: 50px;
-}
-
-.page-cap__link {
-  font-weight: 500;
-  color: #676767;
-  text-decoration: none;
-}
-
-.page-cap__link:hover {
-  color: #1C2473;
 }
 
 /* ---------------------------------- sign ---------------------------------- */
@@ -3324,24 +3337,6 @@ input, textarea, select {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .services-list__image_1 {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
-  }
-  .services-list__image_2 {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
-  }
-  .services-list__image_3 {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
-  }
   .live-auction {
     -ms-grid-columns: 45% 30% 25%;
         grid-template-columns: 45% 30% 25%;
@@ -3474,25 +3469,9 @@ input, textarea, select {
     -ms-grid-column-span: 1;
     grid-column: 1 / span 1;
   }
-  .services-list__image_1 {
-    right: 50px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
-  }
-  .services-list__image_2 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
-  }
-  .services-list__image_3 {
-    right: 50px;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
+  .services-list__image {
+    width: 60%;
+    padding: 50px 0;
   }
   .auctions-list {
     -ms-grid-columns: 1fr;
@@ -3803,8 +3782,8 @@ input, textarea, select {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
     margin-bottom: 40px;
   }
   .main-banner .auction-date-location {
@@ -3819,7 +3798,10 @@ input, textarea, select {
     display: none;
   }
   .main-banner__info {
-    padding: 20px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding: 20px 20px 50px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -3844,7 +3826,7 @@ input, textarea, select {
   }
   .main-banner__auction {
     text-align: left;
-    margin: 50px 0;
+    margin: 50px 0 30px;
     font-size: 28px;
   }
   .main-banner .c-button {
@@ -3886,30 +3868,8 @@ input, textarea, select {
     display: none;
   }
   .services-list__image {
-    padding-left: 50px;
-    margin: 0;
-    position: static;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-  }
-  .services-list__image_1 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
-  }
-  .services-list__image_2 {
-    -webkit-transform: scale(1) translateX(40px);
-            transform: scale(1) translateX(40px);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
-  }
-  .services-list__image_3 {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-transform-origin: right center;
-            transform-origin: right center;
+    width: 50%;
+    padding: 30px 0;
   }
   .auction-item {
     border: 1px #DFDFDF solid;
