@@ -188,17 +188,16 @@
     </div>
     <main class="content">
         <div class="profile">
-            <h1 class="profile__title">Good day, Mr Zolotov ;)</h1>
+            <h1 class="title">Good day, Mr Zolotov ;)</h1>
             <div class="profile__wrapper">
                 <div class="tabs-list">
                     <a href="#profTab1" class="tabs-list__item tabs-list__item_active">Profile</a>
-                    <a href="#profTab2" class="tabs-list__item">My Bids</a>
+                    <a href="#profTab2" class="tabs-list__item">My Bids <span class="badge">3</span></a>
                     <a href="#profTab3" class="tabs-list__item">Payment</a>
                     <a href="#profTab4" class="tabs-list__item">Invoices</a>
                 </div>
                 <div class="tabs-blocks">
                     <div id="profTab1" class="tabs-blocks__item tabs-blocks__item_active">
-                        <div class="profile__title-small">General</div>
                         <div class="profile-general">
                             <div class="profile-general__row">
                                 <span>Full name</span>
@@ -249,19 +248,22 @@
                     <div id="profTab2" class="tabs-blocks__item">
                         <div class="bids-list">
                             <div class="bids-list__item">
-                                <div class="bids-list__lot-name">
+                                <a href="" class="bids-list__lot-name">
                                     <strong>Poitevin Enamel Verge Pocket Watch</strong>
                                     <span>Lot 001</span>
-                                </div>
-                                <div class="bids-list__auction-name">
+                                </a>
+                                <a href="" class="bids-list__auction-name">
                                     <span>Timepieces Auction No. 174</span>
-                                </div>
-                                <div class="bids-list__auction-date">
+                                </a>
+                                <a href="" class="bids-list__auction-date">
                                     <span>08 Aug 2021, 14:00</span>
-                                </div>
-                                <div class="bids-list__auction-price">
+                                </a>
+                                <a href="" class="bids-list__auction-price">
                                     <strong class="green-text">2,000 CHF </strong>
                                     <span class="green-text">Win</span>
+                                </a>
+                                <div class="bids-list__cancel">
+                                    <a href="#" class="c-button c-button_grey c-button_medium c-button_full">Cancle</a>
                                 </div>
                             </div>
                             <div class="bids-list__item">
@@ -279,6 +281,9 @@
                                     <strong class="red-text">2,000 CHF </strong>
                                     <span class="red-text">Loss</span>
                                 </div>
+                                <div class="bids-list__cancel">
+                                    <a href="#" class="c-button c-button_grey c-button_medium c-button_full">Cancle</a>
+                                </div>
                             </div>
                             <div class="bids-list__item">
                                 <div class="bids-list__lot-name">
@@ -294,6 +299,9 @@
                                 <div class="bids-list__auction-price">
                                     <strong class="blue-text">2,000 CHF </strong>
                                     <span class="blue-text">Bid</span>
+                                </div>
+                                <div class="bids-list__cancel">
+                                    <a href="#" class="c-button c-button_grey c-button_medium c-button_full">Cancle</a>
                                 </div>
                             </div>
                             <div class="bids-list__item">
@@ -311,6 +319,9 @@
                                     <strong class="green-text">2,000 CHF </strong>
                                     <span class="green-text">Win</span>
                                 </div>
+                                <div class="bids-list__cancel">
+                                    <a href="#" class="c-button c-button_grey c-button_medium c-button_full">Cancle</a>
+                                </div>
                             </div>
                             <div class="bids-list__item">
                                 <div class="bids-list__lot-name">
@@ -327,6 +338,9 @@
                                     <strong class="red-text">2,000 CHF </strong>
                                     <span class="red-text">Loss</span>
                                 </div>
+                                <div class="bids-list__cancel">
+                                    <a href="#" class="c-button c-button_grey c-button_medium c-button_full">Cancle</a>
+                                </div>
                             </div>
                             <div class="bids-list__item">
                                 <div class="bids-list__lot-name">
@@ -342,6 +356,9 @@
                                 <div class="bids-list__auction-price">
                                     <strong class="blue-text">2,000 CHF </strong>
                                     <span class="blue-text">Bid</span>
+                                </div>
+                                <div class="bids-list__cancel">
+                                    <a href="#" class="c-button c-button_grey c-button_medium c-button_full">Cancle</a>
                                 </div>
                             </div>
                         </div>
@@ -543,34 +560,34 @@
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
-        $('#AddCard').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
-        $('#EditCard').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
-        $('#ChangePass').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
-        $('#ModalVerification').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
+        // $('#AddCard').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+        // $('#EditCard').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+        // $('#ChangePass').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+        // $('#ModalVerification').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
 
         
 

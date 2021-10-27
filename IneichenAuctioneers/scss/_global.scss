@@ -38,6 +38,14 @@ a {
 input,textarea,select {
     font-family: $inter;
 }
+input:autofill,
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    filter:none;
+    box-shadow: 0 0 0 1000px white inset !important;
+}
 
 .green-text {
     color: $green-text !important;
@@ -53,12 +61,20 @@ input,textarea,select {
 }
 
 .title {
+    display: flex;
+    align-items: center;
     font-family: $america;
     font-size: 34px;
     font-weight: 500;
     margin: 80px 0 50px;
+    > img {
+        margin-left: auto;
+    }
     &:first-of-type {
         margin-top: 40px;
+    }
+    &__center {
+        justify-content: center;
     }
     &_small {
         font-size: 20px;
@@ -79,6 +95,7 @@ input,textarea,select {
     max-width: 950px;
     margin: 0 auto;
     line-height: 1.5;
+    font-size: 15px;
     h1 {
         font-family: $america;
         font-weight: 500;
@@ -125,8 +142,7 @@ input,textarea,select {
         }
     }
     p {
-        font-size: 14px;
-        margin: 30px 0;
+        margin: 20px 0;
         &:first-of-type {
             margin-top: 0px;
         }

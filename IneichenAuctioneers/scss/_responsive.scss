@@ -159,6 +159,12 @@
             height: 20vh;
         }
     }
+    
+    .filtering-btns {
+        &__sorting {
+            display: none;
+        }
+    }
 
     .world-records {
         padding: 30px 0;
@@ -286,11 +292,6 @@
     .profile {
         padding-top: 30px;
         padding-bottom: 30px;
-        
-        &__title {
-            font-size: 24px;
-            margin-bottom: 40px;
-        }
         &__title-small {
             margin: 40px 0 30px;
             &:first-child {
@@ -301,6 +302,9 @@
             display: block;
         }
     }
+    .profile-general {
+        margin-top: 30px;
+    }
     .bids-list {
         margin-top: 20px;
         margin-left: -15px;
@@ -308,7 +312,10 @@
         &__item {
             grid-template-columns: 2fr 2fr 1.5fr 1fr;
             padding: 15px;
-            gap: 0 15px;
+            gap: 15px 15px;
+        }
+        &__cancel {
+            grid-column: 1 / 4 span;
         }
     }
     .invoice-list {
@@ -444,10 +451,14 @@
                 border-width: 2px;
             }
             .account-drop {
+                text-align: center;
                 width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
+                i.mdi {
+                    margin-left: auto;
+                }
             }
         }
     }
@@ -465,17 +476,15 @@
         grid-template-rows: 1fr auto;
         margin-bottom: 40px;
         .auction-date-location {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            span {
-                display: none;
-            }
             i.mdi {
+                color: #fff;
+            }
+            &__live {
                 display: none;
             }
         }
         &__info {
+            text-align: left;
             justify-content: start;
             padding: 20px 20px 50px;
             order: 1;
@@ -486,19 +495,19 @@
             order: 0;
         }
         &__title {
+            text-align: center;
+            width: 100%;
             font-size: 13px;
-            position: absolute;
             left: 20px;
             top: 20px;
             height: auto;
             padding: 0px;
             line-height: 32px;
             border-radius: 8px;
-            width: 40%;
         }
         &__auction {
             text-align: left;
-            margin: 50px 0 30px;
+            margin: 30px 0 30px;
             font-size: 28px;
         }
         .c-button {
@@ -580,6 +589,7 @@
             margin: 0px;
         }
     }
+    
     .auction-date-location {
         margin-bottom: 30px;
         &__item {
@@ -645,7 +655,14 @@
     .lots-grid {
         grid-template-columns: 1fr;
     }
+    .filtering-btns {
+        > strong {
+            font-size: 18px;
+        }
+        margin: 0 0 15px;
+    }
     .auction-detail {
+        margin-bottom: 30px;
         &__teaser {
             background-attachment: scroll;
             margin-left: -15px;
@@ -809,10 +826,6 @@
     /* --------------------------------- profile -------------------------------- */
     .profile {
         padding: 20px;
-        &__title {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
     }
     .profile-general {
         &__row {
@@ -830,9 +843,12 @@
     }
 
     .bids-list {
+        margin-left: -10px;
+        margin-right: -10px;
         &__item {
             grid-template-columns: 1fr;
             gap: 10px;
+            padding: 10px;
             strong + span {
                 margin-top: 0px;
             }
@@ -846,6 +862,9 @@
             br {
                 display: none;
             }
+        }
+        &__cancel {
+            grid-column: auto;
         }
     }
 
@@ -993,14 +1012,6 @@
     .sign-form {
         margin: 0;
         padding: 0 20px 30px 20px;
-        &__title {
-            font-size: 25px;
-            font-weight: 500;
-            margin: 0 0 30px 0;
-            &_small {
-                font-size: 18px;
-            }
-        }
         &__btns {
             margin-bottom: 30px;
         }
