@@ -555,6 +555,14 @@ input:-webkit-autofill:active {
   -ms-grid-columns: auto 100px 100px;
       grid-template-columns: auto 100px 100px;
   gap: 0 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle-field_auto {
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
 }
 
 .toggle-field__input {
@@ -3068,6 +3076,11 @@ input:-webkit-autofill:active {
   margin-top: 0px;
 }
 
+.sell-watch-form__right img {
+  width: 100%;
+  max-width: 100%;
+}
+
 .our-priorities {
   border-top: 1px rgba(103, 103, 103, 0.1) solid;
   padding: 100px 0;
@@ -3096,10 +3109,37 @@ input:-webkit-autofill:active {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   margin: 100px 0;
+  gap: 50px 30px;
+}
+
+.learn-more-box {
+  border: 2px #1C2473 solid;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.learn-more-box strong {
+  color: #1C2473;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 17px;
 }
 
 .our-feedbaks {
   padding: 100px 0;
+  margin: 100px 0;
   background: #1C2473;
   color: #fff;
 }
@@ -3241,7 +3281,7 @@ input:-webkit-autofill:active {
 }
 
 .sell-steps {
-  padding: 100px 0;
+  margin: 100px 0;
 }
 
 .sell-steps__list {
@@ -3384,6 +3424,48 @@ input:-webkit-autofill:active {
   max-width: 100%;
 }
 
+.collection-priorities {
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+  border-bottom: 1px rgba(103, 103, 103, 0.1) solid;
+}
+
+.collection-priorities__list {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 10%;
+}
+
+.collection-priorities__item {
+  display: -ms-grid;
+  display: grid;
+  gap: 0 30px;
+  -ms-grid-rows: 0.5fr 1fr;
+      grid-template-rows: 0.5fr 1fr;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.collection-priorities__image {
+  grid-row: 1 / 2 span;
+}
+
+.collection-priorities__title {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.collection-priorities__text {
+  line-height: 1.5;
+}
+
 /* --------------------------------- contact -------------------------------- */
 .blue-banner {
   text-align: center;
@@ -3398,6 +3480,13 @@ input:-webkit-autofill:active {
   margin: 60px 0;
   font-size: 43px;
   font-weight: 400;
+}
+
+.blue-banner__text {
+  font-size: 24px;
+  font-family: "GT America Extended", sans-serif;
+  margin-bottom: 60px;
+  line-height: 1.5;
 }
 
 .contact-text {
