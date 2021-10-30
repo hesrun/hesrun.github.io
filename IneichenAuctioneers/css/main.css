@@ -5131,9 +5131,20 @@ input:-webkit-autofill:active {
     min-width: 50px;
   }
   .toggle-field {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 15px 15px;
+  }
+  .toggle-field strong {
+    grid-column: 1 / 2 span;
+  }
+  .toggle-field_auto {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 15px 0;
+  }
+  .toggle-field_auto strong {
+    grid-column: auto;
   }
   /* ----------------------------------- ui ----------------------------------- */
   .tabs-list {

@@ -1223,11 +1223,20 @@
         }
     }
     .toggle-field {
-        grid-template-columns: 1fr;
-        gap: 15px 0;
-        &__label {
-
+        grid-template-columns: 1fr 1fr;
+        gap: 15px 15px;
+        strong {
+            grid-column: 1 / 2 span;
         }
+        &_auto {
+            grid-template-columns: 1fr;
+            gap: 15px 0;
+            strong {
+                grid-column: auto;
+            }
+        }
+
+        
     }
     /* ----------------------------------- ui ----------------------------------- */
     .tabs-list {
