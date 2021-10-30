@@ -1677,7 +1677,6 @@ input:-webkit-autofill:active {
 .world-records {
   background: #F5F5F5;
   padding: 80px 0;
-  margin-bottom: 120px;
 }
 
 .world-records__item .c-button {
@@ -3063,17 +3062,40 @@ input:-webkit-autofill:active {
 }
 
 /* --------------------------------- landing -------------------------------- */
+.land-section {
+  padding: 100px 0;
+  border-top: rgba(223, 223, 223, 0.1) solid;
+}
+
+.land-section:first-of-type {
+  padding-top: 0px;
+  border: none;
+}
+
+.land-section .title:first-child {
+  margin-top: 0px;
+}
+
+.land-section_blue {
+  background: #1C2473;
+  color: #fff;
+}
+
+.land-section_clear {
+  padding-bottom: 0px;
+  border-top: none;
+}
+
+.land-section_half {
+  padding: 50px 0;
+}
+
 .sell-watch-form {
-  padding: 0 0 100px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   gap: 0 10%;
-}
-
-.sell-watch-form .title {
-  margin-top: 0px;
 }
 
 .sell-watch-form__right img {
@@ -3082,8 +3104,6 @@ input:-webkit-autofill:active {
 }
 
 .our-priorities {
-  border-top: 1px rgba(103, 103, 103, 0.1) solid;
-  padding: 100px 0;
   text-align: center;
 }
 
@@ -3110,38 +3130,6 @@ input:-webkit-autofill:active {
       grid-template-columns: repeat(3, 1fr);
   margin: 100px 0;
   gap: 50px 30px;
-}
-
-.learn-more-box {
-  border: 2px #1C2473 solid;
-  border-radius: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.learn-more-box strong {
-  color: #1C2473;
-  display: block;
-  margin-bottom: 15px;
-  font-size: 17px;
-}
-
-.our-feedbaks {
-  padding: 100px 0;
-  margin: 100px 0;
-  background: #1C2473;
-  color: #fff;
 }
 
 .our-feedbaks .title {
@@ -3280,10 +3268,6 @@ input:-webkit-autofill:active {
   background: #FFF;
 }
 
-.sell-steps {
-  margin: 100px 0;
-}
-
 .sell-steps__list {
   display: -ms-grid;
   display: grid;
@@ -3335,8 +3319,6 @@ input:-webkit-autofill:active {
 }
 
 .about-trade-in {
-  padding: 100px 0;
-  margin-bottom: 100px;
   color: #fff;
   background: #1C2473;
   text-align: center;
@@ -3364,10 +3346,6 @@ input:-webkit-autofill:active {
 
 .about-trade-in__text {
   line-height: 1.5;
-}
-
-.faq {
-  margin-top: 100px;
 }
 
 .faq__list {
@@ -3424,12 +3402,6 @@ input:-webkit-autofill:active {
   max-width: 100%;
 }
 
-.collection-priorities {
-  margin-bottom: 100px;
-  padding-bottom: 100px;
-  border-bottom: 1px rgba(103, 103, 103, 0.1) solid;
-}
-
 .collection-priorities__list {
   margin: 0 auto;
   max-width: 1200px;
@@ -3464,6 +3436,31 @@ input:-webkit-autofill:active {
 
 .collection-priorities__text {
   line-height: 1.5;
+}
+
+.learn-more-box {
+  border: 2px #1C2473 solid;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.learn-more-box strong {
+  color: #1C2473;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 17px;
 }
 
 /* --------------------------------- contact -------------------------------- */
@@ -3673,6 +3670,11 @@ input:-webkit-autofill:active {
 }
 
 .drop-zone__label:hover {
+  border: 2px #1C2473 solid;
+  background: rgba(28, 36, 115, 0.05);
+}
+
+.drop-zone__label_focus {
   border: 2px #1C2473 solid;
   background: rgba(28, 36, 115, 0.05);
 }
@@ -3946,6 +3948,15 @@ input:-webkit-autofill:active {
   .content {
     padding-top: 80px;
   }
+  .blue-banner {
+    margin-bottom: 50px;
+  }
+  .land-section {
+    padding: 50px 0;
+  }
+  .land-section_half {
+    padding: 50px 0;
+  }
   .header {
     height: 80px;
     padding-top: 0px;
@@ -3991,8 +4002,8 @@ input:-webkit-autofill:active {
     gap: 60px 10%;
   }
   .our-team {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
   /* --------------------------------- auction -------------------------------- */
@@ -4012,6 +4023,10 @@ input:-webkit-autofill:active {
   }
   .live-auction__video-col {
     grid-column: 1 / 2 span;
+  }
+  /* --------------------------------- landing -------------------------------- */
+  .sell-watch-form {
+    gap: 0 50px;
   }
   /* --------------------------------- footer --------------------------------- */
   .footer__top-line {
@@ -4079,7 +4094,6 @@ input:-webkit-autofill:active {
   }
   .world-records {
     padding: 30px 0;
-    margin-bottom: 80px;
   }
   .world-records__list {
     -ms-grid-columns: (1fr)[2];
@@ -4261,6 +4275,35 @@ input:-webkit-autofill:active {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 50px 0;
+  }
+  /* --------------------------------- landing -------------------------------- */
+  .sell-watch-form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 50px 0;
+  }
+  .our-feedbaks .title:after {
+    display: none;
+  }
+  .our-feedbaks__rate {
+    margin-right: 0px;
+  }
+  .sell-steps__list {
+    gap: 30px;
+    margin: 50px 0;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .about-trade-in__list {
+    gap: 0 30px;
+  }
+  .collection-priorities__list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px 0;
+  }
+  .sell-watch-form__right > img {
+    display: none;
   }
   /* --------------------------------- footer --------------------------------- */
   .footer {
@@ -4579,9 +4622,6 @@ input:-webkit-autofill:active {
     width: 35px;
     height: 35px;
   }
-  .world-records {
-    margin-bottom: 40px;
-  }
   .another-questions {
     padding: 40px 0;
   }
@@ -4861,8 +4901,16 @@ input:-webkit-autofill:active {
     margin-bottom: 40px;
     padding: 60px 30px;
   }
+  .blue-banner__image img {
+    max-width: 60%;
+  }
+  .blue-banner__text {
+    font-size: 20px;
+    line-height: 1.3;
+  }
   .blue-banner__title {
     font-size: 32px;
+    margin: 30px 0;
   }
   .contact-text {
     margin: 50px 0;
@@ -4875,6 +4923,100 @@ input:-webkit-autofill:active {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 30px 0;
+  }
+  /* --------------------------------- landing -------------------------------- */
+  .land-section {
+    padding: 40px 0;
+  }
+  .land-section_half {
+    padding: 40px 0;
+  }
+  .our-priorities__list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 40px 0;
+  }
+  .our-priorities__image {
+    margin-bottom: 20px;
+  }
+  .our-priorities__title {
+    margin: 20px 0 10px;
+    font-size: 18px;
+  }
+  .learn-more-box {
+    padding: 15% 30px;
+  }
+  .our-feedbaks .title {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .our-feedbaks__rate {
+    font-size: 18px;
+    margin-right: auto;
+  }
+  .our-feedbaks__text {
+    height: 150px;
+    font-size: 12px;
+  }
+  .our-feedbaks .slick-dots {
+    margin-top: 30px;
+  }
+  .sell-steps__list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .sell-steps__item:before {
+    margin-bottom: 0px;
+  }
+  .sell-steps__item:last-child {
+    grid-column: 1 / 2 span;
+    text-align: center;
+  }
+  .sell-steps__title {
+    margin: 20px 0 10px;
+    font-size: 18px;
+  }
+  .sell-steps__btns {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .about-trade-in__list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 40px 0;
+  }
+  .about-trade-in__title {
+    margin: 20px 0 10px;
+    font-size: 18px;
+  }
+  .collection-priorities {
+    gap: 40px 0;
+  }
+  .collection-priorities__item {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .collection-priorities__title {
+    margin: 20px 0 10px;
+    font-size: 18px;
+  }
+  .faq__title {
+    font-size: 14px;
+    padding: 15px;
+    line-height: 1.3;
+  }
+  .faq__content {
+    font-size: 14px;
+    padding: 15px;
   }
   /* --------------------------------- global --------------------------------- */
   .article-text h2 {
@@ -4987,6 +5129,11 @@ input:-webkit-autofill:active {
     border-color: transparent;
     padding: 0px;
     min-width: 50px;
+  }
+  .toggle-field {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 15px 0;
   }
   /* ----------------------------------- ui ----------------------------------- */
   .tabs-list {

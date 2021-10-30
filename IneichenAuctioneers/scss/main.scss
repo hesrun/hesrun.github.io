@@ -435,7 +435,6 @@ $grey-line: #DFDFDF;
 .world-records {
     background: #F5F5F5;
     padding: 80px 0;
-    margin-bottom: 120px;
     &__item {
         .c-button {
             padding: 0 15px;
@@ -1523,14 +1522,32 @@ $grey-line: #DFDFDF;
 }
 
 /* --------------------------------- landing -------------------------------- */
+.land-section {
+    padding: 100px 0;
+    border-top: rgba($grey-line, 0.1) solid;
+    &:first-of-type {
+        padding-top: 0px;
+        border: none;
+    }
+    .title:first-child {
+        margin-top: 0px;
+    }
+    &_blue {
+        background: $blue-bg;
+        color: #fff;
+    }
+    &_clear {
+        padding-bottom: 0px;
+        border-top: none;
+    }
+    &_half {
+        padding: 50px 0;
+    }
+}
 .sell-watch-form {
-    padding: 0 0 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 10%;
-    .title {
-        margin-top: 0px;
-    }
     &__right {
         img {
             width: 100%;
@@ -1539,8 +1556,6 @@ $grey-line: #DFDFDF;
     }
 }
 .our-priorities {
-    border-top: 1px rgba($grey-text, 0.1) solid;
-    padding: 100px 0;
     text-align: center;
     &__text {
         max-width: 240px;
@@ -1562,25 +1577,7 @@ $grey-line: #DFDFDF;
         gap: 50px 30px;
     }
 }
-.learn-more-box {
-    border: 2px $blue-bg solid;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    strong {
-        color: $blue-text;
-        display: block;
-        margin-bottom: 15px;
-        font-size: 17px;
-    }
-}
 .our-feedbaks {
-    padding: 100px 0;
-    margin: 100px 0;
-    background: $blue-bg;
-    color: #fff;
     .title {
         position: relative;
         &:after {
@@ -1597,8 +1594,6 @@ $grey-line: #DFDFDF;
             background-repeat: no-repeat;
             pointer-events: none;
         }
-        
-        
     }
     &__rate {
         display: flex;
@@ -1686,7 +1681,6 @@ $grey-line: #DFDFDF;
     }
 }
 .sell-steps {
-    margin: 100px 0;
     &__list {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -1730,8 +1724,6 @@ $grey-line: #DFDFDF;
 
 }
 .about-trade-in {
-    padding: 100px 0;
-    margin-bottom: 100px;
     color: #fff;
     background: $blue-bg;
     text-align: center;
@@ -1755,7 +1747,6 @@ $grey-line: #DFDFDF;
     }
 }
 .faq {
-    margin-top: 100px;
     &__list {
         border: 1px $grey-line solid;
         border-radius: 12px;
@@ -1797,9 +1788,6 @@ $grey-line: #DFDFDF;
     }
 }
 .collection-priorities {
-    margin-bottom: 100px;
-    padding-bottom: 100px;
-    border-bottom: 1px rgba($grey-text, 0.1) solid;
     &__list {
         margin: 0 auto;
         max-width: 1200px;
@@ -1823,6 +1811,20 @@ $grey-line: #DFDFDF;
     }
     &__text {
         line-height: 1.5;
+    }
+}
+.learn-more-box {
+    border: 2px $blue-bg solid;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    strong {
+        color: $blue-text;
+        display: block;
+        margin-bottom: 15px;
+        font-size: 17px;
     }
 }
 /* --------------------------------- contact -------------------------------- */
@@ -1995,6 +1997,10 @@ $grey-line: #DFDFDF;
         position: relative;
         transition: all 0.3s;
         &:hover {
+            border: 2px $blue-bg solid;
+            background: rgba($blue-bg, 0.05);
+        }
+        &_focus {
             border: 2px $blue-bg solid;
             background: rgba($blue-bg, 0.05);
         }

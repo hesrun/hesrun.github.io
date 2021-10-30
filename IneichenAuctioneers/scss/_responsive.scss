@@ -11,8 +11,6 @@
         padding-left: 30px;
         padding-right: 30px;
     }
-    .services-list {
-    }
     .live-auction {
         grid-template-columns: 45% 30% 25%;
     }
@@ -27,6 +25,15 @@
 @media screen and (max-width: 1024px) {
     .content {
         padding-top: 80px;
+    }
+    .blue-banner {
+        margin-bottom: 50px;
+    }
+    .land-section {
+        padding: 50px 0;
+        &_half {
+            padding: 50px 0;
+        }
     }
     .header {
         height: 80px;
@@ -72,7 +79,7 @@
         }
     }
     .our-team {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
     /* --------------------------------- auction -------------------------------- */
@@ -92,6 +99,11 @@
         &__video-col {
             grid-column: 1 / 2 span;
         }
+    }
+
+    /* --------------------------------- landing -------------------------------- */
+    .sell-watch-form {
+        gap: 0 50px;
     }
 
 
@@ -168,7 +180,6 @@
 
     .world-records {
         padding: 30px 0;
-        margin-bottom: 80px;
         &__list {
             grid-template-columns: repeat(2, 1fr);
             gap: 60px 10%;
@@ -177,6 +188,7 @@
             grid-column: 1 / 2 span;
         }
     }
+
     .our-team {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
@@ -209,7 +221,6 @@
             margin-bottom: 30px;
         }
     }
-
     .product {
         display: block;
         padding: 0px;
@@ -287,7 +298,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
-
     /* --------------------------------- profile -------------------------------- */
     .profile {
         padding-top: 30px;
@@ -334,6 +344,49 @@
     .contact {
         grid-template-columns: 1fr;
         gap: 50px 0;
+    }
+
+    /* --------------------------------- landing -------------------------------- */
+    .sell-watch-form {
+        grid-template-columns: 1fr;
+        gap: 50px 0;
+    }
+
+    .our-feedbaks {
+        .title {
+            &:after {
+                display: none;
+            }
+        }
+        &__rate {
+            margin-right: 0px;
+        }
+    }
+    .sell-steps {
+        &__list {
+            gap: 30px;
+            margin: 50px 0;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+    .about-trade-in {
+        &__list {
+            gap: 0 30px;
+        }
+    }
+
+    .collection-priorities {
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 30px 0;
+        }
+    }
+    .sell-watch-form {
+        &__right {
+            > img {
+                display: none;
+            }
+        }
     }
 
     /* --------------------------------- footer --------------------------------- */
@@ -641,9 +694,6 @@
             }
         }
     }
-    .world-records {
-        margin-bottom: 40px;
-    }
     .another-questions {
         padding: 40px 0;
         h2 {
@@ -916,8 +966,18 @@
     .blue-banner {
         margin-bottom: 40px;
         padding: 60px 30px;
+        &__image {
+            img {
+                max-width: 60%;
+            }
+        }
+        &__text {
+            font-size: 20px;
+            line-height: 1.3;
+        }
         &__title {
             font-size: 32px;
+            margin: 30px 0;
         }
     }
     .contact-text {
@@ -934,6 +994,106 @@
             
         }
     }
+
+    /* --------------------------------- landing -------------------------------- */
+    .land-section {
+        padding: 40px 0;
+        &_half {
+            padding: 40px 0;
+        }
+    }
+    .our-priorities {
+        &__list  {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        &__image {
+            margin-bottom: 20px;
+        }
+        &__title {
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+    }
+    .learn-more-box {
+        padding: 15% 30px;
+    }
+    .our-feedbaks {
+        .title {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        &__rate {
+            font-size: 18px;
+            margin-right: auto;
+        }
+        &__text {
+            height: 150px;
+            font-size: 12px;
+        }
+        .slick-dots {
+            margin-top: 30px;
+        }
+    }
+    .sell-steps {
+        &__list {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__item:before {
+            margin-bottom: 0px;
+        }
+        &__item:last-child {
+            grid-column: 1 / 2 span;
+            text-align: center;
+        }
+        &__title {
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+        &__btns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    .about-trade-in {
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        &__title {
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+    }
+
+    .collection-priorities {
+        gap: 40px 0;
+        &__item {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        &__title {
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+    }
+
+    .faq {
+        &__title {
+            font-size: 14px;
+            padding: 15px;
+            line-height: 1.3;
+        }
+        &__content {
+            font-size: 14px;
+            padding: 15px;
+        }
+    }
+
     /* --------------------------------- global --------------------------------- */
     .article-text {
         h2 {
@@ -1060,6 +1220,13 @@
                 padding: 0px;
                 min-width: 50px;
             }
+        }
+    }
+    .toggle-field {
+        grid-template-columns: 1fr;
+        gap: 15px 0;
+        &__label {
+
         }
     }
     /* ----------------------------------- ui ----------------------------------- */
