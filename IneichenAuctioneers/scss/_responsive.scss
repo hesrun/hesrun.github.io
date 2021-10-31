@@ -106,6 +106,25 @@
         gap: 0 50px;
     }
 
+    .our-priorities {
+        &__list {
+            &_4x {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+
+    .land-auction {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        &__title {
+            br {
+                display: none;
+            }
+            font-size: 2.8vw;
+        }
+    } 
+
 
     /* --------------------------------- footer --------------------------------- */
 
@@ -389,6 +408,12 @@
         }
     }
 
+    .land-auction {
+        &__title {
+            font-size: 28px;
+        }
+    }
+
     /* --------------------------------- footer --------------------------------- */
 
     .footer {
@@ -604,6 +629,7 @@
         border: 1px $grey-line solid;
         border-radius: 12px;
         padding-top: 50px;
+        position: relative;
         &__image {
             border-radius: 0px;
             height: 200px;
@@ -614,6 +640,9 @@
             padding: 30px 20px;
             position: static;
             border-bottom: 1px $grey-line solid;
+            &:last-child {
+                border-bottom: none;
+            }
         }
         &__name {
             padding: 0px;

@@ -10,7 +10,8 @@ $(document).ready(function() {
         }
     })
 
-    $('.auction-item').each(function(){
+    
+    $('.auctions-list .auction-item').each(function(){
         AOS.init({
             once: true
         });
