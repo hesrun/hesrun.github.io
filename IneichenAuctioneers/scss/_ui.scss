@@ -242,6 +242,7 @@
     grid-template-columns: auto 100px 100px;
     gap: 0 30px;
     align-items: center;
+    position: relative;
     &_auto {
         grid-template-columns: auto auto auto;
     }
@@ -262,6 +263,19 @@
         transition: all 0.3s;
         &:hover {
             background: $grey-line;
+        }
+    }
+    &__note {
+        position: absolute;
+        bottom: -10px;
+        left: 0px;
+        font-size: 12px;
+        font-weight: 500;
+        &_red {
+            color: $red-text;
+        }
+        &_green {
+            color: $green-text;
         }
     }
 }
@@ -424,6 +438,53 @@
         transition: all 0.3s;
     }
 }
+
+.c-accordion {
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px rgba($grey-line, 0.5) solid;
+        border-radius: 12px;
+        padding: 10px 15px;
+        margin: 15px 0;
+        cursor: pointer;
+        &:hover,
+        &_active {
+            border-color: $blue-bg;
+            background: $blue-bg;
+            color: #fff;
+        }
+        &_active {
+            i.mdi {
+                transform: rotateX(180deg);
+            }
+        }
+        i.mdi {
+            font-size: 24px;
+        }
+        &:first-child {
+            margin-top: 0px;
+        }
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    &__list {
+        display: none;
+    }
+    &__link {
+        display: block;
+        padding: 10px 0 10px 15px;
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            background: rgba($grey-text, 0.05);
+            border-radius: 5px;
+        }
+    }
+}
+
 .select2-container--default {
     .select2-results__options {
         padding-right: 5px;

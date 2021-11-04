@@ -665,7 +665,8 @@ $grey-line: #DFDFDF;
 .filtering-btns  {
     margin: 0 0 40px;
     display: flex;
-    align-items: center;> strong {
+    align-items: center;
+    > strong {
         font-size: 22px;
     }
     &__right {
@@ -683,9 +684,15 @@ $grey-line: #DFDFDF;
             margin-right: 10px;
         }
     }
+    &__sort-btn {
+        display: none
+    }
 }
 .auction-date-location {
     margin-bottom: 50px;
+    &:last-child {
+        margin-bottom: 0;
+    }
     &__item {
         display: flex;
         align-items: center;
@@ -713,6 +720,9 @@ $grey-line: #DFDFDF;
         font-size: 13px;
         padding: 5px 10px;
         font-weight: 500;
+    }
+    a {
+        color: $blue-text;
     }
 }
 
@@ -1343,8 +1353,8 @@ $grey-line: #DFDFDF;
             line-height: 1.5;
         }
         td:first-child {
+            font-weight: 600;
             width: 200px;
-            color: $grey-text;
         }
 
     }
@@ -1527,7 +1537,6 @@ $grey-line: #DFDFDF;
 /* --------------------------------- landing -------------------------------- */
 .land-section {
     padding: 100px 0;
-    border-top: rgba($grey-line, 0.1) solid;
     &:first-of-type {
         padding-top: 0px;
         border: none;
@@ -1826,6 +1835,12 @@ $grey-line: #DFDFDF;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+        background: $brown-bg;
+        border-color: $brown-bg;
+    }
     strong {
         color: $blue-text;
         display: block;
@@ -1863,6 +1878,13 @@ $grey-line: #DFDFDF;
         font-family: $america;
         margin-bottom: 60px;
         line-height: 1.5;
+    }
+    &_full {
+        min-height: calc(100vh - 105px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 

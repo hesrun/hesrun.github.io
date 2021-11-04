@@ -239,6 +239,7 @@
             <div class="filtering-btns">
                 <strong>78 lots</strong>
                 <div class="filtering-btns__left">
+                    <a href="" class="filtering-btns__sort-btn c-button c-button_grey c-button_medium">Sorting</a>
                     <div class="filtering-btns__sorting">
                         <strong>Go To:</strong>
                         <div class="c-dropdown">
@@ -859,6 +860,48 @@
             <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
         </div>
     </div>
+    <div id="Sorting" class="modal modal-small modal-small_full">
+        <div class="modal-small__title">Sorting</div>
+        <div class="modal-small__body">
+            <div class="c-accordion">
+                <div class="c-accordion__title">
+                    Go To:
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+                <div class="c-accordion__list">
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                    <a class="c-accordion__link" href="">Lot №7</a>
+                </div>
+                <div class="c-accordion__title">
+                    Sort by:
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+                <div class="c-accordion__list">
+                    <a class="c-accordion__link" href="">By Lot</a>
+                    <a class="c-accordion__link" href="">By Name</a>
+                    <a class="c-accordion__link" href="">By Year</a>
+                    <a class="c-accordion__link" href="">By Size</a>
+                    <a class="c-accordion__link" href="">By price</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Save</a>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -868,13 +911,29 @@
     <script>
         $('#CONDITIONSOpen').click(function(){
             $('#CONDITIONS').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
             return false;
+        })
+        $('.filtering-btns__sort-btn').click(function(){
+            $('#Sorting').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            }); 
+            return false;
+        })
+        
+
+        $('.c-accordion__title').click(function(){
+            $(this).toggleClass('c-accordion__title_active');
+            $(this).next().slideToggle(300);
         })
         
     </script>
