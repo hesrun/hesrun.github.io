@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -20,6 +21,12 @@
                 <i class="mdi mdi-chevron-right"></i>
             </div>
             <div class="product__gallery">
+                <a class="product__video">
+                    <video id="ProductVideo" src="video/Shades_of_Grey_Auction_-_BREGUET_Tourbillon.mp4" controls></video>
+                    <div class="product__play-video-btn">
+                        <i class="mdi mdi-play"></i>
+                    </div>
+                </a>
                 <a href="img/product/img.jpg" data-fancybox="gallery" class="product__image-link">
                     <img src="img/product/img.jpg" alt="">
                 </a>
@@ -268,12 +275,19 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
+        video = $('#ProductVideo').get(0);
+
+        $('.product__play-video-btn').click(function(){
+            video.play();
+            $(this).fadeOut();
+        })
         $('#BidsTableOpen').click(function(){
             $('#BidsTable').modal({
                 fadeDuration: 100,

@@ -17,7 +17,7 @@ $(document).ready(function() {
         });
     })
 
-    $('.lot-item').each(function(){
+    $('.lots-grid .lot-item').each(function(){
         AOS.init({
             once: true
         });

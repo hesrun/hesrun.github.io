@@ -24,7 +24,9 @@
     i.mdi {
         font-size: 18px;
     }
-    
+    &_pulse:not(:active) {
+        animation: pulse 2s infinite;
+    }
     &_full {
         width: 100%;
     }
@@ -65,7 +67,15 @@
         border: 1px $grey-line solid;
         &:hover {
             background: $grey-line;
-        } 
+        }
+        &#{$root}_filled {
+            color: #fff;
+            background: $grey-text;
+            &:hover {
+                background: darken($grey-text,5);
+                border-color: darken($grey-text,5);
+            }
+        }
     }
     &_green {
         color: $green_bg;
@@ -96,6 +106,22 @@
             &:hover {
                 background: darken($pink-text,5);
                 border-color: darken($pink-text,5);
+            }
+        }
+    }
+    &_brown {
+        color: $brown-text;
+        border: 2px $brown-text solid;
+        &:hover {
+            background: $brown-text;
+            color: #fff;
+        }
+        &#{$root}_filled {
+            color: #fff;
+            background: $brown-text;
+            &:hover {
+                background: darken($brown-text,5);
+                border-color: darken($brown-text,5);
             }
         }
     }
@@ -290,6 +316,23 @@
     padding: 0 7px;
     line-height: 17px;
     margin-left: 5px;
+}
+
+.c-chekbox {
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 15px;
+    cursor: pointer;
+    &:hover {
+        color: $blue-text;
+    }
+    input {
+        margin-top: 1px;
+    }
+    &:last-child {
+        margin: 0px;
+    }
 }
 
 .c-dropdown {
@@ -760,6 +803,25 @@
         opacity: 1;
         transform: translateY(0px)
     }
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(0.9);
+	}
+    50% {
+		transform: scale(1);
+	}
+    75% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+        
+	}
 }
 
 // @keyframes ButtonClick {

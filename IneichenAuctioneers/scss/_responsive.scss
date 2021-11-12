@@ -172,12 +172,15 @@
     .services-list {
         grid-template-columns: 1fr;
         gap: 30px 0px;
+        &__item {
+            height: 200px;
+        }
         &__item:nth-child(1){
             grid-column: 1 / span 1;
         }
         &__image {
             width: 60%;
-            padding: 50px 0;
+            padding: 30px 0;
         }
     }
 
@@ -244,6 +247,12 @@
         }
         &__start {
             margin-bottom: 30px;
+        }
+        &__buttons {
+            grid-template-columns: 1fr;
+            .c-button_blue {
+                grid-column: auto;
+            }
         }
     }
     .product {
@@ -643,9 +652,8 @@
         }
         &__title {
             margin: 0px;
-            padding: 30px 20px;
+            padding: 30px 20px 0;
             position: static;
-            border-bottom: 1px $grey-line solid;
             &:last-child {
                 border-bottom: none;
             }
@@ -653,6 +661,7 @@
         &__name {
             padding: 0px;
             font-size: 18px;
+            margin-bottom: 0px;
         }
         &__lots {
             font-size: 13px;
@@ -775,6 +784,21 @@
         &__gallery-swipe {
             bottom: 30px;
         }
+        &__video {
+            padding: 0px;
+            iframe {
+                position: static;
+            }
+        }
+        &__gallery-col {
+            padding-top: 72px;
+            .slick-slide {
+                height: 100vw;
+                img {
+                    height: 100%;
+                }
+            }
+        }
         &__nav-link {
             width: 32px;
             height: 32px;
@@ -846,6 +870,7 @@
             left: 0px;
             bottom: 0px;
             padding: 20px;
+            z-index: 2;
 
         }
         &__params {
@@ -875,13 +900,6 @@
             .title {
                 font-size: 18px;
                 margin: 0px;
-            }
-        }
-        &__stream_buttons {
-            grid-template-columns: 1fr;
-            gap: 20px;
-            > .c-button {
-                display: none;
             }
         }
         &__counts {
