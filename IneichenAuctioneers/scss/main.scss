@@ -1016,6 +1016,18 @@ $grey-line: #DFDFDF;
     &__col-body {
         padding: 0 30px 30px 30px;
     }
+    &__head-close {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 18px;
+        background-color: $blue-bg;
+        color: #fff;
+        text-align: center;
+        list-style: none;
+        line-height: 30px;
+        margin-top: -5px;
+    }
     &__stream {
         border-radius: 15px;
         overflow: hidden;
@@ -1031,6 +1043,16 @@ $grey-line: #DFDFDF;
             vertical-align: middle;
             width: 100%;
         }
+    }
+    &__whait-start {
+        font-family: $america;
+        border: 1px $grey-line solid;
+        border-radius: 12px;
+        padding: 20px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 20px;
     }
     &__stream_buttons {
         display: grid;
@@ -1055,16 +1077,35 @@ $grey-line: #DFDFDF;
         font-size: 13px;
         font-weight: 500;
         div:first-child {
+            display: flex;
+            align-items: center;
             color: $grey-text;
         }
         i.mdi {
+            flex: 0 0 auto;
             color: black;
             font-size: 20px;
             vertical-align: middle;
             margin-right: 5px;
         }
+        .flag-icon {
+            flex: 0 0 auto;
+            margin-right: 5px;
+        }
         & + & {
             border-top: 1px $grey-line solid;
+        }
+    }
+    &__max-bid {
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 0 20px;
+        span {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.2;
         }
     }
     &__pre-bid {
@@ -1084,17 +1125,17 @@ $grey-line: #DFDFDF;
     }
     &__lot {
         margin: 0 0 20px 0;
-        height: calc(100vh - 335px);
+        //height: calc(100vh - 335px);
     }
 }
 .live-bids {
     border: 1px $grey-line solid;
     border-radius: 12px;
-    padding: 30px 15px 30px 30px;
+    padding: 15px 15px 15px 15px;
     &__scroll {
-        max-height: 250px;
+        height: 253px;
         overflow: auto;
-        padding-right: 15px;
+        padding-right: 10px;
         &::-webkit-scrollbar {
             background-color: transparent;
             width: 8px;
@@ -1122,7 +1163,7 @@ $grey-line: #DFDFDF;
         color: $grey-text;
         border-radius: 12px;
         text-align: center;
-        padding: 8px 0;
+        padding: 8px 10px;
         margin: 10px 0;
     }
 }
@@ -2330,12 +2371,12 @@ $grey-line: #DFDFDF;
 
 /* ---------------------------------- admin --------------------------------- */
 .live-admin {
-    padding: 30px;
+    padding: 15px 30px;
     &__head {
         display: flex;
         align-items: center;
         gap: 0 30px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     &__content {
         display: grid;
@@ -2352,23 +2393,23 @@ $grey-line: #DFDFDF;
         padding-top: 75%;
         background-position: center;
         background-size: cover;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         border-radius: 30px;
     }
     &__lots {
         font-weight: 500;
-        font-size: 20px;
-        margin-bottom: 30px;
+        font-size: 18px;
+        margin-bottom: 15px;
     }
     &__lot-name {
         font-weight: 500;
-        font-size: 20px;
-        margin-bottom: 30px;
+        font-size: 18px;
+        margin-bottom: 15px;
     }
     &__table-price {
         width: 100%;
         font-weight: 500;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         td {
             padding: 5px 0;
             &:first-child {
@@ -2450,6 +2491,119 @@ $grey-line: #DFDFDF;
     }
     .lot-item-small {
         margin-bottom: 30px;
+    }
+}
+.live-bis-list {
+    margin-top: 20px;
+    border: 1px $grey-line solid;
+    border-radius: 12px;
+    max-height: 200px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        background-color: #fff;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($blue-bg,0.3);
+        border-radius: 10px;
+        border: 2px solid #fff;
+        &:hover {
+            background-color: rgba($blue-bg,1);
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &__item {
+        border-bottom: 1px $grey-line solid;
+        padding: 10px 15px;
+        &:last-child {
+            border: none;
+        }       
+    }
+}
+
+/* ------------------------------ presentation ------------------------------ */
+.presentation {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    font-family: $america;
+    font-weight: 500;
+    &_white {
+        background: #fff;
+        color: black;
+    }
+    &_cols {
+        display: grid;
+        grid-template-columns: 6fr 4fr 3fr;
+    }
+    &__image {
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__lot {
+        height: 100%;
+        padding: 5vw;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+    &__lot-num {
+        font-size: 3vw;
+        font-weight: 500;
+    }
+    &__lot-name {
+        font-size: 2.5vw;
+    }
+    &__lot-status {
+        font-weight: 500;
+        margin-top: 7vh;
+        font-size: 2vw;
+        color: #888;
+    }
+    &__lot-price-range {
+        font-weight: 500;
+        margin-top: 2vh;
+        font-size: 1.75vw;
+        color: #888;
+    }
+    &__last-bid {
+        margin-top: auto;
+        font-size: 2.5vw;
+        text-align: right;
+    }
+    &__lot-price {
+        margin-top: auto;
+        font-size: 2vw;
+        strong {
+            font-size: 4vw;
+        }
+    }
+    &__currency-price {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__currency-price-item {
+        padding-left: 40px;
+        font-size: 1.75vw;
+        display: flex;
+        margin: 10px 0;
+        &:first-child {
+            font-size: 2.5vw;
+            margin-bottom: 30px;
+        }
+        b {
+            font-weight: 600;
+            margin-right: 30px;
+        }
+
     }
 }
 

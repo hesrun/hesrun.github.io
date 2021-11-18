@@ -2594,6 +2594,19 @@ input:-webkit-autofill:active {
   padding: 0 30px 30px 30px;
 }
 
+.live-auction__head-close {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  background-color: #1C2473;
+  color: #fff;
+  text-align: center;
+  list-style: none;
+  line-height: 30px;
+  margin-top: -5px;
+}
+
 .live-auction__stream {
   border-radius: 15px;
   overflow: hidden;
@@ -2610,6 +2623,17 @@ input:-webkit-autofill:active {
   position: absolute;
   vertical-align: middle;
   width: 100%;
+}
+
+.live-auction__whait-start {
+  font-family: "GT America Extended", sans-serif;
+  border: 1px #DFDFDF solid;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 .live-auction__stream_buttons {
@@ -2651,18 +2675,52 @@ input:-webkit-autofill:active {
 }
 
 .live-auction__bids-item div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #676767;
 }
 
 .live-auction__bids-item i.mdi {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   color: black;
   font-size: 20px;
   vertical-align: middle;
   margin-right: 5px;
 }
 
+.live-auction__bids-item .flag-icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 5px;
+}
+
 .live-auction__bids-item + .live-auction__bids-item {
   border-top: 1px #DFDFDF solid;
+}
+
+.live-auction__max-bid {
+  margin-bottom: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 20px;
+}
+
+.live-auction__max-bid span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .live-auction__pre-bid {
@@ -2689,19 +2747,18 @@ input:-webkit-autofill:active {
 
 .live-auction__lot {
   margin: 0 0 20px 0;
-  height: calc(100vh - 335px);
 }
 
 .live-bids {
   border: 1px #DFDFDF solid;
   border-radius: 12px;
-  padding: 30px 15px 30px 30px;
+  padding: 15px 15px 15px 15px;
 }
 
 .live-bids__scroll {
-  max-height: 250px;
+  height: 253px;
   overflow: auto;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .live-bids__scroll::-webkit-scrollbar {
@@ -2734,7 +2791,7 @@ input:-webkit-autofill:active {
   color: #676767;
   border-radius: 12px;
   text-align: center;
-  padding: 8px 0;
+  padding: 8px 10px;
   margin: 10px 0;
 }
 
@@ -4288,7 +4345,7 @@ input:-webkit-autofill:active {
 
 /* ---------------------------------- admin --------------------------------- */
 .live-admin {
-  padding: 30px;
+  padding: 15px 30px;
 }
 
 .live-admin__head {
@@ -4299,7 +4356,7 @@ input:-webkit-autofill:active {
       -ms-flex-align: center;
           align-items: center;
   gap: 0 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .live-admin__content {
@@ -4323,26 +4380,26 @@ input:-webkit-autofill:active {
   padding-top: 75%;
   background-position: center;
   background-size: cover;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   border-radius: 30px;
 }
 
 .live-admin__lots {
   font-weight: 500;
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 .live-admin__lot-name {
   font-weight: 500;
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 .live-admin__table-price {
   width: 100%;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .live-admin__table-price td {
@@ -4452,6 +4509,155 @@ input:-webkit-autofill:active {
 
 .live-admin .lot-item-small {
   margin-bottom: 30px;
+}
+
+.live-bis-list {
+  margin-top: 20px;
+  border: 1px #DFDFDF solid;
+  border-radius: 12px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.live-bis-list::-webkit-scrollbar {
+  background-color: #fff;
+  width: 10px;
+}
+
+.live-bis-list::-webkit-scrollbar-thumb {
+  background-color: rgba(28, 36, 115, 0.3);
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.live-bis-list::-webkit-scrollbar-thumb:hover {
+  background-color: #1c2473;
+}
+
+.live-bis-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.live-bis-list__item {
+  border-bottom: 1px #DFDFDF solid;
+  padding: 10px 15px;
+}
+
+.live-bis-list__item:last-child {
+  border: none;
+}
+
+/* ------------------------------ presentation ------------------------------ */
+.presentation {
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
+}
+
+.presentation_white {
+  background: #fff;
+  color: black;
+}
+
+.presentation_cols {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 6fr 4fr 3fr;
+      grid-template-columns: 6fr 4fr 3fr;
+}
+
+.presentation__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.presentation__lot {
+  height: 100%;
+  padding: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1.2;
+}
+
+.presentation__lot-num {
+  font-size: 3vw;
+  font-weight: 500;
+}
+
+.presentation__lot-name {
+  font-size: 2.5vw;
+}
+
+.presentation__lot-status {
+  font-weight: 500;
+  margin-top: 7vh;
+  font-size: 2vw;
+  color: #888;
+}
+
+.presentation__lot-price-range {
+  font-weight: 500;
+  margin-top: 2vh;
+  font-size: 1.75vw;
+  color: #888;
+}
+
+.presentation__last-bid {
+  margin-top: auto;
+  font-size: 2.5vw;
+  text-align: right;
+}
+
+.presentation__lot-price {
+  margin-top: auto;
+  font-size: 2vw;
+}
+
+.presentation__lot-price strong {
+  font-size: 4vw;
+}
+
+.presentation__currency-price {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.presentation__currency-price-item {
+  padding-left: 40px;
+  font-size: 1.75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.presentation__currency-price-item:first-child {
+  font-size: 2.5vw;
+  margin-bottom: 30px;
+}
+
+.presentation__currency-price-item b {
+  font-weight: 600;
+  margin-right: 30px;
 }
 
 @media screen and (max-width: 1366px) {
@@ -5351,6 +5557,7 @@ input:-webkit-autofill:active {
   /* ---------------------------------- live ---------------------------------- */
   .live-auction__col-head {
     padding: 20px;
+    position: relative;
   }
   .live-auction__col-head .title {
     font-size: 18px;
@@ -5362,6 +5569,13 @@ input:-webkit-autofill:active {
   }
   .live-auction__stream {
     margin-top: 30px;
+  }
+  .live-auction__stream-footer {
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 15px 0;
   }
   .lots-list {
     -ms-grid-columns: 1fr;
