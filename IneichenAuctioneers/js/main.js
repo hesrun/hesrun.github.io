@@ -11,16 +11,8 @@ $(document).ready(function() {
     })
 
     
-    $('.auctions-list .auction-item').each(function(){
-        AOS.init({
-            once: true
-        });
-    })
-
-    $('.lots-grid .lot-item').each(function(){
-        AOS.init({
-            once: true
-        });
+    AOS.init({
+        once: true
     });
 
     $('.mobile-menu__link_sub').click(function() {

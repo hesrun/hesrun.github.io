@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header header_blue">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img class="header__logo_blue" src="svg/head-logo.svg" alt="">
+            <img class="header__logo_white" src="svg/head-logo-white.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="blue-banner">
+            <h1 class="blue-banner__title">November aution results</h1>
+        </div>
+        <div class="container">
+            <article class="article-text">
+                <h1>Auction highlights</h1>
+                <div class="auction-highlights-counters">
+                    <div class="auction-highlights-counters__item">
+                        <strong class="blue-text">8+</strong>
+                        <span class="grey-text">million CHF in sales</span>
+                    </div>
+                    <div class="auction-highlights-counters__item">
+                        <strong class="blue-text">400+</strong>
+                        <span class="grey-text">bidders on in-house  platform</span>
+                    </div>
+                    <div class="auction-highlights-counters__item">
+                        <strong class="blue-text">98%</strong>
+                        <span class="grey-text">of total lots sold</span>
+                    </div>
+                    <div class="auction-highlights-counters__item">
+                        <strong class="blue-text">5</strong>
+                        <span class="grey-text">new world records</span>
+                    </div>
+                </div>
+                <p><b>Zürich, 20-21 November 2021</b> – Well, that was intense! Ineichen’s November two-day watch auction event promised something special. Four auctions in one weekend, six hours of bidding, more than 200 lots achieving over <b>CHF 8 million</b>…. Another successful auction for exclusive watches at Ineichen Zürich!</p>
+                <blockquote>
+                    Traditionally held at the magnificent neo-baroque Haus Metropol at the heart of Zürich, Ineichen’s November timepieces auction exceeded all expectations, bringing together the best of the best in watchmaking and the world community of watch collectors. 
+                </blockquote>
+                <p>Last weekend in Zürich, the world’s most passionate watch collectors gathered in person, logged on or called in, for a series of watch auctions: “Auction No 175 Part 1”, “Auction No 175 Part 2”, “Alchemy of Gold” and “Shades of Grey’, complete with a total of 227 vintage timepieces from world-renowned watchmakers such as Audemars Piguet, F.P. Journe, Patek Philippe, Rolex, Vacheron Constantin and more, allowing collectors an opportunity to acquire some of the best horological works of art available on the market.</p>
+                <blockquote>
+                    Of 227 lots going under the hammer 220 were sold – yet another excellent result for Ineichen Zürich. Since its first auction held after it was acquired by new investors in 2017, Ineichen has managed in just a few years to build up a broad range of clients from all over the world, regularly achieving top prices for rare models.
+                </blockquote>
+                <h1>Lot with the Highest hammer price</h1>
+                <div class="highest-hammer-price">
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Poitevin Enamel Verge Pocket Watch Poitevin Enamel Verge Pocket Watch</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                        </div>
+                    </div>
+                    <p>
+                        The highlight of the November auction was one of the most aesthetically appealing and technologically complex modern wristwatches by Patek Philippe with a self-winding minute repeater and perpetual calendar. Produced in 2013, this ref. 5074P came in an impressively sized 42 mm platinum case, seamlessly combining design features inherited from vintage horology with modern solutions. The extremely rare timepiece was sold for CHF 450 000 to a private collector from Belgium. 
+                    </p>
+                </div>
+                <h1>New records</h1>
+            </article>
+            <section class="record-lots">
+                <div class="lots-grid">
+                    <div class="lot-item lot-item_with-text">
+                        <div class="lot-item__text">
+                            Once again, the prestigious independent watch brand F.P. Journe demonstrated its supremacy with an impressive selection of four collectible models, led by the Souverain Tourbillon in platinum. Being number 50 of only 99 pieces produced, it hammered in at CHF 390 000.
+                        </div>
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Poitevin Enamel Verge Pocket Watch Poitevin Enamel Verge Pocket Watch</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                        </div>
+                    </div>
+                    <div class="lot-item lot-item_with-text">
+                        <div class="lot-item__text">
+                            One cannot fail to mention the beautiful pair of Vagabondage I and Vagabondage II watches from the series of tortue-shaped, jumping-time timepieces by F.P. Journe, were sold for CHF 240 000 and CHF 225 000 respectively.
+                        </div>
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Poitevin Enamel Verge Pocket Watch Poitevin Enamel Verge Pocket Watch</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                        </div>
+                    </div>
+                    <div class="lot-item lot-item_with-text">
+                        <div class="lot-item__text">
+                            Also among the top lots were the most celebrated pieces by Vianney Halter –  two Antiqua Perpetual Calendars created for the fans of the steampunk genre in 1999-2000. 
+                        </div>
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Poitevin Enamel Verge Pocket Watch Poitevin Enamel Verge Pocket Watch</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                        </div>
+                    </div>
+                    <div class="lot-item lot-item_with-text">
+                        <div class="lot-item__text">
+                            The yellow gold Antiqua Perpetual sold for CHF 170 000, while white gold example fetched CHF 190 000. 
+                        </div>
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Poitevin Enamel Verge Pocket Watch Poitevin Enamel Verge Pocket Watch</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <article class="article-text">
+                <h1>A transformative year</h1>
+                <p>2021 became a transformative year for Ineichen, perhaps the most significant landmark since the emergence of our Auction House in the 1970s. We have started reinventing the way we connect with the rapidly growing number of international collectors. 
+                </p>
+                <p>
+                    From the introduction of Ineichen’s in-house online bidding system to the launch of a new website, this year has seen many innovations which, combined with sustained demand for exceptional wristwatches, have contributed to set new benchmarks. 
+                </p>
+                <p>
+                    These include online records and landmark prices for rare limited editions and pieces by independent watchmakers. As the year comes to a close, we look forward to continuing this journey with the community of watch aficionados in 2022.
+                </p>
+            </article>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top-line">
+                <div class="footer__nav">
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Sell Watches</strong>
+                        <a class="footer__nav-link" href="">Auction</a>
+                        <a class="footer__nav-link" href="">Consign</a>
+                        <a class="footer__nav-link" href="">Direct sale </a>
+                        <a class="footer__nav-link" href="">Free Appraisal</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Corporate</strong>
+                        <a class="footer__nav-link" href="">About Ineichen</a>
+                        <a class="footer__nav-link" href="">Ineichen Auctioneer </a>
+                        <a class="footer__nav-link" href="">Terms & Conditions </a>
+                        <a class="footer__nav-link" href="">Cookie policy </a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Support</strong>
+                        <a class="footer__nav-link" href="">FAQ</a>
+                        <a class="footer__nav-link" href="">T&C</a>
+                        <a class="footer__nav-link" href="">User protection</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Social Channels</strong>
+                        <a class="footer__nav-link" href="">Instagram</a>
+                        <a class="footer__nav-link" href="">Youtube</a>
+                        <a class="footer__nav-link" href="">Facebook</a>
+                        <a class="footer__nav-link" href="">Telegram</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    +41 44 298 11 44 <br>
+                    info@ineichen.com <br>
+                    Stadthausquai 11-13, Zürich <br>
+                    Tue-Fri - 10:00-17:30 Sat - 10:00-16:00 
+                </div>
+            </div>
+            <div class="footer__bottom-line">
+                <a class="footer__logo" href="">
+                    <img src="svg/icon-logo.svg" alt="">
+                </a>
+                <a class="footer__lang" href="">
+                    English <i class="mdi mdi-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

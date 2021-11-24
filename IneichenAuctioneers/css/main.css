@@ -149,58 +149,58 @@ input:-webkit-autofill:active {
   font-size: 15px;
 }
 
-.article-text h1 {
+.article-text > h1 {
   font-family: "GT America Extended", sans-serif;
   font-weight: 500;
   font-size: 36px;
   margin: 60px 0 30px;
 }
 
-.article-text h1:first-child {
+.article-text > h1:first-child {
   margin-top: 0px;
 }
 
-.article-text h2 {
+.article-text > h2 {
   font-family: "GT America Extended", sans-serif;
   font-weight: 500;
   font-size: 32px;
   margin: 50px 0 30px;
 }
 
-.article-text h2:first-child {
+.article-text > h2:first-child {
   margin-top: 0px;
 }
 
-.article-text h3 {
+.article-text > h3 {
   font-family: "GT America Extended", sans-serif;
   font-weight: 500;
   font-size: 28px;
   margin: 40px 0 20px;
 }
 
-.article-text h3:first-child {
+.article-text > h3:first-child {
   margin-top: 0px;
 }
 
-.article-text h4 {
+.article-text > h4 {
   font-family: "GT America Extended", sans-serif;
   font-weight: 500;
   font-size: 24px;
   margin: 30px 0 20px;
 }
 
-.article-text h4:first-child {
+.article-text > h4:first-child {
   margin-top: 0px;
 }
 
-.article-text h5 {
+.article-text > h5 {
   font-family: "GT America Extended", sans-serif;
   font-weight: 500;
   font-size: 20px;
   margin: 30px 0 20px;
 }
 
-.article-text h5:first-child {
+.article-text > h5:first-child {
   margin-top: 0px;
 }
 
@@ -2014,6 +2014,78 @@ input:-webkit-autofill:active {
   margin-bottom: 40px;
 }
 
+/* ---------------------------------- results --------------------------------- */
+.image-banner {
+  padding: 15vw 15px;
+  text-align: center;
+}
+
+.image-banner_past-auction {
+  background: url(../img/results/past-auction-image.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-banner__title {
+  font-size: 4vw;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.image-banner__text {
+  font-size: 2vw;
+  font-family: "GT America Extended", sans-serif;
+}
+
+.auction-highlights {
+  border: 1px #DFDFDF solid;
+  padding: 80px 100px;
+  border-radius: 15px;
+  max-width: 1275px;
+  margin: 0 auto;
+}
+
+.auction-highlights__text {
+  margin: 80px 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.auction-highlights-counters {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin: 80px 0;
+}
+
+.auction-highlights-counters__item strong {
+  display: block;
+  font-size: 40px;
+  font-family: "GT America Extended", sans-serif;
+  display: block;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.record-lots {
+  padding: 10px 0 50px;
+}
+
+.highest-hammer-price {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 80px;
+}
+
 /* ------------------------------ auctions-list ----------------------------- */
 .auctions-list {
   display: -ms-grid;
@@ -2270,6 +2342,22 @@ input:-webkit-autofill:active {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 20px 5px;
+}
+
+.lot-item_with-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.lot-item__text {
+  margin-bottom: auto;
+  line-height: 1.5;
+  padding: 0 10px 20px;
 }
 
 .lot-item__image img {
@@ -3260,8 +3348,8 @@ input:-webkit-autofill:active {
   font-size: 14px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5fr 4fr 3fr 2fr auto;
-      grid-template-columns: 5fr 4fr 3fr 2fr auto;
+  -ms-grid-columns: 5fr 4fr 3fr 2fr 120px;
+      grid-template-columns: 5fr 4fr 3fr 2fr 120px;
   gap: 0 5%;
   padding: 30px 35px;
   border-radius: 8px;
@@ -4932,6 +5020,49 @@ input:-webkit-autofill:active {
         grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  /* ---------------------------------- results --------------------------------- */
+  .image-banner {
+    padding: 20vw 15px;
+  }
+  .image-banner_past-auction {
+    background-attachment: scroll;
+  }
+  .image-banner__title {
+    font-size: 5vw;
+  }
+  .image-banner__text {
+    font-size: 2.5vw;
+    font-family: "GT America Extended", sans-serif;
+  }
+  .auction-highlights {
+    padding: 30px 30px;
+  }
+  .auction-highlights__text {
+    margin: 40px 0;
+    font-size: 18px;
+  }
+  .auction-highlights-counters {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    margin: 40px 0;
+    gap: 30px;
+  }
+  .auction-highlights-counters__item strong {
+    display: block;
+    font-size: 40px;
+    font-family: "GT America Extended", sans-serif;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .record-lots {
+    padding: 20px 0 40px;
+  }
+  .highest-hammer-price {
+    gap: 0 30px;
+  }
   /* --------------------------------- auction -------------------------------- */
   .lots-grid {
     -ms-grid-columns: (1fr)[2];
@@ -5144,23 +5275,23 @@ input:-webkit-autofill:active {
     margin-top: 30px;
   }
   /* --------------------------------- global --------------------------------- */
-  .article-text h1 {
+  .article-text > h1 {
     font-size: 26px;
     margin: 30px 0 15px;
   }
-  .article-text h2 {
+  .article-text > h2 {
     font-size: 24px;
     margin: 30px 0 15px;
   }
-  .article-text h3 {
+  .article-text > h3 {
     font-size: 22px;
     margin: 30px 0 15px;
   }
-  .article-text h4 {
+  .article-text > h4 {
     font-size: 20px;
     margin: 30px 0 15px;
   }
-  .article-text h5 {
+  .article-text > h5 {
     font-size: 18px;
     margin: 30px 0 15px;
   }
@@ -5451,6 +5582,42 @@ input:-webkit-autofill:active {
   }
   .another-questions h2 {
     font-size: 25px;
+  }
+  .record-lots {
+    padding: 20px 0 40px;
+  }
+  .highest-hammer-price {
+    display: block;
+  }
+  .lot-item__text {
+    padding: 0 0 20px 0;
+  }
+  /* ---------------------------------- results --------------------------------- */
+  .image-banner__title {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+  .image-banner__text {
+    font-size: 14px;
+    font-family: "GT America Extended", sans-serif;
+  }
+  .auction-highlights {
+    padding: 15px 15px;
+  }
+  .auction-highlights__text {
+    margin: 20px 0;
+    font-size: 15px;
+  }
+  .auction-highlights-counters {
+    margin: 20px 0;
+    gap: 15px;
+  }
+  .auction-highlights-counters__item strong {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+  .auction-highlights-counters__item span {
+    font-size: 12px;
   }
   /* --------------------------------- auction -------------------------------- */
   .lots-grid {
@@ -5860,7 +6027,7 @@ input:-webkit-autofill:active {
     padding: 15px;
   }
   /* --------------------------------- global --------------------------------- */
-  .article-text h2 {
+  .article-text > h2 {
     font-weight: 500;
     font-size: 22px;
     margin-top: 45px;

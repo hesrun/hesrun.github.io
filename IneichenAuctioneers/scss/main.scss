@@ -560,6 +560,68 @@ $grey-line: #DFDFDF;
         margin-bottom: 40px;
     }
 }
+/* ---------------------------------- results --------------------------------- */
+.image-banner {
+    padding: 15vw 15px;
+    text-align: center;
+    &_past-auction {
+        background: url(../img/results/past-auction-image.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        color: #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__title {
+        font-size: 4vw;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    &__text {
+        font-size: 2vw;
+        font-family: $america;
+    }
+}
+
+.auction-highlights {
+    border: 1px $grey-line solid;
+    padding: 80px 100px;
+    border-radius: 15px;
+    max-width: 1275px;
+    margin: 0 auto;
+    &__text {
+        margin: 80px 0;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+.auction-highlights-counters {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 80px 0;
+    &__item {
+        strong {
+            display: block;
+            font-size: 40px;
+            font-family: $america;
+            display: block;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        span {
+
+        }
+    }
+}
+.record-lots {
+    padding: 10px 0 50px;
+}
+.highest-hammer-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0 80px;
+}
 /* ------------------------------ auctions-list ----------------------------- */
 .auctions-list {
     display: grid;
@@ -750,6 +812,15 @@ $grey-line: #DFDFDF;
 }
 .lot-item {
     $root: &;
+    &_with-text {
+        display: flex;
+        flex-direction: column;
+    }
+    &__text {
+        margin-bottom: auto;
+        line-height: 1.5;
+        padding: 0 10px 20px;
+    }
     &__image {
         img {
             width: 100%;
@@ -1535,7 +1606,7 @@ $grey-line: #DFDFDF;
         line-height: 1.4;
         font-size: 14px;
         display: grid;
-        grid-template-columns: 5fr 4fr 3fr 2fr auto;
+        grid-template-columns: 5fr 4fr 3fr 2fr 120px;
         gap: 0 5%;
         padding: 30px 35px;
         border-radius: 8px;
