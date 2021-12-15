@@ -225,9 +225,7 @@
     /* ---------------------------------- results --------------------------------- */
     .image-banner {
         padding: 20vw 15px;
-        &_past-auction {
-            background-attachment: scroll;
-        }
+        background-attachment: scroll;
         &__title {
             font-size: 5vw;
         }
@@ -376,6 +374,11 @@
         grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
+    .lot-item-small {
+        &__image {
+            margin-right: 20px;
+        }
+    }
     /* --------------------------------- profile -------------------------------- */
     .profile {
         padding-top: 30px;
@@ -479,6 +482,17 @@
         margin-top: 30px;
     }
 
+    /* --------------------------------- modals --------------------------------- */
+
+    .invoice-modal {
+        &__title {
+            padding: 20px 0;
+        }
+        &__body {
+            padding: 20px 0;
+        }
+    }
+
     /* --------------------------------- global --------------------------------- */
     .article-text {
         > h1 {
@@ -544,6 +558,11 @@
         & + .c-button {
             margin-top: 30px;
         }
+    }
+    .modal-right-sidebar {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 20px;
     }
 }
 
@@ -1098,6 +1117,9 @@
             }
         }
     }
+    .invoice-create {
+        padding: 20px;
+    }
 
     /* --------------------------------- contact -------------------------------- */
     .blue-banner {
@@ -1311,6 +1333,12 @@
         padding: 0 20px 30px 20px;
         &__btns {
             margin-bottom: 30px;
+            gap: 15px 0;
+            &_2x {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                gap: 15px 0;
+            }
         }
         &__sub-link {
             text-align: center;

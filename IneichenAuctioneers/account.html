@@ -191,17 +191,24 @@
             <h1 class="title">Good day, Mr Zolotov ;)</h1>
             <div class="profile__wrapper">
                 <div class="tabs-list">
-                    <a href="#profTab1" class="tabs-list__item tabs-list__item_active">Profile</a>
+                    <a href="#profTab1" class="tabs-list__item">Profile</a>
                     <a href="#profTab2" class="tabs-list__item">My Bids <span class="badge">3</span></a>
                     <a href="#profTab3" class="tabs-list__item">Payment</a>
-                    <a href="#profTab4" class="tabs-list__item">Invoices</a>
+                    <a href="#profTab4" class="tabs-list__item tabs-list__item_active">Invoices</a>
                 </div>
                 <div class="tabs-blocks">
-                    <div id="profTab1" class="tabs-blocks__item tabs-blocks__item_active">
+                    <div id="profTab1" class="tabs-blocks__item ">
                         <div class="profile-general">
+                            <div class="profile-general__verify">
+                                <a href="" class="c-button c-button_blue c-button_filled c-button_medium">Verify account</a>
+                                <p>
+                                    Your account currently enables you to get updates, save lots, access sale details <br>
+                                    and more.To participate in auctions, please take a moment to verify your account.
+                                </p>
+                            </div>
                             <div class="profile-general__row">
-                                <span>Full name</span>
-                                <strong>Mr Bogdan Zolotov</strong>
+                                <span>Account type</span>
+                                <strong>Corporate</strong>
                             </div>
                             <div class="profile-general__row">
                                 <span>Email address</span>
@@ -219,29 +226,27 @@
                                     <i class="mdi mdi-arrow-right"></i>
                                 </a>
                             </div>
-                            <div class="profile-general__note">
-                                Your account currently enables you to get updates, save lots, access sale details <br>
-                                and more.To participate in auctions, please take a moment to verify your account.
-                            </div>
-                            <a href="" class="profile-general__verify c-button c-button_blue c-button_filled c-button_medium">Verify account</a>
-                        </div>
-                        <div class="profile__title-small">Login services</div>
-                        <div class="profile-general">
+                            <hr>
                             <div class="profile-general__row">
-                                <span>Google</span>
-                                <strong class="green-text">connected</strong>
-                                <a href="" class="red-text">
-                                    Disconnect
-                                    <i class="mdi mdi-arrow-right"></i>
-                                </a>
+                                <span>Full name</span>
+                                <strong>Mr Sergey Dolgushin </strong>
                             </div>
                             <div class="profile-general__row">
-                                <span>Facebook</span>
-                                <strong class="grey-text">not connected</strong>
-                                <a href="" class="blue-text">
-                                    Connect
-                                    <i class="mdi mdi-arrow-right"></i>
-                                </a>
+                                <span>Phone</span>
+                                <strong>+79191395317</strong>
+                            </div>
+                            <hr>
+                            <div class="profile-general__row">
+                                <span>Company name</span>
+                                <strong>Mr Sergey Dolgushin</strong>
+                            </div>
+                            <div class="profile-general__row">
+                                <span>Delivery address</span>
+                                <strong>Mr Sergey Dolgushin</strong>
+                            </div>
+                            <div class="profile-general__row">
+                                <span>Legal address</span>
+                                <strong>Mr Sergey Dolgushin</strong>
                             </div>
                         </div>
                     </div>
@@ -404,12 +409,32 @@
                             </a>
                         </div>
                     </div>
-                    <div id="profTab4" class="tabs-blocks__item">
+                    <div id="profTab4" class="tabs-blocks__item tabs-blocks__item_active">
                         <div class="tabs-list tabs-list_inline">
-                            <a href="#invoiсeTab1" class="tabs-list__item tabs-list__item_active">Open invoices</a>
-                            <a href="#invoiсeTab2" class="tabs-list__item">Closed invoices</a>
+                            <a href="#invoiсeTab1" class="tabs-list__item tabs-list__item_active">Pending payment</a>
+                            <a href="#invoiсeTab2" class="tabs-list__item">Paid</a>
                         </div>
                         <div id="invoiсeTab2" class="tabs-blocks__item tabs-blocks__item_active">
+                            <div class="invoice-create">
+                                <div class="invoice-create__title">Select the right option</div>
+                                <div class="toggle-field toggle-field_3x">
+                                    <strong>I will pick my order up</strong>
+                                    <input class="toggle-field__input" type="radio" name="pickup" id="Outside">
+                                    <label class="toggle-field__label" for="Outside">Outside Switzerland</label>
+                                    <input class="toggle-field__input" type="radio" name="pickup" id="Inside">
+                                    <label class="toggle-field__label" for="Inside">In Switzerland</label>
+                                </div>
+                                <div class="toggle-field toggle-field_3x">
+                                    <strong>Preferred invoice currency</strong>
+                                    <input class="toggle-field__input" type="radio" name="Currency" id="CHF">
+                                    <label class="toggle-field__label" for="CHF">CHF</label>
+                                    <input class="toggle-field__input" type="radio" name="Currency" id="USD">
+                                    <label class="toggle-field__label" for="USD">USD</label>
+                                    <input class="toggle-field__input" type="radio" name="Currency" id="EUR">
+                                    <label class="toggle-field__label" for="EUR">EUR</label>
+                                </div>
+                                <a href="" class="c-button c-button_blue c-button_filled c-button_medium">Create invoice</a>
+                            </div>
                             <div class="invoice-list">
                                 <div class="invoice-list__item">
                                     <div class="invoice-list__name">
@@ -422,7 +447,7 @@
                                     </div>
                                     <div class="invoice-list__btn">
                                         <a href="" class="c-button c-button_blue c-button_filled c-button_medium">
-                                            Pay 👉
+                                            View 👉
                                         </a>
                                     </div>
                                 </div>
@@ -437,7 +462,7 @@
                                     </div>
                                     <div class="invoice-list__btn">
                                         <a href="" class="c-button c-button_blue c-button_filled c-button_medium">
-                                            Pay 👉
+                                            View 👉
                                         </a>
                                     </div>
                                 </div>
@@ -506,6 +531,7 @@
             <a href="" class="card-remove-btn">Delete card</a>
         </div>
     </div>
+
     <div id="AddCard" class="modal modal-small">
         <div class="modal-small__title">Add card</div>
         <div class="modal-small__body">
@@ -550,6 +576,150 @@
         </div>
     </div>
 
+    <div id="InvoiceModal" class="invoice-modal modal modal-right-sidebar">
+        <div class="invoice-modal__title">
+            Invoice #135555
+            <span class="invoice-modal__date">08 Aug 2021, 14:00</span>
+        </div>
+        <div class="invoice-modal__body">
+            <div class="lots-list">
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                
+            </div>
+            <div class="invoice-modal__total">
+                Total amount: 
+                <strong>CHF 6,000</strong>
+            </div>
+            <div class="invoice-modal__info">
+                <b>Ineichen Zürich AG</b> <br>
+                8001 Zürich | Stadthausquai 11-13 | CHE-101.038.023 <br>
+                Tel.: +41 44 298 11 44 | E-Mail: info@ineichen.com | www.ineichen.com <br>
+                Bank: Zürcher Kantonalbank | 8010 Zürich | SWIFT-Adresse (BIC): ZKBKCHZZ80A <br>
+                IBAN: CHF CH44 0070 0114 8036 4565 3 <br>
+                EUR CH13 0070 0130 0092 3952 9 <br>
+                USD CH88 0070 0130 0092 3953 7
+            </div>
+            <div class="invoice-modal__btns">
+                <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Upload payment confirmation</a>
+                <a href="" class="c-button c-button_brown c-button_filled c-button_full c-button_medium">Download  PDF</a>
+            </div>
+        </div>
+    </div>
+
     <div id="ModalVerification" class="modal modal-small modal-small_fs">
         сюда фрейм для верификации
     </div>
@@ -588,6 +758,14 @@
         //     closeClass: 'mdi mdi-close',
         //     closeText: ''
         // });
+
+        $('#InvoiceModal').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
 
         
 

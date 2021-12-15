@@ -262,6 +262,7 @@
                             </div>
                         </div>
                         <a href="" class="c-button c-button_blue c-button_filled c-button_full">Bid 10,000 CHF</a>
+                        <div class="live-auction__premium-bid">excl. 24% Premium</div>
                         <a href="" class="c-button c-button_blue c-button_filled c-button_full disabled" style="display: none">Waiting for the auctioneer</a>
                         <div class="live-auction__pre-bid" style="display: none">
                             <span>
@@ -475,6 +476,25 @@
             </div>
         </div>
     </div>
+    <div id="BidConfirmPremium" class="modal modal-small">
+        <div class="modal-small__title">LOT 1 - сonfirm your bit</div>
+        <div class="modal-small__body">
+            <div class="first-bid-confirm">
+                <strong>CHF  1'500.- </strong>
+                <span>excl. 24% Premium</span>
+            </div>
+            <label class="c-chekbox" for="BidConfirmAuction">
+                <input type="checkbox" name="BidConfirm" id="BidConfirmAuction">
+                Don’t ask confirmation again for this auction
+            </label>
+        </div>
+        <div class="modal-small__footer">
+            <div class="modal-small__btns">
+                <a href="" class="c-button c-button_blue c-button_full c-button_medium">Cancel</a>
+                <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Confirm</a>
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
@@ -482,20 +502,27 @@
     <script src="js/main.js"></script>
 
     <script>
-        // $('#ChangePass').modal({
-        //     fadeDuration: 100,
-        //     closeExisting: false,
-        //     escapeClose: false,
-        //     closeClass: 'mdi mdi-close',
-        //     closeText: ''
-        // });
-        // $('#BidConfirm').modal({
-        //     fadeDuration: 100,
-        //     closeExisting: false,
-        //     escapeClose: false,
-        //     closeClass: 'mdi mdi-close',
-        //     closeText: ''
-        // });
+        $('#ChangePass').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+        $('#BidConfirm').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+        $('#BidConfirmPremium').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
         if (window.matchMedia("(max-width: 768px)").matches) {
             
         } else {
