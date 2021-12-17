@@ -836,16 +836,35 @@ $grey-line: #DFDFDF;
     }
     &__price {
         display: grid;
-        margin: 10px 0 0 0;
-        font-size: 14px;
+        margin: 10px 10px 0 10px;
+        font-size: 13px;
         grid-template-columns: 1fr;
-        row-gap: 5px;
+        row-gap: 8px;
     }
     &__price-single {
         font-weight: 500;
     }
     &__price-range {
         color: $grey-text;
+        display: flex;
+    }
+    &__bids-count {
+        margin-left: auto;
+        color: #000;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__closing {
+        display: flex;
+        align-items: center;
+    }
+    &__progress {
+        flex: 1 1 auto;
+    }
+    &__closing-time {
+        margin-left: 15px;
+        color: $grey-text;
+        font-weight: 600;
     }
     &__info {
         text-decoration: none;
@@ -1545,7 +1564,7 @@ $grey-line: #DFDFDF;
             justify-content: space-between;
         }
         div + div {
-            margin-top: 40px;
+            margin-top: 20px;
         }
         span {
             color: $grey-text;
@@ -1583,6 +1602,10 @@ $grey-line: #DFDFDF;
                 text-decoration: none;
             }
         }
+        span {
+            color: $grey-text;
+            font-weight: 500;
+        }
     }
     &__prams-title {
         font-size: 24px;
@@ -1605,6 +1628,37 @@ $grey-line: #DFDFDF;
     }
 }
 
+.timed-auction-end {
+    display: flex;
+    border: 1px $grey-line solid;
+    margin-bottom: 60px;
+    border-radius: 15px;
+    padding: 30px;
+    &__timer {
+        flex: 1 1 auto;
+    }
+    &__bids {
+        display: flex;
+        justify-content: space-between;
+    }
+    strong {
+        font-family: $america;
+        font-size: 20px;
+    }
+    &__progress {
+        margin: 20px 0;
+    }
+    &__current-bid {
+        margin-left: 60px;
+    }
+    &__bid-summ {
+        font-family: $america;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 30px;
+        margin: 20px 0;
+    }
+}
 
 /* --------------------------------- account -------------------------------- */
 .profile {
