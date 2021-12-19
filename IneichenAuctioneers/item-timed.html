@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="timed-auction-end__bids">
-                            <span><a href="">Total bids 16</a></span>
+                            <span><a href="#" id="BidsHistoryOpen">Total bids 16</a></span>
                             <span>New bid: + 60 minutes</span>
                             <span>Increment:  CHF 500</span>
                         </div>
@@ -269,6 +269,57 @@
             <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
         </div>
     </div>
+    <div id="BidsHistory" class="modal modal-small">
+        <div class="modal-small__title">Bid history</div>
+        <div class="modal-small__body">
+            <div class="table-scroll">
+                <table class="bids-table">
+                    <thead>
+                        <tr>
+                            <th>AMOUNT</th>
+                            <th>BIDDER</th>
+                            <th>DATE & TIME</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>CHF 2 500</b></td>
+                            <td><span class="flag-icon flag-icon-ch"></span> <b>№3545</b></td>
+                            <td><span class="grey-text">10 DEC 1:20 PM UTC</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>CHF 2 500</b></td>
+                            <td><span class="flag-icon flag-icon-ch"></span> <b>№3545</b></td>
+                            <td><span class="grey-text">10 DEC 1:20 PM UTC</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>CHF 2 500</b></td>
+                            <td><span class="flag-icon flag-icon-ch"></span> <b>№3545</b></td>
+                            <td><span class="grey-text">10 DEC 1:20 PM UTC</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>CHF 2 500</b></td>
+                            <td><span class="flag-icon flag-icon-ch"></span> <b>№3545</b></td>
+                            <td><span class="grey-text">10 DEC 1:20 PM UTC</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>CHF 2 500</b></td>
+                            <td><span class="flag-icon flag-icon-ch"></span> <b>№3545</b></td>
+                            <td><span class="grey-text">10 DEC 1:20 PM UTC</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>CHF 2 500</b></td>
+                            <td><span class="flag-icon flag-icon-ch"></span> <b>№3545</b></td>
+                            <td><span class="grey-text">10 DEC 1:20 PM UTC</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
+        </div>
+    </div>
     <div id="Rules" class="modal modal-small modal-small_2x">
         <div class="modal-small__title">How to Bid</div>
         <div class="modal-small__body">
@@ -333,6 +384,16 @@
         })
         $('#BidsTableOpen').click(function(){
             $('#BidsTable').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
+            return false;
+        })
+        $('#BidsHistoryOpen').click(function(){
+            $('#BidsHistory').modal({
                 fadeDuration: 100,
                 closeExisting: false,
                 escapeClose: false,
