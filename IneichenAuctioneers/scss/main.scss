@@ -563,6 +563,7 @@ $grey-line: #DFDFDF;
 /* ---------------------------------- results --------------------------------- */
 .image-banner {
     padding: 15vw 15px;
+    margin-bottom: 100px;
     text-align: center;
     background-position: center;
     background-attachment: fixed;
@@ -2266,6 +2267,59 @@ $grey-line: #DFDFDF;
     }
 }
 
+/* ---------------------------------- blog ---------------------------------- */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 120px 60px;
+}
+
+.blog-card {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 30px 0;
+    &__teaser {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+    &__image {
+        width: 100%;
+    }
+    &__title {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        font-size: 39px;
+        line-height: 1.2;
+        font-weight: 500;
+        span {
+            display: block;
+            font-size: 60px;
+            font-weight: 600;
+        }
+    }
+    &__info {
+        display: flex;
+    }
+    &__text {
+        flex: 1 1 auto;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    &__date {
+        flex: 0 0 auto;
+        margin-left: 60px;
+    }
+}
 /* -------------------------------- page-cap -------------------------------- */
 .page-cap {
     &__text {
