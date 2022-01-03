@@ -615,12 +615,24 @@
 
 .tabs-list {
     &__item {
+        $root: &;
         display: block;
         border-radius: 8px;
         text-decoration: none;
         font-weight: 500;
         line-height: 54px;
         padding: 0 25px;
+        transition: all 0.2s;
+        &_border {
+            color: #000;
+            border: 1px $grey-line solid;
+            margin-right: 10px;
+            &#{$root}_active {
+                color: #fff;
+                border-color: $blue-bg;
+                background: $blue-bg;
+            }
+        }
         &_active {
             background: rgba($blue-bg, 0.06);
         }

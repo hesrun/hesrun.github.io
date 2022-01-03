@@ -62,6 +62,27 @@
         grid-template-columns: 65% 35%;
         height: calc(100vh - 80px);
     }
+
+    .banners-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 5px;
+    }
+    .banners-grid-item {
+        &_2x {
+            grid-column: auto;
+        }
+        &__image {
+            height: 40vw;
+        }
+        &__info {
+            padding: 0 30px;
+        }
+        &__name {
+            font-size: 24px;
+        }
+    }
+
     .services-list {
         grid-template-columns: 1fr 1fr;
         gap: 30px 30px;
@@ -177,6 +198,14 @@
         }
     }
 
+    .banners-grid-item {
+        &__image {
+            height: 45vw;
+        }
+        &__info {
+            padding: 0 30px;
+        }
+    }
     .services-list {
         grid-template-columns: 1fr;
         gap: 30px 0px;
@@ -683,6 +712,40 @@
             width: 100%;
         }
     }
+
+    .banners-grid-item {
+        position: relative;
+        &__image {
+            height: 40vw;
+        }
+        &__info {
+            color: #000;
+            height: auto;
+            position: static;
+            padding: 30px 20px;
+        }
+        &__name {
+            color: #fff;
+            position: absolute;
+            left: 5vw;
+            top: 20vw;
+            max-width: 50%;
+            transform: translateY(-50%);
+        }
+        &__date {
+            margin-top: 0px;
+            font-size: 14px;
+        }
+        &__text {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .c-button {
+            width: 100%;
+            box-shadow: 0 0 0 1px rgba($blue-bg,0.1);
+        }
+    }
+
     .mobile-menu {
         &__aside {
             max-width: 100%;
@@ -1482,10 +1545,14 @@
         display: flex;
         gap: 15px;
         padding: 15px 0;
+        flex-wrap: wrap;
         &__item {
             font-size: 12px;
             line-height: 40px;
             padding: 0 10px;
+            &_border {
+                margin-right: 0px;
+            }
         }
     }
     .modal-small {
