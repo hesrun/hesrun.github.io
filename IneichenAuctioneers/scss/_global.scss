@@ -169,7 +169,7 @@ input:-webkit-autofill:active{
             border-radius: 15px;
             border: 1px $grey-line solid;
             vertical-align: middle;
-            width: 100%;
+            max-width: 100%;
         }
         figcaption {
             margin-top: 10px;
@@ -179,6 +179,14 @@ input:-webkit-autofill:active{
             color: $grey-text;
             line-height: 1.5;
         }
+    }
+    .f-r {
+        float: right;
+        margin: 0px 0 15px 20px;
+    }
+    .f-l {
+        float: left;
+        margin: 0px 20px 15px 0;
     }
     blockquote {
         margin: 60px 0;
@@ -201,4 +209,17 @@ input:-webkit-autofill:active{
             pointer-events: none;
         }
     }
+    hr {
+        margin: 30px 0;
+        border: none;
+        height: 1px;
+        background: $grey-line;
+    }
+}
+.article-figures {
+    margin: 0 auto;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }

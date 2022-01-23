@@ -238,7 +238,7 @@ input:-webkit-autofill:active {
   border-radius: 15px;
   border: 1px #DFDFDF solid;
   vertical-align: middle;
-  width: 100%;
+  max-width: 100%;
 }
 
 .article-text figure figcaption {
@@ -248,6 +248,16 @@ input:-webkit-autofill:active {
   font-size: 14px;
   color: #676767;
   line-height: 1.5;
+}
+
+.article-text .f-r {
+  float: right;
+  margin: 0px 0 15px 20px;
+}
+
+.article-text .f-l {
+  float: left;
+  margin: 0px 20px 15px 0;
 }
 
 .article-text blockquote {
@@ -271,6 +281,23 @@ input:-webkit-autofill:active {
   top: -20px;
   color: #DFDFDF;
   pointer-events: none;
+}
+
+.article-text hr {
+  margin: 30px 0;
+  border: none;
+  height: 1px;
+  background: #DFDFDF;
+}
+
+.article-figures {
+  margin: 0 auto;
+  max-width: 700px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 /* ----------------------------------- ui ----------------------------------- */
@@ -6720,6 +6747,7 @@ input:-webkit-autofill:active {
   }
   .article-text figure {
     margin: 30px 0;
+    text-align: center;
   }
   .article-text blockquote {
     margin: 30px 0;
@@ -6730,6 +6758,17 @@ input:-webkit-autofill:active {
     font-size: 80px;
     left: -10px;
     top: -30px;
+  }
+  .article-text .f-r {
+    float: none;
+    margin: 30px 0;
+  }
+  .article-text .f-l {
+    float: none;
+    margin: 30px 0;
+  }
+  .article-figures {
+    gap: 0 15px;
   }
   .products-gallery {
     grid-gap: 15px;
