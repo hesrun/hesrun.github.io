@@ -38,6 +38,12 @@ body::-webkit-scrollbar-track {
   background: transparent;
 }
 
+body.app {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 .noscroll {
   overflow: hidden;
 }
@@ -638,6 +644,11 @@ input:-webkit-autofill:active {
       grid-template-columns: 200px 1fr 1fr 1fr;
 }
 
+.toggle-field_2x {
+  -ms-grid-columns: 200px 1fr 1fr;
+      grid-template-columns: 200px 1fr 1fr;
+}
+
 .toggle-field__input {
   display: none;
 }
@@ -691,12 +702,11 @@ input:-webkit-autofill:active {
 }
 
 .c-chekbox {
+  display: block;
   margin-bottom: 15px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 1fr;
-      grid-template-columns: auto 1fr;
-  gap: 0 15px;
+  line-height: 20px;
+  padding-left: 35px;
+  position: relative;
   cursor: pointer;
 }
 
@@ -705,7 +715,11 @@ input:-webkit-autofill:active {
 }
 
 .c-chekbox input {
-  margin-top: 1px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
 }
 
 .c-chekbox:last-child {
@@ -1320,6 +1334,35 @@ input:-webkit-autofill:active {
   -webkit-transform: translateX(-150%);
           transform: translateX(-150%);
   opacity: 0;
+}
+
+.start-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.start-count__item {
+  text-align: center;
+  min-width: 75px;
+  margin-right: 10px;
+}
+
+.start-count__item:last-child {
+  margin-left: 20px;
+}
+
+.start-count b {
+  font-family: "GT America Extended", sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  display: block;
+}
+
+.start-count span {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 300;
 }
 
 @-webkit-keyframes Spin {
@@ -2955,6 +2998,12 @@ input:-webkit-autofill:active {
   gap: 15px 0;
 }
 
+.live-auction__stream_buttons_cols {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0 15px;
+}
+
 .live-auction__stream-footer {
   display: -ms-grid;
   display: grid;
@@ -2964,6 +3013,11 @@ input:-webkit-autofill:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+}
+
+.live-auction__stream-footer_no-bids {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 .live-auction__bids {
@@ -3079,6 +3133,45 @@ input:-webkit-autofill:active {
 .live-auction__lot .lot-item__image img {
   width: 100%;
   height: 100%;
+}
+
+.live-auction__start-block {
+  max-width: 600px;
+}
+
+.live-auction__start-timer {
+  margin-bottom: 50px;
+}
+
+.live-auction__start-timer .title {
+  margin: 15px 0 10px;
+}
+
+.live-auction__start-agree {
+  margin-bottom: 40px;
+}
+
+.live-auction__start-agree span {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.live-auction__start-toggle {
+  margin-bottom: 40px;
+}
+
+.live-auction__start-btns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.live-auction__start-btns .c-button:first-child {
+  grid-column: 1 / 2 span;
 }
 
 .live-bids {
@@ -6014,6 +6107,17 @@ input:-webkit-autofill:active {
   }
   .content {
     padding-top: 70px;
+  }
+  .content_mobile {
+    padding: 75px 0 90px 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
   }
   .main-banner {
     height: calc(100vh - 70px);

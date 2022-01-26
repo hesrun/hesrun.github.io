@@ -1192,12 +1192,19 @@ $grey-line: #DFDFDF;
     &__stream_buttons {
         display: grid;
         gap: 15px 0;
+        &_cols {
+            grid-template-columns: 1fr 1fr;
+            gap: 0 15px;
+        }
     }
     &__stream-footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0 15px;
         align-items: start;
+        &_no-bids {
+            grid-template-columns: 1fr;
+        }
     }
     &__bids {
         border: 1px $grey-line solid;
@@ -1277,7 +1284,39 @@ $grey-line: #DFDFDF;
             }
         }
     }
+    &__start-block {
+        max-width: 600px;
+    }
+    &__start-timer {
+        margin-bottom: 50px;
+        .title {
+            margin: 15px 0 10px;
+        }
+    }
+    &__start-agree {
+        margin-bottom: 40px;
+        span {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+    &__start-toggle {
+        margin-bottom: 40px;
+    }
+    &__start-btns {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+        margin-bottom: 40px;
+        .c-button:first-child {
+            grid-column: 1 / 2 span; 
+        }
+    }
 }
+
+
+
 .live-bids {
     border: 1px $grey-line solid;
     border-radius: 12px;
