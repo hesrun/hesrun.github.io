@@ -3201,14 +3201,21 @@ td:first-child:not(.final-amounts__change) {
     display: block;
   }
   .footer__nav {
-    display: block;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 30px;
   }
   .footer__nav-col {
+    text-align: center;
     width: 100% !important;
   }
   .footer__nav-col + .footer__nav-col {
-    margin-top: 30px;
     margin-left: auto;
+  }
+  .footer__nav-col:last-child {
+    grid-column: 1 / 2 span;
   }
 }
 /*# sourceMappingURL=main.css.map */

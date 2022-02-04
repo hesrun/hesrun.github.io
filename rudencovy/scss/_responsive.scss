@@ -158,14 +158,21 @@
             display: block;
         }
         &__nav {
-            display: block;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
         &__nav-col {
+            text-align: center;
             width: 100% !important;
             & + & {
-                margin-top: 30px;
                 margin-left: auto;
             }
         }
+        &__nav-col:last-child {
+            grid-column: 1 / 2 span;
+        }
     }
+
+    .cookie-note {}
 }
