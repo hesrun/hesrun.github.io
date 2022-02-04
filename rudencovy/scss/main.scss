@@ -66,7 +66,7 @@ textarea {
     color: $brown;
 }
 .container {
-    width: 1022px;
+    max-width: 1022px;
     margin: 0 auto;
     padding: 0 15px;
     &_flex {
@@ -886,7 +886,7 @@ textarea {
         text-decoration: none;
     }
     &__socials {
-        margin-left: 40px;
+        margin-left: 30px;
         display: flex;
         align-items: center;
     }
@@ -895,6 +895,7 @@ textarea {
         line-height: 48px;
         width: 48px;
         font-size: 20px;
+        text-align: center;
         &:hover {
             color: $brown-hover-color;
         }
@@ -1002,6 +1003,9 @@ textarea {
             background: #773F43;
         }
     }
+    &__burger {
+        display: none;
+    }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1012,6 +1016,9 @@ textarea {
     border-bottom: 2px $brown solid;
     &.slick-dotted {
         margin-bottom: 0px;
+    }
+    &__image {
+        max-width: 100%;
     }
     .slick-dots {
         bottom: 8px;
@@ -1610,7 +1617,7 @@ textarea {
 .cookie-note {
     color: $brown;
     font-size: 14px;
-    padding: 12px 0;
+    padding: 12px 15px;
     position: fixed;
     text-align: center;
     bottom: 0px;
@@ -2528,3 +2535,5 @@ textarea {
     padding: 25px;
     margin-top: 30px;
 }
+
+@import "_responsive";
