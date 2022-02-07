@@ -391,6 +391,12 @@ input:-webkit-autofill:active {
   border-color: #BD9E5E;
 }
 
+.c-button_white.c-button_hover_black:hover {
+  color: #fff;
+  background: #000;
+  border-color: #000;
+}
+
 .c-button_grey {
   color: black;
   border: 1px #DFDFDF solid;
@@ -2006,7 +2012,6 @@ input:-webkit-autofill:active {
 
 .banners-grid-item__info {
   padding: 0 80px;
-  color: #fff;
   position: absolute;
   left: 0;
   top: 0;
@@ -2032,14 +2037,28 @@ input:-webkit-autofill:active {
 }
 
 .banners-grid-item__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 25px;
-  font-size: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.banners-grid-item__date .mdi {
+  font-size: 18px;
+  width: 20px;
+  margin-right: 5px;
 }
 
 .banners-grid-item__text {
-  line-height: 1.4;
-  margin-top: 30px;
+  line-height: 1.5;
+  font-size: 14px;
   margin-bottom: 30px;
+  margin-left: 25px;
   max-width: 300px;
 }
 
@@ -4521,14 +4540,14 @@ input:-webkit-autofill:active {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  gap: 120px 60px;
+  gap: 60px 60px;
 }
 
 .blog-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
   gap: 30px 0;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -4594,9 +4613,11 @@ input:-webkit-autofill:active {
 }
 
 .blog-card__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px 0;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
 
 .blog-card__text {
@@ -4607,11 +4628,8 @@ input:-webkit-autofill:active {
   line-height: 1.5;
 }
 
-.blog-card__date {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
-  margin-left: 60px;
+.blog-card__text strong {
+  font-weight: bold;
 }
 
 /* -------------------------------- page-cap -------------------------------- */
@@ -6197,7 +6215,6 @@ input:-webkit-autofill:active {
     font-size: 14px;
   }
   .banners-grid-item__text {
-    margin-top: 30px;
     margin-bottom: 30px;
   }
   .banners-grid-item .c-button {
@@ -6832,8 +6849,7 @@ input:-webkit-autofill:active {
             flex-direction: column-reverse;
   }
   .blog-card__date {
-    margin: 0 0 20px 0;
-    font-size: 15px;
+    font-size: 14px;
   }
   .blog-card__text {
     font-size: 14px;

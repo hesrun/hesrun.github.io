@@ -412,7 +412,6 @@ $grey-line: #DFDFDF;
     }
     &__info {
         padding: 0 80px;
-        color: #fff;
         position: absolute;
         left: 0;
         top: 0;
@@ -427,13 +426,22 @@ $grey-line: #DFDFDF;
         font-weight: 500;
     }
     &__date {
+        display: flex;
+        align-items: center;
         margin-top: 25px;
-        font-size: 12px;
+        font-weight: 600;
+        font-size: 14px;
+        .mdi {
+            font-size: 18px;
+            width: 20px;
+            margin-right: 5px;
+        }
     }
     &__text {
-        line-height: 1.4;
-        margin-top: 30px;
+        line-height: 1.5;
+        font-size: 14px;
         margin-bottom: 30px;
+        margin-left: 25px;
         max-width: 300px;
     }
 }
@@ -2358,12 +2366,12 @@ $grey-line: #DFDFDF;
 .blog-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 120px 60px;
+    gap: 60px 60px;
 }
 
 .blog-card {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr;
     gap: 30px 0;
     align-items: start;
     &__teaser {
@@ -2410,16 +2418,17 @@ $grey-line: #DFDFDF;
         }
     }
     &__info {
-        display: flex;
+        display: grid;
+        gap: 20px 0;
+        grid-template-rows: 1fr;
     }
     &__text {
         flex: 1 1 auto;
         font-size: 18px;
         line-height: 1.5;
-    }
-    &__date {
-        flex: 0 0 auto;
-        margin-left: 60px;
+        strong {
+            font-weight: bold;
+        }
     }
 }
 /* -------------------------------- page-cap -------------------------------- */
