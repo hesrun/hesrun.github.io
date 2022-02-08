@@ -150,8 +150,23 @@
     /* ---------------------------------- blog ---------------------------------- */
 
     .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 60px 0px;
+        gap: 60px 30px;
+    }
+    .blog-card {
+        grid-column: 3 span;
+        &_double {
+            grid-column: 3 span;
+        }
+        &__teaser {
+            border-radius: 8px;
+            height: 20vw;
+        }
+        &__title {
+            font-size: 2.5vw;
+            span {
+                font-size: 3vw;
+            }
+        }
     }
 
 
@@ -576,15 +591,15 @@
     /* ----------------------------------- ui ----------------------------------- */
     .tabs-list {
         display: flex;
-        gap: 30px;
+        gap: 15px;
         border-bottom: 1px rgba($grey-line, .5) solid;
         padding: 20px 0;
         &_inline {
             margin-bottom: 15px;
         }
         &__item {
-            line-height: 40px;
-            font-size: 14px;
+            height: 40px;
+            font-size: 12px;
             flex: 1 1 auto;
             text-align: center;
         }
@@ -1370,27 +1385,24 @@
     /* ---------------------------------- blog ---------------------------------- */
 
     .blog-grid {
-        grid-template-columns: 1fr;
-        gap: 40px 0px;
+        gap: 40px 0px;   
     }
 
     .blog-card {
         gap: 20px 0;
+        grid-column: 6 span;
+        &_double {
+            grid-column: 6 span;
+        }
+        &__teaser {
+            border-radius: 8px;
+            height: 40vw;
+        }
         &__title {
-            font-size: 22px;
+            font-size: 4vw;
             span {
-                font-size: 32px;
+                font-size: 5vw;
             }
-        }
-        &__info {
-            flex-direction: column-reverse;
-        }
-        &__date {
-            font-size: 14px;
-        }
-        &__text {
-            font-size: 14px;
-            line-height: 1.5;
         }
     }
 
@@ -1569,7 +1581,7 @@
         flex-wrap: wrap;
         &__item {
             font-size: 12px;
-            line-height: 40px;
+            height: 40px;
             padding: 0 10px;
             &_border {
                 margin-right: 0px;
