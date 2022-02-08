@@ -69,11 +69,20 @@
         gap: 5px;
     }
     .banners-grid-item {
+        height: 300px;
+        &:nth-child(2) {
+            img {
+                border-radius: 0;
+            }
+        }
+        &:nth-child(3) {
+            img {
+                border-radius: 0;
+            }
+        }
         &_2x {
             grid-column: auto;
-        }
-        &__image {
-            height: 40vw;
+            height: 300px;
         }
         &__info {
             padding: 0 30px;
@@ -214,9 +223,6 @@
     }
 
     .banners-grid-item {
-        &__image {
-            height: 45vw;
-        }
         &__info {
             padding: 0 30px;
         }
@@ -592,10 +598,9 @@
     .tabs-list {
         display: flex;
         gap: 15px;
-        border-bottom: 1px rgba($grey-line, .5) solid;
         padding: 20px 0;
         &_inline {
-            margin-bottom: 15px;
+            margin-bottom: 0px;
         }
         &__item {
             height: 40px;
@@ -739,35 +744,53 @@
         }
     }
 
+    .banners-grid {
+        padding: 15px;
+        gap: 30px 0;
+        margin-bottom: 50px;
+    }
     .banners-grid-item {
         position: relative;
+        border: 1px rgba($grey-line, .5) solid;
+        height: auto;
+        border-radius: 15px;
+        &_2x {
+            height: auto;
+        }
         &__image {
-            height: 40vw;
+            position: static;
+            height: auto;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        &__name {
+            font-size: 20px;
+            margin-bottom: 20px;
         }
         &__info {
             color: #000;
             height: auto;
             position: static;
-            padding: 30px 20px;
+            padding: 20px 25px;
         }
-        &__name {
-            color: #fff;
-            position: absolute;
-            left: 5vw;
-            top: 20vw;
-            max-width: 50%;
-            transform: translateY(-50%);
-        }
-        &__date {
-            margin-top: 0px;
-            font-size: 14px;
+        &__date,
+        &__location {
+            i.mdi {
+                margin-right: 15px;
+            }
+            align-items: flex-start;
+            margin: 10px 0;
+            font-size: 15px;
+            line-height: 1.2;
         }
         &__text {
-            margin-bottom: 30px;
+            margin-top: -10px;
+            margin-left: 35px;
+            margin-bottom: 15px;
         }
         .c-button {
+            margin-top: 20px;
             width: 100%;
-            box-shadow: 0 0 0 1px rgba($blue-bg,0.1);
         }
     }
 
