@@ -468,9 +468,6 @@
             padding: 15px;
             gap: 15px 15px;
         }
-        &__cancel {
-            grid-column: 1 / 4 span;
-        }
     }
     .invoice-list {
         margin-left: -15px;
@@ -771,7 +768,7 @@
             color: #000;
             height: auto;
             position: static;
-            padding: 20px 25px;
+            padding: 25px;
         }
         &__date,
         &__location {
@@ -828,67 +825,38 @@
         
     }
     .auction-item {
-        border: 1px $grey-line solid;
-        border-radius: 12px;
-        position: relative;
-        overflow: hidden;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 25px;
         &__image {
-            border-radius: 0px;
-            height: 200px;
-            margin: 0;
+            margin-left: -25px;
+            margin-right: -25px;
         }
         &__title {
-            margin: 0px;
-            padding: 30px 20px 0;
-            position: static;
-            &:last-child {
-                border-bottom: none;
-            }
+            margin-bottom: 25px;
         }
         &__name {
             padding: 0px;
-            font-size: 18px;
-            margin-bottom: 0px;
-        }
-        &__lots {
-            font-size: 13px;
-        }
-        &__btns {
-            padding: 0 20px 20px;
-        }
-        .auction-date-location {
-            padding: 30px 20px;
-            margin: 0px;
+            font-size: 20px;
         }
     }
     
     .auction-date-location {
         margin-bottom: 30px;
         &__item {
-            display: block;
+            align-items: flex-start;
             line-height: 20px;
-            padding-left: 30px;
             position: relative;
-            i.mdi {
-                color: rgba($grey-text, .5);
-                left: 0px;
-                top: 1px;
-                position: absolute;
-                font-size: 18px;
-                margin-right: 5px;
-            }
             span {
                 display: block;
-                font-size: 13px;
+                font-size: 15px;
             }
             span + span:before {
                 display: none;
             }
-            & + & {
-                margin-top: 15px;
-            }
         }
     }
+    
     .our-team {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px 15px;
@@ -972,6 +940,7 @@
     }
     .filtering-btns {
         > strong {
+            display: none;
             font-size: 18px;
         }
         margin: 0 0 15px;
@@ -1186,6 +1155,16 @@
         padding: 20px;
     }
     .profile-general {
+        &__verify {
+            flex-direction: column-reverse;
+            gap: 15px 0;
+            br {
+                display: none;
+            }
+            .c-button {
+                width: 100%;
+            }
+        }
         &__row {
             font-size: 14px;
             margin-bottom: 30px;
@@ -1204,25 +1183,28 @@
         margin-left: -10px;
         margin-right: -10px;
         &__item {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
-            padding: 10px;
+            padding: 15px 10px;
+            border-top: 1px rgba($grey-line, .1) solid;
             strong + span {
                 margin-top: 0px;
             }
         }
+        &__lot-name,
+        &__auction-name {
+            grid-column: 2 span;
+        }
         &__auction-price {
             text-align: left;
             display: flex;
+            justify-content: flex-end;
             strong + span {
                 margin: 0 0 0 10px;
             }
             br {
                 display: none;
             }
-        }
-        &__cancel {
-            grid-column: auto;
         }
     }
 

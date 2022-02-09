@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
@@ -243,7 +244,11 @@
             <div class="filtering-btns">
                 <strong>78 lots</strong>
                 <div class="filtering-btns__left">
-                    <a href="" class="filtering-btns__sort-btn c-button c-button_grey c-button_medium">Sorting</a>
+                    <a href="" class="filtering-btns__sort-btn c-button c-button_grey c-button_medium c-button_icon-left c-button_icon-right">
+                        <i class="mdi mdi-filter-outline"></i>
+                        Sorting
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
                     <div class="filtering-btns__sorting">
                         <strong>Go To:</strong>
                         <div class="c-dropdown">
@@ -290,15 +295,15 @@
                     </div>
                 </div>
                 <div class="filtering-btns__right">
-                    <a href="" class="c-button c-button_grey c-button_medium c-button_mob-mini c-button_icon-left">
+                    <a href="" class="c-button c-button_grey c-button_medium c-button_icon-left">
                         <i class="mdi mdi-file-outline"></i>
-                        <span class="mob-hidden">Download pdf catalog</span>
+                        <span>Download pdf catalog</span>
                     </a>
-                    <a href="" class="c-button c-button_grey c-button_medium c-button_mob-mini c-button_icon-left c-button_icon-right">
+                    <!-- <a href="" class="c-button c-button_grey c-button_medium c-button_mob-mini c-button_icon-left c-button_icon-right">
                         <i class="mdi mdi-filter-outline"></i>
                         <span class="mob-hidden">Filter</span>
                         <i class="mdi mdi-chevron-down mob-hidden"></i>
-                    </a>
+                    </a> -->
                 </div>
             </div>
             <div class="lots-grid">
@@ -785,11 +790,11 @@
                     <i class="mdi mdi-chevron-down"></i>
                 </div>
                 <div class="c-accordion__list">
-                    <a class="c-accordion__link" href="">By Lot</a>
-                    <a class="c-accordion__link" href="">By Name</a>
-                    <a class="c-accordion__link" href="">By Year</a>
-                    <a class="c-accordion__link" href="">By Size</a>
-                    <a class="c-accordion__link" href="">By price</a>
+                    <a class="c-accordion__link" href="">By lot №</a>
+                    <a class="c-accordion__link" href="">Price (low to high)</a>
+                    <a class="c-accordion__link" href="">Price (high to low)</a>
+                    <a class="c-accordion__link" href="">By name (A-Z)</a>
+                    <a class="c-accordion__link" href="">By name (Z-A)</a>
                 </div>
             </div>
         </div>
@@ -800,6 +805,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
@@ -814,6 +820,9 @@
             });
             return false;
         })
+        AOS.init({
+            once: true,
+        });
         $('.filtering-btns__sort-btn').click(function(){
             $('#Sorting').modal({
                 fadeDuration: 100,
