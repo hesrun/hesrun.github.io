@@ -50,7 +50,8 @@
         &__link {
             font-size: 14px;
             line-height: normal;
-            padding: 10px 0px;
+            padding: 10px 15px;
+            text-align: left;
         }
     }
 
@@ -98,7 +99,7 @@
             flex-wrap: wrap;
         }
         &__contacts {
-            display: none;
+            font-size: 14px;
         }
     }
 }
@@ -127,13 +128,29 @@
         }
         &__search {
             position: static;
+            margin-left: 0;
+            order: 3;
         }
         &__socials {
-            margin-left: 0;
+            margin-left: auto;
+        }
+        &__account {
+            flex-direction: column;
+            align-items: flex-end;
+            span {
+                text-indent: -9999px;
+                display: block;
+                height: 1px;
+                background: $brown;
+                width: 100%;
+                opacity: 0.1;
+                margin: 3px 0;
+            }
         }
         &__search-input {
-            width: 100%;
-            right: 0px;
+            width: auto;
+            right: 55px;
+            left: 0;
             padding: 0 15px;
         }
     }
@@ -141,6 +158,18 @@
     .main-banner {
         .slick-dots {
             bottom: -25px;
+        }
+    }
+    .subscribe__socials {
+        width: 100%;
+        .social-links__item {
+            width: 100%;
+            i.fa {
+                margin: 0px;
+            }
+            span {
+                display: none;
+            }
         }
     }
 
@@ -163,7 +192,6 @@
             gap: 30px;
         }
         &__nav-col {
-            text-align: center;
             width: 100% !important;
             & + & {
                 margin-left: auto;
@@ -171,6 +199,11 @@
         }
         &__nav-col:last-child {
             grid-column: 1 / 2 span;
+        }
+        &__contacts {
+            margin: 0;
+            border: none;
+            padding: 0;
         }
     }
 

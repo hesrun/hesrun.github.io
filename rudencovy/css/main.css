@@ -3115,7 +3115,8 @@ td:first-child:not(.final-amounts__change) {
   .main-nav__link {
     font-size: 14px;
     line-height: normal;
-    padding: 10px 0px;
+    padding: 10px 15px;
+    text-align: left;
   }
   .about-house-grid__row {
     display: block;
@@ -3152,7 +3153,7 @@ td:first-child:not(.final-amounts__change) {
         flex-wrap: wrap;
   }
   .footer__contacts {
-    display: none;
+    font-size: 14px;
   }
 }
 
@@ -3176,17 +3177,52 @@ td:first-child:not(.final-amounts__change) {
   }
   .header__search {
     position: static;
+    margin-left: 0;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   .header__socials {
-    margin-left: 0;
+    margin-left: auto;
+  }
+  .header__account {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .header__account span {
+    text-indent: -9999px;
+    display: block;
+    height: 1px;
+    background: #6B2F33;
+    width: 100%;
+    opacity: 0.1;
+    margin: 3px 0;
   }
   .header__search-input {
-    width: 100%;
-    right: 0px;
+    width: auto;
+    right: 55px;
+    left: 0;
     padding: 0 15px;
   }
   .main-banner .slick-dots {
     bottom: -25px;
+  }
+  .subscribe__socials {
+    width: 100%;
+  }
+  .subscribe__socials .social-links__item {
+    width: 100%;
+  }
+  .subscribe__socials .social-links__item i.fa {
+    margin: 0px;
+  }
+  .subscribe__socials .social-links__item span {
+    display: none;
   }
   .make-request__row {
     display: -ms-grid;
@@ -3208,7 +3244,6 @@ td:first-child:not(.final-amounts__change) {
     gap: 30px;
   }
   .footer__nav-col {
-    text-align: center;
     width: 100% !important;
   }
   .footer__nav-col + .footer__nav-col {
@@ -3216,6 +3251,11 @@ td:first-child:not(.final-amounts__change) {
   }
   .footer__nav-col:last-child {
     grid-column: 1 / 2 span;
+  }
+  .footer__contacts {
+    margin: 0;
+    border: none;
+    padding: 0;
   }
   .goTop {
     right: 15px;
