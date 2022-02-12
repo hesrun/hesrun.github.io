@@ -469,6 +469,15 @@
             height: 2px;
             transition: all 0.3s;
         }
+        &.select2-container--disabled {
+            opacity: 0.4;
+            & ~ .c-select__label {
+                opacity: 0.4;
+            }
+            .select2-selection--single {
+                background: none;
+            }
+        }
         &.select2-container--open,
         &.select2-container--below {
             &:after {
@@ -622,6 +631,9 @@
 }
 
 .tabs-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     &__item {
         $root: &;
         display: inline-flex;
@@ -649,6 +661,7 @@
     }
     &_inline {
         display: flex;
+        flex-direction: row;
         margin-bottom: 30px;
     }
 }

@@ -24,10 +24,14 @@ $(document).ready(function() {
         $(selectTab).addClass('tabs-blocks__item_active');
     });
 
-    $('.c-select select').select2({
-        minimumResultsForSearch: -1,
-        width: '100%',
-    });
+
+    $('.c-select select').each(function(){
+        $(this).select2({
+            minimumResultsForSearch: -1,
+            width: '100%',
+        });
+    })
+        
 
     
     

@@ -1053,7 +1053,7 @@ $grey-line: #DFDFDF;
             }
         }
     }
-    &:not(#{$root}_static):hover {
+    &:hover {
         #{$root}__brand {
             opacity: 1;
         }
@@ -1081,7 +1081,7 @@ $grey-line: #DFDFDF;
             opacity: 0;
         }
     }
-    &:not(#{$root}_static):nth-child(n+0):hover {
+    &:nth-child(n+0):hover {
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(0deg);
@@ -1089,7 +1089,7 @@ $grey-line: #DFDFDF;
             }
         }
     }
-    &:not(#{$root}_static):nth-child(2n+0):hover {
+    &:nth-child(2n+0):hover {
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(5deg);
@@ -1097,7 +1097,7 @@ $grey-line: #DFDFDF;
             }
         }
     }
-    &:not(#{$root}_static):nth-child(3n+0):hover {
+    &:nth-child(3n+0):hover {
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(-5deg);
@@ -1105,7 +1105,7 @@ $grey-line: #DFDFDF;
             }
         }
     }
-    &:not(#{$root}_static):nth-child(4n+0):hover {
+    &:nth-child(4n+0):hover {
         #{$root}__image {
             img {
                 transform: scale(1.4) rotate(0deg);
@@ -1687,6 +1687,10 @@ $grey-line: #DFDFDF;
         grid-template-columns: auto 1fr 1.5fr;
         gap: 0 20px;
         margin-bottom: 30px;
+        &_guest {
+            display: flex;
+            align-items: center;
+        }
     }
     &__btns {
         margin: 20px 0 0;

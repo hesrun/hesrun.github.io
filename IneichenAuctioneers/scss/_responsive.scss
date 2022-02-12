@@ -449,15 +449,12 @@
         &__title-small {
             margin: 40px 0 30px;
             &:first-child {
-                margin-top: 30px;
+                margin-top: 0px;
             }
         }
         &__wrapper {
             display: block;
         }
-    }
-    .profile-general {
-        margin-top: 30px;
     }
     .bids-list {
         margin-top: 20px;
@@ -593,6 +590,7 @@
     }
     /* ----------------------------------- ui ----------------------------------- */
     .tabs-list {
+        flex-direction: row;
         display: flex;
         gap: 15px;
         padding: 20px 0;
@@ -929,7 +927,84 @@
 
     /* --------------------------------- auction -------------------------------- */
     .lots-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lot-item {
+        $root: &;
+        display: flex;
+        flex-direction: column;
+        a {
+            text-decoration: none;
+        }
+        &__body {
+            overflow: auto;
+            border-radius: 0px;
+        }
+        &__brand {
+            display: none;
+        }
+        &__info {
+            height: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: static;
+            opacity: 1;
+            background: none;
+            padding: 0;
+            text-align: left;
+        }
+        &__image {
+            overflow: hidden;
+            border-radius: 8px;
+            img {
+                vertical-align: middle;
+            }
+        }
+        &__name {
+            font-family: $inter;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 12px;
+            color: #000;
+            text-shadow: none;
+            line-height: 1.2;
+            text-transform: uppercase;
+            span {
+                transform: none;
+            }
+        }
+        &__price {
+            margin-top: auto;
+            font-size: 12px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &__link  {
+            display: none;
+        }
+        &__favorite {
+            display: none;
+            opacity: 1;
+            bottom: 10px;
+        }
+        &__count {
+            left: 10px;
+            top: 10px;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 12px;
+        }
+        &:hover {
+            #{$root}__body {
+                transform: none;
+            }
+            #{$root}__count {
+                transform: none;
+                opacity: 1;
+            }
+        }
     }
     .filtering-btns {
         > strong {

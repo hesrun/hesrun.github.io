@@ -68,15 +68,19 @@ input, textarea, select {
   font-family: "Inter", sans-serif;
 }
 
-input:autofill,
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-filter: none;
-          filter: none;
-  -webkit-box-shadow: 0 0 0 1000px white inset !important;
-          box-shadow: 0 0 0 1000px white inset !important;
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .green-text {
@@ -874,6 +878,18 @@ input:-webkit-autofill:active {
   transition: all 0.3s;
 }
 
+.c-select .select2-container--default.select2-container--disabled {
+  opacity: 0.4;
+}
+
+.c-select .select2-container--default.select2-container--disabled ~ .c-select__label {
+  opacity: 0.4;
+}
+
+.c-select .select2-container--default.select2-container--disabled .select2-selection--single {
+  background: none;
+}
+
 .c-select .select2-container--default.select2-container--open:after, .c-select .select2-container--default.select2-container--below:after {
   width: 100%;
 }
@@ -1043,6 +1059,19 @@ input:-webkit-autofill:active {
   margin: 15px 0;
 }
 
+.tabs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .tabs-list__item {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -1082,6 +1111,10 @@ input:-webkit-autofill:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 30px;
 }
 
@@ -2849,57 +2882,57 @@ input:-webkit-autofill:active {
           transform: scale(1);
 }
 
-.lot-item:not(.lot-item_static):hover .lot-item__brand {
+.lot-item:hover .lot-item__brand {
   opacity: 1;
 }
 
-.lot-item:not(.lot-item_static):hover .lot-item__body {
+.lot-item:hover .lot-item__body {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
   -webkit-transform-origin: 50% 70%;
           transform-origin: 50% 70%;
 }
 
-.lot-item:not(.lot-item_static):hover .lot-item__name span {
+.lot-item:hover .lot-item__name span {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.lot-item:not(.lot-item_static):hover .lot-item__link {
+.lot-item:hover .lot-item__link {
   opacity: 1;
   top: 0px;
 }
 
-.lot-item:not(.lot-item_static):hover .lot-item__favorite {
+.lot-item:hover .lot-item__favorite {
   opacity: 1;
 }
 
-.lot-item:not(.lot-item_static):hover .lot-item__info {
+.lot-item:hover .lot-item__info {
   opacity: 1;
 }
 
-.lot-item:not(.lot-item_static):hover .lot-item__count {
+.lot-item:hover .lot-item__count {
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   opacity: 0;
 }
 
-.lot-item:not(.lot-item_static):nth-child(n+0):hover .lot-item__image img {
+.lot-item:nth-child(n+0):hover .lot-item__image img {
   -webkit-transform: scale(1.2) rotate(0deg);
           transform: scale(1.2) rotate(0deg);
 }
 
-.lot-item:not(.lot-item_static):nth-child(2n+0):hover .lot-item__image img {
+.lot-item:nth-child(2n+0):hover .lot-item__image img {
   -webkit-transform: scale(1.2) rotate(5deg);
           transform: scale(1.2) rotate(5deg);
 }
 
-.lot-item:not(.lot-item_static):nth-child(3n+0):hover .lot-item__image img {
+.lot-item:nth-child(3n+0):hover .lot-item__image img {
   -webkit-transform: scale(1.2) rotate(-5deg);
           transform: scale(1.2) rotate(-5deg);
 }
 
-.lot-item:not(.lot-item_static):nth-child(4n+0):hover .lot-item__image img {
+.lot-item:nth-child(4n+0):hover .lot-item__image img {
   -webkit-transform: scale(1.4) rotate(0deg);
           transform: scale(1.4) rotate(0deg);
 }
@@ -3646,6 +3679,15 @@ input:-webkit-autofill:active {
       grid-template-columns: auto 1fr 1.5fr;
   gap: 0 20px;
   margin-bottom: 30px;
+}
+
+.product__bids_guest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product__btns {
@@ -5949,13 +5991,10 @@ input:-webkit-autofill:active {
     margin: 40px 0 30px;
   }
   .profile__title-small:first-child {
-    margin-top: 30px;
+    margin-top: 0px;
   }
   .profile__wrapper {
     display: block;
-  }
-  .profile-general {
-    margin-top: 30px;
   }
   .bids-list {
     margin-top: 20px;
@@ -6066,6 +6105,10 @@ input:-webkit-autofill:active {
   }
   /* ----------------------------------- ui ----------------------------------- */
   .tabs-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6408,8 +6451,89 @@ input:-webkit-autofill:active {
   }
   /* --------------------------------- auction -------------------------------- */
   .lots-grid {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .lot-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lot-item a {
+    text-decoration: none;
+  }
+  .lot-item__body {
+    overflow: auto;
+    border-radius: 0px;
+  }
+  .lot-item__brand {
+    display: none;
+  }
+  .lot-item__info {
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: static;
+    opacity: 1;
+    background: none;
+    padding: 0;
+    text-align: left;
+  }
+  .lot-item__image {
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .lot-item__image img {
+    vertical-align: middle;
+  }
+  .lot-item__name {
+    font-family: "Inter", sans-serif;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 12px;
+    color: #000;
+    text-shadow: none;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .lot-item__name span {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .lot-item__price {
+    margin-top: auto;
+    font-size: 12px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .lot-item__link {
+    display: none;
+  }
+  .lot-item__favorite {
+    display: none;
+    opacity: 1;
+    bottom: 10px;
+  }
+  .lot-item__count {
+    left: 10px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+  }
+  .lot-item:hover .lot-item__body {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .lot-item:hover .lot-item__count {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
   }
   .filtering-btns {
     margin: 0 0 15px;
