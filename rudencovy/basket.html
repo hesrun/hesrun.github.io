@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -48,7 +49,7 @@
                     <a href="" class="header__account-link">
                         Вход
                     </a>
-                    /
+                    <span>/</span>
                     <a href="" class="header__account-link">
                         Регистрация
                     </a>
@@ -63,6 +64,10 @@
         </div>
         <nav class="main-nav">
             <div class="container">
+                <a class="main-nav__burger" href="">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    Меню
+                </a>
                 <ul class="main-nav__list">
                     <li class="main-nav__list-item">
                         <a href="" class="main-nav__link main-nav__link_active">Книги</a>
@@ -103,114 +108,116 @@
                     <div class="page-title">
                         <h1 class="page-title__header">Корзина</h1>
                     </div>
-                    <table class="order-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Наименование</th>
-                                <th>Цена</th>
-                                <th>Скидка</th>
-                                <th>Количество</th>
-                                <th>Сумма</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="order-table__image">
-                                    <img src="img/books/order-item-img.jpg" alt="">
-                                </td>
-                                <td class="order-table__descr order-table__descr_basket">
-                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                </td>
-                                <td class="order-table__price order-table__price_basket">
-                                    3 500 ₽
-                                </td>
-                                <td class="order-table__discount order-table__discount_basket">
-                                    5%
-                                </td>
-                                <td class="order-table__quantity order-table__quantity_basket">
-                                    <div class="quantity-toggle">
-                                        <button class="quantity-toggle__button"></button>
-                                        <input type="text" value="1" class="quantity-toggle__input">
-                                        <button class="quantity-toggle__button"></button>
-                                    </div>
-                                </td>
-                                <td class="order-table__summ order-table__summ_basket">
-                                    3 500 ₽
-                                </td>
-                                <td class="order-table__action">
-                                    <a href="" class="order-table__remove">
-                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        Удалить
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="order-table__image">
-                                    <img src="img/books/order-item-img.jpg" alt="">
-                                </td>
-                                <td class="order-table__descr order-table__descr_basket">
-                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                </td>
-                                <td class="order-table__price order-table__price_basket">
-                                    3 500 ₽
-                                </td>
-                                <td class="order-table__discount order-table__discount_basket">
-                                    5%
-                                </td>
-                                <td class="order-table__quantity order-table__quantity_basket">
-                                    <div class="quantity-toggle">
-                                        <button class="quantity-toggle__button"></button>
-                                        <input type="text" value="1" class="quantity-toggle__input">
-                                        <button class="quantity-toggle__button"></button>
-                                    </div>
-                                </td>
-                                <td class="order-table__summ order-table__summ_basket">
-                                    3 500 ₽
-                                </td>
-                                <td class="order-table__action">
-                                    <a href="" class="order-table__remove">
-                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        Удалить
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="order-table__image">
-                                    <img src="img/books/order-item-img.jpg" alt="">
-                                </td>
-                                <td class="order-table__descr order-table__descr_basket">
-                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                </td>
-                                <td class="order-table__price order-table__price_basket">
-                                    3 500 ₽
-                                </td>
-                                <td class="order-table__discount order-table__discount_basket">
-                                    5%
-                                </td>
-                                <td class="order-table__quantity order-table__quantity_basket">
-                                    <div class="quantity-toggle">
-                                        <button class="quantity-toggle__button"></button>
-                                        <input type="text" value="1" class="quantity-toggle__input">
-                                        <button class="quantity-toggle__button"></button>
-                                    </div>
-                                </td>
-                                <td class="order-table__summ order-table__summ_basket">
-                                    3 500 ₽
-                                </td>
-                                <td class="order-table__action">
-                                    <a href="" class="order-table__remove">
-                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        Удалить
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="scroll-y-mob">
+                        <table class="order-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Наименование</th>
+                                    <th>Цена</th>
+                                    <th>Скидка</th>
+                                    <th>Количество</th>
+                                    <th>Сумма</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="order-table__image">
+                                        <img src="img/books/order-item-img.jpg" alt="">
+                                    </td>
+                                    <td class="order-table__descr order-table__descr_basket">
+                                        <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                        <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                    </td>
+                                    <td class="order-table__price order-table__price_basket">
+                                        3 500 ₽
+                                    </td>
+                                    <td class="order-table__discount order-table__discount_basket">
+                                        5%
+                                    </td>
+                                    <td class="order-table__quantity order-table__quantity_basket">
+                                        <div class="quantity-toggle">
+                                            <button class="quantity-toggle__button"></button>
+                                            <input type="text" value="1" class="quantity-toggle__input">
+                                            <button class="quantity-toggle__button"></button>
+                                        </div>
+                                    </td>
+                                    <td class="order-table__summ order-table__summ_basket">
+                                        3 500 ₽
+                                    </td>
+                                    <td class="order-table__action">
+                                        <a href="" class="order-table__remove">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            Удалить
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-table__image">
+                                        <img src="img/books/order-item-img.jpg" alt="">
+                                    </td>
+                                    <td class="order-table__descr order-table__descr_basket">
+                                        <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                        <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                    </td>
+                                    <td class="order-table__price order-table__price_basket">
+                                        3 500 ₽
+                                    </td>
+                                    <td class="order-table__discount order-table__discount_basket">
+                                        5%
+                                    </td>
+                                    <td class="order-table__quantity order-table__quantity_basket">
+                                        <div class="quantity-toggle">
+                                            <button class="quantity-toggle__button"></button>
+                                            <input type="text" value="1" class="quantity-toggle__input">
+                                            <button class="quantity-toggle__button"></button>
+                                        </div>
+                                    </td>
+                                    <td class="order-table__summ order-table__summ_basket">
+                                        3 500 ₽
+                                    </td>
+                                    <td class="order-table__action">
+                                        <a href="" class="order-table__remove">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            Удалить
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-table__image">
+                                        <img src="img/books/order-item-img.jpg" alt="">
+                                    </td>
+                                    <td class="order-table__descr order-table__descr_basket">
+                                        <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                        <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                    </td>
+                                    <td class="order-table__price order-table__price_basket">
+                                        3 500 ₽
+                                    </td>
+                                    <td class="order-table__discount order-table__discount_basket">
+                                        5%
+                                    </td>
+                                    <td class="order-table__quantity order-table__quantity_basket">
+                                        <div class="quantity-toggle">
+                                            <button class="quantity-toggle__button"></button>
+                                            <input type="text" value="1" class="quantity-toggle__input">
+                                            <button class="quantity-toggle__button"></button>
+                                        </div>
+                                    </td>
+                                    <td class="order-table__summ order-table__summ_basket">
+                                        3 500 ₽
+                                    </td>
+                                    <td class="order-table__action">
+                                        <a href="" class="order-table__remove">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            Удалить
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="coupon">
                         <div class="coupon__note">Если у вас есть код купона для получения скидки, введите его здесь</div>
                         <form action="" class="coupon__form">
@@ -284,17 +291,18 @@
                         <a href="" class="footer__nav-link">Скидки и акции</a>
                         <a href="" class="footer__nav-link">Политика конфиденциальности</a>
                     </div>
+                    <div class="footer__contacts">
+                        <strong class="footer__col-title">Контакты</strong>
+                        +7 (495) 775-90-13 <br>
+                        +7 (495) 953-72-48 <br>
+                        <span class="footer__adress">
+                            115035, Москва, <br>
+                            3-й Кадашёвский пер., 6 
+                        </span>
+                        <a href="mailto:i_d_r@bk.ru ">i_d_r@bk.ru </a>
+                    </div>
                 </div>
-                <div class="footer__contacts">
-                    <strong class="footer__col-title">Контакты</strong>
-                    +7 (495) 775-90-13 <br>
-                    +7 (495) 953-72-48 <br>
-                    <span class="footer__adress">
-                        115035, Москва, <br>
-                        3-й Кадашёвский пер., 6 
-                    </span>
-                    <a href="mailto:i_d_r@bk.ru ">i_d_r@bk.ru </a>
-                </div>
+                
             </div>
             <div class="footer__copyright">
                 © 2021 Издательский дом Руденцовых | При перепечатке материалов ссылка на сайт обязательна
@@ -307,6 +315,10 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function(){
+            $('.main-nav__burger').click(function(){
+                $('.main-nav__list').slideToggle();
+                return false;
+            })
             $('.header__search-button').click(function(){
                 $('.header__search-input').fadeToggle(200);
                 return false

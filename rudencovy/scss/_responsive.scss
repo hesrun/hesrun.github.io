@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
 
     .header {
         &__logo {
@@ -89,7 +89,23 @@
     .make-request {
         padding: 30px 0;
     }
-
+    .breadcrumbs {
+        margin-bottom: 15px;
+    }
+    .inner-wrap {
+        display: block;
+        &__left {
+            padding: 0px;
+        }
+    }
+    .page-title {
+        margin-bottom: 15PX;
+    }
+    .left-nav {
+        margin: 0;
+        margin-bottom: 15px;
+        display: flex;
+    }
     .footer {
         font-size: 14px;
         &__logo {
@@ -154,11 +170,21 @@
             padding: 0 15px;
         }
     }
+    
+    .left-nav {
+        display: block;
+        &__link {
+            white-space: nowrap;
+            line-height: normal;
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+    }
 
     .main-banner {
-        .slick-dots {
-            bottom: -25px;
-        }
+        // .slick-dots {
+        //     bottom: -25px;
+        // }
     }
     .subscribe__socials {
         width: 100%;
@@ -181,6 +207,115 @@
             gap: 20px 0;
         } 
     }
+
+    .about-work {
+        display: block;
+        &__image {
+            width: 100%;
+        }
+        &__caption {
+            margin: 15px 0 0 0;
+            text-align: left;
+            font-size: 18px;
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .account-address {
+        &__name {
+            font-size: 18px;
+        }
+        &__action {
+            position: static;
+            margin-top: 15px;
+        }
+    }
+    .address-data {
+        li {
+            flex-direction: column;
+        }
+    }
+
+    .orders {
+        &__title {
+            grid-template-columns: 1fr 1fr auto;
+            font-size: 13px;
+        }
+        &__item-head {
+            grid-template-columns: 1fr 1fr auto;
+            font-size: 13px;
+            .fa {
+                display: none;
+            }
+        }
+        &__address {
+            margin-left: auto;
+        }
+    }
+    .coupon {
+        display: flex;
+        flex-direction: column;
+        &__remove-all {
+            align-self: flex-end;
+            order: -1;
+            position: static;
+            margin-bottom: 10px;
+        }
+    }
+
+    .basket-nav {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        &__link {
+            margin-left: 0;
+            font-size: 14px;
+        }
+    }
+
+    .order-table {
+        td {
+            font-size: 14px;
+        }
+        &__quantity {
+            line-height: 25px;
+        }
+    }
+    .scroll-y-mob {
+        overflow-y: auto;
+    }
+
+    .product {
+        &__cols {
+            display: block;
+        }
+        &__image {
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .journal-item {
+        display: block;
+        &__image {
+            margin: 0 0 15px 0;
+            max-width: 100%;
+            text-align: center;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .catalog {
+        grid-template-columns: 1fr 1fr;
+    }
+    
 
     .footer {
         &__blocks {

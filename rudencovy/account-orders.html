@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -48,7 +49,7 @@
                     <a href="" class="header__account-link">
                         Вход
                     </a>
-                    /
+                    <span>/</span>
                     <a href="" class="header__account-link">
                         Регистрация
                     </a>
@@ -63,6 +64,10 @@
         </div>
         <nav class="main-nav">
             <div class="container">
+                <a class="main-nav__burger" href="">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    Меню
+                </a>
                 <ul class="main-nav__list">
                     <li class="main-nav__list-item">
                         <a href="" class="main-nav__link main-nav__link_active">Книги</a>
@@ -129,83 +134,85 @@
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </div>
                             <div class="orders__body">
-                                <table class="order-table">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Наименование</th>
-                                            <th>Цена</th>
-                                            <th>Скидка</th>
-                                            <th>Количество</th>
-                                            <th>Сумма</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="scroll-y-mob">
+                                    <table class="order-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Наименование</th>
+                                                <th>Цена</th>
+                                                <th>Скидка</th>
+                                                <th>Количество</th>
+                                                <th>Сумма</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <table class="final-amounts">
                                     <tr>
                                         <td>Сумма заказа:</td>
@@ -240,83 +247,85 @@
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </div>
                             <div class="orders__body">
-                                <table class="order-table">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Наименование</th>
-                                            <th>Цена</th>
-                                            <th>Скидка</th>
-                                            <th>Количество</th>
-                                            <th>Сумма</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="scroll-y-mob">
+                                    <table class="order-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Наименование</th>
+                                                <th>Цена</th>
+                                                <th>Скидка</th>
+                                                <th>Количество</th>
+                                                <th>Сумма</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <table class="final-amounts">
                                     <tr>
                                         <td>Сумма заказа:</td>
@@ -351,83 +360,85 @@
                                 <i class="fa fa-caret-down" aria-hidden="true"></i>
                             </div>
                             <div class="orders__body">
-                                <table class="order-table">
-                                    <thead>
-                                        <tr>
-                                            <th></th>
-                                            <th>Наименование</th>
-                                            <th>Цена</th>
-                                            <th>Скидка</th>
-                                            <th>Количество</th>
-                                            <th>Сумма</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="order-table__image">
-                                                <img src="img/books/order-item-img.jpg" alt="" >
-                                            </td>
-                                            <td class="order-table__descr">
-                                                <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
-                                                <span class="order-table__author">Автор: М.В. Нащокина</span>
-                                            </td>
-                                            <td class="order-table__price">
-                                                3 500 ₽
-                                            </td>
-                                            <td class="order-table__discount">
-                                                5%
-                                            </td>
-                                            <td class="order-table__quantity">
-                                                1
-                                            </td>
-                                            <td class="order-table__summ">
-                                                3 500 ₽
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="scroll-y-mob">
+                                    <table class="order-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Наименование</th>
+                                                <th>Цена</th>
+                                                <th>Скидка</th>
+                                                <th>Количество</th>
+                                                <th>Сумма</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="order-table__image">
+                                                    <img src="img/books/order-item-img.jpg" alt="" >
+                                                </td>
+                                                <td class="order-table__descr">
+                                                    <a href="#" class="order-table__name">Архитектурное наследие России, Пётр Бойцов</a>
+                                                    <span class="order-table__author">Автор: М.В. Нащокина</span>
+                                                </td>
+                                                <td class="order-table__price">
+                                                    3 500 ₽
+                                                </td>
+                                                <td class="order-table__discount">
+                                                    5%
+                                                </td>
+                                                <td class="order-table__quantity">
+                                                    1
+                                                </td>
+                                                <td class="order-table__summ">
+                                                    3 500 ₽
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <table class="final-amounts">
                                     <tr>
                                         <td>Сумма заказа:</td>
@@ -489,17 +500,18 @@
                         <a href="" class="footer__nav-link">Скидки и акции</a>
                         <a href="" class="footer__nav-link">Политика конфиденциальности</a>
                     </div>
+                    <div class="footer__contacts">
+                        <strong class="footer__col-title">Контакты</strong>
+                        +7 (495) 775-90-13 <br>
+                        +7 (495) 953-72-48 <br>
+                        <span class="footer__adress">
+                            115035, Москва, <br>
+                            3-й Кадашёвский пер., 6 
+                        </span>
+                        <a href="mailto:i_d_r@bk.ru ">i_d_r@bk.ru </a>
+                    </div>
                 </div>
-                <div class="footer__contacts">
-                    <strong class="footer__col-title">Контакты</strong>
-                    +7 (495) 775-90-13 <br>
-                    +7 (495) 953-72-48 <br>
-                    <span class="footer__adress">
-                        115035, Москва, <br>
-                        3-й Кадашёвский пер., 6 
-                    </span>
-                    <a href="mailto:i_d_r@bk.ru ">i_d_r@bk.ru </a>
-                </div>
+                
             </div>
             <div class="footer__copyright">
                 © 2021 Издательский дом Руденцовых | При перепечатке материалов ссылка на сайт обязательна
@@ -512,6 +524,10 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function(){
+            $('.main-nav__burger').click(function(){
+                $('.main-nav__list').slideToggle();
+                return false;
+            })
             $('.orders__item-head').click(function(){
                 $(this).toggleClass('orders__item-head_active');
                 $(this).next().slideToggle(300);
