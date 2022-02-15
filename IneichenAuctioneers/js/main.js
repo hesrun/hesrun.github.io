@@ -31,10 +31,6 @@ $(document).ready(function() {
             width: '100%',
         });
     })
-        
-
-    
-    
 
     $('.mobile-menu__link_sub').click(function() {
         $(this).next().slideToggle();

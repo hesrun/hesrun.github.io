@@ -882,6 +882,9 @@ $grey-line: #DFDFDF;
         padding: 0 10px 20px;
     }
     &__image {
+        overflow: hidden;
+        border-radius: 15px;
+        transform: translateZ(0);
         img {
             width: 100%;
             max-width: 100%;
@@ -1866,6 +1869,7 @@ $grey-line: #DFDFDF;
         grid-template-columns: 2fr 3fr 2fr;
         gap: 0 30px;
         margin-bottom: 50px;
+        align-items: center;
         span {
             color: $grey-text;
         }
@@ -1894,6 +1898,12 @@ $grey-line: #DFDFDF;
         p {
             font-size: 13px;
             line-height: 20px;
+        }
+    }
+    &__account-type {
+        grid-column: 2 span;
+        .c-select {
+            margin-top: 0px;
         }
     }
 }

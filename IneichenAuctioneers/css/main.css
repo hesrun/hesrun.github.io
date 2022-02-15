@@ -2651,6 +2651,13 @@ select:-webkit-autofill:focus {
   padding: 0 10px 20px;
 }
 
+.lot-item__image {
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
 .lot-item__image img {
   width: 100%;
   max-width: 100%;
@@ -3912,6 +3919,9 @@ select:-webkit-autofill:focus {
       grid-template-columns: 2fr 3fr 2fr;
   gap: 0 30px;
   margin-bottom: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .profile-general__row span {
@@ -3962,6 +3972,14 @@ select:-webkit-autofill:focus {
 .profile-general__verify p {
   font-size: 13px;
   line-height: 20px;
+}
+
+.profile-general__account-type {
+  grid-column: 2 span;
+}
+
+.profile-general__account-type .c-select {
+  margin-top: 0px;
 }
 
 .invoice-create {
@@ -6471,7 +6489,13 @@ select:-webkit-autofill:focus {
     border-radius: 0px;
   }
   .lot-item__brand {
-    display: none;
+    opacity: 1;
+    color: #1C2473;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: normal;
+    font-size: 12px;
+    line-height: 1.2;
   }
   .lot-item__info {
     height: auto;
@@ -6777,6 +6801,9 @@ select:-webkit-autofill:focus {
   }
   .profile-general__row > a {
     grid-column: 1 / 2 span;
+  }
+  .profile-general__account-type .c-select {
+    margin-top: 15px;
   }
   .bids-list {
     margin-left: -10px;
