@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -48,7 +49,7 @@
                     <a href="" class="header__account-link">
                         Вход
                     </a>
-                    /
+                    <span>/</span>
                     <a href="" class="header__account-link">
                         Регистрация
                     </a>
@@ -63,6 +64,10 @@
         </div>
         <nav class="main-nav">
             <div class="container">
+                <a class="main-nav__burger" href="">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    Меню
+                </a>
                 <ul class="main-nav__list">
                     <li class="main-nav__list-item">
                         <a href="" class="main-nav__link main-nav__link_active">Книги</a>
@@ -181,17 +186,18 @@
                         <a href="" class="footer__nav-link">Скидки и акции</a>
                         <a href="" class="footer__nav-link">Политика конфиденциальности</a>
                     </div>
+                    <div class="footer__contacts">
+                        <strong class="footer__col-title">Контакты</strong>
+                        +7 (495) 775-90-13 <br>
+                        +7 (495) 953-72-48 <br>
+                        <span class="footer__adress">
+                            115035, Москва, <br>
+                            3-й Кадашёвский пер., 6 
+                        </span>
+                        <a href="mailto:i_d_r@bk.ru ">i_d_r@bk.ru </a>
+                    </div>
                 </div>
-                <div class="footer__contacts">
-                    <strong class="footer__col-title">Контакты</strong>
-                    +7 (495) 775-90-13 <br>
-                    +7 (495) 953-72-48 <br>
-                    <span class="footer__adress">
-                        115035, Москва, <br>
-                        3-й Кадашёвский пер., 6 
-                    </span>
-                    <a href="mailto:i_d_r@bk.ru ">i_d_r@bk.ru </a>
-                </div>
+                
             </div>
             <div class="footer__copyright">
                 © 2021 Издательский дом Руденцовых | При перепечатке материалов ссылка на сайт обязательна
@@ -204,6 +210,10 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function(){
+            $('.main-nav__burger').click(function(){
+                $('.main-nav__list').slideToggle();
+                return false;
+            })
             $('.header__search-button').click(function(){
                 $('.header__search-input').fadeToggle(200);
                 return false
