@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url(../font/font.css);
+
+$america: 'GT America Extended', sans-serif;
+$inter: 'Inter', sans-serif;
+$grey: #828282;
+$grey-line: rgba(#828282,0.2);
+
+@import '_ui.scss';
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: $inter;
+    font-size: 15px;
+    height: 100%;
+    overflow: hidden;
+    line-height: 1;
+}
+
+input,select,button, textarea {
+    font-family: $inter;
+}
+
+.app {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.content {
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+.auctions-list {
+    padding: 20px 10px;
+    display: grid;
+    gap: 20px 0;
+}
+
+.auction-item {
+    position: relative;
+    &__info {
+        padding: 20px 15px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    &__image {
+        width: 100%;
+        border-radius: 20px;
+        vertical-align: middle;
+    }
+    &__name {
+        margin-top: auto;
+        font-family: $america;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    &__date {
+        margin: 15px 0 20px;
+        line-height: 1.2;
+    }
+    &__status {
+        align-self: flex-start;
+        font-size: 13px;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 4px 8px;
+        &_blue {
+            background-color: #BBFFF3;
+            color: #000;
+        }
+        &_grey {
+            background-color: #4B4B4B;
+            color: #fff;
+        }
+    }
+}
