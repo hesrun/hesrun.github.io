@@ -27,24 +27,46 @@
 }
 .navbar {
     background-color: #000;
-    height: 42px;
     display: flex;
     &__link {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         height: 100%;
         flex: 1 1 0%;
         text-align: center;
         color: #fff;
-        font-size: 24px;
+        padding: 10px 0;
+        text-decoration: none;
+        opacity: 0.5;
+        &_active {
+            opacity: 1;
+        }
+        .mdi {
+            font-size: 20px;
+        }
+        span {
+            margin-top: 5px;
+            font-size: 9px;
+            display: block;
+        }
         &:active {
             background: #fff;
             color: #000;
         }
     }
+    .dot {
+        width: 15px;
+        height: 15px;
+        background: red;
+        border-radius: 50%;
+        margin-top: 3px;
+        margin-bottom: 2px;
+    }
 }
 .btn {
+    $root: &;
     height: 50px;
     display: inline-flex;
     align-items: center;
@@ -58,12 +80,22 @@
         width: 100%;
     }
     &_white {
-        background: #fff;
-        color: #000;
+        &#{$root}_filled {
+            background: #fff;
+            color: #000;
+        }
+        &#{$root}_outline {
+            color: #000;
+            border: 1px $grey-line solid;
+        }
     }
     &_red {
         background: $red;
         color: #000;
+    }
+    &_blue {
+        color: #fff;
+        background: $blue;
     }
     &_icon-left {
         .mdi {
@@ -108,5 +140,52 @@
         line-height: 55px;
         top: 1px;
         pointer-events: none;
+    }
+}
+
+.toggle {
+    width: 48px;
+    height: 26px;
+    border: 2px $blue solid;
+    border-radius: 15px;
+    input {
+        display: none;
+        &:checked {
+            & + div {
+                transform: translateX(22px);
+            }
+        }
+    }
+    div {
+        margin: 2px 0 0 2px;
+        width: 18px;
+        height: 18px;
+        background: $blue;
+        border-radius: 50%;
+        transition: all 0.2s;
+    }
+}
+
+.blocker {
+    padding: 0px;
+}
+.modal {
+    padding: 0px;
+    max-width: 100%;
+    width: calc(100% - 30px);
+    box-shadow: none;
+    border-radius: 20px;
+    &__header {
+        padding: 20px 15px;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    &__content {
+        padding: 15px;
+    }
+    &__footer {
+        padding: 20px 15px;
+        display: grid;
+        gap: 10px;
     }
 }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="live-bar">
+                <a href="" class="live-bar__close">
+                    <i class="mdi mdi-close"></i>
+                </a>
+                <div class="live-bar__status">
+                    Live
+                </div>
+                <div class="live-bar__users">
+                    <i class="mdi mdi-account-outline"></i>
+                    123
+                </div>
+                <div class="live-bar__time">
+                    01.01.01
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="live-lot">
+                <div class="live-lot__images">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/live-lot-img.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/live-lot-img.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/live-lot-img.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/live-lot-img.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="live-lot__swipe-note">
+                        <i class="mdi mdi-chevron-left"></i>
+                            Swipe photos
+                        <i class="mdi mdi-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="live-lot__info">
+                    <div class="live-lot__brand">Poitevin Enamel</div>
+                    <div class="live-lot__name">Verge Pocket Watch</div>
+                    <div class="live-lot__bids">
+                        <div class="live-lot__bids-item">
+                            <i class="mdi mdi-hand-back-left-outline"></i>
+                            <span>Bids</span>
+                            <div>14</div>
+                        </div>
+                        <div  class="live-lot__bids-item">
+                            <i class="mdi mdi-credit-card-outline"></i>
+                            <span>Latest bid</span>
+                            <div>9,500 CHF (CHINA)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="live-lot__value">
+                    <span>Estimate value</span>
+                    <div>CHF 15 000 / CHF 20 000</div>
+                </div>
+            </div>
+            <div class="live-lot__btns">
+                <a href="" class="btn btn_blue btn_full btn_filled">Bid 10,000 CHF</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="navbar">
+                <a class="navbar__link navbar__link_active" href="">
+                    <i class="mdi mdi-watch"></i>
+                    <span>Current lot</span>
+                </a>
+                <a class="navbar__link" href="">
+                    <div class="dot"></div>
+                    <span>Live stream</span>
+                </a>
+                <a class="navbar__link" href="">
+                    <i class="mdi mdi-format-list-text"></i>
+                    <span>Other lots</span>
+                </a>
+                <a class="navbar__link" href="">
+                    <i class="mdi mdi-headset"></i>
+                    <span>Live support</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="ex1" class="modal">
+        <div class="modal__header">Confirm you current bid</div>
+        <div class="modal__content">
+            <div class="bid-confirm">
+                <div class="bid-confirm__value">CHF  1'500.- </div>
+                <span>excl. 24% Premium</span>
+            </div>
+        </div>
+        <div class="confirm-agree">
+            <span>
+                Don’t ask confirmation <br> again for this auction
+            </span>
+            <label for="check" class="toggle">
+                <input type="checkbox" name="" id="check">
+                <div></div>
+            </label>
+        </div>
+        <div class="modal__footer">
+            <a href="" class="btn btn_blue btn_full btn_filled">Confirm</a>
+            <a href="" class="btn btn_white btn_full btn_outline" rel="modal:close">Cancel</a>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400
+        });
+        $("#ex1").modal({
+            showClose: false
+        });
+    </script>
+</body>
+</html>

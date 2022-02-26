@@ -6,6 +6,7 @@ $inter: 'Inter', sans-serif;
 $grey: #828282;
 $grey-line: rgba(#828282,0.2);
 $red: #FF8A8A;
+$blue: #1C2473;
 
 @import '_ui.scss';
 
@@ -167,4 +168,146 @@ input,select,button, textarea {
         font-size: 11px;
         margin-top: 10px;
     }
+}
+
+
+.live-bar {
+    color: #fff;
+    background: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 0 10px;
+    font-size: 13px;
+    font-weight: 400;
+    &__close {
+        color: #fff;
+        font-size: 22px;
+    }
+    &__status {
+        margin-right: auto;
+        &:before {
+            content: "";
+            display: inline-block;
+            margin-right: 3px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: red;
+        }
+    }
+    &__users {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        i.mdi {
+            font-size: 18px;
+            margin-right: 3px;
+
+        }
+    }
+}
+
+.live-lot {
+    &__images {
+        margin-bottom: 25px;
+        position: relative;
+    }
+    &__swipe-note {
+        display: flex;
+        align-items: center;
+        background: #000;
+        color: #fff;
+        border-radius: 15px;
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        font-size: 12px;
+        padding: 8px 10px;
+        transform: translateX(-50%);
+        z-index: 2;
+        pointer-events: none;
+        i {
+            margin: 0 5px;
+            font-size: 16px;
+        }
+    }
+    &__info {
+        padding: 0 15px;
+    }
+    &__brand {
+        color: $grey;
+    }
+    &__name {
+        font-size: 18px;
+        font-family: $america;
+        margin-top: 10px;
+    }
+    &__bids {
+        margin: 25px 0;
+        border: 1px $grey-line solid;
+        border-radius: 10px;
+        
+    }
+    &__bids-item {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        padding: 20px 15px;
+        color: $grey;
+        border-bottom: 1px $grey-line solid;
+        &:last-child {
+            border: none;
+        }
+        div {
+            color: #000;
+            margin-left: auto;   
+        }
+        i {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+    }
+    &__value {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 15px;
+        border-bottom: 1px $grey-line solid;
+        border-top: 1px $grey-line solid;
+        span {
+            color: $grey;
+            font-size: 13px;
+        }
+        div {
+            color: $blue;
+            text-transform: uppercase;
+        }
+    }
+    &__btns {
+        padding: 30px 15px;
+    }
+}
+
+.bid-confirm {
+    margin-bottom: 20px;
+    &__value {
+        font-family: $america;
+        color: $blue;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    span {
+        color: $grey;
+        font-size: 12px;
+    }
+}
+.confirm-agree {
+    border-top: 1px $grey-line solid;
+    border-bottom: 1px $grey-line solid;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
