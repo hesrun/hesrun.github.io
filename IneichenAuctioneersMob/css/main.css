@@ -1,5 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url(../font/font.css);
+.search-bar {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-bar__search {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.search-bar__search .mdi {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  line-height: 36px;
+  color: #828282;
+  font-size: 20px;
+  padding: 0 5px;
+}
+
+.search-bar__search input {
+  padding-left: 30px;
+  width: 100%;
+  border-radius: 10px;
+  background: #E7E7E7;
+  border: none;
+  height: 36px;
+  font-weight: 400;
+}
+
+.search-bar a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 5px 0 10px;
+}
+
+.page-cap {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-cap .mdi {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #E7E7E7;
+  text-align: center;
+  line-height: 75px;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.page-cap span {
+  color: #828282;
+  font-size: 13px;
+}
+
 .tabs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,12 +345,29 @@ body {
 input, select, button, textarea {
   font-family: "Inter", sans-serif;
   font-weight: 500;
+  outline: none;
 }
 
 .title {
   font-size: 22px;
   font-family: "GT America Extended", sans-serif;
   font-weight: 600;
+}
+
+.brown-text {
+  color: #C57F3F;
+}
+
+.blue-text {
+  color: #1C2473;
+}
+
+.red-text {
+  color: #FF8A8A;
+}
+
+.grey-text {
+  color: #828282;
 }
 
 .app {
@@ -301,6 +395,7 @@ input, select, button, textarea {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   overflow: auto;
+  position: relative;
 }
 
 .auctions-list {
@@ -382,6 +477,12 @@ input, select, button, textarea {
   display: -ms-grid;
   display: grid;
   gap: 10px 0;
+}
+
+.search-result {
+  font-size: 12px;
+  margin: 15px 0 5px 15px;
+  font-weight: 600;
 }
 
 .lots-sort {
@@ -498,6 +599,10 @@ input, select, button, textarea {
   position: relative;
 }
 
+.live-lot__images img {
+  width: 100%;
+}
+
 .live-lot__swipe-note {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -596,8 +701,138 @@ input, select, button, textarea {
   text-transform: uppercase;
 }
 
-.live-lot__btns {
+.live-btns {
+  background: #fff;
+  padding: 15px 15px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+}
+
+.live-stream video {
+  width: 100%;
+}
+
+.live-lot-preview {
+  padding: 15px;
+  border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.live-lot-preview img {
+  width: 25px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.live-lot-preview span {
+  margin-left: 15px;
+}
+
+.live-bids {
+  padding: 15px;
+  display: -ms-grid;
+  display: grid;
+  gap: 13px 0;
+}
+
+.live-bids .live-bids__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 10px;
+}
+
+.live-bids .live-bids__item strong {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 125px;
+          flex: 0 0 125px;
+}
+
+.live-bids .live-bids__item i {
+  font-size: 20px;
+}
+
+.live-lots-item {
+  border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
   padding: 30px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.live-lots-item__image {
+  width: 60px;
+  margin-right: 15px;
+  position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.live-lots-item__image img {
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.live-lots-item__image span {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 22px;
+  font-size: 10px;
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+}
+
+.live-lots-item__status {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.live-lots-item__status.black {
+  background-color: #000;
+  color: #fff;
+}
+
+.live-lots-item__status.red {
+  background-color: #FF8A8A;
+  color: #fff;
+}
+
+.live-lots-item__name {
+  margin-bottom: 15px;
+}
+
+.live-lots-item__price span {
+  font-size: 12px;
+  color: #828282;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.live-lots-item__price strong {
+  font-size: 13px;
 }
 
 .bid-confirm {
