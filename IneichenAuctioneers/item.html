@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -68,7 +69,10 @@
                     <div><span>Starting bid</span> <strong> CHF 2'000.-</strong></div>
                 </div>
                 <div class="product__bids">
-                    <strong>Your maximum bid</strong>
+                    <div class="product__bids-info">
+                        <strong>Your maximum bid</strong>
+                        <a href="#" id="BidsHistoryOpen" class="product__bids-history">10 bidders now</a>
+                    </div>
                     <div class="c-dropdown product__bids-select">
                         <a href="" class="c-dropdown__button c-button c-button_grey c-button_outline c-button_full c-button_icon-right">
                             CHF 2'000.-
@@ -231,6 +235,54 @@
             <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
         </div>
     </div>
+    <div id="BidsHistoryTable" class="modal modal-small">
+        <div class="modal-small__title">Bidders for lot №3</div>
+        <div class="modal-small__body">
+            <div class="table-scroll">
+                <table class="bids-history-table">
+                    <thead>
+                        <tr>
+                            <th>BIDDER</th>
+                            <th>DATE & TIME</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="flag-icon flag-icon-ch"></span> <strong>Frank, 56</strong></td>
+                            <td>10 DEC 1:20 PM UTC</td>
+                        </tr>
+                        <tr>
+                            <td><span class="flag-icon flag-icon-ch"></span> <strong>Frank, 56</strong></td>
+                            <td>10 DEC 1:20 PM UTC</td>
+                        </tr>
+                        <tr>
+                            <td><span class="flag-icon flag-icon-ch"></span> <strong>Frank, 56</strong></td>
+                            <td>10 DEC 1:20 PM UTC</td>
+                        </tr>
+                        <tr>
+                            <td><span class="flag-icon flag-icon-ch"></span> <strong>Frank, 56</strong></td>
+                            <td>10 DEC 1:20 PM UTC</td>
+                        </tr>
+                        <tr>
+                            <td><span class="flag-icon flag-icon-ch"></span> <strong>Frank, 56</strong></td>
+                            <td>10 DEC 1:20 PM UTC</td>
+                        </tr>
+                        <tr>
+                            <td><span class="flag-icon flag-icon-ch"></span> <strong>Frank, 56</strong></td>
+                            <td>10 DEC 1:20 PM UTC</td>
+                        </tr>
+                        <tr>
+                            <td><span class="flag-icon flag-icon-ch"></span> <strong>Frank, 56</strong></td>
+                            <td>10 DEC 1:20 PM UTC</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_outline c-button_full c-button_medium">Close</a>
+        </div>
+    </div>
     <div id="Rules" class="modal modal-small modal-small_2x">
         <div class="modal-small__title">How to Bid</div>
         <div class="modal-small__body">
@@ -287,12 +339,25 @@
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
+
+
         video = $('#ProductVideo').get(0);
 
         $('.product__play-video-btn').click(function(){
             video.play();
             $(this).fadeOut();
         })
+        $('#BidsHistoryOpen').click(function(){
+            $('#BidsHistoryTable').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
+            return false;
+        })
+
         $('#BidsTableOpen').click(function(){
             $('#BidsTable').modal({
                 fadeDuration: 100,
