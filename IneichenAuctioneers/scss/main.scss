@@ -1639,6 +1639,29 @@ $grey-line: #DFDFDF;
             background: $blue-bg;
             color: #fff;
         }
+        &_loading {
+            i.mdi {
+                display: none;
+            }
+            &:before {
+                content: '';
+                display: block;
+                margin: 0 auto;
+                margin-top: 9px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border-top: 2px transparent solid;
+                border-right: 2px transparent solid;
+                border-bottom: 2px $blue-bg solid;
+                border-left: 2px $blue-bg solid;
+                animation: 0.5s Spin infinite linear;
+            }
+            &:hover:before {
+                border-bottom: 2px #fff solid;
+                border-left: 2px #fff solid;
+            }
+        }
     }
     &__nav {
         display: flex;
@@ -1714,12 +1737,14 @@ $grey-line: #DFDFDF;
         text-decoration: none;
         font-size: 15px;
         font-weight: 700;
-        padding: 5px 15px;
+        padding: 5px 30px;
         border-radius: 8px;
         transition: all 0.3s;
+        background: $blue-bg;
+        color: #fff;
         &:hover {
-            background: $blue-bg;
-            color: #fff;
+            background: transparent;
+            color: $blue-bg;
         }
     }
 
@@ -2757,10 +2782,11 @@ $grey-line: #DFDFDF;
     td {
         width: 50%;
         white-space: nowrap;
-        padding: 10px 0;
+        padding: 10px 15px 10px 0;
     }
     td:last-child {
         color: $grey-text;
+        padding-right: 0px;
     }
     .flag-icon {
         margin-right: 10px;
