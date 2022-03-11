@@ -23,6 +23,18 @@
         }
     }
 
+    .start-count {
+        &__item {
+            min-width: 50px;
+        }
+        b {
+            font-size: 36px;
+            font-weight: 500;
+        }
+        span {
+            font-size: 10px;
+        }
+    }
 
     /* --------------------------------- account -------------------------------- */
     .profile {
@@ -138,6 +150,9 @@
         &__video-col {
             grid-column: 1 / 2 span;
         }
+        &__start-timer {
+            margin-top: 30px;
+        }
     }
 
     /* --------------------------------- landing -------------------------------- */
@@ -208,6 +223,18 @@
         &_small {
             font-size: 20px;
             margin: 0 0 30px 0;
+        }
+    }
+    .sign-great {
+        flex-direction: column;
+        &__info {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        &__btns {
+            margin: 0px;
+            width: 100%;
+            max-width: 400px;
         }
     }
     /* ---------------------------------- index --------------------------------- */
@@ -1224,10 +1251,86 @@
         &__stream {
             margin-top: 30px;
         }
+        &__stream {
+            margin-top: 30px;
+        }
+        &__stream_buttons {
+            &_cols {
+                grid-template-columns: 1fr;
+                gap: 15px 15px;
+            }
+        }
         &__stream-footer {
             grid-template-rows: 1fr;
             grid-template-columns: 1fr;
             gap: 15px 0;
+        }
+        &__start-timer {
+            margin-top: 0px;
+        }
+        
+    }
+    .live-bids-table {
+        margin-bottom: 30px;
+        padding: 20px;
+        margin-top: 30px;
+        border-radius: 0px;
+        margin-left: -20px;
+        margin-right: -20px;
+        &__right {
+            border-left: 1px rgba(white,0.1) solid;
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+        &__lot-num {
+            font-size: 12px;
+            font-weight: 500;
+        }
+        &__price-range {
+            font-size: 10px;
+            letter-spacing: auto;
+            margin: 5px 0 20px;
+        }
+        &__lot-name {
+            font-size: 18px;
+        }
+        &__price {
+            font-size: 24px;
+            span {
+                margin-top: 5px;
+                font-size: 12px;
+            }
+        }
+        &__ask-price {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        &__currency {
+            font-size: 13px;
+            tr:first-child {
+                td {
+                    padding-bottom: 20px;
+                }
+            }
+            td {
+                padding: 8px 0;
+            }
+            td:first-child {
+                padding-right: 10px;
+            }
+        }
+    }
+    .start-count {
+        &__item {
+            min-width: 40px;
+        }
+        b {
+            font-size: 24px;
+            font-weight: 500;
+        }
+        span {
+            font-size: 9px;
         }
     }
     .lots-list {
@@ -1291,6 +1394,8 @@
         &__auction-price {
             text-align: left;
             display: flex;
+            align-items: flex-end;
+            flex-direction: column;
             justify-content: flex-end;
             strong + span {
                 margin: 0 0 0 10px;
@@ -1593,6 +1698,14 @@
 
 
     /* ---------------------------------- sign ---------------------------------- */
+    .sign-great {
+        padding: 0 20px 30px 20px;
+        &__info {
+            br {
+                display: none;
+            }
+        }
+    }
     .sign-back {
         position: sticky;
         top: 0px;
@@ -1612,9 +1725,6 @@
                 grid-template-rows: 1fr;
                 gap: 15px 0;
             }
-        }
-        &__sub-link {
-            text-align: center;
         }
         &__note {
             margin-bottom: 30px;
