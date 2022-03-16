@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="splash swiper swiper-no-swiping">
+        <div class="swiper-wrapper">
+            <div class="splash__slide swiper-slide splash__slide_1">
+                <div class="splash__title">
+                    Ineichen:<br> Switzerland’s<br> premier<br> auction house
+                </div>
+                <div class="splash__text">
+                    Established five decades ago in 1973, we are now the leading auction house in Switzerland. We hold 4-6 auctions annually, bringing together the best of the best in watchmaking and the world community of watch collectors.
+                </div>
+                <div class="splash__nav">
+                    <a href="" class="splash__next btn btn_white btn_filled btn_icon">
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="splash__slide swiper-slide splash__slide_2">
+                <div class="splash__title">
+                    Bid live <br> anytime,<br> anywhere<br> from your<br> smartphone
+                </div>
+                <div class="splash__text">
+                    Bid in real-time on the world’s most sought-after and rare collectible watches using our simple interface
+                </div>
+                <div class="splash__nav">
+                    <a href="" class="splash__next btn btn_white btn_filled btn_icon">
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="splash__slide swiper-slide splash__slide_3">
+                <div class="splash__title">
+                    Winning at <br> live auctions<br> is now<br> easier than<br> ever
+                </div>
+                <div class="splash__text">
+                    Follow upcoming lots and receive instant push notifications to ensure you never miss a chance to bid
+                </div>
+                <div class="splash__nav">
+                    <a href="" class="btn btn_white btn_full btn_filled">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var splash = new Swiper(".splash", {
+        grabCursor: true,
+        effect: "creative",
+        speed: 700,
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: ["-20%", 0, -1],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        },
+      });
+      $(".splash__next").click(function(){
+        splash.slideNext();
+        return false;
+      })
+    </script>
+</body>
+</html>
