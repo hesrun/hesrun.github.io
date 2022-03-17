@@ -178,6 +178,34 @@
   margin-bottom: 2px;
 }
 
+.links-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px rgba(130, 130, 130, 0.2) solid;
+  height: 55px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.links-list__item:active {
+  background-color: #E7E7E7;
+}
+
+.links-list__item:last-child {
+  border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
+}
+
+.links-list .mdi-chevron-right {
+  color: #828282;
+  margin-left: auto;
+  font-size: 24px;
+}
+
 .btn {
   height: 50px;
   min-width: 50px;
@@ -208,7 +236,7 @@
 
 .btn_white.btn_outline {
   color: #000;
-  border: 1px rgba(130, 130, 130, 0.2) solid;
+  border: 2px rgba(130, 130, 130, 0.2) solid;
 }
 
 .btn_red {
@@ -216,17 +244,55 @@
   color: #000;
 }
 
-.btn_blue {
+.btn_blue.btn_filled {
   color: #fff;
   background: #1C2473;
+}
+
+.btn_blue.btn_outline {
+  color: #1C2473;
+  border: 2px #1C2473 solid;
 }
 
 .btn_icon-left .mdi {
   margin-right: 5px;
 }
 
+.btn_disabled, .btn:disabled {
+  background: #E7E7E7 !important;
+  border-color: #E7E7E7 !important;
+  color: #828282 !important;
+  pointer-events: none;
+}
+
 .btn .mdi {
   font-size: 18px;
+}
+
+.btn .mdi-google {
+  color: #4285F4;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.c-filed {
+  margin-bottom: 30px;
+}
+
+.c-filed__input {
+  font-weight: 500;
+  height: 50px;
+  font-size: 16px;
+  background: none;
+  width: 100%;
+  border: none;
+  border-bottom: 2px #E7E7E7 solid;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.c-filed__input:focus {
+  border-bottom-color: #000;
 }
 
 .btn-close {
@@ -243,6 +309,15 @@
 .btn-close_black {
   color: #fff;
   background: #000;
+}
+
+.btn-close_gray {
+  color: #000;
+  background: #E7E7E7;
+}
+
+.btn-close_sign {
+  margin: 25px 0 0 25px;
 }
 
 .select {
@@ -460,12 +535,67 @@ input, select, button, textarea {
           justify-content: flex-end;
 }
 
+.header-title {
+  font-size: 22px;
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 700;
+  padding: 20px;
+}
+
 .content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   overflow: auto;
   position: relative;
+}
+
+.sign {
+  padding: 25px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign__logo {
+  margin: auto auto 0 auto;
+}
+
+.sign__btns {
+  margin-top: auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 15px 0;
+}
+
+.sign__btns span {
+  color: #828282;
+  display: block;
+  text-align: center;
+}
+
+.sign__user {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.sign__note {
+  color: #3E3E3E;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.sign__title {
+  font-size: 30px;
+  font-family: "GT America Extended", sans-serif;
+  margin-bottom: 30px;
 }
 
 .auctions-list {

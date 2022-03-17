@@ -120,6 +120,28 @@
         margin-bottom: 2px;
     }
 }
+.links-list {
+    &__item {
+        display: flex;
+        align-items: center;
+        border-top: 1px $grey-line solid;
+        height: 55px;
+        padding: 0 20px;
+        text-decoration: none;
+        color: inherit;
+        &:active {
+            background-color: $grey-light;
+        }
+        &:last-child {
+            border-bottom: 1px $grey-line solid;
+        }
+    }
+    .mdi-chevron-right {
+        color: $grey;
+        margin-left: auto;
+        font-size: 24px;
+    }
+}
 .btn {
     $root: &;
     height: 50px;
@@ -142,7 +164,7 @@
         }
         &#{$root}_outline {
             color: #000;
-            border: 1px $grey-line solid;
+            border: 2px $grey-line solid;
         }
     }
     &_red {
@@ -150,16 +172,51 @@
         color: #000;
     }
     &_blue {
-        color: #fff;
-        background: $blue;
+        
+        &#{$root}_filled {
+            color: #fff;
+            background: $blue;
+        }
+        &#{$root}_outline {
+            color: $blue;
+            border: 2px $blue solid;
+        }
     }
     &_icon-left {
         .mdi {
             margin-right: 5px;
         }
     }
+    &_disabled,
+    &:disabled {
+        background: $grey-light !important;
+        border-color: $grey-light !important;
+        color: $grey !important;
+        pointer-events: none;
+    }
     .mdi {
         font-size: 18px;
+    }
+    .mdi-google {
+        color: #4285F4;
+        margin-right: 10px;
+        font-size: 24px;
+    }
+}
+.c-filed {
+    margin-bottom: 30px;
+    &__input {
+        font-weight: 500;
+        height: 50px;
+        font-size: 16px;
+        background: none;
+        width: 100%;
+        border: none;
+        border-bottom: 2px $grey-light solid;
+        transition: all 0.3s;
+        &:focus {
+            border-bottom-color: #000;
+        }
     }
 }
 .btn-close {
@@ -175,8 +232,14 @@
         color: #fff;
         background: #000;
     }
+    &_gray {
+        color: #000;
+        background: $grey-light;
+    }
+    &_sign {
+        margin: 25px 0 0 25px;
+    }
 }
-
 .select {
     position: relative;
     select {
@@ -198,7 +261,6 @@
         pointer-events: none;
     }
 }
-
 .toggle {
     width: 48px;
     height: 26px;
