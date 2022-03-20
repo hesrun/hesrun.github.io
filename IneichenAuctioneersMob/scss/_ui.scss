@@ -136,6 +136,17 @@
             border-bottom: 1px $grey-line solid;
         }
     }
+    .links-list__icon  {
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 18px;
+        background: $grey-light;
+        color: #000;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
     .mdi-chevron-right {
         color: $grey;
         margin-left: auto;
@@ -306,4 +317,39 @@
         display: grid;
         gap: 10px;
     }
+}
+
+.action-sheet {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    max-height: calc(100vh - 30px);
+    &__body {
+        display: grid;
+        grid-template-rows: auto 1fr;
+    }
+    &__line {
+        height: 50px;
+        position: relative;
+        flex: 0 0 auto;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: $grey-light;
+            left: 50%;
+            top: 15px;
+            margin: 0 0 0 -30px;
+            border-radius: 5px;
+        }
+    }
+    &__content {
+        max-height: calc(100vh - 80px);
+        overflow: auto;
+    }
+    
 }

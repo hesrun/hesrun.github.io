@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="content">
+            <div class="account">
+                <div class="account__photo">
+                    <i class="mdi mdi-account-outline"></i>
+                </div>
+                <div class="account__name">Mr. Sergey Dolgushin</div>
+                <div class="account__mail">customer@gmail.com</div>
+                <div class="account__verify">
+                    <a href="" class="btn btn_blue btn_full btn_filled">
+                        Verify account
+                    </a>
+                </div>
+            </div>
+            <div class="links-list">
+                <a href="" class="links-list__item">
+                    <i class="links-list__icon mdi mdi-account-outline"></i>
+                    Profile
+                    <i class="mdi mdi-chevron-right"></i>
+                </a>
+                <a href="" class="links-list__item">
+                    <i class="links-list__icon mdi mdi-gavel"></i>
+                    My Bids
+                    <i class="mdi mdi-chevron-right"></i>
+                </a>
+                <a href="" class="links-list__item">
+                    <i class="links-list__icon mdi mdi-cards-heart-outline"></i>
+                    Wishlist
+                    <i class="mdi mdi-chevron-right"></i>
+                </a>
+                <a href="" class="links-list__item">
+                    <i class="links-list__icon mdi mdi-file-document-outline"></i>
+                    Invoices
+                    <i class="mdi mdi-chevron-right"></i>
+                </a>
+            </div>
+            <div class="logout">
+                <a href="" class="btn btn_white btn_full btn_outline">
+                    Logout
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="navbar">
+                <a class="navbar__link navbar__link_active" href="/auctions.html">
+                    <i class="mdi mdi-gavel"></i>
+                </a>
+                <a class="navbar__link" href="/services.html">
+                    <i class="mdi mdi-format-list-bulleted"></i>
+                </a>
+                <a class="navbar__link" href="/search-result.html">
+                    <i class="mdi mdi-magnify"></i>
+                </a>
+                <a class="navbar__link" href="/account.html">
+                    <i class="mdi mdi-account-circle-outline"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="ex1" class="action-sheet">
+        <div class="action-sheet__body">
+            <div class="action-sheet__line"></div>
+            <div class="action-sheet__content">
+                <div class="links-list">
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-account-outline"></i>
+                        Profile
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-gavel"></i>
+                        My Bids
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-cards-heart-outline"></i>
+                        Wishlist
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-file-document-outline"></i>
+                        Invoices
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script>
+        $("#ex1").modal({
+            showClose: false
+        });
+        $('#ex1').on($.modal.BEFORE_CLOSE, function(event, modal) {
+            $(this).addClass('dfgdfgd');
+        });
+    </script>
+</body>
+</html>

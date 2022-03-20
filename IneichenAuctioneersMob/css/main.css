@@ -200,6 +200,18 @@
   border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
 }
 
+.links-list .links-list__icon {
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 18px;
+  background: #E7E7E7;
+  color: #000;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
 .links-list .mdi-chevron-right {
   color: #828282;
   margin-left: auto;
@@ -400,6 +412,48 @@
   display: -ms-grid;
   display: grid;
   gap: 10px;
+}
+
+.action-sheet {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  max-height: calc(100vh - 30px);
+}
+
+.action-sheet__body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+}
+
+.action-sheet__line {
+  height: 50px;
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.action-sheet__line:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: #E7E7E7;
+  left: 50%;
+  top: 15px;
+  margin: 0 0 0 -30px;
+  border-radius: 5px;
+}
+
+.action-sheet__content {
+  max-height: calc(100vh - 80px);
+  overflow: auto;
 }
 
 * {
@@ -1065,5 +1119,38 @@ input, select, button, textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.account {
+  padding: 30px 20px 30px;
+}
+
+.account__photo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #E7E7E7;
+  text-align: center;
+  line-height: 75px;
+  margin: auto;
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.account__name {
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.account__mail {
+  font-size: 13px;
+  text-align: center;
+  color: #828282;
+  margin-bottom: 30px;
+}
+
+.logout {
+  padding: 30px 20px;
 }
 /*# sourceMappingURL=main.css.map */
