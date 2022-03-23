@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="links-list">
-                <a href="" class="links-list__item">
+                <a id="OpenSheet" href="" class="links-list__item">
                     <i class="links-list__icon mdi mdi-account-outline"></i>
                     Profile
                     <i class="mdi mdi-chevron-right"></i>
@@ -69,7 +69,8 @@
             </div>
         </div>
     </div>
-    <div id="ex1" class="action-sheet">
+    <div class="action-sheet">
+        <div class="action-sheet__bg"></div>
         <div class="action-sheet__body">
             <div class="action-sheet__line"></div>
             <div class="action-sheet__content">
@@ -94,19 +95,80 @@
                         Invoices
                         <i class="mdi mdi-chevron-right"></i>
                     </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-gavel"></i>
+                        My Bids
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-cards-heart-outline"></i>
+                        Wishlist
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-file-document-outline"></i>
+                        Invoices
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-gavel"></i>
+                        My Bids
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-cards-heart-outline"></i>
+                        Wishlist
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                    <a href="" class="links-list__item">
+                        <i class="links-list__icon mdi mdi-file-document-outline"></i>
+                        Invoices
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script>
-        $("#ex1").modal({
-            showClose: false
-        });
-        $('#ex1').on($.modal.BEFORE_CLOSE, function(event, modal) {
-            $(this).addClass('dfgdfgd');
-        });
+        function CloseSheet(){
+            $(".action-sheet").fadeOut(300).removeClass('action-sheet__open');
+        }
+        function OpenSheet(){
+            $(".action-sheet").fadeIn(300).addClass('action-sheet__open');
+        }
+        $('#OpenSheet').click(function(){
+            OpenSheet();
+            return false;
+        })
+        $('.action-sheet__bg').click(function(){
+            CloseSheet();
+            return false;
+        })
+
+        $(".action-sheet__line").swipe( {
+            swipeStatus:function(event, phase, direction, distance) {
+                if (phase == "move" && direction == "down") {
+                    $('.action-sheet__body').css({
+                        transform: 'translateY('+distance+'px)',
+                        transition: 'none'
+                    });
+                } else if (phase == "cancel") {
+                    $('.action-sheet__body').css({
+                        transform: 'translateY(0)',
+                        transition: 'all 0.2s'
+                    });
+                } else if (phase == "end") {
+                    $('.action-sheet__body').removeAttr("style");
+                    CloseSheet()
+                }
+            },
+            threshold:150
+       });
+        
+        
     </script>
 </body>
 </html>
