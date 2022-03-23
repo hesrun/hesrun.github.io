@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -141,5 +142,110 @@
             </div>
         </div>
     </div>
+    <div class="action-sheet">
+        <div class="action-sheet__bg"></div>
+        <div class="action-sheet__body">
+            <div class="action-sheet__line"></div>
+            <div class="action-sheet__content">
+                <div class="live-lot">
+                    <div class="live-lot__images">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/live-lot-img.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/live-lot-img.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/live-lot-img.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/live-lot-img.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-lot__swipe-note">
+                            <i class="mdi mdi-chevron-left"></i>
+                                Swipe photos
+                            <i class="mdi mdi-chevron-right"></i>
+                        </div>
+                    </div>
+                    <div class="live-lot__info">
+                        <div class="live-lot__brand">Poitevin Enamel</div>
+                        <div class="live-lot__name">Verge Pocket Watch</div>
+                        <div class="live-lot__favorite">
+                            <a href="" class="btn btn_black btn_full btn_filled btn_icon-left">
+                                <i class="mdi mdi-heart"></i>
+                                Add to wishlist
+                            </a>
+                        </div>
+                    </div>
+                    <div class="live-lot__value">
+                        <span>Estimate value</span>
+                        <div>CHF 15 000 / CHF 20 000</div>
+                    </div>
+                    <div class="live-lot__descr">
+                        <span>Case</span>
+                        <p>Yellow gold case with partially translucent dark blue enamel painting and guillochage on the back, decorated bezel</p>
+                        <span>Dial</span>
+                        <p>White enamel dial with Arabic numerals, Breguet hands, winding hole between 1 and 2 o'clock, signed "Poitevin a L´Orient"</p>
+                        <span>Movement</span>
+                        <p>Gold-plated spindle pocket watch movement with chain and fusee, openworked and engraved balance cock, blued screws, signed "Poitevin a L'Orient"</p>
+                    </div>
+                    <div class="live-lot__btns">
+                        <a href="" class="btn btn_blue btn_full btn_filled btn_icon-left">
+                            Place Bid 2,000 CHF
+                        </a>
+                        <span>4 bids</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+                speed: 400
+            });
+        function CloseSheet(){
+            $(".action-sheet").fadeOut(300).removeClass('action-sheet__open');
+        }
+        function OpenSheet(){
+            $(".action-sheet").fadeIn(300).addClass('action-sheet__open');
+                
+        }
+        $('.lot-item').click(function(){
+            OpenSheet();
+            return false;
+        })
+        $('.action-sheet__bg').click(function(){
+            CloseSheet();
+            return false;
+        })
+        $(".action-sheet__line").swipe( {
+            swipeStatus:function(event, phase, direction, distance) {
+                if (phase == "move" && direction == "down") {
+                    $('.action-sheet__body').css({
+                        transform: 'translateY('+distance+'px)',
+                        transition: 'none'
+                    });
+                } else if (phase == "cancel") {
+                    $('.action-sheet__body').css({
+                        transform: 'translateY(0)',
+                        transition: 'all 0.2s'
+                    });
+                } else if (phase == "end") {
+                    $('.action-sheet__body').removeAttr("style");
+                    CloseSheet()
+                }
+            },
+            threshold:150
+        });
+    </script>
+
 </body>
 </html>
