@@ -653,18 +653,37 @@ a.search-open-btn {
 .free-delivery-info {
    padding-left: 10%;
    display: flex;
-   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
    position: relative;
    margin: 95px;
    height: 135px;
    border-radius: 70px;
-   font-size: 28px;
+   font-size: 20px;
    font-weight: 300;
    color: #fff;
    background: linear-gradient(to right, rgba(237,0,138,1) 0%, rgba(237,0,138,1) 39%, rgba(254,187,4,1) 65%, rgba(254,187,4,1) 82%, rgba(246,91,74,1) 100%);
+   &__item {
+      display: flex;
+      align-items: center;
+   }
+   hr {
+      width: 100%;
+      max-width: 600px;
+      margin: 6px 0 6px -10px;
+      border: none;
+      height: 1px;
+      background: linear-gradient(to right,
+                                 rgba(254,187,4,1) 0%,
+                                 rgba(254,187,4,1) 39%,
+                                 rgba(237,0,138,1) 65%,
+                                 rgba(237,0,138,1) 82%,
+                                 rgba(246,91,74,1) 100%);
+   }
    b {
       padding-right: 15px;
-      font-size: 80px;
+      font-size: 30px;
    }
    img {
       position: absolute;
@@ -3339,7 +3358,7 @@ a.search-open-btn {
       height: auto;
       font-size: 19px;
       b {
-         font-size: 60px;
+         font-size: 24px;
          display: block;
       }
       img {
@@ -4423,6 +4442,9 @@ a.search-open-btn {
          }
       }
    }
+   .menu-brands-letters {
+      overflow-y: auto;
+   }
    .favorites-count {
       i.mdi {
          font-size: 25px;
@@ -4489,7 +4511,7 @@ a.search-open-btn {
       }
    }
    .search-wrapper {
-      padding-top: 60px;
+      padding-top: 50px;
       .search-form {
          padding: 15px;
       }
@@ -4672,11 +4694,20 @@ a.search-open-btn {
    /*****************free-delivery-info*********/
    .free-delivery-info {
       margin: 20px 0 30px;
-      padding: 15px 0;
+      padding: 15px 10px;
       text-align: center;
+      font-size: 11px;
+      hr {
+         margin-left: auto;
+      }
+      &__item {
+         align-items: baseline;
+      }
       b {
          padding: 0px;
-         font-size: 40px;
+         font-size: 16px;
+         white-space: nowrap;
+         margin-right: 5px;
       }
       img {
          display: none;

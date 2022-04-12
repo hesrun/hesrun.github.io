@@ -860,23 +860,49 @@ a.search-open-btn:hover img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: relative;
   margin: 95px;
   height: 135px;
   border-radius: 70px;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 300;
   color: #fff;
   background: -webkit-gradient(linear, left top, right top, from(#ed008a), color-stop(39%, #ed008a), color-stop(65%, #febb04), color-stop(82%, #febb04), to(#f65b4a));
   background: linear-gradient(to right, #ed008a 0%, #ed008a 39%, #febb04 65%, #febb04 82%, #f65b4a 100%);
 }
 
+.free-delivery-info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.free-delivery-info hr {
+  width: 100%;
+  max-width: 600px;
+  margin: 6px 0 6px -10px;
+  border: none;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(#febb04), color-stop(39%, #febb04), color-stop(65%, #ed008a), color-stop(82%, #ed008a), to(#f65b4a));
+  background: linear-gradient(to right, #febb04 0%, #febb04 39%, #ed008a 65%, #ed008a 82%, #f65b4a 100%);
+}
+
 .free-delivery-info b {
   padding-right: 15px;
-  font-size: 80px;
+  font-size: 30px;
 }
 
 .free-delivery-info img {
@@ -4306,7 +4332,7 @@ a.search-open-btn:hover img {
     font-size: 19px;
   }
   .free-delivery-info b {
-    font-size: 60px;
+    font-size: 24px;
     display: block;
   }
   .free-delivery-info img {
@@ -5391,6 +5417,9 @@ a.search-open-btn:hover img {
     font-size: 18px;
     margin-right: 5px;
   }
+  .menu-brands-letters {
+    overflow-y: auto;
+  }
   .favorites-count i.mdi {
     font-size: 25px;
   }
@@ -5453,7 +5482,7 @@ a.search-open-btn:hover img {
     font-size: 10px;
   }
   .search-wrapper {
-    padding-top: 60px;
+    padding-top: 50px;
   }
   .search-wrapper .search-form {
     padding: 15px;
@@ -5650,12 +5679,23 @@ a.search-open-btn:hover img {
   /*****************free-delivery-info*********/
   .free-delivery-info {
     margin: 20px 0 30px;
-    padding: 15px 0;
+    padding: 15px 10px;
     text-align: center;
+    font-size: 11px;
+  }
+  .free-delivery-info hr {
+    margin-left: auto;
+  }
+  .free-delivery-info__item {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
   .free-delivery-info b {
     padding: 0px;
-    font-size: 40px;
+    font-size: 16px;
+    white-space: nowrap;
+    margin-right: 5px;
   }
   .free-delivery-info img {
     display: none;

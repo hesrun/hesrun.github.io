@@ -24,6 +24,9 @@ $(document).ready(function() {
    //баннер
    $('#BannerModal').modal();
 
+   $('#NYModal').modal();
+
+
    //тултипы на главной
    $.protip();
 
@@ -101,6 +104,8 @@ $(document).ready(function() {
    $('#mobileFeedbackOpen').click(function() {
       mobileFeedback.open();
    })
+
+   
 
    //анимации
    anime({

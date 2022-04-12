@@ -5893,6 +5893,10 @@ select:-webkit-autofill:focus {
 }
 
 /**************************joker**********************/
+.joker-sub {
+  border-bottom: 15px #BB13B4 solid;
+}
+
 .joker-banner {
   padding: 50px 0 120px;
   background: #1C2473;
@@ -6116,13 +6120,29 @@ select:-webkit-autofill:focus {
 .joker-watch-bg {
   background-image: url(../img/joker/watch-bg.png);
   background-repeat: no-repeat;
-  background-position: center left 10%;
+  background-position: center left 20%;
+  background-size: 45%;
 }
 
 .joker-car-bg {
   background-image: url(../img/joker/car-bg.png);
   background-repeat: no-repeat;
-  background-position: center right;
+  background-size: 65%;
+  background-position: center right 10%;
+}
+
+.joker-sub-watch-bg-1 {
+  background-image: url(../img/joker/chaykin-watch-sub-1.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 60%;
+}
+
+.joker-sub-watch-bg-2 {
+  background-image: url(../img/joker/chaykin-watch-sub-2.png);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: top right;
 }
 
 .joker-section {
@@ -6141,6 +6161,15 @@ select:-webkit-autofill:focus {
   font-size: 80px;
   font-style: italic;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.joker-section__title::before {
+  content: url(../img/joker/title.svg);
+  position: absolute;
+  left: -95px;
+  top: -7px;
+  pointer-events: none;
 }
 
 .joker-section__user-image {
@@ -6241,6 +6270,139 @@ select:-webkit-autofill:focus {
 
 .joker-bid-now__info .c-button {
   max-width: 370px;
+}
+
+.joker-item-about__logo {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.joker-item-about__title {
+  max-width: 1300px;
+  margin: 90px auto 50px;
+  text-align: center;
+  font-family: "GT America Extended", sans-serif;
+  font-size: 80px;
+  font-style: italic;
+}
+
+.joker-item-about__title_left {
+  text-align: left;
+}
+
+.joker-item-about__title small {
+  display: block;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.joker-item-about__text p {
+  line-height: 1.5;
+}
+
+.joker-item-about__text p + blockquote {
+  margin: 30px 0;
+}
+
+.joker-item-about__text blockquote {
+  text-align: center;
+  background: #BB13B4;
+  color: #fff;
+  line-height: 1.5;
+  pad: 30px;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+  font-size: 18px;
+}
+
+.joker-item-about__text blockquote:before {
+  content: '“';
+  font-family: "GT America Extended", sans-serif;
+  position: absolute;
+  font-size: 100px;
+  line-height: 50px;
+  left: -25px;
+  top: 0px;
+  color: #fff;
+  pointer-events: none;
+}
+
+.joker-item-about__text-cols {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1300px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0 80px;
+}
+
+.joker-item-about__nft-image img {
+  max-width: 100%;
+}
+
+.joker-item-about__photo-grid {
+  margin: 30px auto;
+  max-width: 1300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.joker-item-about__photo-grid img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.joker-item-about__photo-grid-item_2x {
+  grid-column: 2 span;
+}
+
+.joker-item-about__specification {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 0 50px;
+  line-height: 1.5;
+}
+
+.joker-item-about__specification_vertical {
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 40px 0;
+}
+
+.joker-item-about__specification_vertical div {
+  max-width: 380px;
+}
+
+.joker-item-about__specification strong {
+  font-family: "GT America Extended", sans-serif;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.joker-item-about__btns {
+  max-width: 1300px;
+  margin: 50px auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 30px 0;
+}
+
+.joker-item-about__btns .c-button {
+  max-width: 350px;
 }
 
 @media screen and (max-width: 1366px) {

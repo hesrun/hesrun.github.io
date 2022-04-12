@@ -3288,6 +3288,9 @@
 
 
 /**************************joker**********************/
+.joker-sub {
+    border-bottom: 15px $violet solid;
+}
 .joker-banner {
     padding: 50px 0 120px;
     background: $blue-bg;
@@ -3458,12 +3461,26 @@
 .joker-watch-bg {
     background-image: url(../img/joker/watch-bg.png);
     background-repeat: no-repeat;
-    background-position: center left 10%;
+    background-position: center left 20%;
+    background-size: 45%;
 }
 .joker-car-bg {
     background-image: url(../img/joker/car-bg.png);
     background-repeat: no-repeat;
-    background-position: center right;
+    background-size: 65%;
+    background-position: center right 10%;
+}
+.joker-sub-watch-bg-1 {
+    background-image: url(../img/joker/chaykin-watch-sub-1.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 60%;
+}
+.joker-sub-watch-bg-2 {
+    background-image: url(../img/joker/chaykin-watch-sub-2.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: top right;
 }
 .joker-section {
     display: flex;
@@ -3474,6 +3491,14 @@
         font-size: 80px;
         font-style: italic;
         margin-bottom: 30px;
+        position: relative;
+        &::before {
+            content: url(../img/joker/title.svg);
+            position: absolute;
+            left: -95px;
+            top: -7px;
+            pointer-events: none;
+        }
     }
     &__user-image {
         margin-bottom: 30px;
@@ -3557,6 +3582,122 @@
         }
     }
 }
+
+.joker-item-about {
+    &__logo {
+        margin-top: 50px;
+        text-align: center;
+    }
+    &__title {
+        max-width: 1300px;
+        margin: 90px auto 50px;
+        text-align: center;
+        font-family: $america;
+        font-size: 80px;
+        font-style: italic;
+        &_left {
+            text-align: left;
+        }
+        small {
+            display: block;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+    }
+    &__text {
+        p {
+            line-height: 1.5;
+        }
+        p + blockquote {
+            margin: 30px 0;
+        }
+        blockquote {
+            text-align: center;
+            background: $violet;
+            color: #fff;
+            line-height: 1.5;
+            pad: 30px;
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            font-size: 18px;
+            &:before {
+                content: '“';
+                font-family: $america;
+                position: absolute;
+                font-size: 100px;
+                line-height: 50px;
+                left: -25px;
+                top: 0px;
+                color: #fff;
+                pointer-events: none;
+            }
+        }
+    }
+    &__text-cols {
+        align-items: center;
+        max-width: 1300px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 80px;
+    }
+    &__nft-image {
+        img {
+            max-width: 100%;
+        }
+    }
+    &__photo-grid {
+        margin: 30px auto;
+        max-width: 1300px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        img {
+            vertical-align: middle;
+            width: 100%;
+        }
+    }
+    &__photo-grid-item {
+        &_2x {
+            grid-column: 2 span;
+        }
+    }
+    &__specification {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0 50px;
+        line-height: 1.5;
+        &_vertical {
+            grid-template-columns: 1fr;
+            gap: 40px 0;
+            div {
+                max-width: 380px;
+            }
+        }
+        strong {
+            font-family: $america;
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    }
+    &__btns {
+        max-width: 1300px;
+        margin: 50px auto;
+        display: grid;
+        gap: 30px 0;
+        .c-button {
+            max-width: 350px;
+        }
+    }
+}
+
+
+
 @import '_responsive.scss';
 
 

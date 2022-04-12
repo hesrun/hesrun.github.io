@@ -543,9 +543,49 @@
 
 
    <!-- Mobile modal -->
-   <div id="BannerModal" class="modal banner-modal">
+   <!-- <div id="BannerModal" class="modal banner-modal">
       <div class="image-wrap">
-         <img src="img/banner.jfif" alt="">
+         <img src="/img/banner.jfif" alt="">
+      </div>
+   </div> -->
+
+   <div id="NYModal" class="modal fs-modal">
+      <div class="ny-modal">
+         <div class="ny-modal__body">
+            <img src="img/NY.jpg" alt="">
+            <div class="ny-modal__btns">
+               <a href="" class="ny-modal__btn">
+                  <img src="img/ny-btn-1.png" alt="">
+                  <span>хочу в сибирскую сказку</span>
+               </a>
+               <a id="PlayNY" href="" class="ny-modal__btn">
+                  <img src="img/ny-btn-2.png" alt="">
+                  <div class="ny-modal__btn-icon">
+                     <div class="ny-modal__time">00:00/00:00</div>
+                  </div>
+                  <span>слушать</span>
+               </a>
+            </div>
+         </div>
+         <div class="ny-modal__footer">
+            <div class="ny-modal__text">
+               <p>ООО "Телемаркет Эфир" 2021 ноль+</p>
+               <p>
+                  Автор, продюсер: Ольга Чирикова. Звукорежиссёр: Руслан Калашник. <br>
+                  Автор музыки: Александр Липинский Художник-оформитель: Лидия Балашова. <br>
+                  Действующие лица: Мот: Тимур Малайков. Рассказчик: Илья Гваракидзе Кот: Александр Липинский <br>
+                  Баба Яга: Анна Штаничева. Кощей Бессмертный: Руслан Калашник. Мама: Светлана Славина. <br>
+                  Учительница: Анастасия Иванова. Царевич: Игорь Сухоруков.
+               </p>
+               <p>Партнёры: ПАО "ТОМСКПРОМСТРОЙБАНКА"; АО "Томскэнергосбыт"; ООО "Частная клиника №1" ; ООО "Стейкхауз"</p>
+            </div>
+            <div class="ny-modal__partners">
+               <img src="img/partner-1.png" alt="">
+               <img src="img/partner-2.png" alt="">
+               <img src="img/partner-3.png" alt="">
+               <img src="img/partner-4.png" alt="">
+            </div>
+         </div>
       </div>
    </div>
 
@@ -589,6 +629,7 @@
          </div>
       </div>
    </div>
+
    <div id="mobileAbout" class="remodal mobile-modal">
       <button class="close-modal-btn" data-remodal-action="close">
          <img width="35" height="35" src="svg/close.svg" alt="">
@@ -641,6 +682,7 @@
          </div>
       </div>
    </div>
+
    <div id="mobileCities" class="remodal mobile-modal">
       <button class="close-modal-btn" data-remodal-action="close">
          <img width="35" height="35" src="svg/close.svg" alt="">
@@ -912,6 +954,7 @@
          </div>
       </div>
    </div>
+
    <div id="mobileApps" class="remodal mobile-modal">
       <button class="close-modal-btn" data-remodal-action="close">
          <img width="35" height="35" src="svg/close.svg" alt="">
@@ -927,6 +970,7 @@
          </div>
       </div>
    </div>
+
    <div id="mobileContacts" class="remodal mobile-modal">
       <button class="close-modal-btn" data-remodal-action="close">
          <img width="35" height="35" src="svg/close.svg" alt="">
@@ -943,6 +987,7 @@
          </div>
       </div>
    </div>
+
    <div id="mobileFeedback" class="remodal mobile-modal">
       <button class="close-modal-btn" data-remodal-action="close">
          <img width="35" height="35" src="svg/close.svg" alt="">
@@ -972,8 +1017,14 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js" charset="utf-8"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-   <script src="js/protip.min.js"></script>
-   <script src="js/dropkick.js" charset="utf-8"></script>
-   <script src="js/main.js" charset="utf-8"></script>
+   <script src="/js/protip.min.js"></script>
+   <script src="/js/dropkick.js" charset="utf-8"></script>
+   <script src="/js/main.js" charset="utf-8"></script>
+   <script>
+      $('#PlayNY').click(function(){
+         $(this).toggleClass('play');
+         return false;
+      })
+   </script>
 </body>
 </html>

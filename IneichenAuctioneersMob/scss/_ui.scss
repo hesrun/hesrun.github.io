@@ -55,6 +55,7 @@
 }
 .tabs {
     display: flex;
+    position: relative;
     border-bottom: 1px $grey-line solid;
     &__item {
         display: flex;
@@ -66,18 +67,23 @@
         font-weight: 600;
         color: $grey;
         position: relative;
-        &_active {
-            color: #000;
-            &:after {
-                content: "";
-                display: block;
-                position: absolute;
-                bottom: -1px;
-                width: 100%;
-                height: 2px;
-                background: #000;
-            }
-        }
+        text-decoration: none;
+    }
+    &__line {
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        width: 50%;
+        height: 3px;
+        background: #000;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+    }
+    [attr-tab-num="1"].tabs__item_active ~ .tabs__line {
+        left: 0
+    }
+    [attr-tab-num="2"].tabs__item_active ~ .tabs__line {
+        left: 50%
     }
 }
 .navbar {
@@ -92,14 +98,14 @@
         flex: 1 1 0%;
         text-align: center;
         color: #fff;
-        padding: 10px 0;
+        padding: 15px 0;
         text-decoration: none;
         opacity: 0.5;
         &_active {
             opacity: 1;
         }
         .mdi {
-            font-size: 20px;
+            font-size: 24px;
         }
         span {
             margin-top: 5px;
@@ -147,10 +153,24 @@
         border-radius: 50%;
         margin-right: 15px;
     }
-    .mdi-chevron-right {
+    strong {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    span {
+        font-weight: 400;
+        font-size: 14px;
         color: $grey;
-        margin-left: auto;
+        margin-right: auto;
+    }
+    .mdi-chevron-right {
+        margin-left: 15px;
+        color: $grey;
+        width: 15px;
         font-size: 24px;
+        &.right {
+            margin-left: auto;
+        }
     }
 }
 .btn {
@@ -171,7 +191,7 @@
     &_white {
         &#{$root}_filled {
             background: #fff;
-            color: #000;
+            color: black;
         }
         &#{$root}_outline {
             color: #000;
@@ -207,6 +227,24 @@
             margin-right: 5px;
         }
     }
+    &_loading {
+        position: relative;
+        color: transparent !important;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-width: 2px;
+            border-style: solid;
+            border-top-color: #fff;
+            border-left-color: #fff;
+            border-radius: 50%;
+            animation: 0.5s Spin infinite linear;
+            
+        }
+    }
     &_disabled,
     &:disabled {
         background: $grey-light !important;
@@ -225,6 +263,7 @@
 }
 .c-filed {
     margin-bottom: 30px;
+    position: relative;
     &__input {
         font-weight: 500;
         height: 50px;
@@ -237,6 +276,74 @@
         &:focus {
             border-bottom-color: #000;
         }
+    }
+    &__select {
+        padding: 0px;
+        font-weight: 500;
+        height: 50px;
+        font-size: 16px;
+        background: none;
+        width: 100%;
+        border: none;
+        border-bottom: 2px $grey-light solid;
+        appearance: none;
+        transition: all 0.3s;
+        &:required:invalid {
+            color: rgb(117, 117, 117);
+        }
+        option[value=""][disabled] {
+            display: none;
+        }
+        &:focus {
+            border-bottom-color: #000;
+        }
+    }
+    i.mdi {
+        font-size: 24px;
+        position: absolute;
+        right: 0px;
+        line-height: 50px;
+        pointer-events: none;
+    }
+
+}
+.c-toggle {
+    display: grid;
+    grid-template-columns: 4fr 3fr 3fr;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 0 10px;
+    &_text-top {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 15px;
+        .c-toggle__text {
+            grid-column: 2 span;
+        }
+        label {
+            align-self: stretch;
+        }
+    }
+    &__text {
+        line-height: 1.3;
+        font-size: 14px;
+        padding-right: 10px;
+    }
+    input {
+        display: none;
+    }
+    input:checked + label {
+        background: #000;
+        color: #fff;
+    }
+    label {
+        border: 1px #000 solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        text-align: center;
+        padding: 10px 10px;
+        transition: all 0.3s;
     }
 }
 .btn-close {
@@ -271,6 +378,8 @@
         border: 1px $grey-line solid;
         border-radius: 10px;
         outline: none;
+        color: black;
+        background: transparent;
     }
     .mdi {
         font-size: 24px;
@@ -303,7 +412,6 @@
         transition: all 0.2s;
     }
 }
-
 .blocker {
     padding: 0px;
 }
@@ -325,6 +433,35 @@
         padding: 20px 15px;
         display: grid;
         gap: 10px;
+    }
+}
+
+.preload {
+    padding: 30px;
+    text-align: center;
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        margin: 0 15px 0 0;
+        border-radius: 50%;
+        border-width: 2px;
+        border-color: transparent;
+        border-style: solid;
+        border-top-color: $blue;
+        border-left-color: $blue;
+        animation: 0.5s Spin infinite linear; 
+    }
+    span {
+        background: $blue;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
 }
 
@@ -371,12 +508,135 @@
         }
     }
     &__content {
-        max-height: calc(100vh - 80px);
+        height: calc(100vh - 80px);
         overflow: auto;
+    }
+    &__title {
+        padding: 40px 20px 15px;
+        font-size: 16px;
+        font-weight: 600;
+        &:first-child {
+            padding-top: 0px;
+        }
     }
     &__open {
         .action-sheet__body {
             transform: translateY(0%);
         }
+    }
+}
+
+.drop-zone {
+    margin-bottom: 30px;
+    &__label {
+        border: 2px $grey-line dashed;
+        border-radius: 12px;
+        display: grid;
+        grid-row-gap: 20px;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+        padding: 8vh 15px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s;
+        &:hover {
+            border: 2px $blue solid;
+            background: rgba($blue, 0.05);
+        }
+        &_focus {
+            border: 2px $blue solid;
+            background: rgba($blue, 0.05);
+        }
+    }
+    input {
+        left: 0px;
+        top: 0px;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+    }
+    i.mdi {
+        color: $blue;
+        font-size: 28px;
+    }
+    
+}
+.upload-files {
+    display: grid;
+    grid-row-gap: 20px;
+    margin-bottom: 30px;
+    &__item {
+        display: grid;
+        grid-template-columns: 50px 1fr 32px;
+        align-items: center;
+    }
+    &__image {
+        width: 50px;
+        height: 50px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        padding: 0 50px 0 15px;
+        font-size: 13px;
+        font-weight: 500;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px 0px;
+    }
+    &__progress {
+        height: 4px;
+        background: rgba($grey, 0.1);
+        border-radius: 2px;
+        grid-column: 1 / span 2;
+        div {
+            background: $blue;
+            height: 100%;
+        }
+    }
+    &__weight {
+        font-size: 11px;
+        font-weight: 500;
+        color: $grey;
+    }
+    &__remove {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 24px;
+        &:hover {
+            background: rgba($grey, 0.1);
+        }
+    }
+}
+
+#noty_layout__topCenter {
+    top: 15px;
+    left: 30px;
+    right: 30px;
+    width: auto;
+    transform: none;
+}
+.noty_theme__sunset.noty_bar {
+    border-radius: 15px;
+    margin: 0 0 10px 0;
+    .mdi {
+        margin-right: 5px;
+    }
+}
+
+
+@keyframes Spin {
+    to {
+        transform: rotate(360deg);
     }
 }

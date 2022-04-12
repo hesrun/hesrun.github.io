@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -23,8 +24,14 @@
                 <div class="c-filed">
                     <input class="c-filed__input" type="text" placeholder="Email">
                 </div>
-                <a href="sign-pass.html" class="btn btn_blue btn_full btn_filled">
+                <div class="c-filed">
+                    <input class="c-filed__input" type="password" placeholder="Password">
+                </div>
+                <a href="sign-pass.html" class="btn btn_blue btn_full btn_filled btn_filled btn_loading">
                     Continue
+                </a>
+                <a href="" class="btn btn_white btn_full btn_filled">
+                    Reset your password
                 </a>
                 <div class="sign__btns">
                     <span>or</span>
@@ -36,5 +43,38 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+    <script>
+        new Noty({
+            type: 'alert',
+            theme: 'sunset',
+            layout: 'topCenter',
+            text: '<i class="mdi mdi-email"></i> Some notification'
+        }).show();
+        new Noty({
+            type: 'success',
+            theme: 'sunset',
+            layout: 'topCenter',
+            text: '<i class="mdi mdi-email"></i> Some notification'
+        }).show();
+        new Noty({
+            type: 'warning',
+            theme: 'sunset',
+            layout: 'topCenter',
+            text: '<i class="mdi mdi-email"></i> Some notification'
+        }).show();
+        new Noty({
+            type: 'error',
+            theme: 'sunset',
+            layout: 'topCenter',
+            text: '<i class="mdi mdi-email"></i> Some notification'
+        }).show();
+        new Noty({
+            type: 'information',
+            theme: 'sunset',
+            layout: 'topCenter',
+            text: '<i class="mdi mdi-email"></i> Some notification'
+        }).show();
+    </script>
 </body>
 </html>

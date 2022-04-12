@@ -750,6 +750,132 @@ input, button, textarea {
       }
    }
 }
+/*********************ny-modal************/
+.fs-modal {
+   width: 100%;
+   max-width: 100%;
+   padding: 0px;
+   border-radius: 0px;
+   border-radius: 10px;
+   overflow: hidden;
+   
+}
+.ny-modal {
+   & ~ a.close-modal {
+      top: 20px;
+      right: 20px;
+      opacity: 0.6;
+      transition: all 0.3s;
+      &:hover {
+         opacity: 1;
+      }
+   }
+   &__body {
+      position: relative;
+      > img {
+         width: 100%;
+      }
+   }
+   &__btns {
+      position: absolute;
+      left: 50%;
+      top: 71vw;
+      transform: translateX(-50%);
+      a {
+         display: block;
+         max-width: 100%;
+         
+      }
+   }
+   &__btn {
+      position: relative;
+      &:hover {
+         color: inherit;
+      }
+      span {
+         position: absolute;
+         left: 0px;
+         top: 0px;
+         width: 100%;
+         padding-left: 90px;
+         text-align: center;
+         text-transform: uppercase;
+         font-size: 18px;
+         padding-top: 32px;
+      }
+   }
+   &__btn-icon {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 90px;
+      height: 90px;
+      text-align: center;
+      &:before {
+         content: "";
+         margin-top: 26px;
+         display: none;
+         width: 35px;
+         height: 35px;
+         background: #fff;
+         transition: all 0.3s;
+      }
+      &:after {
+         content: "";
+         margin-top: 25px;
+         display: inline-block;
+         width: 0px;
+         height: 0px;
+         border-left: 35px #fff solid;
+         border-top: 20px transparent solid;
+         border-bottom: 20px transparent solid;
+      }
+      
+
+   }
+   .ny-modal__btn.play {
+      .ny-modal__btn-icon {
+         &:before {
+            margin-top: 20px;
+            display: inline-block;
+         }
+         &:after {
+            display: none;
+         }
+      }
+      .ny-modal__time {
+         visibility: visible;
+      }
+   }
+
+   &__time {
+      position: absolute;
+      font-size: 10px;
+      bottom: 10px;
+      width: 100%;
+      visibility: hidden;
+   }
+   &__footer {
+      padding: 30px;
+      margin-top: -10px;
+      background: #78b6e5;
+      color: #fff;
+      text-align: center;
+      p {
+         margin: 30px 0;
+      }
+   }
+   &__partners {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4,auto);
+      gap: 0 60px;
+      align-items: center;
+      img {
+         max-width: 100%;
+      }
+   }
+}
 /*****************mobile-modal***********/
 .mobile-modal {
    position: fixed;
@@ -1163,6 +1289,101 @@ input, button, textarea {
       width: 50%;
       height: 100%;
       transition: 0.2s ease-out;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .ny-modal {
+      &__btn {
+         width: 300px;
+         img {
+            width: 100%;
+         }
+         span {
+            padding-left: 60px;
+            padding-top: 22px;
+            font-size: 12px;
+         }
+         
+      }
+      &__btn-icon {
+         width: 60px;
+         height: 60px;
+         &:after {
+            margin-top: 17px;
+            border-left: 24px #fff solid;
+            border-top: 14px transparent solid;
+            border-bottom: 14px transparent solid;
+         }
+         &:before {
+            width: 24px;
+            height: 24px;
+         }
+      }
+      &__time {
+         display: none;
+      }
+      &__footer {
+         
+      }
+      &__text {  
+         font-size: 14px;
+         p {
+            margin: 15px 0;
+         }
+      }
+      &__partners {
+         width: 100%;
+         margin-top: 30px;
+      }
+   }
+   
+}
+@media screen and (max-width: 568px) {
+   .ny-modal {
+      &__btn {
+         width: 200px;
+         span {
+            padding-left: 40px;
+            padding-top: 13px;
+            font-size: 9px;
+         }
+         
+      }
+      &__btn-icon {
+         width: 40px;
+         height: 40px;
+         &:after {
+            margin-top: 13px;
+            border-left: 15px #fff solid;
+            border-top: 9px transparent solid;
+            border-bottom: 9px transparent solid;
+         }
+         &:before {
+            margin-top: 14px !important;
+            width: 16px;
+            height: 16px;
+         }
+      }
+      &__time {
+         display: none;
+      }
+      &__footer {
+         
+      }
+      &__text {  
+         font-size: 14px;
+         p {
+            margin: 15px 0;
+         }
+      }
+      &__partners {
+         width: 100%;
+         margin-top: 30px;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 30px;
+         justify-items: center;
+      }
    }
 }
 /**************animation***********/
