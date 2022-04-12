@@ -206,7 +206,9 @@
         </div>
         <div class="joker-take-a-ride">
             <div class="container">
-                <img src="img/joker/take-a-ride.jpg" alt="">
+                <video controls>
+                    <source src="img/joker/joker-video.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
         <div class="joker-bid-info">
@@ -317,7 +319,7 @@
                     </div>
                 </div>
                 <div class="joker-item-about__btns">
-                    <a href="" class="c-button c-button_violet c-button_full">Close</a>
+                    <a href="" class="close-section c-button c-button_violet c-button_full">Close</a>
                 </div>
             </div>
         </section>
@@ -392,8 +394,8 @@
                     </div>
                 </div>
                 <div class="joker-item-about__btns">
-                    <a href="" class="c-button c-button_violet c-button_full c-button_filled">Read more</a>
-                    <a href="" class="c-button c-button_violet c-button_full">Close</a>
+                    <a href="" class="next-section c-button c-button_violet c-button_full c-button_filled">Read more</a>
+                    <a href="" class="close-section c-button c-button_violet c-button_full">Close</a>
                 </div>
             </div>
         </section>
@@ -419,7 +421,7 @@
                     </div>
                 </div>
                 <div class="joker-item-about__btns">
-                    <a href="" class="c-button c-button_violet c-button_full">Close</a>
+                    <a href="" class="close-section close-section-second c-button c-button_violet c-button_full">Close</a>
                 </div>
             </div>
         </section>
@@ -548,7 +550,7 @@
                     </h2>
                 </div>
                 <div class="joker-item-about__btns">
-                    <a href="" class="c-button c-button_violet c-button_full">Close</a>
+                    <a href="" class="close-section c-button c-button_violet c-button_full">Close</a>
                 </div>
             </div>
         </section>        
@@ -606,5 +608,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        
+        var sctop = 0,
+            sctopSec = 0;
+
+        $('.joker-divider__btn').click(function(){
+            const section = $(this);
+            sctop = $('html, body').scrollTop();
+
+            section.parent('.joker-divider').next().slideToggle(500);
+            
+            $('html, body').animate({
+                scrollTop: section.parent('.joker-divider').next().offset().top
+            }, 500);
+        })
+        $('.close-section').click(function(){
+            const section = $(this);
+            section.closest('.joker-sub').slideUp(500);
+            if (section.hasClass('close-section-second')) {
+                $('html, body').animate({
+                    scrollTop: sctopSec
+                }, 500);
+            } else {
+                $('html, body').animate({
+                    scrollTop: sctop
+                }, 500);
+            }
+            
+            return false
+        })
+        $('.next-section').click(function(){
+            sctopSec = $('html, body').scrollTop();
+            $(this).closest('.joker-sub').next().slideDown(500);
+            $('html, body').animate({
+                scrollTop: $(this).closest('.joker-sub').next().offset().top
+            }, 500);
+            return false
+        })
+        
+
+
+    </script>
 </body>
 </html>
