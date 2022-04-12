@@ -1,7 +1,29 @@
 .container {
     padding: 0 150px;
 }
-
+.c-alert {
+    margin: 30px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 1.3;
+    &_red {
+        background: rgba($red-text, 0.3);
+        color: $red-text
+    }
+    &_blue {
+        background: rgba($blue-text, 0.3);
+        color: $blue-text
+    }
+    &_grey {
+        background: rgba($grey-text, 0.3);
+        color: $grey-text
+    }
+    &_brown {
+        background: rgba($brown-text, 0.3);
+        color: $brown-text
+    }
+}
 .c-button {
     $root: &;
     font-family: $inter;
@@ -107,6 +129,22 @@
             &:hover {
                 background: darken($pink-text,5);
                 border-color: darken($pink-text,5);
+            }
+        }
+    }
+    &_violet {
+        color: $violet;
+        border: 2px $violet solid;
+        &:hover {
+            background: $violet;
+            color: #fff;
+        }
+        &#{$root}_filled {
+            color: #fff;
+            background: $violet;
+            &:hover {
+                background: darken($violet,5);
+                border-color: darken($violet,5);
             }
         }
     }
@@ -372,6 +410,27 @@
         margin: 0px;
     }
 }
+.c-radio {
+    display: block;
+    margin-bottom: 15px;
+    line-height: 20px;
+    padding-left: 35px;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        color: $blue-text;
+    }
+    input {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+    }
+    &:last-child {
+        margin: 0px;
+    }
+}
 
 .c-dropdown {
     display: inline-block;
@@ -434,6 +493,10 @@
         transition: all 0.3s;
         &:hover {
             background: rgba($grey-text, 0.05);
+        }
+        &_disabled {
+            opacity: 0.3;
+            pointer-events: none;
         }
     }
 }
@@ -803,6 +866,7 @@
         }
     }
 }
+
 .modal-video {
     padding: 3px;
     max-width: 900px;

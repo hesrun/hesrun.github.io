@@ -11,13 +11,6 @@
 
 /* ---------------------------------- vars ---------------------------------- */
 @import '_vars.scss';
-$america: 'GT America Extended', sans-serif;
-$blue-bg: #1C2473;
-$blue-text: #1C2473;
-$grey-text: #676767;
-$green-text: #529959;
-$red-text: #B54C4C;
-$grey-line: #DFDFDF;
 /* --------------------------------- mixins --------------------------------- */
 @import '_mixins.scss';
 /* --------------------------------- global --------------------------------- */
@@ -396,7 +389,6 @@ $grey-line: #DFDFDF;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    margin-bottom: 120px;
 }
 .banners-grid-item {
     position: relative;
@@ -1901,12 +1893,12 @@ $grey-line: #DFDFDF;
         gap: 0 7%;
     }
     &__title-small {
+        font-family: $america;
+        font-size: 30px;
         color: $blue-text;
-        font-weight: 700;
-        margin: 100px 0 70px;
-        &:first-child {
-            margin-top: 0;
-        }
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 50px;
     }
 }
 
@@ -2002,7 +1994,7 @@ $grey-line: #DFDFDF;
     }
     &__row {
         display: grid;
-        grid-template-columns: 2fr 3fr 2fr;
+        grid-template-columns: 2fr 2fr 2fr;
         gap: 0 30px;
         margin-bottom: 50px;
         align-items: center;
@@ -2027,22 +2019,13 @@ $grey-line: #DFDFDF;
         display: flex;
         align-items: center;
         gap: 30px;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         a {
             flex: 0 0 auto;
         }
         p {
             font-size: 13px;
             line-height: 20px;
-        }
-    }
-    &__account-type {
-        grid-column: 2 span;
-        .c-select {
-            margin-top: 0px;
-        }
-        .c-field {
-            margin-top: 0px;
         }
     }
 }
@@ -2118,7 +2101,6 @@ $grey-line: #DFDFDF;
 .land-section {
     padding: 100px 0;
     &:first-of-type {
-        padding-top: 0px;
         border: none;
     }
     .title:first-child {
@@ -2126,6 +2108,10 @@ $grey-line: #DFDFDF;
     }
     &_blue {
         background: $blue-bg;
+        color: #fff;
+    }
+    &_black {
+        background: black;
         color: #fff;
     }
     &_clear {
@@ -2445,7 +2431,6 @@ $grey-line: #DFDFDF;
     text-align: center;
     padding: 60px 30px 120px;
     background: $blue-bg;
-    margin-bottom: 100px;
     color: #fff;
     &__title {
         line-height: 1.2;
@@ -2666,6 +2651,7 @@ $grey-line: #DFDFDF;
     margin: auto;
     width: 100%;
     max-width: 460px;
+    padding-top: 100px;
     padding-bottom: 30px;
     &_wide {
         max-width: 650px;
@@ -2729,8 +2715,9 @@ $grey-line: #DFDFDF;
         margin-bottom: 60px;
         line-height: 1.5;
     }
-    .c-chekbox {
-        margin: 30px 0;
+    .c-chekbox,
+    .c-radio {
+        margin: 20px 0;
     }
     &__phone {
         // display: grid;
@@ -3299,6 +3286,277 @@ $grey-line: #DFDFDF;
     }
 }
 
+
+/**************************joker**********************/
+.joker-banner {
+    padding: 50px 0 120px;
+    background: $blue-bg;
+    color: #fff;
+    text-align: center;
+    &__slogan {
+        font-family: $america;
+        font-size: 30px;
+        font-weight: 100;
+        margin-bottom: -60px;
+        span {
+            display: inline-block;
+            &:first-child {
+                margin: 0 80px 0 120px;
+            }
+        }
+    }
+    &__image {
+        max-width: 100%;
+    }
+    &__set-text {
+        margin-top: 80px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        span {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 80px;
+        }
+        i {
+            font-weight: 900;
+            font-size: 60px;
+            color: $violet;
+        }
+        small {
+            display: inline-block;
+            font-size: 60px;
+            font-weight: 100;
+            margin: 0 40px;
+        }
+    }
+}
+.joker-take-a-ride {
+    background-color: #000;
+    text-align: center;
+    img {
+        margin: -70px 0;
+        position: relative;
+        z-index: 1;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+}
+.joker-bid-info {
+    background: $violet;
+    color: #fff;
+    padding: 120px 0 50px;
+    span {
+        font-size: 20px;
+        font-family: $america;
+        line-height: 1.4;
+    }
+    &__cols {
+        margin: 0 auto;
+        max-width: 900px;
+        display: grid;
+        gap: 0 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.joker-start {
+    background: $blue-bg;
+    color: #fff;
+    padding: 10px 0;
+    &_violet {
+        background: $violet;
+        .joker-start__date {
+            span {
+                color: $blue-text;
+            }
+        }
+        .joker-start__timer {
+            .start-timer__name {
+                color: $blue-text;
+            }
+        }
+    }
+    &__cols {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__date {
+        font-family: $america;
+        font-size: 80px;
+        font-weight: 700;
+        font-style: italic;
+        span {
+            color: $violet;
+        }
+    }
+    &__timer {
+        display: flex;
+        align-items: center;
+        > span  {
+            margin-right: 30px;
+            line-height: 1.5;
+        }
+        .start-timer__digits {
+            font-size: 32px;
+        }
+        .start-timer__name {
+            margin-top: 5px;
+            color: $violet;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+}
+.joker-unicef {
+    padding: 50px 0;
+    &__cols {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__info {
+        max-width: 350px;
+        img {
+            width: 120px;
+        }
+        p {
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+    }
+    &__quote {
+        text-align: right;
+        blockquote {
+            border: 1px $grey-line solid;
+            padding: 15px 30px;
+            border-radius: 15px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            position: relative;
+            &::before {
+                content: '“';
+                font-family: "GT America Extended", sans-serif;
+                position: absolute;
+                font-size: 100px;
+                line-height: 50px;
+                left: -25px;
+                top: 0px;
+                color: $grey-line;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.joker-nft-bg {
+    background-image: url(../img/joker/nft-bg.png);
+    background-repeat: no-repeat;
+    background-position:  center right;
+}
+.joker-watch-bg {
+    background-image: url(../img/joker/watch-bg.png);
+    background-repeat: no-repeat;
+    background-position: center left 10%;
+}
+.joker-car-bg {
+    background-image: url(../img/joker/car-bg.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.joker-section {
+    display: flex;
+    &_inverse {
+        justify-content: flex-end;
+    }
+    &__title {
+        font-size: 80px;
+        font-style: italic;
+        margin-bottom: 30px;
+    }
+    &__user-image {
+        margin-bottom: 30px;
+    } 
+    &__user-name {
+        font-family: $america;
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    &__user-descr {
+        line-height: 1.5;
+    }
+}
+
+.joker-divider {
+    height: 15px;
+    background: $violet;
+    position: relative;
+    &__btn {
+        width: 151px;
+        height: 151px;
+        border: 15px $violet solid;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 15px;
+            position: absolute;
+            background-color: $violet;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:after {
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+        &:hover {
+            background: $violet;
+            &:after,
+            &:before {
+                background: #fff;
+            }
+        }
+    }
+}
+
+.joker-bid-now {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    &__image {
+        text-align: center;
+    }
+    &__info {
+        text-align: center;
+        h2 {
+            font-size: 80px;
+            font-style: italic;
+        }
+        p {
+            font-family: $america;
+            font-size: 20px;
+            text-align: center;
+            margin: 30px 0;
+            line-height: 1.5;
+            span {
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+        }
+        .c-button {
+            max-width: 370px;
+        }
+    }
+}
 @import '_responsive.scss';
 
 

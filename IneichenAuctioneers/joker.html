@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header header_blue">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img class="header__logo_blue" src="svg/head-logo.svg" alt="">
+            <img class="header__logo_white" src="svg/head-logo-white.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="joker-banner">
+            <div class="container">
+                <div class="joker-banner__slogan"><span>A unique set</span> <span>for a unique buyer</span></div>
+                <img class="joker-banner__image" src="img/joker/joker-logo.svg" alt="">
+                <div class="joker-banner__set-text">
+                    <span><i>x</i>NFT</span>
+                    <small>+</small>
+                    <span><i>x</i>WATCH</span>
+                    <small>+</small>
+                    <span><i>x</i>CAR</span>
+                </div>
+            </div>
+        </div>
+        <div class="joker-take-a-ride">
+            <div class="container">
+                <img src="img/joker/take-a-ride.jpg" alt="">
+            </div>
+        </div>
+        <div class="joker-bid-info">
+            <div class="container">
+                <div class="joker-bid-info__cols">
+                    <span>Lot Joker XXX (NFT + Watch + Car) <br>
+                        Starting price: CHF 100 000</span>
+                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Place your bid</a>
+                </div>
+            </div>
+        </div>
+        <div class="joker-start">
+            <div class="container">
+                <div class="joker-start__cols">
+                    <div class="joker-start__date">
+                        30 <span>APR</span>
+                    </div>
+                    <div class="joker-start__timer">
+                        <span>Live bidding <br> starts in:</span>
+                        <div class="start-timer">
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">01</b>
+                                <span class="start-timer__name">day</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">21</b>
+                                <span class="start-timer__name">hr</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">55</b>
+                                <span class="start-timer__name">min</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">19</b>
+                                <span class="start-timer__name">sec</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="joker-unicef">
+            <div class="container">
+                <div class="joker-unicef__cols">
+                    <div class="joker-unicef__info">
+                        <img src="img/joker/unicef.png" alt="">
+                        <p>
+                            <b>5% of auction revenue</b> will be donated to UNICEF to support the global initiative of peace establishment in Ukraine.
+                        </p>
+                    </div>
+                    <div class="joker-unicef__quote">
+                        <blockquote>
+                            This auction is the result of united work of <b>Russian</b> and <b>Ukrainian</b> creators. <br>
+                            Peace is what made this cooperation possible and is what we want to support with united efforts. 
+                        </blockquote>
+                        <p><b>Artemy Lechbinsky</b> , CEO of Ineichen Auctioneers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="land-section land-section_black joker-nft-bg">
+            <div class="container">
+                <div class="joker-section">
+                    <div class="joker-section__user">
+                        <h2 class="joker-section__title">NFT</h2>
+                        <img class="joker-section__user-image" src="img/joker/user-nft.jpg" alt="">
+                        <div class="joker-section__user-name">
+                            Creator: <br>
+                            Olexander Nyezhnyk, <br>
+                            Ukraine
+                        </div>
+                        <div class="joker-section__user-descr">
+                            Author of multiple digital projects with several years working in the <br> video game industry and for over a year – in NFT projects. Now he is <br> about to launch his own game based on Ethereum Blockchain.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="joker-divider">
+            <div class="joker-divider__btn"></div>
+        </div>
+        <section class="land-section land-section_black joker-watch-bg">
+            <div class="container">
+                <div class="joker-section joker-section_inverse">
+                    <div class="joker-section__user">
+                        <h2 class="joker-section__title">WATCH</h2>
+                        <img class="joker-section__user-image" src="img/joker/user-watch.jpg" alt="">
+                        <div class="joker-section__user-name">
+                            Creator: <br>
+                            Konstantin Chaykin, <br>
+                            Russia
+                        </div>
+                        <div class="joker-section__user-descr">
+                            Independent Russian watchmaker and inventor, master of haute horlogerie and a <br> member of the Académie Horlogère des Créateurs Indépendants (AHCI).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="joker-divider">
+            <div class="joker-divider__btn"></div>
+        </div>
+        <section class="land-section land-section_black joker-car-bg">
+            <div class="container">
+                <div class="joker-section">
+                    <div class="joker-section__user">
+                        <h2 class="joker-section__title">CAR</h2>
+                        <img class="joker-section__user-image" src="img/joker/user-car.jpg" alt="">
+                        <div class="joker-section__user-name">
+                            Creator: <br>
+                            Aleksandr Markovsky, <br>
+                            Russia
+                        </div>
+                        <div class="joker-section__user-descr">
+                            Car enthusiast, collector and restoration <br> expert from Moscow
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="joker-divider">
+            <div class="joker-divider__btn"></div>
+        </div>
+        <div class="land-section land-section_blue">
+            <div class="container">
+                <div class="joker-bid-now">
+                    <div class="joker-bid-now__image">
+                        <img src="img/joker/joker-logo.svg" alt="">
+                    </div>
+                    <div class="joker-bid-now__info">
+                        <h2 class="">
+                            PLACE YOUR <br> BID NOW
+                        </h2>
+                        <p>
+                            Lot Joker XXX (NFT + Watch + Car) <br>
+                            <span>Starting price: CHF 100 000</span>
+                        </p>
+                        <a href="" class="c-button c-button_violet c-button_filled c-button_full">Place your bid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="joker-start joker-start_violet">
+            <div class="container">
+                <div class="joker-start__cols">
+                    <div class="joker-start__date">
+                        30 <span>APR</span>
+                    </div>
+                    <div class="joker-start__timer">
+                        <span>Live bidding <br> starts in:</span>
+                        <div class="start-timer">
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">01</b>
+                                <span class="start-timer__name">day</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">21</b>
+                                <span class="start-timer__name">hr</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">55</b>
+                                <span class="start-timer__name">min</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">19</b>
+                                <span class="start-timer__name">sec</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
