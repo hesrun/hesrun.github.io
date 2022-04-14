@@ -9,6 +9,7 @@ $grey-line: rgba(#828282,0.2);
 $red: #FF8A8A;
 $blue: #1C2473;
 $brown: #C57F3F;
+$green-text: #579352;
 
 @import '_ui.scss';
 
@@ -46,6 +47,9 @@ input,select,button, textarea {
 
 .brown-text {
     color: $brown;
+}
+.green-text {
+    color: $green-text;
 }
 .blue-text {
     color: $blue;
@@ -151,7 +155,7 @@ input,select,button, textarea {
     flex-direction: column;
 }
 .header {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
 }
 
 .page.next {
@@ -379,6 +383,12 @@ input,select,button, textarea {
     padding: 20px 10px;
     display: grid;
     gap: 20px 0;
+    .auction-item__info {
+        border-radius: 20px;
+    }
+    .auction-item__image {
+        border-radius: 20px;
+    }
 }
 
 .auction-item {
@@ -395,11 +405,9 @@ input,select,button, textarea {
         display: flex;
         flex-direction: column;
         background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
-        border-radius: 20px;
     }
     &__image {
         width: 100%;
-        border-radius: 20px;
         vertical-align: middle;
         &_inside {
             border-radius: 0px;
@@ -441,7 +449,9 @@ input,select,button, textarea {
     }
 
 }
-
+.auction-item-descripion {
+    padding: 15px;
+}
 .search-result {
     font-size: 12px;
     margin: 15px 0 5px 15px;
@@ -466,6 +476,10 @@ input,select,button, textarea {
     display: grid;
     text-decoration: none;
     color: inherit;
+    > a {
+        text-decoration: none;
+        color: inherit;
+    }
     &__image {
         border-radius: 5px;
         width: 100%;
@@ -495,6 +509,9 @@ input,select,button, textarea {
     }
     &__price {
         font-size: 11px;
+        margin-top: 10px;
+    }
+    .btn {
         margin-top: 10px;
     }
 }
@@ -811,6 +828,41 @@ input,select,button, textarea {
         margin-bottom: 30px;
     }
 }
+
+.bids-list {
+    &__item {
+        padding: 20px;
+        border-top: 1px $grey-light solid;
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 0 20px
+    }
+    &__image {
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    &__lot-name {
+        margin-bottom: 5px;
+    }
+    &__lot-num {
+        font-size: 12px;
+        color: $grey;
+        margin-bottom: 15px;
+    }
+    &__auction{
+        color: $grey;
+        font-size: 13px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+    &__bid-status {
+        font-size: 14px;
+    }
+
+}
+
 .logout {
     padding: 30px 20px;
 }

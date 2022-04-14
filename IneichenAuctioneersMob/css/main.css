@@ -267,6 +267,12 @@
   width: 100%;
 }
 
+.btn_medium {
+  border-radius: 8px;
+  height: 40px;
+  font-size: 13px;
+}
+
 .btn_white.btn_filled {
   background: #fff;
   color: black;
@@ -866,6 +872,10 @@ input, select, button, textarea {
   color: #C57F3F;
 }
 
+.green-text {
+  color: #579352;
+}
+
 .blue-text {
   color: #1C2473;
 }
@@ -1002,9 +1012,9 @@ input, select, button, textarea {
 }
 
 .header {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .page.next {
@@ -1334,6 +1344,14 @@ input, select, button, textarea {
   gap: 20px 0;
 }
 
+.auctions-list .auction-item__info {
+  border-radius: 20px;
+}
+
+.auctions-list .auction-item__image {
+  border-radius: 20px;
+}
+
 .auction-item {
   position: relative;
   min-height: 300px;
@@ -1356,12 +1374,10 @@ input, select, button, textarea {
           flex-direction: column;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, black 100%);
-  border-radius: 20px;
 }
 
 .auction-item__image {
   width: 100%;
-  border-radius: 20px;
   vertical-align: middle;
 }
 
@@ -1412,6 +1428,10 @@ input, select, button, textarea {
   gap: 10px 0;
 }
 
+.auction-item-descripion {
+  padding: 15px;
+}
+
 .search-result {
   font-size: 12px;
   margin: 15px 0 5px 15px;
@@ -1439,6 +1459,11 @@ input, select, button, textarea {
   position: relative;
   display: -ms-grid;
   display: grid;
+  text-decoration: none;
+  color: inherit;
+}
+
+.lot-item > a {
   text-decoration: none;
   color: inherit;
 }
@@ -1475,6 +1500,10 @@ input, select, button, textarea {
 
 .lot-item__price {
   font-size: 11px;
+  margin-top: 10px;
+}
+
+.lot-item .btn {
   margin-top: 10px;
 }
 
@@ -1877,6 +1906,42 @@ input, select, button, textarea {
   text-align: center;
   color: #828282;
   margin-bottom: 30px;
+}
+
+.bids-list__item {
+  padding: 20px;
+  border-top: 1px #E7E7E7 solid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr;
+      grid-template-columns: 40px 1fr;
+  gap: 0 20px;
+}
+
+.bids-list__image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bids-list__lot-name {
+  margin-bottom: 5px;
+}
+
+.bids-list__lot-num {
+  font-size: 12px;
+  color: #828282;
+  margin-bottom: 15px;
+}
+
+.bids-list__auction {
+  color: #828282;
+  font-size: 13px;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.bids-list__bid-status {
+  font-size: 14px;
 }
 
 .logout {

@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: #0B243C;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px;
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  padding: 30px;
+  position: relative;
+}
+
+.pleer {
+  margin: auto;
+}
+
+.news-list {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  bottom: 0px;
+  overflow: auto;
+  max-width: 305px;
+  padding: 0 10px 0 0;
+}
+
+.news-list::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.news-list::-webkit-scrollbar-thumb {
+  background: rgba(11, 36, 60, 0.1);
+}
+
+.news-list::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.news-list {
+  scrollbar-face-color: #0B243C;
+  scrollbar-track-color: #fff;
+}
+
+.news-list__image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.news-list__item {
+  border-top: 1px rgba(11, 36, 60, 0.1) solid;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
+.news-list__item:first-child {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.news-list__name {
+  font-size: 15px;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.news-list__text {
+  font-size: 14px;
+}
+
+.news-list__info {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news-list__info span {
+  font-size: 12px;
+}
+
+.news-list__info a {
+  color: #E42538;
+  font-size: 12px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  gap: 0 7vw;
+}
+
+.footer__nav-title {
+  font-size: 24px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 35px;
+}
+
+.footer__nav-links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 10px 3vw;
+}
+
+.footer__nav-links a {
+  font-size: 18px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__nav-links a:hover {
+  color: #E42538;
+}
+
+.footer__btns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 50px;
+  border: 1px #0B243C solid;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #0B243C;
+  font-weight: 600;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__button:hover {
+  background: rgba(11, 36, 60, 0.2);
+  border-color: rgba(11, 36, 60, 0);
+}
+
+.footer__tel a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.footer__tel a:hover {
+  color: #E42538;
+}
+
+.footer__tel span {
+  display: block;
+  color: rgba(11, 36, 60, 0.5);
+  margin-bottom: 5px;
+}
+
+.social-links {
+  margin-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-links a {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border: 2px #0B243C solid;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background-color: #0B243C;
+  color: #fff;
+}
+
+.social-links i {
+  margin: auto;
+  font-size: 20px;
+}
+/*# sourceMappingURL=main.css.map */
