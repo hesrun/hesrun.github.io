@@ -22,10 +22,20 @@
                     <a href="" class="btn btn_blue btn_full btn_filled">
                         Verify account
                     </a>
+                    <a href="" class="btn btn_green btn_full btn_filled">
+                        Verify account
+                    </a>
+                    <a href="" class="btn btn_blue btn_full btn_filled btn_no-action">
+                        Verify account
+                    </a>
+                    <small>
+                        Ineichen requires clients to complete identity verification before placing a bid.<br>
+                        Please verify your mobile phone number and upload copies of your photo ID (passport, driver license).
+                    </small>
                 </div>
             </div>
             <div class="links-list">
-                <a id="OpenProfile" href="" class="links-list__item">
+                <a href="settings.html" class="links-list__item">
                     <i class="links-list__icon mdi mdi-account-outline"></i>
                     <strong>Profile</strong>
                     <i class="right mdi mdi-chevron-right"></i>
@@ -74,52 +84,12 @@
         <div class="action-sheet__body">
             <div class="action-sheet__line"></div>
             <div class="action-sheet__content">
-                <div id="Profile" style="display: none">
-                    <div class="action-sheet__title">General</div>
-                    <div class="links-list">
-                        <a href="" class="links-list__item">
-                            <span>Account type</span>
-                            <strong>Corporate</strong>
-                        </a>
-                        <a href="" class="links-list__item">
-                            <span>Email address</span>
-                            <strong>customer@gmail.com</strong>
-                        </a>
-                        <a href="" class="links-list__item">
-                            <span>Password</span>
-                            <strong>***************</strong>
-                            <i class="mdi mdi-chevron-right"></i>
-                        </a>
-                    </div>
-                    <div class="action-sheet__title">Info</div>
-                    <div class="links-list">
-                        <div class="links-list__item">
-                            <span>Full name</span>
-                            <strong>Mr Sergey Dolgushin</strong>
-                        </div>
-                        <div class="links-list__item">
-                            <span>Phone</span>
-                            <strong>+79191395317</strong>
-                        </div>
-                    </div>
-                    <div class="action-sheet__title">Business</div>
-                    <div class="links-list">
-                        <div class="links-list__item">
-                            <span>Company name</span>
-                            <strong>{business}</strong>
-                        </div>
-                        <div class="links-list__item">
-                            <span>Delivery address</span>
-                            <strong>{delivery}</strong>
-                        </div>
-                        <div class="links-list__item">
-                            <span>Legal address</span>
-                            <strong>{address}</strong>
-                        </div>
-                    </div>
-                </div>
                 <div id="Bidslist" style="display: none">
-                    <div class="action-sheet__title">My Bids</div>
+                    <div class="tabs">
+                        <a href="#" attr-tab-num="1" class="tabs__item tabs__item_active">Active bids</a>
+                        <a href="#" attr-tab-num="2" class="tabs__item">Past bids</a>
+                        <div class="tabs__line"></div>
+                    </div>
                     <div class="bids-list">
                         <div class="bids-list__item">
                             <div class="bids-list__image">
@@ -210,78 +180,115 @@
                 <div id="Wishlist" style="display: none">
                     <div class="action-sheet__title">Wishlist</div>
                     <div class="lots-grid">
-                        <div class="lot-item" href="">
-                            <a href="">
+                        <div class="lot-item">
+                            <a href="#">
                                 <img class="lot-item__image" src="img/lot-item.jpg" alt="">
                                 <div class="lot-item__brand">ROGER DUBUIS</div>
-                                <div class="lot-item__name">SYMPATHIE</div>
+                                <div class="lot-item__name">SYMPATHIE SYMPATHIE SYMPATHIE </div>
                                 <div class="lot-item__price">CHF 10 000 - CHF 15 000</div>
                             </a>
-                            <a href="" class="btn btn_medium btn_black btn_full btn_outline">
+                            <a href="#" class="btn btn_medium btn_black btn_full btn_outline">
                                 Remove from wishlist
                             </a>
                         </div>
-                        <div class="lot-item" href="">
-                            <a href="">
+                        <div class="lot-item">
+                            <a href="#">
                                 <img class="lot-item__image" src="img/lot-item.jpg" alt="">
                                 <div class="lot-item__brand">ROGER DUBUIS</div>
                                 <div class="lot-item__name">SYMPATHIE</div>
                                 <div class="lot-item__price">CHF 10 000 - CHF 15 000</div>
                             </a>
-                            <a href="" class="btn btn_medium btn_black btn_full btn_outline">
+                            <a href="#" class="btn btn_medium btn_black btn_full btn_outline">
                                 Remove from wishlist
                             </a>
                         </div>
-                        <div class="lot-item" href="">
-                            <a href="">
+                        <div class="lot-item">
+                            <a href="#">
                                 <img class="lot-item__image" src="img/lot-item.jpg" alt="">
                                 <div class="lot-item__brand">ROGER DUBUIS</div>
                                 <div class="lot-item__name">SYMPATHIE</div>
                                 <div class="lot-item__price">CHF 10 000 - CHF 15 000</div>
                             </a>
-                            <a href="" class="btn btn_medium btn_black btn_full btn_outline">
+                            <a href="#" class="btn btn_medium btn_black btn_full btn_outline">
                                 Remove from wishlist
                             </a>
                         </div>
-                        <div class="lot-item" href="">
+                        <div class="lot-item">
                             <a href="">
                                 <img class="lot-item__image" src="img/lot-item.jpg" alt="">
                                 <div class="lot-item__brand">ROGER DUBUIS</div>
                                 <div class="lot-item__name">SYMPATHIE</div>
                                 <div class="lot-item__price">CHF 10 000 - CHF 15 000</div>
-                            </a>
-                            <a href="" class="btn btn_medium btn_black btn_full btn_outline">
-                                Remove from wishlist
                             </a>
                         </div>
                     </div>
+                    <div class="page-cap">
+                        <i class="mdi mdi-cards-heart-outline"></i>
+                        <span>Wishlist empty</span>
+                    </div>
                 </div>
                 <div id="Invoicelist" style="display: none">
-                    <div class="action-sheet__title">Invoice list</div>
-                    <div class="links-list">
-                        <a href="" class="links-list__item">
-                            <i class="links-list__icon mdi mdi-file-outline"></i>
-                            <strong>INVOICE 123044385493-Suka</strong>
+                    <div class="action-sheet__title">Open invoices</div>
+                    <div class="verify-info">
+                        <a href="" class="btn btn_blue btn_medium btn_full btn_filled">
+                            Verify account
                         </a>
-                        <a href="" class="links-list__item">
-                            <i class="links-list__icon mdi mdi-file-outline"></i>
-                            <strong>INVOICE 123044385493-Suka</strong>
+                        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, eius?</span>
+                    </div>
+                    <div class="text-cap">
+                        <span>Invoice list is empty</span>
+                    </div>
+                    <div class="invoice-list" style="display: none">
+                        <a href="" class="invoice-list__item">
+                            <div class="invoice-list__num">Invoice 200</div>
+                            <div class="invoice-list__summ">EUR 65 000</div>
+                            <div class="invoice-list__date">11.11.1111</div>
+                            <i class="mdi mdi-file-download-outline"></i>
                         </a>
-                        <a href="" class="links-list__item">
-                            <i class="links-list__icon mdi mdi-file-outline"></i>
-                            <strong>INVOICE 123044385493-Suka</strong>
+                        <a href="" class="invoice-list__item">
+                            <div class="invoice-list__num">Invoice 200</div>
+                            <div class="invoice-list__summ">EUR 65 000</div>
+                            <div class="invoice-list__date">11.11.1111</div>
+                            <i class="mdi mdi-file-download-outline"></i>
                         </a>
-                        <a href="" class="links-list__item">
-                            <i class="links-list__icon mdi mdi-file-outline"></i>
-                            <strong>INVOICE 123044385493-Suka</strong>
+                        <a href="" class="invoice-list__item">
+                            <div class="invoice-list__num">Invoice 200</div>
+                            <div class="invoice-list__summ">EUR 65 000</div>
+                            <div class="invoice-list__date">11.11.1111</div>
+                            <i class="mdi mdi-file-download-outline"></i>
                         </a>
-                        <a href="" class="links-list__item">
-                            <i class="links-list__icon mdi mdi-file-outline"></i>
-                            <strong>INVOICE 123044385493-Suka</strong>
+                        <a href="" class="invoice-list__item">
+                            <div class="invoice-list__num">Invoice 200</div>
+                            <div class="invoice-list__summ">EUR 65 000</div>
+                            <div class="invoice-list__date">11.11.1111</div>
+                            <i class="mdi mdi-file-download-outline"></i>
                         </a>
-                        <a href="" class="links-list__item">
-                            <i class="links-list__icon mdi mdi-file-outline"></i>
-                            <strong>INVOICE 123044385493-Suka</strong>
+                    </div>
+                    <div class="action-sheet__title">Closed invoices</div>
+                    <div class="invoice-list">
+                        <a href="" class="invoice-list__item">
+                            <div class="invoice-list__num">Invoice 200</div>
+                            <div class="invoice-list__summ">EUR 65 000</div>
+                            <div class="invoice-list__date">11.11.1111</div>
+                            <i class="mdi mdi-file-download-outline"></i>
+                        </a>
+                        <a href="" class="invoice-list__item">
+                            <div class="invoice-list__num">Invoice 200</div>
+                            <div class="invoice-list__summ">EUR 65 000</div>
+                            <div class="invoice-list__date">11.11.1111</div>
+                            <i class="mdi mdi-file-download-outline"></i>
+                        </a>
+                        <a href="" class="invoice-list__item">
+                            <div class="invoice-list__num">Invoice 200</div>
+                            <div class="invoice-list__summ">EUR 65 000</div>
+                            <div class="invoice-list__date">11.11.1111</div>
+                            <i class="mdi mdi-file-download-outline"></i>
+                        </a>
+                        <a href="" class="invoice-list__item">
+                            <div class="invoice-list__num">Invoice 200</div>
+                            <div class="invoice-list__summ">EUR 65 000</div>
+                            <div class="invoice-list__date">11.11.1111</div>
+                            <i class="mdi mdi-file-download-outline"></i>
                         </a>
                     </div>
                 </div>
@@ -298,12 +305,6 @@
         function OpenSheet(){
             $(".action-sheet").fadeIn(300).addClass('action-sheet__open');
         }
-        $('#OpenProfile').click(function(){
-            $('.action-sheet__content > div').hide();
-            $('#Profile').show();
-            OpenSheet();
-            return false;
-        })
         $('#OpenBids').click(function(){
             $('.action-sheet__content > div').hide();
             $('#Bidslist').show();

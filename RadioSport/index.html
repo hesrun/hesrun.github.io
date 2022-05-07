@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="font/socials/styles.css">
     <title>Document</title>
@@ -21,7 +22,17 @@
         </div>
         <div class="content">
             <div class="pleer">
-                <img src="img/pleer-off.png" alt="">
+                <img src="img/pleer.png" alt="">
+                <div class="pleer__icon"></div>
+                <div class="pleer__equalizer">
+                    <span><i></i></span>
+                    <span><i></i></span>
+                    <span><i></i></span>
+                    <span><i></i></span>
+                    <span><i></i></span>
+                    <span><i></i></span>
+                    <span><i></i></span>
+                </div>
             </div>
             <div class="news-list">
                 <div class="news-list__item">
@@ -57,6 +68,42 @@
                         <a href="">Читать далее</a>
                     </div>
                 </div>
+                <div class="news-list__item">
+                    <div class="news-list__image">
+                        <img src="https://picsum.photos/300/150" alt="">                        
+                    </div>
+                    <h2 class="news-list__name">В Бутово две кошки надругались на собакой</h2>
+                    <p class="news-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at quae magnam praesentium sunt officia ad doloribus quis aliquid earum! Enim pariatur dicta neque ipsum adipisci exercitationem quam eos quas!</p>
+                    <div class="news-list__info">
+                        <span>09.05.2035</span>
+                        <a href="">Читать далее</a>
+                    </div>
+                </div>
+                <div class="news-list__item">
+                    <div class="news-list__image">
+                        <img src="https://picsum.photos/300/150" alt="">                        
+                    </div>
+                    <h2 class="news-list__name">В Бутово две кошки надругались на собакой</h2>
+                    <p class="news-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at quae magnam praesentium sunt officia ad doloribus quis aliquid earum! Enim pariatur dicta neque ipsum adipisci exercitationem quam eos quas!</p>
+                    <div class="news-list__info">
+                        <span>09.05.2035</span>
+                        <a href="">Читать далее</a>
+                    </div>
+                </div>
+                <div class="news-list__item">
+                    <div class="news-list__image">
+                        <img src="https://picsum.photos/300/150" alt="">                        
+                    </div>
+                    <h2 class="news-list__name">В Бутово две кошки надругались на собакой</h2>
+                    <p class="news-list__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at quae magnam praesentium sunt officia ad doloribus quis aliquid earum! Enim pariatur dicta neque ipsum adipisci exercitationem quam eos quas!</p>
+                    <div class="news-list__info">
+                        <span>09.05.2035</span>
+                        <a href="">Читать далее</a>
+                    </div>
+                </div>
+                <div class="news-list__close">
+                    <span>Закрыть новости</span>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -79,6 +126,7 @@
                             </a>
                         </div>
                         <div class="copy">(С) «Радио Спорт.ФМ»</div>
+                        <div class="footer__news-button">Лента новостей</div>
                     </div>
                     <div class="footer__nav-col">
                         <strong class="footer__nav-title">Подкасты</strong>
@@ -99,7 +147,7 @@
                     <a href="" class="footer__button">
                         <img src="img/appstore.svg" alt="">
                     </a>
-                    <a href="" class="footer__button">
+                    <a href="" class="footer__button ShowModal">
                         Обратная связь
                     </a>
                     <div class="footer__tel">
@@ -115,7 +163,77 @@
                     </a>
                 </div>
             </div>
+            <div class="footer__mob-right">
+                <a href="" class="footer__mob-button ShowModal">
+                    <img src="img/write-icon.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer-mobile">
+            <div class="footer-mobile__tel">
+                <span>Офис:</span>
+                <a href="tel:+74993223773">+7 (499) 322-37-73</a>
+            </div>
+            <div class="footer-mobile__tel">
+                <span>Эфир:</span>
+                <a href="tel:+74994504944">+7 (499) 450-49-44</a>
+            </div>
+            <div class="copy">(С) «Радио Спорт.ФМ»</div>
         </div>
     </div>
+    <div id="Form" class="modal form-modal">
+        <div class="form-modal__title">Обратная связь</div>
+        <form action="">
+            <label for="">ФИО</label>
+            <input type="text">
+            <label for="">Телефон</label>
+            <input type="text">
+            <label for="">Email</label>
+            <input type="email">
+            <label for="">Email</label>
+            <textarea name="" id=""></textarea>
+            <div>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+    <div id="NewItem" class="modal news-modal">
+        <div class="news-modal__image">
+            <img src="https://picsum.photos/300/150" alt="">                        
+        </div>
+        <div class="news-modal__date">
+            <span>09.05.2035</span>
+        </div>
+        <h2 class="news-modal__name">В Бутово две кошки надругались на собакой</h2>
+        <div class="news-modal__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at quae magnam praesentium sunt officia ad doloribus quis aliquid earum! Enim pariatur dicta neque ipsum adipisci exercitationem quam eos quas!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at quae magnam praesentium sunt officia ad doloribus quis aliquid earum! Enim pariatur dicta neque ipsum adipisci exercitationem quam eos quas!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at quae magnam praesentium sunt officia ad doloribus quis aliquid earum! Enim pariatur dicta neque ipsum adipisci exercitationem quam eos quas!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at quae magnam praesentium sunt officia ad doloribus quis aliquid earum! Enim pariatur dicta neque ipsum adipisci exercitationem quam eos quas!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat at quae magnam praesentium sunt officia ad doloribus quis aliquid earum! Enim pariatur dicta neque ipsum adipisci exercitationem quam eos quas!</p>
+        </div>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script>
+        $('.pleer').click(function(){
+           $(this).toggleClass('pleer_active');
+        })
+        $('.ShowModal').click(function(){
+            $("#Form").modal({
+                fadeDuration: 300
+            });
+            return false;
+        })
+        $("#NewItem").modal({
+            fadeDuration: 300
+        });
+
+        $('.footer__news-button,.news-list__close').click(function(){
+            $('.news-list').toggleClass('news-list_show');
+            return false;
+        })
+    </script>
 </body>
 </html>

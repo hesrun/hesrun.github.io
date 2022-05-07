@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header header_dark-grey">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img class="header__logo_blue" src="svg/head-logo.svg" alt="">
+            <img class="header__logo_white" src="svg/head-logo-white.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="ineichen-invest-banner">
+            <div class="container">
+                <h1 class="ineichen-invest-title">Become a shareholder</h1>
+                <p class="ineichen-invest-subtitle">Be a part of Ineichen Zürich, <br> a leading auction house for <br> luxury watches in Switzerland</p>
+            </div>
+        </div>
+        <div class="ineichen-invest-certificate">
+            <img src="img/invest/certificate.png" alt="">
+        </div>
+        <div class="ineichen-invest-auction-info">
+            <div class="container">
+                <h1 class="ineichen-invest-title">28 may, 14:30 CET</h1>
+                <p class="ineichen-invest-subtitle">
+                    we are launching a public sale of <br> Ineichen’s shares as an auction!
+                </p>
+                <div class="ineichen-invest-auction-descr">
+                    <div>
+                        <div class="ineichen-invest-auction-descr__info">
+                            <strong>5 shares</strong> of Ineichen Auctioneers
+                            equal to <b>0,5%</b> of total share capital.  
+                        </div>
+                        <div class="ineichen-invest-auction-start-price">
+                            Starting price: CHF 100 000 <br>
+                            <span>Accepts cryptocyrrency</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="ineichen-invest-auction-descr__note">
+                            The new shareholder will have a right to 
+                            resell the share at any price and  receive the dividends.
+                        </div>
+                        <a href="" class="c-button c-button_dark-grey c-button_filled c-button_full">Place your bid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_dark-grey">
+            <div class="container">
+                <h1 class="ineichen-invest-title">
+                    Why invest in <br>
+                    <small>Ineichen Auctioneers?</small>
+                </h1>
+                <div class="ineichen-invest-why">
+                    <div>
+                        <img src="img/invest/chart-1.jpg" alt="">
+                        <strong>Projected EBITA  & Sales</strong>
+                        <a href="" class="c-button c-button_milk-white c-button_filled c-button_full">Download the Detailed Business Plan</a>
+                    </div>
+                    <div>
+                        <img src="img/invest/chart-2.jpg" alt="">
+                        <strong>
+                            Estimated company value
+                            <span>CHF 50’064’273</span>
+                        </strong>
+                        <a href="" class="c-button c-button_milk-white c-button_filled c-button_full">Download the Presentation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_milk-white">
+            <div class="container">
+                <h1 class="ineichen-invest-title">
+                    As a shareholder,<br>
+                    <small>you have the following rights:</small>
+                </h1>
+                <div class="ineichen-invest-priority">
+                    <div>
+                        <ul class="ineichen-invest-priority__list">
+                            <li class="ineichen-invest-priority__list-item">
+                                To <b>receive dividends</b>
+                            </li>
+                            <li class="ineichen-invest-priority__list-item">
+                                To <b>sell your stock</b> and <b>make a profit</b>
+                            </li>
+                            <li class="ineichen-invest-priority__list-item">
+                                To <b>participate in</b> the annual shareholders’ <b>meetings</b> held in Zürich
+                            </li>
+                            <li class="ineichen-invest-priority__list-item">
+                                To choose how to get your dividends - in <b>cryptocurrency</b> or in <b>euro</b> to your account.
+                            </li>
+                            <li class="ineichen-invest-priority__list-item">
+                                <b>To be informed</b> about the company and its earnings
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="ineichen-invest-priority__secure">
+                            <b>Security and trust</b>
+                            Switzerland is a safe haven, both financially and politically. Low capital costs, a stable currency, strong purchasing power, moderate taxation, a federal state system, and economic and political stability guarantee a high level of security for investments in Switzerland.
+                            <img src="img/invest/secure.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_dark-grey">
+            <div class="container">
+                <h2 class="ineichen-invest-title ineichen-invest-title_small">
+                    Going Forward - our Strategic Plan
+                </h2>
+                <div class="ineichen-invest-plan">
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-1.svg" alt="">
+                        <h4>Partnering with Market Leaders</h4>
+                        <p>We have entered into a partnership with Watchbox, the world’s largest pre-owned luxury watch online retailer</p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-2.svg" alt="">
+                        <h4>Taking Over <br> New Markets</h4>
+                        <p>We continue to expand internationally approaching clients in the key strategic markets (Hong Kong, UAE, the USA) </p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-3.svg" alt="">
+                        <h4>Bringing Blockchain into Watch Industry</h4>
+                        <p>We’re launching Meta-Tourbillion project – a unique blockchain-based platform for watch brands, watch buyers and collectors</p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-4.svg" alt="">
+                        <h4>Virtual Try-On <br> for Watches</h4>
+                        <p>We’re using a new blockchain and Artificial/Virtual Reality technology</p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-5.svg" alt="">
+                        <h4>Collaborating with Independent Artisans </h4>
+                        <p>We’re expanding business to independent watchmakers</p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-6.svg" alt="">
+                        <h4>Themed Auctions for Exceptional Watches</h4>
+                        <p>We are the first ones to focus only on smaller themed auctions holding up to 10 auctions per year </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_black">
+            <div class="container">
+                <h1 class="ineichen-invest-title ineichen-invest-title_daura">
+                    How does it work?
+                    <img src="img/invest/daura.png" alt="">
+                </h1>
+                <div class="ineichen-invest-how-work">
+                    <p>We are the first auction house going digital! Our shares are transferred through Daura – a digital share platform to the blockchain digital register. </p>
+                    <br>
+                    <p>Become a registered share holder in two clicks! No paperwork or waiting – it’s as easy as 1-2-3.</p><br>
+                    <span>Swiss regulation allows to hold digital shares register</span>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_dark-grey">
+            <div class="container">
+                <div class="ineichen-invest-place-bid">
+                    <div class="ineichen-invest-place-bid__top">
+                        <h2>Place your bid now</h2>
+                        <p>
+                            <b>5 shares</b> of Ineichen Auctioneers <br>
+                            equal to 0,5% of total share capital
+                        </p>
+                    </div>
+                    <div class="ineichen-invest-place-bid__bottom">
+                        <div class="ineichen-invest-auction-start-price">
+                            Starting price: CHF 100 000 <br>
+                            <span>Accepts cryptocyrrency</span>
+                        </div>
+                        <a href="" class="c-button c-button_milk-white c-button_filled c-button_full">Place your bid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_milk-white ineichen-invest-footer">
+            <div class="container">
+                <img src="img/invest/footer-img.svg" alt="">
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
