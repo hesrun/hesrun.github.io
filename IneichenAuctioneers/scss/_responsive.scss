@@ -214,6 +214,114 @@
         }
     }
 
+
+    /**************************ineichen-invest**********************/
+    .ineichen-invest-title {
+        font-size: 50px;
+        margin-bottom: 50px;
+        &_small {
+            font-size: 32px;
+        }
+        &_daura {
+            img {
+                height: 40px;
+                flex: 0 0 auto;
+            }
+        }
+    }
+    .ineichen-invest-subtitle {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+    .ineichen-invest-auction-descr {
+        gap: 0 30px;
+        &__info {
+            font-size: 18px;
+            margin-bottom: 20px;
+            strong {
+                font-size: 28px;
+            }
+        }
+        &__note {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+    }
+    .ineichen-invest-auction-start-price {
+        font-size: 22px;
+        span {
+            margin-top: 5px;
+            font-size: 12px;
+            opacity: 0.5;
+            float: none;
+            display: inline-block;
+        }
+    }
+    .ineichen-invest-why {
+        gap: 0 30px;
+        strong {
+            font-size: 18px;
+        }
+    }
+    .ineichen-invest-priority {
+        gap: 0 30px;
+        &__list-item {
+            font-size: 18px;
+            padding-left: 25px;
+            &:after {
+                top: 5px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        &__secure {
+            font-size: 18px;
+            padding: 30px;
+            b {
+                margin-bottom: 15px;
+            }
+            img {
+                width: 60px;
+                right: -25px;
+                top: -25px;
+            }
+        }
+    }
+    .ineichen-invest-plan {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px 60px;
+        text-align: center;
+        br {
+            display: none;
+        }
+        h4 {
+            font-size: 18px;
+        }
+    }
+    .ineichen-invest-how-work {
+        font-size: 18px;
+    }
+
+    .ineichen-invest-place-bid {
+        h2 {
+            font-size: 32px;
+            font-weight: 500;
+        }
+        &__top {
+            margin-bottom: 30px;
+            gap: 0 30px;
+            p {
+                
+                font-size: 18px;
+            }
+            b {
+                font-size: 28px;
+            }
+        }
+        &__bottom {
+            gap: 0 30px;
+        }
+    }
 }
 
 @media screen and (max-width: 820px) {
@@ -272,6 +380,31 @@
             padding: 0 30px;
         }
     }
+
+    .no-permium-banner {
+        $root: &;
+        grid-template-columns: 1fr;
+        gap: 30px 0px;
+        text-align: center;
+        justify-items: center;
+
+        &_no-image {
+            #{$root}__info {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px 0;
+                align-items: center;
+            }
+            #{$root}__title {
+                font-size: 35px;
+            }
+            p {
+                font-size: 20px;
+                margin: 0px;
+            }
+        }
+    }
+
     .services-list {
         grid-template-columns: 1fr;
         gap: 30px 0px;
@@ -395,7 +528,7 @@
         }
         &__buttons {
             grid-template-columns: 1fr;
-            .c-button_blue {
+            .auction-detail__button-double {
                 grid-column: auto;
             }
         }
@@ -870,6 +1003,47 @@
     .joker-watch-space {
         display: none;
     }
+    /**************************ineichen-invest**********************/
+    .ineichen-invest-auction-descr {
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+        &__info {
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+    }
+    .ineichen-invest-why {
+        grid-template-columns: 1fr;
+        gap: 50px 0;
+        strong {
+            font-size: 18px;
+        }
+        img {
+            width: 100%;
+        }
+        strong {
+            font-size: 22px;
+            margin: 20px 0;
+        }
+    }
+    .ineichen-invest-place-bid {
+        &__top {
+            grid-template-columns: 1fr;
+            gap: 0 0;
+            margin-bottom: 0px;
+            br {
+                display: none;
+            }
+            p {
+                text-align: left;
+            }
+        }
+        &__bottom {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px 0;
+        }
+    } 
 }
 
 @media screen and (max-width: 520px) {
@@ -1040,6 +1214,47 @@
     .mobile-menu {
         &__aside {
             max-width: 100%;
+        }
+    }
+
+    .no-permium-banner {
+        $root: &;
+        gap:15px 0px;
+        margin-top: 20px;
+        border: 2px $brown-bg solid;
+        padding: 15px;
+        text-align: left;
+        img {
+            max-width: 100%;
+        }
+        &__title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            small {
+                font-size: 15px;
+            }
+        }
+        p {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        .c-button {
+            width: 100%;
+        }
+        &_no-image {
+            #{$root}__info {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px 0;
+                align-items: center;
+            }
+            #{$root}__title {
+                font-size: 20px;
+            }
+            p {
+                font-size: 15px;
+                margin: 0px;
+            }
         }
     }
     .services-list {
@@ -2229,7 +2444,143 @@
             max-width: 100%;
         }
     }
-    
+
+    /**************************ineichen-invest**********************/
+    .ineichen-invest-banner {
+        margin: 0px 0 0 0;
+        padding: 30px 0 35vw;
+    }
+    .ineichen-invest-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+        &_small {
+            font-size: 22px;
+            text-align: center;
+            line-height: 1.4;
+        }
+    }
+    .ineichen-invest-subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+        br {
+            display: none;
+        }
+    }
+    .ineichen-invest-certificate {
+        img {
+            max-width: 90%;
+        }
+    }
+    .ineichen-invest-auction-info {
+        padding: 37vw 0 50px;
+        &:after,
+        &:before {
+            background-position: top;
+        }
+    }
+    .ineichen-invest-auction-descr {
+        padding: 15px;
+        border-radius: 10px;
+        gap: 20px 0;
+        &__info {
+            font-size: 15px;
+            margin-bottom: 15px;
+            strong {
+                font-size: 18px;
+            }
+        }
+        &__note {
+            font-size: 15px;
+        }
+        .c-button {
+            font-family: $inter;
+            text-transform: none;
+        }
+    }
+    .ineichen-invest-auction-start-price {
+        text-align: center;
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+    .ineichen-invest-why {
+        strong {
+            font-size: 18px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px 0;
+            text-align: center;
+        }
+        .c-button {
+            font-family: $inter;
+            text-transform: none;
+        }
+    }
+
+    .ineichen-invest-priority {
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+    }
+    .ineichen-invest-priority {
+        gap: 0 15px;
+        &__list-item {
+            font-size: 15px;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            &:after {
+                top: 6px;
+                width: 10px;
+                height: 10px;
+            }
+        }
+        &__secure {
+            font-size: 15px;
+            padding: 15px;
+            img {
+                display: none;
+            }
+        }
+    }
+    .ineichen-invest-plan {
+        grid-template-columns: 1fr;
+        gap: 40px 0px;
+        h4 {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+    .ineichen-invest-how-work  {
+        font-size: 15px;
+        span {
+            display: inline-block;
+        }
+    }
+    .ineichen-invest-place-bid {
+        h2 {
+            font-size: 28px;
+            text-align: center;
+        }
+        &__top {
+            text-align: center;
+            p {
+                font-size: 15px;
+                margin: 10px 0;
+                text-align: center;
+            }
+            b {
+                font-size: 18px;
+            }
+        }
+    }
+    .ineichen-invest-footer {
+        img {
+            max-width: 100%;
+        }
+    }
 }
 
 @media screen and (max-height: 800px) {

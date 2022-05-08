@@ -495,6 +495,54 @@
     }
 }
 
+.no-permium-banner {
+    $root: &;
+    margin-top: 100px;
+    border: 5px $brown-bg solid;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 50px;
+    align-items: center;
+    &__info {
+        line-height: 1.2;
+    }
+    &__title {
+        font-size: 32px;
+        color: $blue-text;
+        margin-bottom: 15px;
+        small {
+            display: block;
+        }
+    }
+    p {
+        line-height: 1.4;
+        font-weight: 500;
+        font-size: 24px;
+        font-family: $america;
+        margin-bottom: 30px;
+    }
+    &_no-image {
+        margin: 40px 0;
+        display: block;
+        #{$root}__info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 300px;
+            gap: 0 50px;
+            align-items: center;
+        }
+        #{$root}__title {
+            margin: 0px;
+            font-size: 35px;
+        }
+        p {
+            font-size: 20px;
+            margin: 0px;
+        }
+    }
+}
+
 .services-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -810,7 +858,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 15px;
-        .c-button_blue {
+        .auction-detail__button-double {
             grid-column: 1/2 span;
         }
     }
