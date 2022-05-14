@@ -38,10 +38,12 @@
   font-weight: 400;
 }
 
-.search-bar a {
-  color: inherit;
-  text-decoration: none;
-  padding: 0 5px 0 10px;
+.search-bar__back {
+  line-height: 36px;
+  margin-left: -10px;
+  padding: 0 10px;
+  color: #828282;
+  font-size: 25px;
 }
 
 .page-cap {
@@ -77,13 +79,7 @@
 .page-cap span {
   color: #828282;
   font-size: 13px;
-}
-
-.text-cap {
-  padding: 20px;
-  text-align: center;
-  color: #828282;
-  text-transform: uppercase;
+  line-height: 1.4;
 }
 
 .tabs {
@@ -226,6 +222,19 @@
 
 .links-list__item_wrap .c-chekbox {
   margin-top: 20px;
+}
+
+.links-list__item_invoice {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.links-list__item_invoice strong {
+  line-height: 1.3;
+}
+
+.links-list__item_invoice b {
+  margin-left: auto;
 }
 
 .links-list .links-list__icon {
@@ -427,6 +436,7 @@
   width: 100%;
   border: none;
   border-bottom: 2px #E7E7E7 solid;
+  border-radius: 0px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -444,6 +454,7 @@
   width: 100%;
   border: none;
   border-bottom: 2px #E7E7E7 solid;
+  border-radius: 0px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   resize: vertical;
@@ -760,6 +771,11 @@
   gap: 10px;
 }
 
+.modal__footer_double {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
 .modal_animate {
   -webkit-animation: 0.3s SlideInUp both;
           animation: 0.3s SlideInUp both;
@@ -867,9 +883,28 @@
   margin-bottom: 20px;
 }
 
+.action-sheet__footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  padding: 15px;
+}
+
 .action-sheet__open .action-sheet__body {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+}
+
+.action-sheet .tabs {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background: #fff;
+}
+
+.action-sheet .page-cap {
+  position: absolute;
+  top: 0px;
 }
 
 .drop-zone {
@@ -1142,6 +1177,15 @@ input, select, button, textarea {
   line-height: 40px;
   right: -15px;
   top: 0px;
+}
+
+.article table {
+  width: 100%;
+  font-size: 12px;
+}
+
+.article table td {
+  padding: 5px;
 }
 
 .app {
@@ -1455,7 +1499,7 @@ input, select, button, textarea {
   top: 0px;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: -1;
 }
 
@@ -1479,7 +1523,6 @@ input, select, button, textarea {
 
 .splash__text {
   margin-top: 30px;
-  opacity: 0.5;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -1513,6 +1556,7 @@ input, select, button, textarea {
 }
 
 .header-title a {
+  color: #828282;
   display: inline-block;
   text-align: center;
   width: 50px;
@@ -1601,7 +1645,39 @@ input, select, button, textarea {
   border-radius: 20px;
 }
 
+.no-permium-banner {
+  border: 3px #C57F3F solid;
+  border-radius: 18px;
+}
+
+.no-permium-banner__img {
+  width: 100%;
+}
+
+.no-permium-banner__info {
+  padding: 20px;
+}
+
+.no-permium-banner__title {
+  font-weight: 500;
+  font-size: 24px;
+  color: #1C2473;
+  font-family: "GT America Extended", sans-serif;
+}
+
+.no-permium-banner__title small {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.no-permium-banner p {
+  font-family: "GT America Extended", sans-serif;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
 .auction-item {
+  display: block;
   position: relative;
   min-height: 300px;
 }
@@ -1802,16 +1878,44 @@ input, select, button, textarea {
 
 .live-bar__status {
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.live-bar__status:before {
+.live-bar__status_going:before {
   content: "";
   display: inline-block;
-  margin-right: 3px;
+  margin-right: 5px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: red;
+}
+
+.live-bar__status_whait:before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px #fff solid;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  -webkit-animation: 0.5s Spin infinite linear;
+          animation: 0.5s Spin infinite linear;
+}
+
+.live-bar__status_pause:before {
+  content: "\F03E4";
+  font: normal normal normal 24px/1 "Material Design Icons";
+  display: inline-block;
+  margin-right: 3px;
+  font-size: 14px;
 }
 
 .live-bar__users {
@@ -2295,65 +2399,6 @@ input, select, button, textarea {
 
 .bids-list__bid-status {
   font-size: 14px;
-}
-
-.invoice-list {
-  display: -ms-grid;
-  display: grid;
-  gap: 10px 0;
-  padding: 0 20px;
-  margin-bottom: 20px;
-}
-
-.invoice-list .invoice-list__item {
-  font-size: 13px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  gap: 10px 0;
-  color: inherit;
-  background: rgba(231, 231, 231, 0.4);
-  border-radius: 10px;
-  padding: 15px;
-  text-decoration: none;
-}
-
-.invoice-list__num {
-  font-weight: 700;
-}
-
-.invoice-list__summ {
-  font-weight: 700;
-  text-align: right;
-}
-
-.invoice-list__date {
-  font-size: 12px;
-  color: #828282;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.invoice-list .mdi {
-  text-align: right;
-  font-size: 22px;
-}
-
-.verify-info {
-  display: -ms-grid;
-  display: grid;
-  gap: 10px 0;
-  padding: 20px 20px;
-}
-
-.verify-info span {
-  display: block;
-  text-align: center;
-  font-size: 14px;
-  color: #828282;
-  line-height: 1.4;
 }
 
 .logout {

@@ -99,6 +99,13 @@ input,select,button, textarea {
             top: 0px;
         }
     }
+    table {
+        width: 100%;
+        font-size: 12px;
+        td {
+            padding: 5px;
+        }
+    }
 }
 
 .app {
@@ -305,7 +312,7 @@ input,select,button, textarea {
             top: 0px;
             width: 100%;
             height: 100%;
-            background-color: rgba(black, 0.8);
+            background-color: rgba(black, 0.4);
             z-index: -1;
         }
         &_1 {
@@ -325,7 +332,6 @@ input,select,button, textarea {
     }
     &__text {
         margin-top: 30px;
-        opacity: 0.5;
         font-weight: 400;
         line-height: 1.5;
     }
@@ -349,6 +355,7 @@ input,select,button, textarea {
     padding: 0 20px;
     height: 60px;
     a {
+        color: $grey;
         display: inline-block;
         text-align: center;
         width: 50px;
@@ -422,7 +429,34 @@ input,select,button, textarea {
     }
 }
 
+.no-permium-banner {
+    border: 3px $brown solid;
+    border-radius: 18px;
+    &__img {
+        width: 100%;
+    }
+    &__info {
+        padding: 20px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        color: $blue;
+        font-family: $america;
+        small {
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    p {
+        font-family: $america;
+        margin: 20px 0;
+        line-height: 1.5;
+    }
+}
+
 .auction-item {
+    display: block;
     position: relative;
     min-height: 300px;
     &__info {
@@ -573,14 +607,41 @@ input,select,button, textarea {
     }
     &__status {
         margin-right: auto;
-        &:before {
-            content: "";
-            display: inline-block;
-            margin-right: 3px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: red;
+        display: flex;
+        align-items: center;
+        &_going {
+            &:before {
+                content: "";
+                display: inline-block;
+                margin-right: 5px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: red;
+            }
+        }
+        &_whait {
+            &:before {
+                content: "";
+                display: inline-block;
+                margin-right: 5px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px #fff solid;
+                border-right-color: transparent;
+                border-top-color: transparent;
+                animation: 0.5s Spin infinite linear;
+            }
+        }
+        &_pause {
+            &:before {
+                content: "\F03E4";
+                font: normal normal normal 24px/1 "Material Design Icons";
+                display: inline-block;
+                margin-right: 3px;
+                font-size: 14px;
+            }
         }
     }
     &__users {
@@ -968,52 +1029,6 @@ input,select,button, textarea {
         font-size: 14px;
     }
 
-}
-
-.invoice-list {
-    display: grid;
-    gap: 10px 0;
-    padding: 0 20px;
-    margin-bottom: 20px;
-    .invoice-list__item {
-        font-size: 13px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px 0;
-        color: inherit;
-        background: rgba($grey-light,0.4);
-        border-radius: 10px;
-        padding: 15px;
-        text-decoration: none;
-    }
-    &__num {
-        font-weight: 700;
-    }
-    &__summ {
-        font-weight: 700;
-        text-align: right;
-    }
-    &__date {
-        font-size: 12px;
-        color: $grey;
-        align-self: center;
-    }
-    .mdi {
-        text-align: right;
-        font-size: 22px;
-    }
-}
-.verify-info {
-    display: grid;
-    gap: 10px 0;
-    padding: 20px 20px;
-    span {
-        display: block;
-        text-align: center;
-        font-size: 14px;
-        color: $grey;
-        line-height: 1.4;;
-    }
 }
 
 .logout {

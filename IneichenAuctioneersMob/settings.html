@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="pages">
+            <div class="page">
+                <div class="header">
+                    <div class="header-title">
+                        <a href="account.html">
+                            <i class="mdi mdi-chevron-left"></i>
+                        </a>
+                        Settings
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="container">
+                        <div class="small-title">Payment information</div>
+                    </div>
+                    <div class="links-list">
+                        <a href="" class="links-list__item accPaymentOpen">
+                            <span>Account type</span>
+                            <strong>Corporate</strong>
+                            <i class="mdi mdi-chevron-right"></i>
+                        </a>
+                        <a href="" class="links-list__item accPaymentOpen">
+                            <span>Invoice currency</span>
+                            <strong>EUR</strong>
+                            <i class="mdi mdi-chevron-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="container">
+                        <div class="small-title">General</div>
+                    </div>
+                    <div class="links-list">
+                        
+                        <div class="links-list__item links-list__item_wrap">
+                            <span>Email address</span>
+                            <strong>customer@gmail.com</strong>
+                            <a href="" class="btn btn_full btn_medium btn_pink btn_outline">Re-send verify email</a>
+                        </div>
+                        <a id="accPassOpen" href="" class="links-list__item">
+                            <span>Password</span>
+                            <strong>***************</strong>
+                            <i class="mdi mdi-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="container">
+                        <div class="small-title">Info</div>
+                    </div>
+                    <div class="links-list">
+                        <div class="links-list__item links-list__item_wrap">
+                            <span>Full name</span>
+                            <strong>Mr Sergey Dolgushin</strong>
+                            <label class="c-chekbox" for="hideName">
+                                <input type="checkbox" name="hideName" id="hideName">
+                                Don’t show my name to other bidders
+                            </label>
+                        </div>
+                        <div class="links-list__item">
+                            <span>Phone</span>
+                            <strong>+79191395317</strong>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="small-title">Billing address</div>
+                    </div>
+                    <div class="links-list">
+                        <a href="#" class="links-list__item accAdressOpen">
+                            <span>Delivery address</span>
+                            <strong>{delivery}</strong>
+                            <i class="mdi mdi-chevron-right"></i>
+                        </a>
+                        <a href="#" class="links-list__item accAdressOpen">
+                            <span>Legal address</span>
+                            <strong>{address}</strong>
+                            <i class="mdi mdi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="action-sheet">
+        <div class="action-sheet__bg"></div>
+        <div class="action-sheet__body">
+            <div class="action-sheet__line"></div>
+            <div class="action-sheet__content">
+                <div id="accTypeAS" style="display: none">
+                    <div class="action-sheet__title">Payment information</div>
+                    <div class="container">
+                        <small class="grey-text">Note: You can’t change that option in the future</small>
+                        <div class="c-filed">
+                            <select class="c-filed__select" name="" id="" required>
+                                <option value="" disabled selected>Account type</option>
+                                <option value="">Corporate</option>
+                                <option value="">Personal</option>
+                            </select>
+                            <i class="mdi mdi-chevron-down"></i>
+                        </div>
+                        <div class="c-filed">
+                            <select class="c-filed__select" name="" id="" required>
+                                <option value="" disabled selected>Invoice currency</option>
+                                <option value="">RUR</option>
+                                <option value="">EUR</option>
+                                <option value="">USD</option>
+                                <option value="">I T.D.</option>
+                            </select>
+                            <i class="mdi mdi-chevron-down"></i>
+                        </div>
+                        <a href="" class="btn btn_blue btn_full btn_filled">
+                            Save changes
+                        </a>
+                    </div>
+                </div>
+                <div id="accPassAS" style="display: none">
+                    <div class="action-sheet__title">Change password</div>
+                    <div class="container">
+                        <div class="c-filed">
+                            <input class="c-filed__input" type="password" placeholder="Current password">
+                        </div>
+                        <div class="c-filed">
+                            <input class="c-filed__input" type="password" placeholder="New password">
+                        </div>
+                        <div class="c-filed">
+                            <input class="c-filed__input" type="password" placeholder="Repeat new password">
+                        </div>
+                        <a href="" class="btn btn_blue btn_full btn_filled">
+                            Change password
+                        </a>
+                    </div>
+                </div>
+                <div id="accAdressAS" style="display: none">
+                    <div class="action-sheet__title">Billing address</div>
+                    <div class="container">
+                        <div class="c-filed">
+                            <textarea class="c-filed__textarea" type="text" placeholder="Address(Street, number, apt., suite, unit, floor etc)"></textarea>
+                        </div>
+                        <div class="c-filed">
+                            <select class="c-filed__select" name="" id="" required>
+                                <option value="" disabled selected>Country</option>
+                                <option value="">Russia</option>
+                                <option value="">Russia</option>
+                                <option value="">Russia</option>
+                                <option value="">Russia</option>
+                            </select>
+                            <i class="mdi mdi-chevron-down"></i>
+                        </div>
+                        <div class="c-filed">
+                            <input class="c-filed__input" type="text" placeholder="City">
+                        </div>
+                        <div class="c-filed">
+                            <input class="c-filed__input" type="text" placeholder="Postal / Zip Code">
+                        </div>
+                        <label class="c-radio" for="sameAdress">
+                            <input type="radio" name="shipAdress" id="sameAdress">
+                            Organize delivery to the same address
+                        </label>
+                        <label class="c-radio" for="anotherAdress">
+                            <input type="radio" name="shipAdress" id="anotherAdress">
+                            Organize delivery to a different address
+                        </label>
+                        <label class="c-radio" for="pikup">
+                            <input type="radio" name="shipAdress" id="pikup">
+                            Pick up in the Ineichen Zurich office
+                        </label>
+                        <a href="" class="btn btn_blue btn_full btn_filled">
+                            Save changes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script>
+        function CloseSheet(){
+            $(".action-sheet").fadeOut(300).removeClass('action-sheet__open');
+        }
+        function OpenSheet(){
+            $(".action-sheet").fadeIn(300).addClass('action-sheet__open');
+        }
+        
+        $('.accPaymentOpen').click(function(){
+            $('.action-sheet__content > div').hide();
+            $('#accTypeAS').show();
+            OpenSheet();
+            return false;
+        })
+        $('#accPassOpen').click(function(){
+            $('.action-sheet__content > div').hide();
+            $('#accPassAS').show();
+            OpenSheet();
+            return false;
+        })
+        $('.accAdressOpen').click(function(){
+            $('.action-sheet__content > div').hide();
+            $('#accAdressAS').show();
+            OpenSheet();
+            return false;
+        })
+
+
+
+        $('.action-sheet__bg').click(function(){
+            CloseSheet();
+            return false;
+        })
+        $(".action-sheet__line").swipe( {
+            swipeStatus:function(event, phase, direction, distance) {
+                if (phase == "move" && direction == "down") {
+                    $('.action-sheet__body').css({
+                        transform: 'translateY('+distance+'px)',
+                        transition: 'none'
+                    });
+                } else if (phase == "cancel") {
+                    $('.action-sheet__body').css({
+                        transform: 'translateY(0)',
+                        transition: 'all 0.2s'
+                    });
+                } else if (phase == "end") {
+                    $('.action-sheet__body').removeAttr("style");
+                    CloseSheet()
+                }
+            },
+            threshold:150
+       });
+    </script>
+</body>
+</html>

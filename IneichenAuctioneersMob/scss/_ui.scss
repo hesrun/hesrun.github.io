@@ -24,10 +24,12 @@
             font-weight:400;
         }
     }
-    a {
-        color: inherit;
-        text-decoration: none;
-        padding: 0 5px 0 10px;
+    &__back {
+        line-height: 36px;
+        margin-left: -10px;
+        padding: 0 10px;
+        color: $grey;
+        font-size: 25px;
     }
 }
 .page-cap {
@@ -51,14 +53,9 @@
     span {
         color: $grey;
         font-size: 13px;
+        line-height: 1.4;
     }
 
-}
-.text-cap {
-    padding: 20px;
-    text-align: center;
-    color: $grey;
-    text-transform: uppercase;
 }
 .tabs {
     display: flex;
@@ -156,6 +153,16 @@
                 margin-top: 20px;
             }
         }
+        &_invoice {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            strong {
+                line-height: 1.3;
+            }
+            b {
+                margin-left: auto;
+            }
+        }
     }
     .links-list__icon  {
         text-align: center;
@@ -168,6 +175,7 @@
         border-radius: 50%;
         margin-right: 15px;
     }
+    
     strong {
         font-weight: 500;
         font-size: 14px;
@@ -332,6 +340,7 @@
         width: 100%;
         border: none;
         border-bottom: 2px $grey-light solid;
+        border-radius: 0px;
         transition: all 0.3s;
         &:focus {
             border-bottom-color: #000;
@@ -346,6 +355,7 @@
         width: 100%;
         border: none;
         border-bottom: 2px $grey-light solid;
+        border-radius: 0px;
         transition: all 0.3s;
         resize: vertical;
         &:focus {
@@ -593,6 +603,9 @@
         padding: 20px 15px;
         display: grid;
         gap: 10px;
+        &_double {
+            grid-template-columns: 1fr 1fr;
+        }
     }
     &_animate {
         animation: 0.3s SlideInUp both;
@@ -683,10 +696,25 @@
             margin-bottom: 20px;
         }
     }
+    &__footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        padding: 15px;
+    }
     &__open {
         .action-sheet__body {
             transform: translateY(0%);
         }
+    }
+    .tabs {
+        position: sticky;
+        top: 0px;
+        background: #fff;
+    }
+    .page-cap {
+        position: absolute;
+        top: 0px;
     }
 }
 

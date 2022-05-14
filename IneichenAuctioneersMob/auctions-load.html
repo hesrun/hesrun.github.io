@@ -9,20 +9,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="app">
+    <div class="app app_load">
         <div class="pages">
             <div class="page">
                 <div class="header">
                     <div class="tabs">
-                        <a href="#" attr-tab-num="1" class="tabs__item tabs__item_active">Upcoming</a>
-                        <a href="#" attr-tab-num="2" class="tabs__item">Results</a>
-                        <div class="tabs__line"></div>
+                        <a href="#" class="tabs__item tabs__item_active">Upcoming</a>
+                        <a href="#" class="tabs__item">Results</a>
                     </div>
                 </div>
-                <div class="content">
-                    
+                <div class="content content_load">
                     <div class="auctions-list">
-                        <a href="auction-item.html" class="auction-item">
+                        <div class="auction-item">
                             <img class="auction-item__image" src="" alt="">
                             <div class="auction-item__info">
                                 <div class="auction-item__status auction-item__status_grey">Closed</div>
@@ -32,26 +30,11 @@
                                     Saal Metropol Zürich
                                 </div>
                                 <div class="auction-item__btns">
-                                    <div class="btn btn_white btn_full btn_filled">View Results</div>
+                                    <a href="auction-item.html" class="btn btn_white btn_full btn_filled">View Results</a>
                                 </div>
                             </div>
-                        </a>
-                        <div class="no-permium-banner">
-                            <img class="no-permium-banner__img" src="img/no-premium.png" alt="">
-                            <div class="no-permium-banner__info">
-                                <h3 class="no-permium-banner__title">
-                                    <small>
-                                        First time in the history
-                                    </small>
-                                    No more buyer's premium!
-                                </h3>
-                                <p>
-                                    We have cancelled the buyer's premium, you pay only the Hammer price now!
-                                </p>
-                                <a href="" class="btn btn_blue btn_full btn_filled">Read new Auction conditions</a>
-                            </div>
                         </div>
-                        <a href="auction-item.html" class="auction-item">
+                        <div class="auction-item">
                             <img class="auction-item__image" src="img/auction-image.jpg" alt="">
                             <div class="auction-item__info">
                                 <div class="auction-item__status auction-item__status_blue">Upcoming</div>
@@ -61,10 +44,10 @@
                                     Saal Metropol Zürich
                                 </div>
                                 <div class="auction-item__btns">
-                                    <div class="btn btn_white btn_full btn_filled">View 40 lots</div>
+                                    <a href="auction-item.html" class="btn btn_white btn_full btn_filled">View 40 lots</a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                         <div class="auction-item">
                             <img class="auction-item__image" src="img/auction-image.jpg" alt="">
                             <div class="auction-item__info">
@@ -125,6 +108,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="footer">
             <div class="navbar">
                 <a class="navbar__link navbar__link_active" href="auctions.html">
@@ -142,13 +126,5 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    <script>
-        $('.tabs__item').click(function(){
-            $('.tabs__item').removeClass('tabs__item_active');
-            $(this).addClass('tabs__item_active');
-            return false;
-        })
-    </script>
 </body>
 </html>
