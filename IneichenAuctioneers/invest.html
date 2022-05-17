@@ -366,8 +366,48 @@
             </div>
         </div>
     </main>
+    <div id="Modal" class="modal modal-small">
+        <div class="modal-small__title">Request</div>
+        <div class="modal-small__body">
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Full name</label>
+            </div>
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Registered address</label>
+            </div>
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Phone</label>
+            </div>
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Email</label>
+            </div>
+            <br> <br>
+            <p>
+                Our team will prepare and send you the Non Disclosure Agreement based on the information you provide. <br><br>
+                After the agreement is signed the materials will be sent to you via email.  
+            </p>
+            
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Send request</a>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $('#Modal').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+    </script>
 </body>
 </html>
