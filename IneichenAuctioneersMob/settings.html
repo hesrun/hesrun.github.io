@@ -89,89 +89,128 @@
             </div>
         </div>
     </div>
-    <div class="action-sheet">
+    <div class="action-sheet action-sheet_ios">
         <div class="action-sheet__bg"></div>
         <div class="action-sheet__body">
             <div class="action-sheet__line"></div>
-            <div class="action-sheet__content">
-                <div id="accTypeAS" style="display: none">
-                    <div class="action-sheet__title">Payment information</div>
-                    <div class="container">
-                        <small class="grey-text">Note: You can’t change that option in the future</small>
-                        <div class="c-filed">
-                            <select class="c-filed__select" name="" id="" required>
-                                <option value="" disabled selected>Account type</option>
-                                <option value="">Corporate</option>
-                                <option value="">Personal</option>
-                            </select>
-                            <i class="mdi mdi-chevron-down"></i>
+            <div id="accTypeAS" class="action-sheet__content" style="display: none">
+                <div class="page">
+                    <div class="header">
+                        <div class="action-sheet__title">Payment information</div>
+                    </div>
+                    <div class="content">
+                        <div class="container">
+                            <div class="c-alert c-alert_grey">
+                                Note: You can’t change that option in the future
+                            </div>
+                            <div class="c-alert c-alert_blue">
+                                Note: You can’t change that option in the future
+                            </div>
+                            <div class="c-alert c-alert_pink">
+                                Note: You can’t change that option in the future
+                            </div>
+                            <div class="c-alert c-alert_green">
+                                Note: You can’t change that option in the future
+                            </div>
+                            <div class="c-alert c-alert_black">
+                                Note: You can’t change that option in the future
+                            </div>
+                            <div class="c-filed">
+                                <select class="c-filed__select" name="" id="" required>
+                                    <option value="" disabled selected>Account type</option>
+                                    <option value="">Corporate</option>
+                                    <option value="">Personal</option>
+                                </select>
+                                <i class="mdi mdi-chevron-down"></i>
+                            </div>
+                            <div class="c-alert c-alert_grey">
+                                Note: You can’t change that option in the future
+                            </div>
+                            <div class="c-filed">
+                                <select class="c-filed__select" name="" id="" required>
+                                    <option value="" disabled selected>Invoice currency</option>
+                                    <option value="">RUR</option>
+                                    <option value="">EUR</option>
+                                    <option value="">USD</option>
+                                    <option value="">I T.D.</option>
+                                </select>
+                                <i class="mdi mdi-chevron-down"></i>
+                            </div>
                         </div>
-                        <div class="c-filed">
-                            <select class="c-filed__select" name="" id="" required>
-                                <option value="" disabled selected>Invoice currency</option>
-                                <option value="">RUR</option>
-                                <option value="">EUR</option>
-                                <option value="">USD</option>
-                                <option value="">I T.D.</option>
-                            </select>
-                            <i class="mdi mdi-chevron-down"></i>
-                        </div>
+                    </div>
+                    <div class="footer footer_btn">
                         <a href="" class="btn btn_blue btn_full btn_filled">
                             Save changes
                         </a>
                     </div>
                 </div>
-                <div id="accPassAS" style="display: none">
-                    <div class="action-sheet__title">Change password</div>
-                    <div class="container">
-                        <div class="c-filed">
-                            <input class="c-filed__input" type="password" placeholder="Current password">
+            </div>
+            <div id="accPassAS" class="action-sheet__content" style="display: none">
+                <div class="page">
+                    <div class="header">
+                        <div class="action-sheet__title">Change password</div>
+                    </div>
+                    <div class="content">
+                        <div class="container">
+                            <div class="c-filed">
+                                <input class="c-filed__input" type="password" placeholder="Current password">
+                            </div>
+                            <div class="c-filed">
+                                <input class="c-filed__input" type="password" placeholder="New password">
+                            </div>
+                            <div class="c-filed">
+                                <input class="c-filed__input" type="password" placeholder="Repeat new password">
+                            </div>
                         </div>
-                        <div class="c-filed">
-                            <input class="c-filed__input" type="password" placeholder="New password">
-                        </div>
-                        <div class="c-filed">
-                            <input class="c-filed__input" type="password" placeholder="Repeat new password">
-                        </div>
+                    </div>
+                    <div class="footer footer_btn">
                         <a href="" class="btn btn_blue btn_full btn_filled">
                             Change password
                         </a>
                     </div>
                 </div>
-                <div id="accAdressAS" style="display: none">
-                    <div class="action-sheet__title">Billing address</div>
-                    <div class="container">
-                        <div class="c-filed">
-                            <textarea class="c-filed__textarea" type="text" placeholder="Address(Street, number, apt., suite, unit, floor etc)"></textarea>
+            </div>
+            <div id="accAdressAS" class="action-sheet__content" style="display: none">
+                <div class="page">
+                    <div class="header">
+                        <div class="action-sheet__title">Billing address</div>
+                    </div>
+                    <div class="content">
+                        <div class="container">
+                            <div class="c-filed">
+                                <textarea class="c-filed__textarea" type="text" placeholder="Address(Street, number, apt., suite, unit, floor etc)"></textarea>
+                            </div>
+                            <div class="c-filed">
+                                <select class="c-filed__select" name="" id="" required>
+                                    <option value="" disabled selected>Country</option>
+                                    <option value="">Russia</option>
+                                    <option value="">Russia</option>
+                                    <option value="">Russia</option>
+                                    <option value="">Russia</option>
+                                </select>
+                                <i class="mdi mdi-chevron-down"></i>
+                            </div>
+                            <div class="c-filed">
+                                <input class="c-filed__input" type="text" placeholder="City">
+                            </div>
+                            <div class="c-filed">
+                                <input class="c-filed__input" type="text" placeholder="Postal / Zip Code">
+                            </div>
+                            <label class="c-radio" for="sameAdress">
+                                <input type="radio" name="shipAdress" id="sameAdress">
+                                Organize delivery to the same address
+                            </label>
+                            <label class="c-radio" for="anotherAdress">
+                                <input type="radio" name="shipAdress" id="anotherAdress">
+                                Organize delivery to a different address
+                            </label>
+                            <label class="c-radio" for="pikup">
+                                <input type="radio" name="shipAdress" id="pikup">
+                                Pick up in the Ineichen Zurich office
+                            </label>
                         </div>
-                        <div class="c-filed">
-                            <select class="c-filed__select" name="" id="" required>
-                                <option value="" disabled selected>Country</option>
-                                <option value="">Russia</option>
-                                <option value="">Russia</option>
-                                <option value="">Russia</option>
-                                <option value="">Russia</option>
-                            </select>
-                            <i class="mdi mdi-chevron-down"></i>
-                        </div>
-                        <div class="c-filed">
-                            <input class="c-filed__input" type="text" placeholder="City">
-                        </div>
-                        <div class="c-filed">
-                            <input class="c-filed__input" type="text" placeholder="Postal / Zip Code">
-                        </div>
-                        <label class="c-radio" for="sameAdress">
-                            <input type="radio" name="shipAdress" id="sameAdress">
-                            Organize delivery to the same address
-                        </label>
-                        <label class="c-radio" for="anotherAdress">
-                            <input type="radio" name="shipAdress" id="anotherAdress">
-                            Organize delivery to a different address
-                        </label>
-                        <label class="c-radio" for="pikup">
-                            <input type="radio" name="shipAdress" id="pikup">
-                            Pick up in the Ineichen Zurich office
-                        </label>
+                    </div>
+                    <div class="footer footer_btn">
                         <a href="" class="btn btn_blue btn_full btn_filled">
                             Save changes
                         </a>
@@ -190,19 +229,19 @@
         }
         
         $('.accPaymentOpen').click(function(){
-            $('.action-sheet__content > div').hide();
+            $('.action-sheet__content').hide();
             $('#accTypeAS').show();
             OpenSheet();
             return false;
         })
         $('#accPassOpen').click(function(){
-            $('.action-sheet__content > div').hide();
+            $('.action-sheet__content').hide();
             $('#accPassAS').show();
             OpenSheet();
             return false;
         })
         $('.accAdressOpen').click(function(){
-            $('.action-sheet__content > div').hide();
+            $('.action-sheet__content').hide();
             $('#accAdressAS').show();
             OpenSheet();
             return false;
