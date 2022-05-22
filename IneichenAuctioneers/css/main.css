@@ -2464,6 +2464,40 @@ select:-webkit-autofill:focus {
   display: block;
 }
 
+.press-logo-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+}
+
+.press-logo-grid__item {
+  border-right: 1px #E1E1E1 solid;
+  border-bottom: 1px #E1E1E1 solid;
+  padding: 30px;
+}
+
+.press-logo-grid__item:nth-child(n + 6) {
+  border-bottom: none;
+}
+
+.press-logo-grid__item:nth-child(5n) {
+  border-right: none;
+}
+
+.press-logo-grid__item:hover img {
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+}
+
+.press-logo-grid img {
+  max-width: 100%;
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .our-team {
   display: -ms-grid;
   display: grid;
@@ -2877,7 +2911,7 @@ select:-webkit-autofill:focus {
 
 .start-timer__name {
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 5px;
   display: block;
   color: #676767;
   font-size: 13px;
@@ -3928,6 +3962,10 @@ select:-webkit-autofill:focus {
   z-index: 1;
 }
 
+.product__info {
+  padding-bottom: 30px;
+}
+
 .product__num {
   margin-right: auto;
   text-transform: uppercase;
@@ -4124,6 +4162,16 @@ select:-webkit-autofill:focus {
   gap: 0 30px;
 }
 
+.product__other-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+}
+
 .product__other-links a {
   color: #676767;
   font-weight: 500;
@@ -4133,11 +4181,6 @@ select:-webkit-autofill:focus {
 .product__other-links a:hover {
   color: #1C2473;
   text-decoration: none;
-}
-
-.product__other-links span {
-  color: #676767;
-  font-weight: 500;
 }
 
 .product__prams-title {
@@ -5916,6 +5959,36 @@ select:-webkit-autofill:focus {
   border: none;
 }
 
+.live-bis-list__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+}
+
+.live-bis-list__user:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.live-bis-list__user_online:before {
+  background: #529959;
+}
+
+.live-bis-list__user_offline:before {
+  background: #D33C3C;
+}
+
+.live-bis-list .flag-icon {
+  margin: 0 5px;
+}
+
 /* ------------------------------ presentation ------------------------------ */
 .presentation {
   height: 100vh;
@@ -6770,6 +6843,14 @@ select:-webkit-autofill:focus {
   text-align: center;
 }
 
+.ineichen-invest-note-auth {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0 15px;
+}
+
 .ineichen-invest-title {
   font-size: 80px;
   font-weight: 500;
@@ -7063,6 +7144,28 @@ select:-webkit-autofill:focus {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     gap: 60px 10%;
+  }
+  .press-logo-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
+  .press-logo-grid__item {
+    border-right: 1px #E1E1E1 solid;
+    border-bottom: 1px #E1E1E1 solid;
+  }
+  .press-logo-grid__item:nth-child(n + 6) {
+    border-bottom: 1px #E1E1E1 solid;
+  }
+  .press-logo-grid__item:nth-child(5n) {
+    border-right: 1px #E1E1E1 solid;
+  }
+  .press-logo-grid__item:nth-child(n + 9) {
+    border-bottom: none;
+  }
+  .press-logo-grid__item:nth-child(2n) {
+    border-right: none;
   }
   .our-team {
     -ms-grid-columns: (1fr)[2];

@@ -621,6 +621,32 @@
     }
 }
 
+.press-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    &__item {
+        border-right: 1px $grey-line solid;
+        border-bottom: 1px $grey-line solid;
+        padding: 30px;
+        &:nth-child(n + 6) {
+            border-bottom: none;
+        }
+        &:nth-child(5n) {
+            border-right: none;
+        }
+        &:hover {
+            img {
+                filter: opacity(1);        
+            }
+        }
+    }
+    img {
+        max-width: 100%;
+        filter: opacity(0.3);
+        transition: all 0.3s;
+    }
+}
+
 .our-team {
     $root: &;
     display: grid;
@@ -937,7 +963,7 @@
     }
     &__name {
         font-weight: 500;
-        margin-top: 10px;
+        margin-top: 5px;
         display: block;
         color: $grey-text;
         font-size: 13px;
@@ -1753,6 +1779,9 @@
         padding: 20px 0 20px;
         z-index: 1;
     }
+    &__info {
+        padding-bottom: 30px;
+    }
     &__num {
         margin-right: auto;
         text-transform: uppercase;
@@ -1905,6 +1934,9 @@
         gap: 0 30px;
     }
     &__other-links {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
         a {
             color: $grey-text;
             font-weight: 500;
@@ -1913,10 +1945,6 @@
                 color: $blue-text;
                 text-decoration: none;
             }
-        }
-        span {
-            color: $grey-text;
-            font-weight: 500;
         }
     }
     &__prams-title {
@@ -3270,6 +3298,27 @@
             border: none;
         }       
     }
+    &__user {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        &_online:before {
+            background: $green-text;
+        }
+        &_offline:before {
+            background: $red-text;
+        }
+    }
+    .flag-icon {
+        margin: 0 5px;
+    }
 }
 
 /* ------------------------------ presentation ------------------------------ */
@@ -3939,6 +3988,11 @@
     background: $dark-grey;
     color: #fff;
     text-align: center;
+}
+.ineichen-invest-note-auth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 15px;
 }
 .ineichen-invest-title {
     font-size: 80px;

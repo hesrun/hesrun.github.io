@@ -129,6 +129,26 @@
             gap: 60px 10%;
         }
     }
+    .press-logo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        &__item {
+            border-right: 1px $grey-line solid;
+            border-bottom: 1px $grey-line solid;
+            &:nth-child(n + 6) {
+                border-bottom: 1px $grey-line solid;
+            }
+            &:nth-child(5n) {
+                border-right: 1px $grey-line solid;
+            }
+            &:nth-child(n + 9) {
+                border-bottom: none;
+            }
+            &:nth-child(2n) {
+                border-right: none;
+            }
+        }
+    }
     .our-team {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
