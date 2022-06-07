@@ -4121,6 +4121,73 @@
         text-transform: uppercase;
     }
 }
+
+.ineichen-invest-sell {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0 10%;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            margin:0; 
+        }
+    }
+    &__stream {
+        position: relative;
+        i {
+            width: 100%;
+            position: absolute;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    &__price {
+        margin: auto 0;
+        font-size: 40px;
+        font-family: $america;
+        span {
+            margin-top: 20px;
+            font-weight:200; 
+            font-size: 60px;
+            display: block;
+            color: $brown-bg;
+        }
+    }
+}
+
+.ineichen-invest-start-sell {
+    text-align: center;
+    &__counter {
+        border: 1px $milk-white solid;
+        display: inline-block;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-family: $america;
+        font-size: 50px;
+        font-weight: 100;   
+        color: rgba(white,0.5);
+        span {
+            font-size: 70px;
+            color: $milk-white;
+        }
+    }
+    &__note {
+        margin: 50px 0;
+        font-family: $america;
+        font-size: 50px;
+        &_small {
+            font-size: 30px;
+            margin: 20px 0;
+        }
+    }
+}
+
+
 .ineichen-invest-footer {
     text-align: center;
     background-image: url(../img/invest/sun-pattern.svg);
@@ -4131,8 +4198,66 @@
 }
 
 
+.threed-scene {
+    margin: auto;
+    width: 210px;
+    height: 00px;
+    position: relative;
+    perspective: 1000px;
+}
+.threed-carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: 30s caruselRotate infinite linear;
+}
+.threed-carousel__cell {
+    transform-style:preserve-3d;
+	transform: translate3d(0, 0, 0);
+    position: absolute;
+    width: 200px;
+    height: 120px;
+    left: 10px;
+    top: 10px;
+    img {
+        max-width: 100%;
+    }
+}
+.threed-carousel__count {
+    color: rgba(#fff, 0.8);
+    font-family: $america;
+    font-weight: 800;
+    font-size: 100px;
+    animation: 30s caruselRotateReverse infinite linear;
+}
 
+.threed-carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(500px); }
+.threed-carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(500px); }
+.threed-carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(500px); }
+.threed-carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(500px); }
+.threed-carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(500px); }
+.threed-carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(500px); }
+.threed-carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(500px); }
+.threed-carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(500px); }
+.threed-carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(500px); }
 
+@keyframes caruselRotate {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+@keyframes caruselRotateReverse {
+    from {
+        transform: rotateY(0) scale(2);
+    }
+    to {
+        transform: rotateY(-360deg) scale(2);
+    }
+}
 
 
 @import '_responsive.scss';

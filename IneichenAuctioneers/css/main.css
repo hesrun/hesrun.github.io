@@ -407,6 +407,11 @@ select:-webkit-autofill:focus {
   font-size: 18px;
 }
 
+.c-button_america {
+  font-family: "GT America Extended", sans-serif;
+  text-transform: uppercase;
+}
+
 .c-button_pulse:not(:active) {
   -webkit-animation: pulse 2s infinite;
           animation: pulse 2s infinite;
@@ -7010,6 +7015,89 @@ select:-webkit-autofill:focus {
   text-transform: uppercase;
 }
 
+.ineichen-invest-sell {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 0 10%;
+}
+
+.ineichen-invest-sell__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ineichen-invest-sell__info h2 {
+  margin: 0;
+}
+
+.ineichen-invest-sell__stream {
+  position: relative;
+}
+
+.ineichen-invest-sell__stream i {
+  width: 100%;
+  position: absolute;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+}
+
+.ineichen-invest-sell__stream img {
+  max-width: 100%;
+}
+
+.ineichen-invest-sell__price {
+  margin: auto 0;
+  font-size: 40px;
+  font-family: "GT America Extended", sans-serif;
+}
+
+.ineichen-invest-sell__price span {
+  margin-top: 20px;
+  font-weight: 200;
+  font-size: 60px;
+  display: block;
+  color: #BD9E5E;
+}
+
+.ineichen-invest-start-sell {
+  text-align: center;
+}
+
+.ineichen-invest-start-sell__counter {
+  border: 1px #F1E8DD solid;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-family: "GT America Extended", sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ineichen-invest-start-sell__counter span {
+  font-size: 70px;
+  color: #F1E8DD;
+}
+
+.ineichen-invest-start-sell__note {
+  margin: 50px 0;
+  font-family: "GT America Extended", sans-serif;
+  font-size: 50px;
+}
+
+.ineichen-invest-start-sell__note_small {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
 .ineichen-invest-footer {
   text-align: center;
   background-image: url(../img/invest/sun-pattern.svg);
@@ -7018,6 +7106,139 @@ select:-webkit-autofill:focus {
 
 .ineichen-invest-footer img {
   max-width: 80%;
+}
+
+.threed-scene {
+  margin: auto;
+  width: 210px;
+  height: 00px;
+  position: relative;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.threed-carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: 30s caruselRotate infinite linear;
+          animation: 30s caruselRotate infinite linear;
+}
+
+.threed-carousel__cell {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  left: 10px;
+  top: 10px;
+}
+
+.threed-carousel__cell img {
+  max-width: 100%;
+}
+
+.threed-carousel__count {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 800;
+  font-size: 100px;
+  -webkit-animation: 30s caruselRotateReverse infinite linear;
+          animation: 30s caruselRotateReverse infinite linear;
+}
+
+.threed-carousel__cell:nth-child(1) {
+  -webkit-transform: rotateY(0deg) translateZ(500px);
+          transform: rotateY(0deg) translateZ(500px);
+}
+
+.threed-carousel__cell:nth-child(2) {
+  -webkit-transform: rotateY(40deg) translateZ(500px);
+          transform: rotateY(40deg) translateZ(500px);
+}
+
+.threed-carousel__cell:nth-child(3) {
+  -webkit-transform: rotateY(80deg) translateZ(500px);
+          transform: rotateY(80deg) translateZ(500px);
+}
+
+.threed-carousel__cell:nth-child(4) {
+  -webkit-transform: rotateY(120deg) translateZ(500px);
+          transform: rotateY(120deg) translateZ(500px);
+}
+
+.threed-carousel__cell:nth-child(5) {
+  -webkit-transform: rotateY(160deg) translateZ(500px);
+          transform: rotateY(160deg) translateZ(500px);
+}
+
+.threed-carousel__cell:nth-child(6) {
+  -webkit-transform: rotateY(200deg) translateZ(500px);
+          transform: rotateY(200deg) translateZ(500px);
+}
+
+.threed-carousel__cell:nth-child(7) {
+  -webkit-transform: rotateY(240deg) translateZ(500px);
+          transform: rotateY(240deg) translateZ(500px);
+}
+
+.threed-carousel__cell:nth-child(8) {
+  -webkit-transform: rotateY(280deg) translateZ(500px);
+          transform: rotateY(280deg) translateZ(500px);
+}
+
+.threed-carousel__cell:nth-child(9) {
+  -webkit-transform: rotateY(320deg) translateZ(500px);
+          transform: rotateY(320deg) translateZ(500px);
+}
+
+@-webkit-keyframes caruselRotate {
+  from {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes caruselRotate {
+  from {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes caruselRotateReverse {
+  from {
+    -webkit-transform: rotateY(0) scale(2);
+            transform: rotateY(0) scale(2);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg) scale(2);
+            transform: rotateY(-360deg) scale(2);
+  }
+}
+
+@keyframes caruselRotateReverse {
+  from {
+    -webkit-transform: rotateY(0) scale(2);
+            transform: rotateY(0) scale(2);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg) scale(2);
+            transform: rotateY(-360deg) scale(2);
+  }
 }
 
 @media screen and (max-width: 1366px) {
