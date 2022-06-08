@@ -273,6 +273,50 @@
     .ineichen-invest-how-work {
         font-size: 18px;
     }
+
+    .ineichen-invest-sell {
+        grid-template-columns: 1fr;
+        gap: 50px 0;
+        &__stream {
+            order: -1;
+            i {
+                position: static;
+            }
+        }
+        &__info {
+            text-align: center;
+            br {
+                display: none;
+            }
+        }
+    }
+    .ineichen-invest-start-sell {
+        &__note {
+            margin: 30px 0;
+            font-size: 30px;
+            &_small {
+                font-size: 20px;
+                margin: 15px 0;
+            }
+        }
+    }
+
+    .threed-carousel__cell {
+        max-width: 150px;
+    }
+    .threed-carousel__count {
+        font-size: 50px;
+    }
+    .threed-carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(300px); }
+    .threed-carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(300px); }
+    .threed-carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(300px); }
+    .threed-carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(300px); }
+    .threed-carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(300px); }
+    .threed-carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(300px); }
+    .threed-carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(300px); }
+    .threed-carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(300px); }
+    .threed-carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(300px); }
+
 }
 
 @media screen and (max-width: 820px) {
@@ -329,30 +373,6 @@
     .banners-grid-item {
         &__info {
             padding: 0 30px;
-        }
-    }
-
-    .no-permium-banner {
-        $root: &;
-        grid-template-columns: 1fr;
-        gap: 30px 0px;
-        text-align: center;
-        justify-items: center;
-
-        &_no-image {
-            #{$root}__info {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 20px 0;
-                align-items: center;
-            }
-            #{$root}__title {
-                font-size: 35px;
-            }
-            p {
-                font-size: 20px;
-                margin: 0px;
-            }
         }
     }
 
@@ -969,9 +989,17 @@
             margin: 20px 0;
         }
     }
+
 }
 
 @media screen and (max-width: 520px) {
+    .no-premium-bar {
+        p {
+            font-size: 13px;
+            text-align: left;
+            line-height: 15px;
+        }
+    }
     .mob-hidden {
         display: none;
     }
@@ -1141,47 +1169,6 @@
             max-width: 100%;
         }
     }
-
-    .no-permium-banner {
-        $root: &;
-        gap:15px 0px;
-        margin-top: 20px;
-        border: 2px $brown-bg solid;
-        padding: 15px;
-        text-align: left;
-        img {
-            max-width: 100%;
-        }
-        &__title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            small {
-                font-size: 15px;
-            }
-        }
-        p {
-            font-size: 15px;
-            margin-bottom: 15px;
-        }
-        .c-button {
-            width: 100%;
-        }
-        &_no-image {
-            #{$root}__info {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 20px 0;
-                align-items: center;
-            }
-            #{$root}__title {
-                font-size: 20px;
-            }
-            p {
-                font-size: 15px;
-                margin: 0px;
-            }
-        }
-    }
     .services-list {
         gap: 15px 0px;
         &__item {
@@ -1316,6 +1303,9 @@
     /* --------------------------------- auction -------------------------------- */
     .lots-grid {
         grid-template-columns: 1fr 1fr;
+        &_mob-1-col {
+            grid-template-columns: 1fr;
+        }
     }
 
     .lot-item {
@@ -2422,10 +2412,6 @@
             gap: 10px 0;
             text-align: center;
         }
-        .c-button {
-            font-family: $inter;
-            text-transform: none;
-        }
     }
     .ineichen-invest-plan {
         grid-template-columns: 1fr;
@@ -2458,6 +2444,65 @@
             max-width: 100%;
         }
     }
+
+    .ineichen-invest-sell {
+        &__stream {
+            i {
+                font-size: 12px;
+                margin-top: 10px;
+            }
+        }
+        &__price {
+            font-size: 24px;
+        }
+        span {
+            font-size: 40px;
+        }
+    }
+
+    .ineichen-invest-start-sell {
+        br {
+            display: none;
+        }
+        &__counter {
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: 30px;
+            span {
+                font-size: 40px;
+            }
+        }
+        &__note {
+            margin: 30px 0;
+            font-size: 20px;
+            &_small {
+                font-size: 16px;
+                margin: 20px 0;
+            }
+        }
+    }
+
+
+    .threed-scene {
+        width: 85px;
+        perspective: 500px;
+    }
+
+    .threed-carousel__cell {
+        max-width: 70px;
+    }
+    .threed-carousel__count {
+        font-size: 25px;
+    }
+    .threed-carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(170px); }
+    .threed-carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(170px); }
+    .threed-carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(170px); }
+    .threed-carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(170px); }
+    .threed-carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(170px); }
+    .threed-carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(170px); }
+    .threed-carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(170px); }
+    .threed-carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(170px); }
+    .threed-carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(170px); }
 }
 
 @media screen and (max-height: 800px) {

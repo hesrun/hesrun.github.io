@@ -18,6 +18,28 @@
 /* ----------------------------------- ui ----------------------------------- */
 @import '_ui.scss';
 /* --------------------------------- header --------------------------------- */
+.no-premium-bar {
+    position: fixed;
+    bottom: 0px;
+    background: $blue-bg;
+    z-index: 101;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    line-height: 20px;
+    a {
+        color: #fff;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .c-button {
+        margin-left: 15px;
+    }
+}
 .header {
     $root: &;
     display: flex;
@@ -492,54 +514,6 @@
     }
     .c-button {
         margin-top: 40px;
-    }
-}
-
-.no-permium-banner {
-    $root: &;
-    margin-top: 100px;
-    border: 5px $brown-bg solid;
-    border-radius: 15px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0 50px;
-    align-items: center;
-    &__info {
-        line-height: 1.2;
-    }
-    &__title {
-        font-size: 32px;
-        color: $blue-text;
-        margin-bottom: 15px;
-        small {
-            display: block;
-        }
-    }
-    p {
-        line-height: 1.4;
-        font-weight: 500;
-        font-size: 24px;
-        font-family: $america;
-        margin-bottom: 30px;
-    }
-    &_no-image {
-        margin: 40px 0;
-        display: block;
-        #{$root}__info {
-            display: grid;
-            grid-template-columns: 1fr 1fr 300px;
-            gap: 0 50px;
-            align-items: center;
-        }
-        #{$root}__title {
-            margin: 0px;
-            font-size: 35px;
-        }
-        p {
-            font-size: 20px;
-            margin: 0px;
-        }
     }
 }
 
@@ -4121,10 +4095,9 @@
         text-transform: uppercase;
     }
 }
-
 .ineichen-invest-sell {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 450px 1fr;
     gap: 0 10%;
     &__info {
         display: flex;
@@ -4147,6 +4120,7 @@
         }
     }
     &__price {
+        padding: 30px 0;
         margin: auto 0;
         font-size: 40px;
         font-family: $america;
@@ -4159,7 +4133,6 @@
         }
     }
 }
-
 .ineichen-invest-start-sell {
     text-align: center;
     &__counter {
@@ -4187,7 +4160,6 @@
     }
 }
 
-
 .ineichen-invest-footer {
     text-align: center;
     background-image: url(../img/invest/sun-pattern.svg);
@@ -4196,7 +4168,6 @@
         max-width: 80%;
     }
 }
-
 
 .threed-scene {
     margin: auto;
@@ -4225,7 +4196,7 @@
     }
 }
 .threed-carousel__count {
-    color: rgba(#fff, 0.8);
+    color: #fff;
     font-family: $america;
     font-weight: 800;
     font-size: 100px;
