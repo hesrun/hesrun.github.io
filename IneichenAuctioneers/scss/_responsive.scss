@@ -1561,8 +1561,14 @@
             font-size: 14px;
         }
         &__current-bid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             margin-top: 15px;
             margin-left: 0px;
+        }
+        &__user {
+            grid-column: 2 / 2;
+            align-self: center;
         }
         &__bids {
             display: grid;
@@ -1571,6 +1577,7 @@
             font-size: 12px;
         }
         &__bid-summ {
+            grid-column: 1 / 1;
             font-size: 22px;
             line-height: normal;
             margin: 10px 0;
@@ -2484,6 +2491,7 @@
 
 
     .threed-scene {
+        top: 8vw;
         width: 85px;
         perspective: 500px;
     }

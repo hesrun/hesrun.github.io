@@ -7093,10 +7093,10 @@ select:-webkit-autofill:focus {
 }
 
 .threed-scene {
-  margin: auto;
+  margin: 0 auto;
   width: 210px;
-  height: 00px;
   position: relative;
+  top: 3vw;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -7118,7 +7118,6 @@ select:-webkit-autofill:focus {
           transform: translate3d(0, 0, 0);
   position: absolute;
   width: 200px;
-  height: 120px;
   left: 10px;
   top: 10px;
 }
@@ -8772,8 +8771,19 @@ select:-webkit-autofill:focus {
     font-size: 14px;
   }
   .timed-auction-end__current-bid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     margin-top: 15px;
     margin-left: 0px;
+  }
+  .timed-auction-end__user {
+    -ms-grid-column: 2;
+    grid-column: 2 / 2;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .timed-auction-end__bids {
     display: -ms-grid;
@@ -8784,6 +8794,8 @@ select:-webkit-autofill:focus {
     font-size: 12px;
   }
   .timed-auction-end__bid-summ {
+    -ms-grid-column: 1;
+    grid-column: 1 / 1;
     font-size: 22px;
     line-height: normal;
     margin: 10px 0;
@@ -9655,6 +9667,7 @@ select:-webkit-autofill:focus {
     margin: 20px 0;
   }
   .threed-scene {
+    top: 8vw;
     width: 85px;
     -webkit-perspective: 500px;
             perspective: 500px;
