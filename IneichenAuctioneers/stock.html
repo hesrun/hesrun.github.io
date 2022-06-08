@@ -242,10 +242,12 @@
                             The first <b>0,5%</b><br> sold for:
                             <span>CHF 210 000</span>
                         </div>
-                        <a href="" class="c-button c-button_america c-button_dark-grey c-button_medium c-button_filled c-button_full">watch full video</a>
+                        <a href="https://www.youtube.com/embed/krr5ayrINwM?start=823" class="c-button c-button_america c-button_dark-grey c-button_medium c-button_filled c-button_full">watch full video</a>
                     </div>
                     <div class="ineichen-invest-sell__stream">
-                        <img src="img/stoks/stream.jpg" alt="">
+                        <a href="https://www.youtube.com/embed/krr5ayrINwM?start=823">
+                            <img src="img/stoks/stream.jpg" alt="">
+                        </a>
                         <i>Our CEO Artemy Lechbinsky sells 0,5% share on the 22nd of May</i>
                     </div>
                 </div>
@@ -333,9 +335,27 @@
             </div>
         </div>
     </main>
+
+    <div id="VideoModal" class="modal modal-video">
+        <div class="modal-video__wrapper">
+            <iframe id="FrameVideo" width="100%" height="100%" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $('.ineichen-invest-sell a').click(function(){
+            linkVideo = $(this).attr('href');
+            $('#FrameVideo').attr('src',linkVideo);
+            $('#VideoModal').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false
+            });
+            return false;
+        })
+    </script>
 </body>
 </html>
