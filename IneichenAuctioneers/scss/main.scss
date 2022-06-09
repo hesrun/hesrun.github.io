@@ -294,6 +294,43 @@
             }
         }
     }
+    &_dark-brown {
+        background: $dark-brown-bg;
+        #{$root}__logo {
+            &_blue {
+                display: none;
+            }
+            &_white {
+                display: block;
+            }
+        }
+        #{$root}__nav-link {
+            color: #fff;
+            &:hover {
+                color: $brown-text;
+            }
+        }
+        #{$root}__currency {
+            color: #fff;
+        }
+        #{$root}__button {
+            color: #fff;
+            &:hover {
+                background: $brown-bg;
+            }
+        
+        }
+        .account-drop {
+            background: $brown-bg;
+            color: #fff;
+            border-color: $blue-bg;
+        }
+        .burger-btn {
+            span {
+                background: #fff;
+            }
+        }
+    }
 }
 
 .account-drop {
@@ -2212,6 +2249,10 @@
         background: $milk-white;
         color: $light-black;
     }
+    &_dark-brown {
+        background: $dark-brown-bg;
+        color: #fff;
+    }
     &_clear {
         padding-bottom: 0px;
         border-top: none;
@@ -3962,6 +4003,10 @@
     background: $dark-grey;
     color: #fff;
     text-align: center;
+    &_stocks {
+        background: $dark-brown-bg;
+        padding-bottom: 50px;
+    }
 }
 .ineichen-invest-note-auth {
     display: grid;
@@ -4035,7 +4080,6 @@
         font-weight: 300;
     }
 }
-
 .ineichen-invest-why {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -4064,7 +4108,6 @@
         }
     }
 }
-
 .ineichen-invest-plan {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -4092,14 +4135,24 @@
         right: 0px;
     }
 }
-
 .ineichen-join-auction {
     .c-button {
         font-family: $america;
         text-transform: uppercase;
     }
 }
-
+.ineichen-invest-footer {
+    text-align: center;
+    background-image: url(../img/invest/sun-pattern.svg);
+    background-position: center top;
+    img {
+        max-width: 80%;
+    }
+    &_clear {
+        background-image: none;
+    }
+}
+/***************************stoks************************/
 .ineichen-invest-sell {
     display: grid;
     grid-template-columns: 450px 1fr;
@@ -4140,20 +4193,6 @@
 }
 .ineichen-invest-start-sell {
     text-align: center;
-    &__counter {
-        border: 1px $milk-white solid;
-        display: inline-block;
-        border-radius: 20px;
-        padding: 10px 20px;
-        font-family: $america;
-        font-size: 50px;
-        font-weight: 100;   
-        color: rgba(white,0.5);
-        span {
-            font-size: 70px;
-            color: $milk-white;
-        }
-    }
     &__note {
         margin: 50px 0;
         font-family: $america;
@@ -4164,16 +4203,20 @@
         }
     }
 }
-
-.ineichen-invest-footer {
-    text-align: center;
-    background-image: url(../img/invest/sun-pattern.svg);
-    background-position: center top;
-    img {
-        max-width: 80%;
+.ineichen-invest-start-sell-counter {
+    border: 1px $milk-white solid;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: $america;
+    font-size: 50px;
+    font-weight: 100;   
+    color: rgba(white,0.5);
+    span {
+        font-size: 70px;
+        color: $milk-white;
     }
 }
-
 .threed-scene {
     margin: 0 auto;
     width: 210px;
@@ -4206,7 +4249,6 @@
     font-size: 100px;
     animation: 30s caruselRotateReverse infinite linear;
 }
-
 .threed-carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(500px); }
 .threed-carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(500px); }
 .threed-carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(500px); }
@@ -4216,7 +4258,6 @@
 .threed-carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(500px); }
 .threed-carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(500px); }
 .threed-carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(500px); }
-
 @keyframes caruselRotate {
     from {
         transform: rotateY(0);
@@ -4233,6 +4274,63 @@
         transform: rotateY(-360deg) scale(2);
     }
 }
+
+.ineichen-stoks-how-work {
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 60px 30px;
+    font-family: $america;
+    td {
+        vertical-align: top;
+    }
+    b,span {
+        font-size: 26px;
+    }
+    b:before {
+        content: "";
+        display: inline-block;
+        margin-right: 15px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px $dark-brown-bg solid;
+    }
+}
+
+.ineichen-stoks-bids {
+    max-width: 700px;
+    margin: 0 auto;
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 30px;
+    }
+    th {
+        padding: 0 0 15px 0;
+        border-bottom: 1px rgba(#fff, 0.4) solid;
+    }
+    tbody {
+        tr:first-child td {
+            padding-top: 30px;
+        }
+    }
+    td {
+        padding: 15px 0;
+    }
+    th:last-child,
+    td:last-child {
+        text-align: right;
+    }
+    th:first-child {
+        text-align: left;
+    }
+    td:nth-child(2) {
+        text-align: center;
+    }
+}
+
+
 
 
 @import '_responsive.scss';
