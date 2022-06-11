@@ -602,6 +602,26 @@ select:-webkit-autofill:focus {
   border-color: #b6934c;
 }
 
+.c-button_dark-brown {
+  color: #382323;
+  border: 2px #382323 solid;
+}
+
+.c-button_dark-brown:hover {
+  background: #382323;
+  color: #fff;
+}
+
+.c-button_dark-brown.c-button_filled {
+  color: #fff;
+  background: #382323;
+}
+
+.c-button_dark-brown.c-button_filled:hover {
+  background: #281919;
+  border-color: #281919;
+}
+
 .c-button_space-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1567,6 +1587,76 @@ select:-webkit-autofill:focus {
   -webkit-transform: translateX(-150%);
           transform: translateX(-150%);
   opacity: 0;
+}
+
+.range-slider {
+  font-family: "GT America Extended", sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#range {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+#range:focus {
+  outline: none;
+}
+
+#range::before, #range::after {
+  font-family: "GT America Extended", sans-serif;
+  position: absolute;
+  bottom: 30px;
+  font-size: 30px;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+#range::before {
+  left: 0;
+  content: attr(min);
+}
+
+#range::after {
+  right: 0;
+  content: attr(max);
+}
+
+#range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: #BD9E5E;
+}
+
+#range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: #BD9E5E;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  -webkit-transform: translateY(calc(-50% + 4px));
+          transform: translateY(calc(-50% + 4px));
+}
+
+#tooltip {
+  position: absolute;
+  top: 2.25rem;
+}
+
+#tooltip span {
+  font-weight: 700;
+  white-space: nowrap;
+  position: absolute;
+  text-align: center;
+  display: block;
+  font-size: 30px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 @-webkit-keyframes Spin {
@@ -6875,7 +6965,22 @@ select:-webkit-autofill:focus {
 
 .ineichen-invest-banner_stocks {
   background: #382323;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.ineichen-invest-banner_stocks:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  width: 0px;
+  height: 0px;
+  border-top: 50px #382323 solid;
+  border-left: 60px transparent solid;
+  border-right: 60px transparent solid;
 }
 
 .ineichen-invest-note-auth {
@@ -7285,6 +7390,45 @@ select:-webkit-autofill:focus {
   }
 }
 
+.ineichen-stoks-sell-start {
+  font-family: "GT America Extended", sans-serif;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: 400px 1fr;
+      grid-template-columns: 400px 1fr;
+  gap: 0 50px;
+}
+
+.ineichen-stoks-sell-start__buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 45px 0;
+}
+
+.ineichen-stoks-sell-start__info {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ineichen-stoks-sell-start__info p {
+  text-align: left;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.ineichen-stoks-sell-start__info > span {
+  font-size: 20px;
+  display: block;
+  text-align: left;
+}
+
+.ineichen-stoks-sell-start .ineichen-invest-start-sell-counter {
+  margin: 30px 0;
+}
+
 .ineichen-stoks-how-work {
   margin: 0 auto;
   border-collapse: separate;
@@ -7346,6 +7490,71 @@ select:-webkit-autofill:focus {
 
 .ineichen-stoks-bids td:nth-child(2) {
   text-align: center;
+}
+
+.ineichen-stoks-range {
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+
+.ineichen-stoks-calculate {
+  border: 1px #382323 solid;
+  border-radius: 20px;
+  padding: 30px 50px;
+  font-family: "GT America Extended", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 5fr 6fr;
+      grid-template-columns: 3fr 5fr 6fr;
+  gap: 30px 50px;
+}
+
+.ineichen-stoks-calculate strong {
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ineichen-stoks-calculate b {
+  font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+.ineichen-stoks-calculate__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 30px;
+}
+
+.ineichen-stoks-calculate__input input {
+  width: 100%;
+  min-height: 60px;
+  font-family: "GT America Extended", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  border: 1px #382323 solid;
+  background: none;
+  text-align: center;
+}
+
+.ineichen-stoks-calculate__note {
+  grid-column: 1 / 2 span;
+  line-height: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.ineichen-stoks-calculate__confirm {
+  -ms-grid-column: 3;
+  grid-column: 3 / 3;
 }
 
 @media screen and (max-width: 1366px) {
@@ -7606,6 +7815,7 @@ select:-webkit-autofill:focus {
   .ineichen-invest-how-work {
     font-size: 18px;
   }
+  /***************************stoks************************/
   .ineichen-invest-sell {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -7674,6 +7884,68 @@ select:-webkit-autofill:focus {
   .threed-carousel__cell:nth-child(9) {
     -webkit-transform: rotateY(320deg) translateZ(300px);
             transform: rotateY(320deg) translateZ(300px);
+  }
+  .ineichen-stoks-sell-start {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px 0;
+  }
+  .ineichen-stoks-sell-start__info {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .ineichen-stoks-sell-start__info p {
+    text-align: center;
+  }
+  .ineichen-stoks-sell-start__info > span {
+    text-align: center;
+  }
+  .ineichen-stoks-sell-start__buttons {
+    gap: 30px 0;
+  }
+  .ineichen-stoks-calculate {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 30px;
+  }
+  .ineichen-stoks-calculate__offer {
+    grid-column: 2 span;
+  }
+  .ineichen-stoks-calculate__note {
+    grid-column: 2 span;
+  }
+  .ineichen-stoks-calculate__note br {
+    display: none;
+  }
+  .ineichen-stoks-calculate__confirm {
+    grid-column: 2 span;
+  }
+  .ineichen-stoks-how-work tbody {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px 0;
+  }
+  .ineichen-stoks-how-work tr {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 10px 0;
+  }
+  .ineichen-stoks-how-work td {
+    text-align: center;
+    display: block;
+  }
+  .ineichen-stoks-how-work b:before {
+    display: none;
+  }
+  .ineichen-stoks-how-work b, .ineichen-stoks-how-work span {
+    font-size: 20px;
   }
 }
 
@@ -9688,6 +9960,22 @@ select:-webkit-autofill:focus {
     margin: 0px 0 0 0;
     padding: 30px 0 35vw;
   }
+  .ineichen-invest-banner_stocks {
+    padding-bottom: 30px;
+  }
+  .ineichen-invest-banner_stocks:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -30px;
+    width: 0px;
+    height: 0px;
+    border-top: 25px #382323 solid;
+    border-left: 30px transparent solid;
+    border-right: 30px transparent solid;
+  }
   .ineichen-invest-title {
     font-size: 32px;
     margin-bottom: 30px;
@@ -9696,6 +9984,9 @@ select:-webkit-autofill:focus {
     font-size: 22px;
     text-align: center;
     line-height: 1.4;
+  }
+  .ineichen-invest-title br {
+    display: none;
   }
   .ineichen-invest-subtitle {
     font-size: 18px;
@@ -9761,6 +10052,7 @@ select:-webkit-autofill:focus {
   .ineichen-invest-footer img {
     max-width: 100%;
   }
+  /***************************stoks************************/
   .ineichen-invest-sell__stream i {
     font-size: 12px;
     margin-top: 10px;
@@ -9837,6 +10129,113 @@ select:-webkit-autofill:focus {
   .threed-carousel__cell:nth-child(9) {
     -webkit-transform: rotateY(320deg) translateZ(170px);
             transform: rotateY(320deg) translateZ(170px);
+  }
+  .ineichen-stoks-sell-start__info {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .ineichen-stoks-sell-start__info p {
+    font-size: 16px;
+  }
+  .ineichen-stoks-sell-start__info > span {
+    font-size: 16px;
+  }
+  .ineichen-stoks-sell-start__buttons {
+    gap: 15px 0;
+  }
+  .ineichen-stoks-range {
+    margin-bottom: 60px;
+  }
+  .ineichen-stoks-calculate {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 20px 15px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .ineichen-stoks-calculate strong {
+    font-size: 14px;
+  }
+  .ineichen-stoks-calculate b {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 30px;
+    line-height: 1;
+  }
+  .ineichen-stoks-calculate__input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin-left: 15px;
+  }
+  .ineichen-stoks-calculate__input input {
+    min-height: 40px;
+    font-size: 22px;
+  }
+  .ineichen-stoks-calculate__offer {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .ineichen-stoks-calculate__note {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .ineichen-stoks-calculate__note br {
+    display: none;
+  }
+  .ineichen-stoks-calculate__confirm {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .ineichen-stoks-bids__table {
+    margin-bottom: 15px;
+  }
+  .ineichen-stoks-bids th {
+    font-size: 14px;
+    padding: 0 0 10px 0;
+  }
+  .ineichen-stoks-bids tbody tr:first-child td {
+    padding-top: 15px;
+  }
+  .ineichen-stoks-bids td {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+  .ineichen-stoks-how-work {
+    display: block;
+  }
+  .ineichen-stoks-how-work tbody {
+    gap: 20px 0;
+  }
+  .ineichen-stoks-how-work tr {
+    gap: 5px 0;
+  }
+  .ineichen-stoks-how-work b, .ineichen-stoks-how-work span {
+    font-size: 16px;
+  }
+  #range::before, #range::after {
+    font-size: 12px;
+    bottom: 20px;
+  }
+  #range::-webkit-slider-runnable-track {
+    height: 5px;
+  }
+  #range::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    -webkit-transform: translateY(calc(-50% + 2px));
+            transform: translateY(calc(-50% + 2px));
+  }
+  #tooltip {
+    top: 1.5rem;
+  }
+  #tooltip span {
+    font-size: 15px;
   }
 }
 

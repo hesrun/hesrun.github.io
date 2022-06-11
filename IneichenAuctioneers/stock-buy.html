@@ -219,7 +219,34 @@
             </div>
         </div>
         <div class="land-section land-section_milk-white">
-
+            <div class="container">
+                <div class="ineichen-stoks-range">
+                    <div class="range-slider">
+                        <div id="tooltip"></div>
+                        <input id="range" type="range" step="1" value="33" min="1" max="66">
+                    </div>
+                </div>
+                <div class="ineichen-stoks-calculate">
+                    <div class="ineichen-stoks-calculate__share">
+                        <strong>YOUR SHARE</strong>
+                        <b>11,5%</b>
+                    </div>
+                    <div class="ineichen-stoks-calculate__price">
+                        <strong>EVALUATION PRICE</strong>
+                        <b>CHF 4 830 000</b>
+                    </div>
+                    <div class="ineichen-stoks-calculate__offer">
+                        <strong>YOUR OFFER</strong>
+                        <b>CHF <div class="ineichen-stoks-calculate__input"><input type="text"></div></b>
+                    </div>
+                    <div class="ineichen-stoks-calculate__note">
+                        When the time is over, we will select the best offers and <br> notify the new potential shareholders!
+                    </div>
+                    <div class="ineichen-stoks-calculate__confirm">
+                        <a href="" class="c-button c-button_america c-button_dark-brown c-button_medium c-button_filled c-button_full">CONFIRM OFFER</a>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="land-section land-section_dark-brown">
             <div class="container">
@@ -358,5 +385,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        const range = document.getElementById('range'),
+              tooltip = document.getElementById('tooltip'),
+        setValue = ()=>{
+            const
+                newValue = Number( (range.value - range.min) * 100 / (range.max - range.min) ),
+                newPosition = 16 - (newValue * 0.32);
+                tooltip.innerHTML = `<span>${range.value} lots</span>`;
+                tooltip.style.left = `calc(${newValue}% + (${newPosition}px))`;
+                document.documentElement.style.setProperty("--range-progress", `calc(${newValue}% + (${newPosition}px))`);
+        };
+        document.addEventListener("DOMContentLoaded", setValue);
+        range.addEventListener('input', setValue);
+    </script>
 </body>
 </html>
