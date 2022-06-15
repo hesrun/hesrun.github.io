@@ -2590,6 +2590,12 @@ select:-webkit-autofill:focus {
   border-right: 1px #E1E1E1 solid;
   border-bottom: 1px #E1E1E1 solid;
   padding: 30px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.press-logo-grid__item img {
+  margin: auto;
 }
 
 .press-logo-grid__item:nth-child(n + 6) {
@@ -5142,15 +5148,45 @@ select:-webkit-autofill:focus {
   padding-top: 0px;
 }
 
-.contact-text {
-  font-family: "GT America Extended", sans-serif;
-  margin: 45px 0;
-  line-height: 1.5;
-  font-size: 20px;
+.contacts-banner {
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contact-text strong {
-  font-size: 30px;
+.contacts-banner h1 {
+  margin: 0;
+}
+
+.contacts-banner__info {
+  font-family: "GT America Extended", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.contacts-banner__info p {
+  margin: 30px 0;
+}
+
+.contacts-banner__info .c-button {
+  max-width: 300px;
+}
+
+.contacts-banner__text {
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+  border-radius: 15px;
+  padding: 30px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: "GT America Extended", sans-serif;
 }
 
 .contact {
@@ -5161,21 +5197,46 @@ select:-webkit-autofill:focus {
   gap: 0px 80px;
 }
 
-.contact__form h2 {
+.contact h2 {
   margin-bottom: 45px;
 }
 
-.contact__image {
-  border: 1px #E1E1E1 solid;
-  border-radius: 16px;
-  overflow: hidden;
+.contact__timetable {
+  width: 100%;
+  max-width: 500px;
 }
 
-.contact__image img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.contact__timetable td {
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.contact__socials {
+  font-size: 0px;
+  margin: 30px 0;
+}
+
+.contact__socials a {
+  width: 60px;
+  height: 60px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: #1C2473;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.contact__socials a:hover {
+  background: #BD9E5E;
+}
+
+.contact__socials a i {
+  margin: auto;
 }
 
 /* -------------------------------- textpage -------------------------------- */
@@ -7102,6 +7163,7 @@ select:-webkit-autofill:focus {
   border-radius: 15px;
   padding: 30px;
   max-width: 100%;
+  margin-bottom: 40px;
 }
 
 .ineichen-invest-why strong {
@@ -7113,7 +7175,12 @@ select:-webkit-autofill:focus {
           justify-content: space-between;
   font-family: "GT America Extended", sans-serif;
   font-size: 22px;
-  margin: 40px 0;
+  margin: 0 0 20px;
+  gap: 0 10px;
+}
+
+.ineichen-invest-why strong:last-of-type {
+  margin-bottom: 40px;
 }
 
 .ineichen-invest-why strong span {
@@ -7245,17 +7312,19 @@ select:-webkit-autofill:focus {
 .ineichen-invest-start-sell-counter {
   border: 1px #F1E8DD solid;
   display: inline-block;
+  white-space: nowrap;
   border-radius: 20px;
   padding: 10px 20px;
   font-family: "GT America Extended", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 100;
   color: rgba(255, 255, 255, 0.5);
 }
 
 .ineichen-invest-start-sell-counter span {
-  font-size: 70px;
+  font-size: 60px;
   color: #F1E8DD;
+  font-variant-numeric: tabular-nums;
 }
 
 .threed-scene {
@@ -7440,8 +7509,8 @@ select:-webkit-autofill:focus {
   vertical-align: top;
 }
 
-.ineichen-stoks-how-work b, .ineichen-stoks-how-work span {
-  font-size: 26px;
+.ineichen-stoks-how-work b {
+  white-space: nowrap;
 }
 
 .ineichen-stoks-how-work b:before {
@@ -7452,6 +7521,10 @@ select:-webkit-autofill:focus {
   height: 18px;
   border-radius: 50%;
   border: 2px #382323 solid;
+}
+
+.ineichen-stoks-how-work b, .ineichen-stoks-how-work span {
+  font-size: 26px;
 }
 
 .ineichen-stoks-bids {
@@ -7524,6 +7597,7 @@ select:-webkit-autofill:focus {
   display: flex;
   line-height: 60px;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .ineichen-stoks-calculate__input {
@@ -7799,6 +7873,12 @@ select:-webkit-autofill:focus {
   }
   .ineichen-invest-why strong {
     font-size: 18px;
+  }
+  .ineichen-invest-why strong:last-of-type {
+    margin-bottom: 30px;
+  }
+  .ineichen-invest-why img {
+    margin-bottom: 30px;
   }
   .ineichen-invest-plan {
     -ms-grid-columns: 1fr 1fr;
@@ -8277,6 +8357,14 @@ select:-webkit-autofill:focus {
     gap: 30px;
   }
   /* --------------------------------- contact -------------------------------- */
+  .contacts-banner {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px 0;
+  }
+  .contacts-banner__info {
+    text-align: center;
+  }
   .contact {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -8584,7 +8672,6 @@ select:-webkit-autofill:focus {
   }
   .ineichen-invest-why strong {
     font-size: 22px;
-    margin: 20px 0;
   }
 }
 
@@ -9441,17 +9528,28 @@ select:-webkit-autofill:focus {
     font-size: 32px;
     margin: 30px 0;
   }
-  .contact-text {
-    margin: 50px 0;
-    font-size: 18px;
-  }
-  .contact-text strong {
-    font-size: 22px;
-  }
   .contact {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 30px 0;
+  }
+  .contact__timetable {
+    max-width: 100%;
+  }
+  .contact__socials {
+    margin: 15px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .contact__socials a {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    margin-right: 0px;
   }
   /* --------------------------------- landing -------------------------------- */
   .land-section {
@@ -10077,10 +10175,10 @@ select:-webkit-autofill:focus {
   .ineichen-invest-start-sell-counter {
     border-radius: 10px;
     padding: 10px 15px;
-    font-size: 30px;
+    font-size: 24px;
   }
   .ineichen-invest-start-sell-counter span {
-    font-size: 40px;
+    font-size: 30px;
   }
   .threed-scene {
     top: 8vw;
@@ -10145,7 +10243,7 @@ select:-webkit-autofill:focus {
     gap: 15px 0;
   }
   .ineichen-stoks-range {
-    margin-bottom: 60px;
+    margin: 20px 15px 50px;
   }
   .ineichen-stoks-calculate {
     -ms-grid-columns: 1fr;
@@ -10226,13 +10324,13 @@ select:-webkit-autofill:focus {
     height: 5px;
   }
   #range::-webkit-slider-thumb {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     -webkit-transform: translateY(calc(-50% + 2px));
             transform: translateY(calc(-50% + 2px));
   }
   #tooltip {
-    top: 1.5rem;
+    top: 1.8rem;
   }
   #tooltip span {
     font-size: 15px;

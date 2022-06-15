@@ -257,6 +257,12 @@
         gap: 0 30px;
         strong {
             font-size: 18px;
+            &:last-of-type {
+                margin-bottom: 30px;
+            }
+        }
+        img {
+            margin-bottom: 30px;
         }
     }
     .ineichen-invest-plan {
@@ -693,6 +699,14 @@
 
     /* --------------------------------- contact -------------------------------- */
 
+    .contacts-banner {
+        grid-template-columns: 1fr;
+        gap: 30px 0;
+        &__info {
+            text-align: center;
+        }
+    }
+
     .contact {
         grid-template-columns: 1fr;
         gap: 50px 0;
@@ -1042,7 +1056,6 @@
         }
         strong {
             font-size: 22px;
-            margin: 20px 0;
         }
     }
 
@@ -1877,18 +1890,22 @@
             margin: 30px 0;
         }
     }
-    .contact-text {
-        margin: 50px 0;
-        font-size: 18px;
-        strong {
-            font-size: 22px;
-        }
-    }
     .contact {
         grid-template-columns: 1fr;
         gap: 30px 0;
-        &__form {
-            
+        &__timetable {
+            max-width: 100%;
+        }
+        &__socials {
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-evenly;
+            a {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                margin-right: 0px;
+            }
         }
     }
 
@@ -2558,9 +2575,9 @@
     .ineichen-invest-start-sell-counter {
         border-radius: 10px;
         padding: 10px 15px;
-        font-size: 30px;
+        font-size: 24px;
         span {
-            font-size: 40px;
+            font-size: 30px;
         }
     }
     .threed-scene {
@@ -2599,7 +2616,7 @@
         }
     }
     .ineichen-stoks-range {
-        margin-bottom: 60px
+        margin: 20px 15px 50px;
     }
 
     .ineichen-stoks-calculate {
@@ -2676,12 +2693,12 @@
         height: 5px;
     }
     #range::-webkit-slider-thumb {
-        height: 20px;
-        width: 20px;
+        height: 25px;
+        width: 25px;
         transform: translateY(calc(-50% + 2px));
     }
     #tooltip {
-        top: 1.5rem;
+        top: 1.8rem;
     }
     #tooltip span {
         font-size: 15px;
