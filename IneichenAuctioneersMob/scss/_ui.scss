@@ -173,18 +173,22 @@
         background: $grey-light;
         color: #000;
         border-radius: 50%;
-        margin-right: 15px;
     }
     
     strong {
         font-weight: 500;
         font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 20px;
     }
     span {
         font-weight: 400;
         font-size: 14px;
         color: $grey;
         margin-right: auto;
+        white-space: nowrap;
     }
     .mdi-chevron-right {
         margin-left: 15px;
@@ -203,6 +207,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border: none;
     background: none;
     font-weight: 600;
@@ -226,13 +231,23 @@
             border: 2px $grey-line solid;
         }
     }
+    &_milk-white {
+        &#{$root}_filled {
+            background: $milk-white;
+            color: black;
+        }
+        &#{$root}_outline {
+            color: #000;
+            border: 2px $grey-line solid;
+        }
+    }
     &_red {
         background: $red;
         color: #000;
     }
     &_pink {
         &#{$root}_filled {
-            color: #fff;
+            color: milk-white;
             background: $pink;
         }
         &#{$root}_outline {
@@ -268,6 +283,26 @@
         &#{$root}_outline {
             color: black;
             border: 2px black solid;
+        }
+    }
+    &_brown {
+        &#{$root}_filled {
+            color: #fff;
+            background: $brown;
+        }
+        &#{$root}_outline {
+            color: $brown;
+            border: 2px $brown solid;
+        }
+    }
+    &_dark-grey {
+        &#{$root}_filled {
+            color: #fff;
+            background: $dark-grey;
+        }
+        &#{$root}_outline {
+            color: $dark-grey;
+            border: 2px $dark-grey solid;
         }
     }
     &_icon-left {
@@ -603,6 +638,12 @@
             text-indent: 0;
             color: #000;
         }
+    }
+    &_video {
+        background: none;
+        border: none;
+        box-shadow: none;
+        border-radius: 0px;
     }
     &__frame-container {
         height: 100vh;

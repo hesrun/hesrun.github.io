@@ -246,12 +246,15 @@
   background: #E7E7E7;
   color: #000;
   border-radius: 50%;
-  margin-right: 15px;
 }
 
 .links-list strong {
   font-weight: 500;
   font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 20px;
 }
 
 .links-list span {
@@ -259,6 +262,7 @@
   font-size: 14px;
   color: #828282;
   margin-right: auto;
+  white-space: nowrap;
 }
 
 .links-list .mdi-chevron-right {
@@ -284,6 +288,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   border: none;
   background: none;
   font-weight: 600;
@@ -311,13 +316,23 @@
   border: 2px rgba(130, 130, 130, 0.2) solid;
 }
 
+.btn_milk-white.btn_filled {
+  background: #F1E8DD;
+  color: black;
+}
+
+.btn_milk-white.btn_outline {
+  color: #000;
+  border: 2px rgba(130, 130, 130, 0.2) solid;
+}
+
 .btn_red {
   background: #FF8A8A;
   color: #000;
 }
 
 .btn_pink.btn_filled {
-  color: #fff;
+  color: milk-white;
   background: #e91e63;
 }
 
@@ -354,6 +369,26 @@
 .btn_black.btn_outline {
   color: black;
   border: 2px black solid;
+}
+
+.btn_brown.btn_filled {
+  color: #fff;
+  background: #b6934c;
+}
+
+.btn_brown.btn_outline {
+  color: #b6934c;
+  border: 2px #b6934c solid;
+}
+
+.btn_dark-grey.btn_filled {
+  color: #fff;
+  background: #2F3140;
+}
+
+.btn_dark-grey.btn_outline {
+  color: #2F3140;
+  border: 2px #2F3140 solid;
 }
 
 .btn_icon-left .mdi {
@@ -770,6 +805,14 @@
   color: #000;
 }
 
+.modal_video {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0px;
+}
+
 .modal__frame-container {
   height: 100vh;
   display: -ms-grid;
@@ -1117,6 +1160,7 @@
           box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 table {
@@ -1153,7 +1197,7 @@ input, select, button, textarea {
 }
 
 .brown-text {
-  color: #C57F3F;
+  color: #b6934c;
 }
 
 .green-text {
@@ -1452,6 +1496,40 @@ input, select, button, textarea {
   }
 }
 
+@-webkit-keyframes ContentIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+  }
+}
+
+@keyframes ContentIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center bottom;
+            transform-origin: center bottom;
+  }
+}
+
 .content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -1495,6 +1573,15 @@ input, select, button, textarea {
   border-bottom: 3px transparent solid;
   -webkit-animation: 0.6s Spin infinite linear;
           animation: 0.6s Spin infinite linear;
+}
+
+.content.hide {
+  display: none;
+}
+
+.content.show {
+  -webkit-animation: 0.3s ContentIn both;
+          animation: 0.3s ContentIn both;
 }
 
 .container {
@@ -1684,7 +1771,7 @@ input, select, button, textarea {
 }
 
 .no-permium-banner {
-  border: 3px #C57F3F solid;
+  border: 3px #b6934c solid;
   border-radius: 18px;
 }
 
@@ -1971,6 +2058,10 @@ input, select, button, textarea {
   margin-right: 3px;
 }
 
+.live-lot {
+  position: relative;
+}
+
 .live-lot__images {
   margin-bottom: 25px;
   position: relative;
@@ -2007,6 +2098,20 @@ input, select, button, textarea {
 .live-lot__swipe-note i {
   margin: 0 5px;
   font-size: 16px;
+}
+
+.live-lot__num {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: black;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  z-index: 2;
 }
 
 .live-lot__info {
@@ -2200,31 +2305,31 @@ input, select, button, textarea {
   width: 100%;
 }
 
-.live-bids {
-  padding: 15px;
-  display: -ms-grid;
-  display: grid;
-  gap: 13px 0;
+.live-stream iframe {
+  aspect-ratio: 16 / 9;
 }
 
-.live-bids .live-bids__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0 10px;
+.live-bids__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px 15px;
 }
 
-.live-bids .live-bids__item strong {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 125px;
-          flex: 0 0 125px;
+.live-bids__note {
+  text-align: center;
+  display: block;
+  border: 1px #828282 solid;
+  color: #828282;
+  border-radius: 8px;
+  padding: 8px 0;
 }
 
-.live-bids .live-bids__item i {
-  font-size: 20px;
+.live-bids td {
+  font-size: 12px;
+}
+
+.live-bids td:first-child {
+  white-space: nowrap;
 }
 
 .live-bid-btns {
@@ -2296,6 +2401,21 @@ input, select, button, textarea {
 
 .live-lots-item__status.red {
   background-color: #FF8A8A;
+  color: #fff;
+}
+
+.live-lots-item__status.grey {
+  background: #828282;
+  color: #fff;
+}
+
+.live-lots-item__status.green {
+  background: #579352;
+  color: #fff;
+}
+
+.live-lots-item__status.brown {
+  background: #b6934c;
   color: #fff;
 }
 
@@ -2441,5 +2561,158 @@ input, select, button, textarea {
 
 .logout {
   padding: 30px 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   landings                                  */
+/* -------------------------------------------------------------------------- */
+.land-section {
+  font-family: "GT America Extended", sans-serif;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.land-section_dark-grey {
+  background-color: #2F3140;
+  color: #fff;
+}
+
+.land-section_milk-white {
+  background-color: #F1E8DD;
+}
+
+.land-section__title {
+  font-size: 30px;
+  margin: 30px 0;
+}
+
+.land-section__title:first-of-type {
+  margin-top: 0;
+}
+
+.land-section__sub-title {
+  font-size: 20px;
+  margin: 30px 0;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.stocks-carusel img {
+  max-width: 100%;
+}
+
+.landing-btns {
+  margin: 30px 0;
+}
+
+.landing-btns:last-of-type {
+  margin-bottom: 0px;
+}
+
+.landing-btns__guest {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0 15px;
+}
+
+.ineichen-stock-sell {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 30px 0;
+}
+
+.ineichen-stock-sell__live img {
+  max-width: 100%;
+}
+
+.ineichen-stock-sell__live i {
+  display: block;
+  margin-top: 5px;
+  font-weight: 100;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.ineichen-stock-sell__price {
+  font-weight: 300;
+  text-align: center;
+  font-size: 24px;
+}
+
+.ineichen-stock-sell__price span {
+  margin-top: 20px;
+  color: #b6934c;
+  font-weight: 100;
+  font-size: 40px;
+  display: block;
+}
+
+.ineichen-stock-timer {
+  border: 1px #F1E8DD solid;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.ineichen-stock-timer span {
+  font-size: 30px;
+  font-variant-numeric: tabular-nums;
+  color: #F1E8DD;
+}
+
+.ineichen-stock-finance {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 50px 0;
+}
+
+.ineichen-stock-finance img {
+  max-width: 100%;
+  border: 1px #F1E8DD solid;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.ineichen-stock-finance strong {
+  display: block;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.ineichen-stock-plan {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 30px 0;
+}
+
+.ineichen-stock-plan img {
+  margin-bottom: 20px;
+}
+
+.ineichen-stock-plan h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.ineichen-stock-plan p {
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.ineichen-footer-logo img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

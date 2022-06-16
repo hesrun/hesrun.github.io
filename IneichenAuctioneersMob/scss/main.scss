@@ -6,10 +6,12 @@ $inter: 'Inter', sans-serif;
 $grey: #828282;
 $grey-light: #E7E7E7;
 $grey-line: rgba(#828282,0.2);
+$dark-grey: #2F3140;
+$milk-white: #F1E8DD;
 $red: #FF8A8A;
 $pink: #e91e63;
 $blue: #1C2473;
-$brown: #C57F3F;
+$brown: #b6934c;
 $green: #579352;
 $green-text: #579352;
 
@@ -21,6 +23,7 @@ $green-text: #579352;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    -webkit-tap-highlight-color: transparent;
 }
 table {
     border-collapse: collapse;
@@ -40,6 +43,9 @@ input,select,button, textarea {
     font-family: $inter;
     font-weight: 500;
     outline: none;
+}
+a {
+    
 }
 
 .title {
@@ -247,6 +253,18 @@ input,select,button, textarea {
         transform: translateX(-20%)
     }
 }
+@keyframes ContentIn {
+    from { 
+        opacity: 0;
+        transform: scale(0.8);
+        transform-origin: center bottom;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: center bottom;
+    }
+}
 
 .content {
     flex: 1 1 auto;
@@ -283,6 +301,12 @@ input,select,button, textarea {
             border-bottom: 3px transparent solid;
             animation: 0.6s Spin infinite linear;
         }
+    }
+    &.hide {
+        display: none;
+    }
+    &.show {
+        animation: 0.3s ContentIn both;
     }
 }
 
@@ -665,6 +689,7 @@ input,select,button, textarea {
 }
 
 .live-lot {
+    position: relative;
     &__images {
         margin-bottom: 25px;
         position: relative;
@@ -692,6 +717,19 @@ input,select,button, textarea {
             margin: 0 5px;
             font-size: 16px;
         }
+    }
+    &__num {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        background: black;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        z-index: 2;
     }
     &__info {
         padding: 0 15px;
@@ -837,21 +875,29 @@ input,select,button, textarea {
     video {
         width: 100%;
     }
+    iframe {
+        aspect-ratio: 16 / 9;
+    }
 }
 
 .live-bids {
-    padding: 15px;
-    display: grid;
-    gap: 13px 0;
-    .live-bids__item {
-        display: flex;
-        align-items: center;
-        gap: 0 10px;
-        strong {
-            flex: 0 0 125px;
-        }
-        i {
-            font-size: 20px;
+    &__table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 15px 15px;
+    }
+    &__note {
+        text-align: center;
+        display: block;
+        border: 1px $grey solid;
+        color: $grey;
+        border-radius: 8px;
+        padding: 8px 0;
+    }
+    td {
+        font-size: 12px;
+        &:first-child {
+            white-space: nowrap;
         }
     }
 }
@@ -911,6 +957,18 @@ input,select,button, textarea {
         }
         &.red {
             background-color: $red;
+            color: #fff;
+        }
+        &.grey {
+            background: $grey;
+            color: #fff;
+        }
+        &.green {
+            background: $green;
+            color: #fff;
+        }
+        &.brown {
+            background: $brown;
             color: #fff;
         }
     }
@@ -1041,4 +1099,135 @@ input,select,button, textarea {
 
 .logout {
     padding: 30px 20px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   landings                                  */
+/* -------------------------------------------------------------------------- */
+.land-section {
+    font-family: $america;
+    padding: 30px 15px;
+    text-align: center;
+    &_dark-grey {
+        background-color: $dark-grey;
+        color: #fff;
+    }
+    &_milk-white {
+        background-color: $milk-white;
+    }
+    &__title {
+        font-size: 30px;
+        margin: 30px 0;
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+    &__sub-title {
+        font-size: 20px;
+        margin: 30px 0;
+        line-height: 1.4;
+        font-weight: 300;
+    }
+}
+.stocks-carusel {
+    img {
+        max-width: 100%;
+    }
+}
+.landing-btns {
+    margin: 30px 0;
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+    &__guest {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 15px;
+    }
+}
+
+.ineichen-stock-sell {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px 0;
+    &__live {
+        img {
+            max-width: 100%;
+        }
+        i {
+            display: block;
+            margin-top: 5px;
+            font-weight: 100;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+    }
+    &__price {
+        font-weight: 300;
+        text-align: center;
+        font-size: 24px;
+        span {
+            margin-top: 20px;
+            color: $brown;
+            font-weight: 100;
+            font-size: 40px;
+            display: block
+        }
+    }
+}
+
+.ineichen-stock-timer {
+    border: 1px $milk-white solid;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgba(white, 0.4);
+    font-weight: 100;
+    font-size: 20px;
+    span {
+        font-size: 30px;
+        font-variant-numeric: tabular-nums;
+        color: $milk-white;
+    }
+}
+
+.ineichen-stock-finance {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px 0;
+    img {
+        max-width: 100%;
+        border: 1px $milk-white solid;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    strong {
+        display: block;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+}
+.ineichen-stock-plan {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px 0;
+    img {
+        margin-bottom: 20px;
+    }
+    h4 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    p {
+        line-height: 1.4;
+        font-weight: 300;
+    }
+}
+.ineichen-footer-logo {
+    img {
+        max-width: 100%;
+    }
 }
