@@ -12,6 +12,7 @@ $red: #FF8A8A;
 $pink: #e91e63;
 $blue: #1C2473;
 $brown: #b6934c;
+$dark-brown: #382323;
 $green: #579352;
 $green-text: #579352;
 
@@ -1109,16 +1110,27 @@ a {
     font-family: $america;
     padding: 30px 15px;
     text-align: center;
+    input, button, select {
+        font-family: $america;
+    }
     &_dark-grey {
         background-color: $dark-grey;
         color: #fff;
     }
+    &_dark-brown {
+        background-color: $dark-brown;
+        color: #fff;
+    }
     &_milk-white {
         background-color: $milk-white;
+        color: $dark-brown;
     }
     &__title {
         font-size: 30px;
         margin: 30px 0;
+        span {
+            display: inline-block;
+        }
         &:first-of-type {
             margin-top: 0;
         }
@@ -1137,6 +1149,10 @@ a {
 }
 .landing-btns {
     margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px 0;
+
     &:last-of-type {
         margin-bottom: 0px;
     }
@@ -1146,7 +1162,6 @@ a {
         gap: 0 15px;
     }
 }
-
 .ineichen-stock-sell {
     display: grid;
     grid-template-columns: 1fr;
@@ -1177,7 +1192,6 @@ a {
         }
     }
 }
-
 .ineichen-stock-timer {
     border: 1px $milk-white solid;
     display: inline-block;
@@ -1192,7 +1206,6 @@ a {
         color: $milk-white;
     }
 }
-
 .ineichen-stock-finance {
     display: grid;
     grid-template-columns: 1fr;
@@ -1226,8 +1239,96 @@ a {
         font-weight: 300;
     }
 }
+.ineichen-stock-range {
+    margin: 10px 15px 50px;
+}
+.ineichen-stock-calculate {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px 0;
+    border: 1px $dark-brown solid;
+    padding: 30px 15px;
+    border-radius: 10px;
+    text-align: center;
+    strong {
+        font-size: 13px;
+        display: block;
+        text-transform: uppercase;
+    }
+    b {
+        margin-top: 8px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        font-variant-numeric: tabular-nums;
+    }
+    &__input {
+        flex: 1 1 auto;
+        margin-left: 20px;
+        input {
+            font-weight: bold;
+            color: $dark-brown;
+            width: 100%;
+            background: transparent;
+            border: 1px $dark-brown solid;
+            font-size: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+}
+.ineichen-stock-bids {
+    &__table {
+        width: 100%;
+        margin-bottom: 30px;
+        td {
+            font-size: 12px;
+            padding: 10px 0;
+        }
+        th {
+            font-size: 15px;
+            font-weight: 500;
+            padding-bottom: 10px;
+            border-bottom: 1px rgba(white, 0.4) solid;
+        }
+        tbody {
+            tr:first-child {
+                td {
+                    padding-top: 15px;
+                }
+            }
+        }
+        th:last-child,
+        td:last-child {
+            text-align: right;
+        }
+        th:first-child,
+        td:first-child {
+            text-align: left;
+        }
+    }   
+}
+.ineichen-stock-how-work {
+    display: block;
+    tbody {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px 0;
+    }
+    tr {
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px 0;
+    }
+    td {
+        display: block;
+    }
+}
 .ineichen-footer-logo {
     img {
         max-width: 100%;
+        vertical-align: middle;
     }
 }
