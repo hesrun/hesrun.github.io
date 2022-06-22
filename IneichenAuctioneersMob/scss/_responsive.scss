@@ -1,0 +1,831 @@
+@media screen and (min-width: 700px) {
+
+    body {
+        font-size: 22px;
+    }
+    .header-title {
+        font-size: 30px;
+        min-height: 80px;
+        padding: 0 60px;
+        a {
+            width: 80px;
+            line-height: 80px;
+            margin-left: -60px;
+            i.mdi {
+                font-size: 40px;
+            }
+        }
+    }
+    .title {
+        font-size: 34px;
+    }
+    .small-title {
+        font-weight: 600;
+        font-size: 20px;
+        margin: 15px 0 0px;
+    }
+
+    .article {
+        font-size: 22px;
+        line-height: 1.5;
+        h2 {
+            font-family: $america;
+            font-size: 28px;
+            margin: 30px 0 20px;
+        }
+        h3 {
+            font-family: $america;
+            font-size: 26px;
+            margin: 30px 0 20px;
+        }
+        p {
+            margin: 15px 0;
+        }
+        table {
+            font-size: 18px;
+            td {
+                padding: 10px;
+            }
+        }
+    }
+
+    .container {
+        padding: 30px 60px;
+    }
+    .btns-group {
+        gap: 20px 0;
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+    .account {
+        padding: 60px;
+        &__photo {
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            font-size: 72px;
+            margin-bottom: 30px;
+        }
+        &__name {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        &__mail {
+            font-size: 22px;
+            margin-bottom: 60px;
+        }
+        &__verify {
+            small {
+                border-radius: 30px;
+                padding: 15px;
+                display: block;
+                margin-top: 30px;
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+    .logout {
+        padding: 30px 60px;
+    }
+    .footer {
+        &_btn {
+            padding: 30px 60px;
+        }
+    }
+
+    .search-result {
+        font-size: 22px;
+        margin: 30px 60px 15px 60px;
+    }
+
+    .auctions-list {
+        padding: 30px 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        .auction-item__info {
+            padding: 20px;
+        }
+    }
+    .no-permium-banner {
+        grid-column: 2 span;
+    }
+
+    .auction-item {
+        $root: &;
+        aspect-ratio: 2 / 3;
+        &_timed {
+            aspect-ratio: 0;
+            #{$root}__info {
+                padding-bottom: 30px;
+            }
+            #{$root}__name {
+                font-size: 48px;
+                margin: 40px 0 10px;
+            }
+        }
+        &__info {
+            padding: 60px 60px;
+        }
+        &__name {
+            font-size: 32px;
+        }
+        &__date {
+            margin: 30px 0;
+        }
+        &__status {
+            font-size: 18px;
+            border-radius: 10px;
+            padding: 10px 15px;
+        }
+        &__btns {
+            display: grid;
+            gap: 20px 0;
+        }
+    }
+    .auction-item-descripion {
+        padding: 60px 60px 0px;
+        margin-bottom: 30px;
+    }
+    .lots-sort {
+        padding: 0px 60px 0px;
+        margin: 30px 0;
+    }
+
+    .lots-grid {
+        padding: 0px 60px 30px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 15px;
+        &_timed {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    
+
+    .lot-item {
+        $root: &;
+        &_timed {
+            #{$root}__brand {
+                font-size: 20px;
+                margin-top: 10px;
+            }
+            #{$root}__name {
+                font-size: 20px;
+                margin: 10px 0 5px 0;
+            }
+            #{$root}__price {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+            #{$root}__bidders {
+                color: $grey;
+                margin-top: 15px;
+                font-size: 18px;
+            }
+            #{$root}__progress {
+                margin-top: 15px;
+            }
+            .timed-progress__counter {
+                font-size: 1
+            }
+        }
+        &__image {
+            border-radius: 15px;
+            width: 100%;
+        }
+        &__num {
+            left: 15px;
+            top: 15px;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 16px;
+    
+        }
+        &__brand {
+            font-size: 20px;
+            margin-top: 10px;   
+        }
+        &__name {
+            font-size: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        &__price {
+            font-size: 15px;
+        }
+        &__hammer-price {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        > .btn {
+            margin-top: 15px;
+        }
+    }
+
+    .timed-progress {
+        &__bar {
+            height: 13px;
+        }
+        &__counter {
+            font-size: 16px;
+            color: $grey;
+            span {
+                font-size: 13px;
+            }
+        }
+    }
+    .live-lot {
+        padding: 60px;
+        .container {
+            padding: 0px;
+        }
+        &__num {
+            left: 90px;
+            top: 90px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+        &__swipe-note {
+            border-radius: 30px;
+            bottom: 60px;
+            font-size: 20px;
+            padding: 15px 15px;
+            i {
+                margin: 0 15px;
+                font-size: 28px;
+            }
+        }
+        &__info {
+            padding: 0px;
+        }
+        &__brand {
+            margin-bottom: 14px;
+            font-size: 26px;
+        }
+        &__name {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        &__bids {
+            margin: 30px 0;
+        }
+        &__bids-item {
+            font-size: 20px;
+            padding: 20px 30px;
+            i {
+                font-size: 24px;
+                margin-right: 10px;
+            }
+        }
+        &__timed-bid {
+            padding: 0px;
+            margin-top: 30px;
+            b {
+                font-size: 22px;
+            }
+            span {
+                font-size: 38px;
+    
+            }
+        }
+        &__timed-timer {
+            padding: 30px 0px;
+            strong {
+                font-size: 22px;
+            }
+        }
+        &__timed-result {
+            margin: 30px 0px;
+            padding: 30px;
+            border-radius: 20px;
+            > b {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+            span {
+                font-size: 18px;
+                margin: 5px 0;
+            }
+            strong {
+                margin: 20px 0;
+                font-size: 38px;
+            }
+            &_win {
+                border: 5px $green solid;
+                strong {
+                    color: $green
+                }
+            }
+            &_lose {
+                border: 5px $pink solid;
+                strong {
+                    color: $pink
+                }
+            }
+        }
+        &__value {
+            padding: 30px 0px;
+            gap: 30px 0;
+            span {
+                font-size: 22px;
+            }
+
+            a {
+                padding: 10px 30px;
+                border-radius: 30px;
+                font-size: 20px;
+            }
+        }
+        &__bid-step {
+            gap: 0 30px;
+            span {
+                font-size: 18px;
+            }
+        }
+        &__bid-btns {
+            padding: 30px 0;
+        }
+        &__specifications {
+            padding: 0px;
+            .title {
+                font-size: 28px;
+                margin: 30px 0;
+            }
+        }
+    }
+    .live-lots {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 60px;
+    }
+    .live-lots-item {
+        border-bottom: 1px $grey-line solid;
+        padding: 30px 15px;
+        &_alone {
+            padding: 30px 0 40px;
+            margin: 0 60px;
+            align-items: center;
+            .live-lots-item__name {
+                font-size: 30px;
+            }
+            .live-lots-item__price {
+                margin: 30px 0;
+                span {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                strong {
+                    font-size: 26px;
+                }
+            }
+            .live-lots-item__bids {
+                margin-top: 13px;
+                .mdi {
+                    font-size: 24px;
+                }
+            }
+        }
+        &__image {
+            width: 140px;
+            img {
+                border-radius: 15px;
+            }
+            span {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                font-size: 15px;
+                bottom: -17px;
+                margin-left: -17px;
+            }
+        }
+        &__status {
+            font-size: 15px;
+            padding: 10px 15px;
+            border-radius: 30px;
+        }
+        &__name {
+            margin-bottom: 15px;
+        }
+        &__price {
+            span {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
+            strong {
+                font-size: 15px;
+            }
+        }
+        &__bids {
+            margin-top: 13px;
+            .mdi {
+                font-size: 16px;
+            }
+        }
+    }
+    .live-bar {
+        padding: 20px 60px;
+        font-size: 22px;
+        gap: 0 30px;
+        &__close {
+            font-size: 28px;
+        }
+        &__status {
+            &_going {
+                &:before {
+                    margin-right: 15px;
+                    width: 20px;
+                    height: 200px;
+                }
+            }
+            &_whait {
+                &:before {
+                    content: "";
+                    margin-right: 15px;
+                    width: 20px;
+                    height: 20px;
+                    border: 2px #fff solid;
+                }
+            }
+            &_pause {
+                &:before {
+                    margin-right: 10px;
+                    font-size: 32px;
+                }
+            }
+        }
+        &__users {
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            i.mdi {
+                font-size: 18px;
+                margin-right: 3px;
+    
+            }
+        }
+    }
+    .live-bid-btns {
+        padding: 30px 60px;
+    }
+    .live-bids {
+        padding: 15px 60px;
+        &__table {
+            border-spacing: 20px 30px;
+        }
+        &__note {
+            font-size: 20px;
+            border-radius: 10px;
+            padding: 15px 0;
+        }
+        td {
+            font-size: 18px;
+        }
+    }
+    .splash {
+        &__slide {
+            padding: 60px;
+        }
+        &__title {
+            font-size: 60px;
+            margin-top: 30vw;
+        }
+        &__text {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+        &__nav {
+            padding: 60px;
+        }
+    }
+    .sign {
+        padding: 10vw 20vw 60px;
+        &__btns {
+            gap: 30px 0;
+            span {
+                font-size: 24px;
+            }
+        }
+        &__title {
+            font-size: 50px;
+            margin-bottom: 60px;
+        }
+        &__note {
+            font-size: 20px;
+        }
+        &__user {
+            font-size: 20px;
+        }
+    }
+    .search-bar {
+        padding: 30px 60px;
+        &__search {
+            .mdi {
+                line-height: 60px;
+                font-size: 36px;
+                padding: 0 15px;
+            }
+            input {
+                padding-left: 70px;
+                border-radius: 10px;
+                height: 60px;
+                font-size: 22px;
+            }
+        }
+        &__back {
+            line-height: 60px;
+            margin-left: -25px;
+            padding: 0 10px;
+            font-size: 36px;
+        }
+    }
+    .page-cap {
+        min-height: 400px;
+        .mdi {
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            font-size: 64px;
+            margin-bottom: 30px;
+        }
+        span {
+            font-size: 28px;
+        }
+    }
+    .tabs {
+        margin: 0 60px;
+        border-bottom: 2px $grey-line solid;
+        &__item {
+            height: 70px;
+        }
+        &__line {
+            bottom: -2px;
+            width: 50%;
+            height: 3px;
+        }
+    }
+    .navbar {
+        padding: 0 100px;
+        &__link {
+            padding: 25px 0;
+            .mdi {
+                font-size: 32px;
+            }
+            span {
+                margin-top: 9px;
+                font-size: 15px;
+                display: block;
+            }
+        }
+        .dot {
+            width: 20px;
+            height: 20px;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+    }
+    .btn {
+        min-height: 70px;
+        min-width: 70px;
+        font-size: 22px;
+        .mdi {
+            font-size: 32px;
+        }
+        &_select {
+            select {
+                font-size: 22px;
+                padding: 0 15px;
+            }
+            .mdi {
+                font-size: 32px;
+            }    
+        }
+    }
+    .btn-close {
+        min-height: 70px;
+        min-width: 70px;
+        font-size: 32px;
+        line-height: 70px; 
+        &_sign {
+            margin-top: 60px;
+            margin-left: 60px;
+        }
+    }
+    .select {
+        select {
+            padding: 0 40px 0 25px;
+            font-size: 22px;
+            height: 70px;
+        }
+        .mdi {
+            font-size: 32px;
+            right: 15px;
+            line-height: 70px;
+        }
+    }
+    .c-filed {
+        margin-bottom: 30px;
+        &__input {
+            height: 70px;
+            font-size: 22px;
+        }
+        &__textarea {
+            font-weight: 500;
+            height: 100px;
+            font-size: 22px;
+        }
+        &__select {
+            height: 70px;
+            font-size: 22px;
+        }
+        i.mdi {
+            font-size: 38px;
+            right: 0px;
+            line-height: 80px;
+        }
+    }
+    .links-list {
+        &__item {
+            min-height: 80px;
+            padding: 0 60px;
+            font-size: 22px;
+            &_wrap {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                .btn {
+                    margin-top: 30px;
+                }
+                .c-chekbox {
+                    margin-top: 30px;
+                    width: 100%;
+                }
+            }
+            &_invoice {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                strong {
+                    line-height: 1.3;
+                }
+                b {
+                    margin-left: auto;
+                }
+            }
+        }
+        .links-list__icon  {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 28px;
+        }
+        strong {
+            font-size: 22px;
+            line-height: 1.5;
+        }
+        span {
+            font-size: 22px;
+        }
+        .mdi-chevron-right {
+            margin-left: 20px;
+            width: 20px;
+            font-size: 32px;
+        }
+    }
+    .c-toggle {
+        margin-bottom: 30px;
+        gap: 0 30px;
+        &_text-top {
+            row-gap: 15px;
+        }
+        &__text {
+            line-height: 1.3;
+            font-size: 24px;
+            padding-right: 10px;
+        }
+        label {
+            font-size: 20px;
+            border-radius: 30px;
+            padding: 20px 15px;
+        }
+    }
+    .action-sheet {
+        &_ios {
+            .action-sheet__content {
+                margin-bottom: 25px;
+                height: calc(100vh - 150px);
+            }
+        }
+        &__body {
+            border-radius: 30px 30px 0 0;
+        }
+        &__line {
+            height: 80px;
+            &:after {
+                width: 100px;
+                height: 10px;
+                top: 30px;
+                margin: 0 0 0 -50px;
+                border-radius: 5px;
+            }
+        }
+        &__content {
+            height: calc(100vh - 150px);
+        }
+        &__title {
+            margin: 40px 60px 15px;
+            font-size: 20px;
+            &:first-child {
+                margin-top: 0px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .drop-zone {
+        margin-bottom: 45px;
+        &__label {
+            grid-row-gap: 30px;
+            font-size: 20px;
+            padding: 8vh 15px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+        }
+        i.mdi {
+            color: $blue;
+            font-size: 40px;
+        }
+    }
+    .upload-files {
+        margin-bottom: 45px;
+        grid-row-gap: 30px;
+        &__item {
+            display: grid;
+            grid-template-columns: 80px 1fr 50px;
+            align-items: center;
+        }
+        &__image {
+            width: 80px;
+            height: 80px;
+        }
+        &__info {
+            padding: 0 50px 0 30px;
+            font-size: 24px;
+            gap: 15px 0px;
+        }
+        &__progress {
+            height: 6px;
+        }
+        &__weight {
+            font-size: 20px;
+        }
+        &__remove {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 28px;
+        }
+    }
+    .c-alert {
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+
+    .modal {
+        width: 70%;
+        &__header {
+            padding: 30px;
+            font-size: 22px;
+        }
+        &__content {
+            padding: 30px;
+        }
+        &__footer {
+            padding: 30px
+        }
+    }
+    #noty_layout__topCenter {
+        top:60px;
+        left: 60px;
+        right: 60px;
+        width: auto;
+        transform: none;
+    }
+    .noty_theme__sunset.noty_bar {
+        margin: 0 0 20px 0;
+        .mdi {
+            margin-right: 10px;
+        }
+    }
+    .noty_theme__sunset.noty_bar .noty_body {
+        font-size: 22px;
+        padding: 15px;
+    }
+}

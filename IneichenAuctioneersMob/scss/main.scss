@@ -76,6 +76,22 @@ a {
     color: $grey;
 }
 
+.brown-bg {
+    background: $brown;
+}
+.green-bg {
+    background: $green-text;
+}
+.blue-bg {
+    background: $blue;
+}
+.red-bg {
+    background: $red;
+}
+.grey-bg {
+    background: $grey;
+}
+
 .article {
     font-size: 15px;
     line-height: 1.5;
@@ -463,35 +479,30 @@ a {
 }
 
 .no-permium-banner {
-    border: 3px $brown solid;
-    border-radius: 18px;
-    &__img {
-        width: 100%;
-    }
-    &__info {
-        padding: 20px;
-    }
-    &__title {
-        font-weight: 500;
-        font-size: 24px;
-        color: $blue;
-        font-family: $america;
-        small {
-            display: block;
-            margin-bottom: 5px;
-        }
-    }
-    p {
-        font-family: $america;
-        margin: 20px 0;
-        line-height: 1.5;
-    }
+    border: 2px $blue solid;
+    border-radius: 30px;
+    padding: 15px 10px;
+    text-align: center;
+    color: $blue;
+    text-transform: uppercase;
 }
 
 .auction-item {
+    $root: &;
     display: block;
     position: relative;
-    min-height: 300px;
+    aspect-ratio: 1 / 1;
+    &_timed {
+        aspect-ratio: 0;
+        #{$root}__info {
+            position: static;
+            color: black;
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(#ccc,1) 100%);
+        }
+        #{$root}__name {
+            margin: 40px 0 10px;
+        }
+    }
     &__info {
         padding: 20px 15px;
         position: absolute;
@@ -506,6 +517,8 @@ a {
     }
     &__image {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
         vertical-align: middle;
         &_inside {
             border-radius: 0px;
@@ -545,10 +558,10 @@ a {
         display: grid;
         gap: 10px 0;
     }
-
 }
 .auction-item-descripion {
-    padding: 15px;
+    margin: 15px 0;
+    padding: 0 15px;
 }
 .search-result {
     font-size: 12px;
@@ -557,19 +570,24 @@ a {
 }
 
 .lots-sort {
-    padding: 30px 15px;
+    padding: 0px 15px;
+    margin: 15px 0;
     .title {
         margin-bottom: 15px;
     }
 }
 
 .lots-grid {
-    padding: 10px;
+    padding: 10px 15px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 10px;
+    &_timed {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 .lot-item {
+    $root: &;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -585,6 +603,30 @@ a {
     &__image {
         border-radius: 5px;
         width: 100%;
+    }
+    &_timed {
+        #{$root}__brand {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        #{$root}__name {
+            font-size: 14px;
+            margin: 5px 0 5px 0;
+        }
+        #{$root}__price {
+            color: $grey;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        #{$root}__bidders {
+            color: $grey;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        #{$root}__progress {
+            margin-top: 15px;
+        }
     }
     &__num {
         position: absolute;
@@ -603,7 +645,11 @@ a {
     &__brand {
         font-size: 11px;
         color: $grey;
-        margin-top: 8px;   
+        margin-top: 8px;
+        b {
+            float: right;
+            color: #000;
+        }
     }
     &__name {
         font-size: 11px;
@@ -621,6 +667,36 @@ a {
     > .btn {
         margin-top: 10px;
         align-self: end;
+    }
+}
+
+.timed-progress {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    &__bar {
+        flex: 1 1 auto;
+        height: 10px;
+        box-shadow: 0 0 0 1px $grey-line inset;
+        border-radius: 10px;
+        overflow: hidden;
+        div {
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+    &__counter {
+        font-size: 12px;
+        color: $grey;
+        span {
+            font-weight: 700;
+            font-size: 10px;
+            display: block;
+            margin-bottom: 3px;
+        }
+        b {
+            font-variant-numeric: tabular-nums;
+        }
     }
 }
 
@@ -789,6 +865,72 @@ a {
             padding-right: 15px;
             color: $grey;
 
+        }
+    }
+    &__timed-bid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        margin-top: 15px;
+        b {
+            font-family: $america;
+            font-weight: 500;
+            font-size: 18px;
+        }
+        span {
+            font-family: $america;
+            font-size: 28px;
+            font-weight: 100;
+
+        }
+    }
+    &__timed-timer {
+        border-bottom: 1px $grey-line solid;
+        padding: 30px 15px;
+        strong {
+            display: block;
+            font-family: $america;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+    &__timed-result {
+        margin: 30px 15px;
+        padding: 20px 30px;
+        border-radius: 15px;
+        text-align: center;
+        > b {
+            font-size: 18px;
+            display: block;
+            font-family: $america;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        span {
+            font-size: 12px;
+            display: block;
+            margin: 5px 0;
+            opacity: 0.7;
+        }
+        strong {
+            margin: 10px 0;
+            display: block;
+            font-size: 28px;
+            font-weight: 300;
+        }
+        &_win {
+            border: 5px $green solid;
+            strong {
+                color: $green
+            }
+        }
+        &_lose {
+            border: 5px $pink solid;
+            strong {
+                color: $pink
+            }
         }
     }
     &__value {
@@ -1332,3 +1474,6 @@ a {
         vertical-align: middle;
     }
 }
+
+
+@import 'responsive';

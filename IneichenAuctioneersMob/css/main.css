@@ -332,7 +332,7 @@
 }
 
 .btn_pink.btn_filled {
-  color: milk-white;
+  color: white;
   background: #e91e63;
 }
 
@@ -1296,6 +1296,26 @@ input, select, button, textarea {
   color: #828282;
 }
 
+.brown-bg {
+  background: #b6934c;
+}
+
+.green-bg {
+  background: #579352;
+}
+
+.blue-bg {
+  background: #1C2473;
+}
+
+.red-bg {
+  background: #FF8A8A;
+}
+
+.grey-bg {
+  background: #828282;
+}
+
 .article {
   font-size: 15px;
   line-height: 1.5;
@@ -1851,40 +1871,33 @@ input, select, button, textarea {
 }
 
 .no-permium-banner {
-  border: 3px #b6934c solid;
-  border-radius: 18px;
-}
-
-.no-permium-banner__img {
-  width: 100%;
-}
-
-.no-permium-banner__info {
-  padding: 20px;
-}
-
-.no-permium-banner__title {
-  font-weight: 500;
-  font-size: 24px;
+  border: 2px #1C2473 solid;
+  border-radius: 30px;
+  padding: 15px 10px;
+  text-align: center;
   color: #1C2473;
-  font-family: "GT America Extended", sans-serif;
-}
-
-.no-permium-banner__title small {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.no-permium-banner p {
-  font-family: "GT America Extended", sans-serif;
-  margin: 20px 0;
-  line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .auction-item {
   display: block;
   position: relative;
-  min-height: 300px;
+  aspect-ratio: 1 / 1;
+}
+
+.auction-item_timed {
+  aspect-ratio: 0;
+}
+
+.auction-item_timed .auction-item__info {
+  position: static;
+  color: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#cccccc));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #cccccc 100%);
+}
+
+.auction-item_timed .auction-item__name {
+  margin: 40px 0 10px;
 }
 
 .auction-item__info {
@@ -1908,6 +1921,9 @@ input, select, button, textarea {
 
 .auction-item__image {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: middle;
 }
 
@@ -1959,7 +1975,8 @@ input, select, button, textarea {
 }
 
 .auction-item-descripion {
-  padding: 15px;
+  margin: 15px 0;
+  padding: 0 15px;
 }
 
 .search-result {
@@ -1969,7 +1986,8 @@ input, select, button, textarea {
 }
 
 .lots-sort {
-  padding: 30px 15px;
+  padding: 0px 15px;
+  margin: 15px 0;
 }
 
 .lots-sort .title {
@@ -1977,12 +1995,17 @@ input, select, button, textarea {
 }
 
 .lots-grid {
-  padding: 10px;
+  padding: 10px 15px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 20px 10px;
+}
+
+.lots-grid_timed {
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
 }
 
 .lot-item {
@@ -2018,6 +2041,33 @@ input, select, button, textarea {
   width: 100%;
 }
 
+.lot-item_timed .lot-item__brand {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.lot-item_timed .lot-item__name {
+  font-size: 14px;
+  margin: 5px 0 5px 0;
+}
+
+.lot-item_timed .lot-item__price {
+  color: #828282;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.lot-item_timed .lot-item__bidders {
+  color: #828282;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.lot-item_timed .lot-item__progress {
+  margin-top: 15px;
+}
+
 .lot-item__num {
   position: absolute;
   left: 10px;
@@ -2036,6 +2086,11 @@ input, select, button, textarea {
   font-size: 11px;
   color: #828282;
   margin-top: 8px;
+}
+
+.lot-item__brand b {
+  float: right;
+  color: #000;
 }
 
 .lot-item__name {
@@ -2059,6 +2114,48 @@ input, select, button, textarea {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+}
+
+.timed-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 15px;
+}
+
+.timed-progress__bar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  height: 10px;
+  -webkit-box-shadow: 0 0 0 1px rgba(130, 130, 130, 0.2) inset;
+          box-shadow: 0 0 0 1px rgba(130, 130, 130, 0.2) inset;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.timed-progress__bar div {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.timed-progress__counter {
+  font-size: 12px;
+  color: #828282;
+}
+
+.timed-progress__counter span {
+  font-weight: 700;
+  font-size: 10px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.timed-progress__counter b {
+  font-variant-numeric: tabular-nums;
 }
 
 .live-bar {
@@ -2268,6 +2365,90 @@ input, select, button, textarea {
   max-width: 50%;
   padding-right: 15px;
   color: #828282;
+}
+
+.live-lot__timed-bid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  margin-top: 15px;
+}
+
+.live-lot__timed-bid b {
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.live-lot__timed-bid span {
+  font-family: "GT America Extended", sans-serif;
+  font-size: 28px;
+  font-weight: 100;
+}
+
+.live-lot__timed-timer {
+  border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
+  padding: 30px 15px;
+}
+
+.live-lot__timed-timer strong {
+  display: block;
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.live-lot__timed-result {
+  margin: 30px 15px;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.live-lot__timed-result > b {
+  font-size: 18px;
+  display: block;
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.live-lot__timed-result span {
+  font-size: 12px;
+  display: block;
+  margin: 5px 0;
+  opacity: 0.7;
+}
+
+.live-lot__timed-result strong {
+  margin: 10px 0;
+  display: block;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.live-lot__timed-result_win {
+  border: 5px #579352 solid;
+}
+
+.live-lot__timed-result_win strong {
+  color: #579352;
+}
+
+.live-lot__timed-result_lose {
+  border: 5px #e91e63 solid;
+}
+
+.live-lot__timed-result_lose strong {
+  color: #e91e63;
 }
 
 .live-lot__value {
@@ -2925,5 +3106,804 @@ input, select, button, textarea {
 .ineichen-footer-logo img {
   max-width: 100%;
   vertical-align: middle;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 22px;
+  }
+  .header-title {
+    font-size: 30px;
+    min-height: 80px;
+    padding: 0 60px;
+  }
+  .header-title a {
+    width: 80px;
+    line-height: 80px;
+    margin-left: -60px;
+  }
+  .header-title a i.mdi {
+    font-size: 40px;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .small-title {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 15px 0 0px;
+  }
+  .article {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  .article h2 {
+    font-family: "GT America Extended", sans-serif;
+    font-size: 28px;
+    margin: 30px 0 20px;
+  }
+  .article h3 {
+    font-family: "GT America Extended", sans-serif;
+    font-size: 26px;
+    margin: 30px 0 20px;
+  }
+  .article p {
+    margin: 15px 0;
+  }
+  .article table {
+    font-size: 18px;
+  }
+  .article table td {
+    padding: 10px;
+  }
+  .container {
+    padding: 30px 60px;
+  }
+  .btns-group {
+    gap: 20px 0;
+  }
+  .btns-group:last-child {
+    margin-bottom: 30px;
+  }
+  .account {
+    padding: 60px;
+  }
+  .account__photo {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 72px;
+    margin-bottom: 30px;
+  }
+  .account__name {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .account__mail {
+    font-size: 22px;
+    margin-bottom: 60px;
+  }
+  .account__verify small {
+    border-radius: 30px;
+    padding: 15px;
+    display: block;
+    margin-top: 30px;
+  }
+  .account__verify small br {
+    display: none;
+  }
+  .logout {
+    padding: 30px 60px;
+  }
+  .footer_btn {
+    padding: 30px 60px;
+  }
+  .search-result {
+    font-size: 22px;
+    margin: 30px 60px 15px 60px;
+  }
+  .auctions-list {
+    padding: 30px 60px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .auctions-list .auction-item__info {
+    padding: 20px;
+  }
+  .no-permium-banner {
+    grid-column: 2 span;
+  }
+  .auction-item {
+    aspect-ratio: 2 / 3;
+  }
+  .auction-item_timed {
+    aspect-ratio: 0;
+  }
+  .auction-item_timed .auction-item__info {
+    padding-bottom: 30px;
+  }
+  .auction-item_timed .auction-item__name {
+    font-size: 48px;
+    margin: 40px 0 10px;
+  }
+  .auction-item__info {
+    padding: 60px 60px;
+  }
+  .auction-item__name {
+    font-size: 32px;
+  }
+  .auction-item__date {
+    margin: 30px 0;
+  }
+  .auction-item__status {
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 15px;
+  }
+  .auction-item__btns {
+    display: -ms-grid;
+    display: grid;
+    gap: 20px 0;
+  }
+  .auction-item-descripion {
+    padding: 60px 60px 0px;
+    margin-bottom: 30px;
+  }
+  .lots-sort {
+    padding: 0px 60px 0px;
+    margin: 30px 0;
+  }
+  .lots-grid {
+    padding: 0px 60px 30px;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    gap: 30px 15px;
+  }
+  .lots-grid_timed {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .lot-item_timed .lot-item__brand {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .lot-item_timed .lot-item__name {
+    font-size: 20px;
+    margin: 10px 0 5px 0;
+  }
+  .lot-item_timed .lot-item__price {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .lot-item_timed .lot-item__bidders {
+    color: #828282;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  .lot-item_timed .lot-item__progress {
+    margin-top: 15px;
+  }
+  .lot-item_timed .timed-progress__counter {
+    font-size: 1;
+  }
+  .lot-item__image {
+    border-radius: 15px;
+    width: 100%;
+  }
+  .lot-item__num {
+    left: 15px;
+    top: 15px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+  }
+  .lot-item__brand {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .lot-item__name {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .lot-item__price {
+    font-size: 15px;
+  }
+  .lot-item__hammer-price {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .lot-item > .btn {
+    margin-top: 15px;
+  }
+  .timed-progress__bar {
+    height: 13px;
+  }
+  .timed-progress__counter {
+    font-size: 16px;
+    color: #828282;
+  }
+  .timed-progress__counter span {
+    font-size: 13px;
+  }
+  .live-lot {
+    padding: 60px;
+  }
+  .live-lot .container {
+    padding: 0px;
+  }
+  .live-lot__num {
+    left: 90px;
+    top: 90px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .live-lot__swipe-note {
+    border-radius: 30px;
+    bottom: 60px;
+    font-size: 20px;
+    padding: 15px 15px;
+  }
+  .live-lot__swipe-note i {
+    margin: 0 15px;
+    font-size: 28px;
+  }
+  .live-lot__info {
+    padding: 0px;
+  }
+  .live-lot__brand {
+    margin-bottom: 14px;
+    font-size: 26px;
+  }
+  .live-lot__name {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .live-lot__bids {
+    margin: 30px 0;
+  }
+  .live-lot__bids-item {
+    font-size: 20px;
+    padding: 20px 30px;
+  }
+  .live-lot__bids-item i {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  .live-lot__timed-bid {
+    padding: 0px;
+    margin-top: 30px;
+  }
+  .live-lot__timed-bid b {
+    font-size: 22px;
+  }
+  .live-lot__timed-bid span {
+    font-size: 38px;
+  }
+  .live-lot__timed-timer {
+    padding: 30px 0px;
+  }
+  .live-lot__timed-timer strong {
+    font-size: 22px;
+  }
+  .live-lot__timed-result {
+    margin: 30px 0px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+  .live-lot__timed-result > b {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+  .live-lot__timed-result span {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  .live-lot__timed-result strong {
+    margin: 20px 0;
+    font-size: 38px;
+  }
+  .live-lot__timed-result_win {
+    border: 5px #579352 solid;
+  }
+  .live-lot__timed-result_win strong {
+    color: #579352;
+  }
+  .live-lot__timed-result_lose {
+    border: 5px #e91e63 solid;
+  }
+  .live-lot__timed-result_lose strong {
+    color: #e91e63;
+  }
+  .live-lot__value {
+    padding: 30px 0px;
+    gap: 30px 0;
+  }
+  .live-lot__value span {
+    font-size: 22px;
+  }
+  .live-lot__value a {
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 20px;
+  }
+  .live-lot__bid-step {
+    gap: 0 30px;
+  }
+  .live-lot__bid-step span {
+    font-size: 18px;
+  }
+  .live-lot__bid-btns {
+    padding: 30px 0;
+  }
+  .live-lot__specifications {
+    padding: 0px;
+  }
+  .live-lot__specifications .title {
+    font-size: 28px;
+    margin: 30px 0;
+  }
+  .live-lots {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 30px 60px;
+  }
+  .live-lots-item {
+    border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
+    padding: 30px 15px;
+  }
+  .live-lots-item_alone {
+    padding: 30px 0 40px;
+    margin: 0 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .live-lots-item_alone .live-lots-item__name {
+    font-size: 30px;
+  }
+  .live-lots-item_alone .live-lots-item__price {
+    margin: 30px 0;
+  }
+  .live-lots-item_alone .live-lots-item__price span {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .live-lots-item_alone .live-lots-item__price strong {
+    font-size: 26px;
+  }
+  .live-lots-item_alone .live-lots-item__bids {
+    margin-top: 13px;
+  }
+  .live-lots-item_alone .live-lots-item__bids .mdi {
+    font-size: 24px;
+  }
+  .live-lots-item__image {
+    width: 140px;
+  }
+  .live-lots-item__image img {
+    border-radius: 15px;
+  }
+  .live-lots-item__image span {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    bottom: -17px;
+    margin-left: -17px;
+  }
+  .live-lots-item__status {
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 30px;
+  }
+  .live-lots-item__name {
+    margin-bottom: 15px;
+  }
+  .live-lots-item__price span {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .live-lots-item__price strong {
+    font-size: 15px;
+  }
+  .live-lots-item__bids {
+    margin-top: 13px;
+  }
+  .live-lots-item__bids .mdi {
+    font-size: 16px;
+  }
+  .live-bar {
+    padding: 20px 60px;
+    font-size: 22px;
+    gap: 0 30px;
+  }
+  .live-bar__close {
+    font-size: 28px;
+  }
+  .live-bar__status_going:before {
+    margin-right: 15px;
+    width: 20px;
+    height: 200px;
+  }
+  .live-bar__status_whait:before {
+    content: "";
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px #fff solid;
+  }
+  .live-bar__status_pause:before {
+    margin-right: 10px;
+    font-size: 32px;
+  }
+  .live-bar__users {
+    margin-right: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .live-bar__users i.mdi {
+    font-size: 18px;
+    margin-right: 3px;
+  }
+  .live-bid-btns {
+    padding: 30px 60px;
+  }
+  .live-bids {
+    padding: 15px 60px;
+  }
+  .live-bids__table {
+    border-spacing: 20px 30px;
+  }
+  .live-bids__note {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 15px 0;
+  }
+  .live-bids td {
+    font-size: 18px;
+  }
+  .splash__slide {
+    padding: 60px;
+  }
+  .splash__title {
+    font-size: 60px;
+    margin-top: 30vw;
+  }
+  .splash__text {
+    margin-top: 30px;
+    font-size: 24px;
+  }
+  .splash__nav {
+    padding: 60px;
+  }
+  .sign {
+    padding: 10vw 20vw 60px;
+  }
+  .sign__btns {
+    gap: 30px 0;
+  }
+  .sign__btns span {
+    font-size: 24px;
+  }
+  .sign__title {
+    font-size: 50px;
+    margin-bottom: 60px;
+  }
+  .sign__note {
+    font-size: 20px;
+  }
+  .sign__user {
+    font-size: 20px;
+  }
+  .search-bar {
+    padding: 30px 60px;
+  }
+  .search-bar__search .mdi {
+    line-height: 60px;
+    font-size: 36px;
+    padding: 0 15px;
+  }
+  .search-bar__search input {
+    padding-left: 70px;
+    border-radius: 10px;
+    height: 60px;
+    font-size: 22px;
+  }
+  .search-bar__back {
+    line-height: 60px;
+    margin-left: -25px;
+    padding: 0 10px;
+    font-size: 36px;
+  }
+  .page-cap {
+    min-height: 400px;
+  }
+  .page-cap .mdi {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 64px;
+    margin-bottom: 30px;
+  }
+  .page-cap span {
+    font-size: 28px;
+  }
+  .tabs {
+    margin: 0 60px;
+    border-bottom: 2px rgba(130, 130, 130, 0.2) solid;
+  }
+  .tabs__item {
+    height: 70px;
+  }
+  .tabs__line {
+    bottom: -2px;
+    width: 50%;
+    height: 3px;
+  }
+  .navbar {
+    padding: 0 100px;
+  }
+  .navbar__link {
+    padding: 25px 0;
+  }
+  .navbar__link .mdi {
+    font-size: 32px;
+  }
+  .navbar__link span {
+    margin-top: 9px;
+    font-size: 15px;
+    display: block;
+  }
+  .navbar .dot {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+  }
+  .btn {
+    min-height: 70px;
+    min-width: 70px;
+    font-size: 22px;
+  }
+  .btn .mdi {
+    font-size: 32px;
+  }
+  .btn_select select {
+    font-size: 22px;
+    padding: 0 15px;
+  }
+  .btn_select .mdi {
+    font-size: 32px;
+  }
+  .btn-close {
+    min-height: 70px;
+    min-width: 70px;
+    font-size: 32px;
+    line-height: 70px;
+  }
+  .btn-close_sign {
+    margin-top: 60px;
+    margin-left: 60px;
+  }
+  .select select {
+    padding: 0 40px 0 25px;
+    font-size: 22px;
+    height: 70px;
+  }
+  .select .mdi {
+    font-size: 32px;
+    right: 15px;
+    line-height: 70px;
+  }
+  .c-filed {
+    margin-bottom: 30px;
+  }
+  .c-filed__input {
+    height: 70px;
+    font-size: 22px;
+  }
+  .c-filed__textarea {
+    font-weight: 500;
+    height: 100px;
+    font-size: 22px;
+  }
+  .c-filed__select {
+    height: 70px;
+    font-size: 22px;
+  }
+  .c-filed i.mdi {
+    font-size: 38px;
+    right: 0px;
+    line-height: 80px;
+  }
+  .links-list__item {
+    min-height: 80px;
+    padding: 0 60px;
+    font-size: 22px;
+  }
+  .links-list__item_wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .links-list__item_wrap .btn {
+    margin-top: 30px;
+  }
+  .links-list__item_wrap .c-chekbox {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .links-list__item_invoice {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .links-list__item_invoice strong {
+    line-height: 1.3;
+  }
+  .links-list__item_invoice b {
+    margin-left: auto;
+  }
+  .links-list .links-list__icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 28px;
+  }
+  .links-list strong {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  .links-list span {
+    font-size: 22px;
+  }
+  .links-list .mdi-chevron-right {
+    margin-left: 20px;
+    width: 20px;
+    font-size: 32px;
+  }
+  .c-toggle {
+    margin-bottom: 30px;
+    gap: 0 30px;
+  }
+  .c-toggle_text-top {
+    row-gap: 15px;
+  }
+  .c-toggle__text {
+    line-height: 1.3;
+    font-size: 24px;
+    padding-right: 10px;
+  }
+  .c-toggle label {
+    font-size: 20px;
+    border-radius: 30px;
+    padding: 20px 15px;
+  }
+  .action-sheet_ios .action-sheet__content {
+    margin-bottom: 25px;
+    height: calc(100vh - 150px);
+  }
+  .action-sheet__body {
+    border-radius: 30px 30px 0 0;
+  }
+  .action-sheet__line {
+    height: 80px;
+  }
+  .action-sheet__line:after {
+    width: 100px;
+    height: 10px;
+    top: 30px;
+    margin: 0 0 0 -50px;
+    border-radius: 5px;
+  }
+  .action-sheet__content {
+    height: calc(100vh - 150px);
+  }
+  .action-sheet__title {
+    margin: 40px 60px 15px;
+    font-size: 20px;
+  }
+  .action-sheet__title:first-child {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .drop-zone {
+    margin-bottom: 45px;
+  }
+  .drop-zone__label {
+    grid-row-gap: 30px;
+    font-size: 20px;
+    padding: 8vh 15px;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .drop-zone i.mdi {
+    color: #1C2473;
+    font-size: 40px;
+  }
+  .upload-files {
+    margin-bottom: 45px;
+    grid-row-gap: 30px;
+  }
+  .upload-files__item {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 80px 1fr 50px;
+        grid-template-columns: 80px 1fr 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .upload-files__image {
+    width: 80px;
+    height: 80px;
+  }
+  .upload-files__info {
+    padding: 0 50px 0 30px;
+    font-size: 24px;
+    gap: 15px 0px;
+  }
+  .upload-files__progress {
+    height: 6px;
+  }
+  .upload-files__weight {
+    font-size: 20px;
+  }
+  .upload-files__remove {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 28px;
+  }
+  .c-alert {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  .modal {
+    width: 70%;
+  }
+  .modal__header {
+    padding: 30px;
+    font-size: 22px;
+  }
+  .modal__content {
+    padding: 30px;
+  }
+  .modal__footer {
+    padding: 30px;
+  }
+  #noty_layout__topCenter {
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    width: auto;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .noty_theme__sunset.noty_bar {
+    margin: 0 0 20px 0;
+  }
+  .noty_theme__sunset.noty_bar .mdi {
+    margin-right: 10px;
+  }
+  .noty_theme__sunset.noty_bar .noty_body {
+    font-size: 22px;
+    padding: 15px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
