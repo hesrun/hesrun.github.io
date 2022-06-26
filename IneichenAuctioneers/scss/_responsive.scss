@@ -113,6 +113,10 @@
         }
     }
 
+    .download-apps {
+        margin-top: 50px;
+    }
+
     .services-list {
         grid-template-columns: 1fr 1fr;
         gap: 30px 30px;
@@ -438,6 +442,16 @@
         }
     }
 
+    .download-apps {
+        text-align: center;
+        border-radius: 15px;
+        flex-direction: column-reverse;
+        &__links {
+            margin-top: 30px;
+        }
+    }
+
+
     .services-list {
         grid-template-columns: 1fr;
         gap: 30px 0px;
@@ -577,7 +591,20 @@
             padding: 20px;
         }
         &__gallery-col {
+            padding-top: 72px;
             position: relative;
+            .slick-slide {
+                height: 100vw;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        &__video {
+            padding: 0px;
+            iframe {
+                position: static;
+            }
         }
         &__gallery-swipe {
             left: 50%;
@@ -1063,10 +1090,16 @@
 
 @media screen and (max-width: 520px) {
     .no-premium-bar {
+        .c-button {
+            order: -1;
+            margin: 0 10px 0 0;
+            padding: 0 10px;
+        }
         p {
             font-size: 13px;
             text-align: left;
             line-height: 15px;
+            padding-right: 50px;
         }
     }
     .mob-hidden {
@@ -1230,6 +1263,21 @@
         .c-button {
             margin-top: 20px;
             width: 100%;
+        }
+    }
+
+    .download-apps {
+        margin-top: 15px;
+        &__links {
+            img {
+                height: 50px;
+            }
+        }
+        h3 {
+            font-size: 22px;
+        }
+        p {
+            font-size: 15px;
         }
     }
 
@@ -1507,21 +1555,6 @@
         &__gallery-swipe {
             bottom: 30px;
         }
-        &__video {
-            padding: 0px;
-            iframe {
-                position: static;
-            }
-        }
-        &__gallery-col {
-            padding-top: 72px;
-            .slick-slide {
-                height: 100vw;
-                img {
-                    height: 100%;
-                }
-            }
-        }
         &__nav-link {
             width: 32px;
             height: 32px;
@@ -1566,8 +1599,8 @@
             }
         }
         &__bids {
+            grid-template-columns: 1fr;
             border-color: rgba($grey-line, .5);
-            grid-template-columns: 100px 1fr;
             padding: 20px 20px;
             margin: 0 -20px 0px;
             gap: 15px 0;
@@ -1631,25 +1664,44 @@
         }
         &__current-bid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             margin-top: 15px;
             margin-left: 0px;
         }
         &__user {
-            grid-column: 2 / 2;
+            margin-top: 15px;
             align-self: center;
+            > span {
+                font-weight: 500;
+                margin-bottom: 5px;
+                font-family: "GT America Extended";
+                font-size: 14px;
+            }
         }
         &__bids {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            justify-content: space-between;
             gap: 10px 0;
             font-size: 12px;
         }
         &__bid-summ {
-            grid-column: 1 / 1;
             font-size: 22px;
             line-height: normal;
             margin: 10px 0;
+        }
+    }
+
+    .bids-history-table {
+        th {
+            padding-bottom: 20px;
+            font-size: 13px;
+        }
+        td {
+            font-size: 13px;
+            padding: 5px 15px 5px 0;
+        }
+        .flag-icon {
+            margin-right: 5px;
         }
     }
     /* ---------------------------------- live ---------------------------------- */
@@ -2106,9 +2158,17 @@
         }
         &__bottom-line {
             margin-top: 40px;
+            flex-wrap: wrap;
         }
         &__logo {
             height: 40px;
+        }
+        &__apps {
+            justify-content: space-between;
+            margin-left: 0;
+            margin-bottom: 30px;
+            width: 100%;
+            order: -1;
         }
     }
 
@@ -2704,7 +2764,57 @@
         font-size: 15px;
     }
 
-}   
+}
+
+@media screen and (max-width: 320px) {
+    .ineichen-invest-title {
+        font-size: 28px;
+    }
+    .ineichen-invest-start-sell-counter {
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 16px;
+        span {
+            font-size: 24px;
+        }
+    }
+    .ineichen-stoks-calculate {
+        strong {
+            font-size: 12px;
+        }
+        b {
+            font-size: 26px;
+        }
+    }
+    .ineichen-stoks-bids {
+        th {
+            font-size: 12px;
+        }
+        td {
+            font-size: 12px;
+        }
+    }
+    .ineichen-stoks-how-work {
+        b,span {
+            font-size: 14px;
+        }
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /*                                     ui                                     */
+    /* -------------------------------------------------------------------------- */
+    .c-button {
+        $root: &;
+        &_america {
+            font-family: $america;
+            text-transform: uppercase;
+            font-size: 12px;
+            &#{$root}_medium {
+                font-size: 12px;
+            } 
+        }
+    }
+}
 
 @media screen and (max-height: 800px) {
     .blue-banner {

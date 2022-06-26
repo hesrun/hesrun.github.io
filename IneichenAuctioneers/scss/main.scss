@@ -554,6 +554,32 @@
     }
 }
 
+.download-apps {
+    margin-top: 100px;
+    border: 1px $grey-line solid;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0 50px;
+    &__links {
+        display: flex;
+        gap: 0 15px;
+        img {
+            height: 60px;
+        }
+    }
+    h3 {
+        color: $blue-text;
+        font-size: 30px;
+    }
+    p {
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: 500;
+    }
+}
+
 .services-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1910,20 +1936,13 @@
         padding: 30px 0;
         display: grid;
         align-items: center;
-        grid-template-columns: auto 1fr 1.5fr;
+        grid-template-columns: 1fr 1fr;
         gap: 0 20px;
         margin-bottom: 30px;
         &_guest {
             display: flex;
             align-items: center;
         }
-    }
-    &__bids-info {
-        display: grid;
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 10px 0;
-        
     }
     &__bids-history {
         border: 1px $blue-bg solid;
@@ -1993,25 +2012,37 @@
         flex: 1 1 auto;
     }
     &__bids {
+        margin-top: 20px;
         display: flex;
         justify-content: space-between;
+        > span {
+            display: flex;
+            flex-direction: column;
+            gap: 5px 0;
+        }
     }
     strong {
         font-family: $america;
         font-size: 20px;
     }
     &__progress {
-        margin: 20px 0;
+        margin: 20px 0 0;
     }
     &__current-bid {
         margin-left: 60px;
     }
     &__bid-summ {
         font-family: $america;
+        white-space: nowrap;
         font-size: 32px;
         font-weight: 300;
         line-height: 30px;
-        margin: 20px 0;
+        margin: 20px 0 21px;
+    }
+    &__user {
+        display: flex;
+        flex-direction: column;
+        gap: 5px 0;
     }
 }
 
@@ -2231,9 +2262,6 @@
 /* --------------------------------- landing -------------------------------- */
 .land-section {
     padding: 100px 0;
-    &:first-of-type {
-        border: none;
-    }
     .title:first-child {
         margin-top: 0px;
     }
@@ -2269,6 +2297,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 10%;
+    &_land {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     &__right {
         img {
             width: 100%;
@@ -2801,6 +2833,7 @@
         color: $blue-text;
     }
     &_inside {
+        position: static;
         display: block;
         padding: 0px;
         margin-bottom: 30px;
@@ -2924,7 +2957,7 @@
         align-items: center;
         text-align: center;
         font-size: 13px;
-        padding: 8vh 15px;
+        padding: 11vh 15px;
         cursor: pointer;
         position: relative;
         transition: all 0.3s;
@@ -3194,6 +3227,15 @@
         transition: all 0.3s;
         &:hover {
             background: $blue-bg;
+        }
+    }
+    &__apps {
+        margin-right: auto;
+        margin-left: 50px;
+        display: flex;
+        gap: 0 15px;
+        img {
+            height: 50px;
         }
     }
 }
@@ -4308,7 +4350,7 @@
     }
 }
 .threed-carousel__count {
-    color: #fff;
+    color: $brown-text;
     font-family: $america;
     font-weight: 800;
     font-size: 100px;
@@ -4472,6 +4514,179 @@
         grid-column: 3 / 3;
     }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                   consign                                  */
+/* -------------------------------------------------------------------------- */
+.consign-bg-first {
+    border-bottom: 1px $grey-line solid;
+    position: relative;
+    z-index: 1;
+    &:after,
+    &:before {
+        content: "";
+        width: 100%;
+        position: absolute;
+    }
+    &:after {
+        top: -150px;
+        background: url(../img/consign/consign-bg-1.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        clip-path: polygon(0 300px, 100% 0, 100% 100%, 0% 100%);
+        height: 1500px;
+        z-index: -1;
+    }
+    &:before {
+        height: 500px;
+        top: 0px;
+        background: $blue-bg;
+        z-index: -2;
+    }
+}
+.consign-bg-second {
+    position: relative;
+    z-index: -1;
+    padding-bottom: 0px;
+    &:after{
+        content: "";
+        bottom: -130px;
+        width: 100%;
+        position: absolute;
+        background: url(../img/consign/consign-bg-1.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 690px, 100% 100%, 0% 100%);
+        height: 900px;
+        z-index: -1;
+    }
+}
+.land-consign-banner {
+    margin-top: -100px;
+    padding: 150px 0 150px;
+    text-align: center;
+    background: $blue-bg;
+    color: #fff;
+    &__title {
+        font-size: 80px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    &__subtitle {
+        font-family: $america;
+        font-size: 40px;
+    }
+
+}
+.land-consign-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    &__start {
+        font-family: $america;
+        color: $blue-text;
+        font-size: 35px;
+        span {
+            margin-top: 15px;
+            font-weight: 500;
+            display: block;
+            font-size: 70px;
+        }
+    }
+    &__lots {
+        text-align: right;
+        margin-bottom: 100px;
+    }
+    &__lots-count {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-family: $america;
+        text-align: left;
+        span {
+            font-size: 35px;
+        }
+        b {
+            font-weight: 500;
+            font-size: 350px;
+        }
+    }
+}
+.land-consign-priority {
+    max-width: 1200px;
+    margin: 0 auto;
+    &__props {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 30px;
+        background: white;
+        padding: 30px 60px 60px;
+        h2 {
+            text-align: center;
+            grid-column: 2 span;
+            margin: 0 0 30px;
+        }
+    }
+    &__prop-item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 0 30px;
+        h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 30px;
+    }
+    &__rules {
+        background: rgba(#fff,0.5);
+        padding: 30px;
+        backdrop-filter: blur(5px);
+        font-weight: 600;
+        li {
+            margin: 10px 0 10px 15px;
+            line-height: 1.4;
+        }
+    }
+    &__check {
+        padding: 30px;
+    }
+    &__bubble {
+        position: relative;
+        background: $blue-bg;
+        color: #fff;
+        padding: 30px 50px;
+        border-radius: 20px;
+        &:before {
+            content:"";
+            position: absolute;
+            bottom: 100%;
+            left: 130px;
+            width: 0;
+            height: 0;
+            border-bottom: 45px solid $blue-bg;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        p {
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+    }
+}
+
 
 
 
