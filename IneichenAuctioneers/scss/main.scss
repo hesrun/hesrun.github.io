@@ -1019,6 +1019,9 @@
 }
 .lot-item {
     $root: &;
+    &_consign {
+        position: relative;
+    }
     &_with-text {
         display: flex;
         flex-direction: column;
@@ -4548,12 +4551,12 @@
     position: relative;
     z-index: -1;
     padding-bottom: 0px;
-    &:after{
+    &:after {
         content: "";
         bottom: -130px;
         width: 100%;
         position: absolute;
-        background: url(../img/consign/consign-bg-1.jpg);
+        background: url(../img/consign/consign-bg-2.jpg);
         background-attachment: fixed;
         background-size: cover;
         clip-path: polygon(0 0, 100% 690px, 100% 100%, 0% 100%);
@@ -4684,6 +4687,49 @@
             margin-top: 15px;
             line-height: 1.4;
         }
+    }
+}
+.consign-lot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 30px 30px;
+    top: -9%;
+    left: -30px;
+    right: -30px;
+    background: #fff;
+    height: 110%;
+    z-index: 1;
+    text-align: center;
+    border-radius: 20px;
+    border: 4px $brown-bg dashed;
+    img {
+        margin: auto 0;
+        height: 50%;
+    }
+    h4 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    b {
+        font-size: 15px;
+        text-transform: uppercase;
+        line-height: 1.3;
+    }
+    &:after {
+        content: "";
+        top: 100%;
+        left: 50%;
+        display: block;
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-top: 60px white solid;
+        border-right: 70px transparent solid;
+        border-left: 70px transparent solid;
+        transform: translate(-50%, -3px);
     }
 }
 
