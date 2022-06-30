@@ -277,6 +277,7 @@
 }
 
 .btn {
+  font-family: "Inter", sans-serif;
   height: 50px;
   min-width: 50px;
   display: -webkit-inline-box;
@@ -294,6 +295,7 @@
   font-weight: 600;
   text-decoration: none;
   border-radius: 15px;
+  padding: 0 20px;
 }
 
 .btn_full {
@@ -1292,6 +1294,10 @@ input, select, button, textarea {
   color: #FF8A8A;
 }
 
+.pink-text {
+  color: #e91e63;
+}
+
 .grey-text {
   color: #828282;
 }
@@ -1871,32 +1877,55 @@ input, select, button, textarea {
 }
 
 .no-permium-banner {
-  border: 2px #1C2473 solid;
-  border-radius: 30px;
-  padding: 15px 10px;
-  text-align: center;
-  color: #1C2473;
-  text-transform: uppercase;
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1px;
+  padding: 15px 15px;
+  margin: 10px 10px 0;
+}
+
+.no-permium-banner p {
+  font-weight: 300;
+}
+
+.no-permium-banner p a {
+  color: #fff;
+  font-weight: 400;
+}
+
+.no-permium-banner > a {
+  font-size: 24px;
+  color: #fff;
 }
 
 .auction-item {
   display: block;
   position: relative;
-  aspect-ratio: 1 / 1;
+  padding-top: 100%;
 }
 
-.auction-item_timed {
+.auction-item_inside {
   aspect-ratio: 0;
+  padding: 0;
 }
 
-.auction-item_timed .auction-item__info {
+.auction-item_inside .auction-item__info {
   position: static;
   color: black;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#cccccc));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #cccccc 100%);
 }
 
-.auction-item_timed .auction-item__name {
+.auction-item_inside .auction-item__name {
   margin: 40px 0 10px;
 }
 
@@ -1925,10 +1954,9 @@ input, select, button, textarea {
   -o-object-fit: cover;
      object-fit: cover;
   vertical-align: middle;
-}
-
-.auction-item__image_inside {
-  border-radius: 0px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
 .auction-item__name {
@@ -2344,7 +2372,7 @@ input, select, button, textarea {
 }
 
 .live-lot__specifications {
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 .live-lot__specifications .title {
@@ -2367,7 +2395,7 @@ input, select, button, textarea {
   color: #828282;
 }
 
-.live-lot__timed-bid {
+.live-lot__timed-bid > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2384,13 +2412,16 @@ input, select, button, textarea {
 .live-lot__timed-bid b {
   font-family: "GT America Extended", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.live-lot__timed-bid span {
-  font-family: "GT America Extended", sans-serif;
-  font-size: 28px;
-  font-weight: 100;
+.live-lot__timed-bid-price {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.live-lot__timed-bidder {
+  font-weight: 500;
 }
 
 .live-lot__timed-timer {
@@ -2407,7 +2438,7 @@ input, select, button, textarea {
 }
 
 .live-lot__timed-result {
-  margin: 30px 15px;
+  margin: 30px 15px 0;
   padding: 20px 30px;
   border-radius: 15px;
   text-align: center;
@@ -2449,6 +2480,21 @@ input, select, button, textarea {
 
 .live-lot__timed-result_lose strong {
   color: #e91e63;
+}
+
+.live-lot__timed-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #828282;
+  padding: 0 15px;
+  margin-top: 15px;
 }
 
 .live-lot__value {
@@ -2833,8 +2879,16 @@ input, select, button, textarea {
   text-align: center;
 }
 
+.land-section_left {
+  text-align: left;
+}
+
 .land-section input, .land-section button, .land-section select {
-  font-family: "GT America Extended", sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+.land-section .c-toggle {
+  text-align: left;
 }
 
 .land-section_dark-grey {
@@ -2850,6 +2904,11 @@ input, select, button, textarea {
 .land-section_milk-white {
   background-color: #F1E8DD;
   color: #382323;
+}
+
+.land-section_blue {
+  background-color: #1C2473;
+  color: white;
 }
 
 .land-section__title {
@@ -2870,6 +2929,14 @@ input, select, button, textarea {
   margin: 30px 0;
   line-height: 1.4;
   font-weight: 300;
+}
+
+.land-section__sub-title:last-of-type {
+  margin-bottom: 0;
+}
+
+.land-section .drop-zone, .land-section .upload-files, .land-section .c-toggle {
+  font-family: "Inter", sans-serif;
 }
 
 .stocks-carusel img {
@@ -3108,6 +3175,136 @@ input, select, button, textarea {
   vertical-align: middle;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   consign                                  */
+/* -------------------------------------------------------------------------- */
+.consign-bg-1 {
+  background-image: url(../img/consign/consign-bg-1.jpg);
+  background-size: cover;
+}
+
+.l-consign-start {
+  color: #fff;
+  padding: 0 15px;
+}
+
+.l-consign-start h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.l-consign-start h2 {
+  font-weight: 500;
+  font-size: 44px;
+}
+
+.l-consign-counts {
+  font-size: 26px;
+}
+
+.l-consign-counts b {
+  font-weight: 500;
+  font-size: 200px;
+  display: block;
+}
+
+.l-consign-slot {
+  text-align: center;
+  border: 2px #b6934c dashed;
+  grid-column: 2 span;
+  border-radius: 20px;
+  padding: 30px 30px;
+}
+
+.l-consign-slot b {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.l-consign-slot p {
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.l-consign-slot img {
+  margin: 40px 0;
+  max-width: 50%;
+}
+
+.l-consign-lots {
+  padding: 0px;
+  font-family: "Inter", sans-serif;
+}
+
+.l-consign-priorities__item {
+  margin-top: 40px;
+}
+
+.l-consign-priorities img {
+  margin-bottom: 15px;
+}
+
+.l-consign-priorities h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.l-consign-check-bubble {
+  margin-top: 50px;
+  position: relative;
+  background: #1C2473;
+  padding: 30px 40px;
+  color: #fff;
+  border-radius: 30px;
+}
+
+.l-consign-check-bubble:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -20px;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-bottom: 40px #1C2473 solid;
+  border-left: 20px transparent solid;
+  border-right: 20px transparent solid;
+}
+
+.l-consign-check-bubble h2 {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.l-consign-check-bubble p {
+  line-height: 1.4;
+  font-family: "Inter", sans-serif;
+}
+
+.l-consign-rules {
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  margin-top: 30px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.l-consign-rules ul {
+  padding-left: 30px;
+}
+
+.l-consign-rules li {
+  margin-top: 15px;
+}
+
 @media screen and (min-width: 700px) {
   body {
     font-size: 22px;
@@ -3215,20 +3412,34 @@ input, select, button, textarea {
     padding: 20px;
   }
   .no-permium-banner {
-    grid-column: 2 span;
+    padding: 20px 15px;
+    margin: 30px 60px 0;
+  }
+  .no-permium-banner p {
+    font-size: 20px;
   }
   .auction-item {
-    aspect-ratio: 2 / 3;
+    padding-top: 150%;
   }
-  .auction-item_timed {
+  .auction-item_inside {
+    padding: 0;
     aspect-ratio: 0;
   }
-  .auction-item_timed .auction-item__info {
-    padding-bottom: 30px;
+  .auction-item_inside .auction-item__info {
+    padding: 30px 60px;
   }
-  .auction-item_timed .auction-item__name {
+  .auction-item_inside .auction-item__name {
     font-size: 48px;
     margin: 40px 0 10px;
+  }
+  .auction-item_inside .btn-close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    min-height: 50px;
+    min-width: 50px;
+    font-size: 28px;
+    line-height: 50px;
   }
   .auction-item__info {
     padding: 60px 60px;
@@ -3376,15 +3587,22 @@ input, select, button, textarea {
     font-size: 24px;
     margin-right: 10px;
   }
-  .live-lot__timed-bid {
+  .live-lot__timed-bid > div {
     padding: 0px;
-    margin-top: 30px;
+    margin-top: 25px;
   }
   .live-lot__timed-bid b {
     font-size: 22px;
   }
-  .live-lot__timed-bid span {
-    font-size: 38px;
+  .live-lot__timed-bid-price {
+    font-size: 28px;
+  }
+  .live-lot__timed-bidder {
+    font-weight: 500;
+  }
+  .live-lot__timed-info {
+    padding: 0;
+    margin-top: 30px;
   }
   .live-lot__timed-timer {
     padding: 30px 0px;
