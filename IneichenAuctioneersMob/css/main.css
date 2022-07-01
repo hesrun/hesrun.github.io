@@ -2590,8 +2590,12 @@ input, select, button, textarea {
 }
 
 .bids-history td {
-  font-size: 14px;
+  font-size: 13px;
   padding: 10px;
+}
+
+.bids-history td:nth-child(2) {
+  text-align: center;
 }
 
 .bids-history td:last-child,
@@ -2605,7 +2609,20 @@ input, select, button, textarea {
 }
 
 .bids-history .flag-icon {
-  margin-right: 10px;
+  float: left;
+}
+
+.bids-history strong {
+  line-height: 1.2;
+  font-size: 12px;
+  display: block;
+  margin-left: 25px;
+  max-width: 100px;
+}
+
+.bids-history small {
+  display: block;
+  margin-top: 5px;
 }
 
 .live-stream video {
@@ -3906,6 +3923,9 @@ input, select, button, textarea {
   .btn_select .mdi {
     font-size: 32px;
   }
+  .btn br {
+    display: none;
+  }
   .btn-close {
     min-height: 70px;
     min-width: 70px;
@@ -3999,9 +4019,7 @@ input, select, button, textarea {
     row-gap: 15px;
   }
   .c-toggle__text {
-    line-height: 1.3;
-    font-size: 24px;
-    padding-right: 10px;
+    font-size: 22px;
   }
   .c-toggle label {
     font-size: 20px;
@@ -4070,8 +4088,8 @@ input, select, button, textarea {
     height: 80px;
   }
   .upload-files__info {
-    padding: 0 50px 0 30px;
-    font-size: 24px;
+    padding: 0 30px 0 30px;
+    font-size: 20px;
     gap: 15px 0px;
   }
   .upload-files__progress {
@@ -4122,6 +4140,191 @@ input, select, button, textarea {
   .noty_theme__sunset.noty_bar .noty_body {
     font-size: 22px;
     padding: 15px;
+  }
+  #range::before, #range::after {
+    bottom: 20px;
+    font-size: 20px;
+  }
+  #range::-webkit-slider-thumb {
+    height: 30px;
+    width: 30px;
+    -webkit-transform: translateY(calc(-50% + 2px));
+            transform: translateY(calc(-50% + 2px));
+  }
+  #range-tooltip {
+    position: absolute;
+    top: 2.4rem;
+  }
+  #range-tooltip span {
+    font-size: 20px;
+  }
+  /* -------------------------------------------------------------------------- */
+  /*                                   landings                                  */
+  /* -------------------------------------------------------------------------- */
+  .land-section {
+    padding: 60px;
+  }
+  .land-section__title {
+    font-size: 50px;
+    margin: 45px 0;
+  }
+  .land-section__sub-title {
+    font-size: 30px;
+    margin: 45px 0;
+  }
+  .stocks-carusel img {
+    width: 100%;
+  }
+  .landing-btns {
+    margin: 45px 0;
+  }
+  .ineichen-stock-sell {
+    gap: 50px 0;
+  }
+  .ineichen-stock-sell__live img {
+    max-width: 100%;
+  }
+  .ineichen-stock-sell__live i {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  .ineichen-stock-sell__price {
+    font-size: 28px;
+  }
+  .ineichen-stock-sell__price span {
+    margin-top: 30px;
+    font-size: 50px;
+  }
+  .ineichen-stock-timer {
+    border: 2px #F1E8DD solid;
+    padding: 15px;
+    font-size: 28px;
+  }
+  .ineichen-stock-timer span {
+    font-size: 45px;
+  }
+  .ineichen-stock-finance img {
+    margin-bottom: 30px;
+  }
+  .ineichen-stock-finance strong {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .ineichen-stock-plan {
+    gap: 50px 0;
+  }
+  .ineichen-stock-plan_item {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .ineichen-stock-plan img {
+    margin-bottom: 20px;
+  }
+  .ineichen-stock-plan h4 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .ineichen-stock-plan p {
+    font-size: 22px;
+  }
+  .ineichen-stock-range {
+    margin: 0px 0 70px;
+  }
+  .ineichen-stock-calculate {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 50px 0;
+    padding: 60px;
+  }
+  .ineichen-stock-calculate__offer {
+    grid-column: 2 span;
+  }
+  .ineichen-stock-calculate__note {
+    grid-column: 2 span;
+  }
+  .ineichen-stock-calculate__confirm {
+    grid-column: 2 span;
+  }
+  .ineichen-stock-calculate strong {
+    font-size: 18px;
+  }
+  .ineichen-stock-calculate b {
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  .ineichen-stock-bids__table {
+    margin-bottom: 40px;
+  }
+  .ineichen-stock-bids__table td {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .ineichen-stock-bids__table th {
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+  .ineichen-stock-bids__table tbody tr:first-child td {
+    padding-top: 20px;
+  }
+  .ineichen-stock-how-work tbody {
+    gap: 30px 0;
+  }
+  .ineichen-stock-how-work tr {
+    gap: 8px 0;
+  }
+  /* -------------------------------------------------------------------------- */
+  /*                                   consign                                  */
+  /* -------------------------------------------------------------------------- */
+  .l-consign-start {
+    padding: 0;
+  }
+  .l-consign-start h3 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  .l-consign-start h2 {
+    font-size: 60px;
+  }
+  .l-consign-counts {
+    font-size: 35px;
+  }
+  .l-consign-counts b {
+    font-size: 250px;
+  }
+  .l-consign-slot {
+    grid-column: 3 span;
+    padding: 40px;
+  }
+  .l-consign-slot b {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .l-consign-slot p {
+    font-size: 20px;
+  }
+  .l-consign-slot img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .l-consign-lots {
+    padding: 0px;
+  }
+  .l-consign-priorities__item {
+    margin-top: 50px;
+  }
+  .l-consign-priorities p {
+    font-size: 22px;
+  }
+  .l-consign-priorities img {
+    margin-bottom: 20px;
+  }
+  .l-consign-priorities h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .l-consign-check-bubble {
+    margin-top: 60px;
   }
 }
 /*# sourceMappingURL=main.css.map */
