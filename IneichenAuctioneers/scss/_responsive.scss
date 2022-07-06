@@ -442,11 +442,15 @@
     }
     .consign-lot {
         border: 2px $brown-bg dashed;
+        box-shadow: none;
         h4 {
             font-size: 22px;
         }
         b {
             font-size: 13px;
+        }
+        img {
+            margin: 10% 0;
         }
         &:after {
             content: "";
@@ -1171,6 +1175,9 @@
     /* -------------------------------------------------------------------------- */
     .consign-bg-first {
         background: none;
+        .lots-grid {
+            gap: 30px 5px;
+        }
         .lot-item:first-child {
             order: inherit;
         }
@@ -1496,7 +1503,8 @@
         margin-top: 15px;
         &__links {
             img {
-                height: 50px;
+                height: auto;
+                max-width: 100%;
             }
         }
         h3 {

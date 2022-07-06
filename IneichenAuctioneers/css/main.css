@@ -7747,6 +7747,10 @@ select:-webkit-autofill:focus {
   z-index: -2;
 }
 
+.consign-bg-first .lots-grid {
+  gap: 50px 5px;
+}
+
 .consign-bg-second {
   position: relative;
   z-index: -1;
@@ -7948,9 +7952,11 @@ select:-webkit-autofill:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0 10px 60px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 60px 40px rgba(0, 0, 0, 0.2);
   position: absolute;
   padding: 30px 30px;
-  top: -9%;
+  top: -6%;
   left: -30px;
   right: -30px;
   background: #fff;
@@ -8449,12 +8455,17 @@ select:-webkit-autofill:focus {
   }
   .consign-lot {
     border: 2px #BD9E5E dashed;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .consign-lot h4 {
     font-size: 22px;
   }
   .consign-lot b {
     font-size: 13px;
+  }
+  .consign-lot img {
+    margin: 10% 0;
   }
   .consign-lot:after {
     content: "";
@@ -9146,6 +9157,9 @@ select:-webkit-autofill:focus {
   .consign-bg-first {
     background: none;
   }
+  .consign-bg-first .lots-grid {
+    gap: 30px 5px;
+  }
   .consign-bg-first .lot-item:first-child {
     -webkit-box-ordinal-group: inherit;
         -ms-flex-order: inherit;
@@ -9497,7 +9511,8 @@ select:-webkit-autofill:focus {
     margin-top: 15px;
   }
   .download-apps__links img {
-    height: 50px;
+    height: auto;
+    max-width: 100%;
   }
   .download-apps h3 {
     font-size: 22px;
