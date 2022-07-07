@@ -7748,18 +7748,9 @@ select:-webkit-autofill:focus {
 }
 
 .consign-bg-second {
+  margin-bottom: -130px;
   position: relative;
-  padding-bottom: 0px;
-}
-
-.consign-bg-second:after {
-  content: "";
-  bottom: -130px;
-  top: 0px;
-  width: 100%;
-  position: absolute;
   background: #1C2473;
-  z-index: -1;
 }
 
 .land-consign-banner {
@@ -8362,23 +8353,15 @@ select:-webkit-autofill:focus {
     content: "";
     display: none;
   }
-  .consign-bg-first .lot-item:first-child {
-    -webkit-box-ordinal-group: -1;
-        -ms-flex-order: -2;
-            order: -2;
-  }
-  .consign-bg-first .lot-item_consign {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+  .consign-bg-first .lots-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
   .consign-bg-second {
-    background: url(../img/consign/consign-bg-1.jpg);
-    background-attachment: fixed;
-    background-size: cover;
+    margin-bottom: -130px;
   }
-  .consign-bg-second:after {
-    display: none;
+  .land-consign-banner {
+    padding-bottom: 50px;
   }
   .land-consign-banner__title {
     font-size: 60px;
@@ -8400,20 +8383,6 @@ select:-webkit-autofill:focus {
   }
   .consign-lot img {
     margin: 10% 0;
-  }
-  .consign-lot:after {
-    content: "";
-    top: 100%;
-    left: 50%;
-    display: block;
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    border-top: 40px white solid;
-    border-right: 40px transparent solid;
-    border-left: 40px transparent solid;
-    -webkit-transform: translate(-50%, -3px);
-            transform: translate(-50%, -3px);
   }
 }
 
@@ -9106,8 +9075,17 @@ select:-webkit-autofill:focus {
             order: -1;
   }
   .consign-bg-second {
-    z-index: auto;
-    background: none;
+    margin-bottom: -30px;
+  }
+  .land-consign-info__start {
+    color: #1C2473;
+  }
+  .land-consign-info__start span {
+    text-shadow: none;
+  }
+  .land-consign-info__start h2 {
+    text-shadow: none;
+    font-size: 38px;
   }
   .land-consign-banner {
     padding-bottom: 70px;
@@ -9119,23 +9097,12 @@ select:-webkit-autofill:focus {
   .land-consign-banner__subtitle {
     font-size: 28px;
   }
-  .consign-lot {
-    position: relative;
-    top: auto;
-    left: auto;
-    right: auto;
-    height: auto;
-  }
-  .consign-lot:after {
-    display: none;
-  }
   .land-consign-priority__props {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     gap: 40px 0px;
-    background: white;
-    padding: 0;
     margin-bottom: 30px;
+    border-radius: 20px;
   }
   .land-consign-priority__props h2 {
     -ms-grid-column: 1;
@@ -9169,25 +9136,24 @@ select:-webkit-autofill:focus {
     gap: 0px 0;
   }
   .land-consign-priority__rules {
-    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
     padding: 30px;
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
+    background: #fff;
     font-weight: 600;
+    color: #000;
   }
   .land-consign-priority__rules li {
     margin: 10px 0 10px 15px;
     line-height: 1.4;
   }
   .land-consign-priority__check {
-    padding: 30px;
+    padding: 30px 0;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
   }
   .land-consign-priority__bubble {
     position: relative;
-    background: #1C2473;
     color: #fff;
     padding: 30px 50px;
     border-radius: 20px;
@@ -9199,7 +9165,7 @@ select:-webkit-autofill:focus {
     left: 50%;
     width: 0;
     height: 0;
-    border-bottom: 45px solid #1C2473;
+    border-bottom: 45px solid #BD9E5E;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     -webkit-transform: translate(-50%, 0);
@@ -10924,11 +10890,34 @@ select:-webkit-autofill:focus {
   .land-consign-banner__subtitle {
     font-size: 18px;
   }
+  .land-consign-info {
+    display: block;
+  }
+  .land-consign-info__start {
+    text-align: center;
+  }
+  .land-consign-info__start span {
+    font-size: 16px;
+  }
+  .land-consign-info__start h2 {
+    font-size: 28px;
+  }
+  .land-consign-info__lots {
+    display: none;
+  }
+  .land-consign-priority__props h2 {
+    font-size: 20px;
+  }
+  .land-consign-priority__prop-item h3 {
+    font-size: 16px;
+  }
+  .land-consign-priority__prop-item p {
+    font-size: 14px;
+  }
   .land-consign-priority__rules {
     background: none;
+    color: #fff;
     padding: 0;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
     line-height: 1.3;
   }
   .land-consign-priority__check {
@@ -10948,8 +10937,26 @@ select:-webkit-autofill:focus {
     margin-top: 15px;
     line-height: 1.4;
   }
+  .lot-item-consign {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    grid-column: 2 span;
+  }
+  .lot-item-consign + .lot-item {
+    display: none;
+  }
   .consign-lot {
-    height: 500px;
+    padding: 30px 10px;
+  }
+  .consign-lot h4 {
+    font-size: 16px;
+  }
+  .consign-lot b {
+    font-size: 10px;
+  }
+  .consign-lot img {
+    margin: 30px 0;
   }
 }
 
