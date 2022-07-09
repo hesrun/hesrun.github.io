@@ -14,6 +14,18 @@ a:hover {
   text-decoration: none;
 }
 
+.green-text {
+  color: #59923F !important;
+}
+
+.red-text {
+  color: #e91e63 !important;
+}
+
+.blue-text {
+  color: #3F5692 !important;
+}
+
 .remodal-wrapper {
   overflow-x: hidden;
   padding: 0px;
@@ -178,6 +190,7 @@ h1, h2, h3, h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 .header-tools .favorite span {
@@ -351,9 +364,11 @@ h1, h2, h3, h4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.artle-office .partners img {
+  max-width: 100px;
+  margin-right: 50px;
 }
 
 .join-our-club {
@@ -582,9 +597,10 @@ h1, h2, h3, h4 {
 }
 
 .catalog-grid-item .price .status {
+  text-transform: uppercase;
   font-weight: 500;
   margin-left: auto;
-  font-size: 16px;
+  font-size: 14px;
   display: inline-block;
 }
 
@@ -593,7 +609,7 @@ h1, h2, h3, h4 {
 }
 
 .catalog-grid-item .price .status.sold {
-  color: #AC4747;
+  color: #e91e63;
 }
 
 .catalog-grid-item .price .status.reserved {
@@ -1958,6 +1974,7 @@ h1, h2, h3, h4 {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   margin-bottom: 30px;
+  display: none;
 }
 
 .artle-item-wrap .addToFavorite:hover {
@@ -3422,6 +3439,9 @@ fieldset legend {
     font-size: 40px;
   }
   /***************about-artle**************/
+  .about-artle .text {
+    padding: 0px;
+  }
   /***************our club**************/
   .our-club-section {
     padding-top: 60px;
@@ -3623,6 +3643,32 @@ fieldset legend {
   }
   .contacts-info h2 {
     margin-bottom: 15px;
+  }
+  /***************about-artle**************/
+  .about-artle .row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-bottom: 50px;
+  }
+  .about-artle .row.revers .image {
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
+  }
+  .about-artle .text {
+    margin-bottom: 30px;
+  }
+  .about-artle .text img {
+    margin-bottom: 30px;
+  }
+  .about-artle .col {
+    margin-bottom: 50px;
+  }
+  .about-artle .col.revers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   /***************footer**************/
 }
