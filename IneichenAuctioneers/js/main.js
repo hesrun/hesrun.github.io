@@ -81,6 +81,12 @@ $(document).ready(function() {
         })       
     });
 
+    $('.faq__title').click(function(){
+        $(this).toggleClass('faq__title_active');
+        $(this).next().slideToggle(500);
+        return false;
+    })
+
     
 
     

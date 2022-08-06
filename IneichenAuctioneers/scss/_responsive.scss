@@ -41,6 +41,11 @@
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    .world-records {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -91,16 +96,6 @@
     }
     .banners-grid-item {
         height: 300px;
-        &:nth-child(2) {
-            img {
-                border-radius: 0;
-            }
-        }
-        &:nth-child(3) {
-            img {
-                border-radius: 0;
-            }
-        }
         &_2x {
             grid-column: auto;
             height: 300px;
@@ -127,25 +122,19 @@
     .auctions-list {
         gap: 50px 30px;
     }
-    .world-records {
-        &__list {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 60px 10%;
-        }
-    }
     .press-logo-grid {
         display: grid;
         grid-template-columns: repeat(2, auto);
         &__item {
             border-right: 1px $grey-line solid;
             border-bottom: 1px $grey-line solid;
-            &:nth-child(n + 6) {
+            &:nth-child(n + 7) {
                 border-bottom: 1px $grey-line solid;
             }
-            &:nth-child(5n) {
+            &:nth-child(6n) {
                 border-right: 1px $grey-line solid;
             }
-            &:nth-child(n + 9) {
+            &:nth-child(n + 11) {
                 border-bottom: none;
             }
             &:nth-child(2n) {
@@ -421,9 +410,6 @@
         b {
             font-size: 13px;
         }
-        img {
-            margin: 10% 0;
-        }
     }
 
 }
@@ -533,14 +519,8 @@
     }
 
     .world-records {
-        padding: 30px 0;
-        &__list {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px 10%;
-        }
-        &__item:last-child {
-            grid-column: 1 / 2 span;
-        }
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .our-team {
@@ -2987,9 +2967,15 @@
     .lot-item-consign {
     }
     .consign-lot {
+        display: flex;
         border-radius: 8px;
-        padding: 10px 10px;
         border: 1px $brown-bg solid;
+        &__info {
+            padding: 15px;
+        }
+        img {
+            margin: auto;
+        }
         h4 {
             font-size: 14px;
             margin-bottom: 10px;
@@ -3006,10 +2992,6 @@
             width: 100%;
             font-size: 12px;
             height: 40px;
-        }
-        img {
-            width: 50%;
-            margin: auto 0;
         }
     }
 
