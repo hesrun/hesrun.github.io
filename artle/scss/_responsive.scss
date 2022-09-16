@@ -401,18 +401,12 @@
         }
     }
     /***************footer**************/
-    .main-footer {
-        .logo {
-            text-align: center;
-            img {
-                width: 150px;
-            }
-        }
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px 15px;
     }
-    .main-footer-container {
-        grid-template-columns: 1fr;
-        gap: 50px 0;
-    }
+
 
 }
 @media only screen and (max-width: 820px) {
@@ -509,6 +503,17 @@
 
 
     /***************footer**************/
+    .footer-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-footer-info {
+        line-height: 1.4;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px 0px;
+    }
 }
 @media only screen and (max-width: 420px) {
     body {
@@ -534,7 +539,8 @@
 
     .main-slider {
         margin-top: -60px;
-        .swiper-button-next {
+        .swiper-button-next,
+        .swiper-button-prev {
             display: none;
         }
         .swiper-slide {
@@ -1031,34 +1037,10 @@
 /***************about-artle**************/
 
 /*********************footer*****************/
-    .main-footer {
-        .logo {
-            margin-bottom: 30px;
-        }
-    }
     .footer-links {
-        gap: 0 15px;
-    }
-    .footer-info {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px 30px;
-        > div:last-child {
-            text-align: center;
-            grid-column: 2 span;
-        }
-        .social {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-    .footer-copy {
-        margin-top: 30px;
-        text-align: center;
-        flex-direction: column;
-        line-height: 1.5;
-        span:last-child {
-            margin: 10px 0 0 0;
-        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px 15px;
     }
 /***************consign modals**************/
     .consign-result-modal {
