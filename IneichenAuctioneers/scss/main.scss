@@ -1115,9 +1115,14 @@
     gap: 20px 5px;
 }
 .lot-item {
+    $root: &;
     display: flex;
     flex-direction: column;
-    $root: &;
+    &_load {
+        .lot-item__image {
+            filter: blur(10px);
+        }
+    }
     &_with-text {
         display: flex;
         flex-direction: column;
@@ -1127,59 +1132,50 @@
         line-height: 1.5;
         padding: 0 10px 20px;
     }
-    &__image {
-        display: block;
-        height: 100%;
+
+    &__body {
+        position: relative;
         overflow: hidden;
         border-radius: 15px;
-        transform: translateZ(0);
+        transition: all 0.5s;
+    }
+    &__image {
+        display: block;
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
         padding-top: 150%;
+        transition: filter 1s;
         > img {
             position: absolute;
             left: 0px;
             top: 0px;
-        }
-        img {
             width: 100%;
             height: 100%;
-            max-width: 100%;
-            max-height: 100%;
             object-fit: cover;
-            transition: all 0.8s;
-        }
-        &_small {
-            img {
-                width: 100%;
-                height: auto;
-                max-width: 100%;
-                border-radius: 15px;
-                transform: none;
-            }
-        }
-        object {
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .progressive {
-            width: 100%;
-            border-radius: 15px;
+            object-position: center;
+            transition: all 0.3s;
         }
     }
 
-    &__body {
-        flex: 1 1 auto;
-        position: relative;
+    &__slider {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
         border-radius: 15px;
-        max-height: 100%;
-        transition: all 0.5s;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: all 0.3s;
+            transform: none !important;
+        }
     }
+
     &__price {
         display: grid;
         margin: 10px 10px 0 10px;
@@ -1225,6 +1221,7 @@
         padding: 30px;
         text-align: center;
         opacity: 0;
+        z-index: 1;
         transition: all 0.5s;
     }
     &__count {
@@ -1240,6 +1237,7 @@
         line-height: 35px;
         border-radius: 50%;
         font-size: 13px;
+        z-index: 1;
         transition: all 0.2s;
     }
     &__name {
@@ -1302,6 +1300,7 @@
         cursor: pointer;
         white-space: nowrap;
         opacity: 0;
+        z-index: 1;
         transition: all 0.3s;
         i.mdi-heart {
             position: absolute;
@@ -1368,7 +1367,6 @@
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(0deg);
-                //filter: blur(3px)
             }
         }
     }
@@ -1376,7 +1374,6 @@
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(5deg);
-                //filter: blur(3px)
             }
         }
     }
@@ -1384,7 +1381,6 @@
         #{$root}__image {
             img {
                 transform: scale(1.2) rotate(-5deg);
-                //filter: blur(3px)
             }
         }
     }
@@ -1392,7 +1388,6 @@
         #{$root}__image {
             img {
                 transform: scale(1.4) rotate(0deg);
-                //filter: blur(3px)
             }
         }
     }

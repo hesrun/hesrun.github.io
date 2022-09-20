@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="live-auction">
+        <div class="live-auction__video-col">
+            <div class="live-auction__col-holder">
+                <div class="live-auction__col-head">
+                    <a href="" class="live-auction__back c-button c-button_blue c-button_filled c-button_small">
+                        <i class="mdi mdi-arrow-left"></i>&nbsp;Back 
+                    </a>
+                    <div class="title title_small title_flex">
+                        Timepieces Auction No. 174
+                    </div>
+                </div>
+                <div class="live-auction__col-body sticky">
+                    <div class="live-auction__start-timer">
+                        <strong class="title">Auction will start in</strong>
+                        <div class="start-count">
+                            <div class="start-count__item">
+                                <b class="brown-text">00</b>
+                                <span class="grey-text">DAYS</span>
+                            </div>
+                            <div class="start-count__item">
+                                <b class="brown-text">12</b>
+                                <span class="grey-text">HOURS</span>
+                            </div>
+                            <div class="start-count__item">
+                                <b class="brown-text">12</b>
+                                <span class="grey-text">MIN</span>
+                            </div>
+                            <div class="start-count__item">
+                                <b class="brown-text">12</b>
+                                <span class="grey-text">SEC</span>
+                            </div>
+                            <div class="start-count__item">
+                                <b class="green-text">4’434</b>
+                                <span class="grey-text">BIDDERS ONLINE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="live-auction__stream-footer live-auction__stream-footer_no-bids">
+                        <div class="live-auction__stream_buttons live-auction__stream_buttons_cols">
+                            <a href="" class="c-button c-button_medium c-button_grey c-button_outline c-button_full">Live support</a>
+                            <div class="c-dropdown">
+                                <a href="" class="c-dropdown__button c-button c-button_medium c-button_grey c-button_outline c-button_full">
+                                    <span class="flag-icon flag-icon-ch"></span>&nbsp;&nbsp;
+                                    CHF (Switzerland)
+                                    &nbsp;&nbsp;<i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="c-dropdown__list c-dropdown__list_position-top">
+                                    <div class="c-dropdown__scroll">
+                                        <a href="" class="c-dropdown__link">
+                                            <span class="flag-icon flag-icon-ch"></span>&nbsp;&nbsp;
+                                            CHF (Switzerland)
+                                        </a>
+                                        <a href="" class="c-dropdown__link">
+                                            <span class="flag-icon flag-icon-ru"></span>&nbsp;&nbsp;
+                                            RU (Russia)
+                                        </a>
+                                        <a href="" class="c-dropdown__link">
+                                            <span class="flag-icon flag-icon-ua"></span>&nbsp;&nbsp;
+                                            UA (Ukraine)
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="live-auction__current-lot-col">
+            <div class="live-auction__col-holder">
+                <div class="live-auction__col-head">
+                    <div class="title title_small">
+                        Current lot
+                    </div>
+                    <a class="live-auction__head-close" href="#">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+                <div class="live-auction__col-body sticky">
+                    <div class="lot-item live-auction__lot">
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Poitevin Enamel Verge Pocket Watch Poitevin</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="live-auction__bids">
+                        <div class="live-auction__bids-item">
+                            <div>
+                                <i class="mdi mdi-hand-back-right-outline"></i>
+                                <span>Bids</span>
+                            </div>
+                            <div>14</div>
+                        </div>
+                        <div class="live-auction__bids-item">
+                            <div>
+                                <i class="mdi mdi-credit-card-outline"></i>
+                                <span>Current bid</span>
+                            </div>
+                            <div>9,500 CHF</div>
+                        </div>
+                        <div class="live-auction__bids-item" style="display: none">
+                            <div>
+                                <span class="flag-icon flag-icon-cn"></span>
+                                <span>Current bid
+                                    <br>(Ineichen online)</span>
+                            </div>
+                            <div>9,500 CHF</div>
+                        </div>
+                    </div>
+                    <div class="live-auction__whait-start" style="display: none">
+                        Auction will start in <b class="brown-text">00:32:32</b> <br>
+                        Active bidders: <b class="red-text">453</b>
+                    </div>
+                    <div class="live-auction__lot-btns">
+                        <div class="live-auction__max-bid" style="display: none">
+                            <span>Your <br> maximum <br> bid</span>
+                            <div class="c-dropdown c-dropdown_full">
+                                <a href="" class="c-dropdown__button c-button c-button_grey c-button_outline c-button_full c-button_icon-right">
+                                    CHF 2'000.-
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="c-dropdown__list c-dropdown__list_position-top">
+                                    <div class="c-dropdown__scroll">
+                                        <a href="" class="c-dropdown__link">CHF 2'500.-</a>
+                                        <a href="" class="c-dropdown__link">CHF 3'000.-</a>
+                                        <a href="" class="c-dropdown__link">CHF 3'500.-</a>
+                                        <a href="" class="c-dropdown__link">CHF 4'000.-</a>
+                                        <a href="" class="c-dropdown__link">CHF 4'500.-</a>
+                                        <a href="" class="c-dropdown__link">CHF 5'000.-</a>
+                                        <a href="" class="c-dropdown__link">CHF 5'500.-</a>
+                                        <a href="" class="c-dropdown__link">CHF 6'000.-</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full">Bid 10,000 CHF</a>
+                        <div class="live-auction__premium-bid">excl. 24% Premium</div>
+                        <a href="" class="c-button c-button_blue c-button_filled c-button_full disabled" style="display: none">Waiting for the auctioneer</a>
+                        <div class="live-auction__pre-bid" style="display: none">
+                            <span>
+                                Your pre-bid:
+                                <strong>10,000 CHF</strong>
+                            </span>
+                            <a href="" class="c-button c-button_blue c-button_filled c-button_full">Change amount</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="live-auction__current-lots-col">
+            <div class="live-auction__col-head">
+                <div class="title title_small">
+                    Lot 14 of 78
+                </div>
+            </div>
+            <div class="live-auction__col-body">
+                <div class="lots-list">
+                    <a href="" class="lot-item-small lot-item-small_disabled">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_brown">MY PRE-BID CHF 5’000</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_grey">WON FOR CHF25000 (exсl. Premium)</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_green">Agree</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_red">LIVE</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_grey">PASSED</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_grey">SOLD FOR CHF 15'000</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_red">LIVE</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_grey">PASSED</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_grey">SOLD FOR CHF 15'000</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_red">LIVE</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_grey">PASSED</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_grey">SOLD FOR CHF 15'000</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                    <a href="" class="lot-item-small">
+                        <div class="lot-item-small__image">
+                            <img src="img/auctions/lot-thumb.jpg" alt="">
+                        </div>
+                        <div class="lot-item-small__info">
+                            <div class="lot-item-small__status lot-item-small__status_red">LIVE</div>
+                            <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                            <div class="lot-item-small__price">CHF  2'000.- /  3'000.-</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-navigation">
+            <div class="bottom-navigation__links ">
+                <a href="#" id="CurrentLot" class="bottom-navigation__link bottom-navigation__link_active">
+                    <i class="mdi mdi-watch"></i>
+                    <span>Current lot</span>
+                </a>
+                <a href="#" id="LiveStream" class="bottom-navigation__link">
+                    <i class="mdi mdi-video-outline red-text"></i>
+                    <span>Live Stream</span>
+                </a>
+                <a href="#" id="OtherLots" class="bottom-navigation__link">
+                    <i class="mdi mdi-watch"></i>
+                    <span>Other Lots</span>
+                </a>
+                <a href="#" class="bottom-navigation__link">
+                    <i class="mdi mdi-headset"></i>
+                    <span>Live support</span>
+                </a>
+                <a href="#" class="bottom-navigation__link">
+                    <i class="mdi mdi-arrow-left-bold"></i>
+                    <span>Back</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            
+        } else {
+            $(".sticky").stick_in_parent({
+                parent: $('.live-auction__video-col, .live-auction__current-lot-col'),
+                offset_top: 80
+            });
+        }
+        $('#CurrentLot').click(function(){
+            $('.bottom-navigation__link').removeClass('bottom-navigation__link_active');
+            $(this).addClass('bottom-navigation__link_active');
+            $('.live-auction__video-col').hide();
+            $('.live-auction__current-lot-col').fadeIn(400);
+            $('.live-auction__current-lots-col').hide();
+            return false
+        })
+        $('#LiveStream').click(function(){
+            $('.bottom-navigation__link').removeClass('bottom-navigation__link_active');
+            $(this).addClass('bottom-navigation__link_active');
+            $('.live-auction__video-col').fadeIn(400);
+            $('.live-auction__current-lot-col').hide();
+            $('.live-auction__current-lots-col').hide();
+            return false
+        })
+        $('#OtherLots').click(function(){
+            $('.bottom-navigation__link').removeClass('bottom-navigation__link_active');
+            $(this).addClass('bottom-navigation__link_active');
+            $('.live-auction__video-col').hide();
+            $('.live-auction__current-lot-col').hide();
+            $('.live-auction__current-lots-col').fadeIn(400);
+            return false
+        })
+    </script>
+</body>
+</html>

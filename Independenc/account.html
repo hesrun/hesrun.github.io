@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img class="header__logo_blue" src="svg/head-logo.svg" alt="">
+            <img class="header__logo_white" src="svg/head-logo-white.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>322</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <main class="content">
+        <div class="profile">
+            <h1 class="title">Good day, Mr Zolotov ;)</h1>
+            <div class="profile__wrapper">
+                <div class="tabs-list">
+                    <a href="#profTab1" class="tabs-list__item tabs-list__item_active">Profile</a>
+                    <a href="#profTab2" class="tabs-list__item">My Bids <span class="badge">3</span></a>
+                    <a href="#profTab3" class="tabs-list__item">Payment</a>
+                    <a href="#profTab4" class="tabs-list__item">Invoices</a>
+                </div>
+                <div class="tabs-blocks">
+                    <div id="profTab1" class="tabs-blocks__item tabs-blocks__item_active">
+                        <div class="profile-general">
+                            <div class="profile-general__verify">
+                                <a href="" class="c-button c-button_blue c-button_filled c-button_medium">Verify account</a>
+                                <p>
+                                    Your account currently enables you to get updates, save lots, access sale details <br>
+                                    and more.To participate in auctions, please take a moment to verify your account.
+                                </p>
+                            </div>
+                            <div class="profile-general__verify">
+                                <a href="" class="c-button c-button_blue c-button_filled c-button_medium">Confirm</a>
+                                <p>
+                                    Important! You will not be able to change your account type in the future. 
+                                </p>
+                            </div>
+                            <div class="profile__title-small">Personal information</div>
+                            <div class="profile-general__row">
+                                <span>Email address</span>
+                                <strong>grime9space@gmail.com</strong>
+                                <a href="" class="red-text">
+                                    Re-send verify email
+                                    <i class="mdi mdi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <div class="profile-general__row">
+                                <span>Password</span>
+                                <strong>*********</strong>
+                                <a href="" class="blue-text">
+                                    Change
+                                    <i class="mdi mdi-arrow-right"></i>
+                                </a>
+                            </div>
+                            <hr>
+                            <div class="profile-general__row">
+                                <span>Full name</span>
+                                <strong>Mr Sergey Dolgushin </strong>
+                                <label class="c-chekbox" for="hideName">
+                                    <input type="checkbox" name="hideName" id="hideName">
+                                    Don’t show my name to other bidders
+                                </label>
+                            </div>
+                            <div class="profile-general__row">
+                                <span>Phone</span>
+                                <strong>+79191395317</strong>
+                            </div>
+                            <hr>
+                            <div class="profile__title-small">BILLING information</div>
+                            <div class="profile-general__row">
+                                <span>Account type</span>
+                                <strong>Corporate account</strong>
+                            </div>
+                            <div class="profile-general__row">
+                                <span>Company name</span>
+                                <strong>Mr Sergey Dolgushin</strong>
+                            </div>
+                            <div class="profile-general__row">
+                                <span>Invoice currency</span>
+                                <strong>EURO</strong>
+                            </div>
+                            <div class="profile-general__row">
+                                <span>Delivery addresss</span>
+                                <strong>Mr Sergey Dolgushin </strong>
+                            </div>
+                            <div class="profile-general__row">
+                                <span>Billing address</span>
+                                <strong>Mr Sergey Dolgushin </strong>
+                                <a href="" class="blue-text">
+                                    Change
+                                    <i class="mdi mdi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profTab2" class="tabs-blocks__item">
+                        <div class="profile-general__verify">
+                            <a href="" class="c-button c-button_blue c-button_filled c-button_medium">View upcoming auctions</a>
+                            <p>
+                                You have no active bids at the moment. <br>
+                                Please browse our upcoming auctions to find the lot you like and place an absentee bid.
+                            </p>
+                        </div>
+                        <div class="bids-list">
+                            <div class="bids-list__item">
+                                <a href="" class="bids-list__lot-name">
+                                    <strong>Poitevin Enamel Verge Pocket Watch</strong>
+                                    <span>Lot 001</span>
+                                </a>
+                                <a href="" class="bids-list__auction-name">
+                                    <span>Timepieces Auction No. 174</span>
+                                </a>
+                                <a href="" class="bids-list__auction-date">
+                                    <span>08 Aug 2021, 14:00</span>
+                                </a>
+                                <a href="" class="bids-list__auction-price">
+                                    <strong class="green-text">2,000 CHF </strong>
+                                    <span class="green-text">Win</span>
+                                </a>
+                            </div>
+                            <div class="bids-list__item">
+                                <div class="bids-list__lot-name">
+                                    <strong>Poitevin Enamel Verge Pocket Watch</strong>
+                                    <span>Lot 001</span>
+                                </div>
+                                <div class="bids-list__auction-name">
+                                    <span>Timepieces Auction No. 174</span>
+                                </div>
+                                <div class="bids-list__auction-date">
+                                    <span>08 Aug 2021, 14:00</span>
+                                </div>
+                                <div class="bids-list__auction-price">
+                                    <strong class="red-text">2,000 CHF </strong>
+                                    <span class="red-text">Loss</span>
+                                </div>
+                            </div>
+                            <div class="bids-list__item">
+                                <div class="bids-list__lot-name">
+                                    <strong>Poitevin Enamel Verge Pocket Watch</strong>
+                                    <span>Lot 001</span>
+                                </div>
+                                <div class="bids-list__auction-name">
+                                    <span>Timepieces Auction No. 174</span>
+                                </div>
+                                <div class="bids-list__auction-date">
+                                    <span>08 Aug 2021, 14:00</span>
+                                </div>
+                                <div class="bids-list__auction-price">
+                                    <strong class="blue-text">2,000 CHF </strong>
+                                    <a class="c-button c-button_blue c-button_filled c-button_mini c-button_loading" href="">Cancle</a>
+                                </div>
+                            </div>
+                            <div class="bids-list__item">
+                                <div class="bids-list__lot-name">
+                                    <strong>Poitevin Enamel Verge Pocket Watch</strong>
+                                    <span>Lot 001</span>
+                                </div>
+                                <div class="bids-list__auction-name">
+                                    <span>Timepieces Auction No. 174</span>
+                                </div>
+                                <div class="bids-list__auction-date">
+                                    <span>08 Aug 2021, 14:00</span>
+                                </div>
+                                <div class="bids-list__auction-price">
+                                    <strong class="green-text">2,000 CHF </strong>
+                                    <span class="green-text">Win</span>
+                                </div>
+                            </div>
+                            <div class="bids-list__item">
+                                <div class="bids-list__lot-name">
+                                    <strong>Poitevin Enamel Verge Pocket Watch</strong>
+                                    <span>Lot 001</span>
+                                </div>
+                                <div class="bids-list__auction-name">
+                                    <span>Timepieces Auction No. 174</span>
+                                </div>
+                                <div class="bids-list__auction-date">
+                                    <span>08 Aug 2021, 14:00</span>
+                                </div>
+                                <div class="bids-list__auction-price">
+                                    <strong class="red-text">2,000 CHF </strong>
+                                    <span class="red-text">Loss</span>
+                                </div>
+                            </div>
+                            <div class="bids-list__item">
+                                <div class="bids-list__lot-name">
+                                    <strong>Poitevin Enamel Verge Pocket Watch</strong>
+                                    <span>Lot 001</span>
+                                </div>
+                                <div class="bids-list__auction-name">
+                                    <span>Timepieces Auction No. 174</span>
+                                </div>
+                                <div class="bids-list__auction-date">
+                                    <span>08 Aug 2021, 14:00</span>
+                                </div>
+                                <div class="bids-list__auction-price">
+                                    <strong class="blue-text">2,000 CHF </strong>
+                                    <span class="blue-text">Bid</span>
+                                </div>
+                            </div>
+                            <a href="" class="bids-list__more c-button c-button_blue c-button_filled c-button_medium">show more</a>
+                        </div>
+                        
+                    </div>
+                    <div id="profTab3" class="tabs-blocks__item">
+                        <div class="profile__title-small">Saved Cards</div>
+                        <div class="credit-cards">
+                            <div class="credit-cards__list">
+                                <div class="credit-cards__list-item">
+                                    <div class="credit-cards__type">
+                                        <i class="mdi mdi-credit-card"></i>
+                                    </div>
+                                    <div class="credit-cards__num">
+                                        <div class="credit-cards__stars">****</div>
+                                        <div class="credit-cards__stars">****</div>
+                                        <div class="credit-cards__stars">****</div>
+                                        <div>1234</div>
+                                    </div>
+                                    <div class="credit-cards__date">
+                                        12 / 24
+                                    </div>
+                                    <i class="credit-cards__arrow mdi mdi-arrow-right"></i>
+                                </div>
+                                <div class="credit-cards__list-item">
+                                    <div class="credit-cards__type">
+                                        <img src="img/icons/visa.png" alt="">
+                                    </div>
+                                    <div class="credit-cards__num">
+                                        <div class="credit-cards__stars">****</div>
+                                        <div class="credit-cards__stars">****</div>
+                                        <div class="credit-cards__stars">****</div>
+                                        <div>1234</div>
+                                    </div>
+                                    <div class="credit-cards__date">
+                                        12 / 24
+                                    </div>
+                                    <i class="credit-cards__arrow mdi mdi-arrow-right"></i>
+                                </div>
+                            </div>
+                            <a href="" class="c-button c-button_grey c-button_full c-button_icon-left">
+                                <i class="mdi mdi-plus"></i>
+                                add card
+                            </a>
+                        </div>
+                    </div>
+                    <div id="profTab4" class="tabs-blocks__item ">
+                        <div class="tabs-list tabs-list_inline">
+                            <a href="#invoiсeTab1" class="tabs-list__item tabs-list__item_active">Pending payment</a>
+                            <a href="#invoiсeTab2" class="tabs-list__item">Paid</a>
+                        </div>
+                        <div id="invoiсeTab2" class="tabs-blocks__item tabs-blocks__item_active">
+                            <div class="invoice-create">
+                                <div class="invoice-create__title">Select the right option</div>
+                                <div class="toggle-field toggle-field_3x">
+                                    <strong>I will pick my order up</strong>
+                                    <input class="toggle-field__input" type="radio" name="pickup" id="Outside">
+                                    <label class="toggle-field__label" for="Outside">Outside Switzerland</label>
+                                    <input class="toggle-field__input" type="radio" name="pickup" id="Inside">
+                                    <label class="toggle-field__label" for="Inside">In Switzerland</label>
+                                </div>
+                                <div class="toggle-field toggle-field_3x">
+                                    <strong>Preferred invoice currency</strong>
+                                    <input class="toggle-field__input" type="radio" name="Currency" id="CHF">
+                                    <label class="toggle-field__label" for="CHF">CHF</label>
+                                    <input class="toggle-field__input" type="radio" name="Currency" id="USD">
+                                    <label class="toggle-field__label" for="USD">USD</label>
+                                    <input class="toggle-field__input" type="radio" name="Currency" id="EUR">
+                                    <label class="toggle-field__label" for="EUR">EUR</label>
+                                </div>
+                                <a href="" class="c-button c-button_blue c-button_filled c-button_medium">Create invoice</a>
+                            </div>
+                            <div class="profile-general__verify">
+                                <a href="" class="c-button c-button_blue c-button_filled c-button_medium">Complete profile</a>
+                                <p>
+                                    Complete your account with delivery and billing adddresses, preffered <br> currency and account type, so, we can generate invoices for you.
+                                </p>
+                            </div>
+                            <p>If you have any active invoices - they will appear here within 5 minutes. </p>
+                            <div class="invoice-list">
+                                <div class="invoice-list__item">
+                                    <div class="invoice-list__name">
+                                        <strong>Invoice #135555</strong>
+                                        <span>08 Aug 2021, 14:00</span>
+                                    </div>
+                                    <div class="invoice-list__price">
+                                        <b class="blue-text">41,245 CHF</b>
+                                        <span>Invoice total</span>
+                                    </div>
+                                    <div class="invoice-list__btn">
+                                        <a href="" class="c-button c-button_blue c-button_filled c-button_medium">
+                                            View 👉
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="invoice-list__item">
+                                    <div class="invoice-list__name">
+                                        <strong>Invoice #135555</strong>
+                                        <span>08 Aug 2021, 14:00</span>
+                                    </div>
+                                    <div class="invoice-list__price">
+                                        <b class="blue-text">41,245 CHF</b>
+                                        <span>Invoice total</span>
+                                    </div>
+                                    <div class="invoice-list__btn">
+                                        <a href="" class="c-button c-button_blue c-button_filled c-button_medium">
+                                            View 👉
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="invoiсeTab2" class="tabs-blocks__item">
+                            <div class="invoice-list">
+                                <div class="invoice-list__item">
+                                    <div class="invoice-list__name">
+                                        <strong>Invoice #135555</strong>
+                                        <span>08 Aug 2021, 14:00</span>
+                                    </div>
+                                    <div class="invoice-list__price">
+                                        <b class="blue-text">41,245 CHF</b>
+                                        <span>Invoice total</span>
+                                    </div>
+                                    <div class="invoice-list__btn">
+                                        <a href="" class="c-button c-button_blue c-button_filled c-button_medium">
+                                            Pay 👉
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="invoice-list__item">
+                                    <div class="invoice-list__name">
+                                        <strong>Invoice #135555</strong>
+                                        <span>08 Aug 2021, 14:00</span>
+                                    </div>
+                                    <div class="invoice-list__price">
+                                        <b class="blue-text">41,245 CHF</b>
+                                        <span>Invoice total</span>
+                                    </div>
+                                    <div class="invoice-list__btn">
+                                        <a href="" class="c-button c-button_blue c-button_filled c-button_medium">
+                                            Pay 👉
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="EditCard" class="modal modal-small">
+        <div class="modal-small__title">My card</div>
+        <div class="modal-small__body">
+            <div class="card-form">
+                <div class="c-field">
+                    <input type="text" class="c-field__input">
+                    <label class="c-field__label">Card number</label>
+                </div>
+                <div class="c-field">
+                    <input type="text" class="c-field__input">
+                    <label class="c-field__label">MM / YY</label>
+                </div>
+                <div class="c-field">
+                    <input type="text" class="c-field__input">
+                    <label class="c-field__label">CVC</label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Save</a>
+            <a href="" class="card-remove-btn">Delete card</a>
+        </div>
+    </div>
+
+    <div id="AddCard" class="modal modal-small">
+        <div class="modal-small__title">Add card</div>
+        <div class="modal-small__body">
+            <div class="card-form">
+                <div class="c-field">
+                    <input type="text" class="c-field__input">
+                    <label class="c-field__label">Card number</label>
+                </div>
+                <div class="c-field">
+                    <input type="text" class="c-field__input">
+                    <label class="c-field__label">MM / YY</label>
+                </div>
+                <div class="c-field">
+                    <input type="text" class="c-field__input">
+                    <label class="c-field__label">CVC</label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Add</a>
+        </div>
+    </div>
+
+    <div id="ChangePass" class="modal modal-small">
+        <div class="modal-small__title">Change password</div>
+        <div class="modal-small__body">
+            <div class="c-field">
+                <input type="password" class="c-field__input">
+                <label class="c-field__label">Current password</label>
+            </div>
+            <div class="c-field">
+                <input type="password" class="c-field__input">
+                <label class="c-field__label">New password</label>
+            </div>
+            <div class="c-field">
+                <input type="password" class="c-field__input">
+                <label class="c-field__label">Repeat new password</label>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Change password</a>
+        </div>
+    </div>
+
+    <div id="InvoiceModal" class="invoice-modal modal modal-right-sidebar">
+        <div class="invoice-modal__title">
+            Invoice #135555
+            <span class="invoice-modal__date">08 Aug 2021, 14:00</span>
+        </div>
+        <div class="invoice-modal__body">
+            <div class="lots-list">
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                <a href="" class="lot-item-small">
+                    <div class="lot-item-small__image">
+                        <img src="img/auctions/lot-thumb.jpg" alt="">
+                    </div>
+                    <div class="lot-item-small__info">
+                        <div class="lot-item-small__num">Lot 1</div>
+                        <div class="lot-item-small__name">13. Jaeger-LeCoultre Atmos Atlantis</div>
+                        <table class="lot-item-small__price-table">
+                            <tr>
+                                <td>Hammer price (excl. VAT) </td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>VAT (7,7 %)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                            <tr>
+                                <td>Commission (24%)</td>
+                                <td>CHF 2,000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </a>
+                
+            </div>
+            <div class="invoice-modal__total">
+                Total amount: 
+                <strong>CHF 6,000</strong>
+            </div>
+            <div class="invoice-modal__info">
+                <b>Ineichen Zürich AG</b> <br>
+                8001 Zürich | Stadthausquai 11-13 | CHE-101.038.023 <br>
+                Tel.: +41 44 298 11 44 | E-Mail: info@ineichen.com | www.ineichen.com <br>
+                Bank: Zürcher Kantonalbank | 8010 Zürich | SWIFT-Adresse (BIC): ZKBKCHZZ80A <br>
+                IBAN: CHF CH44 0070 0114 8036 4565 3 <br>
+                EUR CH13 0070 0130 0092 3952 9 <br>
+                USD CH88 0070 0130 0092 3953 7
+            </div>
+            <div class="invoice-modal__btns">
+                <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Upload payment confirmation</a>
+                <a href="" class="c-button c-button_brown c-button_filled c-button_full c-button_medium">Download  PDF</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalVerification" class="modal modal-small modal-small_fs">
+        сюда фрейм для верификации
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('#AddCard').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+        $('#EditCard').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+        $('#ChangePass').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+        $('#ModalVerification').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+
+        $('#InvoiceModal').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+
+        
+
+    </script>
+</body>
+</html>

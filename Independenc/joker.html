@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header header_blue">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img class="header__logo_blue" src="svg/head-logo.svg" alt="">
+            <img class="header__logo_white" src="svg/head-logo-white.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="joker-banner">
+            <div class="container">
+                <div class="joker-banner__slogan"><span>A unique set</span> <span>for a unique buyer</span></div>
+                <img class="joker-banner__image" src="img/joker/joker-logo.svg" alt="">
+                <div class="joker-banner__set-text">
+                    <span><i>x</i>NFT</span>
+                    <small>+</small>
+                    <span><i>x</i>WATCH</span>
+                    <small>+</small>
+                    <span><i>x</i>CAR</span>
+                </div>
+            </div>
+        </div>
+        <div class="joker-take-a-ride">
+            <div class="container">
+                <video autoplay loop muted>
+                    <source src="https://ineichen.com/upload/medialibrary/1a0/xg0dgb82li4dqvy064po4ci7wniwpmjf.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="joker-bid-info">
+            <div class="container">
+                <div class="joker-bid-info__cols">
+                    <span>
+                        Lot Joker XXX (NFT + Watch + Car) <br>
+                        Starting price: CHF 100 000 <br>
+                        <b>ACCEPTS CRYPTOCURRENCY</b>
+                    </span>
+                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Place your bid</a>
+                </div>
+            </div>
+        </div>
+        <div class="joker-start">
+            <div class="container">
+                <div class="joker-start__cols">
+                    <div class="joker-start__date">
+                        30 <span>APR</span>
+                    </div>
+                    <div class="joker-start__timer">
+                        <span>Live bidding <br> starts in:</span>
+                        <div class="start-timer">
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">01</b>
+                                <span class="start-timer__name">day</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">21</b>
+                                <span class="start-timer__name">hr</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">55</b>
+                                <span class="start-timer__name">min</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">19</b>
+                                <span class="start-timer__name">sec</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- car -->
+        <!-- <section class="land-section land-section_black joker-car-bg">
+            <div class="container">
+                <div class="joker-section">
+                    <div class="joker-section__user">
+                        <h2 class="joker-section__title">CAR</h2>
+                        <img class="joker-section__user-image" src="img/joker/user-car.jpg" alt="">
+                        <div class="joker-section__user-name">
+                            Creator: <br>
+                            Aleksandr Markovsky, <br>
+                            Russia
+                        </div>
+                        <div class="joker-section__user-descr">
+                            Car enthusiast, collector and restoration <br> expert from Moscow
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+        <!-- sub-car -->
+        <section class="land-section land-section_black joker-sub">
+            <div class="container">
+                <div class="joker-item-about">
+                    <div class="joker-item-about__logo">
+                        <img src="img/joker/porsche-logo.svg" alt="">
+                    </div>
+                    <h2 class="joker-item-about__title">
+                        1986 <br>
+                        PORSCHE 911 G CARRERA
+                    </h2>
+                    <div class="joker-item-about__text">
+                        <div class="joker-item-about__text-cols">
+                            <div class="joker-item-about__text-col">
+                                <p>
+                                    The design of the Porsche 911 Joker by Aleksandr Markovsky included in this bundle was pure coincidence. Markovsky conceptualized the look unwittingly. “I was not planning to make a 'Joker’ car before it actually turned into one. It was as though it was destined to be part of this project,” he says. <br><br>
+                                    The self-confessed car addict and watch lover spent most of 2021 restoring this 1986 Porsche 911 G-model Carrera Turbo-look. <br><br>
+                                    The gearbox was restored and more than 800 new parts installed. <br><br>
+                                    Markovsky is currently testing the car’s performance on tricky roads in all-weather conditions. Look out for him somewhere in the Swiss, Italian or French Alps as he puts the Porsche 911 Joker through its paces prior to handing it over to the winning bidder at the auction in April.
+                                </p>
+                            </div>
+                            <div class="joker-item-about__text-col">
+                                <blockquote>Markovsky stripped the car down to naked metal, recoating it in nonmetallic royal purple – one of the Skittles colors used on 911s in the late sixties and early seventies. He refurbished the interior with green nappa leather and a square-patterned purple-and-green textile, colors strongly associated with the Joker character, and added character with Outlaw wheels and the “Joker” sign at the back of the car.</blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="joker-item-about__title joker-item-about__title_left">
+                        Exterior
+                    </h2>
+                    <div class="joker-item-about__photo-grid">
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/911-1.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item joker-item-about__photo-grid-item_2x">
+                            <img src="img/joker/911-2.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/911-3.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/911-4.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/911-5.jpg" alt="">
+                        </div>
+                    </div>
+                    <h2 class="joker-item-about__title joker-item-about__title_left">
+                        Interior
+                    </h2>
+                    <div class="joker-item-about__photo-grid">
+                        <div class="joker-item-about__photo-grid-item joker-item-about__photo-grid-item_2x">
+                            <img src="img/joker/911-2-1.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/911-2-2.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/911-2-3.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/911-2-4.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/911-2-5.jpg" alt="">
+                        </div>
+                    </div>
+                    <h2 class="joker-item-about__title joker-item-about__title_left">
+                        Specifications
+                    </h2>
+                    <div class="joker-item-about__specification">
+                        <div>
+                            <strong>MODEL</strong>
+                            Porsche 911 <br>
+                            Year 1986 <br>
+                            VIN number:  WPOAB0919GS122204 
+                        </div>
+                        <div>
+                            <strong>ENGINE</strong>
+                            Type: M93021 <br>
+                            Power: 152 Kilowatts (207 litres/second) <br>
+                            Volume: 3.2 litres
+                        </div>
+                        <div>
+                            <strong>GEARBOX</strong>
+                            5 speed manual gearbox
+                        </div>
+                        <div>
+                            <strong>DESIGN</strong>
+                            911 M491 Factory Turbo Look Option including: <br><br>
+                            &#8226; Wide Turbo body <br>
+                            &#8226; Turbo Whale Tail <br>
+                            &#8226; Turbo wrap-around chin <br>
+                            &#8226; Turbo Suspension <br>
+                            &#8226; Turbo Brakes <br>
+                        </div>
+                    </div>
+                    <h2 class="joker-item-about__title joker-item-about__title_left">
+                        Restoration
+                    </h2>
+                    <div class="joker-item-about__video">
+                        <video autoplay loop muted>
+                            <source src="video/car-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- <div class="joker-item-about__btns">
+                        <a href="" class="close-section c-button c-button_violet c-button_full">Close</a>
+                    </div> -->
+                </div>             
+            </div>
+        </section>
+        <div class="joker-divider">
+            <div class="joker-divider__btn"></div>
+        </div>
+
+        <!-- watch -->
+        <!-- <section class="land-section land-section_black joker-watch-bg">
+            <div class="container">
+                <div class="joker-section joker-section_inverse">
+                    <div class="joker-section__user">
+                        <h2 class="joker-section__title">WATCH</h2>
+                        <img class="joker-section__user-image" src="img/joker/user-watch.jpg" alt="">
+                        <div class="joker-section__user-name">
+                            Creator: <br>
+                            Konstantin Chaykin, <br>
+                            Russia
+                        </div>
+                        <div class="joker-section__user-descr">
+                            Independent Russian watchmaker and inventor,  <br> master of haute  horlogerie and a member of the  <br> Académie Horlogère des Créateurs Indépendants (AHCI).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- sub watch 1-->
+        <section class="land-section land-section_black joker-sub joker-sub-watch-bg-1">
+            <div class="container">
+                <div class="joker-item-about">
+                    <div class="joker-item-about__logo">
+                        <img src="img/joker/chaykin-logo.svg" alt="">
+                    </div>
+                    <h2 class="joker-item-about__title joker-item-about__title_left">
+                        Joker XXX watch
+                        <small>Unique Piece by K. Chaykin</small>
+                    </h2>
+                    <div class="joker-item-about__text">
+                        <div class="joker-item-about__text-cols joker-item-about__text-cols_single">
+                            <div class="joker-item-about__text-col joker-item-about__text-col_single">
+                                <p>The Joker watch, which spawned the Wristmons collection, was created by Konstantin Chaykin in 2017. The original limited edition of 99 pieces immediately sold out during the Baselworld exhibition, where the watch was presented to the public, and caused a sensation. The self-winding movement K.07-0, developed for the Joker wristwatch on the base of the Swiss-made Eta 2824-2 movement, modified by Chaykin, was fitted with an in-house complicated indication module. The characteristic feature of the Joker watch and its caliber is its unique design, with an anthropomorphic Joker-indication with disc indicators for the hours, minutes and moon phase. The hour and minute subdials look like the character’s eyes, while the moonphase indicator resembles his smiling mouth – the lunar smile of the Joker watch. </p>
+                                <blockquote>Compared to the original stainless-steel Joker, the Joker XXX Unique Piece has an even more imposing high-contrast look thanks to the black PVD-coated case, violet leather strap, red lunar smile and, for the first time ever in a Wristmons watch – black eyes.</blockquote>
+                                <p>The Joker’s eyes look like car dashboard gauges, in high-contrast, with a matt black background and pad-printed red hands. Therefore, the unique piece created by Konstantin Chaykin combines the colour-scheme of an NFT artwork featuring the Joker’s car drifting through a late-night Gotham City, created for Ineichen Auctioneers’ April 2022 timed auction, with the Joker’s original dial design from the Wristmons collection, which has become the signature of the watchmaker. A special feature of the present example is the caseback designed with a medallion featuring the NFT-art image with the Joker’s car drifting through Gotham City engraved in relief and signed “Joker XXX”, “Unique Piece” and “Konstantin Chaykin Made in Russia Stainless Steel”. Made in stainless steel with black PVD-coating, the watch inherits the outstanding Joker design, one of the most noticeable and memorable watch designs in the world, this time in a one-of-a-kind creation. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="joker-item-about__btns">
+                        <a href="" class="close-section close-section-second c-button c-button_violet c-button_full">Close</a>
+                    </div> -->
+                </div>
+                
+            </div>
+        </section>
+        <div class="joker-watch-space"></div>
+        <!-- sub watch 2-->
+        <section class="land-section land-section_black joker-sub joker-sub-watch-bg-2">
+            <div class="container">
+                <div class="joker-item-about">
+                    <h2 class="joker-item-about__title joker-item-about__title_left">
+                        Specifications
+                    </h2>
+                    <div class="joker-item-about__specification joker-item-about__specification_vertical">
+                        <div>
+                            <strong>FIRST EVER</strong>
+                            Black eyes <br>
+                            Double signed case: Konstantin Chaykin, Joker XXX <br>
+                            NFT-art engraved case back
+                        </div>
+                        <div>
+                            <strong>CALIBER K.07-0</strong>
+                            Self-winding mechanical <br>
+                            Power reserve: 38 h, 28'800 variations / hours <br>
+                            8 jewels for friction reduction <br>
+                            Mounted on automatic winding Caliber ETA 2824-2 <br>
+                            Anthropomorphic Joker-indication with disc indicators <br>
+                            for hours and minutes <br>
+                            Moon phase – lunar smile mouth
+                        </div>
+                        <div>
+                            <strong>CASE</strong>
+                            Stainless steel <br>
+                            PVD-coated <br>
+                            DM: 42mm <br>
+                            Thickness 13.7mm <br>
+                            Triple signed case: Konstantin Chaykin, Joker XXX, <br>
+                            Markovsky NFT-art engraved case back
+                        </div>
+                        <div>
+                            <strong>DIAL AND BEZEL</strong>
+                            Two types of guilloche on the dial <br>
+                            Gray and white coloured  <br>
+                            First ever black eyes with red hands for hours and minutes indication <br>
+                            Bezel with the letter ‘J’ and the symbols of card suits engraved
+                        </div>
+                    </div>
+                    <!-- <div class="joker-item-about__btns">
+                        <a href="" class="next-section c-button c-button_violet c-button_full c-button_filled">Read more</a>
+                        <a href="" class="close-section c-button c-button_violet c-button_full">Close</a>
+                    </div> -->
+                    <h2 class="joker-item-about__title joker-item-about__title_left">
+                        Gallery
+                    </h2>
+                    <div class="joker-item-about__photo-grid joker-item-about__photo-grid_mob-1">
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/watch-1.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/watch-2.jpg" alt="">
+                        </div>
+                        <div class="joker-item-about__photo-grid-item">
+                            <img src="img/joker/watch-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="joker-divider">
+            <div class="joker-divider__btn"></div>
+        </div>
+
+
+
+        <!--watch nft -->
+        <!-- <section class="land-section land-section_black joker-nft-bg">
+            <div class="container">
+                <div class="joker-section">
+                    <div class="joker-section__user">
+                        <h2 class="joker-section__title">NFT</h2>
+                        <img class="joker-section__user-image" src="img/joker/user-nft.jpg" alt="">
+                        <div class="joker-section__user-name">
+                            Creator: <br>
+                            Olexander Nyezhnyk, <br>
+                            Ukraine
+                        </div>
+                        <div class="joker-section__user-descr">
+                            Author of multiple digital projects with several years working in the <br> video game industry and for over a year – in NFT projects. Now he is <br> about to launch his own game based on Ethereum Blockchain.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        
+        <!-- sub watch nft -->
+        <section class="land-section land-section_black joker-sub">
+            <div class="container">
+                <div class="joker-item-about">
+                    <div class="joker-item-about__logo">
+                        <img src="img/joker/nft-logo.svg" alt="">
+                    </div>
+                    <h2 class="joker-item-about__title">
+                        NFT <br>
+                        EXCLUSIVE ART
+                    </h2>
+                    <div class="joker-item-about__text">
+                        <div class="joker-item-about__text-cols">
+                            <div class="joker-item-about__text-col">
+                                <p>Joker 777” is the first one out of ten NFT in the Ethereum blockchain from OpenSea "Retro NFT Porsche" collection. It took three months to create the unique NFT, giving a comic-style effect to a tokenized image of the Porsche Joker 911 against a backdrop of Gotham City at night. The image is motivated by the adventurous spirit of the Batman story and incorporates the familiar purple color way. There is also a Markovsky road marking as a nod to the flair and passion of the Moscow-based creative.</p>
+                            </div>
+                            <div class="joker-item-about__text-col">
+                                <blockquote>Moving forward the NFT will give an access to private events held amongst all owners of the "Retro NFT Porsche" collection. This is the first release of the collection that will bring together car and watch collectors from all over the world.</blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="joker-item-about__nft-image">
+                        <img src="img/joker/nft-preview.png" alt="">
+                    </div>
+                    <!-- <div class="joker-item-about__btns">
+                        <a href="" class="close-section c-button c-button_violet c-button_full">Close</a>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <div class="joker-divider">
+            <div class="joker-divider__btn"></div>
+        </div>
+        <div class="joker-unicef">
+            <div class="container">
+                <div class="joker-unicef__cols">
+                    <div class="joker-unicef__info">
+                        <img src="img/joker/unicef.png" alt="">
+                        <p>
+                            <b>5% of auction revenue</b> will be donated to UNICEF to support the global initiative of peace establishment in Ukraine.
+                        </p>
+                    </div>
+                    <div class="joker-unicef__quote">
+                        <blockquote>
+                            This auction is the result of united work of <b>Russian</b> and <b>Ukrainian</b> creators. <br>
+                            Peace is what made this cooperation possible and is what we want to support with united efforts. 
+                        </blockquote>
+                        <p><b>Artemy Lechbinsky</b> , CEO of Ineichen Auctioneers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="land-section">
+            <div class="container">
+                <div class="joker-creators">
+                    <h2 class="joker-creators__title">
+                        Creators
+                    </h2>
+                    <div class="joker-creators__list">
+                        <div class="joker-creators__item">
+                            <div class="joker-creators__image">
+                                <img src="img/joker/user-nft.jpg" alt="">
+                            </div>
+                            <h3 class="joker-creators__name">
+                                Olexander Nyezhnyk, <br> Ukraine
+                            </h3>
+                            <div class="joker-creators__descr">
+                                Author of multiple digital projects with several years working in the video game industry and for over a year – in NFT projects. Now he is about to launch his own game based on Ethereum Blockchain.
+                            </div>
+                        </div>
+                        <div class="joker-creators__item">
+                            <div class="joker-creators__image">
+                                <img src="img/joker/user-watch.jpg" alt="">
+                            </div>
+                            <h3 class="joker-creators__name">
+                                Konstantin Chaykin, <br>
+                                Russia
+                            </h3>
+                            <div class="joker-creators__descr">
+                                Independent Russian watchmaker and inventor, master of haute horlogerie and a member of the Académie Horlogère des Créateurs Indépendants (AHCI).
+                            </div>
+                        </div>
+                        <div class="joker-creators__item">
+                            <div class="joker-creators__image">
+                                <img src="img/joker/user-car.jpg" alt="">
+                            </div>
+                            <h3 class="joker-creators__name">
+                                Aleksandr Markovsky, <br>
+                                Russia
+                            </h3>
+                            <div class="joker-creators__descr">
+                                Car enthusiast, collector and restoration <br> expert from Moscow
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <div class="land-section land-section_blue">
+            <div class="container">
+                <div class="joker-bid-now">
+                    <div class="joker-bid-now__image">
+                        <img src="img/joker/joker-logo.svg" alt="">
+                    </div>
+                    <div class="joker-bid-now__info">
+                        <h2 class="">
+                            PLACE YOUR <br> BID NOW
+                        </h2>
+                        <p>
+                            Lot Joker XXX (NFT + Watch + Car) <br>
+                            <span>Starting price: CHF 100 000</span>
+                            <b>ACCEPTS CRYPTOCURRENCY</b>
+                        </p>
+                        <a href="" class="c-button c-button_violet c-button_filled c-button_full">Place your bid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="joker-start joker-start_violet">
+            <div class="container">
+                <div class="joker-start__cols">
+                    <div class="joker-start__date">
+                        30 <span>APR</span>
+                    </div>
+                    <div class="joker-start__timer">
+                        <span>Live bidding <br> starts in:</span>
+                        <div class="start-timer">
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">01</b>
+                                <span class="start-timer__name">day</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">21</b>
+                                <span class="start-timer__name">hr</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">55</b>
+                                <span class="start-timer__name">min</span>
+                            </div>
+                            <div class="start-timer__item">
+                                <b class="start-timer__digits">19</b>
+                                <span class="start-timer__name">sec</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        
+        var sctop = 0,
+            sctopSec = 0;
+
+        $('.joker-divider__btn').click(function(){
+            const section = $(this);
+            sctop = $('html, body').scrollTop();
+
+            section.parent('.joker-divider').next().slideToggle(500);
+            
+            $('html, body').animate({
+                scrollTop: section.parent('.joker-divider').next().offset().top
+            }, 500);
+        })
+        $('.close-section').click(function(){
+            const section = $(this);
+            section.closest('.joker-sub').slideUp(500);
+            if (section.hasClass('close-section-second')) {
+                $('html, body').animate({
+                    scrollTop: sctopSec
+                }, 500);
+            } else {
+                $('html, body').animate({
+                    scrollTop: sctop
+                }, 500);
+            }
+            
+            return false
+        })
+        $('.next-section').click(function(){
+            sctopSec = $('html, body').scrollTop();
+            $(this).closest('.joker-sub').next().slideDown(500);
+            $('html, body').animate({
+                scrollTop: $(this).closest('.joker-sub').next().offset().top
+            }, 500);
+            return false
+        })
+        
+
+
+    </script>
+</body>
+</html>

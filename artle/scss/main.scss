@@ -354,8 +354,8 @@ h1,h2,h3,h4 {
 }
 .catalog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 80px 100px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vw 3vw;
     & + .text-center {
         margin-top: 70px;
     }
@@ -412,11 +412,11 @@ h1,h2,h3,h4 {
         }
         .image {
             img {
-                transform: scale(1.1) rotate(5deg);
+                transform: scale(1.1);
             }
             .image-top {
                 opacity: 1;
-                transform: scale(1.1) rotate(-5deg);
+                transform: scale(1.1);
             }
             &:before {
                 transform: scale(0.9);
@@ -1441,10 +1441,28 @@ h1,h2,h3,h4 {
     }
     .price {
         font-family: "BodoniC";
-        display: block;
+        display: flex;
+        align-items: center;
         font-size: 32px;
         font-weight: 500;
         margin-bottom: 60px;
+    }
+    .status {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        font-size: 0px;
+        display: inline-block;
+        margin-left: 15px;
+        &.in-sale {
+            background: $green;
+        }
+        &.sold {
+            background: $red;
+        }
+        &.reserved {
+            background: $blue;
+        }
     }
     .btns {
         display: flex;
@@ -1850,7 +1868,7 @@ h1,h2,h3,h4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     h2 {
-        font-size: 64px;
+        font-size: 32px;
         margin-bottom: 30px;
     }
     p {

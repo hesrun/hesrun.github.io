@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sign-wrapper">
+        <a href="#" class="sign-back">
+            <i class="mdi mdi-arrow-left"></i>&nbsp;&nbsp;Back to Ineichen
+        </a>
+        <div class="sign-form">
+            <h1 class="title">Upload scan of your ID/passport</h1>
+            <div class="drop-zone">
+                <label for="DropZone" class="drop-zone__label">
+                    <i class="mdi mdi-file-image-outline"></i>
+                    <span>Drop your documents here, or click to browse</span>
+                    <span class="grey-text">up to 10MB each.</span>
+                </label>
+                <input id="DropZone" type="file">
+            </div>
+            <div class="upload-files">
+                <div class="upload-files__item">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-img.jpg" alt="">
+                    </div>
+                    <div class="upload-files__info">
+                        <span class="upload-files__name">passport.png</span>
+                        <strong class="upload-files__percent">50%</strong>
+                        <span class="upload-files__weight">32.2KB</span>
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+                <div class="upload-files__item">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-ico.jpg" alt="">
+                    </div>
+                    <div class="upload-files__info">
+                        <span class="upload-files__name">passport.png</span>
+                        <strong class="upload-files__percent">50%</strong>
+                        <span class="upload-files__weight">32.2KB</span>
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+                <div class="upload-files__item">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-ico.jpg" alt="">
+                    </div>
+                    <div class="upload-files__info">
+                        <span class="upload-files__name">passport.png</span>
+                        <strong class="upload-files__percent">50%</strong>
+                        <div class="upload-files__progress"><div style="width:50%"></div></div>
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="sign-form__btns">
+                <a href="" class="sign-form__btn c-button c-button_blue c-button_filled c-button_full disabled">Upload to Continue</a>
+                <a href="" class="sign-form__btn c-button c-button_blue c-button_filled c-button_full c-button_loading">Continue</a>
+                <a href="" class="sign-form__btn c-button c-button_green c-button_filled c-button_full ">
+                    <i class="mdi mdi-check"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $('.drop-zone').click(function(){
+            $('.drop-zone input').click();
+        })
+    </script>
+</body>
+</html>

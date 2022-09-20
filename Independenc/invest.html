@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header header_dark-grey">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img class="header__logo_blue" src="svg/head-logo.svg" alt="">
+            <img class="header__logo_white" src="svg/head-logo-white.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>English</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <div class="c-dropdown__list-name">Language</div>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            English
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            English
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            English
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="ineichen-invest-banner">
+            <div class="container">
+                <h1 class="ineichen-invest-title">Become a shareholder</h1>
+                <p class="ineichen-invest-subtitle">
+                    Join Ineichen Zurich, <br>
+                    a leading auction house for <br>
+                    luxury watches in Switzerland
+                </p>
+            </div>
+        </div>
+        <div class="ineichen-invest-certificate">
+            <img src="img/invest/certificate.png" alt="">
+        </div>
+        <div class="ineichen-invest-auction-info">
+            <div class="container">
+                <h1 class="ineichen-invest-title">28 may, 14:00 CET</h1>
+                <p class="ineichen-invest-subtitle">
+                    Access limited to only 499 participants - become one of them!
+                </p>
+                <a href="" class="c-button c-button_dark-grey c-button_filled c-button_full">Join the auction now</a>
+                <div class="ineichen-invest-note-auth">
+                    <a href="" class="c-button c-button_dark-grey c-button_filled c-button_full">Sign In</a>
+                    <a href="" class="c-button c-button_dark-grey c-button_filled c-button_full">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_dark-grey">
+            <div class="container">
+                <h1 class="ineichen-invest-title">
+                    Our Financials
+                </h1>
+                <div class="ineichen-invest-why">
+                    <div>
+                        <img src="img/invest/chart-1.jpg" alt="">
+                        <strong>Projected EBITA  & Sales</strong>
+                        <a href="" class="c-button c-button_milk-white c-button_filled c-button_full">Request the detailed business plan</a>
+                    </div>
+                    <div>
+                        <img src="img/invest/chart-2.jpg" alt="">
+                        <strong>
+                            Estimated company value
+                            <span>CHF 50’064’273</span>
+                        </strong>
+                        <a href="" class="c-button c-button_milk-white c-button_filled c-button_full">Download the Presentation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_dark-grey">
+            <div class="container">
+                <h2 class="ineichen-invest-title ineichen-invest-title_small">
+                    Going Forward - our Strategic Plan
+                </h2>
+                <div class="ineichen-invest-plan">
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-1.svg" alt="">
+                        <h4>Buyer’s premium cancellation</h4>
+                        <p>First auction house to cancel buyers premium allowing a transparent relationships with clients</p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-2.svg" alt="">
+                        <h4>Taking Over <br> New Markets</h4>
+                        <p>We continue to expand internationally approaching clients in the key strategic markets (Hong Kong, UAE, the USA) </p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-3.svg" alt="">
+                        <h4>Bringing Blockchain into Watch Industry</h4>
+                        <p>We’re launching Meta-Tourbillion project – a unique blockchain-based platform for watch brands, watch buyers and collectors</p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-4.svg" alt="">
+                        <h4>Virtual Try-On <br> for Watches</h4>
+                        <p>We’re using a new blockchain and Artificial/Virtual Reality technology</p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-5.svg" alt="">
+                        <h4>Collaborating with Independent Artisans </h4>
+                        <p>We’re expanding business to independent watchmakers</p>
+                    </div>
+                    <div class="ineichen-invest-plan_item">
+                        <img src="img/invest/plan-6.svg" alt="">
+                        <h4>Themed Auctions for Exceptional Watches</h4>
+                        <p>We are the first ones to focus only on smaller themed auctions holding up to 10 auctions per year </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_black">
+            <div class="container">
+                <h1 class="ineichen-invest-title ineichen-invest-title_daura">
+                    What makes us different?
+                </h1>
+                <div class="ineichen-invest-how-work">
+                    <p>
+                        We are the first auction house registered on blockchain! Our shares are transferrable through Daura digital blockchain platform. <br> <br>
+                        Blockchain registry allows: 
+                        <br> <br>
+                        1. Optimization of corporate actions <br>
+                        2. Traceability of company performance <br>
+                        3. Simple administration of shares <br>
+                    </p>
+                    <img src="img/invest/daura.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="land-section land-section_dark-grey">
+            <div class="container">
+                <div class="ineichen-join-auction">
+                    <a href="" class="c-button c-button_milk-white c-button_filled c-button_full">Join the auction now</a>
+                    <div class="ineichen-invest-note-auth">
+                        <a href="" class="c-button c-button_milk-white c-button_filled c-button_full">Sign In</a>
+                        <a href="" class="c-button c-button_milk-white c-button_filled c-button_full">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="land-section land-section_milk-white ineichen-invest-footer">
+            <div class="container">
+                <img src="img/invest/footer-img.svg" alt="">
+            </div>
+        </div>
+    </main>
+    <div id="Modal" class="modal modal-small">
+        <div class="modal-small__title">Request</div>
+        <div class="modal-small__body">
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Full name</label>
+            </div>
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Registered address</label>
+            </div>
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Phone</label>
+            </div>
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Email</label>
+            </div>
+            <br> <br>
+            <p>
+                Our team will prepare and send you the Non Disclosure Agreement based on the information you provide. <br><br>
+                After the agreement is signed the materials will be sent to you via email.  
+            </p>
+            
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Send request</a>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('#Modal').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+    </script>
+</body>
+</html>

@@ -367,8 +367,8 @@ h1, h2, h3, h4 {
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 80px 100px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3vw 3vw;
 }
 .catalog-grid + .text-center {
   margin-top: 70px;
@@ -421,11 +421,11 @@ h1, h2, h3, h4 {
   transform: scale(1);
 }
 .catalog-grid-item:hover .image img {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1);
 }
 .catalog-grid-item:hover .image .image-top {
   opacity: 1;
-  transform: scale(1.1) rotate(-5deg);
+  transform: scale(1.1);
 }
 .catalog-grid-item:hover .image:before {
   transform: scale(0.9);
@@ -1495,10 +1495,28 @@ h1, h2, h3, h4 {
 }
 .artle-item-wrap .price {
   font-family: "BodoniC";
-  display: block;
+  display: flex;
+  align-items: center;
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 60px;
+}
+.artle-item-wrap .status {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 0px;
+  display: inline-block;
+  margin-left: 15px;
+}
+.artle-item-wrap .status.in-sale {
+  background: #59923F;
+}
+.artle-item-wrap .status.sold {
+  background: #e91e63;
+}
+.artle-item-wrap .status.reserved {
+  background: #3F5692;
 }
 .artle-item-wrap .btns {
   display: flex;
@@ -1907,7 +1925,7 @@ h1, h2, h3, h4 {
   grid-template-columns: 1fr 1fr;
 }
 .contacts-info h2 {
-  font-size: 64px;
+  font-size: 32px;
   margin-bottom: 30px;
 }
 .contacts-info p {
@@ -2578,8 +2596,7 @@ fieldset legend {
     margin-left: auto;
   }
   .catalog-grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
   }
   .catalog-grid.scroll-in-tablet {
     display: flex;
@@ -2705,10 +2722,6 @@ fieldset legend {
   }
   .modal-filters-list .list.double {
     display: block;
-  }
-  /******************contacts***********/
-  .contacts-info h2 {
-    font-size: 40px;
   }
   /***************about-artle**************/
   .about-artle .text {
@@ -2841,7 +2854,6 @@ fieldset legend {
   /*******************catalog-grid**************/
   .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 40px;
   }
   /*****************club-welcome-modal********/
   .call-to-action-form {
@@ -3106,7 +3118,6 @@ fieldset legend {
     margin-bottom: 30px;
   }
   .catalog-grid {
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 40px 25px;
   }
   .catalog-grid + .text-center {

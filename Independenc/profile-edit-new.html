@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Modal" class="modal sign-modal">
+        <div class="sign-wrapper">
+            <a href="#" class="sign-back">
+                <i class="mdi mdi-arrow-left"></i>&nbsp;&nbsp;Back to Ineichen
+            </a>
+            <div class="sign-form">
+                <h2 class="title">Payment information</h2>
+                <div class="sign-form__fields">
+                    <div class="c-select">
+                        <select name="" id="">
+                            <option value="">Corporate acoount</option>
+                            <option value="">Personal account</option>
+                        </select>
+                        <label class="c-select__label">Account type</label>
+                    </div>
+                    <div class="c-alert c-alert_red">Important! You will not be able to change your account type in the future. </div>
+                    <div class="c-alert c-alert_blue">Important! You will not be able to change your account type in the future. </div>
+                    <div class="c-alert c-alert_grey">Important! You will not be able to change your account type in the future. </div>
+                    <div class="c-alert c-alert_brown">Important! You will not be able to change your account type in the future. </div>
+                    <div class="c-field">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">Company name</label>
+                    </div>
+                    <div class="c-select">
+                        <select name="" id="">
+                            <option value="">USD</option>
+                            <option value="">RUB</option>
+                            <option value="">EUR</option>
+                        </select>
+                        <label class="c-select__label">Currency</label>
+                    </div>
+                </div>
+                <h2 class="title">Billing address</h2>
+                <div class="sign-form__fields">
+                    <div class="c-field">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">Address line 1 (Street and number)</label>
+                    </div>
+                    <div class="c-field">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">Address line 1 (Apt., suite, unit, floor etc)</label>
+                    </div>
+                    <div class="c-select">
+                        <select name="" id="">
+                            <option value="">Select</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                            <option value="">Russia</option>
+                            <option value="">Ukraine</option>
+                            <option value="">Uganda</option>
+                        </select>
+                        <label class="c-select__label">Country</label>
+                    </div>
+                    <div class="c-field">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">City</label>
+                    </div>
+                    <div class="c-field">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">Postal / Zip Code</label>
+                    </div>
+                    <label class="c-radio" for="SameAdress">
+                        <input type="radio" name="AnotherAdress" id="SameAdress">
+                        Organize delivery to the same address
+                    </label>
+                    <label class="c-radio" for="AnotherAdress">
+                        <input type="radio" name="AnotherAdress" id="AnotherAdress">
+                        Organize delivery to a different address
+                    </label>
+                    <label class="c-radio" for="PickUp">
+                        <input type="radio" name="AnotherAdress" id="PickUp">
+                        Pick up in the Ineichen Zurich office
+                    </label>
+                </div>
+                <div class="sign-form__btns">
+                    <a href="" class="sign-form__btn c-button c-button_blue c-button_filled c-button_full">Continue 👉</a>
+                    <a href="" class="sign-form__btn c-button c-button_grey c-button_outline c-button_full">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('#Modal').modal();
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            // any initialisation options go here
+        });
+        
+    </script>
+</body>
+</html>
