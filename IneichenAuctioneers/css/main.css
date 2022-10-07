@@ -77,6 +77,10 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.filter-bw {
+  filter: grayscale(100%);
+}
+
 .green-text {
   color: #529959 !important;
 }
@@ -262,7 +266,7 @@ select:-webkit-autofill:focus {
 .article-text table td {
   font-size: 14px;
   padding: 10px 15px;
-  border-color: #E1E1E1;
+  border: 1px #E1E1E1 solid;
   font-weight: 500;
 }
 
@@ -1917,6 +1921,38 @@ select:-webkit-autofill:focus {
   padding-top: 105px;
 }
 
+/* --------------------------------- get app -------------------------------- */
+.get-app {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.get-app__logo {
+  width: 250px;
+}
+.get-app__body {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.get-app__text {
+  margin: 8vh 0;
+  max-width: 250px;
+  line-height: 1.4;
+}
+.get-app__links {
+  display: grid;
+  gap: 10px 0;
+}
+
 /* ---------------------------------- index --------------------------------- */
 .main-banner {
   display: grid;
@@ -2784,17 +2820,8 @@ select:-webkit-autofill:focus {
   transform: scale(0.5);
   opacity: 0;
 }
-.lot-item:nth-child(n+0):hover .lot-item__image img {
+.lot-item:hover .lot-item__image img {
   transform: scale(1.2) rotate(0deg);
-}
-.lot-item:nth-child(2n+0):hover .lot-item__image img {
-  transform: scale(1.2) rotate(5deg);
-}
-.lot-item:nth-child(3n+0):hover .lot-item__image img {
-  transform: scale(1.2) rotate(-5deg);
-}
-.lot-item:nth-child(4n+0):hover .lot-item__image img {
-  transform: scale(1.4) rotate(0deg);
 }
 
 .live-auction {
@@ -3455,13 +3482,17 @@ select:-webkit-autofill:focus {
   padding: 30px 0;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 210px 1fr;
   gap: 0 20px;
   margin-bottom: 30px;
 }
 .product__bids_guest {
   display: flex;
   align-items: center;
+}
+.product__bids-btn {
+  display: flex;
+  gap: 0 15px;
 }
 .product__bids-history {
   border: 1px #1C2473 solid;
@@ -3541,6 +3572,9 @@ select:-webkit-autofill:focus {
 .timed-auction-end strong {
   font-family: "GT America Extended", sans-serif;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
 }
 .timed-auction-end__progress {
   margin: 20px 0 0;
@@ -3560,6 +3594,28 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-direction: column;
   gap: 5px 0;
+}
+.timed-auction-end__countdown {
+  flex: 0 0 auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.timed-auction-end__countdown i.mdi {
+  margin-left: 5px;
+  color: #676767;
+  cursor: pointer;
+}
+.timed-auction-end__countdown i.mdi:before {
+  -webkit-animation-duration: 0.5s !important;
+          animation-duration: 0.5s !important;
+}
+.timed-auction-end__countdown i.mdi:hover {
+  color: #1C2473;
+}
+.timed-auction-end__countdown b {
+  font-size: 14px;
+  color: #1C2473;
 }
 
 /* --------------------------------- account -------------------------------- */
@@ -4665,6 +4721,20 @@ select:-webkit-autofill:focus {
   display: grid;
   grid-template-rows: 1fr;
   gap: 15px 0;
+}
+
+.buyitnow-confirm {
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.buyitnow-confirm__product {
+  font-size: 22px;
+}
+.buyitnow-confirm__price {
+  margin-top: 15px;
+  color: #1C2473;
+  font-size: 32px;
 }
 
 /* --------------------------------- footer --------------------------------- */
@@ -6873,6 +6943,10 @@ select:-webkit-autofill:focus {
   .product__info-col {
     padding: 30px;
   }
+  .product__bids {
+    grid-template-columns: 1fr;
+    gap: 15px 0;
+  }
   .timed-auction-end__current-bid {
     margin-left: 30px;
   }
@@ -7852,11 +7926,9 @@ select:-webkit-autofill:focus {
     font-size: 14px;
   }
   .product__bids {
-    grid-template-columns: 1fr;
     border-color: rgba(225, 225, 225, 0.5);
     padding: 20px 20px;
     margin: 0 -20px 0px;
-    gap: 15px 0;
   }
   .product__bids strong {
     text-align: left;
@@ -7887,6 +7959,8 @@ select:-webkit-autofill:focus {
   }
   .product__bids-btn {
     grid-column: 2 span;
+    flex-direction: column;
+    gap: 15px 15px;
   }
   .product__params {
     display: block;

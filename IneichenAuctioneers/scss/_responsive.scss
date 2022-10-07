@@ -647,6 +647,10 @@
         &__info-col {
             padding: 30px;
         }
+        &__bids {
+            grid-template-columns: 1fr;
+            gap: 15px 0;
+        }
     }
     .timed-auction-end {
         &__current-bid {
@@ -1738,11 +1742,10 @@
             }
         }
         &__bids {
-            grid-template-columns: 1fr;
             border-color: rgba($grey-line, .5);
             padding: 20px 20px;
             margin: 0 -20px 0px;
-            gap: 15px 0;
+            
             strong {
                 text-align: left;
                 line-height: 1.1;
@@ -1752,6 +1755,7 @@
                 gap: 0 15px;
             }
         }
+
         &__other-links {
             display: grid;
             grid-template-rows: 1fr;
@@ -1774,6 +1778,8 @@
 
         &__bids-btn {
             grid-column: 2 span;
+            flex-direction: column;
+            gap: 15px 15px;
         }
         &__params {
             display: block;

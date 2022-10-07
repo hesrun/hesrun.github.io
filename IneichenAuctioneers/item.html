@@ -99,6 +99,7 @@
                     </div>
                     <div class="product__bids-btn">
                         <a href="" class="c-button c-button_pink c-button_filled c-button_full">Verify your account to confirm the bid</a>
+                        <a href="#" id="BuyItNowOpen" class="c-button c-button_green c-button_filled c-button_full">Buy it now - CHF 30 000</a>
                     </div>
                 </div>
                 <div class="product__bids product__bids_guest">
@@ -174,6 +175,20 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="BuyItNow" class="modal modal-small">
+        <div class="modal-small__title">Bui It Now</div>
+        <div class="modal-small__body">
+            <div class="buyitnow-confirm">
+                <div class="buyitnow-confirm__product">Verge Pocket Watch</div>
+                <div class="buyitnow-confirm__price">CHF 2'000.</div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, ab.</p>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_green c-button_filled c-button_full c-button_medium">Buy this Lot</a>
         </div>
     </div>
 
@@ -365,6 +380,19 @@
             video.play();
             $(this).fadeOut();
         })
+
+        $('#BuyItNowOpen').click(function(){
+            $('#BuyItNow').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
+            return false;
+        })
+
+
         $('#BidsHistoryOpen').click(function(){
             $('#BidsHistoryTable').modal({
                 fadeDuration: 100,
