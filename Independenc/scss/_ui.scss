@@ -231,6 +231,7 @@
         height: 35px;
         border-radius: 30px;
         font-size: 13px;
+        border-width: 1px;
     }
     &_mini {
         height: 25px;
@@ -297,9 +298,6 @@
     $root: &;
     position: relative;
     margin-top: 30px;
-    // &:first-child {
-    //     margin-top: 0px;
-    // }
     &:after,&:before {
         content: "";
         display: block;
@@ -310,11 +308,11 @@
     }
     &:after {
         width: 100%;
-        background: $grey-line;
+        background: rgba(#fff,0.2);
     }
     &:before {
         width: 0;
-        background: $blue-bg;
+        background: white;
         z-index: 1;
         transition: all 0.3s;
     }
@@ -327,7 +325,7 @@
         #{$root}__label {
             top: -10px;
             left: 0px;
-            color: $blue-text;
+            color: white;
             font-size: 12px;
             font-weight: 500;
         }
@@ -336,12 +334,14 @@
         }
     }
     &__input {
+        color: #fff;
         width: 100%;
         height: 60px;
         border: none;
         border-radius: 0px;
         font-size: 16px;
         outline: none;
+        background: none;
     }
     textarea.c-field__input {
         resize: vertical;

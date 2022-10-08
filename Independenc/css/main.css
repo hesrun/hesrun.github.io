@@ -16,6 +16,8 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 15px;
   line-height: 1;
+  background: #000;
+  color: #fff;
 }
 body::-webkit-scrollbar {
   background-color: #fff;
@@ -528,6 +530,7 @@ select:-webkit-autofill:focus {
   height: 35px;
   border-radius: 30px;
   font-size: 13px;
+  border-width: 1px;
 }
 .c-button_mini {
   height: 25px;
@@ -597,11 +600,11 @@ select:-webkit-autofill:focus {
 }
 .c-field:after {
   width: 100%;
-  background: #E1E1E1;
+  background: rgba(255, 255, 255, 0.2);
 }
 .c-field:before {
   width: 0;
-  background: #1C2473;
+  background: white;
   z-index: 1;
   transition: all 0.3s;
 }
@@ -611,7 +614,7 @@ select:-webkit-autofill:focus {
 .c-field.active .c-field__label {
   top: -10px;
   left: 0px;
-  color: #1C2473;
+  color: white;
   font-size: 12px;
   font-weight: 500;
 }
@@ -619,12 +622,14 @@ select:-webkit-autofill:focus {
   width: 100%;
 }
 .c-field__input {
+  color: #fff;
   width: 100%;
   height: 60px;
   border: none;
   border-radius: 0px;
   font-size: 16px;
   outline: none;
+  background: none;
 }
 .c-field textarea.c-field__input {
   resize: vertical;
@@ -1476,15 +1481,19 @@ select:-webkit-autofill:focus {
   top: 0px;
   left: 0px;
   width: 100%;
-  background: black;
-  padding: 50px 60px;
+  background: #1F2022;
+  padding: 30px 60px;
   z-index: 100;
   color: #fff;
   transition: padding 0.3s, box-shadow 1s;
 }
 .header_mini {
-  padding: 30px 30px;
+  padding: 15px 30px;
   box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.2);
+}
+.header_mini .header__logo img {
+  height: 30px;
+  transition: all 0.3s;
 }
 .header__logo {
   position: absolute;
@@ -1493,7 +1502,7 @@ select:-webkit-autofill:focus {
   transform: translate(-50%, -50%);
 }
 .header__logo img {
-  height: 56px;
+  height: 50px;
 }
 .header__logo_white {
   display: none;
@@ -1637,12 +1646,13 @@ select:-webkit-autofill:focus {
 .header__search-form input {
   color: white;
   background: none;
-  font-size: 20px;
+  font-size: 16px;
   border: none;
   height: 40px;
   flex: 1 1 auto;
   margin-right: 30px;
   outline: none;
+  border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
 }
 .header__search-form a {
   color: white;
@@ -1759,10 +1769,7 @@ select:-webkit-autofill:focus {
 
 /* --------------------------------- content -------------------------------- */
 .content {
-  padding-top: 145px;
-}
-.content_black {
-  background: black;
+  padding-top: 105px;
 }
 
 /* ---------------------------------- index --------------------------------- */
@@ -1779,93 +1786,6 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   margin-top: 1vw;
   font-size: 2vw;
-}
-
-.acuction-highlights {
-  display: flex;
-  align-items: center;
-  gap: 0 6vw;
-}
-.acuction-highlights__info {
-  flex: 1 1 auto;
-}
-.acuction-highlights__counts {
-  display: flex;
-  justify-content: space-between;
-}
-.acuction-highlights__counts b {
-  margin-bottom: 10px;
-  display: block;
-  font-weight: 400;
-  font-family: "GT America Extended", sans-serif;
-  font-size: 32px;
-}
-.acuction-highlights__date {
-  font-family: "GT America Extended", sans-serif;
-  display: flex;
-  align-items: center;
-  flex: 0 0 auto;
-  line-height: 1.2;
-}
-.acuction-highlights__date b {
-  font-size: 10vw;
-  font-weight: 500;
-}
-.acuction-highlights__date span {
-  font-size: 3.5vw;
-}
-.acuction-highlights__date strong {
-  font-size: 2.5vw;
-  font-weight: 500;
-  margin-left: 2vw;
-}
-
-/* ------------------------------ catalog-grid ------------------------------ */
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 50px 15px;
-}
-
-.catalog-item {
-  color: #fff;
-  text-decoration: none;
-}
-.catalog-item:hover .catalog-item__image img {
-  filter: brightness(3);
-  transform: scale(0.95);
-}
-.catalog-item__image {
-  position: relative;
-}
-.catalog-item__image img {
-  width: 100%;
-  transition: all 1s;
-}
-.catalog-item__num {
-  position: absolute;
-  left: 30px;
-  bottom: 30px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-  background: white;
-  color: black;
-  font-size: 15px;
-  border-radius: 15px;
-}
-.catalog-item__info {
-  margin-top: 30px;
-  padding: 0 30px;
-  text-decoration: none;
-}
-.catalog-item__price {
-  font-size: 15px;
-}
-.catalog-item__buy-now {
-  margin-top: 10px;
-  font-size: 15px;
 }
 
 /* ---------------------------------- results --------------------------------- */
@@ -2165,11 +2085,12 @@ select:-webkit-autofill:focus {
   transition: all 0.5s;
 }
 .lot-item__image {
+  margin: 70px 0;
   display: block;
   overflow: hidden;
   border-radius: 15px;
   position: relative;
-  padding-top: 150%;
+  padding-top: 100%;
   transition: filter 1s;
 }
 .lot-item__image > img {
@@ -2204,6 +2125,7 @@ select:-webkit-autofill:focus {
   transform: none !important;
 }
 .lot-item__price {
+  text-align: center;
   display: grid;
   margin: 10px 10px 0 10px;
   font-size: 13px;
@@ -2215,7 +2137,6 @@ select:-webkit-autofill:focus {
 }
 .lot-item__price-range {
   color: #676767;
-  display: flex;
 }
 .lot-item__bids-count {
   margin-left: auto;
@@ -2256,10 +2177,11 @@ select:-webkit-autofill:focus {
   display: block;
   width: 35px;
   height: 35px;
-  left: 25px;
-  bottom: 25px;
-  background: black;
-  color: #fff;
+  left: 50%;
+  margin-left: -17px;
+  bottom: 30px;
+  background: white;
+  color: black;
   text-align: center;
   line-height: 35px;
   border-radius: 50%;
@@ -2288,8 +2210,6 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 13px;
   letter-spacing: 1px;
-  opacity: 0;
-  transition: all 0.5s;
 }
 .lot-item__link {
   position: relative;
@@ -2319,11 +2239,11 @@ select:-webkit-autofill:focus {
   border-radius: 50px;
   width: 180px;
   height: 35px;
-  background: #000;
+  background: white;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: black;
   cursor: pointer;
   white-space: nowrap;
   opacity: 0;
@@ -2348,6 +2268,7 @@ select:-webkit-autofill:focus {
 }
 .lot-item__favorite:hover {
   background: #1C2473;
+  color: #fff;
 }
 .lot-item__favorite_active {
   margin: 0 0 -10px -25px;
@@ -2386,17 +2307,8 @@ select:-webkit-autofill:focus {
   transform: scale(0.5);
   opacity: 0;
 }
-.lot-item:nth-child(n+0):hover .lot-item__image img {
+.lot-item:hover .lot-item__image img {
   transform: scale(1.2) rotate(0deg);
-}
-.lot-item:nth-child(2n+0):hover .lot-item__image img {
-  transform: scale(1.2) rotate(5deg);
-}
-.lot-item:nth-child(3n+0):hover .lot-item__image img {
-  transform: scale(1.2) rotate(-5deg);
-}
-.lot-item:nth-child(4n+0):hover .lot-item__image img {
-  transform: scale(1.4) rotate(0deg);
 }
 
 .live-auction {
@@ -3388,10 +3300,6 @@ select:-webkit-autofill:focus {
   background: #1C2473;
   color: #fff;
 }
-.land-section_black {
-  background: black;
-  color: #fff;
-}
 .land-section_dark-grey {
   background: #2F3140;
   color: #fff;
@@ -3410,6 +3318,30 @@ select:-webkit-autofill:focus {
 }
 .land-section_half {
   padding: 50px 0;
+}
+
+.section-divider {
+  text-align: center;
+}
+.section-divider__inner {
+  position: relative;
+}
+.section-divider__inner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.section-divider__button {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  background: #000;
+  padding: 0 30px;
 }
 
 .sell-watch-form {
@@ -3716,6 +3648,92 @@ select:-webkit-autofill:focus {
   font-size: 2.8vw;
   text-align: center;
   line-height: 1.3;
+}
+
+/* ------------------------------- watchmakers ------------------------------ */
+.watchmakers-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px 30px;
+}
+
+.watchmakers-item {
+  color: #fff;
+  text-decoration: none;
+}
+.watchmakers-item:hover .watchmakers-item__image img {
+  filter: grayscale(0%);
+}
+.watchmakers-item__image img {
+  border-radius: 18px;
+  width: 100%;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+.watchmakers-item__name {
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+.watchmakers-item__profession {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ----------------------------- press-logo-grid ---------------------------- */
+.press-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.press-logo-grid img {
+  width: 100%;
+  filter: invert(1);
+  opacity: 0.6;
+  transition: opacity 0.5s;
+}
+.press-logo-grid a:hover img {
+  opacity: 1;
+}
+
+/* ------------------------------ benefits-list ----------------------------- */
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 70px;
+}
+
+.benefits-item__name {
+  margin: 25px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.benefits-item p {
+  line-height: 1.5;
+}
+
+/* --------------------------------- how to --------------------------------- */
+.how-to-participate > p {
+  margin-bottom: 50px;
+  line-height: 1.5;
+  font-family: "GT America Extended", sans-serif;
+}
+.how-to-participate__form {
+  display: grid;
+  gap: 50px 0;
+}
+.how-to-participate__row {
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  gap: 0 70px;
+  align-items: center;
+}
+.how-to-participate textarea.c-field__input {
+  min-height: 418px;
+  resize: none;
 }
 
 /* --------------------------------- contact -------------------------------- */
@@ -5940,42 +5958,6 @@ select:-webkit-autofill:focus {
     height: 42px;
   }
   /* ---------------------------------- index --------------------------------- */
-  .acuction-highlights {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 3vw 0;
-    text-align: center;
-  }
-  .acuction-highlights .title {
-    justify-content: center;
-  }
-  .acuction-highlights__info {
-    width: 100%;
-  }
-  .acuction-highlights__date {
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-  .acuction-highlights__date br {
-    display: none;
-  }
-  .acuction-highlights__date b {
-    font-size: 10vw;
-  }
-  .acuction-highlights__date span {
-    font-size: 8vw;
-  }
-  .acuction-highlights__date strong {
-    font-size: 8vw;
-    margin-left: 0vw;
-  }
-  /* ------------------------------ catalog-grid ------------------------------ */
-  .catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px 15px;
-  }
   /* --------------------------------- auction -------------------------------- */
   .lots-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -6263,15 +6245,6 @@ select:-webkit-autofill:focus {
     max-width: 400px;
   }
   /* ---------------------------------- index --------------------------------- */
-  .acuction-highlights__counts {
-    margin: 50px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px 15px;
-  }
-  .acuction-highlights__counts b {
-    font-size: 24px;
-  }
   .auction-item__image {
     height: 20vh;
   }
@@ -7015,12 +6988,6 @@ select:-webkit-autofill:focus {
   .main-banner h5 {
     margin-top: 3vw;
     font-size: 4vw;
-  }
-  /* ------------------------------ catalog-grid ------------------------------ */
-  .catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px 15px;
   }
   /* ---------------------------------- results --------------------------------- */
   .image-banner {
