@@ -1773,19 +1773,55 @@ select:-webkit-autofill:focus {
 }
 
 /* ---------------------------------- index --------------------------------- */
-.main-banner {
-  padding: 10vw 0;
-  text-align: center;
-  color: #fff;
+.independent-banner {
+  position: relative;
+  display: grid;
 }
-.main-banner h1 {
-  font-weight: 500;
-  font-size: 4vw;
+.independent-banner__image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.3;
 }
-.main-banner h5 {
-  font-weight: 500;
-  margin-top: 1vw;
-  font-size: 2vw;
+.independent-banner__content {
+  padding: 20vh 30px;
+  margin: auto;
+  z-index: 1;
+}
+.independent-banner__title {
+  text-align: right;
+  margin-bottom: 70px;
+}
+.independent-banner__title h1 {
+  font-size: 70px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.independent-banner__title span {
+  font-size: 20px;
+  font-family: "GT America Extended", sans-serif;
+}
+.independent-banner__info {
+  display: flex;
+  gap: 0 8vw;
+}
+.independent-banner__date {
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  color: #E4A427;
+}
+.independent-banner__text p {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.independent-banner__text a {
+  margin-right: 10px;
 }
 
 /* ---------------------------------- results --------------------------------- */
@@ -3651,6 +3687,26 @@ select:-webkit-autofill:focus {
 }
 
 /* ------------------------------- watchmakers ------------------------------ */
+.alphabet-sorting {
+  display: flex;
+  gap: 10px 15px;
+  margin-bottom: 80px;
+}
+.alphabet-sorting__item {
+  cursor: pointer;
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+.alphabet-sorting__item.mixitup-control-active, .alphabet-sorting__item:hover {
+  opacity: 1;
+}
+
 .watchmakers-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -3662,14 +3718,14 @@ select:-webkit-autofill:focus {
   text-decoration: none;
 }
 .watchmakers-item:hover .watchmakers-item__image img {
-  filter: grayscale(0%);
+  filter: grayscale(0%) opacity(1);
 }
 .watchmakers-item__image img {
   border-radius: 18px;
   width: 100%;
   vertical-align: middle;
   margin-bottom: 20px;
-  filter: grayscale(100%);
+  filter: grayscale(100%) opacity(0.5);
   transition: filter 0.5s;
 }
 .watchmakers-item__name {
@@ -6979,16 +7035,6 @@ select:-webkit-autofill:focus {
     padding: 0 0 20px 0;
   }
   /* ---------------------------------- index --------------------------------- */
-  .main-banner {
-    padding: 10vw 0;
-  }
-  .main-banner h1 {
-    font-size: 6vw;
-  }
-  .main-banner h5 {
-    margin-top: 3vw;
-    font-size: 4vw;
-  }
   /* ---------------------------------- results --------------------------------- */
   .image-banner {
     margin-bottom: 30px;
