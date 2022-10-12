@@ -1397,12 +1397,6 @@
     grid-template-columns: 38% auto;
     gap: 0 60px;
     padding: 60px;
-    &__gallery-col {
-        //padding: 60px 0;
-    }
-    &__info-col {
-        //padding: 40px 0 60px;
-    }
     &__gallery-swipe {
         pointer-events: none;
         display: none;
@@ -1462,7 +1456,7 @@
         top: 0px;
         display: flex;
         align-items: center;
-        background: #fff;
+        background: black;
         padding: 20px 0 20px;
         z-index: 1;
     }
@@ -1480,8 +1474,8 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: black;
-            color: #fff;
+            background: white;
+            color: black;
             text-align: center;
             line-height: 40px;
         }
@@ -1495,14 +1489,14 @@
         border-radius: 50%;
         border: 1px $grey-line solid;
         font-size: 24px;
-        color: #000;
+        color: white;
         transition: all 0.3s;
         & + & {
             margin-left: 15px;
         }
         &:hover {
-            border-color: $blue-bg;
-            background: $blue-bg;
+            border-color: $orange-bg;
+            background: $orange-bg;
             color: #fff;
         }
         &_loading {
@@ -1519,8 +1513,8 @@
                 border-radius: 50%;
                 border-top: 2px transparent solid;
                 border-right: 2px transparent solid;
-                border-bottom: 2px $blue-bg solid;
-                border-left: 2px $blue-bg solid;
+                border-bottom: 2px white solid;
+                border-left: 2px white solid;
                 animation: 0.5s Spin infinite linear;
             }
             &:hover:before {
@@ -1541,7 +1535,7 @@
         height: 40px;
         border-radius: 50%;
         font-size: 32px;
-        color: black;
+        color: white;
         transition: all 0.3s;
         &:hover {
             transform: rotate(180deg)
@@ -1549,12 +1543,12 @@
     }
     &__brand {
         font-weight: 500;
-        color: $grey-text;
+        color: white;
         margin-bottom: 30px;
     }
     &__name {
         font-size: 24px;
-        margin-bottom: 60px;
+        margin: 0 0 50px 0;
     }
     &__price {
         margin-bottom: 40px;
@@ -1566,14 +1560,10 @@
         div + div {
             margin-top: 20px;
         }
-        span {
-            color: $grey-text;
-        }
         strong {
             font-family: $america;
             font-size: 17px;
             text-transform: uppercase;
-            color: $blue-text;
         }
     }
     &__bids {
@@ -1618,11 +1608,11 @@
         align-items: center;
         font-weight: 500;
         a {
-            color: $grey-text;
+            color: white;
             font-weight: 500;
             margin-right: 30px;
             &:hover {
-                color: $blue-text;
+                color: $orange-text;
                 text-decoration: none;
             }
         }
@@ -1645,6 +1635,18 @@
             width: 200px;
         }
 
+    }
+}
+
+.product-maker {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 0 50px;
+    &__info {
+        line-height: 1.5;
+        p {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -2337,7 +2339,7 @@
     &__name {
         font-weight: 500;
         font-size: 17px;
-        margin-bottom: 8px;
+        margin: 0 0 8px 0;
     }
     &__profession {
         font-size: 14px;
