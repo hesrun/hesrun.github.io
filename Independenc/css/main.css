@@ -46,6 +46,8 @@ body.app {
 
 h1, h2, h3, h4, h5 {
   font-family: "GT America Extended", sans-serif;
+  line-height: 1;
+  font-weight: 500;
 }
 
 h1 {
@@ -5960,6 +5962,11 @@ select:-webkit-autofill:focus {
     padding-left: 30px;
     padding-right: 30px;
   }
+  /* ------------------------------- watchmaker detail ------------------------------ */
+  .master-detail {
+    grid-template-columns: 1fr 350px;
+    gap: 0 50px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .content {
@@ -6300,6 +6307,22 @@ select:-webkit-autofill:focus {
   }
 }
 @media screen and (max-width: 820px) {
+  h1 {
+    font-size: 36px;
+    margin: 45px 0 30px;
+  }
+  h2 {
+    font-size: 30px;
+    margin: 40px 0 25px;
+  }
+  h3 {
+    font-size: 24px;
+    margin: 35px 0 20px;
+  }
+  h4 {
+    font-size: 20px;
+    margin: 30px 0 15px;
+  }
   .title {
     font-size: 36px;
     margin: 80px 0 40px;
@@ -6307,6 +6330,13 @@ select:-webkit-autofill:focus {
   .title_small {
     font-size: 20px;
     margin: 0 0 30px 0;
+  }
+  .title_back-link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title_back-link .c-button {
+    margin: 0 0 15px 0;
   }
   .sign-back {
     position: -webkit-sticky;
@@ -6363,8 +6393,32 @@ select:-webkit-autofill:focus {
     resize: none;
   }
   /* ------------------------------- watchmakers ------------------------------ */
+  .watchmakers-title {
+    display: flex;
+    flex-direction: column;
+  }
+  .watchmakers-title__join {
+    justify-content: space-between;
+  }
+  .alphabet-sorting {
+    display: flex;
+    gap: 10px 15px;
+    margin: 30px 0;
+  }
+  .alphabet-sorting__item {
+    font-size: 18px;
+  }
   .watchmakers-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  /* ------------------------------- watchmaker detail ------------------------------ */
+  .master-detail {
+    grid-template-columns: 1fr;
+    gap: 50px 0;
+  }
+  .master-detail__watch {
+    max-width: 300px;
+    margin: auto;
   }
   /* ----------------------------- press-logo-grid ---------------------------- */
   .press-logo-grid {
@@ -6627,26 +6681,6 @@ select:-webkit-autofill:focus {
     padding: 20px 0;
   }
   /* --------------------------------- global --------------------------------- */
-  .article-text > h1 {
-    font-size: 26px;
-    margin: 30px 0 15px;
-  }
-  .article-text > h2 {
-    font-size: 24px;
-    margin: 30px 0 15px;
-  }
-  .article-text > h3 {
-    font-size: 22px;
-    margin: 30px 0 15px;
-  }
-  .article-text > h4 {
-    font-size: 20px;
-    margin: 30px 0 15px;
-  }
-  .article-text > h5 {
-    font-size: 18px;
-    margin: 30px 0 15px;
-  }
   .article-text p {
     margin: 15px 0;
   }
@@ -6982,13 +7016,28 @@ select:-webkit-autofill:focus {
   }
 }
 @media screen and (max-width: 520px) {
+  h1 {
+    font-size: 30px;
+    margin: 45px 0 30px;
+  }
+  h2 {
+    font-size: 26px;
+    margin: 40px 0 25px;
+  }
+  h3 {
+    font-size: 22px;
+    margin: 35px 0 20px;
+  }
+  h4 {
+    font-size: 18px;
+    margin: 30px 0 15px;
+  }
   .mob-hidden {
     display: none;
   }
   .title {
-    text-align: center;
-    font-size: 22px;
-    margin: 40px 0 20px;
+    font-size: 30px;
+    margin: 45px 0 30px;
   }
   .title_small {
     font-size: 20px;
@@ -7119,6 +7168,12 @@ select:-webkit-autofill:focus {
     margin-bottom: 30px;
   }
   /* ---------------------------------- watchmakers --------------------------------- */
+  .watchmakers-title__join .c-button {
+    flex: 0 0 auto;
+  }
+  .alphabet-sorting__item {
+    font-size: 14px;
+  }
   .watchmakers-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 15px;
@@ -7132,6 +7187,10 @@ select:-webkit-autofill:focus {
   }
   .watchmakers-item__profession {
     font-size: 12px;
+  }
+  /* ------------------------------- watchmaker detail ------------------------------ */
+  .master-detail__watch {
+    max-width: 100%;
   }
   /* ----------------------------- press-logo-grid ---------------------------- */
   .press-logo-grid {
@@ -7792,12 +7851,6 @@ select:-webkit-autofill:focus {
     font-size: 5vw;
   }
   /* --------------------------------- global --------------------------------- */
-  .article-text > h2 {
-    font-weight: 500;
-    font-size: 22px;
-    margin-top: 45px;
-    margin-bottom: 20px;
-  }
   .article-text p {
     margin: 15px 0;
   }
@@ -7827,17 +7880,18 @@ select:-webkit-autofill:focus {
     gap: 0 15px;
   }
   .products-gallery {
-    grid-gap: 15px;
+    gap: 30px;
+    grid-template-columns: 1fr;
   }
   .products-gallery__image {
     margin-bottom: 15px;
   }
   .products-gallery__brand {
     margin: 0 0 3px 0;
-    font-size: 14px;
+    font-size: 18px;
   }
   .products-gallery__name {
-    font-size: 12px;
+    font-size: 14px;
   }
   /* --------------------------------- footer --------------------------------- */
   .footer {
