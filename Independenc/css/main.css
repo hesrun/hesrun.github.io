@@ -1465,7 +1465,7 @@ select:-webkit-autofill:focus {
   padding: 30px 60px;
   z-index: 100;
   color: #fff;
-  transition: padding 0.3s, box-shadow 1s;
+  transition: padding 0.5s, box-shadow 1s;
 }
 .header_mini {
   padding: 15px 30px;
@@ -1473,7 +1473,6 @@ select:-webkit-autofill:focus {
 }
 .header_mini .header__logo img {
   height: 30px;
-  transition: all 0.3s;
 }
 .header__logo {
   position: absolute;
@@ -1482,7 +1481,8 @@ select:-webkit-autofill:focus {
   transform: translate(-50%, -50%);
 }
 .header__logo img {
-  height: 50px;
+  transition: all 0.5s;
+  height: 40px;
 }
 .header__logo_white {
   display: none;
@@ -1872,17 +1872,46 @@ select:-webkit-autofill:focus {
 }
 
 /* ------------------------------- watchmaker detail ------------------------------ */
-.master-detail {
+.master-detail__master-info {
   display: grid;
-  grid-template-columns: 1fr 450px;
-  gap: 0 80px;
+  grid-gap: 0 70px;
+}
+.master-detail__watch {
+  width: 430px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.master-detail__watch h2 {
+  margin-top: 0;
+}
+.master-detail__watch .lot-item {
+  border: 1px rgba(255, 255, 255, 0.5) solid;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+.master-detail__main-info {
+  display: grid;
+  grid-gap: 0 70px;
+}
+.master-detail__right {
+  width: 430px;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 .master-detail__contacts {
   line-height: 1.5;
 }
+.master-detail__photo {
+  height: 100%;
+}
 .master-detail__photo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .master-detail__socials {
   margin-top: 20px;
@@ -5966,11 +5995,6 @@ select:-webkit-autofill:focus {
     padding-left: 30px;
     padding-right: 30px;
   }
-  /* ------------------------------- watchmaker detail ------------------------------ */
-  .master-detail {
-    grid-template-columns: 1fr 350px;
-    gap: 0 50px;
-  }
 }
 @media screen and (max-width: 1024px) {
   .content {
@@ -6054,6 +6078,22 @@ select:-webkit-autofill:focus {
   /* ------------------------------- watchmakers ------------------------------ */
   .watchmakers-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+  /* ------------------------------- watchmaker detail ------------------------------ */
+  .master-detail__master-info {
+    grid-gap: 0 30px;
+  }
+  .master-detail__main-info {
+    grid-gap: 0 30px;
+  }
+  .master-detail__watch {
+    width: 300px;
+  }
+  .master-detail__watch h2 {
+    display: none;
+  }
+  .master-detail__right {
+    width: 300px;
   }
   /* --------------------------------- auction -------------------------------- */
   .lots-grid {
@@ -6417,17 +6457,6 @@ select:-webkit-autofill:focus {
   }
   .watchmakers-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-  /* ------------------------------- watchmaker detail ------------------------------ */
-  .master-detail {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .master-detail__watch {
-    line-height: 1;
-    float: right;
-    max-width: 300px;
-    margin: 0 0 30px 30px;
   }
   /* ----------------------------- press-logo-grid ---------------------------- */
   .press-logo-grid {
@@ -7198,9 +7227,23 @@ select:-webkit-autofill:focus {
     font-size: 12px;
   }
   /* ------------------------------- watchmaker detail ------------------------------ */
+  .master-detail__master-info {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 15px;
+  }
+  .master-detail__main-info {
+    grid-template-columns: 1fr;
+    gap: 30px 0;
+  }
   .master-detail__watch {
-    max-width: 150px;
-    margin: 0 0 15px 15px;
+    width: auto;
+  }
+  .master-detail__watch .lot-item {
+    padding: 15px;
+  }
+  .master-detail__right {
+    grid-column: 1/1;
+    width: auto;
   }
   /* ----------------------------- press-logo-grid ---------------------------- */
   .press-logo-grid {

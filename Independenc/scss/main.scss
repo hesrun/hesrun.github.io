@@ -32,14 +32,13 @@
     padding: 30px 60px;
     z-index: 100;
     color: #fff;
-    transition: padding 0.3s, box-shadow 1s;
+    transition: padding 0.5s, box-shadow 1s;
     &_mini {
         padding: 15px 30px;
         box-shadow: 0 0 10px 6px rgba(black,0.2);
         #{$root}__logo {
             img {
                 height: 30px;
-                transition: all 0.3s;
             }
         }
     }
@@ -49,7 +48,8 @@
         top: 50%;
         transform: translate(-50%,-50%);
         img {
-            height: 50px;
+            transition: all 0.5s;
+            height: 40px;
         }
         &_white {
             display: none;
@@ -447,16 +447,43 @@
 }
 /* ------------------------------- watchmaker detail ------------------------------ */
 .master-detail {
-    display: grid;
-    grid-template-columns: 1fr 450px;
-    gap: 0 80px;
+    &__master-info {
+        display: grid;
+        grid-gap: 0 70px;
+    }
+    &__watch {
+        width: 430px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        h2 {
+            margin-top: 0;
+        }
+        .lot-item {
+            border: 1px rgba($grey-line, 0.5) solid;
+            padding-bottom: 30px;
+            border-radius: 10px;
+        }
+    }
+    &__main-info {
+        display: grid;
+        grid-gap: 0 70px;
+    }
+    &__right {
+        width: 430px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
     &__contacts {
         line-height: 1.5;
     }
     &__photo {
+        height: 100%;
         img {
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
             width: 100%;
-            border-radius: 20px;
+            border-radius: 10px;
         }
     }
     &__socials {

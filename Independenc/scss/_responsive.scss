@@ -36,12 +36,6 @@
         padding-left: 30px;
         padding-right: 30px;
     }
-    /* ------------------------------- watchmaker detail ------------------------------ */
-    .master-detail {
-        grid-template-columns: 1fr 350px;
-        gap: 0 50px;
-    }
-
 }
 
 @media screen and (max-width: 1024px) {
@@ -134,6 +128,25 @@
     /* ------------------------------- watchmakers ------------------------------ */
     .watchmakers-grid {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ------------------------------- watchmaker detail ------------------------------ */
+    .master-detail {
+        &__master-info {
+            grid-gap: 0 30px;
+        }
+        &__main-info {
+            grid-gap: 0 30px;
+        }
+        &__watch {
+            width: 300px;
+            h2 {
+                display: none;
+            }
+        }
+        &__right {
+            width: 300px;
+        }
     }
 
 
@@ -528,18 +541,6 @@
     }
     .watchmakers-grid {
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* ------------------------------- watchmaker detail ------------------------------ */
-    .master-detail {
-        grid-template-columns: 1fr;
-        gap: 0;
-        &__watch {
-            line-height: 1;
-            float: right;
-            max-width: 300px;
-            margin: 0 0 30px 30px;
-        }
     }
 
     /* ----------------------------- press-logo-grid ---------------------------- */
@@ -1425,9 +1426,23 @@
 
     /* ------------------------------- watchmaker detail ------------------------------ */
     .master-detail {
+        &__master-info {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0 15px;
+        }
+        &__main-info {
+            grid-template-columns: 1fr;
+            gap: 30px 0;
+        }
         &__watch {
-            max-width: 150px;
-            margin: 0 0 15px 15px;
+            width: auto;
+            .lot-item {
+                padding: 15px;
+            }
+        }
+        &__right {
+            grid-column: 1/1;
+            width: auto;
         }
     }
 
