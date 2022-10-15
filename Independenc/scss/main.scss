@@ -2085,7 +2085,7 @@
 
 /* --------------------------------- landing -------------------------------- */
 .land-section {
-    padding: 100px 0;
+    padding: 70px 0;
     .title:first-child {
         margin-top: 0px;
     }
@@ -2560,6 +2560,11 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 80px;
     margin-bottom: 50px;
+    &__item:hover {
+        img {
+            filter: grayscale(0) opacity(1);
+        }
+    }
     &__image {
         display: block;
         margin-bottom: 30px;
@@ -2567,6 +2572,8 @@
             vertical-align: middle;
             border-radius: 15px;
             width: 100%;
+            filter: grayscale(100%) opacity(0.5);
+            transition: all 0.3s;
         }
     }
     &__brand {
