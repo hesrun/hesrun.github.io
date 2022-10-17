@@ -591,10 +591,10 @@
         align-items: flex-start;
     }
     &__name {
-        font-size: 2.2vw;
+        font-size: 1.8vw;
         font-weight: 500;
         margin-bottom: 30px;
-        max-width: 50%;
+        max-width: 60%;
     }
     &__date,
     &__location {
@@ -927,6 +927,23 @@
     gap: 0 80px;
 }
 /* ------------------------------ auctions-list ----------------------------- */
+.auctions-filter {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 1fr auto;
+    &__buttons {
+        display: flex;
+        gap: 0 10px;
+    }
+    .c-button {
+        height: 40px;
+        font-size: 14px;
+    }
+    .mixitup-control-active {
+        background: $blue-bg;
+        color: #fff;
+    }
+}
 .auctions-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3349,7 +3366,7 @@
 /* --------------------------------- footer --------------------------------- */
 .footer {
     border-top: 1px $grey-line solid;
-    margin: 130px 0 0 0;
+    margin: 70px 0 0 0;
     padding: 60px 0;
     &__top-line {
         display: flex;

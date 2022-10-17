@@ -2035,10 +2035,10 @@ select:-webkit-autofill:focus {
   align-items: flex-start;
 }
 .banners-grid-item__name {
-  font-size: 2.2vw;
+  font-size: 1.8vw;
   font-weight: 500;
   margin-bottom: 30px;
-  max-width: 50%;
+  max-width: 60%;
 }
 .banners-grid-item__date, .banners-grid-item__location {
   display: flex;
@@ -2357,6 +2357,24 @@ select:-webkit-autofill:focus {
 }
 
 /* ------------------------------ auctions-list ----------------------------- */
+.auctions-filter {
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: 1fr auto;
+}
+.auctions-filter__buttons {
+  display: flex;
+  gap: 0 10px;
+}
+.auctions-filter .c-button {
+  height: 40px;
+  font-size: 14px;
+}
+.auctions-filter .mixitup-control-active {
+  background: #1C2473;
+  color: #fff;
+}
+
 .auctions-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -4740,7 +4758,7 @@ select:-webkit-autofill:focus {
 /* --------------------------------- footer --------------------------------- */
 .footer {
   border-top: 1px #E1E1E1 solid;
-  margin: 130px 0 0 0;
+  margin: 70px 0 0 0;
   padding: 60px 0;
 }
 .footer__top-line {
@@ -6804,6 +6822,13 @@ select:-webkit-autofill:focus {
     width: 60%;
     padding: 30px 0;
   }
+  /* ------------------------------ auctions-list ----------------------------- */
+  .auctions-filter {
+    grid-template-columns: 1fr;
+  }
+  .auctions-filter__buttons {
+    margin-bottom: 30px;
+  }
   .auctions-list {
     grid-template-columns: 1fr;
   }
@@ -7658,6 +7683,26 @@ select:-webkit-autofill:focus {
   .services-list__image {
     width: 50%;
     padding: 30px 0;
+  }
+  /* ------------------------------ auctions-list ----------------------------- */
+  .auctions-filter__buttons {
+    overflow: auto;
+    white-space: nowrap;
+    margin-bottom: 30px;
+  }
+  .auctions-filter__buttons::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  .auctions-filter__buttons::-webkit-scrollbar-thumb {
+    background: #fff;
+  }
+  .auctions-filter__buttons::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  .auctions-filter__buttons {
+    scrollbar-face-color: #fff;
+    scrollbar-track-color: #fff;
   }
   .auction-item {
     padding-right: 25px;
