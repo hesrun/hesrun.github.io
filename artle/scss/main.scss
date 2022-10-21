@@ -599,6 +599,30 @@ h1,h2,h3,h4,h5 {
     }
 }
 
+/* ------------------------------- about-artle ------------------------------ */
+.about-artle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 5vw; 
+    line-height: 2;
+    &__text {
+        max-width: 550px;
+        margin-bottom: 5vw;
+    }
+    &__image {
+        margin-bottom: 5vw;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__logo {
+        margin-bottom: 5vw;
+    }
+    p + p {
+        margin-top: 30px;
+    }
+}
+
 /*****************filters-modal***************/
 .filters-modal {
     position: fixed;
@@ -1158,216 +1182,140 @@ h1,h2,h3,h4,h5 {
         transform: translateY(-100%)
     }
 }
-.artle-item-section {
-    padding-top: 30px;
-    margin-bottom: 50px;
-}
-.artle-item-title {
+
+/* ------------------------------- watch-item ------------------------------- */
+
+.watch-item-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 60px;
-    margin-bottom: 30px;
-    .back {
-        font-size: 12px;
-        display: inline-flex;
+    margin: 0 0 50px 0;
+    &__btns {
+        display: flex;
         align-items: center;
-        text-decoration: none;
-        font-weight: 500;
-        color: inherit;
-        text-transform: uppercase;
-        i.mdi {
-            font-size: 20px;
-            margin-right: 5px;
-        }
+        gap: 0 15px;
     }
 }
-.artle-item-wrap {
+
+.watch-item-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 50px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0px auto 0px;
-    .image {
-        display: block;
-        text-align: center;
+    &__image {
         img {
-            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
-    .info {
-        max-width: 600px;
-        flex: 1 1 auto;
-        position: relative;
+    &__info {
+        padding: 5vw 70px;
+        background: rgba(#000, 0.8);
+        color: #fff;
+        backdrop-filter: blur(5px);
     }
-    .reff {
+    &__brand {
+        font-size: 34px;
+    }
+    &__name {
+        line-height: 1.5;
+        margin: 25px 0 0 0;
         display: block;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 14px;
+        font-size: 24px;
     }
-    .name {
-        font-size: 60px;
-        font-weight: 500;
-        letter-spacing: 4px;
-        margin: 30px 0;
+    &__status {
+        margin: 50px 0;
+        display: block;
+        font-size: 24px;
     }
-    .price {
-        font-family: "BodoniC";
+    &__action {
+        display: grid;
+        gap: 30px 0;
+        max-width: 300px;
+    }
+    &__links {
+        margin-top: 30px;
         display: flex;
-        align-items: center;
-        font-size: 32px;
-        font-weight: 500;
-        margin-bottom: 60px;
+        gap: 0 15px;
     }
-    .status {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        font-size: 0px;
-        display: inline-block;
-        margin-left: 15px;
-        &.in-sale {
-            background: $green;
-        }
-        &.sold {
-            background: $red;
-        }
-        &.reserved {
-            background: $blue;
-        }
-    }
-    .btns {
-        display: flex;
-        align-items: center;
-        .c-button + .c-button {
-            margin-left: 30px;
-        }
-    }
-    .splide {
-        &__arrow {
-            height: 3rem;
-            width: 3rem;
-            &:disabled {
-            }
-            &:hover {
-
-            }
-            svg {
-
-            }
-        }
-    }
-
 }
 
-.technical-params-cols {
-    max-width: 1400px;
-    margin: 0 auto;
+.reasons-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 10%;
-    h3 {
-        font-size: 32px;
-        margin-bottom: 50px;
-        text-transform: uppercase;
+    gap: 0 100px;
+    p {
+        line-height: 1.5;
+    }
+    .section-title {
+        margin-bottom: 30px;
+    }
+}
+
+.watch-item-about {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(#000, 0.8);
+    color: #fff;
+    padding: 70px 50px;
+    line-height: 1.4;
+    backdrop-filter: blur(5px);
+    blockquote {
+        border: 1px rgba(white, 0.4) solid;
+        padding: 30px;
+        font-size: 24px;
+        margin: 30px 0;
+    }
+    p {
+        line-height: 1.6;
+        margin: 24px 0 0 0;
+    }
+    figure {
+        max-width: 100%;
+        margin-left: 80px;
+        float: right;
+    }
+}
+
+
+
+
+.technical-params-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 100px;
+    .section-title {
+        margin-bottom: 30px;
     }
 }
 .technical-params-table {
     td {
-        font-size: 14px;
+        font-size: 15px;
         padding-bottom: 30px;
         vertical-align: top;
-        line-height: 1.4;
+        line-height: 1.5;
         &:first-child {
             padding-right: 30px;
             color: #aaa;
         }
     }
 }
-.item-banner {
-    color: #fff;
-    position: relative;
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(#000,0.6);
-        z-index: 0;
-    }
-    article {
-        max-width: 920px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-    }
-    h3 {
-        text-align: center;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        font-size: 32px;
-        margin-bottom: 50px;
-    }
-    h2 {
-        margin-bottom: 15px;
-        margin-top: 35px;
-    }
-    p {
-        line-height: 1.7;
-    }
-    &.black {
-        background: #000;
-    }
-}
+
+
+
+
+
 .parallax-mirror {
     background-color: #000;
 }
-.item-banner-image {
-    img {
-        width: 100%;
-        vertical-align: middle;
-    }
-}
-.item-priority {
-    padding: 75px 0 0;
-    .text {
-        display: flex;
-        align-items: center;
-        max-width: 920px;
-        margin: 0 auto;
-    }
-    strong {
-        font-family: "BodoniC";
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 1.4;
-        margin-right: 120px;
-        letter-spacing: 1px;
-    }
-    p {
-        line-height: 2;
-        font-weight: 400;
-    }
-}
+
 .about-mechanism {
-    padding: 60px 30px;
     overflow: hidden;
 }
 .about-mechanism-wrap {
-    max-width: 1400px;
     margin: 0 auto;
     position: relative;
-    h2 {
-        font-size: 32px;
-        text-transform: uppercase;
-        margin-bottom: 50px;
-    }
     .swiper-pagination-progressbar {
         width: 100%;
         height: 5px;
@@ -1417,36 +1365,10 @@ h1,h2,h3,h4,h5 {
     margin-bottom: 40px;
     img {
         vertical-align: middle;
+        width: 100%;
         max-width: 100%;
     }
     
-}
-.warranty-returns {
-    padding: 100px 0;
-    .blocks {
-        max-width: 920px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-    }
-    .blocks > div {
-        width: 100%;
-        max-width: 400px;
-    }
-    strong {
-        font-family: "BodoniC";
-        display: block;
-        font-size: 24px;
-        font-weight: 500;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        border-bottom: 1px rgba(#000,0.18) solid;
-        padding: 0 0 35px 0;
-        margin-bottom: 35px;
-    }
-    p {
-        line-height: 1.6;
-    }
 }
 
 /***************our club**************/
@@ -1490,30 +1412,6 @@ h1,h2,h3,h4,h5 {
         line-height: 1.2;
     }
 }
-.join-club-form {
-    margin: 70px 0;
-    background: #fff;
-    padding: 30px 30px;
-    text-align: center;
-    color: #000;
-    form {
-        max-width: 630px;
-        margin: 0 auto;
-    }
-    h2 {
-        font-size: 32px;
-        font-weight: 400;
-        margin: 30px 0;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-    }
-    .c-input {
-        margin-bottom: 30px;
-    }
-    .c-button {
-        margin-top: 0px;
-    }
-}
 .also-in-club {
     display: flex;
     justify-content: center;
@@ -1555,8 +1453,7 @@ h1,h2,h3,h4,h5 {
     .cols {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0 10%;
-        
+        gap: 0 10%; 
     }
     
 }
@@ -1625,12 +1522,12 @@ h1,h2,h3,h4,h5 {
         max-width: 100%;
     }
     .text {
-        padding: 10%;
+        margin-top: 4vw;
     }
     p {
         line-height: 2;
         font-size: 15px;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 }
 /***************contact****************/
@@ -1680,60 +1577,22 @@ h1,h2,h3,h4,h5 {
                      0px 0px 1px #000;
     }
 }
-/***************about-artle**************/
-.about-artle {
-    .row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0 100px;
-        margin-bottom: 30px;
-        align-items: center;
-        &.revers {
-            .image {
-                order: -1;
-            }
-        }
+/***************consign modals**************/
+.consign-result-modal {
+    max-width: 550px;
+    padding: 60px 30px;
+    strong {
+        font-family: "BodoniC";
+        font-weight: 400;
+        margin: 20px 0;
+        font-size: 32px;
+        display: block;
+        text-transform: uppercase;
     }
-    .image {
-        img {
-            width: 100%;
-            max-width: 100%;
-            vertical-align: middle
-        }
-    }
-    .text {
-        padding: 10% 10%;
-        line-height: 1.5;
-        p {
-            margin-bottom: 30px;
-        }
-        img {
-            height: 50px;
-        }
-    }
-    .col {
-        &.revers {
-            display: flex;
-            flex-direction: column-reverse;
-        }
+    p {
+        margin: 30px 0 40px;
     }
 }
-/***************consign modals**************/
-    .consign-result-modal {
-        max-width: 550px;
-        padding: 60px 30px;
-        strong {
-            font-family: "BodoniC";
-            font-weight: 400;
-            margin: 20px 0;
-            font-size: 64px;
-            display: block;
-            text-transform: uppercase;
-        }
-        p {
-            margin: 30px 0 40px;
-        }
-    }
 /*****************club-welcome-modal********/
 .club-welcome-modal {
     position: fixed;
@@ -1836,18 +1695,11 @@ h1,h2,h3,h4,h5 {
     display: flex;
     background: #000;
     .video-modal-wrap {
-        margin: auto;
-        width: 100%;
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-        padding-top: 25px;
-        iframe {
-            left: 0px;
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
-            width: 100%!important;
-            height: 100%!important;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
     .close-remodal {
@@ -1898,6 +1750,13 @@ h1,h2,h3,h4,h5 {
             font-size: 15px;
             vertical-align: top;
             margin-left: 10px;
+        }
+    }
+    &.icon-left {
+        .mdi {
+            font-size: 15px;
+            vertical-align: top;
+            margin-right: 10px;
         }
     }
     &.full {
@@ -2053,7 +1912,7 @@ h1,h2,h3,h4,h5 {
     position: relative;
     margin-bottom: 30px;
     input {
-        font-size: 14px;
+        font-size: 15px;
         height: 60px;
         border: none;
         width: 100%;
