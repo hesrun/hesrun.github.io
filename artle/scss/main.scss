@@ -158,7 +158,7 @@ h1,h2,h3,h4,h5 {
             font-size: 24px;
         }
         &:hover {
-            color: $hover-link;
+            color: $grey-text;
         }
     }
 }
@@ -421,7 +421,7 @@ h1,h2,h3,h4,h5 {
             }
         }
         .name {
-            color: $hover-link;
+            color: $grey-text;
         }
     }
 }
@@ -672,33 +672,7 @@ h1,h2,h3,h4,h5 {
 .filters-header {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
-    a {
-        display: inline-block;
-        text-decoration: none;
-        color: inherit;
-        transition: all 0.3s;
-    }
-    .apply, .clear {
-        font-size: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        height: 50px;
-        line-height: 50px;
-        padding: 0 35px;
-    }
-    .apply {
-        background: #000;
-        color: #fff;
-        &:hover {
-            background: #4caf50;
-        }
-    }
-    .clear {
-        &:hover {
-            color: #009bff;
-        }
-    }
+    margin-bottom: 50px; 
 }
 .modal-filters-list {
     display: flex;
@@ -1084,7 +1058,7 @@ h1,h2,h3,h4,h5 {
 
 .watch-item-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     gap: 0 50px;
     &__image {
         img {
@@ -1124,6 +1098,29 @@ h1,h2,h3,h4,h5 {
         display: flex;
         gap: 0 15px;
     }
+    .swiper-button-next, 
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background: #000;
+        color: #fff;
+        &:after {
+            display: none;
+        }
+        i.mdi {
+            font-size: 24px;
+        }
+        &:hover {
+            background: white;
+            color: black;
+        }
+    }
+    .swiper-button-next {
+        right: 0px;
+    }
+    .swiper-button-prev {
+        left: 0px;
+    }
 }
 
 .reasons-cols {
@@ -1146,6 +1143,9 @@ h1,h2,h3,h4,h5 {
     padding: 70px 50px;
     line-height: 1.4;
     backdrop-filter: blur(5px);
+    .section-title {
+        margin-bottom: 30px;
+    }
     blockquote {
         border: 1px rgba(white, 0.4) solid;
         padding: 30px;
@@ -1507,13 +1507,21 @@ h1,h2,h3,h4,h5 {
     &.light {
         border-color: #fff;
     }
+    &.clear {
+        color: black;
+        background: transparent;
+        border-color: transparent;
+        &:hover {
+            color: $grey-text;
+        }
+    }
     &.white {
         border-color: #fff;
         background: #fff;
         color: #000;
         &:hover {
-            border-color: #009bff;
-            background: #009bff;
+            border-color: black;
+            background: black;
             color: #fff;
         }
         &.outline {
@@ -1530,7 +1538,8 @@ h1,h2,h3,h4,h5 {
         background: #000;
         color: #fff;
         &:hover {
-            background: #009bff;
+            background: #fff;
+            color: #000;
         }
     }
     &.icon {
@@ -1540,7 +1549,7 @@ h1,h2,h3,h4,h5 {
             font-size: 20px;
         }
         &:hover {
-            border-color: #009bff;
+            border-color: black;
         }
     }
     &.small {
