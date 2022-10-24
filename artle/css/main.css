@@ -236,8 +236,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .artle-office {
-  display: flex;
-  gap: 0 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 100px;
 }
 .artle-office .image {
   flex: 0 0 auto;
@@ -574,7 +575,7 @@ h1, h2, h3, h4, h5 {
   font-size: 24px;
 }
 .account-activate-notif .close:hover {
-  color: #009bff;
+  color: #9e9e9e;
 }
 .account-activate-notif .btns {
   margin-left: auto;
@@ -715,7 +716,7 @@ h1, h2, h3, h4, h5 {
   cursor: pointer;
 }
 .search-modal .close:hover {
-  color: #009bff;
+  color: #9e9e9e;
 }
 .search-modal .search-field {
   width: 100%;
@@ -753,7 +754,7 @@ h1, h2, h3, h4, h5 {
   line-height: 50px;
 }
 .search-modal .search-field .search:hover {
-  background: #009bff;
+  background: #9e9e9e;
 }
 .search-modal .search-field .show-all-results {
   margin: 0px;
@@ -811,7 +812,7 @@ h1, h2, h3, h4, h5 {
   width: 30%;
 }
 .search-modal .search-drop a:hover {
-  color: #009bff;
+  color: #9e9e9e;
 }
 .search-modal .search-drop .empty {
   text-align: center;
@@ -900,9 +901,6 @@ h1, h2, h3, h4, h5 {
 }
 
 /*****************navi-modal mobile***************/
-.navi-modal.mobile .nav-top-brands {
-  padding: 10px 30px;
-}
 .navi-modal.mobile .close {
   position: absolute;
   left: 30px;
@@ -911,14 +909,10 @@ h1, h2, h3, h4, h5 {
 }
 .navi-modal.mobile .close:hover {
   cursor: pointer;
-  color: #009bff;
+  color: #9e9e9e;
 }
 
-.navi-modal-mobile-cols {
-  display: flex;
-}
 .navi-modal-mobile-cols .links-col {
-  width: 50%;
   padding: 30px;
   flex: 0 0 auto;
 }
@@ -948,7 +942,7 @@ h1, h2, h3, h4, h5 {
   text-decoration: none;
 }
 .navi-modal-mobile-cols .links-col ul a:hover {
-  color: #009bff;
+  color: #9e9e9e;
 }
 .navi-modal-mobile-cols .links-col hr {
   margin: 15px 0;
@@ -959,10 +953,6 @@ h1, h2, h3, h4, h5 {
 .navi-modal-mobile-cols .links-col hr:last-child {
   margin-bottom: 0px;
 }
-.navi-modal-mobile-cols .our-club {
-  background: #F5F5F5;
-  padding: 30px;
-}
 .navi-modal-mobile-cols .lang-select {
   display: none;
   margin: 0 0 15px 0;
@@ -972,15 +962,6 @@ h1, h2, h3, h4, h5 {
 }
 .navi-modal-mobile-cols .lang-select i.mdi {
   right: 30vw;
-}
-
-.made-by-with {
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 30px;
-  border-top: 1px rgba(0, 0, 0, 0.1) solid;
-  padding: 25px 0;
 }
 
 /*****************club-modal***************/
@@ -1260,7 +1241,7 @@ h1, h2, h3, h4, h5 {
 }
 .about-mechanism-wrap .btn-next:hover,
 .about-mechanism-wrap .btn-prev:hover {
-  background: #009bff;
+  background: #9e9e9e;
 }
 .about-mechanism-wrap .btn-next.swiper-button-disabled,
 .about-mechanism-wrap .btn-prev.swiper-button-disabled {
@@ -1311,11 +1292,11 @@ h1, h2, h3, h4, h5 {
   cursor: pointer;
 }
 .consign-form .clip-watch-photo .item:hover span {
-  color: #009bff;
+  color: #9e9e9e;
   opacity: 1;
 }
 .consign-form .clip-watch-photo .item:hover i.mdi {
-  color: #009bff;
+  color: #9e9e9e;
   opacity: 1;
 }
 .consign-form .clip-watch-photo .item i.mdi {
@@ -1720,11 +1701,11 @@ h1, h2, h3, h4, h5 {
 .float-input.active label {
   line-height: 10px;
   font-size: 12px;
-  color: #009bff;
+  color: black;
   opacity: 1;
 }
 .float-input.active input, .float-input.active textarea {
-  border-bottom: 1px #009bff solid;
+  border-bottom: 1px black solid;
 }
 .float-input .drop-list {
   display: none;
@@ -1744,7 +1725,7 @@ h1, h2, h3, h4, h5 {
   color: inherit;
 }
 .float-input .drop-list a:hover {
-  color: #009bff;
+  color: black;
 }
 
 fieldset {
@@ -1754,10 +1735,10 @@ fieldset {
   transition: all 0.3s;
 }
 fieldset.active {
-  border-color: #009bff;
+  border-color: black;
 }
 fieldset.active legend {
-  color: #009bff;
+  color: black;
   opacity: 1;
 }
 fieldset .list {
@@ -1878,6 +1859,7 @@ fieldset legend {
   .paddings-half {
     padding: 50px 50px;
   }
+  /* ---------------------------------- index --------------------------------- */
   .main-header {
     display: none;
   }
@@ -1900,14 +1882,17 @@ fieldset legend {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
   }
+  .artle-office {
+    grid-template-columns: 1fr;
+  }
+  .join-our-club {
+    gap: 0 30px;
+  }
+  .join-our-club h2 br {
+    display: none;
+  }
   .header-tools .search .mdi {
     font-size: 24px;
-  }
-  .section-title h1 {
-    font-size: 40px;
-  }
-  .section-title h2 {
-    font-size: 40px;
   }
   .catalog-section {
     padding-top: 30px;
@@ -2075,6 +2060,14 @@ fieldset legend {
   .office-images > .map {
     height: 50vw;
   }
+  .main-footer-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px 0;
+  }
+  .footer-links {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 @media only screen and (max-width: 820px) {
   /**********************main slider************/
@@ -2126,25 +2119,14 @@ fieldset legend {
     margin-bottom: 30px;
   }
   .section-title h2 {
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 24px;
   }
   .section-title h1 {
-    font-size: 32px;
-    letter-spacing: 2px;
+    font-size: 24px;
   }
+  /* ---------------------------------- index --------------------------------- */
   .main-slider {
     margin-top: -60px;
-  }
-  .main-slider__mute {
-    width: 40px;
-    height: 40px;
-    border-radius: 0%;
-    right: 0px;
-    bottom: 0px;
-  }
-  .main-slider__mute .mdi {
-    font-size: 22px;
   }
   .main-slider .swiper-button-next,
 .main-slider .swiper-button-prev {
@@ -2155,8 +2137,8 @@ fieldset legend {
   }
   .main-slider .swiper-pagination {
     display: flex;
-    padding: 0 60px;
-    bottom: 30px;
+    padding: 0 30px;
+    bottom: 15px;
   }
   .main-slider .swiper-pagination .swiper-pagination-bullet {
     border-radius: 0px;
@@ -2168,6 +2150,29 @@ fieldset legend {
   }
   .main-slider .swiper-pagination .swiper-pagination-bullet-active {
     background: white;
+  }
+  .slider-prodict-item {
+    height: auto;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    width: auto;
+    padding: 0px;
+  }
+  .slider-prodict-item .info {
+    padding: 15px 30px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px 0;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .slider-prodict-item .price {
+    margin: auto;
+  }
+  .slider-prodict-item .progress {
+    display: none;
   }
   .main-header-mobile {
     height: 60px;
@@ -2207,11 +2212,6 @@ fieldset legend {
     margin: 0px;
     height: 100%;
   }
-  .navi-modal.mobile .nav-top-brands {
-    display: none;
-    text-align: left;
-    padding: 30px;
-  }
   .navi-modal-mobile-cols {
     flex-direction: column;
     min-height: 100%;
@@ -2226,19 +2226,16 @@ fieldset legend {
   .navi-modal-mobile-cols .lang-select {
     display: block;
   }
-  .made-by-with {
-    letter-spacing: 1px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    font-size: 12px;
+  .join-our-club {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px 0;
   }
-  .made-by-with img {
-    margin-top: -4px;
+  .join-our-club h2 {
+    font-size: 24px;
   }
-  .nav-top-brands-list a {
-    padding-left: 10px;
-    padding-right: 10px;
+  .join-our-club .c-button {
+    width: 100%;
   }
   .catalog-section .section-title {
     margin-bottom: 30px;
@@ -2278,20 +2275,6 @@ fieldset legend {
   }
   .empty-search-text {
     padding: 0 0 5vh;
-  }
-  .join-our-club {
-    padding: 30px 30px;
-  }
-  .join-our-club img {
-    margin-bottom: 40px;
-  }
-  .join-our-club h2 {
-    font-size: 20px;
-    letter-spacing: 2px;
-  }
-  .join-our-club p {
-    margin-bottom: 30px;
-    font-size: 14px;
   }
   .about-mechanism {
     padding: 30px;
@@ -2377,7 +2360,16 @@ fieldset legend {
     padding: 0 0p;
     height: 80vw;
   }
-  /***************about-artle**************/
+  /* --------------------------------- footer --------------------------------- */
+  .main-footer strong {
+    font-size: 12px;
+  }
+  .footer-links {
+    grid-gap: 0 15px;
+  }
+  .footer-links {
+    font-size: 12px;
+  }
   /***************consign modals**************/
   .consign-result-modal {
     padding: 30px 30px;

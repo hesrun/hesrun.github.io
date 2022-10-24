@@ -24,6 +24,9 @@
     .paddings-half {
         padding: 50px 50px;
     }
+
+    /* ---------------------------------- index --------------------------------- */
+
     .main-header {
         display: none;
     }
@@ -47,6 +50,20 @@
             height: calc(var(--vh, 1vh) * 100);
         }
     }
+    
+    .artle-office {
+        grid-template-columns: 1fr;
+    }
+
+    .join-our-club {
+        gap: 0 30px; 
+        h2 {
+            br {
+                display: none;
+            }
+        }
+    }
+
     .header-tools {
         .search {
             .mdi {
@@ -55,14 +72,6 @@
         }
     }
 
-    .section-title {
-        h1 {
-            font-size: 40px; 
-        }
-        h2 {
-            font-size: 40px;
-        }
-    }
     .catalog-section {
         padding-top: 30px;
         .section-title {
@@ -158,6 +167,7 @@
             display: block;
         }
     }
+
     /******************article******************/
     .article-typo {
         > * {
@@ -259,10 +269,21 @@
             height: 50vw;
         }
     }
+
+    .main-footer-nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px 0;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     
 
 
 }
+
 @media only screen and (max-width: 820px) {
     /**********************main slider************/
 
@@ -306,6 +327,7 @@
 
     /***************about-artle**************/
 }
+
 @media only screen and (max-width: 420px) {
     body {
         padding-top: 60px;
@@ -319,27 +341,17 @@
     .section-title {
         margin-bottom: 30px;
         h2 {
-            font-size: 20px;
-            letter-spacing: 2px;
+            font-size: 24px;
         }
         h1 {
-            font-size: 32px;
-            letter-spacing: 2px;
+            font-size: 24px;
         }
     }
 
+    /* ---------------------------------- index --------------------------------- */
+
     .main-slider {
         margin-top: -60px;
-        &__mute {
-            width: 40px;
-            height: 40px;
-            border-radius: 0%;
-            right:0px;
-            bottom: 0px;
-            .mdi {
-                font-size: 22px;
-            }
-        }
         .swiper-button-next,
         .swiper-button-prev {
             display: none;
@@ -349,8 +361,8 @@
         }
         .swiper-pagination {
             display: flex;
-            padding: 0 60px;
-            bottom: 30px;
+            padding: 0 30px;
+            bottom: 15px;
             .swiper-pagination-bullet {
                 border-radius: 0px;
                 flex: 1 1 auto;
@@ -362,6 +374,30 @@
             .swiper-pagination-bullet-active {
                 background: rgba(#fff,1);
             }
+        }
+    }
+
+    .slider-prodict-item {
+        height: auto;
+        right: 30px;
+        bottom: 30px;
+        left: 30px;
+        width: auto;
+        padding: 0px;
+        .info { 
+            padding: 15px 30px;
+            height: auto;  
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px 0;
+            text-align: center;
+            line-height: 1.5;
+        }
+        .price {
+            margin: auto;
+        }
+        .progress {
+            display: none;
         }
     }
 
@@ -403,11 +439,6 @@
         max-width: 90%;
         margin: 0px;
         height: 100%;
-        .nav-top-brands {
-            display: none;
-            text-align: left;
-            padding: 30px;
-        }
     }
 
     .navi-modal-mobile-cols {
@@ -425,22 +456,19 @@
         }
 
     }
-    
-    .made-by-with {
-        letter-spacing: 1px;
-        display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        font-size: 12px;
-        img {
-            margin-top: -4px;
+    .join-our-club {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px 0;
+        h2 {
+            font-size: 24px;
+        }
+        .c-button {
+            width: 100%;
         }
     }
 
-    .nav-top-brands-list a {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+
 
 
     .catalog-section {
@@ -492,21 +520,6 @@
 
     .empty-search-text {
         padding: 0 0 5vh;
-    }
-
-    .join-our-club {
-        padding: 30px 30px;
-        img {
-            margin-bottom: 40px;
-        }
-        h2 {
-            font-size: 20px;
-            letter-spacing: 2px;
-        }
-        p {
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
     }
     .about-mechanism {
         padding: 30px;
@@ -594,9 +607,22 @@
             height: 80vw;
         }
     }
-/***************about-artle**************/
 
-/***************consign modals**************/
+    /* --------------------------------- footer --------------------------------- */
+    .main-footer {
+        strong {
+            font-size: 12px;
+        }
+    }
+    .footer-links {
+        grid-gap: 0 15px;
+    }
+    .footer-links {
+        font-size: 12px;
+    }
+
+
+    /***************consign modals**************/
     .consign-result-modal {
         padding: 30px 30px;
         width: auto;
@@ -705,7 +731,6 @@
             margin-bottom: 0px;
         }
     }
-    
     /*****************club-welcome-modal********/
     .call-to-action-form {
         padding: 0px;

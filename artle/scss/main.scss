@@ -228,9 +228,11 @@ h1,h2,h3,h4,h5 {
         }
     }
 }
+
 .artle-office {
-    display: flex;
-    gap: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 100px;
     .image {
         flex: 0 0 auto;
         img {
@@ -261,6 +263,7 @@ h1,h2,h3,h4,h5 {
         }
     }
 }
+
 .join-our-club {
     line-height: 1.2;
     background: #101010;
@@ -572,7 +575,7 @@ h1,h2,h3,h4,h5 {
         color: #fff;
         font-size: 24px;
         &:hover {
-            color: #009bff;
+            color: $grey-text;
         }
     }
     .btns {
@@ -709,7 +712,7 @@ h1,h2,h3,h4,h5 {
         font-size: 24px;
         cursor: pointer;
         &:hover {
-            color: #009bff;
+            color: $grey-text;
         }
     }
     .search-field {
@@ -746,7 +749,7 @@ h1,h2,h3,h4,h5 {
             font-size: 24px;
             line-height: 50px;
             &:hover {
-                background: #009bff;
+                background: $grey-text;
             }
         }
         .show-all-results {
@@ -805,7 +808,7 @@ h1,h2,h3,h4,h5 {
                 width: 30%;
             }
             &:hover {
-                color: #009bff;
+                color: $grey-text;
             }
         }
         .empty {
@@ -891,9 +894,6 @@ h1,h2,h3,h4,h5 {
 }
 /*****************navi-modal mobile***************/
 .navi-modal.mobile {
-    .nav-top-brands {
-        padding: 10px 30px;
-    }
     .close {
         position: absolute;
         left: 30px;
@@ -901,14 +901,12 @@ h1,h2,h3,h4,h5 {
         font-size: 24px;
         &:hover {
             cursor: pointer;
-            color: #009bff;
+            color: $grey-text;
         }
     }
 }
 .navi-modal-mobile-cols {
-    display: flex;
     .links-col {
-        width: 50%;
         padding: 30px;
         flex: 0 0 auto;
         > img {
@@ -935,7 +933,7 @@ h1,h2,h3,h4,h5 {
                 letter-spacing: 1px;
                 text-decoration: none;
                 &:hover {
-                    color: #009bff;
+                    color: $grey-text;
                 }
             }
         }
@@ -949,10 +947,6 @@ h1,h2,h3,h4,h5 {
             }
         }
     }
-    .our-club {
-        background: #F5F5F5;
-        padding: 30px;
-    }
     .lang-select {
         display: none;
         margin: 0 0 15px 0;
@@ -963,14 +957,6 @@ h1,h2,h3,h4,h5 {
             right: 30vw;
         }
     }
-}
-.made-by-with {
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 30px;
-    border-top: 1px rgba(#000, 0.1) solid;
-    padding: 25px 0;
 }
 /*****************club-modal***************/
 .club-modal {
@@ -1232,7 +1218,7 @@ h1,h2,h3,h4,h5 {
         cursor: pointer;
         transition: all 0.3s;
         &:hover {
-            background: #009bff;
+            background: $grey-text;
         }
         &.swiper-button-disabled {
             opacity: 0;
@@ -1283,11 +1269,11 @@ h1,h2,h3,h4,h5 {
             cursor: pointer;
             &:hover {
                 span {
-                    color: #009bff;
+                    color: $grey-text;
                     opacity: 1;
                 }
                 i.mdi {
-                    color: #009bff;
+                    color: $grey-text;
                     opacity: 1;
                 }
             }
@@ -1711,11 +1697,11 @@ h1,h2,h3,h4,h5 {
         label {
             line-height: 10px;
             font-size: 12px;
-            color: #009bff;
+            color: black;
             opacity: 1;
         }
         input, textarea {
-            border-bottom: 1px #009bff solid;
+            border-bottom: 1px black solid;
         }
     }
     .drop-list {
@@ -1734,7 +1720,7 @@ h1,h2,h3,h4,h5 {
             text-decoration: none;
             color: inherit;
             &:hover {
-                color: #009bff;
+                color: black;
             }
         }
     }
@@ -1746,9 +1732,9 @@ fieldset {
     padding: 35px;
     transition: all 0.3s;
     &.active {
-        border-color: #009bff;
+        border-color: black;
         legend {
-            color: #009bff;
+            color: black;
             opacity: 1;
         }
     }
