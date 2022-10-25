@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
@@ -24,7 +24,7 @@
         </a>
         <a href="" class="logo">
             <img src="img/logo-mobile.svg" alt="">
-        </a>
+        </a>  
         <div class="header-tools">
             <div class="lang-select">
                 <select name="" id="">
@@ -38,11 +38,11 @@
             </a>
         </div>
     </header>
-    
+
     <header class="main-header">
         <a href="" class="logo">
             <img src="img/logo-mobile.svg" alt="">
-        </a>
+        </a>  
         <nav class="main-nav">
             <ul>
                 <li>
@@ -80,36 +80,36 @@
             </a>
             <div class="watch-item-nav__btns">
                 <a href="" class="c-button white icon-left">
-                    <i class="mdi mdi-chevron-left"></i> PREV 
+                    <i class="mdi mdi-chevron-left"></i>
+                    <span>PREV</span>
                 </a>
                 <a href="" class="c-button white icon-right">
-                    </i>NEXT <i class="mdi mdi-chevron-right"></i>
+                    <span>NEXT</span>
+                    <i class="mdi mdi-chevron-right"></i>
                 </a>
             </div>
         </div>
         <div class="watch-item-card">
-            <div class="watch-item-card__image">
-                <div class="swiper-container watch-item-card__slider">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="img/item/item-image.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="img/item/item-image.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="img/item/item-image.jpg" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="img/item/item-image.jpg" alt="">
-                      </div>
+            <div class="swiper-container watch-item-card__image">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    <img src="img/item/item-image.jpg" alt="">
                     </div>
-                    <div class="swiper-button-prev">
-                        <i class="mdi mdi-arrow-left"></i>
+                    <div class="swiper-slide">
+                    <img src="img/item/item-image.jpg" alt="">
                     </div>
-                    <div class="swiper-button-next">
-                        <i class="mdi mdi-arrow-right"></i>
+                    <div class="swiper-slide">
+                    <img src="img/item/item-image.jpg" alt="">
                     </div>
+                    <div class="swiper-slide">
+                    <img src="img/item/item-image.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="mdi mdi-arrow-left"></i>
+                </div>
+                <div class="swiper-button-next">
+                    <i class="mdi mdi-arrow-right"></i>
                 </div>
             </div>
             <div class="watch-item-card__info">
@@ -351,49 +351,6 @@
                     </li>
                 </ul>
             </div>
-            <div class="made-by-with">
-                Supported by: <img src="img/ineichen-text.svg" alt="">
-            </div>
-            <div class="our-club">
-                <h2>Join our club</h2>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-                    duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                <a href="#ClubModal" class="c-button black">SUCSCRIBE</a>
-            </div>
-        </div>
-        <div class="nav-top-brands">
-            <span>Top Brands 😎 :</span>
-            <div class="nav-top-brands-list mb--theme">
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-                <a href="">ROLEX</a>
-            </div>
         </div>
         <a data-remodal-action="close" class="close">
             <i class="mdi mdi-close"></i>
@@ -531,6 +488,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.0.17/js/splide.min.js"></script>
 
     <script>
+        $( document ).ready(function() {
+            var slider = new Swiper('.watch-item-card__image', {
+                loop: true,
+                slidesPerView: 1,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+        });
+
+
+        
+
+        
+
+        var otherImages = new Swiper('.swiper-container', {
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
+            navigation: {
+                nextEl: '.btn-next',
+                prevEl: '.btn-prev',
+            },
+            breakpoints: {
+                420: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 70,
+                }
+            }
+        });
 
         $('.float-input input, .float-input textarea').focus(function () {
             $(this).parent('.float-input').addClass('active');
@@ -569,36 +563,7 @@
 
         
 
-        var slider = new Swiper('.watch-item-card__slider', {
-            loop: true,
-            slidesPerView: 1,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-
-        var swiper = new Swiper('.swiper-container', {
-
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'progressbar',
-            },
-            navigation: {
-                nextEl: '.btn-next',
-                prevEl: '.btn-prev',
-            },
-            breakpoints: {
-                420: {
-                    slidesPerView: '2',
-                    spaceBetween: 30
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 70,
-                }
-            }
-        });
+        
     </script>
 </body>
 

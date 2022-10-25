@@ -50,7 +50,7 @@ a:hover {
 }
 
 .pt-0 {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 
 .pb-0 {
@@ -649,6 +649,7 @@ h1, h2, h3, h4, h5 {
 }
 .about-artle__image img {
   max-width: 100%;
+  vertical-align: middle;
 }
 .about-artle__logo {
   margin-bottom: 5vw;
@@ -1065,9 +1066,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .watch-item-card {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.watch-item-card__image {
+  margin: 0;
+  width: calc(50% - 25px);
 }
 .watch-item-card__image img {
   width: 100%;
@@ -1078,6 +1082,7 @@ h1, h2, h3, h4, h5 {
      object-position: center;
 }
 .watch-item-card__info {
+  width: calc(50% - 25px);
   padding: 5vw 70px;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
@@ -1225,13 +1230,12 @@ h1, h2, h3, h4, h5 {
 .about-mechanism-wrap .btn-prev {
   position: absolute;
   display: block;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px;
   background: #000;
   color: #fff;
   text-align: center;
-  line-height: 60px;
+  line-height: 50px;
   font-size: 24px;
   top: 50%;
   margin: 0px 0 0 0;
@@ -1898,10 +1902,15 @@ fieldset legend {
     padding-top: 30px;
   }
   .catalog-section .section-title {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .catalog-section .section-title h2 {
+    grid-column: 2 span;
   }
   .catalog-section .section-title > .c-button {
-    margin-left: auto;
+    margin: 0;
   }
   .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2070,6 +2079,9 @@ fieldset legend {
   }
 }
 @media only screen and (max-width: 820px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
   /**********************main slider************/
   /*******************catalog-grid**************/
   .catalog-grid {
@@ -2080,6 +2092,33 @@ fieldset legend {
     padding: 50px 0;
   }
   /********************item***************/
+  .watch-item-nav__btns .c-button {
+    padding: 0;
+    width: 50px;
+  }
+  .watch-item-nav__btns .c-button i.mdi {
+    margin: 0;
+    font-size: 32px;
+  }
+  .watch-item-nav__btns .c-button span {
+    display: none;
+  }
+  .watch-item-card__info {
+    padding: 30px;
+  }
+  .reasons-cols {
+    grid-gap: 0 50px;
+  }
+  .watch-item-about figure {
+    float: none;
+    margin: 0 0 30px 0;
+  }
+  .watch-item-about figure img {
+    width: 100%;
+  }
+  .technical-params-cols {
+    grid-gap: 0 50px;
+  }
   /****************consign***********/
   .consign-section .cols {
     grid-template-columns: 1fr;
@@ -2097,11 +2136,11 @@ fieldset legend {
   /******************contacts***********/
   .contacts-info {
     grid-template-columns: 1fr;
-    gap: 30px 0;
+    gap: 50px 0;
     text-align: center;
   }
   .contacts-info h2 {
-    margin-bottom: 15px;
+    margin: 0 auto;
   }
   /***************about-artle**************/
 }
@@ -2114,9 +2153,6 @@ fieldset legend {
   }
   .paddings-half {
     padding: 30px;
-  }
-  .section-title {
-    margin-bottom: 30px;
   }
   .section-title h2 {
     font-size: 24px;
@@ -2239,6 +2275,27 @@ fieldset legend {
   }
   .catalog-section .section-title {
     margin-bottom: 30px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .catalog-section .section-title h2 {
+    grid-column: 1 span;
+  }
+  .catalog-section .section-title > .c-button {
+    max-width: 100%;
+    order: 3;
+  }
+  .catalog-section .fast-subscribe-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+  }
+  .catalog-section .fast-subscribe-form span {
+    text-align: left;
+    grid-column: 2 span;
+  }
+  .catalog-section .fast-subscribe-form .c-input {
+    margin: 0;
   }
   .catalog-grid {
     grid-gap: 40px 25px;
@@ -2276,12 +2333,77 @@ fieldset legend {
   .empty-search-text {
     padding: 0 0 5vh;
   }
+  /********************item***************/
+  .watch-item-nav {
+    margin-bottom: 30px;
+  }
+  .watch-item-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+  .watch-item-card__image {
+    width: auto;
+  }
+  .watch-item-card__info {
+    width: auto;
+  }
+  .watch-item-card__brand {
+    font-size: 24px;
+  }
+  .watch-item-card__name {
+    font-size: 15px;
+  }
+  .watch-item-card__status {
+    font-size: 15px;
+    margin: 30px 0;
+  }
+  .watch-item-card__action {
+    grid-gap: 15px 0;
+  }
+  .reasons-cols {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .watch-item-about {
+    padding: 30px;
+  }
+  .watch-item-about blockquote {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .technical-params-cols {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  /* ---------------------------------- about --------------------------------- */
+  .about-artle {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .about-artle__text {
+    margin-bottom: 15px;
+  }
+  .about-artle__image {
+    margin-bottom: 15px;
+  }
+  .about-artle__logo {
+    margin-bottom: 15px;
+    height: 40px;
+  }
+  .about-artle p + p {
+    margin-top: 15px;
+  }
   .about-mechanism {
     padding: 30px;
     overflow: visible;
   }
   .about-mechanism .mechanism-slider {
     overflow: hidden;
+  }
+  .about-mechanism .btn-next,
+.about-mechanism .btn-prev {
+    top: 45%;
   }
   /***************consign**************/
   .consign-section .cols {
@@ -2369,6 +2491,9 @@ fieldset legend {
   }
   .footer-links {
     font-size: 12px;
+  }
+  .footer-socials a {
+    font-size: 24px;
   }
   /***************consign modals**************/
   .consign-result-modal {
@@ -2495,7 +2620,7 @@ fieldset legend {
   }
   .filters-modal.remodal .close-remodal {
     right: 30px;
-    top: 43px;
+    top: 30px;
   }
   .modal-filters-list {
     display: block;
@@ -2585,14 +2710,13 @@ fieldset legend {
   .c-button {
     padding: 0 15px;
     min-height: 45px;
-    font-size: 12px;
+    font-size: 15px;
   }
   .c-button.icon {
     width: 45px;
   }
   .c-input input {
     height: 45px;
-    font-size: 12px;
   }
   .c-input textarea {
     font-size: 14px;
@@ -2611,6 +2735,11 @@ fieldset legend {
   .remodal .close-remodal {
     right: 15px;
     top: 15px;
+  }
+  .remodal .close-remodal i.mdi {
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
   }
   fieldset {
     margin: 30px 0;
