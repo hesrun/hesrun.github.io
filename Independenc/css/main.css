@@ -636,6 +636,27 @@ select:-webkit-autofill:focus {
 .c-field__note_green {
   color: #529959;
 }
+.c-field_black:after {
+  background: rgba(0, 0, 0, 0.2);
+}
+.c-field_black:before {
+  background: black;
+}
+.c-field_black .c-field__input {
+  color: black;
+}
+.c-field_black .c-field__label {
+  color: rgba(0, 0, 0, 0.6);
+}
+.c-field_black.active:after {
+  background: rgba(0, 0, 0, 0.2);
+}
+.c-field_black.active:before {
+  background: black;
+}
+.c-field_black.active .c-field__label {
+  color: black;
+}
 .c-field + .c-button {
   margin-top: 80px;
 }
@@ -1964,6 +1985,10 @@ select:-webkit-autofill:focus {
   line-height: 1.5;
   font-family: "GT America Extended", sans-serif;
 }
+.how-to-participate textarea.c-field__input {
+  min-height: 418px;
+  resize: none;
+}
 .how-to-participate__form {
   display: grid;
   gap: 50px 0;
@@ -1973,10 +1998,6 @@ select:-webkit-autofill:focus {
   grid-template-columns: 3fr 5fr;
   gap: 0 70px;
   align-items: center;
-}
-.how-to-participate textarea.c-field__input {
-  min-height: 418px;
-  resize: none;
 }
 
 /* ---------------------------------- results --------------------------------- */
@@ -2090,7 +2111,7 @@ select:-webkit-autofill:focus {
 
 /* ----------------------------- auction-detail ----------------------------- */
 .auction-detail {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .auction-detail__title {
   margin-top: 30px;
@@ -2131,28 +2152,8 @@ select:-webkit-autofill:focus {
 .auction-tabs-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 1px rgba(255, 255, 255, 0.2) solid;
-  border-radius: 15px;
+  gap: 30px;
   margin-bottom: 30px;
-  overflow: hidden;
-}
-.auction-tabs-list__item {
-  cursor: pointer;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 60px;
-  border: none;
-  background: none;
-  color: #1C2473;
-  transition: all 0.3s;
-}
-.auction-tabs-list__item_active, .auction-tabs-list__item:hover {
-  background: #1C2473;
-  color: #fff;
 }
 
 .auction-tabs-content__item {
@@ -2250,12 +2251,13 @@ select:-webkit-autofill:focus {
 .lots-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px 5px;
+  gap: 30px;
 }
 
 .lot-item {
   display: flex;
   flex-direction: column;
+  border: 1px transparent solid;
 }
 .lot-item_load .lot-item__image {
   filter: blur(10px);
@@ -2306,6 +2308,7 @@ select:-webkit-autofill:focus {
   transform: none !important;
 }
 .lot-item__price {
+  padding: 0 0 30px 0;
   text-align: center;
   display: grid;
   margin: 10px 10px 0 10px;
@@ -2349,7 +2352,6 @@ select:-webkit-autofill:focus {
   background: rgba(0, 0, 0, 0.5);
   padding: 30px;
   text-align: center;
-  opacity: 0;
   z-index: 1;
   transition: all 0.5s;
 }
@@ -2464,12 +2466,8 @@ select:-webkit-autofill:focus {
   opacity: 1;
   transform: scale(1);
 }
-.lot-item:hover .lot-item__brand {
-  opacity: 1;
-}
-.lot-item:hover .lot-item__body {
-  transform: scale(0.97);
-  transform-origin: 50% 70%;
+.lot-item:hover {
+  border: 1px rgba(255, 255, 255, 0.1) solid;
 }
 .lot-item:hover .lot-item__name span {
   transform: translateY(0);
@@ -2487,9 +2485,6 @@ select:-webkit-autofill:focus {
 .lot-item:hover .lot-item__count {
   transform: scale(0.5);
   opacity: 0;
-}
-.lot-item:hover .lot-item__image img {
-  transform: scale(1.2) rotate(0deg);
 }
 
 .live-auction {
@@ -7180,8 +7175,15 @@ select:-webkit-autofill:focus {
   .highest-hammer-price {
     display: block;
   }
+  .lot-item {
+    padding: 0;
+    border: none !important;
+  }
   .lot-item__text {
     padding: 0 0 20px 0;
+  }
+  .lot-item__price {
+    padding: 0px;
   }
   /* ---------------------------------- index --------------------------------- */
   .independent-banner__content {

@@ -542,6 +542,10 @@
         line-height: 1.5;
         font-family: $america;
     }
+    textarea.c-field__input {
+        min-height: 418px;
+        resize: none;
+    }
     &__form {
         display: grid;
         gap: 50px 0;
@@ -552,10 +556,7 @@
         gap: 0 70px;
         align-items: center;
     }
-    textarea.c-field__input {
-        min-height: 418px;
-        resize: none;
-    }
+    
 }
 
 /* ---------------------------------- results --------------------------------- */
@@ -674,7 +675,7 @@
 
 /* ----------------------------- auction-detail ----------------------------- */
 .auction-detail {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     &__title {
         margin-top: 30px;
     }
@@ -715,29 +716,8 @@
 .auction-tabs-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 1px $grey-line solid;
-    border-radius: 15px;
+    gap: 30px;
     margin-bottom: 30px;
-    overflow: hidden;
-    &__item {
-        cursor: pointer;
-        font-family: $inter;
-        font-size: 15px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 60px;
-        border: none;
-        background: none;
-        color: $blue-text;
-        transition: all 0.3s;
-        &_active,
-        &:hover {
-            background: $blue-bg;
-            color: #fff;
-        }
-    }
 }
 
 .auction-tabs-content {
@@ -838,12 +818,13 @@
 .lots-grid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 20px 5px;
+    gap: 30px;
 }
 .lot-item {
     $root: &;
     display: flex;
     flex-direction: column;
+    border: 1px transparent solid;
     &_load {
         .lot-item__image {
             filter: blur(10px);
@@ -896,6 +877,7 @@
     }
 
     &__price {
+        padding: 0 0 30px 0;
         text-align: center;
         display: grid;
         margin: 10px 10px 0 10px;
@@ -939,7 +921,6 @@
         background: rgba(black,0.5);
         padding: 30px;
         text-align: center;
-        opacity: 0;
         z-index: 1;
         transition: all 0.5s;
     }
@@ -1055,13 +1036,7 @@
         }
     }
     &:hover {
-        #{$root}__brand {
-            opacity: 1;
-        }
-        #{$root}__body {
-            transform: scale(0.97);
-            transform-origin: 50% 70%;
-        }
+        border: 1px rgba(white, 0.1) solid;
         #{$root}__name {
             span {
                 transform: translateY(0);
@@ -1080,13 +1055,6 @@
         #{$root}__count {
             transform: scale(0.5);
             opacity: 0;
-        }
-    }
-    &:hover {
-        #{$root}__image {
-            img {
-                transform: scale(1.2) rotate(0deg);
-            }
         }
     }
 }

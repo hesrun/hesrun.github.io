@@ -371,6 +371,32 @@
             color: $green-text;
         }
     }
+    &_black {
+        &:after {
+            background: rgba(black,0.2);
+        }
+        &:before {
+            background: black;
+        }
+        #{$root}__input {
+            color: black;
+        }
+        #{$root}__label {
+            color: rgba(black,0.6);
+        }
+        &.active {
+            &:after {
+                background: rgba(black,0.2);
+            }
+            &:before {
+                background: black;
+            }
+            #{$root}__label {
+                color: black;
+            }
+            
+        }
+    }
     & + .c-button {
         margin-top: 80px;
     }
