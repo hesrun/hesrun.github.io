@@ -351,7 +351,7 @@ select:-webkit-autofill:focus {
 }
 .c-button_white {
   color: #fff;
-  border: 1px #fff solid;
+  border: 1px rgba(255, 255, 255, 0.3) solid;
 }
 .c-button_white:hover {
   background: #fff;
@@ -362,8 +362,8 @@ select:-webkit-autofill:focus {
   background: #fff;
 }
 .c-button_white.c-button_filled:hover {
-  background: #BD9E5E;
-  border-color: #BD9E5E;
+  background: #cccccc;
+  border-color: #cccccc;
 }
 .c-button_grey {
   color: black;
@@ -2286,7 +2286,8 @@ select:-webkit-autofill:focus {
 }
 .lot-item__image > img {
   width: 100%;
-  transition: all 0.3s;
+  filter: brightness(300%);
+  transition: all 0.7s;
 }
 .lot-item__slider {
   position: absolute;
@@ -2485,6 +2486,10 @@ select:-webkit-autofill:focus {
 .lot-item:hover .lot-item__count {
   transform: scale(0.5);
   opacity: 0;
+}
+.lot-item:hover .lot-item__image img {
+  transform: scale(1.1);
+  filter: brightness(100%);
 }
 
 .live-auction {
