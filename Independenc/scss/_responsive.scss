@@ -130,26 +130,6 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
-    /* ------------------------------- watchmaker detail ------------------------------ */
-    .master-detail {
-        &__master-info {
-            grid-gap: 0 30px;
-        }
-        &__main-info {
-            grid-gap: 0 30px;
-        }
-        &__watch {
-            width: 300px;
-            h2 {
-                display: none;
-            }
-        }
-        &__right {
-            width: 300px;
-        }
-    }
-
-
     /* --------------------------------- auction -------------------------------- */
     .lots-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -520,6 +500,15 @@
             min-height: 100px;
             resize: none;
         }
+    }
+
+    /* ------------------------------ master-detail ----------------------------- */
+    .master-detail {
+        &__main-info {
+            grid-template-columns: 1fr;
+            gap: 50px 0;
+        }
+        
     }
     
 
@@ -1428,27 +1417,16 @@
             font-size: 12px;
         }
     }
-
-    /* ------------------------------- watchmaker detail ------------------------------ */
-    .master-detail {
-        &__master-info {
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 0 15px;
+     /* ------------------------------ master-detail ----------------------------- */
+     .master-detail {
+        &__user {
+            width: 100%;
+            float: none;
         }
-        &__main-info {
-            grid-template-columns: 1fr;
-            gap: 30px 0;
+        &__name {
+            margin-top: 15px;
         }
-        &__watch {
-            width: auto;
-            .lot-item {
-                padding: 15px;
-            }
-        }
-        &__right {
-            grid-column: 1/1;
-            width: auto;
-        }
+        
     }
 
     /* ----------------------------- press-logo-grid ---------------------------- */
