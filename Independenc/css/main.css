@@ -1079,7 +1079,7 @@ select:-webkit-autofill:focus {
   transition: all 0.2s;
 }
 .tabs-list__item_border {
-  color: #000;
+  color: #fff;
   border: 1px rgba(255, 255, 255, 0.2) solid;
   margin-right: 10px;
 }
@@ -1899,7 +1899,7 @@ select:-webkit-autofill:focus {
 .master-detail__user {
   max-width: 380px;
   float: left;
-  margin: 0 30px 30px 0;
+  margin: 0 30px 15px 0;
 }
 .master-detail__photo {
   border: 1px rgba(255, 255, 255, 0.4) solid;
@@ -1919,7 +1919,7 @@ select:-webkit-autofill:focus {
 }
 .master-detail__main-info {
   display: grid;
-  grid-template-columns: 1fr 430px;
+  grid-template-columns: 3fr 1fr;
   grid-gap: 0 70px;
 }
 .master-detail__right h2:first-child {
@@ -1950,6 +1950,10 @@ select:-webkit-autofill:focus {
 .master-detail__socials .mdi {
   font-size: 32px;
   margin: auto;
+}
+.master-detail__blog {
+  display: grid;
+  gap: 30px;
 }
 
 /* ----------------------------- press-logo-grid ---------------------------- */
@@ -3980,81 +3984,37 @@ select:-webkit-autofill:focus {
 /* ---------------------------------- blog ---------------------------------- */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 60px 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .blog-card {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 30px 0;
-  align-items: start;
-  grid-column: 2 span;
-}
-.blog-card_double {
-  grid-column: 3 span;
-}
-.blog-card__teaser {
-  position: relative;
-  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-height: 180px;
   border-radius: 15px;
-  height: 14.2vw;
-}
-.blog-card__image {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  filter: grayscale(100%);
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.3s;
 }
 .blog-card__title {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  color: #fff;
-  font-size: 1.6vw;
-  line-height: 1.4;
-  font-weight: 400;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.4);
-  transition: all 0.3s;
-}
-.blog-card__title:hover {
-  background: #676767;
-}
-.blog-card__title a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  text-decoration: none;
-  color: inherit;
-}
-.blog-card__title span {
-  display: block;
-  font-size: 2vw;
-  font-weight: 500;
-}
-.blog-card__info {
-  display: grid;
-  gap: 10px 0;
-  grid-template-rows: 1fr;
+  font-size: 15px;
+  margin: 0 0 10px 0;
 }
 .blog-card__date {
-  font-size: 12px;
+  display: flex;
+  gap: 0 15px;
+  align-items: center;
+  margin-top: auto;
+  font-size: 13px;
 }
-.blog-card__text {
-  flex: 1 1 auto;
-  line-height: 1.5;
+.blog-card__date .mdi {
+  font-size: 18px;
 }
-.blog-card__text strong {
-  font-weight: bold;
+.blog-card:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* -------------------------------- page-cap -------------------------------- */
@@ -6130,22 +6090,6 @@ select:-webkit-autofill:focus {
   .blog-grid {
     gap: 60px 30px;
   }
-  .blog-card {
-    grid-column: 3 span;
-  }
-  .blog-card_double {
-    grid-column: 3 span;
-  }
-  .blog-card__teaser {
-    border-radius: 8px;
-    height: 20vw;
-  }
-  .blog-card__title {
-    font-size: 2.5vw;
-  }
-  .blog-card__title span {
-    font-size: 3vw;
-  }
   /* --------------------------------- footer --------------------------------- */
   .footer__top-line {
     display: block;
@@ -7881,29 +7825,6 @@ select:-webkit-autofill:focus {
   }
   .blog-grid_mobile-mini {
     gap: 20px 0;
-  }
-  .blog-grid_mobile-mini .blog-card {
-    gap: 0;
-  }
-  .blog-grid_mobile-mini .blog-card__info {
-    display: none;
-  }
-  .blog-card {
-    gap: 20px 0;
-    grid-column: 6 span;
-  }
-  .blog-card_double {
-    grid-column: 6 span;
-  }
-  .blog-card__teaser {
-    border-radius: 8px;
-    height: 40vw;
-  }
-  .blog-card__title {
-    font-size: 4vw;
-  }
-  .blog-card__title span {
-    font-size: 5vw;
   }
   /* --------------------------------- global --------------------------------- */
   .article-text p {
