@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
 <body> 
-    <div class="presentation-n">
+    <div class="presentation-n black inverse">
         <div class="presentation-n__video">
 
         </div>
@@ -24,37 +25,51 @@
             </div>
             <div class="presentation-n__lot-prices">
                 <div class="presentation-n__lot-price">
-                    <strong>CHF 100 000</strong>
+                    <div>
+                        <span class="flag-icon flag-icon-ch"></span>
+                        <strong>CHF <span class="count">100 000</span></strong>
+                    </div>
                     <small>current bid</small>
                 </div>
                 <div class="presentation-n__lot-price">
-                    <strong class="brown-text">CHF 100 000</strong>
+                    <strong class="brown-text">CHF
+                        <span class="count">100 000</span>
+                    </strong>
                     <small>asking bid</small>
                 </div>
             </div>
             <table class="presentation-n__currency-price">
                 <tr>
                     <td><b>CHF</b></td>
-                    <td>999 999</td>
+                    <td><span class="count">100 000</span></td>
                 </tr>
                 <tr>
                     <td><b>EUR</b></td>
-                    <td>999 999 999</td>
+                    <td><span class="count">100 000</span></td>
                 </tr>
                 <tr>
                     <td><b>CHF</b></td>
-                    <td>999 999</td>
+                    <td><span class="count">999 999 999</span></td>
                 </tr>
                 <tr>
                     <td><b>EUR</b></td>
-                    <td>999 999 999</td>
+                    <td><span class="count">100 000</span></td>
                 </tr>
                 <tr>
                     <td><b>EUR</b></td>
-                    <td>999 999 999</td>
+                    <td><span class="count">100 000</span></td>
                 </tr>
             </table>
+            <div id="target"></div>
         </div>
     </div>
+    <script>
+        import { CountUp } from './js/countUp.min.js';
+
+        window.onload = function() {
+            var countUp = new CountUp('count', 2000);
+            countUp.start();
+        }
+    </script>
 </body>
 </html>
