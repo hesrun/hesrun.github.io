@@ -31,6 +31,15 @@
         }
     }
 
+    .world-records {
+        .owl-carousel .owl-nav button.owl-prev {
+            left: -30px;
+        }
+        .owl-carousel .owl-nav button.owl-next {
+            right: -30px;
+        }
+    }
+
     /* --------------------------------- account -------------------------------- */
     .profile {
         padding-left: 30px;
@@ -407,6 +416,9 @@
     }
     .auction-teaser {
         min-height: 40vw;
+        &_single {
+            grid-column: 1;
+        }
     }
     /* ---------------------------------- blog ---------------------------------- */
     .blog-grid {
@@ -432,9 +444,6 @@
     }
     
     .filtering-btns {
-        > strong {
-            margin-right: 15px;
-        }
         &__sorting {
             display: none;
         }
@@ -512,27 +521,11 @@
         .auction-date-location {
             margin-bottom: 30px;
         }
-        &__teaser {
-            order: -1;
-            margin: 0 -30px 30px;
-            max-width: none;
-            border-radius: 0px;
-            height: 50vh;
-        }
-        &__title {
-            margin: 0 0 30px 0;
-        }
         &__info {
             display: block;
         }
         &__start {
             margin-bottom: 30px;
-        }
-        &__buttons {
-            grid-template-columns: 1fr;
-            .auction-detail__button-double {
-                grid-column: auto;
-            }
         }
     }
     .product {
@@ -1188,9 +1181,6 @@
             font-size: 20px;
             margin: 0 0 30px 0;
         }
-        &_with-buttons {
-            text-align: left;
-        }
     }
     .header {
         padding-left: 15px;
@@ -1332,6 +1322,9 @@
     .auction-teaser {
         padding: 15px;
         min-height: 50vw;
+        &_single {
+            grid-column: 1;
+        }
         &__name {
             font-size: 18px;
             max-width: 60%;
@@ -1355,14 +1348,6 @@
         }
         &__item {
             padding: 10px 15px 0;
-        }
-        &__year {
-            font-size: 24px;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-        &__descr {
-            grid-row-gap: 15px;
         }
     }
 
@@ -1440,7 +1425,7 @@
         h2 {
             line-height: 1.2;
             font-size: 22px;
-            margin: 30px 0 30px;
+            margin: 0px 0 30px;
         }
     }
     .event-announce-join {
@@ -1606,25 +1591,12 @@
         }
     }
     .filtering-btns {
-        > strong {
-            display: none;
-            font-size: 18px;
-        }
         margin: 0 0 15px;
     }
     .auction-detail {
         margin-bottom: 30px;
-        &__teaser {
-            background-attachment: scroll;
-            margin-left: -15px;
-            margin-right: -15px;
-            margin-bottom: 0px;
-        }
         &__title {
             margin: 0 0 30px 0;
-            .c-button {
-                display: none;
-            }
         }
         &__start {
             border-top: 1px $grey-line solid;
@@ -2399,15 +2371,6 @@
             a.close-modal {
                 position: fixed;
             }
-        }
-    }
-    .c-progress-bar {
-        &_large {
-            height: 20px;
-        }
-        &__count {
-            font-size: 10px;
-            padding: 0 10px;
         }
     }
 
