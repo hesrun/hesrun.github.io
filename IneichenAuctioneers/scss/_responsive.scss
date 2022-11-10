@@ -537,6 +537,7 @@
             }
         }
     }
+    /* --------------------------------- product -------------------------------- */
     .product {
         display: block;
         padding: 0px;
@@ -583,12 +584,11 @@
         }
         &__bids {
             grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
             gap: 15px 0;
         }
-    }
-    .timed-auction-end {
-        &__current-bid {
-            margin-left: 30px;
+        &__prams-title {
+            margin: 45px 0 30px;
         }
     }
     /* ---------------------------------- live ---------------------------------- */
@@ -1684,52 +1684,39 @@
             font-size: 24px;
         }
         &__info-col {
-            padding: 30px 20px 100px;
-        }
-        &__brand {
-            margin-bottom: 15px;
+            padding: 30px 20px 0px;
         }
         &__name {
-            font-size: 20px;
+            flex-direction: column-reverse;
+            align-items: flex-start;
             margin-bottom: 30px;
+            .c-button {
+                width: 100%;
+            }
+            h1 {
+                font-size: 22px;
+                margin-top: 30px;
+            }
         }
-        &__price {
-            border-top: 1px rgba($grey-line, .5) solid;
-            padding: 30px 20px;
-            margin: 0 -20px;
-            div + div {
-                margin-top: 15px;
+        &__bids-info {
+            grid-gap: 5px 0;
+            margin-bottom: 30px;
+            hr {
+                margin: 5px 0;
             }
-            span {
-                font-size: 13px;
-                font-weight: 500;
-            }
+        }
+        &__bids-info-item {
             strong {
-                font-size: 14px;
+                font-size: 15px;
             }
         }
         &__bids {
-            border-color: rgba($grey-line, .5);
-            padding: 20px 20px;
-            margin: 0 -20px 0px;
-            
-            strong {
-                text-align: left;
-                line-height: 1.1;
-                font-size: 13px;
-            }
-            &_guest {
-                gap: 0 15px;
-            }
         }
-
         &__other-links {
             display: grid;
             grid-template-rows: 1fr;
             gap: 15px 0;
-            border-bottom: 1px rgba($grey-line, 0.5) solid;
-            padding: 20px 20px;
-            margin: 0 -20px 30px;
+            padding: 20px 0px;
             text-align: center;
             a {
                 margin: 0px;
@@ -1742,11 +1729,10 @@
         &__prams-title {
             margin: 30px 0 20px;
         }
-
         &__bids-btn {
             grid-column: 2 span;
             flex-direction: column;
-            gap: 15px 15px;
+            gap: 5px;
         }
         &__params {
             display: block;
@@ -1762,44 +1748,29 @@
                 padding: 30px 0 15px;
             }
         }
-        &__btns {
-            grid-template-columns: 1fr;
-            gap: 15px 0;
-        }
     }
 
-    .timed-auction-end {
-        padding: 20px;
-        display: block;
-        strong {
-            font-size: 14px;
+    .consultant-info {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        line-height: 20px;
+        &__name {
+            margin-left: 20px;
         }
-        &__current-bid {
-            display: grid;
-            grid-template-columns: 1fr;
-            margin-top: 15px;
-            margin-left: 0px;
+        &__contacts {
+            margin: 0 0 10px 82px;
+            grid-column: 2 span;
         }
-        &__user {
-            margin-top: 15px;
-            align-self: center;
-            > span {
-                font-weight: 500;
-                margin-bottom: 5px;
-                font-family: "GT America Extended";
-                font-size: 14px;
+        &__messangers {
+            margin: 0 0 0 82px;
+            grid-column: 2 span;
+            img {
+                vertical-align: middle;
+                margin-right: 5px;
             }
         }
-        &__bids {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px 0;
-            font-size: 12px;
-        }
-        &__bid-summ {
-            font-size: 22px;
-            line-height: normal;
-            margin: 10px 0;
+        b {
+            display: block;
         }
     }
 
