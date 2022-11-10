@@ -526,6 +526,15 @@
         }
         &__start {
             margin-bottom: 30px;
+            text-align: left;
+        }
+        &__buttons {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            .c-button:first-child {
+                max-width: 100%;
+            }
         }
     }
     .product {
@@ -1500,6 +1509,7 @@
     /* --------------------------------- auction -------------------------------- */
     .lots-grid {
         grid-template-columns: 1fr 1fr;
+        grid-gap: 30px 5px;
         &_mob-1-col {
             grid-template-columns: 1fr;
         }
@@ -1563,6 +1573,16 @@
             font-size: 12px;
             margin-left: 0;
             margin-right: 0;
+            > div {
+                gap: 10px 0;
+            }
+            span {
+                
+            }
+            strong {
+                text-align: right;
+                font-size: 12px;
+            }
         }
         &__link  {
             display: none;
@@ -1589,6 +1609,32 @@
                 opacity: 1;
             }
         }
+        &__note {
+            margin: 5px 0px 0 0px;
+            font-size: 12px;
+            line-height: 1.4;
+            br {
+                display: none;
+            }
+        }
+        &_consign {
+            #{$root}__info {
+                position: absolute;
+                bottom: 15px;
+                top: auto;
+                margin: 0;
+            }
+            #{$root}__brand {
+                position: absolute;
+                top: 15px;
+                font-size: 10px;
+            }
+            #{$root}__name {
+                padding: 0 30px;
+                text-align: center;
+                font-size: 10px;
+            }
+        }
     }
     .filtering-btns {
         margin: 0 0 15px;
@@ -1599,14 +1645,8 @@
             margin: 0 0 30px 0;
         }
         &__start {
-            border-top: 1px $grey-line solid;
-            padding-top: 30px;
             align-items: center;
             > span {
-                margin-right: auto;
-                font-size: 13px;
-                max-width: 100px;
-                line-height: 20px;
             }
         }
     }
@@ -2866,8 +2906,6 @@
                 line-height: 1.4;
             }
         }
-    }
-    .lot-item-consign {
     }
     .consign-lot {
         display: flex;

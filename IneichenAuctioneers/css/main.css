@@ -2635,14 +2635,14 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-direction: column;
 }
-.lot-item_load .lot-item__body {
+.lot-item_load .lot-item__image {
   position: relative;
 }
-.lot-item_load .lot-item__body:after {
+.lot-item_load .lot-item__image:after {
   content: "";
   opacity: 1;
 }
-.lot-item_load .lot-item__body:before {
+.lot-item_load .lot-item__image:before {
   content: "";
   opacity: 1;
 }
@@ -2660,39 +2660,6 @@ select:-webkit-autofill:focus {
   overflow: hidden;
   border-radius: 15px;
   transition: all 0.5s;
-}
-.lot-item__body:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: #ccc;
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 1s;
-  pointer-events: none;
-}
-.lot-item__body:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -30px 0 0 -30px;
-  width: 60px;
-  height: 60px;
-  border: 3px #fff solid;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 50%;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 1s;
-  -webkit-animation: 1s Spin infinite linear;
-          animation: 1s Spin infinite linear;
-  pointer-events: none;
 }
 .lot-item__image {
   display: block;
@@ -2713,6 +2680,39 @@ select:-webkit-autofill:focus {
   -o-object-position: center;
      object-position: center;
   transition: all 0.3s;
+}
+.lot-item__image:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s;
+  pointer-events: none;
+}
+.lot-item__image:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -30px 0 0 -30px;
+  width: 60px;
+  height: 60px;
+  border: 3px #fff solid;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1s;
+  -webkit-animation: 1s Spin infinite linear;
+          animation: 1s Spin infinite linear;
+  pointer-events: none;
 }
 .lot-item__slider {
   position: absolute;
@@ -2876,6 +2876,32 @@ select:-webkit-autofill:focus {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
+}
+.lot-item__note {
+  margin: 13px 10px 0 10px;
+  line-height: 1.5;
+}
+.lot-item_consign .lot-item__image {
+  border: 1px #e1e1e1 solid;
+}
+.lot-item_consign .lot-item__brand {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  opacity: 1;
+}
+.lot-item_consign .lot-item__name {
+  margin-top: auto;
+}
+.lot-item_consign .lot-item__image > img {
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%) !important;
 }
 .lot-item:hover .lot-item__brand {
   opacity: 1;
@@ -6422,41 +6448,6 @@ select:-webkit-autofill:focus {
   line-height: 1.4;
 }
 
-.consign-lot {
-  height: 100%;
-  background: #fff;
-  z-index: 1;
-  border-radius: 20px;
-  border: 4px #BD9E5E dotted;
-  position: relative;
-}
-.consign-lot__info {
-  padding: 30px;
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-.consign-lot img {
-  width: 100%;
-}
-.consign-lot h4 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-.consign-lot b {
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 1.3;
-  margin-bottom: auto;
-}
-.consign-lot .c-button {
-  margin-top: auto;
-}
-
 @media screen and (max-width: 1366px) {
   .container {
     padding: 0 30px;
@@ -6951,6 +6942,15 @@ select:-webkit-autofill:focus {
   }
   .auction-detail__start {
     margin-bottom: 30px;
+    text-align: left;
+  }
+  .auction-detail__buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .auction-detail__buttons .c-button:first-child {
+    max-width: 100%;
   }
   .product {
     display: block;
@@ -7826,6 +7826,7 @@ select:-webkit-autofill:focus {
   /* --------------------------------- auction -------------------------------- */
   .lots-grid {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 5px;
   }
   .lots-grid_mob-1-col {
     grid-template-columns: 1fr;
@@ -7889,6 +7890,13 @@ select:-webkit-autofill:focus {
     margin-left: 0;
     margin-right: 0;
   }
+  .lot-item__price > div {
+    gap: 10px 0;
+  }
+  .lot-item__price strong {
+    text-align: right;
+    font-size: 12px;
+  }
   .lot-item__link {
     display: none;
   }
@@ -7912,6 +7920,30 @@ select:-webkit-autofill:focus {
     transform: none;
     opacity: 1;
   }
+  .lot-item__note {
+    margin: 5px 0px 0 0px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .lot-item__note br {
+    display: none;
+  }
+  .lot-item_consign .lot-item__info {
+    position: absolute;
+    bottom: 15px;
+    top: auto;
+    margin: 0;
+  }
+  .lot-item_consign .lot-item__brand {
+    position: absolute;
+    top: 15px;
+    font-size: 10px;
+  }
+  .lot-item_consign .lot-item__name {
+    padding: 0 30px;
+    text-align: center;
+    font-size: 10px;
+  }
   .filtering-btns {
     margin: 0 0 15px;
   }
@@ -7922,15 +7954,7 @@ select:-webkit-autofill:focus {
     margin: 0 0 30px 0;
   }
   .auction-detail__start {
-    border-top: 1px #E1E1E1 solid;
-    padding-top: 30px;
     align-items: center;
-  }
-  .auction-detail__start > span {
-    margin-right: auto;
-    font-size: 13px;
-    max-width: 100px;
-    line-height: 20px;
   }
   /* --------------------------------- product -------------------------------- */
   .product__num {
