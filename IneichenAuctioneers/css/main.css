@@ -101,6 +101,14 @@ select:-webkit-autofill:focus {
   color: #BD9E5E !important;
 }
 
+.orange-text {
+  color: #ff9941 !important;
+}
+
+.yellow-text {
+  color: #ffeb3b !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1984,18 +1992,22 @@ select:-webkit-autofill:focus {
   text-overflow: ellipsis;
 }
 .timed-auction-lot__price {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
   font-size: 12px;
-  font-weight: 700;
 }
 .timed-auction-lot__price-fix {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
   font-size: 12px;
-  margin-top: 4px;
-  font-weight: 700;
+  margin-top: 5px;
   color: #BD9E5E;
 }
 .timed-auction-lot__bids {
   font-size: 12px;
-  margin-top: 4px;
+  margin-top: 10px;
   color: #676767;
 }
 .timed-auction-lot:hover .timed-auction-lot__image img {
@@ -2197,8 +2209,38 @@ select:-webkit-autofill:focus {
   transition: all 0.3s;
 }
 .our-team__descr p {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
+}
+.our-team__contacts {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+.our-team__contacts a {
+  text-decoration: none;
+  color: inherit;
+}
+.our-team__contacts a:hover {
+  opacity: 0.8;
+}
+.our-team__messangers {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+.our-team__messangers a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.our-team__messangers a:hover {
+  opacity: 0.8;
+}
+.our-team__messangers img {
+  margin-right: 5px;
+  filter: invert(1);
 }
 .our-team__video {
   font-size: 12px;
@@ -2488,6 +2530,7 @@ select:-webkit-autofill:focus {
   font-family: "GT America Extended", sans-serif;
   font-size: 20px;
   display: block;
+  font-variant-numeric: tabular-nums;
 }
 .start-timer__item {
   position: relative;
@@ -2504,124 +2547,126 @@ select:-webkit-autofill:focus {
 }
 
 /* ----------------------------- event-announce ----------------------------- */
-.event-announce h2 {
+.event-article {
+  max-width: 100%;
+}
+
+.event-announce {
+  margin-bottom: 45px;
+}
+.event-announce__banner {
+  position: relative;
+  margin-bottom: 45px;
+}
+.event-announce__banner img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.event-announce__title {
+  margin: 0;
+  padding: 150px 0;
+  margin-left: 7%;
   font-size: 30px;
   font-weight: 500;
-  margin: 0px 0 50px;
-}
-
-.event-announce-join {
-  margin: 0 0 50px 0;
-  display: grid;
-  grid-template-columns: 4fr 5fr;
-  gap: 0 50px;
-  align-items: center;
-}
-.event-announce-join p {
-  font-size: 20px;
-  line-height: 1.5;
-}
-.event-announce-join b {
-  font-size: 13px;
-  display: block;
-  margin: 0 0 15px 0;
-}
-.event-announce-join_bottom {
-  margin-top: 50px;
-  grid-template-columns: 1fr;
-  gap: 30px 0;
-}
-.event-announce-join_bottom h3 {
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.event-announce-item {
-  margin: 30px 0 0 0;
-  position: relative;
-  display: flex;
-}
-.event-announce-item_reverse .event-announce-item__info {
-  margin-left: auto;
-}
-.event-announce-item__info {
-  position: relative;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
+  max-width: 500px;
   color: #fff;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.8);
+  position: relative;
   z-index: 1;
 }
-.event-announce-item__image {
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  vertical-align: middle;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top left;
-     object-position: top left;
-}
-.event-announce-item__date {
-  margin: 0 0 auto 0;
-  line-height: 1.4;
-  font-family: "GT America Extended", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-}
-.event-announce-item__text p {
-  line-height: 1.8;
-  margin: 20px 0;
-}
-.event-announce-item__btns {
-  margin: auto 0 0 0;
-}
-.event-announce-item__btns a {
-  display: inline-block;
-  margin-bottom: 15px;
-  font-weight: 500;
-  color: #fff;
-  text-decoration: underline;
-}
-.event-announce-item__btns a:hover {
-  color: #BD9E5E;
-}
-
-/* ----------------------------- visit-us-places ---------------------------- */
-.visit-us-places-list {
-  margin: 0 auto;
+.event-announce__description {
+  line-height: 1.3;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 50px;
+  grid-gap: 0 100px;
+}
+.event-announce__description h3 {
+  font-weight: 500;
 }
 
-.visit-us-place__name {
-  font-size: 20px;
+.event-announce-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 100px;
+  margin-bottom: 45px;
 }
-.visit-us-place__adress {
-  margin: 5px 0 30px 0;
-  display: block;
+
+.event-announce-item__title {
+  font-weight: 500;
+  margin: 0 0 15px 0;
 }
-.visit-us-place__image, .visit-us-place__map {
-  padding-top: 70%;
-  position: relative;
+.event-announce-item__info {
+  line-height: 1.3;
+  margin-bottom: 30px;
 }
-.visit-us-place__image iframe,
-.visit-us-place__image img, .visit-us-place__map iframe,
-.visit-us-place__map img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+.event-announce-item__info a {
+  color: #676767;
+}
+.event-announce-item__description {
+  line-height: 1.3;
+}
+.event-announce-item__live {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E42B2B;
+}
+
+.event-top-lots {
+  margin: 45px 0;
+}
+.event-top-lots__head {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.event-top-lots__head h3 {
+  font-weight: 500;
+}
+.event-top-lots__buy-now {
+  align-self: flex-end;
+  margin: 10px 30px 0 auto;
+  display: flex;
+  font-size: 13px;
+}
+.event-top-lots__buy-now img {
+  width: 60px;
+}
+.event-top-lots__buy-now p {
+  line-height: 1.5;
+  margin: 7px 0 0 0;
+}
+
+/* ----------------------------- event-place ---------------------------- */
+.event-place {
+  margin: 45px 0 0;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-gap: 0 50px;
+}
+.event-place h3 {
+  font-weight: 500;
+}
+.event-place .consultant-info {
+  margin-top: 30px;
+}
+.event-place__adress p {
+  font-size: 14px;
+  color: #676767;
+  margin: 5px 0 0 0;
+}
+.event-place__map {
+  margin: 30px 0 0 0;
   width: 100%;
-  height: 100%;
+  height: 290px;
 }
 
 /* ---------------------------------- lots ---------------------------------- */
@@ -3671,6 +3716,17 @@ select:-webkit-autofill:focus {
   align-items: center;
   line-height: 20px;
 }
+.consultant-info_vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px 0;
+}
+.consultant-info_vertical .consultant-info__name {
+  margin: 0px;
+}
+.consultant-info_vertical .consultant-info__contacts {
+  margin: 0px;
+}
 .consultant-info__name {
   margin-left: 20px;
 }
@@ -3683,6 +3739,13 @@ select:-webkit-autofill:focus {
 }
 .consultant-info b {
   display: block;
+}
+.consultant-info a {
+  text-decoration: none;
+  color: inherit;
+}
+.consultant-info a:hover {
+  opacity: 0.7;
 }
 
 /* --------------------------------- account -------------------------------- */
@@ -6826,18 +6889,6 @@ select:-webkit-autofill:focus {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  /* ----------------------------- event-announce ----------------------------- */
-  .event-announce-item {
-    margin: 30px 0 0 0;
-    grid-template-columns: 1fr 1fr;
-  }
-  .event-announce-item_reverse {
-    grid-template-columns: 1fr 1fr;
-  }
-  /* ----------------------------- visit-us-places ---------------------------- */
-  .visit-us-places-list {
-    gap: 0 30px;
-  }
   /* ---------------------------------- results --------------------------------- */
   .image-banner {
     padding: 20vw 15px;
@@ -7708,43 +7759,78 @@ select:-webkit-autofill:focus {
     padding: 0 0 20px 0;
   }
   /* ----------------------------- event-announce ----------------------------- */
-  .event-announce h2 {
-    line-height: 1.2;
-    font-size: 22px;
-    margin: 0px 0 30px;
+  .event-announce {
+    margin-bottom: 30px;
   }
-  .event-announce-join {
-    margin: 0 0 30px 0;
+  .event-announce__banner {
+    margin-bottom: 30px;
+  }
+  .event-announce__title {
+    font-size: 18px;
+    padding: 45px 30px;
+    margin: 0;
+    max-width: 100%;
+  }
+  .event-announce__description {
     grid-template-columns: 1fr;
-    gap: 15px 0px;
+    grid-gap: 15px 0;
   }
-  .event-announce-join p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-  .event-announce-join b {
-    font-size: 13px;
-    display: block;
-    margin: 0 0 15px 0;
-  }
-  .event-announce-join_bottom {
-    margin-top: 30px;
-    gap: 15px 0;
-  }
-  .event-announce-join_bottom h3 {
+  .event-announce__description h3 {
     font-size: 15px;
   }
-  .event-announce-item {
-    margin: 15px 0 0 0;
+  .event-announce-list {
     grid-template-columns: 1fr;
+    grid-gap: 30px;
+    margin-bottom: 30px;
   }
-  .event-announce-item_reverse {
-    grid-template-columns: 1fr;
+  .event-announce-item__info {
+    margin-bottom: 15px;
   }
-  /* ----------------------------- visit-us-places ---------------------------- */
-  .visit-us-places-list {
+  .event-top-lots {
+    margin: 30px 0;
+  }
+  .event-top-lots__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px 0;
+  }
+  .event-top-lots__head .c-button {
+    width: 100%;
+  }
+  .event-top-lots__buy-now {
+    font-size: 13px;
+    align-items: center;
+  }
+  .event-top-lots__buy-now img {
+    width: 60px;
+    flex: 0 0 auto;
+  }
+  .event-top-lots__buy-now p {
+    margin: 0 0 0 15px;
+  }
+  /* ----------------------------- event-place ---------------------------- */
+  .event-place {
+    margin: 30px 0 0;
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 30px 0px;
+    grid-gap: 30px;
+  }
+  .event-place h3 {
+    font-weight: 500;
+  }
+  .event-place .consultant-info {
+    margin-top: 30px;
+  }
+  .event-place__adress p {
+    font-size: 14px;
+    color: #676767;
+    margin: 5px 0 0 0;
+  }
+  .event-place__map {
+    margin: 30px 0 0 0;
+    width: 100%;
+    height: 290px;
   }
   /* ---------------------------------- results --------------------------------- */
   .image-banner {
@@ -8002,6 +8088,14 @@ select:-webkit-autofill:focus {
     display: grid;
     grid-template-columns: auto 1fr;
     line-height: 20px;
+  }
+  .consultant-info_vertical {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .consultant-info_vertical .consultant-info__messangers {
+    margin: 0 0 0 0px;
   }
   .consultant-info__name {
     margin-left: 20px;
