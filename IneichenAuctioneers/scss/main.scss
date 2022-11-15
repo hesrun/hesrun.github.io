@@ -2373,7 +2373,21 @@
 
     }
 }
-
+.consultation-lang {
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    a {
+        margin-right: 8px;
+        text-decoration: none;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .flag-icon {
+        font-size: 18px;
+    }
+}
 .consultant-info {
     $root: &;
     display: flex;
@@ -3141,6 +3155,7 @@
     background: $blue-bg;
     color: #fff;
     transition: background 0.3s;
+    
     &__image {
         position: absolute;
         left: 0px;
@@ -3176,6 +3191,11 @@
             opacity: 0;
             pointer-events: none;
         }
+    }
+    &_no-image:hover {
+        background: none;
+        color: #000;
+        box-shadow: 0 0 0 1px $grey-line;
     }
 }
 
