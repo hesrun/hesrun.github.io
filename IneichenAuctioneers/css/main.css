@@ -2673,7 +2673,7 @@ select:-webkit-autofill:focus {
 .lots-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 90px 5px;
+  gap: 45px 5px;
 }
 
 .lot-item {
@@ -2921,6 +2921,9 @@ select:-webkit-autofill:focus {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
+}
+.lot-item__remove {
+  display: none;
 }
 .lot-item__note {
   margin: 13px 10px 0 10px;
@@ -3641,6 +3644,7 @@ select:-webkit-autofill:focus {
   font-family: "GT America Extended", sans-serif;
 }
 .product__bidder {
+  font-weight: 500;
   line-height: 30px;
 }
 .product__bids {
@@ -3690,8 +3694,9 @@ select:-webkit-autofill:focus {
   text-decoration: none;
 }
 .product__prams-title {
-  font-size: 22px;
+  font-size: 28px;
   margin: 60px 0 45px;
+  font-weight: 500;
 }
 .product__params {
   width: 100%;
@@ -3709,6 +3714,9 @@ select:-webkit-autofill:focus {
 }
 .product__params tr:last-child td {
   padding-bottom: 0;
+}
+.product .article-text {
+  max-width: 100%;
 }
 
 .consultation-lang {
@@ -4483,8 +4491,9 @@ select:-webkit-autofill:focus {
   min-height: 180px;
   border-radius: 15px;
   overflow: hidden;
-  background: #1C2473;
-  color: #fff;
+  background: none;
+  color: #000;
+  box-shadow: 0 0 0 1px #E1E1E1;
   transition: background 0.3s;
 }
 .blog-card__image {
@@ -4518,15 +4527,15 @@ select:-webkit-autofill:focus {
 .blog-card__date .mdi {
   font-size: 18px;
 }
+.blog-card:hover {
+  background: #1C2473;
+  color: #fff;
+  box-shadow: none;
+}
 .blog-card:hover .blog-card__image {
   transform: scale(1.5);
   opacity: 0;
   pointer-events: none;
-}
-.blog-card_no-image:hover {
-  background: none;
-  color: #000;
-  box-shadow: 0 0 0 1px #E1E1E1;
 }
 
 /* -------------------------------- page-cap -------------------------------- */
@@ -7026,6 +7035,7 @@ select:-webkit-autofill:focus {
     gap: 15px 0;
   }
   .product__prams-title {
+    font-size: 22px;
     margin: 45px 0 30px;
   }
   /* ---------------------------------- live ---------------------------------- */
@@ -7962,33 +7972,19 @@ select:-webkit-autofill:focus {
     display: none;
   }
   .lot-item__favorite {
-    opacity: 1;
+    display: none;
+  }
+  .lot-item__remove {
     position: absolute;
     top: 10px;
     right: 10px;
-    bottom: auto;
-    left: auto;
-    background: none;
-    margin: 0;
-    width: auto;
-    height: auto;
-  }
-  .lot-item__favorite i.mdi-heart {
-    position: static;
-    visibility: visible;
-    opacity: 0.5;
-    transform: scale(1);
-    margin: 0;
-    color: #e91e63;
-  }
-  .lot-item__favorite span {
-    display: none !important;
-  }
-  .lot-item__favorite:hover {
-    background: none;
-  }
-  .lot-item__favorite_active i.mdi-heart {
-    opacity: 1;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
   }
   .lot-item__count {
     left: 10px;
@@ -8109,7 +8105,7 @@ select:-webkit-autofill:focus {
     font-size: 13px;
   }
   .product__prams-title {
-    margin: 30px 0 20px;
+    margin: 30px 0 15px;
   }
   .product__bids-btn {
     grid-column: 2 span;
@@ -8121,6 +8117,9 @@ select:-webkit-autofill:focus {
   }
   .product__params tr {
     display: block;
+  }
+  .product__params tr:first-child td {
+    padding-top: 0;
   }
   .product__params td {
     display: block;
@@ -8498,6 +8497,9 @@ select:-webkit-autofill:focus {
     padding: 15px;
     min-height: 140px;
   }
+  .blog-card__image {
+    display: none;
+  }
   /* --------------------------------- global --------------------------------- */
   .article-text > h2 {
     font-weight: 500;
@@ -8571,10 +8573,6 @@ select:-webkit-autofill:focus {
     margin-bottom: 30px;
     width: 100%;
     order: -1;
-  }
-  /* -------------------------------- page-cap -------------------------------- */
-  .page-cap {
-    text-align: center;
   }
   /* ---------------------------------- sign ---------------------------------- */
   .sign-great {

@@ -576,6 +576,7 @@
             gap: 15px 0;
         }
         &__prams-title {
+            font-size: 22px;
             margin: 45px 0 30px;
         }
     }
@@ -1618,35 +1619,19 @@
             display: none;
         }
         &__favorite {
-            opacity: 1;
+            display: none;
+        }
+        &__remove {
             position: absolute;
             top: 10px;
             right: 10px;
-            bottom: auto;
-            left: auto;
-            background: none;
-            margin: 0;
-            width: auto;
-            height: auto;
-            i.mdi-heart {
-                position: static;
-                visibility: visible;
-                opacity: 0.5;
-                transform: scale(1);
-                margin: 0;
-                color: $pink-text;
-            }
-            span {
-                display: none !important;
-            }
-            &:hover {
-                background: none;
-            }
-            &_active {
-                i.mdi-heart {
-                    opacity: 1;
-                }
-            }
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: rgba(black,0.3);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
         }
         &__count {
             left: 10px;
@@ -1783,7 +1768,7 @@
             }
         }
         &__prams-title {
-            margin: 30px 0 20px;
+            margin: 30px 0 15px;
         }
         &__bids-btn {
             grid-column: 2 span;
@@ -1794,6 +1779,11 @@
             display: block;
             tr {
                 display: block;
+                &:first-child {
+                    td {
+                        padding-top: 0;
+                    }
+                }
             }
             td {
                 display: block;
@@ -2215,6 +2205,9 @@
     .blog-card {
         padding: 15px;
         min-height: 140px;
+        &__image {
+            display: none;
+        } 
     }
 
     /* --------------------------------- global --------------------------------- */
@@ -2294,14 +2287,6 @@
             order: -1;
         }
     }
-
-
-    /* -------------------------------- page-cap -------------------------------- */
-
-    .page-cap {
-        text-align: center;
-    }
-
 
     /* ---------------------------------- sign ---------------------------------- */
     .sign-great {

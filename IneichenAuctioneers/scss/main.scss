@@ -1293,7 +1293,7 @@
 .lots-grid {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 90px 5px;
+    gap: 45px 5px;
 }
 .lot-item {
     $root: &;
@@ -1538,6 +1538,9 @@
                 transform: scale(1);
             }
         }
+    }
+    &__remove {
+        display: none;
     }
     &__note {
         margin: 13px 10px 0 10px;
@@ -2290,8 +2293,10 @@
     }
 
     &__bidder {
+        font-weight: 500;
         line-height: 30px;
     }
+
 
 
 
@@ -2349,8 +2354,9 @@
     }
 
     &__prams-title {
-        font-size: 22px;
+        font-size: 28px;
         margin: 60px 0 45px;
+        font-weight: 500;
     }
     &__params {
         width: 100%;
@@ -2371,6 +2377,9 @@
             }
         }
 
+    }
+    .article-text {
+        max-width: 100%;
     }
 }
 .consultation-lang {
@@ -3152,8 +3161,9 @@
     min-height: 180px;
     border-radius: 15px;
     overflow: hidden;
-    background: $blue-bg;
-    color: #fff;
+    background: none;
+    color: #000;
+    box-shadow: 0 0 0 1px $grey-line;
     transition: background 0.3s;
     
     &__image {
@@ -3186,16 +3196,14 @@
         }
     }
     &:hover {
+        background: $blue-bg;
+        color: #fff;
+        box-shadow: none;
         #{$root}__image {
             transform: scale(1.5);
             opacity: 0;
             pointer-events: none;
         }
-    }
-    &_no-image:hover {
-        background: none;
-        color: #000;
-        box-shadow: 0 0 0 1px $grey-line;
     }
 }
 
