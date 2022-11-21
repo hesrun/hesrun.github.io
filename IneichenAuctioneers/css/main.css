@@ -2491,6 +2491,9 @@ select:-webkit-autofill:focus {
 .filtering-btns__sort-btn {
   display: none;
 }
+.filtering-btns__download {
+  margin-left: auto;
+}
 
 .auction-date-location {
   margin-bottom: 50px;
@@ -3647,6 +3650,9 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   line-height: 30px;
 }
+.product__bidder span {
+  text-transform: capitalize;
+}
 .product__bids {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3666,18 +3672,15 @@ select:-webkit-autofill:focus {
   margin: 10px 0;
 }
 .product__bids-history {
-  border: 2px #1C2473 solid;
+  font-family: "GT America Extended", sans-serif;
   color: #1C2473;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 5px 15px;
-  border-radius: 15px;
-  transition: all 0.3s;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: underline;
 }
 .product__bids-history:hover {
-  background: #1C2473;
-  color: white;
+  text-decoration: none;
 }
 .product__other-links b {
   display: block;
@@ -5359,6 +5362,111 @@ select:-webkit-autofill:focus {
   padding-right: 1.5vw;
 }
 .presentation-n__currency-price b {
+  font-weight: 500;
+}
+
+/* ------------------------------- stream-app ------------------------------- */
+.stream-app {
+  font-family: "GT America Extended", sans-serif;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr auto;
+  background: black;
+  color: white;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+.stream-app__user {
+  position: relative;
+  background: white;
+}
+.stream-app__user:after {
+  position: absolute;
+  content: url("../img/presentation/logo.svg");
+  left: 50px;
+  top: 50px;
+}
+.stream-app__lot {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.stream-app__lot-info {
+  line-height: 1.2;
+  padding: 1vw 1.5vw;
+  font-size: 1.5vw;
+}
+.stream-app__lot-image {
+  position: relative;
+  border-top: 1px #555 solid;
+}
+.stream-app__lot-image img {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transform: translateX(-50%);
+}
+.stream-app__lot-num {
+  margin-bottom: 1vw;
+}
+.stream-app__lot-brand {
+  font-weight: 600;
+}
+.stream-app__lot-name {
+  font-weight: 400;
+}
+.stream-app__bids {
+  position: relative;
+  border-top: 1px #555 solid;
+}
+.stream-app__bids-currency {
+  display: flex;
+  gap: 2vw;
+  padding: 0.5vw 2vw;
+  position: absolute;
+  left: 0px;
+  bottom: calc(100% + 1px);
+  width: 100%;
+  background: black;
+  font-size: 1.2vw;
+  line-height: 1.5;
+}
+.stream-app__bids-currency strong {
+  color: #717171;
+  font-weight: 600;
+}
+.stream-app__bids-currency span {
+  font-weight: 400;
+}
+.stream-app__bid-label {
+  display: block;
+  font-size: 1vw;
+  margin-bottom: 1vw;
+}
+.stream-app__bids-live {
+  padding: 2vw 4vw 2vw;
+  display: flex;
+  justify-content: space-between;
+  background: #232121;
+}
+.stream-app__current-bid, .stream-app__asking-bid {
+  font-size: 3vw;
+  font-weight: 500;
+}
+.stream-app__estimate {
+  border-top: 1px #555 solid;
+  padding: 2vw;
+}
+.stream-app__estimate-bid {
+  font-size: 1.5vw;
   font-weight: 500;
 }
 

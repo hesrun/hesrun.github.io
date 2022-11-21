@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body> 
+    <div class="stream-app">
+        <div class="stream-app__user">
+        </div>
+        <div class="stream-app__lot">
+            <div class="stream-app__lot-info">
+                <div class="stream-app__lot-num">4</div>
+                <div class="stream-app__lot-brand">
+                    Girard Perregaux
+                </div>
+                <div class="stream-app__name">
+                    Alpina Gruen Doctor's Watch
+                </div>
+            </div>
+            <div class="stream-app__lot-image">
+                <img src="img/presentation/image 23.png" alt="">
+            </div>
+        </div>
+        <div class="stream-app__bids">
+            <div class="stream-app__bids-currency">
+                <div>
+                    <strong>EUR</strong>
+                    <span>535,000</span>
+                </div>
+                <div>
+                    <strong>EUR</strong>
+                    <span>535,000</span>
+                </div>
+                <div>
+                    <strong>EUR</strong>
+                    <span>535,000</span>
+                </div>
+                <div>
+                    <strong>EUR</strong>
+                    <span>535,000</span>
+                </div>
+                <div>
+                    <strong>EUR</strong>
+                    <span>535,000</span>
+                </div>
+                <div>
+                    <strong>EUR</strong>
+                    <span>535,000</span>
+                </div>
+            </div>
+            <div class="stream-app__bids-live">
+                <div>
+                    <span class="stream-app__bid-label">Current bid</span>
+                    <div class="stream-app__current-bid">
+                        <span class="flag-icon flag-icon-ch"></span>
+                        CHF 375,000
+                    </div>
+                </div>
+                <div>
+                    <span class="stream-app__bid-label">Asking bid</span>
+                    <div class="stream-app__asking-bid">
+                        CHF 400,000
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stream-app__estimate">
+            <span class="stream-app__bid-label">Estimate</span>
+            <div class="stream-app__estimate-bid">
+                CHF 195,000 - 210,000
+            </div>
+        </div>
+    </div>
+    <script>
+        import { CountUp } from './js/countUp.min.js';
+
+        window.onload = function() {
+            var countUp = new CountUp('count', 2000);
+            countUp.start();
+        }
+    </script>
+</body>
+</html>
