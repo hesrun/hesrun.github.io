@@ -11,18 +11,20 @@
   --inter: "Inter", sans-serif;
   --america: "GT America Extended";
   --grey-line: #B9B9B9;
+  --grey-bg: #F2F2F2;
   --green: #25A46F;
   --red: red;
   --blue: blue;
-  --space1:0.5rem;
-  --space1:1rem;
-  --space3:2rem;
-  --space4:3rem;
+  --space1:15px;
+  --space2:30px;
+  --space3:45px;
+  --space4:60px;
 }
 
 body {
   font-family: var(--inter);
   font-size: 15px;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -30,28 +32,65 @@ button, input, textarea {
   font-family: var(--inter);
 }
 
+a {
+  color: inherit;
+}
+
 .container {
   padding-left: 80px;
   padding-right: 80px;
+}
+
+.main-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 p {
   margin: 1rem 0;
 }
 
-/* --------------------------------- header --------------------------------- */
-.main-header {
-  display: flex;
-  align-items: center;
-  background: black;
-  padding-top: 30px;
-  padding-bottom: 30px;
+/* ----------------------------------- ui ----------------------------------- */
+/* --------------------------------- colors --------------------------------- */
+.green-text {
+  color: var(--green) !important;
 }
-.main-header__logo {
-  width: 300px;
+
+.red-text {
+  color: var(--red) !important;
 }
-.main-header__tools {
-  margin-left: auto;
+
+/* --------------------------------- margins -------------------------------- */
+.mb1 {
+  margin-bottom: var(--space1) !important;
+}
+
+.mb2 {
+  margin-bottom: var(--space2) !important;
+}
+
+.mb3 {
+  margin-bottom: var(--space3) !important;
+}
+
+.mb4 {
+  margin-bottom: var(--space4) !important;
+}
+
+.mt1 {
+  margin-top: var(--space1) !important;
+}
+
+.mt2 {
+  margin-top: var(--space2) !important;
+}
+
+.mt3 {
+  margin-top: var(--space3) !important;
+}
+
+.mt4 {
+  margin-top: var(--space4) !important;
 }
 
 /* ---------------------------------- typo ---------------------------------- */
@@ -64,24 +103,28 @@ h1, .h1 {
 
 h2, .h2 {
   font-family: var(--america);
+  font-weight: 500;
   font-size: 4rem;
   margin: 4.5rem 0 3.5rem;
 }
 
 h3, .h3 {
   font-family: var(--america);
+  font-weight: 500;
   font-size: 3rem;
   margin: 4rem 0 3rem;
 }
 
 h4, .h4 {
   font-family: var(--america);
+  font-weight: 500;
   font-size: 2.5rem;
   margin: 3.5rem 0 2.5rem;
 }
 
 h5, .h5 {
   font-family: var(--america);
+  font-weight: 500;
   font-size: 2rem;
   margin: 3rem 0 2rem;
 }
@@ -183,4 +226,208 @@ h5, .h5 {
 .ui-card {
   padding: 1rem;
   background: #efefef;
+}
+
+/* --------------------------------- header --------------------------------- */
+.main-header {
+  display: flex;
+  align-items: center;
+  background: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.main-header__logo {
+  width: 300px;
+}
+.main-header__logo img {
+  vertical-align: middle;
+}
+.main-header__tools {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.main-header__nav {
+  font-size: 20px;
+  margin-left: 90px;
+  display: flex;
+  gap: 0px 35px;
+}
+.main-header__nav a {
+  text-decoration: none;
+  color: #fff;
+}
+.main-header__nav a:hover {
+  opacity: 0.5;
+}
+.main-header__tool-btn {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 30px;
+}
+.main-header__tool-btn:hover {
+  opacity: 0.5;
+}
+
+/* ---------------------------------- index --------------------------------- */
+.more-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.more-divider::before, .more-divider::after {
+  content: "";
+  flex: 1 1 auto;
+  display: block;
+  height: 1px;
+  background: var(--grey-line);
+}
+.more-divider__button {
+  margin: 0 30px;
+}
+
+.start-timer {
+  display: flex;
+}
+.start-timer > span {
+  flex: 0 0 auto;
+  font-family: var(--america);
+  font-size: 18px;
+  line-height: 25px;
+  margin: 1px 30px 0 0;
+}
+.start-timer__digs {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+}
+.start-timer__digs-item {
+  text-align: center;
+  position: relative;
+}
+.start-timer__digs-item b {
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 800;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: var(--grey-bg);
+  margin-bottom: 3px;
+}
+.start-timer__digs-item_dots::before {
+  content: ":";
+  font-size: 20px;
+  font-weight: 800;
+  position: absolute;
+  left: -18px;
+  line-height: 50px;
+}
+.start-timer__digs-item span {
+  font-size: 12px;
+}
+
+.content-head__subtitle {
+  margin: 0;
+}
+.content-head__title {
+  margin: 0;
+}
+.content-head__title span {
+  display: inline-block;
+}
+.content-head__beggin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-head__text {
+  margin: 30px 0 0 0;
+}
+
+.main-banner img {
+  width: 100%;
+}
+
+.more-brands-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px 3vw;
+}
+.more-brands-list__item {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+.more-brands-list a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.more-brands-list a:hover {
+  opacity: 0.5;
+}
+
+/* -------------------------------- lots ------------------------------- */
+.lots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 90px 60px;
+}
+
+.lot-item__body {
+  position: relative;
+  margin-bottom: 20px;
+}
+.lot-item__image {
+  display: block;
+  border: 1px var(--grey-line) solid;
+  overflow: hidden;
+}
+.lot-item__image img {
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+.lot-item__image:hover img {
+  transform: scale(1.1);
+}
+.lot-item__favorite {
+  cursor: pointer;
+  font-size: 24px;
+  padding: 0px;
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  background: none;
+  color: black;
+  border: none;
+}
+.lot-item__brand {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 500;
+}
+.lot-item__name {
+  margin-top: 5px;
+}
+.lot-item__bids {
+  margin-top: 20px;
+}
+.lot-item__price {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 35px;
+  background: var(--grey-bg);
+  padding: 0 30px;
+}
+.lot-item__bids {
+  display: flex;
+  align-items: center;
+}
+.lot-item__bids-count {
+  margin-left: 30px;
+}
+.lot-item__bids-count:hover {
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
