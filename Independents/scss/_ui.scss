@@ -1,0 +1,140 @@
+/* ---------------------------------- typo ---------------------------------- */
+h1,.h1 {
+    font-family: var(--america);
+    font-weight: 900;
+    font-size: 5rem;
+    margin: 5rem 0 4rem;
+}
+h2,.h2 {
+    font-family: var(--america);
+    font-size: 4rem;
+    margin: 4.5rem 0 3.5rem;
+}
+h3,.h3 {
+    font-family: var(--america);
+    font-size: 3rem;
+    margin: 4rem 0 3rem;
+}
+h4,.h4 {
+    font-family: var(--america);
+    font-size: 2.5rem;
+    margin: 3.5rem 0 2.5rem;
+}
+h5,.h5 {
+    font-family: var(--america);
+    font-size: 2rem;
+    margin: 3rem 0 2rem;
+}
+
+/* ----------------------------------- ui ----------------------------------- */
+
+.button {
+    $root: &;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px transparent solid;
+    transition: all 0.3s;
+    &_medium {
+        font-size: 14px;
+        height: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    &_small {
+        font-size: 13px;
+        height: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &_black {
+        &#{$root}_filled {
+            background: black;
+            color: white;
+            &:hover {
+                background: white;
+                color: black;
+                border: 1px var(--grey-line) solid;
+            }
+        }
+        &#{$root}_outline {
+            border: 1px var(--grey-line) solid;
+            color: black;
+            &:hover {
+                background: black;
+                color: white;
+            }
+        }
+    }
+    &_white {
+        &#{$root}_filled {
+            background: white;
+            color: black;
+            &:hover {
+                background: black;
+                color: white;
+                border: 1px white solid;
+            }
+        }
+        &#{$root}_outline {
+            border: 1px white solid;
+            color: white;
+            &:hover {
+                background: white;
+                color: black;
+            }
+        }
+    }
+    &_green {
+        &#{$root}_filled {
+            background: var(--green);
+            color: white;
+            &:hover {
+                background: white;
+                color: var(--green);
+                border: 1px var(--green) solid;
+            }
+        }
+        &#{$root}_outline {
+            border: 1px var(--green) solid;
+            color: var(--green);
+            &:hover {
+                background: var(--green);
+                color: white;
+            }
+        }
+    }
+    &_red {
+        &#{$root}_filled {
+            background: var(--red);
+            color: white;
+            &:hover {
+                background: white;
+                color: var(--red);
+                border: 1px var(--red) solid;
+            }
+        }
+        &#{$root}_outline {
+            border: 1px var(--red) solid;
+            color: var(--red);
+            &:hover {
+                background: var(--red);
+                color: white;
+            }
+        }
+    }
+    
+}
+
+
+
+
+.ui-card {
+    padding: 1rem;
+    background: #efefef;
+}

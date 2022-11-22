@@ -178,42 +178,14 @@
 
     .lots-grid {
         padding: 0px 60px 30px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px 15px;
-        &_timed {
-            grid-template-columns: repeat(2, 1fr);
-        }
     }
 
     
 
     .lot-item {
         $root: &;
-        &_timed {
-            #{$root}__brand {
-                font-size: 20px;
-                margin-top: 10px;
-            }
-            #{$root}__name {
-                font-size: 20px;
-                margin: 10px 0 5px 0;
-            }
-            #{$root}__price {
-                font-size: 18px;
-                margin-top: 10px;
-            }
-            #{$root}__bidders {
-                color: $grey;
-                margin-top: 15px;
-                font-size: 18px;
-            }
-            #{$root}__progress {
-                margin-top: 15px;
-            }
-            .timed-progress__counter {
-                font-size: 1
-            }
-        }
         &__image {
             border-radius: 15px;
             width: 100%;
@@ -237,11 +209,10 @@
             margin-bottom: 10px;
         }
         &__price {
+            margin-top: 15px;
+            display: grid;
             font-size: 15px;
-        }
-        &__hammer-price {
-            font-size: 15px;
-            margin-top: 10px;
+            row-gap: 15px;
         }
         > .btn {
             margin-top: 15px;

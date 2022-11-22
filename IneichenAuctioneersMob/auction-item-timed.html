@@ -54,51 +54,110 @@
                     </div>
                     <div class="lots-grid lots-grid_timed">
                         <a class="lot-item lot-item_timed" href="">
-                            <img class="lot-item__image" src="img/lot-item.jpg" alt="">
+                            <div class="lot-item__image">
+                                <div class="lot-item__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img class="" src="img/lot-item.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="img/lot-item.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="" src="img/lot-item.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="lot-item__num">01</div>
                             <div class="lot-item__brand">
                                 ROGER DUBUIS
-                                <b>54 BIDS</b>
                             </div>
                             <div class="lot-item__name">SYMPATHIE</div>
-                            <div class="lot-item__price">Starting price: $4,000</div>
-                            <div class="lot-item__price">Sold for: $43,000 for 45 days</div>
-                            <div class="lot-item__bidders">45 bidders</div>
+                            <div class="lot-item__price">
+                                <div class="lot-item__price-range">
+                                    <span>Estimate:</span>
+                                    <strong>$120,000 - $200,000</strong>
+                                </div>
+                                <div class="lot-item__price-range">
+                                    <span>Current bid:</span>
+                                    <strong>CHF 6,000</strong>
+                                </div>
+                                <div class="lot-item__bids">
+                                    <span>Total bids:</span>
+                                    <strong>5 Bid(s)</strong>
+                                </div>
+                                <div class="lot-item__price-now">
+                                    <span>Fixed price:</span>
+                                    <strong class="brown-text">CHF 150,000</strong>
+                                </div>
+                                <div class="lot-item__closing">
+                                    <span>Closes in</span>
+                                    <strong>3 day(s)</strong>
+                                </div>
+                            </div>
                         </a>
                         <a class="lot-item lot-item_timed" href="">
-                            <img class="lot-item__image" src="img/lot-item.jpg" alt="">
+                            <div class="lot-item__image">
+                                <img class="" src="img/lot-item.jpg" alt="">
+                            </div>
                             <div class="lot-item__num">01</div>
                             <div class="lot-item__brand">
                                 ROGER DUBUIS
-                                <b>54 BIDS</b>
                             </div>
                             <div class="lot-item__name">SYMPATHIE</div>
-                            <div class="lot-item__price">Starting price: $4,000</div>
-                            <div class="lot-item__progress timed-progress">
-                                <div class="timed-progress__bar">
-                                    <div class="green-bg" style="width: 50%"></div>
+                            <div class="lot-item__price">
+                                <div class="lot-item__price-range">
+                                    <span>Estimate:</span>
+                                    <strong>$120,000 - $200,000</strong>
                                 </div>
-                                <div class="timed-progress__counter">
-                                    <b>CLOSING  2 DAYS</b>
+                                <div class="lot-item__price-range">
+                                    <span>Current bid:</span>
+                                    <strong>CHF 6,000</strong>
+                                </div>
+                                <div class="lot-item__bids">
+                                    <span>Total bids:</span>
+                                    <strong>5 Bid(s)</strong>
+                                </div>
+                                <div class="lot-item__price-now">
+                                    <span>Fixed price:</span>
+                                    <strong class="brown-text">CHF 150,000</strong>
+                                </div>
+                                <div class="lot-item__closing">
+                                    <span>Closes in</span>
+                                    <strong>3 day(s)</strong>
                                 </div>
                             </div>
                         </a>
                         <a class="lot-item lot-item_timed" href="">
-                            <img class="lot-item__image" src="img/lot-item.jpg" alt="">
+                            <div class="lot-item__image">
+                                <img class="" src="img/lot-item.jpg" alt="">
+                            </div>
                             <div class="lot-item__num">01</div>
                             <div class="lot-item__brand">
                                 ROGER DUBUIS
-                                <b>54 BIDS</b>
                             </div>
                             <div class="lot-item__name">SYMPATHIE</div>
-                            <div class="lot-item__price">Starting price: $4,000</div>
-                            <div class="lot-item__progress timed-progress">
-                                <div class="timed-progress__bar">
-                                    <div class="red-bg" style="width: 50%"></div>
+                            <div class="lot-item__price">
+                                <div class="lot-item__price-range">
+                                    <span>Estimate:</span>
+                                    <strong>$120,000 - $200,000</strong>
                                 </div>
-                                <div class="timed-progress__counter">
-                                    <span>CLOSING  IN</span>
-                                    <b>2 H 24 M 34 S</b>
+                                <div class="lot-item__price-range">
+                                    <span>Current bid:</span>
+                                    <strong>CHF 6,000</strong>
+                                </div>
+                                <div class="lot-item__bids">
+                                    <span>Total bids:</span>
+                                    <strong>5 Bid(s)</strong>
+                                </div>
+                                <div class="lot-item__price-now">
+                                    <span>Fixed price:</span>
+                                    <strong class="brown-text">CHF 150,000</strong>
+                                </div>
+                                <div class="lot-item__closing">
+                                    <span>Closes in</span>
+                                    <strong>3 day(s)</strong>
                                 </div>
                             </div>
                         </a>
@@ -293,8 +352,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
-                speed: 400
-            });
+            speed: 400
+        });
+
+        var CardSlider = new Swiper(".lot-item__slider", {
+            autoplay: {
+                delay: 0
+            },
+            speed: 2000,
+            allowTouchMove: false
+        });
+
         function CloseSheet(){
             $(".action-sheet").fadeOut(300).removeClass('action-sheet__open');
         }

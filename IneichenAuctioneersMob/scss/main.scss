@@ -62,22 +62,22 @@ a {
 }
 
 .brown-text {
-    color: $brown;
+    color: $brown !important;
 }
 .green-text {
-    color: $green-text;
+    color: $green-text !important;
 }
 .blue-text {
-    color: $blue;
+    color: $blue !important;
 }
 .red-text {
-    color: $red;
+    color: $red !important;
 }
 .pink-text {
-    color: $pink;
+    color: $pink !important;
 }
 .grey-text {
-    color: $grey;
+    color: $grey !important;
 }
 
 .brown-bg {
@@ -603,9 +603,6 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 10px;
-    &_timed {
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
 .lot-item {
     $root: &;
@@ -622,31 +619,39 @@ a {
         color: inherit;
     }
     &__image {
-        border-radius: 5px;
+        border-radius: 10px;
         width: 100%;
+        padding-top: 150%;
+        position: relative;
+        overflow: hidden;
+        transition: all 1s;
+        > img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
-    &_timed {
-        #{$root}__brand {
-            font-size: 14px;
-            margin-top: 10px;
+    &__loading {
+        #{$root}__image {
+            filter: blur(5px);
         }
-        #{$root}__name {
-            font-size: 14px;
-            margin: 5px 0 5px 0;
-        }
-        #{$root}__price {
-            color: $grey;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-        #{$root}__bidders {
-            color: $grey;
-            margin-top: 10px;
-            font-size: 14px;
-            font-weight: 700;
-        }
-        #{$root}__progress {
-            margin-top: 15px;
+    }
+    &__slider {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
     &__num {
@@ -661,16 +666,13 @@ a {
         line-height: 22px;
         font-size: 10px;
         border-radius: 50%;
+        z-index: 1;
 
     }
     &__brand {
         font-size: 11px;
         color: $grey;
         margin-top: 8px;
-        b {
-            float: right;
-            color: #000;
-        }
     }
     &__name {
         font-size: 11px;
@@ -678,49 +680,26 @@ a {
         margin-bottom: 10px;
     }
     &__price {
-        font-size: 11px;
-        margin-top: auto;
-    }
-    &__hammer-price {
-        font-size: 11px;
-        margin-top: 8px;
+        display: grid;
+        font-size: 10px;
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+        > div {
+            display: flex;
+            justify-content: space-between;
+        }
+        span {
+            color: $grey;
+        }
+        strong {
+            font-weight: 700;
+        }
     }
     > .btn {
         margin-top: 10px;
         align-self: end;
     }
 }
-
-.timed-progress {
-    display: flex;
-    align-items: center;
-    gap: 0 15px;
-    &__bar {
-        flex: 1 1 auto;
-        height: 10px;
-        box-shadow: 0 0 0 1px $grey-line inset;
-        border-radius: 10px;
-        overflow: hidden;
-        div {
-            height: 100%;
-            border-radius: 10px;
-        }
-    }
-    &__counter {
-        font-size: 12px;
-        color: $grey;
-        span {
-            font-weight: 700;
-            font-size: 10px;
-            display: block;
-            margin-bottom: 3px;
-        }
-        b {
-            font-variant-numeric: tabular-nums;
-        }
-    }
-}
-
 
 .live-bar {
     color: #fff;
@@ -792,6 +771,11 @@ a {
         margin-bottom: 25px;
         position: relative;
         img {
+            height: 70vh;
+            width: 100%;
+            object-fit: cover;
+        }
+        video {
             height: 70vh;
             width: 100%;
             object-fit: cover;
@@ -1096,6 +1080,7 @@ a {
 
 .live-bid-btns {
     padding: 15px 15px 15px;
+    background: #fff;
     &_guest {
         display: flex;
         gap: 0 10px;
