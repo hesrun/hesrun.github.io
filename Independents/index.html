@@ -9,6 +9,11 @@
 </head>
 <body>
     <header class="main-header container">
+        <div class="main-header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <a class="main-header__logo">
             <img src="img/logo.svg" alt="">
         </a>
@@ -414,13 +419,55 @@
                 <div class="watchmaker-item__position">Watchmaker</div>
             </a>
         </div>
-
-
+        <div class="more-divider mb3 mt3">
+            <a href="" class="more-divider__button button button_black button_outline button_small">Learn more...</a>
+        </div>
     </div>
-    <footer></footer>
+    <footer class="main-footer container">
+        <div class="main-footer__col">
+            <strong class="main-footer__title">INDEPENDENTS</strong>
+            <a href="" class="main-footer__link">Auction</a>
+            <a href="" class="main-footer__link">Award</a>
+            <a href="" class="main-footer__link">Watchmakers</a>
+            <a href="" class="main-footer__link">About</a>
+        </div>
+        <div class="main-footer__col">
+            <strong class="main-footer__title">INFORMATION</strong>
+            <a href="" class="main-footer__link">Terms & Conditions</a>
+            <a href="" class="main-footer__link">Privacy Policy</a>
+            <a href="" class="main-footer__link">Refunds & Cancellation</a>
+            <a href="" class="main-footer__link">Payment & Delivery</a>
+        </div>
+        <div class="main-footer__space"></div>
+        <div class="main-footer__col">
+            <strong class="main-footer__title">ADDRESS</strong>
+            <address class="main-footer_adress">
+                Postfach 4038, <br>
+                Stadthausquai 11-13, <br>
+                CH-8001 Zürich
+            </address>
+        </div>
+        <div class="main-footer__col">
+            <strong class="main-footer__title">CONTACT</strong>
+            <a href="tel:+41442981144" class="main-footer__link">+41 44 298 11 44</a>
+            <a href="mailto:join@independents.com" class="main-footer__link">join@independents.com</a>
+        </div>
+        <div class="main-footer__col">
+            <strong class="main-footer__title">official channels</strong>
+            <div class="main-footer__socials">
+                <a href="" class="main-footer__social-link">
+                    <i class="mdi mdi-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="main-footer__copy">
+            © INDEPENDENTS 2023. All rights reserved. Images are copyrighted
+        </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
+
         $('.lot-item__favorite').click(function(){
             $(this).find('.mdi').toggleClass('mdi-heart-outline mdi-heart')
         })
@@ -432,6 +479,15 @@
             $('.main-header__search').removeClass('main-header__search_open');
             return false;
         })
+
+        $('.main-header__burger').click(function(){
+            $(this).toggleClass('main-header__burger_active');
+            $('.main-header__nav').fadeToggle(100);
+        })
+
+
+        
+
         
     </script>
 </body>

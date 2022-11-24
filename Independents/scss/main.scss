@@ -27,7 +27,7 @@
 body {
     font-family: var(--inter);
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1;
 }
 
@@ -52,13 +52,16 @@ p {
 @import 'ui';
 /* --------------------------------- header --------------------------------- */
 .main-header {
-    position: relative;
+    top: 0px;
+    position: sticky;
     display: flex;
     align-items: center;
     background: black;
     padding-top: 30px;
     padding-bottom: 30px;
+    z-index: 10;
     &__logo {
+        flex: 0 0 auto;
         width: 250px;
         img {
             vertical-align: middle;
@@ -159,6 +162,36 @@ p {
             background: var(--green);
         }
     }
+
+    &__burger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        width: 30px;
+        height: 35px;
+        padding: 3px 0px;
+        justify-content: space-evenly;
+        margin-right: 15px;
+        span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: white;
+            transition: all 0.3s;
+        }
+        &_active {
+            span:nth-child(2) {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            span:nth-child(1) {
+                transform: rotate(45deg) translateY(11px);
+            }
+            span:nth-child(3) {
+                transform: rotate(-45deg) translateY(-11px);
+            }
+        }
+    }
 }
 
 /* ---------------------------------- index --------------------------------- */
@@ -180,6 +213,7 @@ p {
 }
 .start-timer {
     display: flex;
+    flex: 0 0 auto;
     > span {
         flex: 0 0 auto;
         font-family: var(--america);
@@ -244,7 +278,7 @@ p {
 }
 .more-brands-list {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px 3vw;
     &__item {
         margin: 0;
@@ -263,14 +297,14 @@ p {
 /* -------------------------------- lots ------------------------------- */
 .lots-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 4vw 3vw;
 }
 .lot-item {
     $root: &;
     &__body {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     &__image {
         display: block;
@@ -299,7 +333,7 @@ p {
         border: none;
     }
     &__brand {
-        font-size: 18px;
+        font-size: 16px;
         margin: 0;
         font-weight: 500;
         a {
@@ -310,12 +344,14 @@ p {
         }
     }
     &__name {
+        font-size: 13px;
         margin-top: 5px;
     }
     &__bids {
-        margin-top: 20px;
+        margin-top: 15px;
     }
     &__price {
+        font-size: 14px;
         display: inline-block;
         font-weight: 700;
         line-height: 35px;
@@ -327,6 +363,7 @@ p {
         align-items: center;
     }
     &__bids-count {
+        font-size: 13px;
         margin-left: 30px;
         &:hover {
             text-decoration: none;
@@ -337,7 +374,7 @@ p {
 /* ------------------------------- watchmakers ------------------------------ */
 .watchmakers-grid {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 3vw 2vw;
 }
 
@@ -345,9 +382,9 @@ p {
     $root: &;
     text-decoration: none;
     &__image {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         img {
-            max-width: 100%;
+            width: 100%;
             vertical-align: middle;
             filter: grayscale(100%);
             transition: all 0.3s;
@@ -355,9 +392,10 @@ p {
     }
     &__name {
         margin: 0;
-        font-size: 18px;
+        font-size: 16px;
     }
     &__position {
+        font-size: 13px;
         margin-top: 5px;
         color: var(--grey-text);
     }
@@ -370,6 +408,50 @@ p {
         }
     }
 }
+
+
+/* --------------------------------- footer --------------------------------- */
+.main-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: auto auto 1fr auto auto;
+    grid-gap: 15px 4vw;
+    &__title {
+        text-transform: uppercase;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 30px;
+    }
+    &__link {
+        margin-bottom: 10px;
+        line-height: 20px;
+        text-decoration: none;
+        display: block;
+        color: var(--grey-text);
+        &:hover {
+            color: var(--green);
+        }
+    }
+    &_adress {
+        font-style: normal;
+        line-height: 27px;
+        color: var(--grey-text);
+    }
+    &__copy {
+        grid-column: 4 / 3 span; 
+    }
+    &__social-link {
+        font-size: 24px;
+        color: var(--grey-text);
+        &:hover {
+            color: var(--green);
+        }
+    }
+} 
+
 
 
 /* ------------------------------- responsive ------------------------------- */
