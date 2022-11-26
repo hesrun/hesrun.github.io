@@ -307,17 +307,27 @@ p {
         margin-bottom: 15px;
     }
     &__image {
+        position: relative;
         display: block;
         border: 1px var(--grey-line) solid;
         overflow: hidden;
         img {
             width: 100%;
             vertical-align: middle;
-            transition: all 0.3s;
+            transition: opacity 0.3s;
+        }
+        #{$root}__upper-image {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: all 1s;
         }
         &:hover {
-            img {
-                transform: scale(1.1);
+            #{$root}__upper-image {
+                opacity: 1;
             }
         }
     }
