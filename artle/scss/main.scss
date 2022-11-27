@@ -536,7 +536,7 @@ h1,h2,h3,h4,h5 {
         height: 100%;
         left: 0px;
         top: 0px;
-        transition: background 0.3s;
+        transition: background 0.3s, width 0.3s linear;
     }
     .name {
         margin: 0 30px;
@@ -1081,8 +1081,8 @@ h1,h2,h3,h4,h5 {
     &__info {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: flex-start;
+        justify-content: center;        
         width: calc(50% - 25px);
         padding: 5vw 70px;
         background: rgba(#000, 0.8);
@@ -1094,7 +1094,7 @@ h1,h2,h3,h4,h5 {
     }
     &__name {
         line-height: 1.5;
-        margin: 25px 0 0 0;
+        margin: 10px 0 0 0;
         display: block;
         font-size: 24px;
     }
@@ -1188,6 +1188,7 @@ h1,h2,h3,h4,h5 {
         margin-bottom: 30px;
     }
     blockquote {
+        clear: both;
         border: 1px rgba(white, 0.4) solid;
         padding: 30px;
         font-size: 24px;
@@ -1198,9 +1199,12 @@ h1,h2,h3,h4,h5 {
         margin: 24px 0 0 0;
     }
     figure {
-        max-width: 100%;
-        margin-left: 80px;
+        max-width: 50%;
+        margin: 0px 0 30px 30px;
         float: right;
+        img {
+            width: 100%;
+        }
     }
 }
 

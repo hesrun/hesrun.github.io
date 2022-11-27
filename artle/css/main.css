@@ -531,7 +531,7 @@ h1, h2, h3, h4, h5 {
   height: 100%;
   left: 0px;
   top: 0px;
-  transition: background 0.3s;
+  transition: background 0.3s, width 0.3s linear;
 }
 .slider-prodict-item .name {
   margin: 0 30px;
@@ -1103,8 +1103,8 @@ h1, h2, h3, h4, h5 {
 .watch-item-card__info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
   width: calc(50% - 25px);
   padding: 5vw 70px;
   background: rgba(0, 0, 0, 0.8);
@@ -1117,7 +1117,7 @@ h1, h2, h3, h4, h5 {
 }
 .watch-item-card__name {
   line-height: 1.5;
-  margin: 25px 0 0 0;
+  margin: 10px 0 0 0;
   display: block;
   font-size: 24px;
 }
@@ -1215,6 +1215,7 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 30px;
 }
 .watch-item-about blockquote {
+  clear: both;
   border: 1px rgba(255, 255, 255, 0.4) solid;
   padding: 30px;
   font-size: 24px;
@@ -1225,9 +1226,12 @@ h1, h2, h3, h4, h5 {
   margin: 24px 0 0 0;
 }
 .watch-item-about figure {
-  max-width: 100%;
-  margin-left: 80px;
+  max-width: 50%;
+  margin: 0px 0 30px 30px;
   float: right;
+}
+.watch-item-about figure img {
+  width: 100%;
 }
 
 .technical-params-cols {
@@ -2207,8 +2211,9 @@ fieldset legend {
     grid-gap: 0 50px;
   }
   .watch-item-about figure {
+    max-width: 100%;
     float: none;
-    margin: 0 0 30px 0;
+    margin: 30px 0;
   }
   .watch-item-about figure img {
     width: 100%;
@@ -2241,15 +2246,15 @@ fieldset legend {
   }
   /***************about-artle**************/
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 520px) {
   body {
     padding-top: 60px;
   }
   .paddings {
-    padding: 30px;
+    padding: 30px 15px;
   }
   .paddings-half {
-    padding: 30px;
+    padding: 30px 15px;
   }
   .section-title h2 {
     font-size: 24px;
@@ -2309,6 +2314,7 @@ fieldset legend {
   }
   .main-header-mobile {
     height: 60px;
+    padding: 0 15px;
   }
   .main-header-mobile .burger-menu {
     width: 24px;
@@ -2346,16 +2352,17 @@ fieldset legend {
   }
   .navi-modal-mobile-cols {
     flex-direction: column;
-    min-height: 100%;
-  }
-  .navi-modal-mobile-cols .our-club {
-    flex: 0 0 auto;
-    margin-top: auto;
+    height: 100%;
   }
   .navi-modal-mobile-cols .links-col {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
   }
   .navi-modal-mobile-cols .lang-select {
+    margin: auto 0 0;
+    order: 3;
     display: block;
   }
   .join-our-club {
@@ -2382,6 +2389,7 @@ fieldset legend {
     order: 3;
   }
   .catalog-section .fast-subscribe-form {
+    min-width: 0;
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 15px;
@@ -2394,7 +2402,7 @@ fieldset legend {
     margin: 0;
   }
   .catalog-grid {
-    grid-gap: 40px 25px;
+    grid-gap: 40px 15px;
   }
   .catalog-grid + .text-center {
     margin-top: 30px;
@@ -2425,6 +2433,29 @@ fieldset legend {
   }
   .catalog-grid-item .action button i.mdi, .catalog-grid-item .action a i.mdi {
     font-size: 16px;
+  }
+  .catalog-grid-item .price-name {
+    font-size: 11px;
+  }
+  .catalog-grid-item .price {
+    font-size: 12px;
+  }
+  .catalog-grid-item .table-price {
+    display: grid;
+  }
+  .catalog-grid-item .table-price tr {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .catalog-grid-item .table-price td {
+    padding-bottom: 5px;
+  }
+  .catalog-grid-item .table-price td:first-child {
+    text-align: center;
+    padding-right: 0px;
+  }
+  .catalog-grid-item .table-price td:last-child {
+    text-align: center;
   }
   .empty-search-text {
     padding: 0 0 5vh;

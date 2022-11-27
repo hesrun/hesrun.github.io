@@ -2612,6 +2612,7 @@ select:-webkit-autofill:focus {
 }
 .event-announce-item__description {
   line-height: 1.3;
+  margin-bottom: 30px;
 }
 .event-announce-item__live {
   display: inline-block;
@@ -3621,7 +3622,8 @@ select:-webkit-autofill:focus {
   justify-content: space-between;
 }
 .product__name h1 {
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: 500;
 }
 .product__bids-info {
   display: grid;
@@ -5382,6 +5384,7 @@ select:-webkit-autofill:focus {
 .stream-app__user {
   position: relative;
   background: white;
+  aspect-ratio: 16/9;
 }
 .stream-app__user:after {
   position: absolute;
@@ -5426,11 +5429,12 @@ select:-webkit-autofill:focus {
 .stream-app__bids {
   position: relative;
   border-top: 1px #555 solid;
+  background: #232121;
 }
 .stream-app__bids-currency {
   display: flex;
   gap: 2vw;
-  padding: 0.5vw 2vw;
+  padding: 0.5vw 4vw;
   position: absolute;
   left: 0px;
   bottom: calc(100% + 1px);
@@ -5449,21 +5453,20 @@ select:-webkit-autofill:focus {
 .stream-app__bid-label {
   display: block;
   font-size: 1vw;
-  margin-bottom: 1vw;
+  margin-bottom: 0.5vw;
 }
 .stream-app__bids-live {
-  padding: 2vw 4vw 2vw;
+  padding: 1vw 4vw 1vw;
   display: flex;
   justify-content: space-between;
-  background: #232121;
 }
 .stream-app__current-bid, .stream-app__asking-bid {
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 500;
 }
 .stream-app__estimate {
   border-top: 1px #555 solid;
-  padding: 2vw;
+  padding: 1vw 2vw;
 }
 .stream-app__estimate-bid {
   font-size: 1.5vw;
@@ -7658,7 +7661,6 @@ select:-webkit-autofill:focus {
     display: none;
   }
   .title {
-    text-align: center;
     font-size: 22px;
     margin: 40px 0 20px;
   }
@@ -8063,7 +8065,7 @@ select:-webkit-autofill:focus {
     transform: none;
   }
   .lot-item__price {
-    margin-top: 0;
+    margin-top: auto;
     font-size: 11px;
     margin-left: 0;
     margin-right: 0;
@@ -8135,6 +8137,12 @@ select:-webkit-autofill:focus {
   }
   .filtering-btns {
     margin: 0 0 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px 0;
+  }
+  .filtering-btns .c-button {
+    width: 100%;
   }
   .auction-detail {
     margin-bottom: 30px;

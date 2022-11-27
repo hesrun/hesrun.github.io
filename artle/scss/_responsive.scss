@@ -344,8 +344,9 @@
     }
     .watch-item-about {
         figure {
+            max-width: 100%;
             float: none;
-            margin: 0 0 30px 0;
+            margin: 30px 0;
             img {
                 width: 100%;
             }
@@ -384,15 +385,15 @@
     /***************about-artle**************/
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 520px) {
     body {
         padding-top: 60px;
     }
     .paddings {
-        padding: 30px;
+        padding: 30px 15px;
     }
     .paddings-half {
-        padding: 30px;
+        padding: 30px 15px;
     }
     .section-title {
         h2 {
@@ -458,6 +459,7 @@
 
     .main-header-mobile {
         height: 60px;
+        padding: 0 15px;
         .burger-menu {
             width: 24px;
             span {
@@ -497,15 +499,17 @@
 
     .navi-modal-mobile-cols {
         flex-direction: column;
-        min-height: 100%;
-        .our-club {
-            flex: 0 0 auto;
-            margin-top: auto;
-        }
+        height: 100%;
         .links-col {
+            display: flex;
+            flex-direction: column;
             width: 100%;
+            height: 100%;
+            
         }
         .lang-select {
+            margin: auto 0 0;
+            order: 3;
             display: block;
         }
 
@@ -536,6 +540,7 @@
             }
         }
         .fast-subscribe-form {
+            min-width: 0;
             display: grid;
             grid-template-columns: 1fr auto;
             gap: 15px;
@@ -550,7 +555,7 @@
     }
 
     .catalog-grid {
-        grid-gap: 40px 25px;
+        grid-gap: 40px 15px;
         & + .text-center {
             margin-top: 30px;
         }
@@ -584,6 +589,29 @@
                 i.mdi {
                     font-size: 16px;
                 }
+            }
+        }
+        .price-name {
+            font-size: 11px;
+        }
+        .price {
+            font-size: 12px;
+        }
+        .table-price {
+            display: grid;
+            tr {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+            td {
+                padding-bottom: 5px;
+            }
+            td:first-child {
+                text-align: center;
+                padding-right: 0px;
+            }
+            td:last-child {
+                text-align: center;
             }
         }
     }
