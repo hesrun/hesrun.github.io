@@ -79,6 +79,9 @@ a {
 .grey-text {
     color: $grey !important;
 }
+.black-text {
+    color: black !important;
+}
 
 .brown-bg {
     background: $brown;
@@ -680,6 +683,7 @@ a {
         margin-bottom: 10px;
     }
     &__price {
+        margin-top: auto;
         display: grid;
         font-size: 10px;
         grid-template-columns: 1fr;
@@ -825,31 +829,53 @@ a {
         font-family: $america;
         margin-bottom: 25px;
     }
-    &__favorite {
-        margin-bottom: 25px;
-    }
-    &__bids {
-        margin: 25px 0;
-        border: 1px $grey-line solid;
-        border-radius: 10px;
-    }
-    &__bids-item {
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        padding: 20px 15px;
-        color: $grey;
-        border-bottom: 1px $grey-line solid;
-        &:last-child {
-            border: none;
-        }
+    &__value {
+        padding: 30px 15px;
+        border-top: 1px $grey-line solid;
+        display: grid;
+        gap: 15px 0;
         div {
-            color: #000;
-            margin-left: auto;   
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        i {
-            font-size: 16px;
-            margin-right: 5px;
+        span {
+            color: $grey;
+            font-size: 13px;
+        }
+        strong {
+            font-weight: 500;
+        }
+        a {
+            color: #fff;
+            background: $blue;
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 13px;
+            text-decoration: none;
+        }
+        hr {
+            margin: 20px -15px;
+            border:none;
+            height: 1px;
+            background: $grey-light;
+        }
+
+    }
+    &__bids-form {
+        padding: 30px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px 0;
+    }
+    &__bid-btns {
+        span {
+            display: block;
+            text-align: center;
+            margin: 8px 0;
+            color: $grey;
+            font-size: 12px;
+            text-transform: uppercase;
         }
     }
     &__specifications {
@@ -893,9 +919,6 @@ a {
     &__timed-bidder {
         font-weight: 500;
     }
-
-
-
     &__timed-timer {
         border-bottom: 1px $grey-line solid;
         padding: 30px 15px;
@@ -952,59 +975,7 @@ a {
         padding: 0 15px;
         margin-top: 15px;
     }
-    &__value {
-        padding: 30px 15px;
-        border-bottom: 1px $grey-line solid;
-        border-top: 1px $grey-line solid;
-        display: grid;
-        gap: 15px 0;
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        span {
-            color: $grey;
-            font-size: 13px;
-        }
-        strong {
-            color: $blue;
-            text-transform: uppercase;
-        }
-        a {
-            color: #fff;
-            background: $blue;
-            padding: 5px 15px;
-            border-radius: 10px;
-            font-size: 13px;
-            text-decoration: none;
-        }
-    }
-    &__bid-step {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 0 10px;
-        align-items: center;
-        span {
-            font-size: 13px;
-            color: $grey;
-        }
-    }
-    &__bid-btns {
-        padding: 20px 15px;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px 0;
-        border-bottom: 1px $grey-line solid;
-        &_guest {
-            display: flex;
-            align-items: center;
-            span {
-                margin: 0 10px;
-                color: $grey;
-            }
-        }
-    }
+
 }
 
 .bids-history {

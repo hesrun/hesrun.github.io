@@ -276,6 +276,7 @@
 }
 .btn_black.btn_outline {
   color: black;
+  background: none;
   border: 2px black solid;
 }
 .btn_brown.btn_filled {
@@ -1059,6 +1060,10 @@ input, select, button, textarea {
   color: #828282 !important;
 }
 
+.black-text {
+  color: black !important;
+}
+
 .brown-bg {
   background: #b6934c;
 }
@@ -1725,6 +1730,7 @@ input, select, button, textarea {
   margin-bottom: 10px;
 }
 .lot-item__price {
+  margin-top: auto;
   display: grid;
   font-size: 10px;
   grid-template-columns: 1fr;
@@ -1866,32 +1872,51 @@ input, select, button, textarea {
   font-family: "GT America Extended", sans-serif;
   margin-bottom: 25px;
 }
-.live-lot__favorite {
-  margin-bottom: 25px;
+.live-lot__value {
+  padding: 30px 15px;
+  border-top: 1px rgba(130, 130, 130, 0.2) solid;
+  display: grid;
+  gap: 15px 0;
 }
-.live-lot__bids {
-  margin: 25px 0;
-  border: 1px rgba(130, 130, 130, 0.2) solid;
-  border-radius: 10px;
-}
-.live-lot__bids-item {
-  font-size: 13px;
+.live-lot__value div {
   display: flex;
   align-items: center;
-  padding: 20px 15px;
+  justify-content: space-between;
+}
+.live-lot__value span {
   color: #828282;
-  border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
+  font-size: 13px;
 }
-.live-lot__bids-item:last-child {
+.live-lot__value strong {
+  font-weight: 500;
+}
+.live-lot__value a {
+  color: #fff;
+  background: #1C2473;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.live-lot__value hr {
+  margin: 20px -15px;
   border: none;
+  height: 1px;
+  background: #E7E7E7;
 }
-.live-lot__bids-item div {
-  color: #000;
-  margin-left: auto;
+.live-lot__bids-form {
+  padding: 30px 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px 0;
 }
-.live-lot__bids-item i {
-  font-size: 16px;
-  margin-right: 5px;
+.live-lot__bid-btns span {
+  display: block;
+  text-align: center;
+  margin: 8px 0;
+  color: #828282;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 .live-lot__specifications {
   padding: 0 15px;
@@ -1986,59 +2011,6 @@ input, select, button, textarea {
   color: #828282;
   padding: 0 15px;
   margin-top: 15px;
-}
-.live-lot__value {
-  padding: 30px 15px;
-  border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
-  border-top: 1px rgba(130, 130, 130, 0.2) solid;
-  display: grid;
-  gap: 15px 0;
-}
-.live-lot__value div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.live-lot__value span {
-  color: #828282;
-  font-size: 13px;
-}
-.live-lot__value strong {
-  color: #1C2473;
-  text-transform: uppercase;
-}
-.live-lot__value a {
-  color: #fff;
-  background: #1C2473;
-  padding: 5px 15px;
-  border-radius: 10px;
-  font-size: 13px;
-  text-decoration: none;
-}
-.live-lot__bid-step {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0 10px;
-  align-items: center;
-}
-.live-lot__bid-step span {
-  font-size: 13px;
-  color: #828282;
-}
-.live-lot__bid-btns {
-  padding: 20px 15px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px 0;
-  border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
-}
-.live-lot__bid-btns_guest {
-  display: flex;
-  align-items: center;
-}
-.live-lot__bid-btns_guest span {
-  margin: 0 10px;
-  color: #828282;
 }
 
 .bids-history {
@@ -2899,16 +2871,14 @@ input, select, button, textarea {
     font-size: 30px;
     margin-bottom: 30px;
   }
-  .live-lot__bids {
-    margin: 30px 0;
+  .live-lot__value hr {
+    margin: 10px 0px;
+    border: none;
+    height: 1px;
+    background: #E7E7E7;
   }
-  .live-lot__bids-item {
-    font-size: 20px;
-    padding: 20px 30px;
-  }
-  .live-lot__bids-item i {
-    font-size: 24px;
-    margin-right: 10px;
+  .live-lot__bids-form {
+    padding: 30px 0px;
   }
   .live-lot__timed-bid > div {
     padding: 0px;
@@ -2973,15 +2943,6 @@ input, select, button, textarea {
     padding: 10px 30px;
     border-radius: 30px;
     font-size: 20px;
-  }
-  .live-lot__bid-step {
-    gap: 0 30px;
-  }
-  .live-lot__bid-step span {
-    font-size: 18px;
-  }
-  .live-lot__bid-btns {
-    padding: 30px 0;
   }
   .live-lot__specifications {
     padding: 0px;
