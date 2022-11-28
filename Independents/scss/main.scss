@@ -38,8 +38,13 @@ a {
     color: inherit;
 }
 .container {
-    padding-left: 80px;
-    padding-right: 80px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    &_full {
+        max-width: 100%;
+    }
 }
 .main-content {
     padding-top: 80px;
@@ -281,8 +286,8 @@ p {
 }
 .more-brands-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px 3vw;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px 30px;
     &__item {
         margin: 0;
         font-size: 16px;
@@ -300,8 +305,8 @@ p {
 /* -------------------------------- lots ------------------------------- */
 .lots-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 4vw 3vw;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 60px 50px;
 }
 .lot-item {
     $root: &;
@@ -387,8 +392,8 @@ p {
 /* ------------------------------- watchmakers ------------------------------ */
 .watchmakers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    grid-gap: 3vw 2vw;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-gap: 50px;
 }
 
 .watchmaker-item {
@@ -429,9 +434,11 @@ p {
     padding-bottom: 50px;
     background: black;
     color: white;
-    display: grid;
-    grid-template-columns: auto auto 1fr auto auto;
-    grid-gap: 15px 4vw;
+    &__cols {
+        display: grid;
+        grid-template-columns: auto auto 1fr auto auto;
+        grid-gap: 15px 4vw;
+    }
     &__title {
         text-transform: uppercase;
         font-weight: 500;
@@ -439,6 +446,7 @@ p {
         margin-bottom: 30px;
     }
     &__link {
+        font-size: 13px;
         margin-bottom: 10px;
         line-height: 20px;
         text-decoration: none;
@@ -449,12 +457,14 @@ p {
         }
     }
     &_adress {
+        font-size: 13px;
         font-style: normal;
         line-height: 27px;
         color: var(--grey-text);
     }
     &__copy {
-        grid-column: 4 / 3 span; 
+        grid-column: 4 / 3 span;
+        font-size: 13px;
     }
     &__social-link {
         font-size: 24px;

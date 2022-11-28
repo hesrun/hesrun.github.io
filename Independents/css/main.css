@@ -38,8 +38,13 @@ a {
 }
 
 .container {
-  padding-left: 80px;
-  padding-right: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.container_full {
+  max-width: 100%;
 }
 
 .main-content {
@@ -457,8 +462,8 @@ h5, .h5 {
 
 .more-brands-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px 3vw;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px 30px;
 }
 .more-brands-list__item {
   margin: 0;
@@ -476,8 +481,8 @@ h5, .h5 {
 /* -------------------------------- lots ------------------------------- */
 .lots-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 4vw 3vw;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 60px 50px;
 }
 
 .lot-item__body {
@@ -559,8 +564,8 @@ h5, .h5 {
 /* ------------------------------- watchmakers ------------------------------ */
 .watchmakers-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 3vw 2vw;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 50px;
 }
 
 .watchmaker-item {
@@ -597,6 +602,8 @@ h5, .h5 {
   padding-bottom: 50px;
   background: black;
   color: white;
+}
+.main-footer__cols {
   display: grid;
   grid-template-columns: auto auto 1fr auto auto;
   grid-gap: 15px 4vw;
@@ -608,6 +615,7 @@ h5, .h5 {
   margin-bottom: 30px;
 }
 .main-footer__link {
+  font-size: 13px;
   margin-bottom: 10px;
   line-height: 20px;
   text-decoration: none;
@@ -618,12 +626,14 @@ h5, .h5 {
   color: var(--green);
 }
 .main-footer_adress {
+  font-size: 13px;
   font-style: normal;
   line-height: 27px;
   color: var(--grey-text);
 }
 .main-footer__copy {
   grid-column: 4/3 span;
+  font-size: 13px;
 }
 .main-footer__social-link {
   font-size: 24px;
