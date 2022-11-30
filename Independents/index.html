@@ -20,10 +20,10 @@
                     <img src="img/logo.svg" alt="">
                 </a>
                 <nav class="main-header__nav">
-                    <a href="" class="main-header__nav-link_active">Auction</a>
-                    <a href="">Award</a>
-                    <a href="">Watchmakers</a>
-                    <a href="">Participate</a>
+                    <a href="" class="main-header__nav-link main-header__nav-link_active">Auction</a>
+                    <a href="" class="main-header__nav-link">Award</a>
+                    <a href="" class="main-header__nav-link">Watchmakers</a>
+                    <a href="" class="main-header__nav-link">Participate</a>
                 </nav>
                 <div class="main-header__tools">
                     <a href="" id="openSearch" class="main-header__tool-btn">
@@ -34,13 +34,15 @@
                     </a>
                     <a href="" class="button button_white button_outline button_small">Login</a>
                 </div>
-                <div class="main-header__search container">
-                    <div class="main-header__search-filed">
-                        <input type="text" placeholder="Write text here">
+                <div class="main-header__search">
+                    <div class="container">
+                        <div class="main-header__search-filed">
+                            <input type="text" placeholder="Write text here">
+                        </div>
+                        <button id="closeSearch" class="main-header__search-close">
+                            <i class="mdi mdi-close"></i>
+                        </button>
                     </div>
-                    <button id="closeSearch" class="main-header__search-close">
-                        <i class="mdi mdi-close"></i>
-                    </button>
                 </div>
             </div>
         </div>
@@ -49,9 +51,9 @@
         <div class="content-head mb2">
             <h4 class="content-head__subtitle">Annual auction</h4>
             <div class="content-head__beggin">
-                <h2 class="h1 content-head__title">
+                <h1 class="content-head__title">
                     Independents <span class="green-text">12 MAY ‘23</span>
-                </h2>
+                </h1>
                 <div class="start-timer">
                     <span>
                         Live auction <br>
@@ -333,7 +335,7 @@
         </div>
         <div class="content-head mt4 mb2">
             <h4 class="content-head__subtitle">Participating</h4>
-            <h2 class="h1 content-head__title">Watchmakers</h2>
+            <h1 class="content-head__title">Watchmakers</h2>
         </div>
         <div class="watchmakers-grid">
             <a href="#" class="watchmaker-item">
@@ -496,8 +498,21 @@
             $('.main-header__nav').fadeToggle(100);
         })
 
+        const mediaQuery = window.matchMedia('(max-width: 576px)')
+        function handleTabletChange(e) {
+        // Check if the media query is true
+        if (e.matches) {
+            $('.main-header__nav').append( $('.main-header__tools > .button') );
+                console.log('Media Query Matched!')
+            } else {
+                $('.main-header__tools').append( $('.main-header__nav > .button') );
+                console.log('Media Query failed!')
+            }
+        }
+        mediaQuery.addListener(handleTabletChange)
+        // Initial check
+        handleTabletChange(mediaQuery)
 
-        
 
         
     </script>

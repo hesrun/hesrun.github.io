@@ -38,6 +38,7 @@ a {
 }
 
 .container {
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding-left: 30px;
@@ -140,6 +141,7 @@ h5, .h5 {
   font-weight: 600;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   height: 50px;
   padding-left: 30px;
   padding-right: 30px;
@@ -243,6 +245,7 @@ h5, .h5 {
   background: black;
   padding-top: 30px;
   padding-bottom: 30px;
+  border: none;
   z-index: 10;
 }
 .main-header__cols {
@@ -267,12 +270,12 @@ h5, .h5 {
   display: flex;
   gap: 0px 35px;
 }
-.main-header__nav a {
+.main-header__nav-link {
   position: relative;
   text-decoration: none;
   color: #fff;
 }
-.main-header__nav a:after {
+.main-header__nav-link:after {
   content: "";
   display: block;
   position: absolute;
@@ -285,10 +288,10 @@ h5, .h5 {
   opacity: 0;
   transition: all 0.3s;
 }
-.main-header__nav a:hover, .main-header__nav a.main-header__nav-link_active {
+.main-header__nav-link:hover, .main-header__nav-link.main-header__nav-link_active {
   color: var(--green);
 }
-.main-header__nav a:hover:after, .main-header__nav a.main-header__nav-link_active:after {
+.main-header__nav-link:hover:after, .main-header__nav-link.main-header__nav-link_active:after {
   transform: scale(1) translateY(0px);
   opacity: 1;
   color: var(--green);
@@ -309,8 +312,6 @@ h5, .h5 {
   width: 100%;
   height: 100%;
   background: black;
-  display: flex;
-  align-items: center;
   transform: translateY(-100%);
   pointer-events: none;
   transition: all 0.3s;
@@ -318,6 +319,11 @@ h5, .h5 {
 .main-header__search_open {
   transform: translateY(0%);
   pointer-events: initial;
+}
+.main-header__search .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 .main-header__search-filed {
   width: 100%;
@@ -338,6 +344,7 @@ h5, .h5 {
   border-bottom-color: var(--green);
 }
 .main-header__search-close {
+  border: none;
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -367,15 +374,25 @@ h5, .h5 {
   background: white;
   transition: all 0.3s;
 }
+.main-header__burger span:nth-child(1) {
+  top: 0;
+}
+.main-header__burger span:nth-child(3) {
+  bottom: 0;
+}
 .main-header__burger_active span:nth-child(2) {
   transform: translateX(-20px);
   opacity: 0;
 }
 .main-header__burger_active span:nth-child(1) {
-  transform: rotate(45deg) translateY(11px);
+  transform: rotate(45deg);
+  position: relative;
+  top: 7px;
 }
 .main-header__burger_active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-11px);
+  transform: rotate(-45deg);
+  position: relative;
+  bottom: 7px;
 }
 
 /* ---------------------------------- index --------------------------------- */
@@ -657,9 +674,15 @@ h5, .h5 {
   }
 }
 @media screen and (max-width: 992px) {
+  :root {
+    --space1:15px;
+    --space2:15px;
+    --space3:30px;
+    --space4:45px;
+  }
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   /* --------------------------------- header --------------------------------- */
   .main-header {
@@ -673,14 +696,14 @@ h5, .h5 {
     display: none;
     margin: 0;
     left: 0px;
-    top: 65px;
+    top: 60px;
     position: fixed;
     background: black;
-    height: 100vh;
+    height: calc(100vh - 60px);
     width: 100%;
-    padding: 30px 15px;
+    padding: 30px 30px;
   }
-  .main-header__nav a {
+  .main-header__nav-link {
     display: block;
     color: white;
     margin-bottom: 15px;
@@ -688,4 +711,156 @@ h5, .h5 {
   .main-header__burger {
     display: flex;
   }
+  .content-head__beggin {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px 0;
+  }
+  /* -------------------------------- lots ------------------------------- */
+  .lots-grid {
+    grid-gap: 60px 30px;
+  }
+  /* ------------------------------- watchmakers ------------------------------ */
+  .watchmakers-grid {
+    grid-gap: 60px 30px;
+  }
+  /* --------------------------------- footer --------------------------------- */
+  .main-footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .main-footer__cols {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+  }
+  .main-footer__copy {
+    grid-column: 1/3 span;
+  }
+  .main-footer__space {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* --------------------------------- header --------------------------------- */
+  .main-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .main-header__logo {
+    width: 200px;
+  }
+  .main-header__nav {
+    padding: 15px 15px;
+  }
+  .main-header__nav .button {
+    bottom: 30px;
+    right: 30px;
+    left: 30px;
+    position: absolute;
+  }
+  .main-header__nav-link {
+    display: block;
+    color: white;
+    margin-bottom: 15px;
+  }
+  .main-header__tool-btn {
+    margin: 0 15px;
+  }
+  .main-header__burger {
+    display: flex;
+    flex: 0 0 auto;
+    width: 25px;
+  }
+  /* ---------------------------------- index --------------------------------- */
+  .start-timer {
+    display: flex;
+    flex: 0 0 auto;
+  }
+  .start-timer > span {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 6px 30px 0 0;
+  }
+  .start-timer__digs {
+    gap: 0 15px;
+  }
+  .start-timer__digs-item b {
+    line-height: 40px;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 3px;
+  }
+  .start-timer__digs-item_dots::before {
+    font-size: 15px;
+    left: -10px;
+    line-height: 40px;
+  }
+  .start-timer__digs-item span {
+    font-size: 10px;
+  }
+  /* ----------------------------------- ui ----------------------------------- */
+  h1, .h1 {
+    font-size: 40px;
+    margin: 4rem 0 3rem;
+  }
+  h2, .h2 {
+    font-size: 32px;
+    margin: 3.5rem 0 2.5rem;
+  }
+  h3, .h3 {
+    font-size: 28px;
+    margin: 3rem 0 2rem;
+  }
+  h4, .h4 {
+    font-size: 20px;
+    margin: 2.5rem 0 1.5rem;
+  }
+  h5, .h5 {
+    font-size: 16px;
+    margin: 2rem 0 1rem;
+  }
+  /* ---------------------------------- index --------------------------------- */
+  .more-brands-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px 30px;
+  }
+  .more-brands-list__item {
+    font-size: 15px;
+  }
+  /* -------------------------------- lots ------------------------------- */
+  .lots-grid {
+    grid-gap: 30px 15px;
+  }
+  .lot-item__brand {
+    font-size: 15px;
+  }
+  /* ------------------------------- watchmakers ------------------------------ */
+  .watchmakers-grid {
+    grid-gap: 30px 15px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .watchmaker-item__name {
+    font-size: 15px;
+  }
+  /* --------------------------------- footer --------------------------------- */
+  .main-footer__cols {
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+  }
+  .main-footer__copy {
+    grid-column: 1/2 span;
+  }
+  .main-footer__title {
+    margin-bottom: 15px;
+  }
+  /* ----------------------------------- ui ----------------------------------- */
 }/*# sourceMappingURL=main.css.map */
