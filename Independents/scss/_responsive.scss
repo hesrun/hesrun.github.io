@@ -181,11 +181,29 @@
     }
     /* -------------------------------- lots ------------------------------- */
     .lots-grid {
+        grid-template-columns: 1fr 1fr;
         grid-gap: 30px 15px;
     }
     .lot-item {
+        $root: &;
         &__brand {
             font-size: 15px;
+        }
+        &__bids {
+            
+        }
+        &__price {
+            padding: 0;
+            background: none;
+            line-height: 1;
+        }
+        &__bids-count {
+            margin-left: auto;
+        }
+        &:active {
+            #{$root}__upper-image {
+                opacity: 1;
+            }
         }
     }
     /* ------------------------------- watchmakers ------------------------------ */

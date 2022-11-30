@@ -531,17 +531,6 @@ h5, .h5 {
 .lot-item__image:hover .lot-item__upper-image {
   opacity: 1;
 }
-.lot-item__favorite {
-  cursor: pointer;
-  font-size: 24px;
-  padding: 0px;
-  position: absolute;
-  bottom: 25px;
-  right: 30px;
-  background: none;
-  color: black;
-  border: none;
-}
 .lot-item__brand {
   font-size: 16px;
   margin: 0;
@@ -838,10 +827,22 @@ h5, .h5 {
   }
   /* -------------------------------- lots ------------------------------- */
   .lots-grid {
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px 15px;
   }
   .lot-item__brand {
     font-size: 15px;
+  }
+  .lot-item__price {
+    padding: 0;
+    background: none;
+    line-height: 1;
+  }
+  .lot-item__bids-count {
+    margin-left: auto;
+  }
+  .lot-item:active .lot-item__upper-image {
+    opacity: 1;
   }
   /* ------------------------------- watchmakers ------------------------------ */
   .watchmakers-grid {
