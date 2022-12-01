@@ -36,6 +36,9 @@ button, input, textarea {
 a {
   color: inherit;
 }
+a:hover {
+  color: var(--green);
+}
 
 .container {
   width: 100%;
@@ -54,7 +57,19 @@ a {
 }
 
 p {
-  margin: 1rem 0;
+  line-height: 1.5;
+  margin: 25px 0;
+}
+p:first-child {
+  margin-top: 0;
+}
+
+blockquote {
+  margin: 30px 0;
+  border-left: 10px solid black;
+  line-height: 1.5;
+  padding-left: 45px;
+  font-size: 18px;
 }
 
 /* ----------------------------------- ui ----------------------------------- */
@@ -100,6 +115,14 @@ p {
   margin-top: var(--space4) !important;
 }
 
+.mt0 {
+  margin-top: 0px !important;
+}
+
+.mb0 {
+  margin-bottom: 0px !important;
+}
+
 /* ---------------------------------- typo ---------------------------------- */
 h1, .h1 {
   font-family: var(--america);
@@ -125,7 +148,7 @@ h3, .h3 {
 h4, .h4 {
   font-family: var(--america);
   font-weight: 500;
-  font-size: 30px;
+  font-size: 24px;
   margin: 2.5rem 0 1.5rem;
 }
 
@@ -148,6 +171,7 @@ h5, .h5 {
   text-decoration: none;
   color: inherit;
   border: 1px transparent solid;
+  cursor: pointer;
   transition: all 0.3s;
 }
 .button_medium {
@@ -230,6 +254,12 @@ h5, .h5 {
 .button_red.button_outline:hover {
   background: var(--red);
   color: white;
+}
+.button__icon {
+  font-size: 18px;
+}
+.button__icon_left {
+  margin-right: 8px;
 }
 
 .ui-card {
@@ -468,6 +498,11 @@ h5, .h5 {
   align-items: center;
   justify-content: space-between;
 }
+.content-head__title-w-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .content-head__text {
   margin: 30px 0 0 0;
 }
@@ -575,6 +610,9 @@ h5, .h5 {
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   grid-gap: 50px;
 }
+.watchmakers-grid_6x {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
 
 .watchmaker-item {
   text-decoration: none;
@@ -602,6 +640,85 @@ h5, .h5 {
 }
 .watchmaker-item:hover .watchmaker-item__image img {
   filter: grayscale(0%);
+}
+
+.watchmakers-filter {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.alphabet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.alphabet a {
+  cursor: pointer;
+  font-family: var(--america);
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.alphabet a:hover, .alphabet a.mixitup-control-active {
+  opacity: 1;
+}
+
+/* ---------------------------------- blog ---------------------------------- */
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px var(--grey-line) solid;
+  padding: 20px;
+  min-height: 160px;
+}
+.blog-item__title {
+  font-size: 15px;
+  margin: 0 0 5px 0;
+}
+.blog-item__text {
+  font-size: 13px;
+}
+.blog-item__date {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  font-size: 12px;
+}
+.blog-item__date i.mdi {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+/* ------------------------------- watchmaker ------------------------------ */
+.watchmaker {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 0 200px;
+}
+.watchmaker__contact {
+  line-height: 1.5;
+}
+.watchmaker__contact a {
+  text-decoration: none;
+}
+.watchmaker__social {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0 0 0;
+  font-size: 24px;
+}
+.watchmaker__blogs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.iconic-models {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
 }
 
 /* --------------------------------- footer --------------------------------- */
@@ -707,6 +824,16 @@ h5, .h5 {
     align-items: flex-start;
     gap: 30px 0;
   }
+  .content-head__title-w-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px 0;
+  }
+  .content-head__title-w-button .button {
+    width: 100%;
+  }
   /* -------------------------------- lots ------------------------------- */
   .lots-grid {
     grid-gap: 60px 30px;
@@ -714,6 +841,16 @@ h5, .h5 {
   /* ------------------------------- watchmakers ------------------------------ */
   .watchmakers-grid {
     grid-gap: 60px 30px;
+  }
+  .watchmakers-filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  /* ------------------------------- watchmaker ------------------------------ */
+  .watchmaker {
+    grid-template-columns: 1fr 250px;
+    gap: 0 50px;
   }
   /* --------------------------------- footer --------------------------------- */
   .main-footer {
@@ -851,6 +988,19 @@ h5, .h5 {
   }
   .watchmaker-item__name {
     font-size: 15px;
+  }
+  .watchmakers-filter {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  /* ------------------------------- watchmaker ------------------------------ */
+  .watchmaker {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .iconic-models {
+    gap: 30px;
   }
   /* --------------------------------- footer --------------------------------- */
   .main-footer__cols {

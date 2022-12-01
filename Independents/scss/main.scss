@@ -36,6 +36,9 @@ button, input, textarea {
 }
 a {
     color: inherit;
+    &:hover {
+        color: var(--green);
+    }
 }
 .container {
     width: 100%;
@@ -52,7 +55,18 @@ a {
     padding-bottom: 80px;
 }
 p {
-    margin: 1rem 0;
+    line-height: 1.5;
+    margin: 25px 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+blockquote {
+    margin: 30px 0;
+    border-left: 10px solid black;
+    line-height: 1.5;
+    padding-left: 45px;
+    font-size: 18px;
 }
 /* ----------------------------------- ui ----------------------------------- */
 @import 'ui';
@@ -292,6 +306,11 @@ p {
         align-items: center;
         justify-content: space-between;
     }
+    &__title-w-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &__text {
         margin: 30px 0 0 0;
     }
@@ -403,6 +422,9 @@ p {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     grid-gap: 50px;
+    &_6x {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
 }
 
 .watchmaker-item {
@@ -436,7 +458,82 @@ p {
     }
 }
 
+.watchmakers-filter {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
+.alphabet {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a {
+        cursor: pointer;
+        font-family: var(--america);
+        font-weight: 500;
+        text-decoration: none;
+        text-transform: uppercase;
+        opacity: 0.5;
+        &:hover,
+        &.mixitup-control-active {
+            opacity: 1;
+        }
+    }
+}
+/* ---------------------------------- blog ---------------------------------- */
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--grey-line) solid;
+    padding: 20px;
+    min-height: 160px;
+    &__title {
+        font-size: 15px;
+        margin: 0 0 5px 0;
+    }
+    &__text {
+        font-size: 13px;
+    }
+    &__date {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        font-size: 12px;
+        i.mdi {
+            font-size: 15px;
+            margin-right: 5px;
+        }
+    }
+}
+/* ------------------------------- watchmaker ------------------------------ */
+.watchmaker {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 0 200px;
+    &__contact {
+        line-height: 1.5;
+        a {
+            text-decoration: none;
+        }
+    }
+    &__social {
+        display: flex;
+        gap: 10px;
+        margin: 5px 0 0 0;
+        font-size: 24px;
+    }
+    &__blogs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+.iconic-models {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
 /* --------------------------------- footer --------------------------------- */
 .main-footer {
     padding-top: 50px;
