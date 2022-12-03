@@ -34,6 +34,11 @@ body {
 button, input, textarea {
     font-family: var(--inter);
 }
+hr {
+    border: none;
+    height: 10px;
+    background: black;
+}
 a {
     color: inherit;
     &:hover {
@@ -59,6 +64,9 @@ p {
     margin: 25px 0;
     &:first-child {
         margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
 }
 blockquote {
@@ -533,6 +541,137 @@ blockquote {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+}
+/* ---------------------------------- item ---------------------------------- */
+.lot-nav {
+    display: flex;
+    gap: 15px;
+    &_back {
+        margin-right: auto;
+    }
+}
+.lot-gallery {
+    img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    &__next,
+    &__prev {
+        position: absolute;
+        display: flex;
+        top: 0px;
+        width: 50px;
+        height: 100%;
+        background: black;
+        color: white;
+        cursor: pointer;
+        z-index: 2;
+        &.swiper-button-disabled {
+            opacity: 0;
+            pointer-events: none;
+        }
+        &:hover {
+            background: var(--green);
+        }
+        .mdi {
+            font-size: 32px;
+            margin: auto;
+        }
+    }
+    &__prev {
+        left: 0;
+    }
+    &__next {
+        right: 0;
+    }
+}
+.special-note {
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--inter);
+    font-size: 13px;
+    line-height: 24px;
+    gap: 5px;
+    i.mdi {
+        font-size: 22px;
+    }
+}
+.lot-info {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    grid-gap: 0 100px;
+    
+}
+.lot-values {
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        strong {
+            font-family: var(--america);
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+    &__bids {
+        font-weight: 500;
+        border: 1px var(--grey-line) solid;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+.lot-bids-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-gap: 30px;
+}
+.lot-video {
+    video {
+        width: 100%;
+    }
+}
+.lot-descr {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    grid-gap: 0 100px;
+}
+.lot-specification-table {
+    border-collapse: collapse;
+    td {
+        font-size: 14px;
+        line-height: 1.5;
+        vertical-align: top;
+        padding-bottom: 15px;
+        padding-right: 20px;
+    }
+    td:first-child {
+        font-weight: 600;
+    }
+}
+.lot-maker {
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    grid-gap: 0 100px;
+}
+.lot-maker-user {
+    display: flex;
+    gap: 30px;
+    &__image {
+        width: 100px;
+        img {
+            width: 100%;
+            filter: grayscale(100%);
+        }
+    }
+    h5 {
+        font-size: 20px;
+        margin: 0 0 7px;
+    }
+    span {
+        display: block;
+        margin-bottom: 22px;
+    }
 }
 /* --------------------------------- footer --------------------------------- */
 .main-footer {

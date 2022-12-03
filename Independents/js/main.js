@@ -12,6 +12,11 @@ $('.main-header__burger').click(function(){
     $('.main-header__nav').fadeToggle(100);
 })
 
+$('.dropdown__button').click(function () {
+    $(this).next().slideToggle(200);
+    return false;
+})
+
 const mediaQuery = window.matchMedia('(max-width: 576px)')
 function handleTabletChange(e) {
 // Check if the media query is true
