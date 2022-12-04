@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <a href="#Calculate" class="button button_green button_filled">Calculate</a>
+    <a href="#Participate" class="button button_green button_filled">Participate</a>
+
+    <div id="Calculate" class="zoom-anim-dialog mfp-hide modal">
+        <div class="modal__header text-center">
+            <h1 class="mb0 mt0">Calculate</h1>
+        </div>
+        <div class="modal__content">
+            <div class="earn-calculate-form mb4">
+                <div class="earn-calculate-form__line">
+                    <span>Retail price</span>
+                    <strong class="text-right">CHF</strong>
+                    <div class="field">
+                        <input class="field__input text-right" type="text" placeholder="100.000">
+                    </div>
+                </div>
+                <div class="earn-calculate-form__line">
+                    <span>Discount</span>
+                    <strong class="text-right">&</strong>
+                    <div class="field">
+                        <input class="field__input text-right" type="text" placeholder="10.000">
+                    </div>
+                </div>
+                <div class="earn-calculate-form__line">
+                    <span>Reserve price</span>
+                    <strong class="text-right">CHF</strong>
+                    <div class="field">
+                        <input class="field__input text-right" type="text" placeholder="200.000">
+                    </div>
+                </div>
+                <div class="earn-calculate-form__line">
+                    <span>Hammer price</span>
+                    <strong class="text-right">CHF</strong>
+                    <div class="field">
+                        <input class="field__input text-right" type="text" placeholder="300.000">
+                    </div>
+                </div>
+            </div>
+            <table class="earn-calculate-table">
+                <tr>
+                    <th></th>
+                    <th>YOU EARN</th>
+                    <th>WE EARN</th>
+                </tr>
+                <tr>
+                    <td class="green-text">100% <br>
+                        PREPAYMENT</td>
+                    <td>CHF 150’000</td>
+                    <td>CHF 150’000</td>
+                </tr>
+                <tr>
+                    <td class="green-text">50%  <br>
+                        PREPAYMENT</td>
+                    <td>CHF 11’500’000</td>
+                    <td>CHF 13’500’000</td>
+                </tr>
+                <tr>
+                    <td class="green-text">COMMISSION</td>
+                    <td>CHF 150’000</td>
+                    <td>CHF 150’000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal__footer">
+            <a href="" class="button button_black button_full button_filled">Apply for participation</a>
+            <p class="mt2 text-center">Add your preferred participation option in the <br> comment and we will take it into consideration
+            </p>
+        </div>
+        <button class="modal__close mfp-close popup-modal-dismiss">
+            <i class="mdi mdi-close"></i>
+        </button>
+    </div>
+    <div id="Participate" class="zoom-anim-dialog mfp-hide modal">
+        <div class="modal__header text-center">
+            <h1 class="mb0 mt0">Participate</h1>
+        </div>
+        <div class="modal__content">
+            <p>Apply for participation by completing a quick form below. We will contact you for details within 2 work days.</p>
+            <div class="field">
+                <input class="field__input" type="text" placeholder="Brand">
+            </div>
+            <div class="field">
+                <input class="field__input" type="text" placeholder="Name">
+            </div>
+            <div class="field">
+                <input class="field__input" type="text" placeholder="E-mail">
+            </div>
+            <div class="field">
+                <input class="field__input" type="text" placeholder="Phone">
+            </div>
+            <div class="field field_textarea">
+                <textarea class="field__input field__input_textarea" type="text" placeholder="Feel free to add any details here"></textarea>
+            </div>
+            <p>We are open to a discussion of cooperation terms and will be excited to hear from you.
+            </p>
+        </div>
+        <div class="modal__footer">
+            <a href="" class="button button_black button_full button_filled">Apply</a>
+        </div>
+        <button class="modal__close mfp-close popup-modal-dismiss">
+            <i class="mdi mdi-close"></i>
+        </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('.button').magnificPopup({
+            modal: true,
+            removalDelay: 300,
+            mainClass: 'mfp-fade'
+        });
+    </script>
+</body>
+</html>

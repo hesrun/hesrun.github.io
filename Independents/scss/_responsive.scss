@@ -12,12 +12,6 @@
     }
 }
 @media screen and (max-width:992px){
-    :root {
-        --space1:15px;
-        --space2:15px;
-        --space3:30px;
-        --space4:45px;
-    }
     .container {
         padding-left: 30px;
         padding-right: 30px;
@@ -62,7 +56,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
-            gap: 30px 0;
+            gap: 10px 0;
             .button {
                 width: 100%;
             }
@@ -86,6 +80,20 @@
         grid-template-columns: 1fr 250px;
         gap: 0 50px;
     }
+
+    /* ---------------------------------- item ---------------------------------- */
+    .lot-info {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+    .lot-descr {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
+    .lot-maker {
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+    }
     /* --------------------------------- footer --------------------------------- */
     .main-footer {
         padding-top: 30px;
@@ -101,6 +109,34 @@
         &__space {
             display: none;
         }
+    }
+
+    /* ----------------------------------- ui ----------------------------------- */
+    .mb-m-1 {
+        margin-bottom: var(--space1) !important;
+    }
+    .mb-m-2 {
+        margin-bottom: var(--space2) !important;
+    }
+    .mb-m-3 {
+        margin-bottom: var(--space3) !important;
+    }
+    .mb-m-4 {
+        margin-bottom: var(--space4) !important;
+    }
+    
+    
+    .mt-m-1 {
+        margin-top: var(--space1) !important;
+    }
+    .mt-m-2 {
+        margin-top: var(--space2) !important;
+    }
+    .mt-m-3 {
+        margin-top: var(--space3) !important;
+    }
+    .mt-m-4 {
+        margin-top: var(--space4) !important;
     }
 }
 
@@ -251,6 +287,24 @@
     }
 
     /* ---------------------------------- item ---------------------------------- */
+    .special-note {
+        margin: 10px 0 0 0;
+        display: flex;
+    }
+    .lot-values {
+        &__item {
+            strong {
+                font-size: 18px;
+            }
+        }
+    }
+    .lot-bids-buttons {
+        grid-template-columns: 1fr auto;
+        grid-gap: 15px;
+        .dropdown {
+            grid-column: 2 span;
+        }
+    }
     /* --------------------------------- footer --------------------------------- */
     .main-footer {
         &__cols {
@@ -266,5 +320,30 @@
     }
 
     /* ----------------------------------- ui ----------------------------------- */
-
+    .mb-s-1 {
+        margin-bottom: var(--space1) !important;
+    }
+    .mb-s-2 {
+        margin-bottom: var(--space2) !important;
+    }
+    .mb-s-3 {
+        margin-bottom: var(--space3) !important;
+    }
+    .mb-s-4 {
+        margin-bottom: var(--space4) !important;
+    }
+    
+    
+    .mt-s-1 {
+        margin-top: var(--space1) !important;
+    }
+    .mt-s-2 {
+        margin-top: var(--space2) !important;
+    }
+    .mt-s-3 {
+        margin-top: var(--space3) !important;
+    }
+    .mt-s-4 {
+        margin-top: var(--space4) !important;
+    }
 }

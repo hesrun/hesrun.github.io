@@ -25,7 +25,7 @@
 body {
   font-family: var(--inter);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -34,6 +34,7 @@ button, input, textarea {
 }
 
 hr {
+  width: 100%;
   border: none;
   height: 10px;
   background: black;
@@ -58,8 +59,8 @@ a:hover {
 }
 
 .main-content {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 
 p {
@@ -132,6 +133,15 @@ blockquote {
   margin-bottom: 0px !important;
 }
 
+/* ---------------------------------- align --------------------------------- */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 /* ---------------------------------- typo ---------------------------------- */
 h1, .h1 {
   font-family: var(--america);
@@ -187,7 +197,7 @@ h5, .h5 {
   padding: 0;
   width: 50px;
 }
-.button_icon.button_icon {
+.button_icon .button__icon {
   font-size: 23px;
 }
 .button_medium {
@@ -284,6 +294,9 @@ h5, .h5 {
 .button__icon_left {
   margin-right: 8px;
 }
+.button__icon_right {
+  margin-left: auto;
+}
 
 .dropdown {
   position: relative;
@@ -302,12 +315,107 @@ h5, .h5 {
   font-weight: 500;
   display: block;
   text-decoration: none;
-  padding: 15px 15px;
+  padding: 15px 30px;
   transition: all 0.1s;
 }
 .dropdown__link:hover {
   background: black;
   color: var(--green);
+}
+
+.field {
+  height: 50px;
+  margin: 0 0 30px 0;
+}
+.field:last-child {
+  margin-bottom: 0;
+}
+.field_textarea {
+  height: 200px;
+}
+.field__input {
+  height: 100%;
+  outline: none;
+  width: 100%;
+  background: none;
+  border: none;
+  border: 1px var(--grey-line) solid;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 500;
+}
+.field__input_textarea {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  resize: vertical;
+}
+.field__input:focus {
+  border-color: var(--green);
+}
+
+.modal {
+  position: relative;
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 45px 150px;
+}
+.modal__content {
+  padding: 45px 0;
+}
+.modal__close {
+  cursor: pointer;
+  position: absolute;
+  background: black !important;
+  color: #fff;
+  right: 15px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  line-height: 1;
+  opacity: 1;
+}
+.modal__close:hover {
+  background: var(--green) !important;
+}
+.modal__close i.mdi {
+  pointer-events: none;
+}
+.modal__close:active {
+  top: 15px;
+}
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
 }
 
 .ui-card {
@@ -536,7 +644,7 @@ h5, .h5 {
   margin: 0;
 }
 .content-head__title {
-  margin: 0;
+  margin: 10px 0;
 }
 .content-head__title span {
   display: inline-block;
@@ -570,7 +678,6 @@ h5, .h5 {
 .more-brands-list__item {
   margin: 0;
   font-size: 16px;
-  font-weight: 500;
 }
 .more-brands-list a {
   text-decoration: none;
@@ -617,7 +724,6 @@ h5, .h5 {
 .lot-item__brand {
   font-size: 16px;
   margin: 0;
-  font-weight: 500;
 }
 .lot-item__brand a {
   text-decoration: none;
@@ -704,7 +810,6 @@ h5, .h5 {
 .alphabet a {
   cursor: pointer;
   font-family: var(--america);
-  font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   opacity: 0.5;
@@ -838,10 +943,8 @@ h5, .h5 {
 .lot-values__item strong {
   font-family: var(--america);
   font-size: 24px;
-  font-weight: 500;
 }
 .lot-values__bids {
-  font-weight: 500;
   border: 1px var(--grey-line) solid;
   font-size: 12px;
   padding: 5px 10px;
@@ -903,6 +1006,80 @@ h5, .h5 {
   margin-bottom: 22px;
 }
 
+/* ------------------------------ participation ----------------------------- */
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  padding: 0px;
+}
+.steps-list__item {
+  font-family: var(--america);
+  counter-increment: my-awesome-counter;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.steps-list__item:before {
+  font-family: var(--america);
+  font-size: 28px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  text-align: center;
+  line-height: 50px;
+  background: black;
+  color: #fff;
+  content: counter(my-awesome-counter);
+}
+
+.participation-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px 30px;
+}
+
+.participation-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  line-height: 1.3;
+}
+.participation-options div {
+  padding: 0 20% 0 0;
+}
+.participation-options hr {
+  grid-column: 3 span;
+}
+
+.profits-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10%;
+}
+.profits-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.profits-list__item div {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+}
+.profits-list__item h5 {
+  margin: 15px 0 10px 0;
+}
+.profits-list__item span {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
 /* --------------------------------- footer --------------------------------- */
 .main-footer {
   padding-top: 50px;
@@ -950,6 +1127,38 @@ h5, .h5 {
   color: var(--green);
 }
 
+/* --------------------------------- modals --------------------------------- */
+.earn-calculate-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.earn-calculate-form__line {
+  display: grid;
+  grid-template-columns: 1fr 1fr 200px;
+  gap: 15px;
+  align-items: center;
+  color: var(--grey-text);
+}
+
+.earn-calculate-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+.earn-calculate-table td {
+  font-family: var(--america);
+  padding: 15px 0;
+}
+.earn-calculate-table th {
+  font-size: 10px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.earn-calculate-table td:not(:first-child) {
+  border-top: 1px var(--grey-line) solid;
+}
+
 /* ------------------------------- responsive ------------------------------- */
 @media screen and (max-width: 1200px) {
   .container {
@@ -962,12 +1171,6 @@ h5, .h5 {
   }
 }
 @media screen and (max-width: 992px) {
-  :root {
-    --space1:15px;
-    --space2:15px;
-    --space3:30px;
-    --space4:45px;
-  }
   .container {
     padding-left: 30px;
     padding-right: 30px;
@@ -1011,7 +1214,7 @@ h5, .h5 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 30px 0;
+    gap: 10px 0;
   }
   .content-head__title-w-button .button {
     width: 100%;
@@ -1034,6 +1237,19 @@ h5, .h5 {
     grid-template-columns: 1fr 250px;
     gap: 0 50px;
   }
+  /* ---------------------------------- item ---------------------------------- */
+  .lot-info {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+  .lot-descr {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+  .lot-maker {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
   /* --------------------------------- footer --------------------------------- */
   .main-footer {
     padding-top: 30px;
@@ -1049,6 +1265,31 @@ h5, .h5 {
   }
   .main-footer__space {
     display: none;
+  }
+  /* ----------------------------------- ui ----------------------------------- */
+  .mb-m-1 {
+    margin-bottom: var(--space1) !important;
+  }
+  .mb-m-2 {
+    margin-bottom: var(--space2) !important;
+  }
+  .mb-m-3 {
+    margin-bottom: var(--space3) !important;
+  }
+  .mb-m-4 {
+    margin-bottom: var(--space4) !important;
+  }
+  .mt-m-1 {
+    margin-top: var(--space1) !important;
+  }
+  .mt-m-2 {
+    margin-top: var(--space2) !important;
+  }
+  .mt-m-3 {
+    margin-top: var(--space3) !important;
+  }
+  .mt-m-4 {
+    margin-top: var(--space4) !important;
   }
 }
 @media screen and (max-width: 576px) {
@@ -1185,6 +1426,20 @@ h5, .h5 {
     gap: 30px;
   }
   /* ---------------------------------- item ---------------------------------- */
+  .special-note {
+    margin: 10px 0 0 0;
+    display: flex;
+  }
+  .lot-values__item strong {
+    font-size: 18px;
+  }
+  .lot-bids-buttons {
+    grid-template-columns: 1fr auto;
+    grid-gap: 15px;
+  }
+  .lot-bids-buttons .dropdown {
+    grid-column: 2 span;
+  }
   /* --------------------------------- footer --------------------------------- */
   .main-footer__cols {
     grid-template-columns: auto auto;
@@ -1197,4 +1452,28 @@ h5, .h5 {
     margin-bottom: 15px;
   }
   /* ----------------------------------- ui ----------------------------------- */
+  .mb-s-1 {
+    margin-bottom: var(--space1) !important;
+  }
+  .mb-s-2 {
+    margin-bottom: var(--space2) !important;
+  }
+  .mb-s-3 {
+    margin-bottom: var(--space3) !important;
+  }
+  .mb-s-4 {
+    margin-bottom: var(--space4) !important;
+  }
+  .mt-s-1 {
+    margin-top: var(--space1) !important;
+  }
+  .mt-s-2 {
+    margin-top: var(--space2) !important;
+  }
+  .mt-s-3 {
+    margin-top: var(--space3) !important;
+  }
+  .mt-s-4 {
+    margin-top: var(--space4) !important;
+  }
 }/*# sourceMappingURL=main.css.map */

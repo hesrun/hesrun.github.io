@@ -39,7 +39,13 @@
 .mb0 {
     margin-bottom: 0px !important
 }
-
+/* ---------------------------------- align --------------------------------- */
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
 /* ---------------------------------- typo ---------------------------------- */
 h1,.h1 {
     font-family: var(--america);
@@ -90,7 +96,7 @@ h5,.h5 {
     &_icon {
         padding: 0;
         width: 50px;
-        &#{$root}_icon {
+        #{$root}__icon {
             font-size: 23px;
         }
     }
@@ -195,6 +201,9 @@ h5,.h5 {
         &_left {
             margin-right: 8px;
         }
+        &_right {
+            margin-left: auto;
+        }
     }
     
 }
@@ -215,7 +224,7 @@ h5,.h5 {
         font-weight: 500;
         display: block;
         text-decoration: none;
-        padding: 15px 15px;
+        padding: 15px 30px;
         transition: all 0.1s;
         &:hover {
             background: black;
@@ -223,6 +232,106 @@ h5,.h5 {
         }
     }
 }
+
+.field {
+    height: 50px;
+    margin: 0 0 30px 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &_textarea {
+        height: 200px;
+    }
+    &__input {
+        height: 100%;
+        outline: none;
+        width: 100%;
+        background: none;
+        border: none;
+        border: 1px var(--grey-line) solid;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-weight: 500;
+        &_textarea {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            resize: vertical;
+        }
+        &:focus {
+            border-color: var(--green);
+        }
+    }
+}
+
+.modal {
+    position: relative;
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 45px 150px;
+    &__header {
+    }
+    &__content {
+        padding: 45px 0;
+    }
+    &__footer {
+
+    }
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        background: black !important;
+        color: #fff;
+        right: 15px;
+        top: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        line-height: 1;
+        opacity: 1;
+        &:hover {
+            background: var(--green) !important;
+        }
+        i.mdi {
+            pointer-events: none;
+        }
+        &:active {
+            top: 15px;
+        }
+    }
+}
+/* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  /* overlay animate in */
+  .mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+  }
+  /* overlay animate out */
+  .mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+  }
+  
+  /* content at start */
+  .mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+  
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  /* content animate it */
+  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+  }
+  /* content animate out */
+  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+  }
 
 
 

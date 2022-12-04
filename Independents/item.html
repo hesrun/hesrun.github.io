@@ -99,7 +99,7 @@
                 <i class="mdi mdi-chevron-left"></i>
             </div>
         </div>
-        <div class="content-head mb3 mt3">
+        <div class="content-head mb3 mt3 mb-s-2 mt-s-2">
             <div class="content-head__beggin">
                 <div>
                     <h1 class="content-head__title">
@@ -150,34 +150,28 @@
                     </div>
                 </div>
                 <div class="lot-bids-buttons">
-                    <div>
-                        <div class="dropdown">
-                            <a href="" class="dropdown__button button button_full button_black button_outline">
-                                CHF 2'000.-
-                                <i class="mdi mdi-chevron-down"></i>
-                            </a>
-                            <div class="dropdown__list">
-                                <a href="" class="dropdown__link dropdown__link_disabled">CHF 2'500.-</a>
-                                <a href="" class="dropdown__link">CHF 3'000.-</a>
-                                <a href="" class="dropdown__link">CHF 3'500.-</a>
-                                <a href="" class="dropdown__link">CHF 4'000.-</a>
-                                <a href="" class="dropdown__link">CHF 4'500.-</a>
-                                <a href="" class="dropdown__link">CHF 5'000.-</a>
-                                <a href="" class="dropdown__link">CHF 5'500.-</a>
-                                <a href="" class="dropdown__link">CHF 6'000.-</a>
-                            </div>  
-                        </div>
-                    </div>
-                    <div>
-                        <a href="" class="button button_green button_full button_filled">
-                            Place your maximum bid
+                    <div class="dropdown">
+                        <a href="" class="dropdown__button button button_full button_black button_outline">
+                            CHF 2'000.-
+                            <i class="button__icon button__icon_right mdi mdi-chevron-down"></i>
                         </a>
+                        <div class="dropdown__list">
+                            <a href="" class="dropdown__link dropdown__link_disabled">CHF 2'500.-</a>
+                            <a href="" class="dropdown__link">CHF 3'000.-</a>
+                            <a href="" class="dropdown__link">CHF 3'500.-</a>
+                            <a href="" class="dropdown__link">CHF 4'000.-</a>
+                            <a href="" class="dropdown__link">CHF 4'500.-</a>
+                            <a href="" class="dropdown__link">CHF 5'000.-</a>
+                            <a href="" class="dropdown__link">CHF 5'500.-</a>
+                            <a href="" class="dropdown__link">CHF 6'000.-</a>
+                        </div>  
                     </div>
-                    <div>
-                        <a href="" class="button button_black button_outline button_icon">
-                            <i class=" mdi mdi-heart-outline"></i>
-                        </a>
-                    </div>
+                    <a href="" class="button button_green button_full button_filled">
+                        Place your maximum bid
+                    </a>
+                    <a href="" class="button button_black button_outline button_icon">
+                        <i class="button__icon mdi mdi-heart-outline"></i>
+                    </a>
                 </div>
             </div>
             <div>
@@ -239,7 +233,7 @@
                 </table>
             </div>
         </div>
-        <hr class="mb4 mt4">
+        <hr class="mb4 mt4 mb-s-2 mt-s-2">
         <div class="lot-maker">
             <div>
                 <p>Kari Voutilainen was born in 1962 in the city of Rovaniemi, the very capital of Lapland, which is called the birthplace of Santa Claus. When it came to choosing a profession, Kari decided that sitting at the office was not for him. He realized that he needed freedom; he needed to do something with his hands and to see the result of his work. With these thoughts, in 1983 he entered Kelloseppäkoulu, the Finnish School of Watchmaking in Tapiola. After studying in his homeland, the young watchmaker continued to comprehend the intricacies of watchmaking in Switzerland. In 1989 he completed a course in the restoration of complicated clocks at WOSTEP Neuchâtel, and in 1990 he was invited to work in the restoration workshop of Michel Parmigiani.</p>
@@ -309,11 +303,23 @@
     <script src="js/main.js"></script>
     <script>
         var swiper = new Swiper(".lot-gallery", {
-        slidesPerView: 3,
-        spaceBetween: 30,
         navigation: {
           nextEl: ".lot-gallery__next",
           prevEl: ".lot-gallery__prev",
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
         },
       });
     </script>
