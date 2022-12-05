@@ -6,16 +6,8 @@
         padding-left: 30px;
         padding-right: 30px;
     }
-    .main-content {
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
 }
 @media screen and (max-width:992px){
-    .container {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
     /* --------------------------------- header --------------------------------- */
     .main-header {
         padding-top: 15px;
@@ -62,6 +54,16 @@
             }
         }
     }
+    /* ---------------------------------- index --------------------------------- */
+    .main-hero {
+        position: relative;
+        height: 50vh;
+        &__title {
+            span {
+                display: block;
+            }
+        }
+    }
     /* -------------------------------- lots ------------------------------- */
     .lots-grid {
         grid-gap: 60px 30px;
@@ -93,6 +95,29 @@
     .lot-maker {
         grid-template-columns: 1fr;
         grid-gap: 30px;
+    }
+    /* ------------------------------ participation ----------------------------- */
+    .steps-list {
+        grid-template-columns: repeat(1,1fr);
+        br {
+            display: none;
+        }
+    }
+    .participation-btns {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .participation-options {
+        grid-template-columns: repeat(1,1fr);
+        div {
+            padding: 0;
+        }
+        hr {
+            grid-column: 1 span;
+        }
+    }
+    .profits-list {
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
     }
     /* --------------------------------- footer --------------------------------- */
     .main-footer {
@@ -145,6 +170,11 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+    .main-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
     /* --------------------------------- header --------------------------------- */
     .main-header {
         padding-top: 15px;
@@ -305,6 +335,26 @@
             grid-column: 2 span;
         }
     }
+    /* ------------------------------ participation ----------------------------- */
+    .steps-list {
+        gap: 15px;
+    }
+    .participation-btns {
+        gap: 15px;
+    }
+    .participation-options {
+        gap: 15px;
+        div {
+            padding: 0;
+        }
+        hr {
+            grid-column: 1 span;
+        }
+    }
+    .profits-list {
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
     /* --------------------------------- footer --------------------------------- */
     .main-footer {
         &__cols {
@@ -316,6 +366,14 @@
         }
         &__title {
             margin-bottom: 15px;
+        }
+    }
+
+    /* --------------------------------- modals --------------------------------- */
+    .earn-calculate-table {
+        td {
+            font-size: 12px;
+            padding: 15px 0;
         }
     }
 
@@ -345,5 +403,39 @@
     }
     .mt-s-4 {
         margin-top: var(--space4) !important;
+    }
+
+    .mfp-container {
+        padding: 0px;
+    }
+    .mfp-content {
+        height: 100%;
+    }
+    .modal {
+        height: 100%;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+        &__header {
+            flex: 0 0 auto
+        }
+        &__content {
+            overflow: auto;
+            flex: 1 1 auto;
+            padding: 30px 0;
+        }
+        &__footer {
+            flex: 0 0 auto
+        }
+        &__close {
+            right: 0px;
+            top: 0px;
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            &:active {
+                top: 0px;
+            }
+        }
     }
 }
