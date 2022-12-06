@@ -236,6 +236,12 @@
         }
     }
     /* ----------------------------------- ui ----------------------------------- */
+    .collapse-content {
+        padding-bottom: 15px;
+    }
+    .collapse-content-btn {
+        display: block;
+    }
     h1,.h1 {
         font-size: 40px;
         margin: 4rem 0 3rem;
@@ -275,9 +281,6 @@
         &__brand {
             font-size: 15px;
         }
-        &__bids {
-            
-        }
         &__price {
             padding: 0;
             background: none;
@@ -285,6 +288,9 @@
         }
         &__bids-count {
             margin-left: auto;
+        }
+        &__upper-image {
+            transition: all 0.1s;
         }
         &:active {
             #{$root}__upper-image {
@@ -303,9 +309,13 @@
         }
     }
     .watchmakers-filter {
-        display: grid;
-        grid-template-columns: 1fr;
         gap: 15px;
+        .button {
+            padding: 0;
+        }
+        .alphabet {
+            grid-column: 3 span;
+        }
     }
     /* ------------------------------- watchmaker ------------------------------ */
     .watchmaker {
@@ -317,6 +327,16 @@
     }
 
     /* ---------------------------------- item ---------------------------------- */
+    .lot-gallery {
+        &__next,
+        &__prev {
+            background: none;
+            color: black;
+            &:hover {
+                background: none;
+            }
+        }
+    }
     .special-note {
         margin: 10px 0 0 0;
         display: flex;
