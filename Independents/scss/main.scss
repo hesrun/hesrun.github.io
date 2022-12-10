@@ -58,7 +58,7 @@ a {
 }
 .main-content {
     padding-top: 45px;
-    padding-bottom: 45px;
+    padding-bottom: 90px;
 }
 p {
     line-height: 1.5;
@@ -146,6 +146,9 @@ blockquote {
         margin-right: 30px;
         &:hover {
             color: var(--green);
+        }
+        span {
+            display: none;
         }
     }
     &__search {
@@ -313,6 +316,17 @@ blockquote {
         height: 100%;
         background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(247,247,247,0) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%);
     }
+    &__down {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        color: #fff;
+        z-index: 1;
+        font-size: 50px;
+        margin-left: -25px;
+        opacity: 1;
+        animation: DownArr 2s infinite;
+    }
     &__video {
         position: absolute;
         left: 0px;
@@ -326,7 +340,7 @@ blockquote {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 30px 0;
+        padding: 50px 0 50px;
         position: relative;
         z-index: 1;
     }
@@ -340,6 +354,22 @@ blockquote {
     &__title {
         color: white;
     }
+}
+@keyframes DownArr {
+    0% {
+        opacity: 0;
+        transform: translateY(0px)
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(30px)
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+
+    
 }
 .content-head {
     &__subtitle {
@@ -579,6 +609,9 @@ blockquote {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+}
+.collapse-content-btn {
+    display: none;
 }
 /* ---------------------------------- item ---------------------------------- */
 .lot-nav {

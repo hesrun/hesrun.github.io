@@ -28,9 +28,11 @@
                 <div class="main-header__tools">
                     <a href="" id="openSearch" class="main-header__tool-btn">
                         <i class="mdi mdi-magnify"></i>
+                        <span>Search</span>
                     </a>
                     <a href="" class="main-header__tool-btn">
                         <i class="mdi mdi-heart-outline"></i>
+                        <span>Favorites</span>
                     </a>
                     <a href="" class="button button_white button_outline button_small">Login</a>
                 </div>
@@ -74,8 +76,7 @@
                         <div class="lot-item">
                             <div class="lot-item__body">
                                 <a href="" class="lot-item__image">
-                                    <img src="img/catalog/item-1.jpg" alt="">
-                                    <img class="lot-item__upper-image" src="img/catalog/item-1-h.jpg" alt="">
+                                    <img src="img/catalog/item-1-h.jpg" alt="">
                                 </a>
                             </div>
                             <div class="lot-item__info">
@@ -90,8 +91,7 @@
                         <div class="lot-item">
                             <div class="lot-item__body">
                                 <a href="" class="lot-item__image">
-                                    <img src="img/catalog/item-1.jpg" alt="">
-                                    <img class="lot-item__upper-image" src="img/catalog/item-1-h.jpg" alt="">
+                                    <img src="img/catalog/item-1-h.jpg" alt="">
                                 </a>
                             </div>
                             <div class="lot-item__info">
@@ -106,8 +106,7 @@
                         <div class="lot-item">
                             <div class="lot-item__body">
                                 <a href="" class="lot-item__image">
-                                    <img src="img/catalog/item-1.jpg" alt="">
-                                    <img class="lot-item__upper-image" src="img/catalog/item-1-h.jpg" alt="">
+                                    <img src="img/catalog/item-1-h.jpg" alt="">
                                 </a>
                             </div>
                             <div class="lot-item__info">
@@ -122,8 +121,7 @@
                         <div class="lot-item">
                             <div class="lot-item__body">
                                 <a href="" class="lot-item__image">
-                                    <img src="img/catalog/item-1.jpg" alt="">
-                                    <img class="lot-item__upper-image" src="img/catalog/item-1-h.jpg" alt="">
+                                    <img src="img/catalog/item-1-h.jpg" alt="">
                                 </a>
                             </div>
                             <div class="lot-item__info">
@@ -137,17 +135,16 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="collapse-content-btn">
-                    Show more
-                </a>
+                <div class="collapse-content-btn more-divider mb1 mt1">
+                    <a href="" class="more-divider__button button button_black button_outline button_small">Show more</a>
+                </div>
             </div>
             <div class="watchmaker__right">
                 <h4 class="mb2 mt0">Auction 2023 lot:</h4>
                 <div class="lot-item">
                     <div class="lot-item__body">
                         <a href="" class="lot-item__image">
-                            <img src="img/catalog/item-1.jpg" alt="">
-                            <img class="lot-item__upper-image" src="img/catalog/item-1-h.jpg" alt="">
+                            <img src="img/catalog/item-1-h.jpg" alt="">
                         </a>
                     </div>
                     <div class="lot-item__info">
@@ -268,28 +265,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        let ShowMore = 1;
-        let CollapseHeight = $('.collapse-content').innerHeight();
-        console.log(CollapseHeight);
-        $('.collapse-content').css({
-            height: 300,
-            overflow: 'hidden',
-            transition: 'height 0.3s'
-        })
-        $('.collapse-content-btn').click(function(){
-            $(this).toggleClass('active');
-            if (ShowMore == 1) {
-                $('.collapse-content').height(CollapseHeight);
-                $(this).text('Close up');
-                ShowMore = 0;
-            } else {
-                $('.collapse-content').height(300);
-                $(this).text('Show more');
-                ShowMore = 1;
-            }
-            console.log(ShowMore)
-            return false;
-        })
+
+
+
     </script>
 </body>
 </html>
