@@ -108,22 +108,22 @@
         grid-gap: 30px;
     }
     /* ------------------------------ participation ----------------------------- */
-    .steps-list {
-        grid-template-columns: repeat(1,1fr);
-        br {
-            display: none;
-        }
-    }
     .participation-btns {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
     }
     .participation-options {
         grid-template-columns: repeat(1,1fr);
-        div {
-            padding: 0;
-        }
-        hr {
-            grid-column: 1 span;
+        &__item {
+            hr {
+                margin: 15px 0;
+            }
+            > div:nth-child(1) {
+                min-height: 0;
+            }
+            > div:nth-child(3) {
+                min-height: 0;
+                margin-bottom: 15px;
+            }
         }
     }
     .profits-list {
@@ -394,18 +394,31 @@
     }
     /* ------------------------------ participation ----------------------------- */
     .steps-list {
-        gap: 15px;
+        &__item {
+            font-size: 15px;
+            &:before {
+                font-family: var(--america);
+                flex: 0 0 auto;
+                font-size: 18px;
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin-right: 15px;
+                text-align: center;
+                line-height: 40px;
+                background: black;
+                color: #fff;
+                content: counter(my-awesome-counter);
+            }
+        }
     }
     .participation-btns {
         gap: 15px;
     }
     .participation-options {
         gap: 15px;
-        div {
-            padding: 0;
-        }
-        hr {
-            grid-column: 1 span;
+        &__item {
+            padding: 15px;
         }
     }
     .profits-list {
