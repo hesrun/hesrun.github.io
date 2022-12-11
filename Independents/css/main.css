@@ -368,9 +368,9 @@ h5, .h5 {
 .modal {
   position: relative;
   background: #fff;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 45px 150px;
+  padding: 50px 150px;
 }
 .modal__content {
   padding: 45px 0;
@@ -428,6 +428,54 @@ h5, .h5 {
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px black dashed;
+  cursor: pointer;
+}
+.tooltip__content {
+  font-size: 10px;
+  background: #fff;
+  position: absolute;
+  width: 200px;
+  border: 1px black solid;
+  padding: 10px 15px;
+  left: 50%;
+  bottom: calc(100% + 15px);
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  transform-origin: left bottom;
+}
+.tooltip__content:before, .tooltip__content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  top: 100%;
+}
+.tooltip__content:before {
+  left: -1px;
+  border-style: solid;
+  border-width: 15px 15px 0 0;
+  border-color: black transparent transparent transparent;
+}
+.tooltip__content:after {
+  left: 0px;
+  border-style: solid;
+  border-width: 13px 13px 0 0;
+  border-color: white transparent transparent transparent;
+}
+.tooltip:hover .tooltip__content {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
 }
 
 .ui-card {
@@ -1147,28 +1195,23 @@ h5, .h5 {
 }
 
 .participation-options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
   line-height: 1.3;
 }
-.participation-options__item {
+.participation-options__line {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 30px;
+}
+.participation-options__line > div {
+  border-top: 1px #ddd solid;
   background: var(--grey-bg);
   padding: 30px;
 }
-.participation-options__item h5 {
-  font-weight: 600;
+.participation-options__line:first-child > div {
+  border: none;
 }
-.participation-options__item hr {
-  height: 1px;
-  background: var(--grey-line);
-  margin-bottom: 20px;
-}
-.participation-options__item > div:nth-child(1) {
-  min-height: 250px;
-}
-.participation-options__item > div:nth-child(3) {
-  min-height: 90px;
+.participation-options table b {
+  white-space: nowrap;
 }
 
 .profits-list {
@@ -1252,7 +1295,6 @@ h5, .h5 {
   grid-template-columns: 1fr 1fr 200px;
   gap: 15px;
   align-items: center;
-  color: var(--grey-text);
 }
 
 .earn-calculate-table {
@@ -1262,10 +1304,8 @@ h5, .h5 {
 }
 .earn-calculate-table td {
   padding: 20px 20px 20px 0;
-  font-size: 14px;
 }
 .earn-calculate-table th {
-  font-size: 13px;
   font-weight: 700;
   padding-bottom: 20px;
 }
@@ -1337,6 +1377,13 @@ h5, .h5 {
     position: relative;
     height: 50vh;
   }
+  .main-hero__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .main-hero__down {
+    display: none;
+  }
   .main-hero__title span {
     display: block;
   }
@@ -1378,18 +1425,12 @@ h5, .h5 {
   .participation-btns {
     grid-template-columns: repeat(2, 1fr);
   }
+  .participation-options-scroll {
+    overflow: auto;
+    padding-bottom: 15px;
+  }
   .participation-options {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .participation-options__item hr {
-    margin: 15px 0;
-  }
-  .participation-options__item > div:nth-child(1) {
-    min-height: 0;
-  }
-  .participation-options__item > div:nth-child(3) {
-    min-height: 0;
-    margin-bottom: 15px;
+    width: 200%;
   }
   .profits-list {
     grid-template-columns: repeat(2, 1fr);
@@ -1453,6 +1494,8 @@ h5, .h5 {
   }
   .main-header__logo {
     width: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .main-header__nav {
     padding: 40vw 50px 30px 50px;
@@ -1485,11 +1528,16 @@ h5, .h5 {
     display: inline-flex;
   }
   .main-header__burger {
+    margin-right: 0;
     display: flex;
     flex: 0 0 auto;
     width: 25px;
   }
   /* ---------------------------------- index --------------------------------- */
+  .main-hero__content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
   .start-timer {
     display: flex;
     flex: 0 0 auto;
@@ -1657,9 +1705,12 @@ h5, .h5 {
     gap: 15px;
   }
   .participation-options {
+    width: 250%;
+  }
+  .participation-options__line {
     gap: 15px;
   }
-  .participation-options__item {
+  .participation-options__line > div {
     padding: 15px;
   }
   .profits-list {

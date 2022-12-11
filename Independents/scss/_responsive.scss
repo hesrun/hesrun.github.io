@@ -62,6 +62,13 @@
     .main-hero {
         position: relative;
         height: 50vh;
+        &__content {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        &__down {
+            display: none;
+        }
         &__title {
             span {
                 display: block;
@@ -111,20 +118,12 @@
     .participation-btns {
         grid-template-columns: repeat(2,1fr);
     }
+    .participation-options-scroll {
+        overflow: auto;
+        padding-bottom: 15px;
+    }
     .participation-options {
-        grid-template-columns: repeat(1,1fr);
-        &__item {
-            hr {
-                margin: 15px 0;
-            }
-            > div:nth-child(1) {
-                min-height: 0;
-            }
-            > div:nth-child(3) {
-                min-height: 0;
-                margin-bottom: 15px;
-            }
-        }
+        width: 200%;
     }
     .profits-list {
         grid-template-columns: repeat(2,1fr);
@@ -192,6 +191,8 @@
         padding-bottom: 15px;
         &__logo {
             width: 200px;
+            margin-left: auto;
+            margin-right: auto;
         }
         &__nav {
             padding: 40vw 50px 30px 50px;
@@ -224,12 +225,19 @@
             }
         }
         &__burger {
+            margin-right: 0;
             display: flex;
             flex: 0 0 auto;
             width: 25px;
         }
     }
     /* ---------------------------------- index --------------------------------- */
+    .main-hero {
+        &__content {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
     .start-timer {
         display: flex;
         flex: 0 0 auto;
@@ -416,9 +424,12 @@
         gap: 15px;
     }
     .participation-options {
-        gap: 15px;
-        &__item {
-            padding: 15px;
+        width: 250%;
+        &__line {
+            gap: 15px;
+            > div {
+                padding: 15px;
+            }
         }
     }
     .profits-list {
