@@ -300,6 +300,9 @@ h5, .h5 {
 .button_full {
   width: 100%;
 }
+.button_full .button__icon_right {
+  margin-left: auto;
+}
 .button__icon {
   font-size: 18px;
 }
@@ -307,7 +310,7 @@ h5, .h5 {
   margin-right: 8px;
 }
 .button__icon_right {
-  margin-left: auto;
+  margin-left: 30px;
 }
 
 .dropdown {
@@ -895,6 +898,50 @@ h5, .h5 {
 }
 .lot-item__bids-count:hover {
   text-decoration: none;
+}
+
+/* --------------------------------- auction -------------------------------- */
+.auction-information {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.auction-information__add-calendar {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auction-start > div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+.auction-start i.mdi {
+  font-size: 18px;
+}
+
+.auction-actions {
+  display: flex;
+  gap: 30px;
+}
+
+.catalog-filter {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.catalog-filter__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.catalog-filter > .button {
+  margin-left: auto;
+}
+
+.auction-information-note {
+  max-width: 800px;
 }
 
 /* ------------------------------- watchmakers ------------------------------ */
@@ -1616,6 +1663,31 @@ h5, .h5 {
   }
   .lot-item:active .lot-item__upper-image {
     opacity: 1;
+  }
+  /* --------------------------------- auction -------------------------------- */
+  .auction-information {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .auction-information__add-calendar {
+    max-width: 100%;
+  }
+  .auction-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .catalog-filter {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .catalog-filter__item {
+    align-items: stretch;
+    width: calc(50% - 7.5px);
+    flex-direction: column;
+  }
+  .catalog-filter > .button {
+    width: 100%;
+    order: -1;
   }
   /* ------------------------------- watchmakers ------------------------------ */
   .watchmakers-grid {
