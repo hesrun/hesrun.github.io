@@ -418,6 +418,38 @@ blockquote {
 }
 .lot-item {
     $root: &;
+    &_load {
+        #{$root}__image {
+            pointer-events: none;
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: #fff;
+                z-index: 2;
+            }
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 50%;
+                left: 50%;
+                margin: -20px 0 0 -20px;
+                border-radius: 50%;
+                border: 2px var(--green) solid;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                animation: Spin 0.7s ease-in-out infinite;
+                z-index: 3;
+            }
+        }
+    }
     &__body {
         position: relative;
         margin-bottom: 15px;
@@ -742,6 +774,14 @@ blockquote {
     display: grid;
     grid-template-columns: 1fr 440px;
     grid-gap: 0 100px;
+    h3 {
+        @extend .h5;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    
+
 }
 .lot-specification-table {
     border-collapse: collapse;
@@ -858,6 +898,54 @@ blockquote {
             line-height: 1.4;
         }
     }
+}
+/* -------------------------------- contacts -------------------------------- */
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 10vw;
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__adress {
+        border-left: 10px black solid;
+        padding: 15px 0 15px 30px;
+        line-height: 1.5;
+    }
+    &__map {
+        filter: grayscale(100%);
+        iframe {
+            width: 100%;
+        }
+    }
+    &__socials {
+        display: flex;
+        gap: 15px;
+        a {
+            width: 45px;
+            height: 45px;
+            display: inline-flex;
+            text-decoration: none;
+            border-radius: 50%;
+            background: black;
+            color: #fff;
+            transition: all 0.3s;
+            .mdi {
+                margin: auto;
+                font-size: 24px;
+            }
+            &:hover {
+                background: var(--green);
+            }
+        }
+    }
+    &__form {
+        .field_textarea {
+            min-height: 350px;
+        }
+    } 
 }
 /* --------------------------------- footer --------------------------------- */
 .main-footer {

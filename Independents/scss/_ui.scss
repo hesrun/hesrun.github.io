@@ -254,7 +254,12 @@ h5,.h5 {
         margin-bottom: 0;
     }
     &_textarea {
-        height: 200px;
+        min-height: 200px;
+        textarea {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            resize: vertical;
+        }
     }
     &__input {
         height: 100%;
@@ -266,11 +271,6 @@ h5,.h5 {
         padding-left: 30px;
         padding-right: 30px;
         font-weight: 500;
-        &_textarea {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            resize: vertical;
-        }
         &:focus {
             border-color: var(--green);
         }
@@ -404,4 +404,10 @@ h5,.h5 {
 .ui-card {
     padding: 1rem;
     background: #efefef;
+}
+
+@keyframes Spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
