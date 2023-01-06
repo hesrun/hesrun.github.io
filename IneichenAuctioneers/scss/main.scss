@@ -514,6 +514,35 @@
     }
 }
 /* ---------------------------------- index --------------------------------- */
+.video-hero {
+    height: calc(100vh - 105px);
+    overflow: hidden;
+    video {
+        object-fit: cover;
+    }
+}
+.new-year-votes {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    gap: 10vw;
+    p {
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        line-height: 1.5;
+    }
+    &__send {
+        margin-top: 30px;
+        span {
+            display: block;
+            margin-top: 15px;
+        }
+    }
+}
 .timed-auction-lots {
     .owl-dots {
         display: flex;
@@ -616,7 +645,6 @@
     }
     
 }
-
 .auctions-teasers-grid {
     display: grid;
     gap: 30px;
@@ -1246,26 +1274,27 @@
 }
 .event-top-lots {
     margin: 45px 0;
-    &__head {
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        h3 {
-            font-weight: 500;
-        }
+}
+.press-quotes {
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 0 6vw;
+    &__item {
+        border-top: 10px $brown-bg solid;
     }
-    &__buy-now {
-        align-self: flex-end;
-        margin: 10px 30px 0 auto;
-        display: flex;
-        font-size: 13px;
-        img {
-            width: 60px;
-        }
-        p {
-            line-height: 1.5;
-            margin: 7px 0 0 0;
-        }
+    blockquote {
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 20px 0 20px;
+    }
+    strong {
+        font-size: 18px;
+        text-align: right;
+        display: block;
+        font-family: $america;
+        font-weight: 500;
+        text-align: right
     }
 }
 /* ----------------------------- event-place ---------------------------- */

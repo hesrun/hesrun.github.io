@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="product">
+        <div class="product__gallery-col">
+            <div class="product__gallery-swipe">
+                <i class="mdi mdi-chevron-left"></i>
+                Swipe photos
+                <i class="mdi mdi-chevron-right"></i>
+            </div>
+            <div class="product__gallery">
+                <a class="product__video">
+                    <video id="ProductVideo" src="video/Shades_of_Grey_Auction_-_BREGUET_Tourbillon.mp4" controls></video>
+                    <div class="product__play-video-btn">
+                        <i class="mdi mdi-play"></i>
+                    </div>
+                </a>
+                <a href="img/product/img.jpg" data-fancybox="gallery" class="product__image-link">
+                    <img src="img/product/img.jpg" alt="">
+                </a>
+                <a href="img/product/img1.jpg" data-fancybox="gallery" class="product__image-link">
+                    <img src="img/product/img1.jpg" alt="">
+                </a>
+                <a href="img/product/img2.jpg" data-fancybox="gallery" class="product__image-link">
+                    <img src="img/product/img2.jpg" alt="">
+                </a>
+                <a href="img/product/img3.jpg" data-fancybox="gallery" class="product__image-link">
+                    <img src="img/product/img3.jpg" alt="">
+                </a>
+                <a href="img/product/img4.jpg" data-fancybox="gallery" class="product__image-link">
+                    <img src="img/product/img4.jpg" alt="">
+                </a>
+            </div>
+            
+        </div>
+        <div class="product__info-col">
+            <div class="product__header">
+                <div class="product__num">lot <span>01</span></div>
+                <div class="product__nav">
+                    <a href="" class="product__nav-link">
+                        <i class="mdi mdi-chevron-left"></i>
+                    </a>
+                    <a href="" class="product__nav-link">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                </div>
+                <a href="#" class="product__close">
+                    <i class="mdi mdi-close"></i>
+                </a>
+            </div>
+            <div class="product__info">
+                <div class="product__brand">Poitevin Enamel</div>
+                <h1 class="product__name">Verge Pocket Watch</h1>
+                <div class="product__price">
+                    <div><span>Estimate value</span> <strong>CHF  1'500.- /  2'000.-</strong></div>
+                    <div><span>Starting bid</span> <strong> CHF 2'000.-</strong></div>
+                </div>
+                <div class="timed-auction-end">
+                    <div class="timed-auction-end__timer">
+                        <strong>Auction will open today</strong>
+                        <div class="timed-auction-end__progress">
+                            <div class="c-progress-bar c-progress-bar_large">
+                                <div class="c-progress-bar__bar c-progress-bar__bar_blue" style="width: 88%"></div>
+                                <div class="c-progress-bar__count c-progress-bar__count_blue">TIME LEFT 2 days</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timed-auction-end">
+                    <div class="timed-auction-end__timer">
+                        <strong>Timed auction until 23 of April 2021.</strong>
+                        <div class="timed-auction-end__progress">
+                            <div class="c-progress-bar c-progress-bar_large">
+                                <div class="c-progress-bar__bar c-progress-bar__bar_green" style="width: 88%"></div>
+                                <div class="c-progress-bar__count c-progress-bar__count_green">TIME LEFT 2 days</div>
+                            </div>
+                        </div>
+                        <div class="timed-auction-end__bids">
+                            <span>Total bids 16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timed-auction-end">
+                    <div class="timed-auction-end__timer">
+                        <strong>
+                            TTimed auction till 23 of Apr 2022
+                        </strong>
+                        <div class="timed-auction-end__progress">
+                            <div class="c-progress-bar c-progress-bar_large">
+                                <div class="c-progress-bar__bar c-progress-bar__bar_green" style="width: 50%"></div>
+                                <div class="c-progress-bar__count c-progress-bar__count_green">TIME LEFT 13:45:56</div>
+                            </div>
+                        </div>
+                        <div class="timed-auction-end__bids">
+                            <span><a href="#" id="BidsHistoryOpen">Total bids 16</a></span>
+                            <span>
+                                Every new bid:
+                                <b>+ 60 minutes</b>
+                            </span>
+                            <span>
+                                Increment:
+                                <b>CHF 500</b>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timed-auction-end__current-bid">
+                        <strong>Current bid</strong>
+                        <div class="timed-auction-end__bid-summ green-text">CHF 744 000</div>
+                        <div class="timed-auction-end__user">
+                            <span>Bidder:</span>
+                            <div>
+                                <span class="flag-icon flag-icon-ch"></span> 
+                                <b class="green-text">YOU WINNING NOW</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timed-auction-end">
+                    <div class="timed-auction-end__timer">
+                        <strong>
+                            Timed auction
+                            <b class="red-text">CLOSING TODAY</b>
+                        </strong>
+                        <div class="timed-auction-end__progress">
+                            <div class="c-progress-bar c-progress-bar_large">
+                                <div class="c-progress-bar__bar c-progress-bar__bar_red" style="width: 50%"></div>
+                                <div class="c-progress-bar__count c-progress-bar__count_red">TIME LEFT 13:45:56</div>
+                            </div>
+                        </div>
+                        <div class="timed-auction-end__bids">
+                            <span><a href="#" id="BidsHistoryOpen">Total bids 16</a></span>
+                            <span>
+                                Every new bid:
+                                <b>+ 60 minutes</b>
+                            </span>
+                            <span>
+                                Increment:
+                                <b>CHF 500</b>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="timed-auction-end__current-bid">
+                        <strong>Current bid</strong>
+                        <div class="timed-auction-end__bid-summ green-text">CHF 744 000</div>
+                        <div class="timed-auction-end__user">
+                            <span>Bidder:</span>
+                            <div>
+                                <span class="flag-icon flag-icon-ch"></span> 
+                                <b>Paddle # 5454</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__bids">
+                    <div class="c-dropdown product__bids-select ">
+                        <a href="" class="c-dropdown__button c-button c-button_white c-button_outline c-button_full c-button_space-between">
+                            CHF 2'000.-
+                            <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="c-dropdown__list">
+                            <div class="c-dropdown__scroll">
+                                <a href="" class="c-dropdown__link">CHF 2'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 3'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 3'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 4'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 4'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 5'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 5'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 6'000.-</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__bids-btn">
+                        <a href="" class="c-button c-button_white c-button_filled c-button_full">Place Bid CHF 2’000 </a>
+                    </div>
+                    <div class="product__auction-result">
+                        
+                    </div>
+                </div>
+                <div class="product__bids">
+                    <div class="c-dropdown product__bids-select">
+                        <a href="" class="c-dropdown__button c-button c-button_white c-button_outline c-button_full c-button_space-between">
+                            CHF 2'000.-
+                            <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="c-dropdown__list">
+                            <div class="c-dropdown__scroll">
+                                <a href="" class="c-dropdown__link">CHF 2'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 3'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 3'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 4'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 4'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 5'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 5'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 6'000.-</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__bids-btn">
+                        <a href="" class="c-button c-button_grey c-button_filled c-button_full">Place max bid CHF 7 500 </a>
+                    </div>
+                    <div class="product__auction-result">
+                        
+                    </div>
+                </div>
+                <div class="product__bids">
+                    <div class="c-dropdown product__bids-select">
+                        <a href="" class="c-dropdown__button c-button c-button_white c-button_outline c-button_full c-button_space-between">
+                            CHF 2'000.-
+                            <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="c-dropdown__list">
+                            <div class="c-dropdown__scroll">
+                                <a href="" class="c-dropdown__link">CHF 2'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 3'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 3'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 4'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 4'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 5'000.-</a>
+                                <a href="" class="c-dropdown__link">CHF 5'500.-</a>
+                                <a href="" class="c-dropdown__link">CHF 6'000.-</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__bids-btn">
+                        <a href="" class="c-button c-button_pink c-button_filled c-button_full">You loosing now, increase max bid</a>
+                    </div>
+                    <div class="product__auction-result">
+                        
+                    </div>
+                </div>
+                <div class="product__other-links">
+                    <a href="#" id="BidsTableOpen">Bid increments table</a>
+                    <a href="#" id="RulesOpen">How Bidding Works</a>
+                    <span class="green-text">All prices do not include 24% Premium</span>
+                </div>
+                <h3 class="product__prams-title">Specification</h3>
+                <table class="product__params">
+                    <tr>
+                        <td>Case</td>
+                        <td>Yellow gold case with partially translucent dark blue enamel painting and guillochage on the back, decorated bezel</td>
+                    </tr>
+                    <tr>
+                        <td>Dial</td>
+                        <td>White enamel dial with Arabic numerals, Breguet hands, winding hole between 1 and 2 o'clock, signed "Poitevin a L´Orient"</td>
+                    </tr>
+                    <tr>
+                        <td>Movement</td>
+                        <td>Gold-plated spindle pocket watch movement with chain and fusee, openworked and engraved balance cock, blued screws, signed "Poitevin a L'Orient"</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>42mm</td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td>ca.1820-1840</td>
+                    </tr>
+                </table>
+                <div class="product__btns">
+                    <a href="" class="c-button c-button_grey c-button_outline c-button_full c-button_medium c-button_icon-left">
+                        <i class="mdi mdi-book-open-page-variant-outline"></i>Read about this watches in our Journal
+                    </a>
+                    <a href="" id="addToFav" class="c-button c-button_grey c-button_outline c-button_full c-button_medium c-button_icon-left">
+                        <i class="mdi mdi-plus"></i>Add to favorites
+                    </a>
+                </div>
+                <h3 class="product__prams-title">Condition report</h3>
+                <table class="product__params">
+                    <tr>
+                        <td>Case</td>
+                        <td>Yellow gold case with partially translucent dark blue enamel painting and guillochage on the back, decorated bezel</td>
+                    </tr>
+                    <tr>
+                        <td>Dial</td>
+                        <td>White enamel dial with Arabic numerals, Breguet hands, winding hole between 1 and 2 o'clock, signed "Poitevin a L´Orient"</td>
+                    </tr>
+                    <tr>
+                        <td>Movement</td>
+                        <td>Gold-plated spindle pocket watch movement with chain and fusee, openworked and engraved balance cock, blued screws, signed "Poitevin a L'Orient"</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>42mm</td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td>ca.1820-1840</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="BidsTable" class="modal modal-small">
+        <div class="modal-small__title">Bid increments table</div>
+        <div class="modal-small__body">
+            <div class="table-scroll">
+                <table class="bids-table">
+                    <thead>
+                        <tr>
+                            <th>From:</th>
+                            <th>To:</th>
+                            <th>Increment:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CHF0</td>
+                            <td>CHF999</td>
+                            <td>CHF50</td>
+                        </tr>
+                        <tr>
+                            <td>CHF1,000</td>
+                            <td>CHF1,999</td>
+                            <td>CHF100</td>
+                        </tr>
+                        <tr>
+                            <td>CHF2,000</td>
+                            <td>CHF4,999</td>
+                            <td>CHF200</td>
+                        </tr>
+                        <tr>
+                            <td>CHF5,000</td>
+                            <td>CHF9,999</td>
+                            <td>CHF500</td>
+                        </tr>
+                        <tr>
+                            <td>CHF10,000</td>
+                            <td>CHF19,999</td>
+                            <td>CHF1,000</td>
+                        </tr>
+                        <tr>
+                            <td>CHF20,000</td>
+                            <td>CHF49,999</td>
+                            <td>CHF2,000</td>
+                        </tr>
+                        <tr>
+                            <td>CHF50,000</td>
+                            <td>CHF99,999</td>
+                            <td>CHF5,000</td>
+                        </tr>
+                        <tr>
+                            <td>CHF100,000</td>
+                            <td>CHF199,999</td>
+                            <td>CHF10,000</td>
+                        </tr>
+                        <tr>
+                            <td>CHF200,000</td>
+                            <td>CHF499,999</td>
+                            <td>CHF20,000</td>
+                        </tr>
+                        <tr>
+                            <td>CHF500,000+</td>
+                            <td></td>
+                            <td>CHF25,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
+        </div>
+    </div>
+    <div id="BidsHistory" class="modal modal-small modal-small_2x">
+        <div class="modal-small__title">Bid history</div>
+        <div class="modal-small__body">
+            <table class="bids-history-table">
+                <thead>
+                <tr>
+                    <th>BIDDER</th>
+                    <th>BID</th>
+                    <th>DATE &amp; TIME</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="flag-icon flag-icon-gb"></span>
+                            <strong>John, 38</strong>
+                        </td>
+                        <td>CHF 15 000</td>
+                        <td>23 Jun 08:15 PM UTC</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="flag-icon flag-icon-gb"></span>
+                            <strong>John, 38</strong>
+                        </td>
+                        <td>CHF 15 000</td>
+                        <td>23 Jun 08:15 PM UTC</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="flag-icon flag-icon-gb"></span>
+                            <strong>John, 38</strong>
+                        </td>
+                        <td>CHF 15 000</td>
+                        <td>23 Jun 08:15 PM UTC</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="flag-icon flag-icon-gb"></span>
+                            <strong>John, 38</strong>
+                        </td>
+                        <td>CHF 15 000</td>
+                        <td>23 Jun 08:15 PM UTC</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
+        </div>
+    </div>
+    <div id="Rules" class="modal modal-small modal-small_2x">
+        <div class="modal-small__title">How to Bid</div>
+        <div class="modal-small__body">
+            <article class="article-text">
+                <h2>HOW TO BID ONLINE</h2>
+                <p><b>Browse an auction</b> on Ineichen.com or on the Ineichen’s app to find an item you’re most interested in. If you’re new to the world of online auctions, just contact us, and with guidance of our specialists, you can navigate this exciting world with ease.  All items in the auction are available for viewing by appointment.</p>
+                <p><b>Place a bid</b> through Ineichen.com or on the Ineichen’s app when the auction starts, until the lot closes. With live video streaming, bidding is a unique and dynamic experience you’ll love being part of – please contact our specialists should you need any assistance. See below for detailed instructions on how to bid in online and live auctions.</p>
+                <p><b>Keep constant watch</b> over the lots you’re interested in. If you are outbid in an auction, you will be notified on the auction catalogue page by email, and by push notifications, which allows you to react immediately to any higher bids. </p>
+                <p><b>The final step</b> – and the most fun part. After your lot has closed, you’ll be notified via email and lot details page. If you’re the highest bidder, shortly after the auction you’ll receive an invoice with a list of your total charges and instructions on how to collect the item(s) that you won.</p>
+                <h2>ONLINE ONLY AUCTIONS</h2>
+                <h5>Go to lot page</h5>
+                <p>You can bid online in real time at any Ineichen auction around the world. To bid online, you need to log in or create a new account. Before placing your first bid, you’ll be asked to accept the Terms & Conditions and choose your account number.</p>
+                <h5>Place your bid</h5>
+                <p>Select the desired lot and place your maximum bid. The system will place incremental bids on your behalf up to the maximum amount specified. Click the ‘Quick Bid’ button to increase your bid to the next increment. A countdown will appear at the top of the auction page indicating the time remaining before bidding closes on the lot.</p>
+                <p>Each lot closes in one minute increments and as it begins to close, you’ll notice a countdown timer next to this lot. If you place a bid within the final minute before the lot’s scheduled closing time, the bidding will be extended by two minutes. </p>
+                <h2>LIVE AUCTIONS</h2>
+                <p>You can bid in real time against other bidders by telephone, online, in the room, or by absentee bidding. To participate in a live auction, you need to register your details first, either in person at the auction house, or by phone or online by clicking the relevant link on the auction overview page.</p>
+                <p>The most convenient way to bid at an auction is to place a maximum bid. Just enter the maximum amount you’re willing to pay for the lot, and Ineichen.com will take care of the bidding from there. Absentee bids, which enable you to set your maximum bid on a lot, are executed on your behalf by the auctioneer ahead of the auction, in a similar way as traditional absentee bids.</p>
+                <p>After you have registered for the auction, you’re ready to bid live. Log into your account on Ineichen.com first and at the started date and time you’ll be able to see and hear the auction taking place via live video feed from the auction room. You’ll be able to participate by bidding in the saleroom, by phone, or online via Ineichen.com or the Ineichen app. </p>
+                <p>A live auction begins as the auctioneer opens each lot for bidding. Each lot being sold is shown on the screen together with level of bidding displayed beside it. When the lot you want to bid on is coming up, start bidding. We accept the bids in the order we receive them, and the highest bid placed wins each lot. So even if you placed the leading maximum bid before the auction, please note that another client can outbid you during the live auction.</p>
+                <h2>AUCTION GLOSSARY</h2>
+                <h5>Absentee Bid </h5>
+                <p>If you’re not able to participate in an auction yourself, you can still bid on an item by placing an absentee bid with the auctioneer before an auction begins. During the live auction the auctioneer will execute your absentee bid on your behalf and if there are clients who would like to increase, the auctioneer is going to keep adding bids until they reach the limit you have set. You win the item if the auction ends under your amount, but if other clients outbid you, you have lost the auction. We will notify the successful absentee bidders after the auction.</p>
+                <h5>Maximum Bid</h5>
+                <p>Instead of incrementally bid in a live auction, you can use the maximum bid feature, which represents the absolute highest price you are willing to pay for a lot. Ineichen will execute bids on your behalf by placing the lowest bid necessary and never going higher than your maximum bid. </p>
+                <p>Our bidding platform will automatically execute incremental bids on your behalf beginning at the lowest increment, without going higher than your maximum bid. If you get outbid by another client you’ll be notified via email or push notifications so you could increase your bid. </p>
+                <p>If two different bidders enter the same maximum bid, we will prioritize the bid which was entered first.</p>
+                <p>If you wish to place an absentee bid, the auctioneer will execute your maximum bid on your behalf and if your bid wins, you’ll be notified after the auction. You are free to increase your maximum before the live auction starts.</p>
+                <h5>Starting Bid</h5>
+                <p>Also know known as “opening bid”, it represents the lowest possible price you may place on a lot, and it’s the price at which the bidding starts. Clients are allowed to bid at or above the starting bid. Also, you can place a bid which is lower than the reserve price, but the item can be sold only when you meet or exceed the reserve price. We will notify you if you become a leading bidder or if you have been outbid. </p>
+                <h5>Quick Bid</h5>
+                <p>Quick Bid feature allows you to increase your bid to the next increment in a fraction of a second. Just click the “Quick Bid” to confirm your bid increase on Ineichen.com, and your bid will be placed. This feature is available in online only auctions. </p>
+                <h5>My Active Bids</h5>
+                <p>In this section you can browse all your current bids and their status: active, won and lost bids marked with corresponding colors. </p>
+                <h2>FOR ASSISTANCE WITH REGISTRATION & BIDDING</h2>
+                <p>
+                    +41 44 298 11 44 <br>
+                    info@ineichen.com <br>
+                    Please contact Ineichen’s specialists if you need any assistance with registration and bidding
+                </p>
+            </article>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        video = $('#ProductVideo').get(0);
+
+        $('.product__play-video-btn').click(function(){
+            video.play();
+            $(this).fadeOut();
+        })
+        $('#BidsTableOpen').click(function(){
+            $('#BidsTable').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
+            return false;
+        })
+        $('#BidsHistoryOpen').click(function(){
+            $('#BidsHistory').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
+            return false;
+        })
+        $('#RulesOpen').click(function(){
+            $('#Rules').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+            return false;
+        })
+        
+        
+        if (window.matchMedia("(max-width: 900px)").matches) {
+            $('.product__gallery').slick({
+                arrows: false,
+            });
+        } else {
+            $(".product__info").stick_in_parent({
+                offset_top: 100
+            });
+        }
+        $('#addToFav').click(function(){
+            if ($(this).hasClass('c-button_grey')) {
+                $(this).html('<i class="mdi mdi-heart-outline"></i>In favorites')
+            } else if ($(this).hasClass('c-button_pink')) {
+                $(this).html('<i class="mdi mdi-plus"></i>Add to favorites')
+            }
+            $(this).toggleClass('c-button_grey c-button_pink c-button_filled');
+            return false 
+        })
+        
+    </script>
+</body>
+</html>

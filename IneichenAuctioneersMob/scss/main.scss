@@ -46,18 +46,19 @@ input,select,button, textarea {
     font-weight: 500;
     outline: none;
 }
-a {
-    
+h1,h2,h3,h4,h5 {
+    font-family: $america;
+    font-weight: 500;
 }
 
 .title {
     font-size: 22px;
     font-family: $america;
-    font-weight: 600;
+    font-weight: 500;
 }
 .small-title {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 30px 0 15px;
 }
 
@@ -107,7 +108,11 @@ a {
     line-height: 1.5;
     h2 {
         font-size: 18px;
-        margin: 20px 0 10px;
+        margin: 20px 0 20px;
+    }
+    h3 {
+        font-size: 18px;
+        margin: 20px 0 20px;
     }
     p {
         margin: 10px 0;
@@ -118,6 +123,7 @@ a {
     }
     blockquote {
         border: 2px $grey-light solid;
+        margin: 30px 0;
         border-radius: 15px;
         padding: 10px 20px;
         position: relative;
@@ -637,10 +643,46 @@ a {
             object-fit: cover;
             object-position: center;
         }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            margin: -25px 0 0 -25px;
+            border: 2px white solid;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-radius: 50%;
+            z-index: 3;
+            animation: 1s Spin infinite linear;
+            pointer-events: none;
+            opacity: 0;
+        }
     }
     &__loading {
         #{$root}__image {
-            filter: blur(5px);
+            &:before {
+                opacity: 1;
+            }
+            &:after {
+                opacity: 1;
+            }
         }
     }
     &__slider {
@@ -818,7 +860,7 @@ a {
         z-index: 2;
     }
     &__info {
-        padding: 0 15px;
+        padding: 0 20px;
     }
     &__brand {
         color: $grey;
@@ -830,8 +872,9 @@ a {
         margin-bottom: 25px;
     }
     &__value {
-        padding: 30px 15px;
+        padding: 20px 20px;
         border-top: 1px $grey-line solid;
+        border-bottom: 1px $grey-line solid;
         display: grid;
         gap: 15px 0;
         div {
@@ -853,9 +896,13 @@ a {
             border-radius: 10px;
             font-size: 13px;
             text-decoration: none;
+            transition: all 0.2s;
+            &:active {
+                transform: scale(0.8);
+            }
         }
         hr {
-            margin: 20px -15px;
+            margin: 2.5px -20px;
             border:none;
             height: 1px;
             background: $grey-light;
@@ -863,7 +910,7 @@ a {
 
     }
     &__bids-form {
-        padding: 30px 15px;
+        padding: 20px 20px;
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px 0;
@@ -872,7 +919,7 @@ a {
         span {
             display: block;
             text-align: center;
-            margin: 8px 0;
+            margin: 12px 0;
             color: $grey;
             font-size: 12px;
             text-transform: uppercase;
@@ -880,9 +927,10 @@ a {
     }
     &__specifications {
         .title {
+            font-size: 18px;
             margin: 20px 0;
         }
-        padding: 0 15px;
+        padding: 0 20px;
         table {
             width: 100%;
         }
@@ -898,84 +946,28 @@ a {
 
         }
     }
-    &__timed-bid {
-        > div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 15px;
-            margin-top: 15px;
-        }
-        b {
-            font-family: $america;
-            font-weight: 500;
-            font-size: 16px;
-        }
+    &__result {
+        border-bottom: 1px $grey-line solid;
     }
-    &__timed-bid-price {
-        font-weight: 300;
-        font-size: 22px;
+}
+
+.timed-result-alert {
+    padding: 30px 0;
+    text-align: center;
+    .mdi {
+        font-size: 48px;
     }
-    &__timed-bidder {
+    b {
+        margin: 20px 0 5px;
+        display: block;
+        font-size: 18px;
+        font-family: $america;
         font-weight: 500;
     }
-    &__timed-timer {
-        border-bottom: 1px $grey-line solid;
-        padding: 30px 15px;
-        strong {
-            display: block;
-            font-family: $america;
-            font-weight: 500;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-    }
-    &__timed-result {
-        margin: 30px 15px 0;
-        padding: 20px 30px;
-        border-radius: 15px;
-        text-align: center;
-        > b {
-            font-size: 18px;
-            display: block;
-            font-family: $america;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-        span {
-            font-size: 12px;
-            display: block;
-            margin: 5px 0;
-            opacity: 0.7;
-        }
-        strong {
-            margin: 10px 0;
-            display: block;
-            font-size: 28px;
-            font-weight: 300;
-        }
-        &_win {
-            border: 5px $green solid;
-            strong {
-                color: $green
-            }
-        }
-        &_lose {
-            border: 5px $pink solid;
-            strong {
-                color: $pink
-            }
-        }
-    }
-    &__timed-info {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    span {
+        font-size: 13px;
         color: $grey;
-        padding: 0 15px;
-        margin-top: 15px;
     }
-
 }
 
 .bids-history {
@@ -1034,6 +1026,7 @@ a {
         border-spacing: 15px 15px;
     }
     &__note {
+        white-space: initial;
         text-align: center;
         display: block;
         border: 1px $grey solid;
@@ -1217,7 +1210,12 @@ a {
         border-top: 1px $grey-light solid;
         display: grid;
         grid-template-columns: 40px 1fr;
-        gap: 0 20px
+        gap: 0 20px;
+        text-decoration: none;
+        color: inherit;
+        &:active {
+            background: #efefef;
+        }
     }
     &__image {
         img {
@@ -1241,7 +1239,9 @@ a {
     }
     &__bid-status {
         font-size: 14px;
+        text-decoration: none;
     }
+
 
 }
 

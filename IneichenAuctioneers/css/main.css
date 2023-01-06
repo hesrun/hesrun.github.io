@@ -1923,6 +1923,38 @@ select:-webkit-autofill:focus {
 }
 
 /* ---------------------------------- index --------------------------------- */
+.video-hero {
+  height: calc(100vh - 105px);
+  overflow: hidden;
+}
+.video-hero video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.new-year-votes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10vw;
+}
+.new-year-votes p {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+.new-year-votes__author {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  line-height: 1.5;
+}
+.new-year-votes__send {
+  margin-top: 30px;
+}
+.new-year-votes__send span {
+  display: block;
+  margin-top: 15px;
+}
+
 .timed-auction-lots .owl-dots {
   display: flex;
   margin-top: 15px !important;
@@ -2627,26 +2659,28 @@ select:-webkit-autofill:focus {
 .event-top-lots {
   margin: 45px 0;
 }
-.event-top-lots__head {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
+
+.press-quotes {
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 6vw;
 }
-.event-top-lots__head h3 {
+.press-quotes__item {
+  border-top: 10px #BD9E5E solid;
+}
+.press-quotes blockquote {
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 20px 0 20px;
+}
+.press-quotes strong {
+  font-size: 18px;
+  text-align: right;
+  display: block;
+  font-family: "GT America Extended", sans-serif;
   font-weight: 500;
-}
-.event-top-lots__buy-now {
-  align-self: flex-end;
-  margin: 10px 30px 0 auto;
-  display: flex;
-  font-size: 13px;
-}
-.event-top-lots__buy-now img {
-  width: 60px;
-}
-.event-top-lots__buy-now p {
-  line-height: 1.5;
-  margin: 7px 0 0 0;
+  text-align: right;
 }
 
 /* ----------------------------- event-place ---------------------------- */
@@ -6980,6 +7014,9 @@ select:-webkit-autofill:focus {
     max-width: 400px;
   }
   /* ---------------------------------- index --------------------------------- */
+  .video-hero {
+    height: auto;
+  }
   .services-list {
     grid-template-columns: 1fr;
     gap: 30px 0px;
@@ -7927,28 +7964,19 @@ select:-webkit-autofill:focus {
   .event-announce-item__info {
     margin-bottom: 15px;
   }
-  .event-top-lots {
-    margin: 30px 0;
+  .press-quotes {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  .event-top-lots__head {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px 0;
+  .press-quotes__item {
+    border-top: 3px #BD9E5E solid;
   }
-  .event-top-lots__head .c-button {
-    width: 100%;
+  .press-quotes blockquote {
+    font-size: 15px;
+    margin: 15px 0 15px;
   }
-  .event-top-lots__buy-now {
-    font-size: 13px;
-    align-items: center;
-  }
-  .event-top-lots__buy-now img {
-    width: 60px;
-    flex: 0 0 auto;
-  }
-  .event-top-lots__buy-now p {
-    margin: 0 0 0 15px;
+  .press-quotes strong {
+    font-size: 16px;
   }
   /* ----------------------------- event-place ---------------------------- */
   .event-place {

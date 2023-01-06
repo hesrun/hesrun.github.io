@@ -60,86 +60,53 @@
                 </div>
                 <div class="live-lot__value">
                     <div>
-                        <span>Starting price</span>
-                        <strong>CHF 15 000</strong>
+                        <span>Estimate</span>
+                        <strong class="blue-text">CHF 15 000 / CHF 20 000</strong>
                     </div>
                     <div>
-                        <span>Bidding history</span>
-                        <a id="OpenBidHistory">15 bids</a>
+                        <span>Starting bid</span>
+                        <strong class="brown-text">CHF 20 000</strong>
                     </div>
                     <div>
-                        <span>Buy now</span>
-                        <strong class="green-text">10 000 $</strong>
+                        <span>Fixed price</span>
+                        <strong class="blue-text">CHF 2 000</strong>
                     </div>
                     <div>
-                        <span>
-                            Buyer's premium <b class="green-text">will not be charged</b>
+                        <span class="black-text">
+                            No buyer's premium
                         </span>
                     </div>
+                    <hr>
+                    <div>
+                        <span>Current bid</span>
+                        <strong class="blue-text">CHF 15 000</strong>
+                    </div>
+                    <div>
+                        <span>Winning bidder</span>
+                        <strong class="blue-text">
+                            <span class="flag-icon flag-icon-ng"></span>
+                            Artemy, 34
+                        </strong>
+                    </div>
+                    <div>
+                        <span>Total bids</span>
+                        <a id="OpenBidHistory">2 bids</a>
+                    </div>
+                    <div>
+                        <span>Time left</span>
+                        <strong class="blue-text">2 days 20:23:21</strong>
+                    </div>
+                    
                 </div>
-                <div class="live-lot__timed-result live-lot__timed-result_win">
+                <div class="live-lot__result timed-result-alert">
+                    <i class="mdi mdi-thumb-up-outline"></i>
                     <b>Congratulations</b>
-                    <span>You have won this lot for</span>
-                    <strong>CHF 7 000</strong>
-                    <span>Price <b>do not include 24%</b> Premium</span>
+                    <span>You won this lot!</span>
                 </div>
-                <div class="live-lot__timed-result live-lot__timed-result_lose">
-                    <b>You have lots this lot </b>
-                    <span>You have won this lot for</span>
-                    <strong>CHF 7 000</strong>
-                    <span>Price <b>do not include 24%</b> Premium</span>
-                </div>
-                <div class="live-lot__timed-timer">
-                    <strong>Timed auction until 23 of April 2021.</strong>
-                    <div class="timed-progress">
-                        <div class="timed-progress__bar">
-                            <div class="green-bg" style="width: 50%"></div>
-                        </div>
-                        <div class="timed-progress__counter">
-                            <b>2 DAYS</b>
-                        </div>
-                    </div>
-                </div>
-                <div class="live-lot__timed-bid">
-                    <div>
-                        <b>Current bid:</b>
-                        <div class="live-lot__timed-bid-price green-text">
-                            CHF 7 000
-                        </div>
-                    </div>
-                    <div>
-                        <b>Bidder:</b>
-                        <div class="live-lot__timed-bidder">
-                            <span class="flag-icon flag-icon-ng"></span>
-                            <span>BABAJIDE, 46</span>
-                        </div>
-                    </div>
-                    <div>
-                        <b>Bidder:</b>
-                        <div class="live-lot__timed-bidder">
-                            <span class="flag-icon flag-icon-ng"></span>
-                            <span class="green-text">You are winner</span>
-                        </div>
-                    </div>
-                    <div>
-                        <b>Bidder:</b>
-                        <div class="live-lot__timed-bidder">
-                            <span class="flag-icon flag-icon-ng"></span>
-                            <span class="pink-text">You are loser</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="live-lot__bid-btns">
-                    <a href="" class="btn btn_blue btn_full btn_filled">Place your max bid 10,000 CHF</a>
-                    <a href="" class="btn btn_green btn_full btn_filled">BUY NOW 10 000 $</a>
-                </div>
-                <div class="live-lot__bid-btns live-lot__bid-btns_guest">
-                    <a href="" class="btn btn_blue btn_full btn_filled">Register to bid</a> <span>or</span>
-                    <a href="" class="btn btn_white btn_outline btn_full btn_filled">Sign-in</a>
-                </div>
-                <div class="live-lot__timed-info">
-                    <span>Increment: CHF 500</span>
-                    <span>New bid: +60 min</span>
+                <div class="live-lot__result timed-result-alert">
+                    <i class="mdi mdi-circle-off-outline"></i>
+                    <b>Sorry,</b>
+                    <span>you didn’t win this lot</span>
                 </div>
                 <div class="live-lot__specifications">
                     <div class="title">Specification</div>
@@ -209,6 +176,24 @@
                     <span>Live support</span>
                 </a>
             </div>
+        </div>
+    </div>
+
+    <div id="ex1" class="modal modal_animate">
+        <div class="modal__content">
+            <div class="timed-result-alert">
+                <i class="mdi mdi-thumb-up-outline"></i>
+                <b>Congratulations</b>
+                <span>You won this lot!</span>
+            </div>
+            <div class="timed-result-alert">
+                <i class="mdi mdi-circle-off-outline"></i>
+                <b>Sorry,</b>
+                <span>you didn’t win this lot</span>
+            </div>
+        </div>
+        <div class="modal__footer">
+            <a href="" class="btn btn_blue btn_full btn_filled " rel="modal:close">Close</a>
         </div>
     </div>
 
@@ -348,6 +333,10 @@
     <script>
         const swiper = new Swiper('.swiper', {
             speed: 400
+        });
+
+        $("#ex1").modal({
+            showClose: false
         });
         
         

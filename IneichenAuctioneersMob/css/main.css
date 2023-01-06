@@ -147,6 +147,9 @@
 .links-list__item:last-child {
   border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
 }
+.links-list__item:active {
+  background: #efefef;
+}
 .links-list__item_wrap {
   flex-wrap: wrap;
   padding-top: 20px;
@@ -217,6 +220,7 @@
   text-decoration: none;
   border-radius: 15px;
   padding: 0 20px;
+  transition: transform 0.1s;
 }
 .btn_full {
   width: 100%;
@@ -328,10 +332,15 @@
           animation: 0.5s Spin infinite linear;
 }
 .btn_disabled, .btn:disabled {
-  background: #E7E7E7 !important;
   border-color: #E7E7E7 !important;
   color: #828282 !important;
   pointer-events: none;
+}
+.btn_disabled select, .btn:disabled select {
+  color: #828282 !important;
+}
+.btn:active {
+  transform: scale(0.9);
 }
 .btn_select {
   position: relative;
@@ -1024,15 +1033,20 @@ input, select, button, textarea {
   outline: none;
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
+}
+
 .title {
   font-size: 22px;
   font-family: "GT America Extended", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .small-title {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   margin: 30px 0 15px;
 }
 
@@ -1094,7 +1108,11 @@ input, select, button, textarea {
 }
 .article h2 {
   font-size: 18px;
-  margin: 20px 0 10px;
+  margin: 20px 0 20px;
+}
+.article h3 {
+  font-size: 18px;
+  margin: 20px 0 20px;
 }
 .article p {
   margin: 10px 0;
@@ -1105,6 +1123,7 @@ input, select, button, textarea {
 }
 .article blockquote {
   border: 2px #E7E7E7 solid;
+  margin: 30px 0;
   border-radius: 15px;
   padding: 10px 20px;
   position: relative;
@@ -1686,8 +1705,43 @@ input, select, button, textarea {
   -o-object-position: center;
      object-position: center;
 }
-.lot-item__loading .lot-item__image {
-  filter: blur(5px);
+.lot-item__image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+}
+.lot-item__image:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -25px 0 0 -25px;
+  border: 2px white solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+  z-index: 3;
+  -webkit-animation: 1s Spin infinite linear;
+          animation: 1s Spin infinite linear;
+  pointer-events: none;
+  opacity: 0;
+}
+.lot-item__loading .lot-item__image:before {
+  opacity: 1;
+}
+.lot-item__loading .lot-item__image:after {
+  opacity: 1;
 }
 .lot-item__slider {
   position: absolute;
@@ -1861,7 +1915,7 @@ input, select, button, textarea {
   z-index: 2;
 }
 .live-lot__info {
-  padding: 0 15px;
+  padding: 0 20px;
 }
 .live-lot__brand {
   color: #828282;
@@ -1873,8 +1927,9 @@ input, select, button, textarea {
   margin-bottom: 25px;
 }
 .live-lot__value {
-  padding: 30px 15px;
+  padding: 20px 20px;
   border-top: 1px rgba(130, 130, 130, 0.2) solid;
+  border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
   display: grid;
   gap: 15px 0;
 }
@@ -1897,15 +1952,19 @@ input, select, button, textarea {
   border-radius: 10px;
   font-size: 13px;
   text-decoration: none;
+  transition: all 0.2s;
+}
+.live-lot__value a:active {
+  transform: scale(0.8);
 }
 .live-lot__value hr {
-  margin: 20px -15px;
+  margin: 2.5px -20px;
   border: none;
   height: 1px;
   background: #E7E7E7;
 }
 .live-lot__bids-form {
-  padding: 30px 15px;
+  padding: 20px 20px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px 0;
@@ -1913,15 +1972,16 @@ input, select, button, textarea {
 .live-lot__bid-btns span {
   display: block;
   text-align: center;
-  margin: 8px 0;
+  margin: 12px 0;
   color: #828282;
   font-size: 12px;
   text-transform: uppercase;
 }
 .live-lot__specifications {
-  padding: 0 15px;
+  padding: 0 20px;
 }
 .live-lot__specifications .title {
+  font-size: 18px;
   margin: 20px 0;
 }
 .live-lot__specifications table {
@@ -1937,80 +1997,27 @@ input, select, button, textarea {
   padding-right: 15px;
   color: #828282;
 }
-.live-lot__timed-bid > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-  margin-top: 15px;
-}
-.live-lot__timed-bid b {
-  font-family: "GT America Extended", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-}
-.live-lot__timed-bid-price {
-  font-weight: 300;
-  font-size: 22px;
-}
-.live-lot__timed-bidder {
-  font-weight: 500;
-}
-.live-lot__timed-timer {
+.live-lot__result {
   border-bottom: 1px rgba(130, 130, 130, 0.2) solid;
-  padding: 30px 15px;
 }
-.live-lot__timed-timer strong {
-  display: block;
-  font-family: "GT America Extended", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  margin-bottom: 15px;
-}
-.live-lot__timed-result {
-  margin: 30px 15px 0;
-  padding: 20px 30px;
-  border-radius: 15px;
+
+.timed-result-alert {
+  padding: 30px 0;
   text-align: center;
 }
-.live-lot__timed-result > b {
-  font-size: 18px;
+.timed-result-alert .mdi {
+  font-size: 48px;
+}
+.timed-result-alert b {
+  margin: 20px 0 5px;
   display: block;
+  font-size: 18px;
   font-family: "GT America Extended", sans-serif;
   font-weight: 500;
-  margin-bottom: 15px;
 }
-.live-lot__timed-result span {
-  font-size: 12px;
-  display: block;
-  margin: 5px 0;
-  opacity: 0.7;
-}
-.live-lot__timed-result strong {
-  margin: 10px 0;
-  display: block;
-  font-size: 28px;
-  font-weight: 300;
-}
-.live-lot__timed-result_win {
-  border: 5px #579352 solid;
-}
-.live-lot__timed-result_win strong {
-  color: #579352;
-}
-.live-lot__timed-result_lose {
-  border: 5px #e91e63 solid;
-}
-.live-lot__timed-result_lose strong {
-  color: #e91e63;
-}
-.live-lot__timed-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.timed-result-alert span {
+  font-size: 13px;
   color: #828282;
-  padding: 0 15px;
-  margin-top: 15px;
 }
 
 .bids-history {
@@ -2065,6 +2072,7 @@ input, select, button, textarea {
   border-spacing: 15px 15px;
 }
 .live-bids__note {
+  white-space: initial;
   text-align: center;
   display: block;
   border: 1px #828282 solid;
@@ -2243,6 +2251,11 @@ input, select, button, textarea {
   display: grid;
   grid-template-columns: 40px 1fr;
   gap: 0 20px;
+  text-decoration: none;
+  color: inherit;
+}
+.bids-list__item:active {
+  background: #efefef;
 }
 .bids-list__image img {
   width: 100%;
@@ -2264,6 +2277,7 @@ input, select, button, textarea {
 }
 .bids-list__bid-status {
   font-size: 14px;
+  text-decoration: none;
 }
 
 .logout {
@@ -2880,58 +2894,6 @@ input, select, button, textarea {
   .live-lot__bids-form {
     padding: 30px 0px;
   }
-  .live-lot__timed-bid > div {
-    padding: 0px;
-    margin-top: 25px;
-  }
-  .live-lot__timed-bid b {
-    font-size: 22px;
-  }
-  .live-lot__timed-bid-price {
-    font-size: 28px;
-  }
-  .live-lot__timed-bidder {
-    font-weight: 500;
-  }
-  .live-lot__timed-info {
-    padding: 0;
-    margin-top: 30px;
-  }
-  .live-lot__timed-timer {
-    padding: 30px 0px;
-  }
-  .live-lot__timed-timer strong {
-    font-size: 22px;
-  }
-  .live-lot__timed-result {
-    margin: 30px 0px;
-    padding: 30px;
-    border-radius: 20px;
-  }
-  .live-lot__timed-result > b {
-    font-size: 24px;
-    margin-bottom: 25px;
-  }
-  .live-lot__timed-result span {
-    font-size: 18px;
-    margin: 5px 0;
-  }
-  .live-lot__timed-result strong {
-    margin: 20px 0;
-    font-size: 38px;
-  }
-  .live-lot__timed-result_win {
-    border: 5px #579352 solid;
-  }
-  .live-lot__timed-result_win strong {
-    color: #579352;
-  }
-  .live-lot__timed-result_lose {
-    border: 5px #e91e63 solid;
-  }
-  .live-lot__timed-result_lose strong {
-    color: #e91e63;
-  }
   .live-lot__value {
     padding: 30px 0px;
     gap: 30px 0;
@@ -2950,6 +2912,15 @@ input, select, button, textarea {
   .live-lot__specifications .title {
     font-size: 28px;
     margin: 30px 0;
+  }
+  .timed-result-alert {
+    padding: 45px 0;
+  }
+  .timed-result-alert b {
+    font-size: 24px;
+  }
+  .timed-result-alert span {
+    font-size: 18px;
   }
   .live-lots {
     display: grid;

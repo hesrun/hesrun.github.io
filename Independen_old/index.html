@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img src="svg/head-logo.svg" alt="">
+        </a>
+        <div class="header__buttons">
+
+            <!-- <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>UserName@mail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+
+        <div class="independent-banner">
+            <img class="independent-banner__image" src="img/main/banner.jpeg" alt="">
+            <div class="independent-banner__content">
+                <div class="independent-banner__title">
+                    <h1><b>Independent</b> watchmaking</h1>
+                    <span>New annual event by Ineichen Auctioneers</span>
+                </div>
+                <div class="independent-banner__info">
+                    <b class="independent-banner__date">
+                        MAY <br>
+                        2023
+                    </b>
+                    <div class="independent-banner__text">
+                        <p>Annual auction featuring up to 30 exclusive timepieces created by independent watchmakers <br> of all levels — from the beginning to top creators — especially for the event. 
+                        </p>
+                        <a href="" class="c-button c-button_white c-button_small">
+                            For buyers
+                        </a>
+                        <a href="" class="c-button c-button_white c-button_small">
+                            For watchmakers
+                        </a>
+                        <a href="" class="c-button c-button_white c-button_small">
+                            For press
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="land-section">
+            <div class="container">
+                <div class="title">Already onboard</div>
+                <div class="lots-grid">
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <a href="">
+                                <div class="lot-item__image">
+                                    <img src="img/main/watch-1.jpg" alt="">
+                                </div>
+                                <div class="lot-item__info">
+                                    <h3 class="lot-item__brand">Rolex</h3>
+                                    <h2 class="lot-item__name">
+                                        <span>Vacheron Constantin Patrimony Perpetual Calendar Openworked</span>
+                                    </h2>
+                                    <span class="lot-item__link">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est CHF 150 000 - CHF 200 000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                            
+                        </div>
+                    </div>
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <a href="">
+                                <div class="lot-item__image">
+                                    <img src="img/main/watch-2.jpg" alt="">
+                                </div>
+                                <div class="lot-item__info">
+                                    <h3 class="lot-item__brand">Rolex</h3>
+                                    <h2 class="lot-item__name">
+                                        <span>Vacheron Constantin Patrimony Perpetual Calendar Openworked</span>
+                                    </h2>
+                                    <span class="lot-item__link">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est CHF 150 000 - CHF 200 000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                            
+                        </div>
+                    </div>
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/main/watch-3.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Casio monsturize</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                            <div class="lot-item__count">1</div>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                            
+                        </div>
+                    </div>
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/main/watch-3.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Casio monsturize</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                            
+                        </div>
+                    </div>
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/main/watch-4.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Casio monsturize</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                            
+                        </div>
+                    </div>
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/main/watch-5.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Casio monsturize</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                            
+                        </div>
+                    </div>
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/main/watch-3.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Casio monsturize</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                            <div class="lot-item__count">1</div>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                            
+                        </div>
+                    </div>
+                    <div class="lot-item">
+                        <div class="lot-item__body">
+                            <div class="lot-item__image">
+                                <img src="img/main/watch-3.jpg" alt="">
+                            </div>
+                            <a href="#" class="lot-item__info">
+                                <h3 class="lot-item__brand">Rolex</h3>
+                                <h2 class="lot-item__name">
+                                    <span>Casio monsturize</span>
+                                </h2>
+                                <span class="lot-item__link">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </span>
+                            </a>
+                            <div class="lot-item__count">1</div>
+                            <button class="lot-item__favorite">
+                                <span>
+                                    <i class="mdi mdi-plus"></i>
+                                    Add to Favorites
+                                </span>
+                                <i class="mdi mdi-heart"></i>
+                            </button>
+                        </div>
+                        <div class="lot-item__price">
+                            <span class="lot-item__price-range">Est $4,000 - $6,000</span>
+                            <span class="lot-item__price-single">Hammer price: $3,500</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider container">
+            <div class="section-divider__inner">
+                <div class="section-divider__button">
+                    <a href="" class="c-button c-button_white c-button_small">
+                        Learn more...
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="land-section">
+            <div class="container">
+                <div class="title">Independent watchmakers</div>
+                <div class="watchmakers-grid">
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                    <a href="" class="watchmakers-item">
+                        <div class="watchmakers-item__image">
+                            <img src="img/main/maker.jpg" alt="">
+                        </div>
+                        <h4 class="watchmakers-item__name">Roger Dubuis </h4>
+                        <span class="watchmakers-item__profession">Watchmaker</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider container">
+            <div class="section-divider__inner">
+                <div class="section-divider__button">
+                    <a href="" class="c-button c-button_white c-button_small">
+                        Learn more...
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="land-section tab-hidden">
+            <div class="container">
+                <div class="title">Benefits of participation:</div>
+                <div class="benefits-list">
+                    <div class="benefits-item">
+                        <img class="benefits-item__image" src="img/main/benefit-1.svg" alt="">
+                        <h4 class="benefits-item__name">WATCH FAIRS</h4>
+                        <p>Free access to the largest international watch fairs allows the rapid gain of international recognition and growth</p>
+                    </div>
+                    <div class="benefits-item">
+                        <img class="benefits-item__image" src="img/main/benefit-2.svg" alt="">
+                        <h4 class="benefits-item__name">TOP MEDIA</h4>
+                        <p>Free boosting your brand image with coverage in the top media allowed by the professional and dedicated PR team</p>
+                    </div>
+                    <div class="benefits-item">
+                        <img class="benefits-item__image" src="img/main/benefit-3.svg" alt="">
+                        <h4 class="benefits-item__name">PARTNERSHIPS</h4>
+                        <p>Building necessary industry connections byongoing cooperation with leading and young watchmakers, collectors, and traders.</p>
+                    </div>
+                    <div class="benefits-item">
+                        <img class="benefits-item__image" src="img/main/benefit-4.svg" alt="">
+                        <h4 class="benefits-item__name">BUYERS</h4>
+                        <p>Meet your potential buyers featuring your work in the auction and get access to the buyer base of over 5000 people with Ineichen Auctioneers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="land-section">
+            <div class="container">
+                <div class="title">How to participate:</div>
+                <div class="how-to-participate">
+                    <p>Accepting this invitation would mean anagreement to create a timepiece <br> specifically for the project within the individually agreed deadline.</p>
+                    <form class="how-to-participate__form">
+                        <div class="how-to-participate__row">
+                            <div class="how-to-participate__left">
+                                <div class="c-field">
+                                    <input type="text" class="c-field__input">
+                                    <label class="c-field__label">Brand</label>
+                                </div>
+                                <div class="c-field">
+                                    <input type="text" class="c-field__input">
+                                    <label class="c-field__label">Model</label>
+                                </div>
+                                <div class="c-field">
+                                    <input type="text" class="c-field__input">
+                                    <label class="c-field__label">Name</label>
+                                </div>
+                                <div class="c-field">
+                                    <input type="text" class="c-field__input">
+                                    <label class="c-field__label">E-mail</label>
+                                </div>
+                                <div class="c-field">
+                                    <input type="text" class="c-field__input">
+                                    <label class="c-field__label">Phone</label>
+                                </div>
+                            </div>
+                            <div class="how-to-participate__right">
+                                <div class="c-field">
+                                    <textarea type="text" class="c-field__input"></textarea>
+                                    <label class="c-field__label">Comment</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how-to-participate__row">
+                            <div class="how-to-participate__left">
+                                <a href="" class="c-button c-button_blue c-button_filled c-button_full">Participate Independent watchmakers event</a>
+                            </div>
+                            <div class="how-to-participate__right">
+                                <p>We are open to a discussion of cooperationterms and will be excited to hear from you.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="land-section">
+            <div class="container">
+                <div class="title">Featured in:</div>
+                <div class="press-logo-grid">
+                    <a href="https://www.forbes.com/sites/carolbesler/2021/12/05/watch-auctioneer-ineichen-sets-five-world-records-for-works-by-independent-watchmakers/?sh=229f18a16459" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/56d/rf3lkp3p42f4xnwqyxmhgssyma43ly96.png" alt="Forbes">
+                    </a>
+                    <a href="https://en.worldtempus.com/article/industry-news/people-and-interviews/ineichen-auctioneers-ceo-interview-31363.html" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/376/bu24gnby0dc708q46q04a7ax6aboziss.png" alt="worltempus">
+                    </a>
+                    <a href="https://www.watchtime.com/wristwatch-industry-news/ineichen-auctions-new-world-record-for-vacheron-constantin/" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/9b7/a49monyvve2he4oc14dqsa2pdnz3uglf.png" alt="watchtime">
+                    </a>
+                    <a href="https://www.watchonista.com/articles/depth/top-lots-ineichen-auctioneers-upcoming-royal-50-auction" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/76b/dv751mj0gsqe34t5kjxcd2ahsio3spwh.png" alt="watchonista">
+                    </a>
+                    <a href="https://quillandpad.com/2022/04/25/results-of-the-ineichen-precious-blues-auction-on-april-23-2022/" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/9a3/461dzapv7g2kmbtir6jx2bwjmhfhztxj.png" alt="quill">
+                    </a>
+                    <a href="https://www.nytimes.com/2022/04/03/fashion/watches-audemars-piguet-royal-oak-anniversary.html" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/2f2/cospqxgjay81plryy1iuwmj2puqe65si.png" alt="newyork">
+                    </a>
+                    <a href="https://monochrome-watches.com/category/ineichen/" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/a1d/nxkz0gbfl63nraynbx6bte5cftgl5j5b.png" alt="monochrome">
+                    </a>
+                    <a href="https://italianwatchspotter.com/ineichen-zurich-auction-results-november-2021/?lang=en" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/ddb/1freh4rb3eqzi768mqbtaf977kf4mspm.png" alt="italian">
+                    </a>
+                    <a href="https://www.gmtmag.com/" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/098/zcc2oy34j4j78pwgwbpa2zi44672wabz.png" alt="gmt">
+                    </a>
+                    <a href="https://www.atimelyperspective.com/more-than-200-rare-and-coveted-watches-go-up-for-auction-by-ineichen-zurich-this-weekend/" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/a04/aewvpzng6rsanyx1y3i2uwovm2e2wpay.png" alt="atimely">
+                    </a>
+                    </a>
+                    <a href="https://www.gmtmag.com/" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/098/zcc2oy34j4j78pwgwbpa2zi44672wabz.png" alt="gmt">
+                    </a>
+                    <a href="https://www.atimelyperspective.com/more-than-200-rare-and-coveted-watches-go-up-for-auction-by-ineichen-zurich-this-weekend/" target="_blank" class="press-logo-grid__item">
+                        <img src="https://ineichen.com/upload/iblock/a04/aewvpzng6rsanyx1y3i2uwovm2e2wpay.png" alt="atimely">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider container">
+            <div class="section-divider__inner">
+                <div class="section-divider__button">
+                    <a href="" class="c-button c-button_white c-button_small">
+                        Download press release 
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top-line">
+                <div class="footer__nav">
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Sell Watches</strong>
+                        <a class="footer__nav-link" href="">Auction</a>
+                        <a class="footer__nav-link" href="">Consign</a>
+                        <a class="footer__nav-link" href="">Direct sale </a>
+                        <a class="footer__nav-link" href="">Free Appraisal</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Corporate</strong>
+                        <a class="footer__nav-link" href="">About Ineichen</a>
+                        <a class="footer__nav-link" href="">Ineichen Auctioneer </a>
+                        <a class="footer__nav-link" href="">Terms & Conditions </a>
+                        <a class="footer__nav-link" href="">Cookie policy </a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Support</strong>
+                        <a class="footer__nav-link" href="">FAQ</a>
+                        <a class="footer__nav-link" href="">T&C</a>
+                        <a class="footer__nav-link" href="">User protection</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Social Channels</strong>
+                        <a class="footer__nav-link" href="">Instagram</a>
+                        <a class="footer__nav-link" href="">Youtube</a>
+                        <a class="footer__nav-link" href="">Facebook</a>
+                        <a class="footer__nav-link" href="">Telegram</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    +41 44 298 11 44 <br>
+                    info@ineichen.com <br>
+                    Stadthausquai 11-13, Zürich <br>
+                    Tue-Fri - 10:00-17:30 Sat - 10:00-16:00 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="participate" class="modal modal-small modal-small_full">
+        <div class="modal-small__title">To participate:</div>
+        <div class="modal-small__body">
+            <div>
+                <p>Accepting this invitation would mean anagreement to create a timepiece specifically for the project within the individually agreed deadline.</p>
+                <form>
+                    <div class="c-field c-field_black">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">Brand</label>
+                    </div>
+                    <div class="c-field c-field_black">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">Model</label>
+                    </div>
+                    <div class="c-field c-field_black">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">Name</label>
+                    </div>
+                    <div class="c-field c-field_black">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">E-mail</label>
+                    </div>
+                    <div class="c-field c-field_black">
+                        <input type="text" class="c-field__input">
+                        <label class="c-field__label">Phone</label>
+                    </div>
+                    <div class="c-field c-field_black">
+                        <textarea type="text" class="c-field__input"></textarea>
+                        <label class="c-field__label">Comment</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Participate Independent watchmakers event</a>
+        </div>
+    </div>
+
+    <div id="VideoModal" class="modal modal-video">
+        <div class="modal-video__wrapper">
+            <iframe id="FrameVideo" width="100%" height="100%" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $('#participate').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
+    </script>
+
+</body>
+</html>

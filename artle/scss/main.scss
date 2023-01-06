@@ -323,6 +323,7 @@ h1,h2,h3,h4,h5 {
     }
     
     .fast-subscribe-form {
+        margin-left: auto;
         min-width: 350px;
         display: flex;
         align-items: center;
@@ -363,11 +364,19 @@ h1,h2,h3,h4,h5 {
     text-decoration: none;
     text-align: center;
     .image {
+        max-width: 450px;
+        margin: auto;
         position: relative;
         overflow: hidden;
         img {
-            max-width: 100%;
-            transition: all 0.6s;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .img-upper {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
         }
         &:after {
             content: "";
@@ -378,8 +387,8 @@ h1,h2,h3,h4,h5 {
             width: 100%;
             background: rgb(255,255,255);
             background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 8%, rgba(255,255,255,0) 92%, rgba(255,255,255,1) 100%);
-            transition: all 0.5s;
-            z-index: 1;
+            transition: all 0.3s;
+            z-index: 2;
         }
     }
     .name {
@@ -437,8 +446,8 @@ h1,h2,h3,h4,h5 {
     }
     &:hover {
         .image {
-            img {
-                transform: scale(1.1);
+            .img-upper {
+                opacity: 1;
             }
             &:after {
                 top: -60px;
@@ -614,6 +623,7 @@ h1,h2,h3,h4,h5 {
 .article-typo {
     max-width: 960px;
     margin: 30px auto;
+    padding: 0 15px;
     > * {
         margin: 30px 0;
     }
@@ -1188,9 +1198,8 @@ h1,h2,h3,h4,h5 {
         margin-bottom: 30px;
     }
     blockquote {
-        clear: both;
-        border: 1px rgba(white, 0.4) solid;
-        padding: 30px;
+        border-left: 2px white solid;
+        padding-left: 30px;
         font-size: 24px;
         margin: 30px 0;
     }
@@ -1913,6 +1922,7 @@ fieldset {
     .article-typo {
         margin: 0;
         max-width: 100%;
+        padding: 0;
     }
 }
 
@@ -1933,6 +1943,10 @@ fieldset {
 }
 .mdi-spin:before {
     animation-duration: 0.4s;
+}
+
+.back-drop-blur {
+    backdrop-filter: blur(5px)
 }
 
 @import "responsive";

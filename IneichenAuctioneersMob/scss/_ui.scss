@@ -140,6 +140,9 @@
         &:last-child {
             border-bottom: 1px $grey-line solid;
         }
+        &:active {
+            background: #efefef;
+        }
         &_wrap {
             flex-wrap: wrap;
             padding-top: 20px;
@@ -161,6 +164,7 @@
                 margin-left: auto;
             }
         }
+        
     }
     .links-list__icon  {
         text-align: center;
@@ -213,6 +217,7 @@
     text-decoration: none;
     border-radius: 15px;
     padding: 0 20px;
+    transition: transform 0.1s;
     &_full {
         width: 100%;
     }
@@ -344,10 +349,15 @@
     }
     &_disabled,
     &:disabled {
-        background: $grey-light !important;
         border-color: $grey-light !important;
         color: $grey !important;
         pointer-events: none;
+        select {
+            color: $grey !important;
+        }
+    }
+    &:active {
+        transform: scale(0.9);
     }
     &_select {
         position: relative;
@@ -373,6 +383,7 @@
         margin-right: 10px;
         font-size: 24px;
     }
+    
 }
 .c-filed {
     margin-bottom: 20px;

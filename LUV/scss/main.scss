@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css');
+
+/*************vars*********/
+$grey-card: #1F2021;
+$grey-element: #2C2D2E;
+$yellow: #FFD700;
+$red: #F94040;
+$disabled: #585858;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    counter-reset: steps;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,textarea,button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-header {
+    padding: 40px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    &__back {
+        font-size: 20px;
+    }
+}
+
+.steps-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 3.5fr 6fr;
+    grid-template-rows: auto auto;
+    gap: 100px 60px;
+    padding: 0 100px 0 60px;
+    
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        &_double {
+            grid-row: 1 / 2 span;
+        }
+    }
+    &__nav {
+        margin-top: -50px;
+        grid-row: 3;
+        grid-column: 1;
+        &::before {
+            opacity: 0;
+            visibility: hidden;
+            line-height: 0;
+        }
+    }
+    &__item:before {
+        counter-increment: steps;
+        content: "0"counter(steps); 
+        font-size: 7.5vw;
+        font-weight: 700;
+        color: #fff;
+        opacity: 0.12;
+        pointer-events: none;
+        margin-right: 20px;
+    }
+    &__item {
+        &_fill {
+            &:before {
+                color: $yellow;
+                opacity: 0.25;
+            }
+            .card {
+                box-shadow: 0 0 0 1px $yellow;
+            }
+        }
+        
+    }
+}
+
+.card {
+    flex: 1 1 auto;
+    background: $grey-card;
+    padding: 30px;
+    &__title {
+        font-size: 24px;
+        font-weight: 900;
+        margin-bottom: 30px;
+    }
+    &__title-small {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+}
+
+.scrolled-content {
+    max-height: 590px;
+}
+
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 220px));
+    gap: 45px 45px;
+    overflow: auto;
+}
+
+.device-item {
+    $root: &;
+    background: $grey-element;
+    border: 1px rgba(white,0.2) solid;
+    padding: 20px;
+    transition: all 0.3s;
+    text-align: center;
+    &:hover {
+        border-color: $yellow;
+    }
+    strong {
+        font-size: 12px;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    &__image {
+        margin-bottom: 15px;
+        img {
+            vertical-align: middle;
+            border: 1px rgba(white,0.2) solid;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    
+    &__quantity {
+        color: $yellow;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    hr {
+        max-width: 100px;
+        margin: 10px auto;
+        border: none;
+        height: 1px;
+        background-color: #5F5F5F;
+    }
+    
+}
+
+.cols2x {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 60px;
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: rgba(white,0.2);
+        left: 50%;
+    }
+}
+
+
+/* ----------------------------------- ui ----------------------------------- */
+.select {
+    margin-top: 30px;
+    select {
+        display: none;
+    }
+    &:first-of-type {
+        margin: 0px;
+    }
+}
+.dk-select {
+    font-size: 14px;
+    position: relative;
+    height: 55px;
+    background: $grey-element;
+    &:after {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        display: inline-block;
+        font: normal normal normal 24px/1 "Material Design Icons";
+        content: "\F0140";
+        font-size: 24px;
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+    }
+    &.dk-select-open-down {
+        .dk-select-options {
+            display: block;
+        }
+    }
+}
+.dk-selected {
+    cursor: pointer;
+    line-height: 21px;
+    padding: 17px 30px 17px 15px;
+    color: $yellow;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: calc(100% - 10px);
+    &.hidden-option {
+        color: #818181;
+    }
+}
+.dk-select-options {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    background: $grey-element;
+    list-style: none;
+    z-index: 1;
+}
+.dk-option {
+    padding: 17px 20px;
+    cursor: pointer;
+    &:hover {
+        color: $yellow;
+    }
+}
+.dk-option-disabled {
+    display: none;
+}
+
+.l-input {
+    font-size: 14px;
+    width: 100%;
+    border: none;
+    background: $grey-element;
+    height: 55px;
+    padding: 0 15px;
+    margin-top: 30px;
+    outline: none;
+    color: $yellow;
+    transition: all 0.2s;
+    &.error {
+        box-shadow: 0 0 0 1px $red;
+    }
+    &:first-of-type {
+        margin-top: 0px;
+    }
+    &:focus {
+        box-shadow: 0 0 0 1px $yellow;
+    }
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    input {
+        display: none;
+    }
+    label {
+        display: inline-flex;
+        margin-right: 10px;
+        align-items: center;
+        font-size: 14px;
+        padding: 0 10px;
+        height: 32px;
+        border: 1px rgba(white,0.2) solid;
+        cursor: pointer;
+        transition: all 0.2s;
+        i.mdi {
+            color: $yellow;
+            width: 0px;
+            overflow: hidden;
+            transform: scale(0);
+            transition: all 0.2s;
+        }
+    }
+    input:checked + label {
+        color: $yellow;
+        background: $grey-element;
+        i.mdi {
+            width: 20px;
+            transform: scale(1);
+        }
+    }
+    
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    border-radius: 2px;
+    background: $yellow;
+    color: #000;
+    padding: 0 50px;
+    font-weight: 500;
+    border: none;
+    transition: all 0.2s;
+    &:hover {
+        opacity: 0.8;
+    }
+    
+}
+
+.checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 25px;
+    &:first-of-type {
+        margin-top: 0;
+    }
+    input {
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        background: #000;
+        margin-right: 10px;
+        &:after {
+            display: inline-block;
+            font: normal normal normal 24px/1 "Material Design Icons";
+            content: "\F012C";
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+            color: $yellow;
+            text-rendering: auto;
+            line-height: 24px;
+            -webkit-font-smoothing: antialiased;
+            opacity: 0;
+            transition: all 0.2s;
+        }
+        &:checked:after {
+            opacity: 1;
+        }
+    }
+}
+
+.simplebar-track.simplebar-vertical {
+    width: 20px;
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        background: rgba(white,0.2);
+
+    }
+}
+.simplebar-scrollbar {
+    width: 20px;
+    background: $yellow;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+    opacity: 0;
+    transition: opacity 0s linear;
+}
+
+@media screen and (max-width: 1536px) {
+    .steps-grid {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 60px;
+        padding: 0 50px 0 50px;
+        &__item {
+            align-items: stretch;
+            &_double {
+                grid-row: auto;
+                grid-column: 1 / 2 span;
+            }
+        }
+        &__nav {
+            margin: 0px;
+            align-items: start;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .steps-grid {
+        &__item {
+            flex-direction: column;
+        }
+        &__nav {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+        padding: 0 30px 0 30px;
+        &__item {
+            align-items: stretch;
+            &_double {
+                grid-column: auto;
+            }
+        }
+        &__nav {
+            grid-column: auto;
+            grid-row: auto;
+        }
+        .btn {
+            justify-content: center;
+        }
+    }
+    .simplebar-scrollbar {
+        width: 10px;
+    }
+    .simplebar-track.simplebar-vertical {
+        width: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-header {
+        padding: 15px;
+        margin-bottom: 15px;
+        .logo {
+            height:35px;
+        }
+        &__back {
+            font-size: 12px;
+        }
+    }
+    .steps-grid {
+        padding: 0 15px;
+        gap: 15px 0;
+        &__item {
+            &:before {
+                font-size: 44px;
+            }
+        }
+    }
+    .card {
+        padding: 15px;
+        &__title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+    }
+    .device-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .simplebar-track.simplebar-vertical {
+        right: -20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cols2x {
+        gap: 0 20px;
+    }
+    .device-grid {
+        gap: 25px;
+    }
+}
