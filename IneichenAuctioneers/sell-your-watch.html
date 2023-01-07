@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.0/swiper-bundle.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img src="svg/head-logo.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="container">
+            <div class="land-section land-section_half">
+                <div class="title">Sell your watches</div>
+                <div class="sell-your-watch-note">
+                    <p>
+                        We successfully hold watch auctions since 1973, working hard on the quality of service, watch description and catalogue creation, which allows best returns on sale.
+                    </p>
+                    <div class="c-dropdown">
+                        <a href="" class="c-button c-button_grey c-button_medium c-dropdown__button c-button_icon-right">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            <strong>English</strong>
+                            <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <div class="c-dropdown__list">
+                            <a href="" class="c-dropdown__link">
+                                <span class="flag-icon flag-icon-ch"></span>
+                                English
+                            </a>
+                            <a href="" class="c-dropdown__link">
+                                <span class="flag-icon flag-icon-us"></span>
+                                English
+                            </a>
+                            <a href="" class="c-dropdown__link">
+                                <span class="flag-icon flag-icon-eu"></span>
+                                English
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-button c-button_blue c-button_filled c-button_full">Sell my watch</div>
+            </div>
+            <div class="land-section land-section_half">
+                <div class="title">Sale options</div>
+                <div class="sell-your-watch-options">
+                    <div class="sell-your-watch-options__card">
+                        <img class="sell-your-watch-options__img" src="img/sell-watch/Sale-options-1.png" alt="">
+                        <h3 class="sell-your-watch-options__title brown-text">Consign</h3>
+                        <p>You own the watch, we find the buyer</p>
+                        <ul class="sell-your-watch-options__list">
+                            <li>
+                                <i class="mdi mdi-plus-circle green-text"></i>
+                                Higher profit - sell above the market
+                            </li>
+                            <li>
+                                <i class="mdi mdi-plus-circle green-text"></i>
+                                You estiblish the sale parameters
+                            </li>
+                            <li>
+                                <i class="mdi mdi-plus-circle green-text"></i>
+                                Customised sale solution through multiple channels
+                            </li>
+                            <li>
+                                <i class="mdi mdi-minus-circle-outline red-text"></i>
+                                Higher profit - sell above the market
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sell-your-watch-options__card">
+                        <img class="sell-your-watch-options__img" src="img/sell-watch/Sale-options-2.png" alt="">
+                        <h3 class="sell-your-watch-options__title brown-text">Sell </h3>
+                        <p>You sell, we buy</p>
+                        <ul class="sell-your-watch-options__list">
+                            <li>
+                                <i class="mdi mdi-plus-circle green-text"></i>
+                                Quick sale
+                            </li>
+                            <li>
+                                <i class="mdi mdi-plus-circle green-text"></i>
+                                100% guaranteed return
+                            </li>
+                            <li>
+                                <i class="mdi mdi-plus-circle green-text"></i>
+                                No risk of purchase cancellation once agreed
+                            </li>
+                            <li>
+                                <i class="mdi mdi-minus-circle-outline red-text"></i>
+                                Lower profit than with consignment
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sell-your-watch-options__card">
+                        <img class="sell-your-watch-options__img" src="img/sell-watch/Sale-options-3.png" alt="">
+                        <h3 class="sell-your-watch-options__title brown-text">Why Ineichen? </h3>
+                        <p>The best conditions for the sale of your watches, see for yourself </p>
+                        <h2>
+                            15000+ verfied buyers <br>
+                            Buy-out ratio over 90% <br>
+                            Fair conditions
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="land-section land-section_half">
+                <div class="title">How it works</div>
+                <div class="sell-your-watch-steps">
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num">
+                            <span class="blue-bg">1</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Fill in the form</h3>
+                        <p>Click a button below and fill in the information about your watch</p>
+                    </div>
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num">
+                            <span class="blue-bg">2</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Get a free quote</h3>
+                        <p>Our experts will estimate your watch within 3 days and contact you via phone or email</p>
+                    </div>
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num">
+                            <span class="blue-bg">3</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Send in your watch</h3>
+                        <p>If you agree on the initial quote – send your watch to us for the final estimation</p>
+                    </div>
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num">
+                            <span class="blue-bg">4</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Sign the contract</h3>
+                        <p>When the final price is agreed it will be officially fixed in the contact</p>
+                    </div>
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num no-arr">
+                            <span class="green-bg">5</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Receive payment</h3>
+                        <p>The money will be transferred to your bank account within 3 workdays</p>
+                    </div>
+                </div>
+            </div>
+            <div class="land-section land-section_half">
+                <div class="sell-your-watch-form">
+                    <div class="title">Offer your watches</div>
+                    <div class="sell-watch-form">
+                        <div class="sell-watch-form__left">
+                            <div class="c-select">
+                                <select name="" id="">
+                                    <option value="">Select</option>
+                                    <option value="">Bovet</option>
+                                    <option value="">Bovet</option>
+                                    <option value="">Bovet</option>
+                                </select>
+                                <label class="c-select__label">Brand</label>
+                            </div>
+                            <div class="c-field">
+                                <input type="text" class="c-field__input">
+                                <label class="c-field__label">Model</label>
+                            </div>
+                            <div class="toggle-field">
+                                <strong>Condition</strong>
+                                <input class="toggle-field__input" type="radio" name="service" id="worn">
+                                <label class="toggle-field__label" for="worn">worn</label>
+                                <input class="toggle-field__input" type="radio" name="service" id="unworn">
+                                <label class="toggle-field__label" for="unworn">unworn</label>
+                            </div>
+                            <div class="toggle-field">
+                                <strong>Original packaging</strong>
+                                <input class="toggle-field__input" type="radio" name="service" id="yes">
+                                <label class="toggle-field__label" for="yes">yes</label>
+                                <input class="toggle-field__input" type="radio" name="service" id="no">
+                                <label class="toggle-field__label" for="no">no</label>
+                            </div>
+                            
+                            <div class="c-field">
+                                <input type="text" class="c-field__input">
+                                <label class="c-field__label">Name</label>
+                            </div>
+                            <div class="c-field">
+                                <input type="email" class="c-field__input">
+                                <label class="c-field__label">E-mail</label>
+                            </div>
+                            <div class="c-field">
+                                <input type="text" class="c-field__input">
+                                <label class="c-field__label">Phone</label>
+                            </div>
+                        </div>
+                        <div class="sell-watch-form__right">
+                            <div class="drop-zone">
+                                <label for="DropZone" class="drop-zone__label">
+                                    <i class="mdi mdi-file-image-outline"></i>
+                                    <span>Drop your documents here, or click to browse</span>
+                                    <span class="grey-text">up to 10MB each.</span>
+                                </label>
+                                <input id="DropZone" type="file">
+                            </div>
+                            <div class="upload-files">
+                                <div class="upload-files__item">
+                                    <div class="upload-files__image">
+                                        <img src="img/icons/scan-img.jpg" alt="">
+                                    </div>
+                                    <div class="upload-files__info">
+                                        <span class="upload-files__name">passport.png</span>
+                                        <strong class="upload-files__percent">50%</strong>
+                                        <span class="upload-files__weight">32.2KB</span>
+                                    </div>
+                                    <div class="upload-files__remove">
+                                        <i class="mdi mdi-close"></i>
+                                    </div>
+                                </div>
+                                <div class="upload-files__item">
+                                    <div class="upload-files__image">
+                                        <img src="img/icons/scan-ico.jpg" alt="">
+                                    </div>
+                                    <div class="upload-files__info">
+                                        <span class="upload-files__name">passport.png</span>
+                                        <strong class="upload-files__percent">50%</strong>
+                                        <span class="upload-files__weight">32.2KB</span>
+                                    </div>
+                                    <div class="upload-files__remove">
+                                        <i class="mdi mdi-close"></i>
+                                    </div>
+                                </div>
+                                <div class="upload-files__item">
+                                    <div class="upload-files__image">
+                                        <img src="img/icons/scan-ico.jpg" alt="">
+                                    </div>
+                                    <div class="upload-files__info">
+                                        <span class="upload-files__name">passport.png</span>
+                                        <strong class="upload-files__percent">50%</strong>
+                                        <div class="upload-files__progress"><div style="width:50%"></div></div>
+                                    </div>
+                                    <div class="upload-files__remove">
+                                        <i class="mdi mdi-close"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="sell-watch-form">
+                        <div class="sell-watch-form__left">
+                            <div class="c-select">
+                                <select name="" id="">
+                                    <option value="">Select</option>
+                                    <option value="">Bovet</option>
+                                    <option value="">Bovet</option>
+                                    <option value="">Bovet</option>
+                                </select>
+                                <label class="c-select__label">Brand</label>
+                            </div>
+                            <div class="c-field">
+                                <input type="text" class="c-field__input">
+                                <label class="c-field__label">Model</label>
+                            </div>
+                            <div class="toggle-field">
+                                <strong>Condition</strong>
+                                <input class="toggle-field__input" type="radio" name="service" id="worn">
+                                <label class="toggle-field__label" for="worn">worn</label>
+                                <input class="toggle-field__input" type="radio" name="service" id="unworn">
+                                <label class="toggle-field__label" for="unworn">unworn</label>
+                            </div>
+                            <div class="toggle-field">
+                                <strong>Original packaging</strong>
+                                <input class="toggle-field__input" type="radio" name="service" id="yes">
+                                <label class="toggle-field__label" for="yes">yes</label>
+                                <input class="toggle-field__input" type="radio" name="service" id="no">
+                                <label class="toggle-field__label" for="no">no</label>
+                            </div>
+                        </div>
+                        <div class="sell-watch-form__right">
+                            <div class="drop-zone">
+                                <label for="DropZone" class="drop-zone__label">
+                                    <i class="mdi mdi-file-image-outline"></i>
+                                    <span>Drop your documents here, or click to browse</span>
+                                    <span class="grey-text">up to 10MB each.</span>
+                                </label>
+                                <input id="DropZone" type="file">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="" class="sell-your-watch-form__add-watch">+ Add another watches</a>
+                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Continue</a>
+                </div>
+            </div>
+            <div class="land-section land-section_half">
+                <div class="sell-your-watch-faq">
+                    <div>
+                        <div class="title">FAQ</div>
+                        <div class="faq">
+                            <h3 class="faq__group-title">Selling options</h3>
+                            <div class="faq__list">
+                                <a href="" class="faq__title">
+                                    What are the advantages of working with Ineichen Zurich?
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="faq__content">
+                                    <article class="article-text">
+                                        <p>We have been successfully holding watch auctions since 1973 and working hard on the
+                                            quality of our service, watch descriptions and catalogues, which allows best returns on
+                                            each sale. </p>
+                                        <p>It is in our interest to sell your collection at the highest price possible since we
+                                            profit from the buyer’s commission on the hammer price. </p>
+                                        <p>Our managers are working closely with sellers to make sure that the process is
+                                            transparent at every stage. </p>
+                                    </article>
+                                </div>
+                                <a href="" class="faq__title">
+                                    What are the advantages of working with Ineichen Zurich?
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="faq__content">
+                                    <article class="article-text">
+                                        <p>We have been successfully holding watch auctions since 1973 and working hard on the
+                                            quality of our service, watch descriptions and catalogues, which allows best returns on
+                                            each sale. </p>
+                                        <p>It is in our interest to sell your collection at the highest price possible since we
+                                            profit from the buyer’s commission on the hammer price. </p>
+                                        <p>Our managers are working closely with sellers to make sure that the process is
+                                            transparent at every stage. </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <h3 class="faq__group-title">Pricing & timing</h3>
+                            <div class="faq__list">
+                                <a href="" class="faq__title">
+                                    What are the advantages of working with Ineichen Zurich?
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="faq__content">
+                                    <article class="article-text">
+                                        <p>We have been successfully holding watch auctions since 1973 and working hard on the
+                                            quality of our service, watch descriptions and catalogues, which allows best returns on
+                                            each sale. </p>
+                                        <p>It is in our interest to sell your collection at the highest price possible since we
+                                            profit from the buyer’s commission on the hammer price. </p>
+                                        <p>Our managers are working closely with sellers to make sure that the process is
+                                            transparent at every stage. </p>
+                                    </article>
+                                </div>
+                                <a href="" class="faq__title">
+                                    What are the advantages of working with Ineichen Zurich?
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="faq__content">
+                                    <article class="article-text">
+                                        <p>We have been successfully holding watch auctions since 1973 and working hard on the
+                                            quality of our service, watch descriptions and catalogues, which allows best returns on
+                                            each sale. </p>
+                                        <p>It is in our interest to sell your collection at the highest price possible since we
+                                            profit from the buyer’s commission on the hammer price. </p>
+                                        <p>Our managers are working closely with sellers to make sure that the process is
+                                            transparent at every stage. </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <h3 class="faq__group-title">The Sale, Documentation and Taxes</h3>
+                            <div class="faq__list">
+                                <a href="" class="faq__title">
+                                    What are the advantages of working with Ineichen Zurich?
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="faq__content">
+                                    <article class="article-text">
+                                        <p>We have been successfully holding watch auctions since 1973 and working hard on the
+                                            quality of our service, watch descriptions and catalogues, which allows best returns on
+                                            each sale. </p>
+                                        <p>It is in our interest to sell your collection at the highest price possible since we
+                                            profit from the buyer’s commission on the hammer price. </p>
+                                        <p>Our managers are working closely with sellers to make sure that the process is
+                                            transparent at every stage. </p>
+                                    </article>
+                                </div>
+                                <a href="" class="faq__title">
+                                    What are the advantages of working with Ineichen Zurich?
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="faq__content">
+                                    <article class="article-text">
+                                        <p>We have been successfully holding watch auctions since 1973 and working hard on the
+                                            quality of our service, watch descriptions and catalogues, which allows best returns on
+                                            each sale. </p>
+                                        <p>It is in our interest to sell your collection at the highest price possible since we
+                                            profit from the buyer’s commission on the hammer price. </p>
+                                        <p>Our managers are working closely with sellers to make sure that the process is
+                                            transparent at every stage. </p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="title">Consigment highlights</div>
+                        <div class="lots-carusel swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <h3>Dates & Calendars 2022</h3>
+                                    <div class="lot-item">
+                                        <div class="lot-item__body">
+                                            <a href="" class="lot-item__image">
+                                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="lot-item__info">
+                                                <h3 class="lot-item__brand">Rolex</h3>
+                                                <h2 class="lot-item__name">
+                                                    <span>Casio alert</span>
+                                                </h2>
+                                                <span class="lot-item__link">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </span>
+                                            </a>
+                                            <div class="lot-item__count">1</div>
+                                            <button class="lot-item__favorite">
+                                                <span>
+                                                    <i class="mdi mdi-plus"></i>
+                                                    Add to Favorites
+                                                </span>
+                                                <i class="mdi mdi-heart"></i>
+                                            </button>
+                                        </div>
+                                        <div class="lot-item__price">
+                                            <div class="lot-item__price-range">
+                                                <span>Estimate:</span>
+                                                <strong>$4,000 - $6,000</strong>
+                                            </div>
+                                            <div class="lot-item__price-range">
+                                                <span>Current bid:</span>
+                                                <strong>CHF 6,000</strong>
+                                            </div>
+                                            <div class="lot-item__bids">
+                                                <span>Total bids:</span>
+                                                <strong>5 Bid(s)</strong>
+                                            </div>
+                                            <div class="lot-item__price-now">
+                                                <span>Fixed price:</span>
+                                                <strong class="brown-text">CHF 150,000</strong>
+                                            </div>
+                                            <div class="lot-item__closing">
+                                                <span>Closes in</span>
+                                                <strong>3 day(s)</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3>Dates & Calendars 2022</h3>
+                                    <div class="lot-item">
+                                        <div class="lot-item__body">
+                                            <a href="" class="lot-item__image">
+                                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="lot-item__info">
+                                                <h3 class="lot-item__brand">Rolex</h3>
+                                                <h2 class="lot-item__name">
+                                                    <span>Casio alert</span>
+                                                </h2>
+                                                <span class="lot-item__link">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </span>
+                                            </a>
+                                            <div class="lot-item__count">1</div>
+                                            <button class="lot-item__favorite">
+                                                <span>
+                                                    <i class="mdi mdi-plus"></i>
+                                                    Add to Favorites
+                                                </span>
+                                                <i class="mdi mdi-heart"></i>
+                                            </button>
+                                        </div>
+                                        <div class="lot-item__price">
+                                            <div class="lot-item__price-range">
+                                                <span>Estimate:</span>
+                                                <strong>$4,000 - $6,000</strong>
+                                            </div>
+                                            <div class="lot-item__price-range">
+                                                <span>Current bid:</span>
+                                                <strong>CHF 6,000</strong>
+                                            </div>
+                                            <div class="lot-item__bids">
+                                                <span>Total bids:</span>
+                                                <strong>5 Bid(s)</strong>
+                                            </div>
+                                            <div class="lot-item__price-now">
+                                                <span>Fixed price:</span>
+                                                <strong class="brown-text">CHF 150,000</strong>
+                                            </div>
+                                            <div class="lot-item__closing">
+                                                <span>Closes in</span>
+                                                <strong>3 day(s)</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <h3>Dates & Calendars 2022</h3>
+                                    <div class="lot-item">
+                                        <div class="lot-item__body">
+                                            <a href="" class="lot-item__image">
+                                                <img src="img/auctions/lot-thumb.jpg" alt="">
+                                            </a>
+                                            <a href="#" class="lot-item__info">
+                                                <h3 class="lot-item__brand">Rolex</h3>
+                                                <h2 class="lot-item__name">
+                                                    <span>Casio alert</span>
+                                                </h2>
+                                                <span class="lot-item__link">
+                                                    <i class="mdi mdi-chevron-right"></i>
+                                                </span>
+                                            </a>
+                                            <div class="lot-item__count">1</div>
+                                            <button class="lot-item__favorite">
+                                                <span>
+                                                    <i class="mdi mdi-plus"></i>
+                                                    Add to Favorites
+                                                </span>
+                                                <i class="mdi mdi-heart"></i>
+                                            </button>
+                                        </div>
+                                        <div class="lot-item__price">
+                                            <div class="lot-item__price-range">
+                                                <span>Estimate:</span>
+                                                <strong>$4,000 - $6,000</strong>
+                                            </div>
+                                            <div class="lot-item__price-range">
+                                                <span>Current bid:</span>
+                                                <strong>CHF 6,000</strong>
+                                            </div>
+                                            <div class="lot-item__bids">
+                                                <span>Total bids:</span>
+                                                <strong>5 Bid(s)</strong>
+                                            </div>
+                                            <div class="lot-item__price-now">
+                                                <span>Fixed price:</span>
+                                                <strong class="brown-text">CHF 150,000</strong>
+                                            </div>
+                                            <div class="lot-item__closing">
+                                                <span>Closes in</span>
+                                                <strong>3 day(s)</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lots-carusel-nav">
+                                <div class="lots-carusel-nav__prev">
+                                    <i class="mdi mdi-arrow-left"></i>
+                                    Prev
+                                </div>
+                                <div class="lots-carusel-nav__next">
+                                    Next
+                                    <i class="mdi mdi-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top-line">
+                <div class="footer__nav">
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Sell Watches</strong>
+                        <a class="footer__nav-link" href="">Auction</a>
+                        <a class="footer__nav-link" href="">Consign</a>
+                        <a class="footer__nav-link" href="">Direct sale </a>
+                        <a class="footer__nav-link" href="">Free Appraisal</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Corporate</strong>
+                        <a class="footer__nav-link" href="">About Ineichen</a>
+                        <a class="footer__nav-link" href="">Ineichen Auctioneer </a>
+                        <a class="footer__nav-link" href="">Terms & Conditions </a>
+                        <a class="footer__nav-link" href="">Cookie policy </a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Support</strong>
+                        <a class="footer__nav-link" href="">FAQ</a>
+                        <a class="footer__nav-link" href="">T&C</a>
+                        <a class="footer__nav-link" href="">User protection</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Social Channels</strong>
+                        <a class="footer__nav-link" href="">Instagram</a>
+                        <a class="footer__nav-link" href="">Youtube</a>
+                        <a class="footer__nav-link" href="">Facebook</a>
+                        <a class="footer__nav-link" href="">Telegram</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    +41 44 298 11 44 <br>
+                    info@ineichen.com <br>
+                    Stadthausquai 11-13, Zürich <br>
+                    Tue-Fri - 10:00-17:30 Sat - 10:00-16:00 
+                </div>
+            </div>
+            <div class="footer__bottom-line">
+                <a class="footer__logo" href="">
+                    <img src="svg/footer-logo.svg" alt="">
+                </a>
+                <a class="footer__lang" href="">
+                    English <i class="mdi mdi-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var lotscarusel = new Swiper(".lots-carusel", {
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: '.lots-carusel-nav__next',
+                prevEl: '.lots-carusel-nav__prev',
+            },
+        });
+    </script>
+</body>
+</html>

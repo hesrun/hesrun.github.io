@@ -82,7 +82,7 @@ select:-webkit-autofill:focus {
 }
 
 .green-text {
-  color: #529959 !important;
+  color: #2DAB0E !important;
 }
 
 .red-text {
@@ -107,6 +107,34 @@ select:-webkit-autofill:focus {
 
 .yellow-text {
   color: #ffeb3b !important;
+}
+
+.green-bg {
+  background-color: #2DAB0E !important;
+}
+
+.red-bg {
+  background-color: #D33C3C !important;
+}
+
+.blue-bg {
+  background-color: #1C2473 !important;
+}
+
+.grey-bg {
+  background-color: #676767 !important;
+}
+
+.brown-bg {
+  background-color: #BD9E5E !important;
+}
+
+.orange-bg {
+  background-color: #ff9941 !important;
+}
+
+.yellow-bg {
+  background-color: #ffeb3b !important;
 }
 
 .text-center {
@@ -351,6 +379,9 @@ select:-webkit-autofill:focus {
   padding: 0 30px;
   transition: 0.2s all;
 }
+.c-button .flag-icon {
+  margin-right: 10px;
+}
 .c-button i.mdi {
   font-size: 18px;
 }
@@ -459,20 +490,20 @@ select:-webkit-autofill:focus {
   border-color: #dbc3a7;
 }
 .c-button_green {
-  color: #5DA651;
-  border: 2px #5DA651 solid;
+  color: #2DAB0E;
+  border: 2px #2DAB0E solid;
 }
 .c-button_green:hover {
-  background: #5DA651;
+  background: #2DAB0E;
   color: #fff;
 }
 .c-button_green.c-button_filled {
   color: #fff;
-  background: #5DA651;
+  background: #2DAB0E;
 }
 .c-button_green.c-button_filled:hover {
-  background: #539549;
-  border-color: #539549;
+  background: #27930c;
+  border-color: #27930c;
 }
 .c-button_pink {
   color: #e91e63;
@@ -653,6 +684,7 @@ select:-webkit-autofill:focus {
   border-radius: 0px;
   font-size: 16px;
   outline: none;
+  background: none;
 }
 .c-field textarea.c-field__input {
   resize: vertical;
@@ -680,7 +712,7 @@ select:-webkit-autofill:focus {
   color: #D33C3C;
 }
 .c-field__note_green {
-  color: #529959;
+  color: #2DAB0E;
 }
 .c-field + .c-button {
   margin-top: 80px;
@@ -718,6 +750,7 @@ select:-webkit-autofill:focus {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
+  background: white;
 }
 .toggle-field__label:hover {
   background: #E1E1E1;
@@ -733,7 +766,7 @@ select:-webkit-autofill:focus {
   color: #D33C3C;
 }
 .toggle-field__note_green {
-  color: #529959;
+  color: #2DAB0E;
 }
 
 .badge {
@@ -807,11 +840,11 @@ select:-webkit-autofill:focus {
   white-space: normal;
   position: absolute;
   left: 0px;
-  right: 0px;
+  min-width: 100%;
   border: 1px #E1E1E1 solid;
   border-radius: 12px;
   background: #fff;
-  padding: 15px 5px 15px 15px;
+  padding: 15px 15px 15px 15px;
   z-index: 2;
 }
 .c-dropdown__list_right {
@@ -844,7 +877,8 @@ select:-webkit-autofill:focus {
   background: transparent;
 }
 .c-dropdown__link {
-  display: block;
+  display: flex;
+  align-items: center;
   line-height: 20px;
   color: #000;
   padding: 13px 24px;
@@ -852,6 +886,10 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   border-radius: 8px;
   transition: all 0.3s;
+}
+.c-dropdown__link .flag-icon {
+  flex: 0 0 auto;
+  margin: 0 10px 0 0;
 }
 .c-dropdown__link:hover {
   background: rgba(103, 103, 103, 0.05);
@@ -904,6 +942,7 @@ select:-webkit-autofill:focus {
   border: none;
   border-bottom: 2px #DFDFDF solid;
   border-radius: 0px;
+  background: none;
 }
 .c-select .select2-container--default .select2-selection--single .select2-selection__rendered {
   font-size: 16px;
@@ -1241,7 +1280,7 @@ select:-webkit-autofill:focus {
   color: #fff;
 }
 .notice-list__item_green {
-  background: #529959;
+  background: #2DAB0E;
   color: #fff;
 }
 .notice-list__item_new {
@@ -3469,7 +3508,7 @@ select:-webkit-autofill:focus {
   color: #fff;
 }
 .lot-item-small__status_green {
-  background: #529959;
+  background: #2DAB0E;
   color: #fff;
 }
 .lot-item-small__num {
@@ -4288,43 +4327,41 @@ select:-webkit-autofill:focus {
   line-height: 1.5;
 }
 
-.faq__list {
-  border: 1px rgba(0, 0, 0, 0.1) solid;
-  border-radius: 12px;
-  overflow: hidden;
+.faq__group-title {
+  font-weight: 500;
+  color: #BD9E5E;
+  border-bottom: 2px #BD9E5E solid;
+  padding: 45px 0 20px;
+}
+.faq__group-title:first-child {
+  padding-top: 0;
 }
 .faq__title {
   display: flex;
   align-items: center;
-  padding: 30px;
+  padding: 15px;
   text-decoration: none;
   font-weight: 500;
   color: inherit;
-  border-top: 1px rgba(0, 0, 0, 0.1) solid;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
   transition: all 0.3s;
-}
-.faq__title:first-child {
-  border-top: none;
 }
 .faq__title i.mdi {
   font-size: 24px;
   margin-left: auto;
 }
 .faq__title:hover {
-  background: #BD9E5E;
-  color: #fff;
+  color: #BD9E5E;
 }
 .faq__title_active {
-  background: #BD9E5E;
-  color: #fff;
+  color: #BD9E5E;
 }
 .faq__title_active i.mdi {
   transform: rotate(-180deg);
 }
 .faq__content {
-  padding: 30px;
+  padding: 15px;
   display: none;
-  border-top: 1px #E1E1E1 solid;
 }
 .faq .article-text {
   max-width: 100%;
@@ -4575,6 +4612,158 @@ select:-webkit-autofill:focus {
   transform: scale(1.5);
   opacity: 0;
   pointer-events: none;
+}
+
+/* ----------------------------- sell-your-watch ---------------------------- */
+.sell-your-watch-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+.sell-your-watch-note p {
+  max-width: 700px;
+  line-height: 1.2;
+}
+.sell-your-watch-note + .c-button {
+  max-width: 700px;
+}
+
+.sell-your-watch-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vw;
+}
+.sell-your-watch-options p {
+  font-weight: 500;
+}
+.sell-your-watch-options h2 {
+  margin-top: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.sell-your-watch-options__img {
+  width: 100%;
+}
+.sell-your-watch-options__title {
+  margin: 15px 0;
+  font-weight: 500;
+}
+.sell-your-watch-options__list {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
+  gap: 8px;
+}
+.sell-your-watch-options__list li {
+  display: flex;
+  line-height: 20px;
+}
+.sell-your-watch-options__list .mdi {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.sell-your-watch-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+.sell-your-watch-steps__num {
+  position: relative;
+  background: url(../img/sell-watch/Arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: calc(100% - 70px);
+  margin-right: 30px;
+}
+.sell-your-watch-steps__num span {
+  font-weight: 500;
+  font-family: "GT America Extended", sans-serif;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 50%;
+  color: #fff;
+}
+.sell-your-watch-steps__num.no-arr {
+  background: none;
+}
+.sell-your-watch-steps__title {
+  font-weight: 500;
+  margin: 30px 0 20px;
+}
+.sell-your-watch-steps p {
+  line-height: 1.3;
+}
+
+.sell-your-watch-form {
+  padding: 50px;
+  background: #FBFBFB;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+.sell-your-watch-form .sell-watch-form {
+  margin-bottom: 30px;
+}
+.sell-your-watch-form__add-watch {
+  display: inline-block;
+  margin: 30px 0 60px 0;
+  text-decoration: none;
+  font-weight: 500;
+}
+.sell-your-watch-form hr {
+  margin: 60px 0;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.sell-your-watch-faq {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 5vw;
+}
+
+.lots-carusel {
+  max-width: 350px;
+  margin-left: 0;
+  margin-right: auto;
+}
+.lots-carusel .swiper-slide > h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.lots-carusel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.lots-carusel-nav__prev, .lots-carusel-nav__next {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 15px;
+  border-radius: 10px;
+  border: 1px #e1e1e1 solid;
+  cursor: pointer;
+}
+.lots-carusel-nav__prev:hover, .lots-carusel-nav__next:hover {
+  background: #1C2473;
+  border-color: #1C2473;
+  color: #fff;
+}
+.lots-carusel-nav__prev i.mdi {
+  margin-right: 10px;
+}
+.lots-carusel-nav__next i.mdi {
+  margin-left: 10px;
 }
 
 /* -------------------------------- page-cap -------------------------------- */
@@ -5189,7 +5378,7 @@ select:-webkit-autofill:focus {
   border-radius: 50%;
 }
 .live-bis-list__user_online:before {
-  background: #529959;
+  background: #2DAB0E;
 }
 .live-bis-list__user_offline:before {
   background: #D33C3C;
