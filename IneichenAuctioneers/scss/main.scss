@@ -2742,7 +2742,7 @@
         margin: 0 auto;
     }
     &__right {
-        img {
+        > img {
             width: 100%;
             max-width: 100%;
         }
@@ -3257,6 +3257,7 @@
         margin-top: 30px;
         font-weight: 500;
         line-height: 1.5;
+        font-size: 18px;
     }
     &__img {
         width: 100%;
@@ -3322,6 +3323,7 @@
     padding: 50px;
     background: #FBFBFB;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     .sell-watch-form {
         margin-bottom: 30px;
@@ -3484,15 +3486,15 @@
 .drop-zone {
     margin-bottom: 50px;
     &__label {
+        line-height: 1.5;
         border: 2px $grey-line dashed;
-        border-radius: 12px;
+        background: #fff;
         display: grid;
-        grid-row-gap: 20px;
         justify-items: center;
         align-items: center;
         text-align: center;
         font-size: 13px;
-        padding: 11vh 15px;
+        padding: 5vw 15px;
         cursor: pointer;
         position: relative;
         transition: all 0.3s;
@@ -3505,6 +3507,10 @@
             background: rgba($blue-bg, 0.05);
         }
     }
+    &__empty {
+        max-width: 100px;
+        margin-bottom: 30px;
+    }
     input {
         left: 0px;
         top: 0px;
@@ -3512,10 +3518,6 @@
         visibility: hidden;
         opacity: 0;
         position: absolute;
-    }
-    i.mdi {
-        color: $blue-bg;
-        font-size: 28px;
     }
     
 }

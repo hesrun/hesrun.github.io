@@ -824,13 +824,24 @@
             },
         });
         var newseries = new Swiper(".new-series-carusel", {
-            slidesPerView: 4,
             spaceBetween: 30,
             loop: true,
             navigation: {
                 nextEl: ".swiper-next.first",
                 prevEl: ".swiper-prev.first",
-            }
+            },
+            breakpoints: {
+                0: {
+                    spaceBetween: 15,
+                    slidesPerView: 2
+                },
+                640: {
+                    slidesPerView: 3
+                },
+                900: {
+                    slidesPerView: 4
+                }
+            },
         });
         var newitems = new Swiper(".new-items-carusel", {
             slidesPerView: 6,
@@ -839,7 +850,19 @@
             navigation: {
                 nextEl: ".swiper-next.second",
                 prevEl: ".swiper-prev.second",
-            }
+            },
+            breakpoints: {
+                0: {
+                    spaceBetween: 15,
+                    slidesPerView: 2
+                },
+                640: {
+                    slidesPerView: 3
+                },
+                900: {
+                    slidesPerView: 5
+                }
+            },
         });
     </script>
 </body>

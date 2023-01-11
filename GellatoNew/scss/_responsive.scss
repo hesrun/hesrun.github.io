@@ -1,0 +1,227 @@
+@media screen and (max-width: 900px) {
+    /* --------------------------------- landing -------------------------------- */
+    .content {
+        padding-bottom: 30px;
+        &_aside {
+            display: block;
+        }
+    }
+    /* --------------------------------- header --------------------------------- */
+    .main-header {
+        display: none;
+    }
+    /* --------------------------------- banner --------------------------------- */
+    .main-banner {
+        margin-top: 0px;
+        .swiper-slide {
+            height: 50vh;
+        }
+    }
+    /* -------------------------------- new items ------------------------------- */
+    .land-new-items {
+        padding: 0 15px;
+        .swiper-next,
+        .swiper-prev {
+            right: -30px;
+            background: none;
+            &.first {
+                top: 100px;
+            }
+            &.second {
+                top:100px;
+            }
+        }
+        .swiper-prev {
+            left: -30px;
+        }
+    }
+    /* ------------------------------- sales-grid ------------------------------- */
+    .sales-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px
+    }
+    /* ---------------------------- featured-category --------------------------- */
+    .featured-category {
+        grid-template-columns: repeat(3, 80vw);
+        overflow: auto;
+        @include scrollbars(3px, $violet, white);
+    }
+    /* ------------------------------- sales-tips ------------------------------- */
+    .sales-tips {
+        grid-template-columns: repeat(3, 80vw);
+        overflow: auto;
+        @include scrollbars(3px, $violet, white);
+    }
+    /* ----------------------------- land-text-block ---------------------------- */
+    .land-text-block {
+        padding: 30px 15px;
+        &__cols {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
+    /* ---------------------------- blog-and-masters ---------------------------- */
+    .blog-and-masters {
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+    /* -------------------------------- side-nav -------------------------------- */
+    .side-nav-list {
+        display: none;
+    }
+    /* --------------------------------- catalog -------------------------------- */
+    .catalog-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+    /* ------------------------------ product ------------------------------ */
+    .product {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70px auto auto;
+        grid-gap: 30px 30px;
+        &__params {
+            grid-column: 1;
+        }
+        &__cart {
+            justify-content: center;
+        }
+        &__price {
+            text-align: center;
+        }
+    }
+    /* ---------------------------------- blog ---------------------------------- */
+    .blog-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* --------------------------------- footer --------------------------------- */
+    .main-footer {
+        flex-direction: column;
+        padding: 40px 0;
+        gap: 0px;
+        &__copy {
+            order: 4;
+            margin-top: -30px;
+        }
+        &__contacts {
+            text-align: right;
+        }
+        &__right {
+            text-align: center;
+        }
+        &__socials {
+            display: inline-flex;
+            justify-content: center;
+            border: 2px #fff solid;
+            border-radius: 10px;
+            padding: 10px 30px;
+            margin: 30px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .land-section {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    /* -------------------------------- new items ------------------------------- */
+    .land-new-items {
+        .swiper-next,
+        .swiper-prev {
+            &.first {
+                top: 70px;
+            }
+            &.second {
+                top:70px;
+            }
+        }
+        .swiper-prev {
+            left: -30px;
+        }
+    }
+    /* ---------------------------- blog-and-masters ---------------------------- */
+    .blog-and-masters {
+        &__grid {
+            grid-template-columns: 1fr;
+            grid-gap: 15px;
+        }
+    }
+    /* --------------------------------- catalog -------------------------------- */
+    .catalog-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px 15px;
+    }
+    .filters {
+        padding: 30px 15px;
+        &__blocks {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+    /* ------------------------------ product ------------------------------ */
+    .product {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 30px 30px;
+        &__image {
+            grid-row: 1;
+            grid-column: 2 span;
+        }
+        &__params {
+            grid-column: 2 span;
+        }
+        &__cart {
+            justify-content: center;
+        }
+        &__price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            b {
+                font-size: 22px;
+            }
+        }
+        &__shipping {
+            grid-column: 2 span;
+            padding: 15px;
+        }
+        &__shipping-item-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        &__shipping-item-info {
+            padding-top: 0px;
+        }
+        &__cart-form {
+            width: 150px;
+            height: 50px;
+            .fa-basket-shopping {
+                top: -15px;
+                margin-left: -15px;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+            }
+        }
+        &__cart-btn {
+            font-size: 16px;
+        }
+        &__favorite {
+            font-size: 16px;
+        }
+        &__tabs-list-link {
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+        &__tabs-content {
+            padding: 15px;
+        }
+    }
+    /* ---------------------------------- blog ---------------------------------- */
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
