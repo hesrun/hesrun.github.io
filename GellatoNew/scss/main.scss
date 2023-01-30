@@ -1135,8 +1135,9 @@ h1,h2,h3,h4,h5 {
             line-height: 35px;
             font-size: 18px;
             transition: all 0.3s;
+            background: #efefef;
             &:hover {
-                background: $grey-text;
+                background: $grey-line;
             }
         }
     }
@@ -1262,6 +1263,7 @@ h1,h2,h3,h4,h5 {
     padding: 30px 15px;
     text-align: center;
     font-weight: 500;
+    line-height: 1.4;
     position: relative;
     h2 {
         margin: 0;
@@ -1358,37 +1360,36 @@ h1,h2,h3,h4,h5 {
     &__counter {
         width: 150px;
     }
-}
-.product-table-item {
-    display: inline-flex;
-    align-items: center;
-    color: inherit;
-    text-decoration: none;
-    &:hover {
-        color: $violet;
-    }
     &__image {
-        flex: 0 0 auto;
+        width: 130px;
+    }
+    &__image-thumb {
+        display: block;
         border: 1px $grey-line solid;
         width: 100px;
         height: 100px;
-        margin-right: 50px;
         img {
             width: 100%;
             vertical-align: middle;
             object-fit: cover;
         }
     }
-    &__name {
-        font-size: 15px;
-        font-weight: 500;
-        margin: 0 0 5px 0;
-    }
-    &__model {
-        font-size: 13px;
-        color: $grey-text;
+    &__info {
+        h5 {
+            font-size: 15px;
+            font-weight: 500;
+            margin: 0 0 5px 0;
+            a {
+                text-decoration: none;
+            }
+        }
+        span {
+            font-size: 13px;
+            color: $grey-text;
+        }
     }
 }
+
 .gradient-box {
     border-radius: 10px;
     padding: 60px;
@@ -1405,7 +1406,7 @@ h1,h2,h3,h4,h5 {
     &__contacts {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px;
+        gap: 15px 30px;
     }
     &__adress-line {
         position: relative;
@@ -1474,7 +1475,7 @@ h1,h2,h3,h4,h5 {
     align-items: center;
     justify-content: space-evenly;
     background: url(../img/account/subscribes-nav-bg.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
     height: 120px;
@@ -1553,6 +1554,7 @@ h1,h2,h3,h4,h5 {
         top: 100%;
         left: 0px;
         width: 100%;
+        z-index: 1;
     }
     &__item-brach {
         font-size: 12px;
@@ -1812,6 +1814,64 @@ h1,h2,h3,h4,h5 {
     }
 
 }
+/* ---------------------------------- sign ---------------------------------- */
+.signin-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    &__links {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    &__subscribe {
+        align-self: center;
+        display: flex;
+        .g-toggle {
+            margin: 0;
+        }
+    }
+} 
+.ads-partners {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px 30px;
+    &__item {
+        color: #aaa;
+        text-decoration: none;
+    }
+    &__image {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65px;
+        text-align: center;
+        border: 4px #fff solid;
+        overflow: hidden;
+        border-radius: 3px;
+        background-color: #fff;
+        box-shadow: 0 2px 2px 0px #ddd;
+        &:hover {
+            background: transparent;
+            box-shadow: 0 2px 2px 0px #ddd, 0 2px 2px 0px #ddd inset;
+        }
+        .pravda {
+            position: absolute;
+            bottom: -55px;
+            right: -50px;
+        }
+    }
+    span {
+        margin-top: 5px;
+        text-align: center;
+        font-size: 12px;
+        display: block;
+    }
+}
+.captcha {
+    margin-top: 30px;
+}
 /* --------------------------------- article -------------------------------- */
 article {
     line-height: 1.2;
@@ -1952,6 +2012,7 @@ footer {
 .g-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     min-height: 50px;
@@ -1986,6 +2047,7 @@ footer {
     }
 }
 .g-input {
+    margin-bottom: 15px;
     input {
         min-height: 50px;
         border-radius: 30px;
@@ -1997,7 +2059,65 @@ footer {
         font-size: 16px;
     }
 }
-
+.g-toggle {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    input {
+        display:none;
+        &:checked + .g-toggle__icon::before {
+            opacity: 1;
+        }
+    }
+    &__icon {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        flex: 0 0 auto;
+        background: #fff;
+        &::before {
+            content: "";
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: $violet;
+            margin: auto;
+            opacity: 0;
+        }
+    }
+    &__text {
+        line-height: 20px;
+    } 
+}
+.blocker {
+    z-index: 100;
+}
+.modal {
+    background: #f6f6f6;
+    max-width: 930px;
+    padding: 60px 200px;
+    &__title {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        padding-bottom: 15px;
+    }
+    &__body {
+        padding: 30px 0;
+    }
+    &__footer {
+        padding-top: 15px;
+    }
+    a.close-modal {
+        right: 0px;
+        top: 0px;
+        width: 50px;
+        height: 50px;
+        border-radius: 0px;
+        background-image: url(../img/other/close-modal.png);
+    }
+}
 /* --------------------------------- mixins --------------------------------- */
 @mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
     // For Google Chrome

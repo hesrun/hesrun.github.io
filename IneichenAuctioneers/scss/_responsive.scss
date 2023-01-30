@@ -423,6 +423,10 @@
             grid-column: 1;
         }
     }
+    .ineichen-statistic {
+        grid-template-columns: 1fr;
+        gap: 30px 15px;
+    }
     /* ---------------------------------- blog ---------------------------------- */
     .blog-grid {
         grid-template-columns: 1fr 1fr;
@@ -1359,7 +1363,30 @@
             padding: 10px 15px 0;
         }
     }
-
+    .ineichen-statistic {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        &__btns {
+            grid-template-columns: auto auto;
+            gap: 15px;
+        }
+        &__counts {
+            grid-template-columns: 1fr;
+            align-items: center;
+            padding: 10px 0;
+            div {
+                display: grid;
+                grid-template-columns: 4fr 5fr;
+                padding: 5px 15px; 
+                text-align: right;
+                text-align: left;
+                gap: 15px;
+                b {
+                    text-align: right;
+                }
+            }
+        }
+    }
     /* ------------------------------ auctions-list ----------------------------- */
     .auctions-filter {
         &__buttons {

@@ -1997,6 +1997,33 @@ select:-webkit-autofill:focus {
   margin-top: 15px;
 }
 
+.ineichen-statistic {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 30px;
+}
+.ineichen-statistic__btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.ineichen-statistic__counts {
+  min-height: 50px;
+  border: 1px #e1e1e1 solid;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.ineichen-statistic__counts b {
+  font-weight: 700;
+}
+.ineichen-statistic__counts div {
+  padding: 0 30px;
+}
+
 .timed-auction-lots .owl-dots {
   display: flex;
   margin-top: 15px !important;
@@ -3565,16 +3592,11 @@ select:-webkit-autofill:focus {
   grid-row-gap: 15px;
 }
 .product__video {
-  padding-top: 100%;
   position: relative;
 }
 .product__video iframe,
 .product__video video {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
 }
 .product__play-video-btn {
   position: absolute;
@@ -4093,12 +4115,12 @@ select:-webkit-autofill:focus {
   background: #382323;
   color: #fff;
 }
-.land-section_clear {
-  padding-bottom: 0px;
-  border-top: none;
-}
 .land-section_half {
   padding: 50px 0;
+}
+.land-section_clear {
+  padding-bottom: 0px !important;
+  border-top: none;
 }
 
 .section-divider {
@@ -4650,6 +4672,7 @@ select:-webkit-autofill:focus {
 }
 .sell-your-watch-options__img {
   width: 100%;
+  border-radius: 12px;
 }
 .sell-your-watch-options__title {
   margin: 20px 0;
@@ -7195,6 +7218,10 @@ select:-webkit-autofill:focus {
   .auction-teaser_single {
     grid-column: 1;
   }
+  .ineichen-statistic {
+    grid-template-columns: 1fr;
+    gap: 30px 15px;
+  }
   /* ---------------------------------- blog ---------------------------------- */
   .blog-grid {
     grid-template-columns: 1fr 1fr;
@@ -8024,6 +8051,30 @@ select:-webkit-autofill:focus {
   }
   .world-records__item {
     padding: 10px 15px 0;
+  }
+  .ineichen-statistic {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .ineichen-statistic__btns {
+    grid-template-columns: auto auto;
+    gap: 15px;
+  }
+  .ineichen-statistic__counts {
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .ineichen-statistic__counts div {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    padding: 5px 15px;
+    text-align: right;
+    text-align: left;
+    gap: 15px;
+  }
+  .ineichen-statistic__counts div b {
+    text-align: right;
   }
   /* ------------------------------ auctions-list ----------------------------- */
   .auctions-filter__buttons {

@@ -543,6 +543,32 @@
         }
     }
 }
+.ineichen-statistic {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+    &__btns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    &__counts {
+        min-height: 50px;
+        border: 1px rgba($grey-line, 1) solid;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        font-size: 15px;
+        white-space: nowrap;
+        b {
+            font-weight: 700;
+        }
+        div {
+            padding: 0 30px;
+        }
+    }
+}
 .timed-auction-lots {
     .owl-dots {
         display: flex;
@@ -2155,15 +2181,15 @@
         grid-row-gap: 15px;
     }
     &__video {
-        padding-top: 100%;
+        // padding-top: 100%;
         position: relative;
         iframe,
         video {
-            position: absolute;
+            // position: absolute;
             width: 100%;
-            height: 100%;
-            left: 0px;
-            top: 0px;
+            // height: 100%;
+            // left: 0px;
+            // top: 0px;
         }
     }
     &__play-video-btn {
@@ -2701,12 +2727,12 @@
         background: $dark-brown-bg;
         color: #fff;
     }
-    &_clear {
-        padding-bottom: 0px;
-        border-top: none;
-    }
     &_half {
         padding: 50px 0;
+    }
+    &_clear {
+        padding-bottom: 0px !important;
+        border-top: none;
     }
 }
 .section-divider {
@@ -3261,6 +3287,7 @@
     }
     &__img {
         width: 100%;
+        border-radius: 12px;
     }
     &__title {
         margin: 20px 0;
