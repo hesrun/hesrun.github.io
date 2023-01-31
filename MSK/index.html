@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
 <body>
-    <header class="main-header">
-        <div class="container px-4 mx-auto flex items-center h-[120px]">
-            <div class="burger w-10 h-10 mr-auto flex flex-col space-y-2 justify-center cursor-pointer">
-                <div class="h-px bg-white"></div>
-                <div class="h-px bg-white"></div>
+    <header>
+        <div class="container px-4 mx-auto flex items-center h-[90px] md:h-[130px]">
+            <div id="menuOpen" class="w-10 h-10 mr-auto flex flex-col space-y-2 justify-center cursor-pointer z-20">
+                <div class="h-px bg-white transition"></div>
+                <div class="h-px bg-white transition"></div>
             </div>
-            <a href="" class="main-header__logo">
+            <a href="" class="w-[150px] md:w-auto">
                 <img src="img/logo/logo-white.svg" alt="">
             </a>
-            <div class="main-header__tools ml-auto space-x-5">
+            <div class="ml-auto space-x-5">
                 <a href="" class="text-white">
                     <span class="lnr lnr-heart"></span>
                 </a>
@@ -25,10 +27,111 @@
                     <span class="lnr lnr-magnifier"></span>
                 </a>
             </div>
-            <a class="main-header__tel text-xl text-white ml-5" href="tel:+74994557239">+7 499 455 72 39</a>
+            <a class="text-xl text-white ml-5 hidden lg:block" href="tel:+74994557239">+7 499 455 72 39</a>
+        </div>
+        <div id="mainNav" class="absolute bg-black w-full z-10 top-0 pt-[130px] min-h-screen hidden">
+            <div class="container px-4 mx-auto flex flex-col gap-10 py-10 lg:grid lg:grid-cols-5">
+                <div class="lg:border-l lg:border-white/10 lg:pl-4">
+                    <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0">Купить часы</h4>
+                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Все часы</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Новые поступления</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Скоро в продаже</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Мужские часы</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Женские часы</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Со скидками</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Архив проданных</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:border-l lg:border-white/10 lg:pl-4">
+                    <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0">Услуги</h4>
+                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Выкуп часов</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Залог часов</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Оценка часов</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Ремонт и полировка</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Часы под заказ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:border-l lg:border-white/10 lg:pl-4">
+                    <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0">Часовой журнал</h4>
+                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Новинки</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Обзоры</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Полезное</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Блог ломбарда</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:border-l lg:border-white/10 lg:pl-4">
+                    <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0">О ломбарде</h4>
+                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">История и опыт</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Миссия и репутация</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Программа лояльности</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Приведи клиента</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Для бизнеса</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:border-l lg:border-white/10 lg:pl-4">
+                    <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0">Контакты</h4>
+                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">Схема проезда</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">TELEGRAM</a>
+                        </li>
+                        <li>
+                            <a href="" class="text-white hover:text-brown transition">INSTAGRAM</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
-    <section class="main-banner bg-[url('/img/index/banner.jpg')] bg-cover bg-center mt-[-120px]" >
+    <section class="main-banner bg-[url('../img/index/banner.jpg')] bg-cover bg-center mt-[-130px]" >
         <div class="container px-4 mx-auto h-[70vh] flex">
             <ul class="w-[270px] mt-auto mb-20">
                 <li class="border-b border-brown ">
@@ -55,7 +158,7 @@
     <section class="container px-4 mx-auto py-16">
         <div class="flex justify-between items-center mb-12">
             <h2 class="uppercase text-4xl">Новые поступления</h2>
-            <div class="c-select">
+            <div class="c-select w-[200px]">
                 <select>
                     <option value="">Самые новые </option>
                     <option value="">По названию </option>
@@ -252,8 +355,8 @@
             <div>
                 <h2 class="uppercase text-4xl mb-12">Будь в курсе новинок</h2>
                 <p class="mb-12">Оставьте ваш номер телефона мессенджера или адрес электронной почты и мы <br> будем присылать вам интересные модели из новых поступлений.</p>
-                <a href="" class="text-brown font-normal flex gap-2 items-center hover:opacity-70 transition">
-                    Подписаться <span class="lnr lnr-arrow-right-circle text-3xl"></span>
+                <a href="#Subscribe" rel="modal:open" class="text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
+                    Подписаться <img src="img/icons/arrow-right-circle.svg" alt="">
                 </a>
             </div>
             <div>
@@ -266,6 +369,26 @@
                         <img src="img/icons/instagram.svg" alt="">
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container px-4 mx-auto py-16">
+        <div class="flex gap-10 items-baseline mb-12">
+            <a href="" class="uppercase text-4xl">О Ломбарде</a>
+            <a href="" class="uppercase text-2xl text-brown">ПРЕИМУЩЕСТВА</a>
+            <a href="" class="uppercase text-2xl text-brown">ОТЗЫВЫ</a>
+        </div>
+        <div class="flex justify-between gap-x-10">
+            <div class="w-2/5">
+                <h3 class="text-3xl mb-12">«Часовой ломбард МСК» — один из старейших в Москве и в России в целом.</h3>
+                <p class="mb-12">Мы работаем с 1998 года, совмещаем магазин новых и подержанных швейцарских часов с ломбардом, и предлагаем возможность быстро получить крупную сумму денег заложив или продав ваши часы. </p>
+                <a href="" class="text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
+                    Читать еще <img src="img/icons/arrow-right-circle.svg" alt="">
+                </a>
+            </div>
+            <div>
+                <img src="img/index/lombard.jpg" alt="">
             </div>
         </div>
     </section>
@@ -403,5 +526,50 @@
             </div>
         </div>
     </footer>
+
+
+    <div id="Subscribe" class="modal modal_right">
+        <div class="h-full flex flex-col p-8">
+            <div class="my-auto">
+                <h2 class="uppercase text-4xl py-4">в курсе новинок</h2>
+                <p>Оставьте ваш номер телефона мессенджера или адрес электронной почты и мы  будем присылать вам интересные модели из новых поступлений</p>
+                <div class="c-field my-8">
+                    <label class="c-field__label" for="">Телефон</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button rel="modal:open" class="text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
+                        Подписаться <img src="img/icons/arrow-right-circle.svg" alt="">
+                    </button>
+                    <a href="" class="text-brown font-normal hover:opacity-70 transition text-xl">Лучше на почту</a>
+                </div>
+            </div>
+            <div class="mt-auto flex items-center justify-between">
+                <h3 class="uppercase text-xl">Подпишитесь на каналы:</h3>
+                <div class="flex gap-x-3 ">
+                    <a href="" class="hover:opacity-70 transition">
+                        <img src="img/icons/telegram.svg" alt="">
+                    </a>
+                    <a href="" class="hover:opacity-70 transition">
+                        <img src="img/icons/instagram.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <a class="absolute right-4 top-4 w-8 h-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+            <span class="lnr lnr-cross m-auto text-black md:text-2xl"></span>
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('#Subscribe').modal({
+            closeExisting: false
+        });
+    </script>
 </body>
 </html>
