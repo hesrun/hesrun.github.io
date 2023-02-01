@@ -1,3 +1,5 @@
+var scTop = 0;
+
 $('#menuOpen').click(function(){
     $(this).toggleClass('active');
     $('#mainNav').fadeToggle();
@@ -28,3 +30,15 @@ $('.c-field').each(function() {
         $(this).parents('.c-field').addClass('active');
     })       
 });
+
+$(window).scroll(function(){
+    scTop = $(this).scrollTop();
+    headerH = $('.main-header').height();
+    if (scTop > 500) {
+        $('.main-header').addClass('main-header_mini main-header_in')
+        $('body').css("padding-top", headerH)
+    } else {
+        $('.main-header').removeClass('main-header_mini main-header_in')
+        $('body').removeAttr('style');
+    }
+})
