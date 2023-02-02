@@ -3,6 +3,19 @@ var scTop = 0;
 $('#menuOpen').click(function(){
     $(this).toggleClass('active');
     $('#mainNav').fadeToggle();
+    $('body').toggleClass('overflow-hidden');
+    
+})
+
+$('#searchClose').click(function(){
+    $('#search').fadeOut();
+    $('body').toggleClass('overflow-hidden');
+})
+
+$('#searchOpen').click(function(){
+    $('#search').fadeIn();
+    $('body').toggleClass('overflow-hidden');
+    return false
 })
 
 $('.c-select select').select2({
@@ -30,6 +43,12 @@ $('.c-field').each(function() {
         $(this).parents('.c-field').addClass('active');
     })       
 });
+
+if (window.matchMedia('(max-width: 1024px)').matches) {
+    $('#mainNav h4').click(function(){
+        $(this).next().slideToggle(300);
+    })
+}
 
 $(window).scroll(function(){
     scTop = $(this).scrollTop();

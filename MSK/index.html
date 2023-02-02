@@ -25,17 +25,17 @@
                 <a href="" class="text-white hover:text-brown">
                     <span class="lnr lnr-heart"></span>
                 </a>
-                <a href="" class="text-white hover:text-brown">
+                <a href="" id="searchOpen" class="text-white hover:text-brown">
                     <span class="lnr lnr-magnifier"></span>
                 </a>
             </div>
             <a class="main-header__tel text-xl text-white ml-5 hidden lg:block" href="tel:+74994557239">+7 499 455 72 39</a>
         </div>
-        <div id="mainNav" class="absolute bg-black w-full z-10 top-0 pt-[130px] min-h-screen hidden">
-            <div class="container px-4 mx-auto flex flex-col gap-10 py-10 lg:grid lg:grid-cols-5">
+        <div id="mainNav" class="absolute bg-black w-full z-10 top-0 pt-[90px] lg:pt-[130px] h-screen hidden">
+            <div class="container pl-8 lg:px-4 mx-auto flex flex-col gap-10 py-10 lg:grid lg:grid-cols-5 h-[calc(100vh-80px)] lg:h-auto overflow-y-auto lg:overflow-y-visible">
                 <div class="lg:border-l lg:border-white/10 lg:pl-4">
                     <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0 uppercase">Купить часы</h4>
-                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                    <ul class="uppercase space-y-3 hidden lg:flex lg:flex-col ">
                         <li>
                             <a href="" class="text-white hover:text-brown hover:translate-x-2 transition-all block">Все часы</a>
                         </li>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="lg:border-l lg:border-white/10 lg:pl-4">
                     <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0 uppercase">Услуги</h4>
-                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                    <ul class="uppercase space-y-3 hidden lg:flex lg:flex-col ">
                         <li>
                             <a href="" class="text-white hover:text-brown hover:translate-x-2 transition-all block">Выкуп часов</a>
                         </li>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="lg:border-l lg:border-white/10 lg:pl-4">
                     <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0 uppercase">Часовой журнал</h4>
-                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                    <ul class="uppercase space-y-3 hidden lg:flex lg:flex-col ">
                         <li>
                             <a href="" class="text-white hover:text-brown hover:translate-x-2 transition-all block">Новинки</a>
                         </li>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="lg:border-l lg:border-white/10 lg:pl-4">
                     <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0 uppercase">О ломбарде</h4>
-                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                    <ul class="uppercase space-y-3 hidden lg:flex lg:flex-col ">
                         <li>
                             <a href="" class="text-white hover:text-brown hover:translate-x-2 transition-all block">История и опыт</a>
                         </li>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="lg:border-l lg:border-white/10 lg:pl-4">
                     <h4 class="text-xl text-white border-b border-white/10 mb-4 pb-2 lg:mb-8 lg:border-0 uppercase">Контакты</h4>
-                    <ul class="uppercase gap-3 hidden lg:flex lg:flex-col ">
+                    <ul class="uppercase space-y-3 hidden lg:flex lg:flex-col ">
                         <li>
                             <a href="" class="text-white hover:text-brown hover:translate-x-2 transition-all block">Схема проезда</a>
                         </li>
@@ -132,24 +132,57 @@
                 </div>
             </div>
         </div>
+        <div id="search" class="absolute bg-black w-full z-20 top-0 h-screen hidden">
+            <div class="container px-4 mx-auto h-[90px] md:h-[130px] flex items-center">
+                <div id="searchClose" class="main-header__burger active w-10 h-10 mr-auto flex flex-col space-y-2 justify-center cursor-pointer">
+                    <div class="h-px bg-white transition"></div>
+                    <div class="h-px bg-white transition"></div>
+                </div>
+            </div>
+            <div class="px-4 max-w-4xl m-auto mt-[10vh]">
+                <div>
+                    <input type="text" placeholder="Поиск" class="w-full h-14 border-b border-white bg-transparent outline-0 text-white placeholder:text-white/50 text-3xl focus:border-brown transition-all">
+                </div>
+                <ul class="mt-8">
+                    <li>
+                        <a href="" class="block border-b border-white text-white py-4 opacity-50 hover:opacity-100 transition-opacity">Rolex Day-date $ 20 000 </a>
+                    </li>
+                    <li>
+                        <a href="" class="block border-b border-white text-white py-4 opacity-50 hover:opacity-100 transition-opacity">Rolex Day-date $ 20 000 </a>
+                    </li>
+                    <li>
+                        <a href="" class="block border-b border-white text-white py-4 opacity-50 hover:opacity-100 transition-opacity">Rolex Day-date $ 20 000 </a>
+                    </li>
+                    <li>
+                        <a href="" class="block border-b border-white text-white py-4 opacity-50 hover:opacity-100 transition-opacity">Rolex Day-date $ 20 000 </a>
+                    </li>
+                    <li>
+                        <a href="" class="block border-b border-white text-white py-4 opacity-50 hover:opacity-100 transition-opacity">Rolex Day-date $ 20 000 </a>
+                    </li>
+                </ul>
+
+                <a href="" class="mt-8 inline-block font-normal text-brown hover:opacity-70">Показать все результаты</a>
+                <div class="mt-8 text-white opacity-75">Ничего не найдено. Ищите по названию бренда или модели часов.</div>
+            </div>
+        </div>
     </header>
     <section class="main-banner bg-[url('../img/index/banner.jpg')] bg-cover bg-center mt-[-130px]" >
-        <div class="container px-4 mx-auto h-[80vh] flex">
-            <ul class="w-[270px] mt-auto mb-20">
+        <div class="container px-4 mx-auto h-[50vh] lg:h-[80vh] flex">
+            <ul class="w-3/5 lg:w-[270px] mt-auto mb-8 lg:mb-20">
                 <li class="group relative after:block after:h-[1px] after:bg-brown after:absolute after:bottom-0 after:w-full after:transition-all hover:after:h-[5px]">
-                    <a href="" class="text-white uppercase text-2xl flex justify-between py-5 hover:text-brown">
+                    <a href="" class="text-white uppercase text-base lg:text-2xl flex justify-between py-3 lg:py-5 hover:text-brown">
                         купить часы
                         <span class="lnr lnr-arrow-right -translate-x-2 group-hover:translate-x-0 transition"></span>
                     </a>
                 </li>
                 <li class="group relative after:block after:h-[1px] after:bg-brown after:absolute after:bottom-0 after:w-full after:transition-all hover:after:h-[5px]">
-                    <a href="" class="text-white uppercase text-2xl flex justify-between py-5 hover:text-brown">
+                    <a href="" class="text-white uppercase text-base lg:text-2xl flex justify-between py-3 lg:py-5 hover:text-brown">
                         Продать часы
                         <span class="lnr lnr-arrow-right -translate-x-2 group-hover:translate-x-0 transition"></span>
                     </a>
                 </li>
                 <li class="group relative after:block after:h-[1px] after:bg-brown after:absolute after:bottom-0 after:w-full after:transition-all hover:after:h-[5px]">
-                    <a href="" class="text-white uppercase text-2xl flex justify-between py-5 hover:text-brown">
+                    <a href="" class="text-white uppercase text-base lg:text-2xl flex justify-between py-3 lg:py-5 hover:text-brown">
                         Получить займ
                         <span class="lnr lnr-arrow-right -translate-x-2 group-hover:translate-x-0 transition"></span>
                     </a>
@@ -157,10 +190,10 @@
             </ul>
         </div>
     </section>
-    <section class="container px-4 mx-auto py-16">
-        <div data-aos="fade-in" class="flex justify-between items-center mb-12">
-            <h2 class="uppercase text-4xl">Новые поступления</h2>
-            <div class="c-select w-[200px]">
+    <section class="container px-4 mx-auto py-8 lg:py-16">
+        <div data-aos="fade-in" class="flex justify-between items-center mb-8 lg:mb-12">
+            <h2 class="uppercase text-2xl lg:text-4xl">Новые поступления</h2>
+            <div class="c-select md:w-[200px] hidden lg:block">
                 <select>
                     <option value="">Самые новые </option>
                     <option value="">По названию </option>
@@ -169,24 +202,24 @@
                 <span class="lnr lnr-chevron-down"></span>
             </div>
         </div>
-        <div class="grid grid-cols-4 gap-x-7 gap-y-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 lg:gap-x-7 gap-y-8 lg:gap-y-10">
             <div data-aos="fade-up" data-aos-delay="0" class="group relative rounded-md hover:shadow-[0px_4px_10px_rgba(0,0,0,0.15)] transition">
                 <a href="#" class="block text-center">
-                    <div class="relative flex min-h-[320px] mb-5">
+                    <div class="relative flex min-h-[200px] lg:min-h-[320px] mb-5">
                         <img class="m-auto" src="img/catalog/item.jpg">
                         <img class="absolute w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 rounded-md transition" src="img/catalog/item-hover.jpg">
                     </div>
-                    <div class="px-7">
-                        <h3 class="font-normal text-base">A. Lange & Söhne</h4>
-                        <h5 class="text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
+                    <div class="px-4 lg:px-7">
+                        <h3 class="font-normal text-sm lg:text-base">A. Lange & Söhne</h4>
+                        <h5 class="text-sm lg:text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
                         <div class="text-base border-b border-gray-100 min-h-[50px] flex items-center justify-center">
-                            <div class="flex items-center justify-center gap-x-2.5 group-hover:hidden">
+                            <div class="text-sm lg:text-base flex items-center justify-center gap-x-2.5 group-hover:hidden">
                                 <img src="img/icons/diametr.svg" alt="">
                                 42 mm, Сталь
                             </div>
                             <span class="uppercase border border-brown text-brown px-2 hidden group-hover:inline-block">В НАЛИЧИИ</span>
                         </div>
-                        <div class="font-normal text-base min-h-[50px] flex items-center justify-center">
+                        <div class="font-normal text-sm lg:text-base min-h-[50px] flex items-center justify-center">
                             <span class="group-hover:hidden">$44.700</span>
                             <span class="hidden group-hover:block">₽ 1.352.075</span>
                         </div>
@@ -198,21 +231,21 @@
             </div>
             <div data-aos="fade-up" data-aos-delay="100" class="group relative rounded-md hover:shadow-[0px_4px_10px_rgba(0,0,0,0.15)] transition">
                 <a href="#" class="block text-center">
-                    <div class="relative flex min-h-[320px] mb-5">
+                    <div class="relative flex min-h-[200px] lg:min-h-[320px] mb-5">
                         <img class="m-auto" src="img/catalog/item.jpg">
                         <img class="absolute w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 rounded-md transition" src="img/catalog/item-hover.jpg">
                     </div>
-                    <div class="px-7">
-                        <h3 class="font-normal text-base">A. Lange & Söhne</h4>
-                        <h5 class="text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
+                    <div class="px-4 lg:px-7">
+                        <h3 class="font-normal text-sm lg:text-base">A. Lange & Söhne</h4>
+                        <h5 class="text-sm lg:text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
                         <div class="text-base border-b border-gray-100 min-h-[50px] flex items-center justify-center">
-                            <div class="flex items-center justify-center gap-x-2.5 group-hover:hidden">
+                            <div class="text-sm lg:text-base flex items-center justify-center gap-x-2.5 group-hover:hidden">
                                 <img src="img/icons/diametr.svg" alt="">
                                 42 mm, Сталь
                             </div>
                             <span class="uppercase border border-sky-500 text-sky-500 px-2 hidden group-hover:inline-block">НА ЗАКАЗ</span>
                         </div>
-                        <div class="font-normal text-base min-h-[50px] flex items-center justify-center">
+                        <div class="font-normal text-sm lg:text-base min-h-[50px] flex items-center justify-center">
                             <span class="group-hover:hidden">$44.700</span>
                             <span class="hidden group-hover:block">₽ 1.352.075</span>
                         </div>
@@ -224,21 +257,21 @@
             </div>
             <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-md hover:shadow-[0px_4px_10px_rgba(0,0,0,0.15)] transition">
                 <a href="#" class="block text-center">
-                    <div class="relative flex min-h-[320px] mb-5">
+                    <div class="relative flex min-h-[200px] lg:min-h-[320px] mb-5">
                         <img class="m-auto" src="img/catalog/item.jpg">
                         <img class="absolute w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 rounded-md transition" src="img/catalog/item-hover.jpg">
                     </div>
-                    <div class="px-7">
-                        <h3 class="font-normal text-base">A. Lange & Söhne</h4>
-                        <h5 class="text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
+                    <div class="px-4 lg:px-7">
+                        <h3 class="font-normal text-sm lg:text-base">A. Lange & Söhne</h4>
+                        <h5 class="text-sm lg:text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
                         <div class="text-base border-b border-gray-100 min-h-[50px] flex items-center justify-center">
-                            <div class="flex items-center justify-center gap-x-2.5 group-hover:hidden">
+                            <div class="text-sm lg:text-base flex items-center justify-center gap-x-2.5 group-hover:hidden">
                                 <img src="img/icons/diametr.svg" alt="">
                                 42 mm, Сталь
                             </div>
                             <span class="uppercase border border-red-700 text-red-700 px-2 hidden group-hover:inline-block">ПРОДАНО</span>
                         </div>
-                        <div class="font-normal text-base min-h-[50px] flex items-center justify-center">
+                        <div class="font-normal text-sm lg:text-base min-h-[50px] flex items-center justify-center">
                             <span class="group-hover:hidden">$44.700</span>
                             <span class="hidden group-hover:block">₽ 1.352.075</span>
                         </div>
@@ -250,21 +283,21 @@
             </div>
             <div data-aos="fade-up" data-aos-delay="300"class="group relative rounded-md hover:shadow-[0px_4px_10px_rgba(0,0,0,0.15)] transition">
                 <a href="#" class="block text-center">
-                    <div class="relative flex min-h-[320px] mb-5">
+                    <div class="relative flex min-h-[200px] lg:min-h-[320px] mb-5">
                         <img class="m-auto" src="img/catalog/item.jpg">
                         <img class="absolute w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 rounded-md transition" src="img/catalog/item-hover.jpg">
                     </div>
-                    <div class="px-7">
-                        <h3 class="font-normal text-base">A. Lange & Söhne</h4>
-                        <h5 class="text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
+                    <div class="px-4 lg:px-7">
+                        <h3 class="font-normal text-sm lg:text-base">A. Lange & Söhne</h4>
+                        <h5 class="text-sm lg:text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
                         <div class="text-base border-b border-gray-100 min-h-[50px] flex items-center justify-center">
-                            <div class="flex items-center justify-center gap-x-2.5 group-hover:hidden">
+                            <div class="text-sm lg:text-base flex items-center justify-center gap-x-2.5 group-hover:hidden">
                                 <img src="img/icons/diametr.svg" alt="">
                                 42 mm, Сталь
                             </div>
                             <span class="uppercase border border-slate-500 text-slateborder-slate-500 px-2 hidden group-hover:inline-block">РЕЗЕРВ</span>
                         </div>
-                        <div class="font-normal text-base min-h-[50px] flex items-center justify-center">
+                        <div class="font-normal text-sm lg:text-base min-h-[50px] flex items-center justify-center">
                             <span class="group-hover:hidden">$44.700</span>
                             <span class="hidden group-hover:block">₽ 1.352.075</span>
                         </div>
@@ -276,21 +309,21 @@
             </div>
             <div data-aos="fade-up" data-aos-delay="0" class="group relative rounded-md hover:shadow-[0px_4px_10px_rgba(0,0,0,0.15)] transition">
                 <a href="#" class="block text-center">
-                    <div class="relative flex min-h-[320px] mb-5">
+                    <div class="relative flex min-h-[200px] lg:min-h-[320px] mb-5">
                         <img class="m-auto" src="img/catalog/item.jpg">
                         <img class="absolute w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 rounded-md transition" src="img/catalog/item-hover.jpg">
                     </div>
-                    <div class="px-7">
-                        <h3 class="font-normal text-base">A. Lange & Söhne</h4>
-                        <h5 class="text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
+                    <div class="px-4 lg:px-7">
+                        <h3 class="font-normal text-sm lg:text-base">A. Lange & Söhne</h4>
+                        <h5 class="text-sm lg:text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
                         <div class="text-base border-b border-gray-100 min-h-[50px] flex items-center justify-center">
-                            <div class="flex items-center justify-center gap-x-2.5 group-hover:hidden">
+                            <div class="text-sm lg:text-base flex items-center justify-center gap-x-2.5 group-hover:hidden">
                                 <img src="img/icons/diametr.svg" alt="">
                                 42 mm, Сталь
                             </div>
                             <span class="uppercase border border-brown text-brown px-2 hidden group-hover:inline-block">В НАЛИЧИИ</span>
                         </div>
-                        <div class="font-normal text-base min-h-[50px] flex items-center justify-center">
+                        <div class="font-normal text-sm lg:text-base min-h-[50px] flex items-center justify-center">
                             <span class="group-hover:hidden">$44.700</span>
                             <span class="hidden group-hover:block">₽ 1.352.075</span>
                         </div>
@@ -302,21 +335,21 @@
             </div>
             <div data-aos="fade-up" data-aos-delay="100" class="group relative rounded-md hover:shadow-[0px_4px_10px_rgba(0,0,0,0.15)] transition">
                 <a href="#" class="block text-center">
-                    <div class="relative flex min-h-[320px] mb-5">
+                    <div class="relative flex min-h-[200px] lg:min-h-[320px] mb-5">
                         <img class="m-auto" src="img/catalog/item.jpg">
                         <img class="absolute w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 rounded-md transition" src="img/catalog/item-hover.jpg">
                     </div>
-                    <div class="px-7">
-                        <h3 class="font-normal text-base">A. Lange & Söhne</h4>
-                        <h5 class="text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
+                    <div class="px-4 lg:px-7">
+                        <h3 class="font-normal text-sm lg:text-base">A. Lange & Söhne</h4>
+                        <h5 class="text-sm lg:text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
                         <div class="text-base border-b border-gray-100 min-h-[50px] flex items-center justify-center">
-                            <div class="flex items-center justify-center gap-x-2.5 group-hover:hidden">
+                            <div class="text-sm lg:text-base flex items-center justify-center gap-x-2.5 group-hover:hidden">
                                 <img src="img/icons/diametr.svg" alt="">
                                 42 mm, Сталь
                             </div>
                             <span class="uppercase border border-sky-500 text-sky-500 px-2 hidden group-hover:inline-block">НА ЗАКАЗ</span>
                         </div>
-                        <div class="font-normal text-base min-h-[50px] flex items-center justify-center">
+                        <div class="font-normal text-sm lg:text-base min-h-[50px] flex items-center justify-center">
                             <span class="group-hover:hidden">$44.700</span>
                             <span class="hidden group-hover:block">₽ 1.352.075</span>
                         </div>
@@ -328,21 +361,21 @@
             </div>
             <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-md hover:shadow-[0px_4px_10px_rgba(0,0,0,0.15)] transition">
                 <a href="#" class="block text-center">
-                    <div class="relative flex min-h-[320px] mb-5">
+                    <div class="relative flex min-h-[200px] lg:min-h-[320px] mb-5">
                         <img class="m-auto" src="img/catalog/item.jpg">
                         <img class="absolute w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 rounded-md transition" src="img/catalog/item-hover.jpg">
                     </div>
-                    <div class="px-7">
-                        <h3 class="font-normal text-base">A. Lange & Söhne</h4>
-                        <h5 class="text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
+                    <div class="px-4 lg:px-7">
+                        <h3 class="font-normal text-sm lg:text-base">A. Lange & Söhne</h4>
+                        <h5 class="text-sm lg:text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
                         <div class="text-base border-b border-gray-100 min-h-[50px] flex items-center justify-center">
-                            <div class="flex items-center justify-center gap-x-2.5 group-hover:hidden">
+                            <div class="text-sm lg:text-base flex items-center justify-center gap-x-2.5 group-hover:hidden">
                                 <img src="img/icons/diametr.svg" alt="">
                                 42 mm, Сталь
                             </div>
                             <span class="uppercase border border-red-700 text-red-700 px-2 hidden group-hover:inline-block">ПРОДАНО</span>
                         </div>
-                        <div class="font-normal text-base min-h-[50px] flex items-center justify-center">
+                        <div class="font-normal text-sm lg:text-base min-h-[50px] flex items-center justify-center">
                             <span class="group-hover:hidden">$44.700</span>
                             <span class="hidden group-hover:block">₽ 1.352.075</span>
                         </div>
@@ -354,21 +387,21 @@
             </div>
             <div data-aos="fade-up" data-aos-delay="300"class="group relative rounded-md hover:shadow-[0px_4px_10px_rgba(0,0,0,0.15)] transition">
                 <a href="#" class="block text-center">
-                    <div class="relative flex min-h-[320px] mb-5">
+                    <div class="relative flex min-h-[200px] lg:min-h-[320px] mb-5">
                         <img class="m-auto" src="img/catalog/item.jpg">
                         <img class="absolute w-full h-full object-cover object-center opacity-0 group-hover:opacity-100 rounded-md transition" src="img/catalog/item-hover.jpg">
                     </div>
-                    <div class="px-7">
-                        <h3 class="font-normal text-base">A. Lange & Söhne</h4>
-                        <h5 class="text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
+                    <div class="px-4 lg:px-7">
+                        <h3 class="font-normal text-sm lg:text-base">A. Lange & Söhne</h4>
+                        <h5 class="text-sm lg:text-base border-b border-gray-100 py-4">Lange 1, Moonphase, Platinum</h5>
                         <div class="text-base border-b border-gray-100 min-h-[50px] flex items-center justify-center">
-                            <div class="flex items-center justify-center gap-x-2.5 group-hover:hidden">
+                            <div class="text-sm lg:text-base flex items-center justify-center gap-x-2.5 group-hover:hidden">
                                 <img src="img/icons/diametr.svg" alt="">
                                 42 mm, Сталь
                             </div>
                             <span class="uppercase border border-slate-500 text-slateborder-slate-500 px-2 hidden group-hover:inline-block">РЕЗЕРВ</span>
                         </div>
-                        <div class="font-normal text-base min-h-[50px] flex items-center justify-center">
+                        <div class="font-normal text-sm lg:text-base min-h-[50px] flex items-center justify-center">
                             <span class="group-hover:hidden">$44.700</span>
                             <span class="hidden group-hover:block">₽ 1.352.075</span>
                         </div>
@@ -380,16 +413,17 @@
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" class="shadow-[0px_4px_20px_rgba(0,0,0,0.15)] py-16">
+
+    <section data-aos="fade-up" class="shadow-section py-8 lg:py-16">
         <div class="container px-4 mx-auto flex justify-between items-center">
             <div>
-                <h2 class="uppercase text-4xl mb-12">Будь в курсе новинок</h2>
-                <p class="mb-12">Оставьте ваш номер телефона мессенджера или адрес электронной почты и мы <br> будем присылать вам интересные модели из новых поступлений.</p>
-                <a href="#Subscribe" rel="modal:open" class="text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
-                    Подписаться <img src="img/icons/arrow-right-circle.svg" alt="">
+                <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Будь в курсе новинок</h2>
+                <p class="mb-8 lg:mb-12">Оставьте ваш номер телефона мессенджера или адрес электронной почты и мы <br class="hidden lg:block"> будем присылать вам интересные модели из новых поступлений.</p>
+                <a href="#Subscribe" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                    Подписаться <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                 </a>
             </div>
-            <div>
+            <div class="hidden lg:block">
                 <h3 class="uppercase text-xl mb-4">Подпишитесь <br>на наши каналы</h3>
                 <div class="flex gap-x-3 ">
                     <a href="" class="hover:opacity-70 transition">
@@ -403,26 +437,26 @@
         </div>
     </section>
 
-    <section data-aos="fade-in" class="container px-4 mx-auto py-16">
-        <div class="flex gap-10 items-baseline mb-12">
-            <a href="" class="uppercase text-4xl">О Ломбарде</a>
-            <a href="" class="uppercase text-2xl text-brown">ПРЕИМУЩЕСТВА</a>
-            <a href="" class="uppercase text-2xl text-brown">ОТЗЫВЫ</a>
+    <section data-aos="fade-in" class="container px-4 mx-auto py-8 lg:py-16">
+        <div class="flex gap-10 items-baseline mb-8 lg:mb-12">
+            <a href="" class="uppercase text-2xl lg:text-4xl">О Ломбарде</a>
+            <!-- <a href="" class="uppercase text-2xl text-brown">ПРЕИМУЩЕСТВА</a>
+            <a href="" class="uppercase text-2xl text-brown">ОТЗЫВЫ</a> -->
         </div>
-        <div class="flex justify-between gap-x-10">
-            <div class="w-2/5">
-                <h3 class="text-3xl mb-12">«Часовой ломбард МСК» — один из старейших в Москве и в России в целом.</h3>
-                <p class="mb-12">Мы работаем с 1998 года, совмещаем магазин новых и подержанных швейцарских часов с ломбардом, и предлагаем возможность быстро получить крупную сумму денег заложив или продав ваши часы. </p>
-                <a href="" class="text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
-                    Читать еще <img src="img/icons/arrow-right-circle.svg" alt="">
+        <div class="flex flex-col-reverse lg:flex-row lg:justify-between lg:gap-x-10">
+            <div class="lg:w-2/5">
+                <h3 class="text-2xl lg:text-3xl mb-8 lg:mb-12">«Часовой ломбард МСК» — один из старейших в Москве и в России в целом.</h3>
+                <p class="mb-8 lg:mb-12">Мы работаем с 1998 года, совмещаем магазин новых и подержанных швейцарских часов с ломбардом, и предлагаем возможность быстро получить крупную сумму денег заложив или продав ваши часы. </p>
+                <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                    Читать еще <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                 </a>
             </div>
-            <div>
+            <div class="mb-8 lg:mb-0">
                 <img src="img/index/lombard.jpg" alt="">
             </div>
         </div>
     </section>
-    <section data-aos="fade-in" class="container px-4 mx-auto ">
+    <section data-aos="fade-in" class="container px-4 mx-auto hidden lg:block">
         <div class="py-16 border-t border-t-gray-100">
             <div class="flex justify-between gap-x-5">
                 <div>
@@ -543,22 +577,30 @@
         </div>
     </section>
     <footer class="container px-4 mx-auto items-center">
-        <div class="flex border-t border-t-gray-100 items-center gap-x-14 py-4">
-            <a href="">
-                <img src="img/logo/logo-small-black.svg" alt="">
-            </a>
-            <div class="text-sm">
-                Москва, <br>
-                Новоспасский переулок 3к2 <br><br>
-                <a href="" class="underline text-brown font-normal hover:opacity-70">Открыть на Яндекс.Картах</a>
+        <div class="flex flex-col lg:flex-row border-t border-t-gray-100 lg:items-center gap-x-14 py-4">
+            <div class="flex items-center gap-x-8 order-3 lg:order-1 border-t border-t-gray-100 lg:border-0">
+                <a href="">
+                    <img src="img/logo/logo-small-black.svg" alt="">
+                </a>
+                <p class="text-xs lg:hidden">
+                    2023 © ООО «Ломбард Гарант Юг» <br>
+                    ОГРН 5147746188332, номер лицензии №8888 от 01.01.2023
+                </p>
             </div>
-            <div class="text-sm">
-                Пн – Сб: 10:00 – 20:00 <br>
-                Воскресенье: 10:00 – 18:00 <br><br>
-                Сообщите заранее о своем визите
+            <div class="flex gap-x-4 lg:gap-x-14 order-2 border-t border-t-gray-100 lg:border-0 py-6 lg:py-0 mt-4 lg:mt-0">
+                <div class="text-xs lg:text-sm basis-2/4 lg:basis-auto">
+                    Москва, <br>
+                    Новоспасский переулок 3к2 <br><br>
+                    <a href="" class="underline text-brown font-normal hover:opacity-70">Открыть на Яндекс.Картах</a>
+                </div>
+                <div class="text-xs lg:text-sm basis-2/4 lg:basis-auto">
+                    Пн – Сб: 10:00 – 20:00 <br>
+                    Воскресенье: 10:00 – 18:00 <br><br>
+                    Сообщите заранее о своем визите
+                </div>
             </div>
-            <div class="ml-auto">
-                <a class="text-4xl" href="tel:+74994557239">+7 499 455 72 39</a>
+            <div class="lg:ml-auto order-1 lg:order-3 flex items-center justify-between lg:block ">
+                <a class="text-2xl lg:ext-4xl" href="tel:+74994557239">+7 499 455 72 39</a>
                 <div class="flex">
                     <a href="" class="hover:opacity-70 transition">
                         <img src="img/icons/telegram-brown.svg" alt="">
@@ -573,29 +615,29 @@
 
 
     <div id="Subscribe" class="modal modal_right">
-        <div class="h-full flex flex-col p-8">
+        <div class="h-full flex flex-col lg:p-8">
             <div class="my-auto">
-                <h2 class="uppercase text-4xl py-4">в курсе новинок</h2>
+                <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Будь в курсе новинок</h2>
                 <p>Оставьте ваш номер телефона мессенджера или адрес электронной почты и мы  будем присылать вам интересные модели из новых поступлений</p>
                 <div class="c-field my-8">
                     <label class="c-field__label" for="">Телефон</label>
                     <input class="c-field__input" type="text">
                 </div>
                 <div class="flex items-center justify-between">
-                    <button rel="modal:open" class="text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
-                        Подписаться <img src="img/icons/arrow-right-circle.svg" alt="">
-                    </button>
-                    <a href="" class="text-brown font-normal hover:opacity-70 transition border-b border-brown border-dashed">Лучше на почту</a>
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                        Подписаться  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
+                    </a>
+                    <a href="" class="text-brown text-sm lg:text-base font-normal hover:opacity-70 transition border-b border-brown border-dashed">Лучше на почту</a>
                 </div>
             </div>
             <div class="mt-auto flex items-center justify-between">
-                <h3 class="uppercase text-xl">Подпишитесь на каналы:</h3>
-                <div class="flex gap-x-3 ">
+                <h3 class="uppercase text-base lg:text-xl">Подпишитесь на каналы:</h3>
+                <div class="flex gap-x-3">
                     <a href="" class="hover:opacity-70 transition">
-                        <img src="img/icons/telegram.svg" alt="">
+                        <img class="w-[40px] lg:w-auto" src="img/icons/telegram.svg" alt="">
                     </a>
                     <a href="" class="hover:opacity-70 transition">
-                        <img src="img/icons/instagram.svg" alt="">
+                        <img class="w-[40px] lg:w-auto" src="img/icons/instagram.svg" alt="">
                     </a>
                 </div>
             </div>
