@@ -45,6 +45,11 @@ $('.c-select select').select2({
     width: '100%'
 });
 
+$('#faqList a').click(function(){
+    $(this).next().slideToggle(300);
+    return false
+})
+
 $('.c-field').each(function() {
     var field = $(this);
     var input = field.find('.c-field__input');
