@@ -229,9 +229,12 @@
                 </div>
                 <div class="lg:w-6/12">
                     <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Предложить часы</h2>
-                    <div class="c-field mb-4">
-                        <label class="c-field__label" for="">Бренд</label>
-                        <input class="c-field__input" type="text">
+                    <div class="mb-4 lg:flex">
+                        <div class="c-field flex-1">
+                            <label class="c-field__label" for="">Бренд</label>
+                            <input class="c-field__input" type="text">
+                        </div>
+                        <a href="#Brands" rel="modal:open" class="text-brown font-light border-b border-dashed border-brown text-sm self-end ml-8 hover:opacity-70 hidden lg:inline">или выберите из списка</a>
                     </div>
                     <div class="c-field mb-4">
                         <label class="c-field__label" for="">Модель</label>
@@ -240,12 +243,14 @@
                     <div class="mb-4 lg:flex lg:justify-between lg:items-center lg:my-8">
                         <span class="font-normal block mb-4 lg:mb-0">Комплектация часов</span>
                         <div class="grid grid-cols-2 gap-x-4 lg:w-[300px]">
-                            <a href="" class="h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all">
+                            <input class="hidden peer/box" type="checkbox" name="set" id="box">
+                            <label for="box" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all peer-checked/box:bg-brown peer-checked/box:bg-brown peer-checked/box:text-white">
                                 Коробка
-                            </a>
-                            <a href="" class="h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all">
+                            </label>
+                            <input class="hidden peer/docs" type="checkbox" name="set" id="docs">
+                            <label for="docs" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all peer-checked/docs:bg-brown peer-checked/docs:bg-brown peer-checked/docs:text-white">
                                 Документы
-                            </a>
+                            </label>
                         </div>
                     </div>
                     <div class="c-field mb-8">
@@ -618,38 +623,91 @@
     </footer>
 
 
-    <div id="Subscribe" class="modal modal_right">
-        <div class="h-full flex flex-col lg:p-8">
-            <div class="my-auto">
-                <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Будь в курсе новинок</h2>
-                <p>Оставьте ваш номер телефона мессенджера или адрес электронной почты и мы  будем присылать вам интересные модели из новых поступлений</p>
-                <div class="c-field">
-                    <label class="c-field__label" for="">Телефон</label>
-                    <input class="c-field__input" type="text">
-                </div>
-                <div class="flex items-center justify-between">
-                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
-                        Подписаться  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
-                    </a>
-                    <a href="" class="text-brown text-sm lg:text-base font-normal hover:opacity-70 transition border-b border-brown border-dashed">Лучше на почту</a>
-                </div>
+    <div id="Brands" class="modal modal_right p-4 lg:p-8">
+        <div>
+            <div class="flex mb-4">
+                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                    <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
+                </a>
             </div>
-            <div class="mt-auto flex items-center justify-between">
-                <h3 class="uppercase text-base lg:text-xl">Подпишитесь на каналы:</h3>
-                <div class="flex gap-x-3">
-                    <a href="" class="hover:opacity-70 transition">
-                        <img class="w-[40px] lg:w-auto" src="img/icons/telegram.svg" alt="">
-                    </a>
-                    <a href="" class="hover:opacity-70 transition">
-                        <img class="w-[40px] lg:w-auto" src="img/icons/instagram.svg" alt="">
-                    </a>
-                </div>
+            <div>
+                <h2 class="uppercase text-2xl lg:text-4xl mb-8">бренд</h2>
+                <p class="mb-8">Найдите в списке бренд ваших часов, или укажите его в поле вручную</p>
+                <ul class="flex mb-4 overflow-y-auto pb-4">
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all bg-brown text-white">A</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">B</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">C</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">D</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">E</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">F</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">g</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">H</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">I</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">J</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">g</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">H</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">I</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">J</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">g</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">H</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">I</a>
+                    </li>
+                    <li>
+                        <a href="" class="text-sm uppercase flex items-center justify-center w-6 h-6 hover:bg-brown hover:text-white transition-all">J</a>
+                    </li>
+                </ul>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="" class="block hover:text-brown hover:translate-x-1 transition-all">Backes & Strauss</a>
+                    </li>
+                    <li>
+                        <a href="" class="block hover:text-brown hover:translate-x-1 transition-all">Ball Watch</a>
+                    </li>
+                    <li>
+                        <a href="" class="block hover:text-brown hover:translate-x-1 transition-all">Baume & Mercier</a>
+                    </li>
+                    <li>
+                        <a href="" class="block hover:text-brown hover:translate-x-1 transition-all">Bell & Ross</a>
+                    </li>
+                    <li>
+                        <a href="" class="block hover:text-brown hover:translate-x-1 transition-all">Bovet Fleurier</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        
-        <a class="group absolute right-4 top-4 w-8 h-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
-            <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
-        </a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -686,7 +744,7 @@
             once: true
         });
         
-        // $('#Subscribe').modal({
+        // $('#Brands').modal({
         //     closeExisting: false
         // });
     </script>

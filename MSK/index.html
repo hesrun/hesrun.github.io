@@ -613,8 +613,13 @@
     </footer>
 
 
-    <div id="Subscribe" class="modal modal_right">
-        <div class="h-full flex flex-col lg:p-8">
+    <div id="Subscribe" class="modal modal_right p-4 lg:p-8">
+        <div class="h-full flex flex-col">
+            <div class="flex mb-4">
+                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                    <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
+                </a>
+            </div>
             <div class="my-auto">
                 <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Будь в курсе новинок</h2>
                 <p>Оставьте ваш номер телефона мессенджера или адрес электронной почты и мы  будем присылать вам интересные модели из новых поступлений</p>
@@ -641,10 +646,6 @@
                 </div>
             </div>
         </div>
-        
-        <a class="group absolute right-4 top-4 w-8 h-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
-            <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
-        </a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -657,9 +658,9 @@
             offset: 300,
             once: true
         });
-        // $('#Subscribe').modal({
-        //     closeExisting: false
-        // });
+        $('#Subscribe').modal({
+            closeExisting: false
+        });
     </script>
 </body>
 </html>
