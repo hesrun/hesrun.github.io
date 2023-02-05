@@ -23,6 +23,32 @@ body {
     &_out {
         animation: 0.3s headerOut both;
     }
+    &_white {
+        #{$root}__burger {
+            div {
+                background-color: black;
+            }
+            &.active {
+                div {
+                    background-color: white;
+                }
+            }
+        }
+        #{$root}__tel {
+            color: black;
+            &:hover {
+                color: $brown;
+            }
+        }
+        #{$root}__tools {
+            a {
+                color: black;
+                &:hover {
+                    color: $brown;
+                }
+            }
+        }
+    }
     &_mini {
         position: fixed;
         top: 0px;
@@ -31,7 +57,6 @@ body {
         background: rgba(#fff, 0.5);
         backdrop-filter: blur(10px);
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-        
         z-index: 50;
         #{$root}__burger {
             div {
