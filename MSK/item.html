@@ -168,80 +168,80 @@
     </header>
 
     <section class="container px-4 mx-auto py-8 lg:py-16">
-        <div>
-            <ul class="hidden">
+        <div class="lg:flex lg:justify-between lg:mb-16">
+            <ul class="hidden lg:flex">
                 <li>
-                    <a href="">Главная</a> <span class="lnr lnr-chevron-right"></span>
+                    <a href="" class="hover:text-brown">Главная</a> <span class="lnr lnr-chevron-right text-sm mx-4"></span>
                 </li>
                 <li>
-                    <a href="">Купить часы</a> <span class="lnr lnr-chevron-right"></span>
+                    <a href="" class="hover:text-brown">Купить часы</a> <span class="lnr lnr-chevron-right text-sm mx-4"></span>
                 </li>
                 <li>A. Lange & Sohne Saxonia Datograph Perpetual</li>
             </ul>
-            <div class="flex justify-between mb-4">
-                <a href="" class="hover:text-brown"><span class="lnr lnr-chevron-left text-sm"></span> Предыдущие</a>
-                <a href="" class="hover:text-brown">Следующие <span class="lnr lnr-chevron-right text-sm"></span></a>
+            <div class="flex justify-between mb-4 lg:mb-0 lg:gap-x-16">
+                <a href="" class="hover:text-brown"><span class="lnr lnr-chevron-left text-sm lg:mr-4"></span> Предыдущие</a>
+                <a href="" class="hover:text-brown">Следующие <span class="lnr lnr-chevron-right text-sm lg:ml-4"></span></a>
             </div>
         </div>
-        <div>
-            <div class="relative mb-4">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-x-20">
+            <div class="relative mb-4 lg:order-2">
                 <div id="fotoCarusel" class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                    <div class="swiper-wrapper lg:flex-col lg:gap-y-8">
+                        <div class="swiper-slide lg:border-2">
                             <img class="w-full" src="img/item/item-1.jpg" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide lg:border-2">
                             <img class="w-full" src="img/item/item-2.jpg" alt="">
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide lg:border-2">
                             <img class="w-full" src="img/item/item-3.jpg" alt="">
                         </div>
                     </div>
-                    <div class="swiper-prev top-1/2 left-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown">
+                    <div class="swiper-prev top-1/2 left-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown lg:hidden">
                         <span class="lnr lnr-chevron-left"></span>
                     </div>
-                    <div class="swiper-next top-1/2 right-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown">
+                    <div class="swiper-next top-1/2 right-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown lg:hidden">
                         <span class="lnr lnr-chevron-right"></span>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="mb-2">
-                    <h1 class="uppercase text-2xl lg:text-4xl">A. LANGE & SÖHNE</h1>
-                    <h2 class="uppercase text-xl lg:text-2xl">Saxonia Datograph Perpetual</h2>
+                    <h1 class="uppercase text-2xl lg:text-4xl lg:mb-2">A. LANGE & SÖHNE</h1>
+                    <h2 class="uppercase text-xl lg:text-2xl lg:mb-4">Saxonia Datograph Perpetual</h2>
                 </div>
                 <div class="mb-4 flex gap-x-4 items-center">
                     <span>REF 410.025</span>
                     <span class="uppercase border border-brown text-brown px-2">В НАЛИЧИИ</span>
-                    <button class="text-2xl appearance-none inline-flex">
+                    <button class="text-2xl appearance-none inline-flex hover:text-red-600">
                         <span class="lnr lnr-heart m-auto"></span>
                     </button>
                 </div>
-                <div class="my-8">
+                <div class="my-8 lg:mt-16 lg:mb-8 lg:mt-40">
                     <strong class="text-4xl font-light">$ 129,950</strong>
                     <div class="mt-2 flex gap-x-4">
                         <span>€ 17.948</span>
                         <span>₽ 1.352.075</span>
                     </div>
                 </div>
-                <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                <a href="#buyWatch" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
                     Купить часы  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                 </a>
-                <div class="mt-4 grid grid-cols-2 gap-x-4 mb-8">
-                    <a href="#" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all">
+                <div class="my-8 grid grid-cols-2 gap-x-4 lg:my-40 lg:max-w-[400px]">
+                    <a href="#tradeIn" rel="modal:open" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all">
                         Купить в Trade-in
                     </a>
-                    <a href="#" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all">
+                    <a href="#lowPrice" rel="modal:open" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all">
                         Нашли дешевле?
                     </a>
                 </div>
-                <div class="mb-8">
+                <div class="mb-8 lg:mb-32">
                     <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">ОПИСАНИЕ</h1>
-                    <article class="article mb-4">
+                    <article class="article mb-4 lg:mb-16">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, praesentium vel. Nam, officia. Rerum alias sed laudantium, suscipit autem est laborum rem cupiditate vitae nam, ratione accusamus, ad maiores ea cum recusandae enim omnis quidem tenetur. Quae sapiente mollitia quos dignissimos. Voluptates deleniti suscipit totam nam dolore dicta atque voluptatem!</p>
                     </article>
-                    <div class="mb-4">
-                        <div>
+                    <div class="mb-4 lg:flex lg:gap-x-8 lg:mb-16">
+                        <div class="lg:mr-auto">
                             <b>Состояние:</b> Идеальное
                         </div>
                         <div>
@@ -251,12 +251,12 @@
                             <b>Документы:</b> Да
                         </div>
                     </div>
-                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                    <a href="#askVideo" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
                         Запросить видео часов  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                     </a>
                 </div>
                 <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">ХАРАКТЕРИСТИКИ</h1>
-                <table class="w-full mb-4">
+                <table class="w-full mb-4 lg:mb-16">
                     <tr>
                         <td class="border-b border-black/10 py-3 font-normal">Тип</td>
                         <td class="border-b border-black/10 py-3 text-right">Унисекс</td>
@@ -294,19 +294,19 @@
     </section>
 
     <section class="shadow-section py-8 lg:py-16 aos-init aos-animate">
-        <div class="container px-4 mx-auto grid grid-cols-1 gap-8">
+        <div class="container px-4 mx-auto grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
             <div class="flex items-center gap-x-8">
-                <img class="w-24" src="img/icons/watch-circle.svg" alt="">
+                <img class="w-24 lg:w-auto" src="img/icons/watch-circle.svg" alt="">
                 <div>
-                    <h2 class="uppercase text-xl lg:text-4xl">Будь в курсе новинок</h2>
-                    <p class="text-sm">Все наши часы прошли проверку аутентичности, они полностью исправны и подготовлены к продаже</p>
+                    <h2 class="uppercase text-xl lg:text-4xl lg:mb-4">100% аутентичность</h2>
+                    <p class="text-sm lg:text-base">Все наши часы прошли проверку аутентичности, они полностью исправны и подготовлены к продаже</p>
                 </div>
             </div>
             <div class="flex items-center gap-x-8">
-                <img class="w-24" src="img/icons/questions-circle.svg" alt="">
+                <img class="w-24 lg:w-auto" src="img/icons/questions-circle.svg" alt="">
                 <div>
-                    <h2 class="uppercase text-xl lg:text-4xl">Остались вопросы? </h2>
-                    <p class="text-sm">Персональный менеджер ответит вам на все вопросы в  <a href="">Whatsapp</a>, <a href="">Telegram</a> или по телефону <a href="tel:+74994557238">+7 499  455 72 38</a></p>
+                    <h2 class="uppercase text-xl lg:text-4xl lg:mb-4">Остались вопросы? </h2>
+                    <p class="text-sm lg:text-base">Персональный менеджер ответит вам на все вопросы в  <a href="" class="text-brown hover:opacity-70">Whatsapp</a>, <a href="" class="text-brown hover:opacity-70">Telegram</a> или по телефону <a href="tel:+74994557238" class="text-brown hover:opacity-70">+7 499  455 72 38</a></p>
                 </div>
             </div>
         </div>
@@ -315,21 +315,21 @@
     <section class="container px-4 mx-auto py-8 lg:py-16">
         <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Дополнительные фото</h2>
         <div id="fotoOther" class="swiper relative">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
+            <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-8">
+                <div class="swiper-slide lg:border-2">
                     <img class="w-full" src="img/item/item-1.jpg" alt="">
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide lg:border-2">
                     <img class="w-full" src="img/item/item-2.jpg" alt="">
                 </div>
-                <div class="swiper-slide">
+                <div class="swiper-slide lg:border-2">
                     <img class="w-full" src="img/item/item-3.jpg" alt="">
                 </div>
             </div>
-            <div class="swiper-prev top-1/2 left-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown">
+            <div class="swiper-prev top-1/2 left-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown lg:hidden">
                 <span class="lnr lnr-chevron-left"></span>
             </div>
-            <div class="swiper-next top-1/2 right-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown">
+            <div class="swiper-next top-1/2 right-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown lg:hidden">
                 <span class="lnr lnr-chevron-right"></span>
             </div>
         </div>
@@ -494,6 +494,160 @@
         </div>
     </footer>
 
+    <div id="askVideo" class="modal modal_right p-4 lg:py-8 lg:px-16">
+        <div class="h-full flex flex-col">
+            <div class="flex p-4 lg:px-16 lg:py-8">
+                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                    <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
+                </a>
+            </div>
+            <div class="my-auto p-4 lg:px-16 lg:pb-8 lg:pt-0">
+                <h2 class="uppercase text-2xl lg:text-4xl mb-4">Запрос видео</h2>
+                <p>Оставьте контактные данные и мы вышлем вам живое видео Rolex Oyster Perpetual Day-date</p>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Имя</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Мобильный телефон</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Электронная почта</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="mt-8">
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                        Получить видео  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
+                    </a>
+                    <div class="text-sm mt-8 opacity-50">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных <br>
+                        данных и соглашаетесь с <a href="" class="underline">политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tradeIn" class="modal modal_right">
+        <div class="h-full flex flex-col">
+            <div class="flex p-4 lg:px-16 lg:py-8">
+                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                    <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
+                </a>
+            </div>
+            <div class="my-auto p-4 lg:px-16 lg:pb-8 lg:pt-0">
+                <h2 class="uppercase text-2xl lg:text-4xl mb-4">Trade-in</h2>
+                <p>Приложите картинку ваших часов, которые вы желаете зачесть при покупке Rolex Oyster Perpetual Day-date и получите расчет в течение 30 минут</p>
+                <div class="mb-4 lg:mb-8 mt-8">
+                    <label for="clipPhoto" class="flex items-center border border-dashed border-black/25 rounded-sm p-6 gap-4">
+                        <img class="w-12 lg:w-auto" src="img/icons/image.svg" alt="">
+                        <div>
+                            <span class="text-brown font-normal">Загрузите фото часов...</span>
+                            <span class="text-sm hidden lg:block">или перетащите сюда</span>
+                        </div>
+                    </label>
+                    <input type="file" name="" id="clipPhoto" class="hidden">
+                </div>
+                <div class="flex flex gap-8 overflow-y-auto">
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                        <img src="img/consign/thumb.jpg" alt="" class="w-full h-full object-cover object-center">
+                        <a href="" class="absolute w-8 h-8 border border-black/10 flex -right-4 -bottom-4 bg-white z-[1] hover:bg-brown hover:border-brown hover:text-white transition-all">
+                            <span class="lnr lnr-cross m-auto"></span>
+                        </a>
+                    </div>
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                    </div>
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                    </div>
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                    </div>
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                    </div>
+                </div>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Имя</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Мобильный телефон</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="mt-8">
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                        Получить расчет <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
+                    </a>
+                    <div class="text-sm mt-8 opacity-50">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных <br>
+                        данных и соглашаетесь с <a href="" class="underline">политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lowPrice" class="modal modal_right p-4 lg:py-8 lg:px-16">
+        <div class="h-full flex flex-col">
+            <div class="flex p-4 lg:px-16 lg:py-8">
+                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                    <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
+                </a>
+            </div>
+            <div class="my-auto p-4 lg:px-16 lg:pb-8 lg:pt-0">
+                <h2 class="uppercase text-2xl lg:text-4xl mb-4">Нашли дешевле?</h2>
+                <p>Видели, где Rolex Oyster Perpetual Day-date продается дешевле, чем у нас? Расскажите где и какая была цена. Мы попробуем вам сделать еще более выгодное предложение. </p>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Имя</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Мобильный телефон</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Опишите, где вам сделали лучшее предложение</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="mt-8">
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                        Отправить  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
+                    </a>
+                    <div class="text-sm mt-8 opacity-50">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных <br>
+                        данных и соглашаетесь с <a href="" class="underline">политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="buyWatch" class="modal modal_right p-4 lg:py-8 lg:px-16">
+        <div class="h-full flex flex-col">
+            <div class="flex p-4 lg:px-16 lg:py-8">
+                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                    <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
+                </a>
+            </div>
+            <div class="my-auto p-4 lg:px-16 lg:pb-8 lg:pt-0">
+                <h2 class="uppercase text-2xl lg:text-4xl mb-4">Купить часы</h2>
+                <p>Оставьте ваши контактные данные и мы свяжемся с вами для оформления покупки Rolex Oyster Perpetual Day-date</p>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Имя</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="c-field my-4">
+                    <label class="c-field__label" for="">Мобильный телефон</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="mt-8">
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                        Отправить заявку  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
+                    </a>
+                    <div class="text-sm mt-8 opacity-50">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных <br>
+                        данных и соглашаетесь с <a href="" class="underline">политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
@@ -552,7 +706,7 @@
             once: true
         });
         
-        // $('#Brands').modal({
+        // $('#buyWatch').modal({
         //     closeExisting: false
         // });
     </script>
