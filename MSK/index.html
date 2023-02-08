@@ -11,6 +11,15 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="bg-white hidden">
+        <div class="container px-4 mx-auto flex justify-between gap-x-8 items-center py-4">
+            <span class="text-sm">В СВЯЗИ С НЕСТАБИЛЬНЫМ КУРСОМ ВАЛЮТ, ОКОНЧАТЕЛЬНУЮ СТОИМОСТЬ ТОВАРА УТОЧНЯЙТЕ У МЕНЕДЖЕРА</span>
+
+            <a class="ml-auto group h-8 w-8 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                <span class="lnr lnr-cross m-auto text-black group-hover:text-white"></span>
+            </a>
+        </div>
+    </div>
     <header class="main-header relative z-30 h-[90px] md:h-[130px]">
         <div class="container px-4 mx-auto flex items-center h-full relative">
             <div id="menuOpen" class="main-header__burger w-10 h-10 mr-auto flex flex-col space-y-2 justify-center cursor-pointer z-20">
@@ -166,7 +175,7 @@
         </div>
     </header>
     <section class="main-banner bg-[url('../img/index/banner.jpg')] bg-cover bg-center mt-[-130px]" >
-        <div class="container px-4 mx-auto h-[50vh] lg:h-[80vh] flex">
+        <div class="container px-4 mx-auto h-[50vh] min-h-[300px] lg:min-h-[400px] flex">
             <ul class="w-3/5 lg:w-[270px] mt-auto mb-8 lg:mb-20">
                 <li class="group relative after:block after:h-[1px] after:bg-brown after:absolute after:bottom-0 after:w-full after:transition-all hover:after:h-[5px]">
                     <a href="" class="text-white uppercase text-base lg:text-2xl flex justify-between py-3 lg:py-5 hover:text-brown">
@@ -658,9 +667,9 @@
             offset: 300,
             once: true
         });
-        $('#Subscribe').modal({
-            closeExisting: false
-        });
+        // $('#Subscribe').modal({
+        //     closeExisting: false
+        // });
     </script>
 </body>
 </html>
