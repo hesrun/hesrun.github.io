@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -19,7 +20,7 @@
             </div>
             <a href="" class="main-header__logo absolute left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4">
                 <img class="main-header__logo_normal w-[150px] md:w-[200px]" src="img/logo/logo-black.svg" alt="">
-                <img class="main-header__logo_mini hidden" src="img/logo/logo-horizontal-black.svg" alt="">
+                <img class="main-header__logo_mini hidden w-[120px] md:w-[150px]" src="img/logo/logo-horizontal-black.svg" alt="">
             </a>
             <div class="main-header__tools ml-auto space-x-5">
                 <a href="" class="text-white hover:text-brown">
@@ -169,9 +170,9 @@
     <section class="container px-4 mx-auto py-8 lg:py-16">
         <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Новые поступления</h2>
         <p class="lg:w-1/2 mb-8 lg:mb-12">Мы собрали отличную коллекцию новых и Б/У часов для вас по отличным ценам с гарантией аутентичности и полной проверкой нашими экспертами</p>
-        <div class="mb-8 hidden lg:block">
-            <div class="flex justify-between mb-4">
-                <div class="flex gap-x-4">
+        <div class="mb-8">
+            <div class="mb-4 lg:flex lg:justify-between">
+                <div class="flex gap-x-4 justify-between lg:gap-x-16">
                     <a class="flex items-center gap-x-2" href="#" data-filt-link="brands">
                         БРЕНД <span class="inline-block lnr lnr-chevron-down text-sm"></span>
                     </a>
@@ -195,7 +196,7 @@
             </div>
             <div>
                 <div class="hidden" data-filt-tab="brands">
-                    <ul class="grid grid-cols-4 gap-x-8 gap-y-2 max-w-[700px]">
+                    <ul class="grid grid-cols-2 gap-x-8 gap-y-2 lg:grid-cols-4 max-w-[700px] py-4">
                         <li>
                             <input class="hidden peer/brand-1" type="checkbox" name="brands" id="brand-1">
                             <label for="brand-1" class="flex cursor-pointer items-baseline peer-checked/brand-1:text-brown peer-checked/brand-1:[&>span]:w-6 hover:text-brown">
@@ -343,7 +344,7 @@
                     </ul>
                 </div>
                 <div class="hidden" data-filt-tab="functions">
-                    <ul class="grid grid-cols-4 gap-x-8 gap-y-2 max-w-[700px]">
+                    <ul class="grid grid-cols-2 gap-x-8 gap-y-2 lg:grid-cols-4 max-w-[700px] py-4">
                         <li>
                             <input class="hidden peer/usual" type="checkbox" name="functions" id="usual">
                             <label for="usual" class="flex cursor-pointer items-baseline peer-checked/usual:text-brown peer-checked/usual:[&>span]:w-6 hover:text-brown">
@@ -383,8 +384,8 @@
                     </ul>
                 </div>
                 <div class="hidden" data-filt-tab="price">
-                    <div class="max-w-[700px]">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, sapiente accusantium necessitatibus, odio aut odit debitis architecto perferendis incidunt repellendus ad aperiam dolores aspernatur officia voluptas quam doloribus ut velit.
+                    <div class="max-w-[700px] p-4">
+                        <div id="priceSlider" class="range-slider"></div>
                     </div>
                 </div>
             </div>
@@ -764,8 +765,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
     <script src="js/main.js"></script>
     <script>
+
+
+        var priceSlider = document.getElementById('priceSlider');
+
+        noUiSlider.create(priceSlider, {
+            start: [0, 19870],
+            connect: true,
+            step: 1,
+            tooltips: true,
+            range: {
+                'min': 0,
+                'max': 19870
+            },
+            pips: {
+                mode: 'range',
+                density: 25
+            },
+            format: {
+                from: Number,
+                to: function(value) {
+                    return ("$ " + parseInt(value));
+                }
+            }
+        });
 
         $('[data-filt-link]').click(function () {
             name = $(this).attr('data-filt-link');

@@ -103,6 +103,8 @@ body {
     }
 }
 
+
+/* ----------------------------------- ui ----------------------------------- */
 .c-select {
     height: 40px;
     position: relative;
@@ -179,6 +181,85 @@ body {
         }
     }
 }
+
+.range-slider {
+    background: none;
+    border: none;
+    box-shadow: none;
+    .noUi-base:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0px;
+        height: 1px;
+        background: #ccc;
+        top: 9px;
+        z-index: -1;
+    }
+    .noUi-value {
+        display: none;
+    }
+    .noUi-connect {
+        background: none;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            height: 1px;
+            background: $brown;
+            top: 9px;
+            z-index: -1;
+        }
+    }
+    .noUi-handle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $brown;
+        box-shadow: none;
+        border: none;
+        top: -1px;
+        right: -10px;
+        cursor: pointer;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+    .noUi-marker-horizontal.noUi-marker {
+        width: 1px;
+        background: #ccc;
+        margin: 0;
+        height: 10px;
+    }
+    .noUi-pips-horizontal {
+        padding: 0px;
+        top: 5px;
+        bottom: 0px;
+        height: auto;
+    }
+    .noUi-marker-horizontal.noUi-marker-large {
+        height: 10px;
+    }
+    .noUi-tooltip {
+        font-weight: 300;
+        font-size: 12px;
+        border: none;
+        bottom: auto;
+        top: 120%;
+        background: none;
+    }
+}
+
+/* --------------------------------- magnify -------------------------------- */
+.magnify {
+    vertical-align: middle;
+}
+
+
 
 /* ---------------------------------- modal --------------------------------- */
 .blocker {

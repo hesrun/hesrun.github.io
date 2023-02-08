@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.2/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/css/magnify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -20,7 +22,7 @@
             </div>
             <a href="" class="main-header__logo absolute left-2/4 top-2/4 -translate-y-2/4 -translate-x-2/4">
                 <img class="main-header__logo_normal w-[150px] md:w-[200px]" src="img/logo/logo-black.svg" alt="">
-                <img class="main-header__logo_mini hidden" src="img/logo/logo-horizontal-black.svg" alt="">
+                <img class="main-header__logo_mini hidden w-[120px] md:w-[150px]" src="img/logo/logo-horizontal-black.svg" alt="">
             </a>
             <div class="main-header__tools ml-auto space-x-5">
                 <a href="" class="text-white hover:text-brown">
@@ -185,17 +187,17 @@
         </div>
         <div class="lg:grid lg:grid-cols-2 lg:gap-x-20">
             <div class="relative mb-4 lg:order-2">
-                <div id="fotoCarusel" class="swiper">
+                <div id="fotoCarusel" class="swiper lg:overflow-visible">
                     <div class="swiper-wrapper lg:flex-col lg:gap-y-8">
-                        <div class="swiper-slide lg:border-2">
-                            <img class="w-full" src="img/item/item-1.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide lg:border-2">
-                            <img class="w-full" src="img/item/item-2.jpg" alt="">
-                        </div>
-                        <div class="swiper-slide lg:border-2">
-                            <img class="w-full" src="img/item/item-3.jpg" alt="">
-                        </div>
+                        <a href="img/item/item-1.jpg" data-fancybox="gallery" class="swiper-slide text-center lg:border-2">
+                            <img class="w-full zoomimg" src="img/item/item-1.jpg" data-magnify-src="img/item/item-1.jpg" alt="">
+                        </a>
+                        <a href="img/item/item-2.jpg" data-fancybox="gallery" class="swiper-slide text-center lg:border-2">
+                            <img class="w-full zoomimg" src="img/item/item-2.jpg" data-magnify-src="img/item/item-2.jpg" alt="">
+                        </a>
+                        <a href="img/item/item-3.jpg" data-fancybox="gallery" class="swiper-slide text-center lg:border-2">
+                            <img class="w-full zoomimg" src="img/item/item-3.jpg" data-magnify-src="img/item/item-3.jpg" alt="">
+                        </a>
                     </div>
                     <div class="swiper-prev top-1/2 left-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown lg:hidden">
                         <span class="lnr lnr-chevron-left"></span>
@@ -217,17 +219,17 @@
                         <span class="lnr lnr-heart m-auto"></span>
                     </button>
                 </div>
-                <div class="my-8 lg:mt-16 lg:mb-8 lg:mt-40">
+                <div class="my-8 lg:mt-16 lg:mb-8">
                     <strong class="text-4xl font-light">$ 129,950</strong>
                     <div class="mt-2 flex gap-x-4">
                         <span>€ 17.948</span>
                         <span>₽ 1.352.075</span>
                     </div>
                 </div>
-                <a href="#buyWatch" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                <a href="#buyWatch" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                     Купить часы  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                 </a>
-                <div class="my-8 grid grid-cols-2 gap-x-4 lg:my-40 lg:max-w-[400px]">
+                <div class="mt-8 mb-16 grid grid-cols-2 gap-x-4 lg:mb-24 lg:max-w-[400px]">
                     <a href="#tradeIn" rel="modal:open" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all">
                         Купить в Trade-in
                     </a>
@@ -235,12 +237,12 @@
                         Нашли дешевле?
                     </a>
                 </div>
-                <div class="mb-8 lg:mb-32">
+                <div class="mb-16 lg:mb-24">
                     <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">ОПИСАНИЕ</h1>
-                    <article class="article mb-4 lg:mb-16">
+                    <article class="article mb-4 lg:mb-8">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, praesentium vel. Nam, officia. Rerum alias sed laudantium, suscipit autem est laborum rem cupiditate vitae nam, ratione accusamus, ad maiores ea cum recusandae enim omnis quidem tenetur. Quae sapiente mollitia quos dignissimos. Voluptates deleniti suscipit totam nam dolore dicta atque voluptatem!</p>
                     </article>
-                    <div class="mb-4 lg:flex lg:gap-x-8 lg:mb-16">
+                    <div class="mb-4 lg:flex lg:gap-x-8 lg:mb-8">
                         <div class="lg:mr-auto">
                             <b>Состояние:</b> Идеальное
                         </div>
@@ -251,12 +253,12 @@
                             <b>Документы:</b> Да
                         </div>
                     </div>
-                    <a href="#askVideo" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                    <a href="#askVideo" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                         Запросить видео часов  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                     </a>
                 </div>
                 <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">ХАРАКТЕРИСТИКИ</h1>
-                <table class="w-full mb-4 lg:mb-16">
+                <table class="w-full mb-4 lg:mb-8">
                     <tr>
                         <td class="border-b border-black/10 py-3 font-normal">Тип</td>
                         <td class="border-b border-black/10 py-3 text-right">Унисекс</td>
@@ -286,7 +288,7 @@
                         <td class="border-b border-black/10 py-3 text-right">Сталь + Золото</td>
                     </tr>
                 </table>
-                <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                     Примерить на руке  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                 </a>
             </div>
@@ -316,15 +318,15 @@
         <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Дополнительные фото</h2>
         <div id="fotoOther" class="swiper relative">
             <div class="swiper-wrapper lg:grid lg:grid-cols-3 lg:gap-8">
-                <div class="swiper-slide lg:border-2">
-                    <img class="w-full" src="img/item/item-1.jpg" alt="">
-                </div>
-                <div class="swiper-slide lg:border-2">
-                    <img class="w-full" src="img/item/item-2.jpg" alt="">
-                </div>
-                <div class="swiper-slide lg:border-2">
-                    <img class="w-full" src="img/item/item-3.jpg" alt="">
-                </div>
+                <a href="img/item/item-1.jpg" data-fancybox="galleryOther" class="swiper-slide text-center lg:border-2">
+                    <img class="w-full zoomimg" src="img/item/item-1.jpg" data-magnify-src="img/item/item-1.jpg" alt="">
+                </a>
+                <a href="img/item/item-2.jpg" data-fancybox="galleryOther" class="swiper-slide text-center lg:border-2">
+                    <img class="w-full zoomimg" src="img/item/item-2.jpg" data-magnify-src="img/item/item-2.jpg" alt="">
+                </a>
+                <a href="img/item/item-3.jpg" data-fancybox="galleryOther" class="swiper-slide text-center lg:border-2">
+                    <img class="w-full zoomimg" src="img/item/item-3.jpg" data-magnify-src="img/item/item-3.jpg" alt="">
+                </a>
             </div>
             <div class="swiper-prev top-1/2 left-1 z-[1] absolute text-2xl -translate-y-1/2 hover:text-brown lg:hidden">
                 <span class="lnr lnr-chevron-left"></span>
@@ -517,7 +519,7 @@
                     <input class="c-field__input" type="text">
                 </div>
                 <div class="mt-8">
-                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                         Получить видео  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                     </a>
                     <div class="text-sm mt-8 opacity-50">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных <br>
@@ -573,7 +575,7 @@
                     <input class="c-field__input" type="text">
                 </div>
                 <div class="mt-8">
-                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                         Получить расчет <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                     </a>
                     <div class="text-sm mt-8 opacity-50">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных <br>
@@ -607,7 +609,7 @@
                     <input class="c-field__input" type="text">
                 </div>
                 <div class="mt-8">
-                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                         Отправить  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                     </a>
                     <div class="text-sm mt-8 opacity-50">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных <br>
@@ -637,7 +639,7 @@
                     <input class="c-field__input" type="text">
                 </div>
                 <div class="mt-8">
-                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-base lg:text-xl">
+                    <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                         Отправить заявку  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                     </a>
                     <div class="text-sm mt-8 opacity-50">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных <br>
@@ -652,9 +654,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.0.2/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
     <script>
+
+        
 
         if (window.matchMedia('(max-width: 1024px)').matches) {
             const fotoCarusel = new Swiper('#fotoCarusel', {
@@ -673,8 +679,13 @@
                     prevEl: ".swiper-prev",
                 },
             })
-            fotoOther
+        } else {
+            $('.zoomimg').magnify();
         }
+
+        
+
+        
 
         $('[data-filt-link]').click(function () {
             name = $(this).attr('data-filt-link');

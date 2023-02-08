@@ -12,12 +12,10 @@ body {
 
 /* --------------------------------- HEADER --------------------------------- */
 .main-header_in {
-  -webkit-animation: 0.5s headerIn both;
-          animation: 0.5s headerIn both;
+  animation: 0.5s headerIn both;
 }
 .main-header_out {
-  -webkit-animation: 0.3s headerOut both;
-          animation: 0.3s headerOut both;
+  animation: 0.3s headerOut both;
 }
 .main-header_white .main-header__burger div {
   background-color: black;
@@ -80,6 +78,7 @@ body {
   transform: rotate(45deg) translateY(-6px);
 }
 
+/* ----------------------------------- ui ----------------------------------- */
 .c-select {
   height: 40px;
   position: relative;
@@ -163,6 +162,82 @@ body {
   border-color: #C28D3F;
 }
 
+.range-slider {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.range-slider .noUi-base:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 1px;
+  background: #ccc;
+  top: 9px;
+  z-index: -1;
+}
+.range-slider .noUi-value {
+  display: none;
+}
+.range-slider .noUi-connect {
+  background: none;
+}
+.range-slider .noUi-connect:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 1px;
+  background: #C28D3F;
+  top: 9px;
+  z-index: -1;
+}
+.range-slider .noUi-handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #C28D3F;
+  box-shadow: none;
+  border: none;
+  top: -1px;
+  right: -10px;
+  cursor: pointer;
+}
+.range-slider .noUi-handle:before, .range-slider .noUi-handle:after {
+  display: none;
+}
+.range-slider .noUi-marker-horizontal.noUi-marker {
+  width: 1px;
+  background: #ccc;
+  margin: 0;
+  height: 10px;
+}
+.range-slider .noUi-pips-horizontal {
+  padding: 0px;
+  top: 5px;
+  bottom: 0px;
+  height: auto;
+}
+.range-slider .noUi-marker-horizontal.noUi-marker-large {
+  height: 10px;
+}
+.range-slider .noUi-tooltip {
+  font-weight: 300;
+  font-size: 12px;
+  border: none;
+  bottom: auto;
+  top: 120%;
+  background: none;
+}
+
+/* --------------------------------- magnify -------------------------------- */
+.magnify {
+  vertical-align: middle;
+}
+
 /* ---------------------------------- modal --------------------------------- */
 .blocker {
   overflow-x: hidden;
@@ -186,19 +261,7 @@ body {
   width: 100%;
   max-width: 700px;
   overflow: auto;
-  -webkit-animation: 0.3s ModalRight both;
-          animation: 0.3s ModalRight both;
-}
-
-@-webkit-keyframes ModalRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
+  animation: 0.3s ModalRight both;
 }
 
 @keyframes ModalRight {
@@ -211,28 +274,12 @@ body {
     opacity: 1;
   }
 }
-@-webkit-keyframes headerIn {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 @keyframes headerIn {
   0% {
     transform: translateY(-100%);
   }
   100% {
     transform: translateY(0%);
-  }
-}
-@-webkit-keyframes headerOut {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
   }
 }
 @keyframes headerOut {
