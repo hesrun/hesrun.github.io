@@ -288,7 +288,7 @@
                         <td class="border-b border-black/10 py-3 text-right">Сталь + Золото</td>
                     </tr>
                 </table>
-                <a href="" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
+                <a href="#handWatch" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                     Примерить на руке  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                 </a>
             </div>
@@ -671,6 +671,31 @@
         </div>
     </div>
 
+    <div id="handWatch" class="modal modal_full p-4 lg:py-8 lg:px-16">
+        <div class="h-full flex flex-col">
+            <div class="flex p-4 lg:px-16 lg:py-8">
+                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                    <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
+                </a>
+            </div>
+            <div class="my-auto p-4 lg:px-16 lg:pb-8 lg:pt-0">
+                <div class="relative overflow-hidden min-h-[600px]">
+                    <img src="img/item/hand.png" alt="" class="max-w-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <img class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" src="img/item/watch-hand.png" alt="">
+                </div>
+            </div>
+            <div class="max-w-[1300px] w-full px-4 mx-auto flex flex-col items-center my-auto gap-y-8 lg:gap-x-16 lg:flex-row">
+                <p>
+                    Мы можем прислать видеообзор <br>
+                    часов на почту или в месенджер
+                </p>
+                <a href="#askVideo" rel="modal:open" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
+                    Запросить видео часов  <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
@@ -738,7 +763,7 @@
             once: true
         });
         
-        // $('#buyWatch').modal({
+        // $('#handWatch').modal({
         //     closeExisting: false
         // });
     </script>
