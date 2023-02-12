@@ -4,6 +4,8 @@ var headerH = $('.main-header').height();
 
 $(window).scroll(function(event){
     scTop = $(this).scrollTop();
+
+    /* ------------------------------ sticky header ----------------------------- */
 	if (scTop > lastScrollTop) {
         if (scTop > 800) {
             $('.main-header').addClass('main-header_mini main-header_in')
@@ -20,7 +22,18 @@ $(window).scroll(function(event){
         }
 	}
     lastScrollTop = scTop;
+
+    /* ------------------------------ sticky watch info ----------------------------- */
+    if (scTop > 600) {
+        $('#infoShort').addClass('in').removeClass('out')
+    } else {
+        if ($('#infoShort').hasClass('in')) {
+            $('#infoShort').addClass('out').removeClass('in')
+        }
+        
+    }
 });
+
 
 $('#menuOpen').click(function(){
     $(this).toggleClass('active');

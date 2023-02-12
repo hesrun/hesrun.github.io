@@ -148,6 +148,14 @@ body {
   transform: rotate(45deg) translateY(-6px);
 }
 
+/* ------------------------------- info short ------------------------------- */
+#infoShort.in {
+  animation: 0.5s infoIn both;
+}
+#infoShort.out {
+  animation: 0.3s infoOut both;
+}
+
 /* ----------------------------------- ui ----------------------------------- */
 .c-select {
   height: 40px;
@@ -359,5 +367,25 @@ body {
   }
   100% {
     transform: translateY(-100%);
+  }
+}
+@keyframes infoIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes infoOut {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
   }
 }/*# sourceMappingURL=main.css.map */
