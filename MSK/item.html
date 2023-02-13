@@ -673,18 +673,18 @@
     <div id="handWatch" class="modal modal_full p-4 lg:py-8 lg:px-16">
         <div class="h-full flex flex-col relative z-[1]">
             <div class="flex p-4 lg:px-16 lg:py-8">
-                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
-                    <span class="lnr lnr-cross m-auto text-black md:text-2xl group-hover:text-white"></span>
+                <a class="ml-auto group h-8 w-8 md:h-10 md:w-10 border border-white lg:border-black/30 inline-flex hover:bg-brown hover:border-brown" href="#" rel="modal:close">
+                    <span class="lnr lnr-cross m-auto text-white md:text-2xl lg:text-black group-hover:text-white"></span>
                 </a>
             </div>
             <div class="my-auto p-4 lg:px-16 lg:pb-8 lg:pt-0">
-                <div class="relative overflow-hidden min-h-[300px] lg:min-h-[600px] flex">
+                <div class="relative lg:overflow-hidden min-h-[300px] lg:min-h-[600px] flex">
                     <img src="img/item/hand.png" alt="" class="max-w-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block">
                     <img id="watchFitting" class="m-auto transition-all" src="img/item/watch-hand.png" alt="">
                 </div>
             </div>
             <div class="max-w-[1300px] w-full px-4 pb-8 mx-auto flex flex-col items-center my-auto gap-y-4 lg:gap-x-16 lg:flex-row">
-                <p class="text-sm">
+                <p class="text-sm text-white lg:text-black">
                     Мы можем прислать видеообзор <br>
                     часов на почту или в месенджер
                 </p>
@@ -701,7 +701,7 @@
                 </div>
             </div>
         </div>
-        <video id="videoStream" class="fixed inset-0 w-full h-full z-[0] bg-slate-600 object-cover" autoplay="true"></video>
+        <video id="videoStream" class="fixed inset-0 w-full h-full z-[0] object-cover bg-black lg:hidden" autoplay="true"></video>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -726,18 +726,6 @@
             })
         })
 
-        var video = document.querySelector("#videoStream");
-
-        if (navigator.mediaDevices.getUserMedia) {
-                navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function (stream) {
-                video.srcObject = stream;
-            })
-            .catch(function (err0r) {
-                console.log("Something went wrong!");
-            });
-        }
-
         
 
         if (window.matchMedia('(max-width: 1024px)').matches) {
@@ -757,6 +745,19 @@
                     prevEl: ".swiper-prev",
                 },
             })
+            $('#handWatch').on($.modal.OPEN, function(event, modal) {
+            var video = document.querySelector("#videoStream");
+
+                if (navigator.mediaDevices.getUserMedia) {
+                        navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function (stream) {
+                        video.srcObject = stream;
+                    })
+                    .catch(function (err0r) {
+                        console.log("Something went wrong!");
+                    });
+                }
+            });
         } else {
             $('.zoomimg').magnify();
         }
