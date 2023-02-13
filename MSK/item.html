@@ -561,7 +561,7 @@
                 <h2 class="uppercase text-2xl lg:text-4xl mb-4">Trade-in</h2>
                 <p>Приложите картинку ваших часов, которые вы желаете зачесть при покупке Rolex Oyster Perpetual Day-date и получите расчет в течение 30 минут</p>
                 <div class="mb-4 lg:mb-8 mt-8">
-                    <label for="clipPhoto" class="flex items-center border border-dashed border-black/25 rounded-sm p-6 gap-4">
+                    <label for="clipPhoto" class="flex items-center border border-dashed border-black/25 rounded-sm p-6 gap-4 cursor-pointer hover:border-solid hover:border-brown hover:bg-brown/10 transition-all">
                         <img class="w-12 lg:w-auto" src="img/icons/image.svg" alt="">
                         <div>
                             <span class="text-brown font-normal">Загрузите фото часов...</span>
@@ -728,8 +728,15 @@
 
         const constraints = {
             audio: false,
-            facingMode: 'environment',
-            video: { width: 400, height: 800 }
+            video: {
+                width: {
+                    min: 320,
+                },
+                height: {
+                    min: 200,
+                },
+                facingMode: 'environment'
+            }
         };
         const video = document.querySelector("#videoStream");
 
@@ -752,11 +759,11 @@
                 },
             })
             $('#handWatch').on($.modal.OPEN, function(event, modal) {
+
                 navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
-                
                     video.srcObject = mediaStream;
                     video.onloadedmetadata = () => {
-                    video.play();
+                        video.play();
                     };
                 })
                 .catch((err) => {
