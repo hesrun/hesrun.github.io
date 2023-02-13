@@ -726,7 +726,13 @@
             })
         })
 
-        
+        const constraints = {
+            audio: false,
+            facingMode: 'environment',
+            video: { width: 400, height: 800 }
+        };
+        const video = document.querySelector("#videoStream");
+
 
         if (window.matchMedia('(max-width: 1024px)').matches) {
             const fotoCarusel = new Swiper('#fotoCarusel', {
@@ -746,17 +752,17 @@
                 },
             })
             $('#handWatch').on($.modal.OPEN, function(event, modal) {
-            var video = document.querySelector("#videoStream");
-
-                if (navigator.mediaDevices.getUserMedia) {
-                        navigator.mediaDevices.getUserMedia({ video: true })
-                    .then(function (stream) {
-                        video.srcObject = stream;
-                    })
-                    .catch(function (err0r) {
-                        console.log("Something went wrong!");
-                    });
-                }
+                navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
+                
+                    video.srcObject = mediaStream;
+                    video.onloadedmetadata = () => {
+                    video.play();
+                    };
+                })
+                .catch((err) => {
+                    // always check for errors at the end.
+                    console.error(`${err.name}: ${err.message}`);
+                });
             });
         } else {
             $('.zoomimg').magnify();
