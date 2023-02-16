@@ -209,98 +209,107 @@
         </ul>
     </section>
 
-    <section class="shadow-section my-4 lg:my-0 py-8 lg:py-16">
-        <form class="container px-4 mx-auto ">
-            <div class="lg:flex lg:flex-row-reverse">
-                <div class="mb-8 lg:mb-12 lg:w-4/12 lg:pl-4 lg:ml-auto">
-                    <img class="mb-4" src="img/icons/clock.svg" alt="">
-                    <h3 class="uppercase text-xl mb-4">ОНЛАЙН ОЦЕНКА ВСЕГО за 5 МИНУТ</h3>
-                    <p>Напишите в удобный для вас мессенджер, прикрепите несколько фотографий и опишите состояние часов. </p>
-                    <div class="grid grid-cols-2 gap-x-4 my-8 lg:my-10">
-                        <a href="" class="h-[50px] border border-black/25 flex items-center justify-center font-normal text-[#72BF5F] hover:opacity-70">
-                            <img class="h-full" src="img/icons/whatsapp-color.svg" alt="">
-                            Whatsapp
-                        </a>
-                        <a href="" class="h-[50px] border border-black/25 flex items-center justify-center font-normal text-[#66B4DF] hover:opacity-70">
-                            <img class="h-full" src="img/icons/telegram-color.svg" alt="">
-                            Telegram
-                        </a>
-                    </div>
-                    <p>Всего через 5 минут мы сделаем вам предварительное предложение и пригласим на личную встречу для совершения сделки </p>
-                </div>
-                <div class="lg:w-6/12">
-                    <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Предложить часы</h2>
-                    <div class="mb-4 lg:flex">
-                        <div class="c-field flex-1">
-                            <label class="c-field__label" for="">Бренд</label>
-                            <input class="c-field__input" type="text">
-                        </div>
-                        <a href="#Brands" rel="modal:open" class="text-brown font-light border-b border-dashed border-brown text-sm self-end ml-8 hover:opacity-70 hidden lg:inline">или выберите из списка</a>
-                    </div>
-                    <div class="c-field mb-4">
-                        <label class="c-field__label" for="">Модель</label>
-                        <input class="c-field__input" type="text">
-                    </div>
-                    <div class="mb-4 lg:flex lg:justify-between lg:items-center lg:my-8">
-                        <span class="font-normal block mb-4 lg:mb-0">Комплектация часов</span>
-                        <div class="grid grid-cols-2 gap-x-4 lg:w-[300px]">
-                            <input class="hidden peer/box" type="checkbox" name="set" id="box">
-                            <label for="box" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all peer-checked/box:bg-brown peer-checked/box:bg-brown peer-checked/box:text-white">
-                                Коробка
-                            </label>
-                            <input class="hidden peer/docs" type="checkbox" name="set" id="docs">
-                            <label for="docs" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all peer-checked/docs:bg-brown peer-checked/docs:bg-brown peer-checked/docs:text-white">
-                                Документы
-                            </label>
-                        </div>
-                    </div>
-                    <div class="c-field mb-8">
-                        <label class="c-field__label" for="">Описание</label>
-                        <input class="c-field__input" type="text">
-                    </div>
-                    <div class="mb-4 lg:mb-8">
-                        <label for="clipPhoto" class="flex items-center border border-dashed border-black/25 rounded-sm p-6 gap-4 cursor-pointer hover:border-solid hover:border-brown hover:bg-brown/10 transition-all">
-                            <img class="w-12 lg:w-auto" src="img/icons/image.svg" alt="">
-                            <div>
-                                <span class="text-brown font-normal">Загрузите фото часов...</span>
-                                <span class="text-sm hidden lg:block">или перетащите сюда</span>
-                            </div>
-                        </label>
-                        <input type="file" name="" id="clipPhoto" class="hidden">
-                    </div>
-                    <div class="flex flex gap-8 overflow-y-auto">
-                        <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
-                            <img src="img/consign/thumb.jpg" alt="" class="w-full h-full object-cover object-center">
-                            <a href="" class="absolute w-8 h-8 border border-black/10 flex -right-4 -bottom-4 bg-white z-[1] hover:bg-brown hover:border-brown hover:text-white transition-all">
-                                <span class="lnr lnr-cross m-auto"></span>
-                            </a>
-                        </div>
-                        <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
-                        </div>
-                        <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
-                        </div>
-                        <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
-                        </div>
-                        <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
-                        </div>
-                    </div>
-                    <div class="c-field">
-                        <label class="c-field__label" for="">Телефон для связи</label>
-                        <input class="c-field__input" type="text">
-                    </div>
-                    
-                </div>
+    <section class="container px-4 mx-auto flex flex-col lg:flex-row-reverse lg:gap-x-32 gap-y-8 lg:gap-y-0 py-8">
+        <div class="lg:mt-8">
+            <img class="mb-4" src="img/icons/clock.svg" alt="">
+            <h3 class="uppercase text-xl mb-4">ОНЛАЙН ОЦЕНКА ВСЕГО за 5 МИНУТ</h3>
+            <p>Напишите в удобный для вас мессенджер, прикрепите несколько фотографий и опишите состояние часов. </p>
+            <div class="grid grid-cols-2 gap-x-4 my-8 lg:my-10">
+                <a href="" class="group h-[50px] border border-[#03A400] flex items-center gap-x-4 justify-center font-normal text-[#03A400] hover:bg-[#03A400] hover:text-white transition-all">
+                    <img class="group-hover:grayscale-[5] group-hover:brightness-[100] transition-all" src="img/icons/whatsapp-color.svg" alt="">
+                    Whatsapp
+                </a>
+                <a href="" class="group h-[50px] border border-[#1491D8] flex items-center gap-x-4 justify-center font-normal text-[#1491D8] hover:bg-[#1491D8] hover:text-white transition-all">
+                    <img class="group-hover:grayscale-[5] group-hover:brightness-[100] transition-all" src="img/icons/telegram-color.svg" alt="">
+                    Telegram
+                </a>
             </div>
-            <div class="mt-8 lg:flex lg:justify-between ">
-                <div class="lg:w-6/12 lg:flex lg:justify-between lg:items-center">
+            <p>Всего через 5 минут мы сделаем вам предварительное предложение и пригласим на личную встречу для совершения сделки </p>
+            <button id="showForm" class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl lg:hidden mt-8">
+                Предложить свои часы <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
+            </button>
+        </div>
+        <div id="requestForm" class="hidden lg:block shadow-section px-4 -mx-4 py-8 lg:px-12 lg:mx-0 lg:py-12 lg:w-7/12 lg:shrink-0">
+            <h2 class="uppercase text-2xl lg:text-4xl mb-8 lg:mb-12">Предложить часы</h2>
+            <form action="">
+                <div class="mb-4 lg:flex">
+                    <div class="c-field c-field_error flex-1">
+                        <label class="c-field__label" for="">Бренд</label>
+                        <input class="c-field__input" type="text">
+                        <span class="text-red-600 font-light text-xs absolute whitespace-nowrap right-0 -bottom-5">Error text</span>
+                    </div>
+                    <a href="#Brands" rel="modal:open" class="text-brown font-light border-b border-dashed border-brown text-sm self-end lg:ml-8 hover:opacity-70">или выберите из списка</a>
+                </div>
+                <div class="c-field c-field_ok mb-4">
+                    <label class="c-field__label" for="">Модель</label>
+                    <input class="c-field__input" type="text">
+                    <span class="text-green-600 font-light text-xs absolute whitespace-nowrap right-0 -bottom-5">sucess text</span>
+                </div>
+                <div class="mb-4 lg:flex lg:justify-between lg:items-center lg:my-8">
+                    <span class="font-normal block mb-4 lg:mb-0">Комплектация часов</span>
+                    <div class="grid grid-cols-2 gap-x-4 lg:w-[300px]">
+                        <input class="hidden peer/box" type="checkbox" name="set" id="box">
+                        <label for="box" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all peer-checked/box:bg-brown peer-checked/box:bg-brown peer-checked/box:text-white">
+                            Коробка
+                        </label>
+                        <input class="hidden peer/docs" type="checkbox" name="set" id="docs">
+                        <label for="docs" class="cursor-pointer h-[50px] border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all peer-checked/docs:bg-brown peer-checked/docs:bg-brown peer-checked/docs:text-white">
+                            Документы
+                        </label>
+                    </div>
+                </div>
+                <div class="c-field mb-8">
+                    <label class="c-field__label" for="">Описание</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="mb-4 lg:mb-8">
+                    <label for="clipPhoto" class="drop-on drop-disabled flex items-center border border-dashed border-black/25 rounded-sm p-6 gap-4 cursor-pointer hover:border-solid hover:border-brown hover:bg-brown/10 transition-all">
+                        <img class="w-12 lg:w-auto" src="img/icons/image.svg" alt="">
+                        <div>
+                            <span class="text-brown font-normal">Загрузите фото часов...</span>
+                            <span class="text-sm hidden lg:block">или перетащите сюда</span>
+                            <span class="text-sm text-red-500 block font-light">up to 5mb (png,exe)</span>
+                        </div>
+                    </label>
+                    <input type="file" name="" id="clipPhoto" class="hidden">
+                </div>
+                <div class="flex flex gap-8 overflow-y-auto">
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                        <img src="img/consign/thumb.jpg" alt="" class="w-full h-full object-cover object-center">
+                        <a href="" class="absolute w-8 h-8 border border-black/10 flex -right-4 -bottom-4 bg-white z-[1] hover:bg-brown hover:border-brown hover:text-white transition-all">
+                            <span class="lnr lnr-cross m-auto"></span>
+                        </a>
+                        <div class="absolute bg-black/20 inset-0">
+                            <div class="w-8 h-8 border-t-2 border-l-2 border-white rounded-full absolute left-1/2 top-1/2 -ml-4 -mt-4 animate-spin"></div>
+                        </div>
+                    </div>
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                        <div class="absolute bg-black/20 inset-0">
+                            <div class="w-8 h-8 border-t-2 border-l-2 border-white rounded-full absolute left-1/2 top-1/2 -ml-4 -mt-4 animate-spin"></div>
+                        </div>
+                    </div>
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                    </div>
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                    </div>
+                    <div class="w-20 h-20 shrink-0 mb-8 border border-black/10 relative">
+                    </div>
+                </div>
+                <div class="c-field">
+                    <label class="c-field__label" for="">Телефон для связи</label>
+                    <input class="c-field__input" type="text">
+                </div>
+                <div class="lg:flex lg:justify-between mt-8">
                     <button class="group text-brown font-normal flex gap-4 items-center hover:opacity-70 transition text-xl">
                         Предложить свои часы <img class="group-hover:translate-x-2 transition-transform w-[35px] lg:w-auto" src="img/icons/arrow-right-circle.svg" alt="">
                     </button>
+                    <button class="text-gray-400 font-normal flex gap-4 items-center text-xl pointer-events-none select-none">
+                        Отправляем <img class="animate-spin w-[35px] lg:w-auto" src="img/icons/refresh-circle.svg" alt="">
+                    </button>
                     <div class="hidden lg:block">Обычно, мы отвечаем <br> в течение 30 минут</div>
                 </div>
-                <div class="hidden lg:block lg:w-4/12 lg:pl-4 text-sm">Нажимая на кнопку, вы даете <a href="" class="underline">согласие на обработку</a> своих персональных данных и соглашаетесь с политикой конфиденциальности</div>
-            </div>
-        </form>
+            </form>
+        </div>
     </section>
 
     <section class="container px-4 mx-auto py-8 lg:py-16 flex flex-col gap-y-12 lg:flex-row lg:gap-y-12">
@@ -724,6 +733,7 @@
                 <a href="" rel="" class="cursor-pointer h-[50px] w-40 border border-black/25 flex items-center justify-center font-normal hover:border-brown hover:bg-brown hover:text-white transition-all">
                     Закрыть
                 </a>
+            </div>
         </div>
     </div>
 
@@ -734,6 +744,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/main.js"></script>
     <script>
+
+        $('#showForm').click(function(){
+            $('#requestForm').slideToggle();
+            return false;
+        })
         const swiper = new Swiper('.swiper', {
             slidesPerView: "auto",
             spaceBetween: 15,
@@ -761,9 +776,9 @@
             once: true
         });
         
-        $('#Sucess').modal({
-            closeExisting: false
-        });
+        // $('#Sucess').modal({
+        //     closeExisting: false
+        // });
     </script>
 </body>
 </html>
