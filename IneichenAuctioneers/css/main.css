@@ -2769,6 +2769,9 @@ select:-webkit-autofill:focus {
   padding-top: 150%;
   transition: filter 1s;
 }
+.lot-item__image_square {
+  padding-top: 100%;
+}
 .lot-item__image > img {
   position: absolute;
   left: 0px;
@@ -4019,6 +4022,27 @@ select:-webkit-autofill:focus {
   line-height: 35px;
 }
 
+.crypto-links_footer .crypto-links__image {
+  max-height: 50px;
+}
+.crypto-links_footer .crypto-links__links {
+  margin-top: 0;
+}
+.crypto-links__links {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.crypto-links__image {
+  vertical-align: middle;
+  width: 100%;
+}
+.crypto-links__image_gray {
+  filter: grayscale(1);
+}
+
 /* --------------------------------- landing -------------------------------- */
 .land-section {
   padding: 100px 0;
@@ -5032,6 +5056,16 @@ select:-webkit-autofill:focus {
   display: grid;
   grid-template-rows: 1fr;
   gap: 15px 0;
+  margin-bottom: 30px;
+}
+.invoice-modal__winner {
+  font-size: 15px;
+  margin: 30px 0;
+}
+.invoice-modal__winner p {
+  font-weight: 400;
+  margin-top: 2rem;
+  line-height: 1.2;
 }
 
 .buyitnow-confirm {
@@ -5103,6 +5137,7 @@ select:-webkit-autofill:focus {
   height: 100%;
 }
 .footer__lang {
+  display: none;
   height: 40px;
   border-radius: 20px;
   color: #fff;
@@ -6876,6 +6911,13 @@ select:-webkit-autofill:focus {
   /* --------------------------------- footer --------------------------------- */
   .footer__top-line {
     display: block;
+  }
+  .footer__bottom-line {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer__apps {
+    margin: auto;
   }
   .footer__contacts {
     display: none;
@@ -8895,11 +8937,9 @@ select:-webkit-autofill:focus {
     height: 40px;
   }
   .footer__apps {
-    justify-content: space-between;
-    margin-left: 0;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    order: -1;
   }
   /* ---------------------------------- sign ---------------------------------- */
   .sign-great {
@@ -9561,4 +9601,4 @@ select:-webkit-autofill:focus {
 }
 .grecaptcha-badge {
   right: -400px !important;
-}/*# sourceMappingURL=main.css.map */
+}

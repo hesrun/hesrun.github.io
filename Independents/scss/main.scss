@@ -18,6 +18,7 @@
     --green: #25A46F;
     --red: red;
     --blue: blue;
+    --blue-inech: #1C2473;
     --space1:15px;
     --space2:30px;
     --space3:45px;
@@ -613,14 +614,9 @@ blockquote {
     }
 }
 
-.watchmakers-filter {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
 .alphabet {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     a {
@@ -672,6 +668,10 @@ blockquote {
     display: grid;
     grid-template-columns: 1fr 350px;
     gap: 0 200px;
+    &__photo {
+        width: 100%;
+        filter: grayscale(1);
+    }
     &__contact {
         line-height: 1.5;
         a {
@@ -777,7 +777,7 @@ blockquote {
 }
 .lot-bids-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: 1fr auto;
     grid-gap: 30px;
     &__no-premium {
         display: block;

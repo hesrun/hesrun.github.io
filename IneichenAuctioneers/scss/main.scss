@@ -1386,6 +1386,9 @@
         position: relative;
         padding-top: 150%;
         transition: filter 1s;
+        &_square {
+            padding-top: 100%;
+        }
         > img {
             position: absolute;
             left: 0px;
@@ -2685,6 +2688,31 @@
     }
 }
 
+.crypto-links {
+    &_footer {
+        .crypto-links__image {
+            max-height: 50px;
+        }
+        .crypto-links__links {
+            margin-top: 0;
+        }
+    }
+    &__links {
+        margin-top: 8px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+    }
+    &__image {
+        vertical-align: middle;
+        width: 100%;
+        &_gray {
+            filter: grayscale(1);
+        }
+    }
+}
+
 /* --------------------------------- landing -------------------------------- */
 .land-section {
     padding: 100px 0;
@@ -3706,6 +3734,16 @@
         display: grid;
         grid-template-rows: 1fr;
         gap: 15px 0;
+        margin-bottom: 30px;
+    }
+    &__winner {
+        font-size: 15px;
+        margin: 30px 0;
+        p {
+            font-weight: 400;
+            margin-top: 2rem;
+            line-height: 1.2;
+        }
     }
 }
 
@@ -3779,6 +3817,7 @@
         }
     }
     &__lang {
+        display: none;
         height: 40px;
         border-radius: 20px;
         color: #fff;

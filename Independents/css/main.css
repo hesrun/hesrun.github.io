@@ -16,6 +16,7 @@
   --green: #25A46F;
   --red: red;
   --blue: blue;
+  --blue-inech: #1C2473;
   --space1:15px;
   --space2:30px;
   --space3:45px;
@@ -321,6 +322,23 @@ h5, .h5 {
   background: var(--red);
   color: white;
 }
+.button_blue.button_filled {
+  background: var(--blue-inech);
+  color: white;
+}
+.button_blue.button_filled:hover {
+  background: white;
+  color: var(--blue-inech);
+  border: 1px var(--blue-inech) solid;
+}
+.button_blue.button_outline {
+  border: 1px var(--blue-inech) solid;
+  color: var(--blue-inech);
+}
+.button_blue.button_outline:hover {
+  background: var(--blue-inech);
+  color: white;
+}
 .button_full {
   width: 100%;
 }
@@ -527,12 +545,6 @@ h5, .h5 {
   background: #efefef;
 }
 
-@-webkit-keyframes Spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes Spin {
   to {
     transform: rotate(360deg);
@@ -541,7 +553,6 @@ h5, .h5 {
 /* --------------------------------- header --------------------------------- */
 .main-header {
   top: 0px;
-  position: -webkit-sticky;
   position: sticky;
   background: black;
   padding-top: 30px;
@@ -781,8 +792,7 @@ h5, .h5 {
   font-size: 50px;
   margin-left: -25px;
   opacity: 1;
-  -webkit-animation: DownArr 2s infinite;
-          animation: DownArr 2s infinite;
+  animation: DownArr 2s infinite;
 }
 .main-hero__video {
   position: absolute;
@@ -812,21 +822,6 @@ h5, .h5 {
 }
 .main-hero__title {
   color: white;
-}
-
-@-webkit-keyframes DownArr {
-  0% {
-    opacity: 0;
-    transform: translateY(0px);
-  }
-  80% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
 }
 
 @keyframes DownArr {
@@ -926,8 +921,7 @@ h5, .h5 {
   border: 2px var(--green) solid;
   border-left-color: transparent;
   border-right-color: transparent;
-  -webkit-animation: Spin 0.7s ease-in-out infinite;
-          animation: Spin 0.7s ease-in-out infinite;
+  animation: Spin 0.7s ease-in-out infinite;
   z-index: 3;
 }
 .lot-item__body {
@@ -1075,14 +1069,9 @@ h5, .h5 {
   filter: grayscale(0%);
 }
 
-.watchmakers-filter {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
 .alphabet {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
@@ -1135,6 +1124,10 @@ h5, .h5 {
   display: grid;
   grid-template-columns: 1fr 350px;
   gap: 0 200px;
+}
+.watchmaker__photo {
+  width: 100%;
+  filter: grayscale(1);
 }
 .watchmaker__contact {
   line-height: 1.5;
@@ -1242,7 +1235,7 @@ h5, .h5 {
 
 .lot-bids-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 1fr auto;
   grid-gap: 30px;
 }
 .lot-bids-buttons__no-premium {
@@ -1594,11 +1587,6 @@ h5, .h5 {
   .watchmakers-grid {
     grid-gap: 60px 30px;
   }
-  .watchmakers-filter {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  }
   .watchmaker-item__image img {
     filter: grayscale(0);
   }
@@ -1853,15 +1841,6 @@ h5, .h5 {
   .watchmaker-item__name {
     font-size: 15px;
   }
-  .watchmakers-filter {
-    gap: 15px;
-  }
-  .watchmakers-filter .button {
-    padding: 0;
-  }
-  .watchmakers-filter .alphabet {
-    grid-column: 3 span;
-  }
   /* ------------------------------- watchmaker ------------------------------ */
   .watchmaker {
     grid-template-columns: 1fr;
@@ -2041,4 +2020,4 @@ h5, .h5 {
   .modal__close:active {
     top: 0px;
   }
-}/*# sourceMappingURL=main.css.map */
+}

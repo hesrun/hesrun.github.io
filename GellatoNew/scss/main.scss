@@ -228,6 +228,7 @@ h1,h2,h3,h4,h5 {
         gap: 0 10px;
     }
     &__cart-btn {
+        position: relative;
         display: block;
         width: 50px;
         height: 50px;
@@ -235,7 +236,7 @@ h1,h2,h3,h4,h5 {
         line-height: 50px;
         color: #fff;
         border-radius: 50%;
-        font-size: 18px;
+        font-size: 24px;
         &_inverse {
             background: $violet;
         }
@@ -247,6 +248,40 @@ h1,h2,h3,h4,h5 {
                 transform: scale(1.1);
             }
         }
+    }
+    &__favorite-count {
+        color: #fff;
+        text-decoration: none;
+        font-size: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-55%);
+    }
+    &__cart-count {
+        background: black;
+        position: absolute;
+        right: -2px;
+        top: -2px;
+        font-size: 9px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        color: white;
+        line-height: 20px;
+    }
+    &__cart-summ {
+        background: black;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -10px;
+        font-size: 9px;;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        line-height: 20px;
     }
     &__nav {
         display: flex;
@@ -1083,6 +1118,8 @@ h1,h2,h3,h4,h5 {
 }
 /* ------------------------------ product-item ------------------------------ */
 .product-item {
+    display: flex;
+    flex-direction: column;
     &__image {
         position: relative;
         display: block;
@@ -1117,6 +1154,7 @@ h1,h2,h3,h4,h5 {
         }
     }
     &__footer {
+        margin-top: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1258,6 +1296,7 @@ h1,h2,h3,h4,h5 {
             text-align: center;
             line-height: 40px;
             font-size: 18px;
+            z-index: 1;
         }
     }
     &__cart-btn {
@@ -1272,6 +1311,28 @@ h1,h2,h3,h4,h5 {
         text-decoration: none;
         &:hover {
             background: $violet-dark;
+        }
+        &_request {
+            background: #ccc;
+            &:hover {
+                background: darken(#ccc,10);
+            }
+        }
+        &_load {
+            position: relative;
+            color: transparent;
+            user-select: none;
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border: 2px white solid;
+                border-left-color: transparent;
+                border-radius: 50%;
+                animation: 0.5s Spin infinite linear;
+            }
         }
     }
     &__cart-count {
@@ -2215,6 +2276,7 @@ footer {
     }
 }
 .g-button {
+    $root: &;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2232,6 +2294,13 @@ footer {
         padding: 0 15px;
         font-size: 12px;
         min-height: 25px;
+        &#{$root}__loading {
+            &:after {
+                margin: -8px 0 0 -10px;
+                width: 12px;
+                height: 12px;
+            }
+        }
     }
     &_violet {
         background: $violet;
@@ -2249,6 +2318,31 @@ footer {
     }
     &__icon-left {
         margin-right: 15px;
+    }
+    &__disabled,
+    &:disabled {
+        background-color: #ccc;
+        pointer-events: none;
+    }
+    &__loading {
+        position: relative;
+        color: transparent;
+        pointer-events: none;
+        user-select :none;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -12px 0 0 -10px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 2px white solid;
+            border-left-color: transparent;
+            border-radius: 50%;
+            animation: 0.5s Spin infinite linear;
+        }
     }
 }
 .g-input {
@@ -2347,6 +2441,16 @@ footer {
       scrollbar-track-color: $background-color;
     }
   }
+
+
+@keyframes Spin {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
 
 @import 'responsive';
 
