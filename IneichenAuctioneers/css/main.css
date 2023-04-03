@@ -2552,10 +2552,14 @@ select:-webkit-autofill:focus {
 .auction-date-location__item {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 .auction-date-location__item i.mdi {
   font-size: 18px;
   margin-right: 15px;
+}
+.auction-date-location__dash {
+  margin: 0 8px;
 }
 .auction-date-location__live {
   margin-left: 15px;
@@ -2599,10 +2603,6 @@ select:-webkit-autofill:focus {
 }
 
 /* ----------------------------- event-announce ----------------------------- */
-.event-article {
-  max-width: 100%;
-}
-
 .event-announce {
   margin-bottom: 45px;
 }
@@ -2612,33 +2612,32 @@ select:-webkit-autofill:focus {
 }
 .event-announce__banner img {
   position: absolute;
+  width: 100%;
+  height: 100%;
   left: 0px;
   top: 0px;
-  height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 10px;
 }
-.event-announce__title {
-  margin: 0;
+.event-announce__info {
   padding: 150px 0;
   margin-left: 7%;
-  font-size: 30px;
-  font-weight: 500;
-  max-width: 500px;
-  color: #fff;
+  max-width: 36%;
+  color: black;
   position: relative;
   z-index: 1;
 }
-.event-announce__description {
-  line-height: 1.3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0 100px;
-}
-.event-announce__description h3 {
+.event-announce__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
   font-weight: 500;
+}
+.event-announce__text {
+  line-height: 1.5;
 }
 
 .event-announce-list {
@@ -2722,6 +2721,8 @@ select:-webkit-autofill:focus {
   margin: 30px 0 0 0;
   width: 100%;
   height: 290px;
+  border: none;
+  filter: grayscale(1);
 }
 
 /* ---------------------------------- lots ---------------------------------- */
@@ -7202,6 +7203,26 @@ select:-webkit-autofill:focus {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
+  /* ----------------------------- event-announce ----------------------------- */
+  .event-announce__info {
+    padding: 50px 0;
+    max-width: 50%;
+    color: black;
+    position: relative;
+    z-index: 1;
+  }
+  .event-announce__title {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .event-announce__text {
+    line-height: 1.5;
+  }
+  .event-announce-list {
+    grid-gap: 0 30px;
+  }
   /* ---------------------------------- results --------------------------------- */
   .image-banner {
     padding: 20vw 15px;
@@ -8108,18 +8129,17 @@ select:-webkit-autofill:focus {
   .event-announce__banner {
     margin-bottom: 30px;
   }
+  .event-announce__banner img {
+    -o-object-position: left;
+       object-position: left;
+  }
   .event-announce__title {
     font-size: 18px;
+  }
+  .event-announce__info {
     padding: 45px 30px;
     margin: 0;
     max-width: 100%;
-  }
-  .event-announce__description {
-    grid-template-columns: 1fr;
-    grid-gap: 15px 0;
-  }
-  .event-announce__description h3 {
-    font-size: 15px;
   }
   .event-announce-list {
     grid-template-columns: 1fr;
