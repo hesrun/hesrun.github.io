@@ -370,6 +370,7 @@ h5, .h5 {
   min-width: 100%;
   top: 100%;
   left: 0px;
+  margin-top: -1px;
   position: absolute;
   background: #fff;
   z-index: 3;
@@ -428,9 +429,16 @@ h5, .h5 {
   margin: 0 auto;
   padding: 50px 150px;
 }
+.modal_small {
+  max-width: 600px;
+  padding: 50px;
+}
 .modal__content {
   padding: 45px 0;
   line-height: 1.5;
+}
+.modal__content:last-of-type {
+  padding-bottom: 0;
 }
 .modal__close {
   cursor: pointer;
@@ -894,6 +902,10 @@ h5, .h5 {
   grid-gap: 60px 50px;
 }
 
+.lot-item {
+  display: flex;
+  flex-direction: column;
+}
 .lot-item_load .lot-item__image {
   pointer-events: none;
 }
@@ -923,6 +935,11 @@ h5, .h5 {
   border-right-color: transparent;
   animation: Spin 0.7s ease-in-out infinite;
   z-index: 3;
+}
+.lot-item__info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 .lot-item__body {
   position: relative;
@@ -962,24 +979,27 @@ h5, .h5 {
 }
 .lot-item__name {
   font-size: 13px;
-  margin-top: 5px;
+  margin: 6px 0 15px;
 }
 .lot-item__bids {
-  margin-top: 15px;
+  margin-top: auto;
 }
-.lot-item__price {
-  font-size: 14px;
-  display: inline-block;
+.lot-item__price span {
+  font-size: 12px;
+}
+.lot-item__price-value {
+  margin-top: 4px;
   font-weight: 700;
-  line-height: 35px;
-  background: var(--grey-bg);
-  padding: 0 30px;
+  font-size: 18px;
 }
 .lot-item__bids {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 15px;
 }
 .lot-item__bids-count {
+  display: none;
   font-size: 13px;
   margin-left: 30px;
 }
@@ -1218,30 +1238,54 @@ h5, .h5 {
   grid-gap: 0 100px;
 }
 
-.lot-values__item {
+.lot-values {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 50px;
+}
+.lot-values__item span {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
 }
 .lot-values__item strong {
   font-family: var(--america);
-  font-size: 24px;
+  font-size: 30px;
 }
-.lot-values__bids {
-  border: 1px var(--grey-line) solid;
-  font-size: 12px;
-  padding: 5px 10px;
+
+.lot-bitcoin {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.lot-bids {
+  font-weight: 500;
+  align-self: center;
+  font-size: 15px;
+  white-space: nowrap;
 }
 
 .lot-bids-buttons {
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr auto;
-  grid-gap: 30px;
+  gap: 10%;
 }
-.lot-bids-buttons__no-premium {
-  display: block;
-  margin-top: 10px;
-  font-weight: 500;
+.lot-bids-buttons__visit {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+  align-items: center;
+}
+.lot-bids-buttons__other {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
 }
 
 .lot-video video {
@@ -1505,6 +1549,12 @@ h5, .h5 {
 }
 
 /* ------------------------------- responsive ------------------------------- */
+@media screen and (max-width: 1366px) {
+  .lot-bids-buttons {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .container {
     padding-left: 30px;
@@ -1790,13 +1840,10 @@ h5, .h5 {
   .lot-item__brand {
     font-size: 15px;
   }
-  .lot-item__price {
-    padding: 0;
-    background: none;
-    line-height: 1;
-  }
-  .lot-item__bids-count {
-    margin-left: auto;
+  .lot-item__bids {
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .lot-item__upper-image {
     transition: all 0.1s;
@@ -1880,15 +1927,26 @@ h5, .h5 {
     margin: 10px 0 0 0;
     display: flex;
   }
+  .lot-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .lot-values__item span {
+    font-size: 12px;
+  }
   .lot-values__item strong {
     font-size: 18px;
   }
-  .lot-bids-buttons {
-    grid-template-columns: 1fr auto;
-    grid-gap: 15px;
-  }
-  .lot-bids-buttons .dropdown {
+  .lot-bitcoin {
     grid-column: 2 span;
+    margin: 0;
+  }
+  .lot-bitcoin br {
+    display: none;
+  }
+  .lot-bids-buttons {
+    gap: 15px;
   }
   /* ------------------------------ participation ----------------------------- */
   .steps-list__item {

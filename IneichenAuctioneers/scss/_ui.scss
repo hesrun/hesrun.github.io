@@ -1,6 +1,12 @@
 .container {
     padding: 0 150px;
 }
+.question-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 22px;
+    cursor: pointer;
+}
 .c-alert {
     margin: 30px 0;
     padding: 10px 15px;
@@ -47,7 +53,7 @@
     .flag-icon {
         margin-right: 10px;
     }
-    i.mdi {
+    .mdi {
         font-size: 18px;
     }
     &_america {
@@ -241,6 +247,7 @@
     }
     &_medium {
         height: 50px;
+        min-width: 50px;
         border-radius: 12px;
         font-size: 15px;
         border-width: 1px;
@@ -248,12 +255,14 @@
     }
     &_small {
         height: 35px;
+        min-width: 35px;
         border-radius: 30px;
         font-size: 13px;
         border-width: 1px;
     }
     &_mini {
         height: 25px;
+        min-width: 25px;
         padding: 0 10px;
         border-radius: 8px;
         font-size: 13px;
@@ -263,6 +272,12 @@
                 height: 15px;
                 margin: -7.5px 0 0 -7.5px;
             }
+        }
+    }
+    &_icon {
+        padding: 0;
+        &#{$root}_medium .mdi {
+            font-size: 22px;
         }
     }
     &_icon-left {
@@ -885,6 +900,9 @@
     }
     &__body {
         padding: 50px 0;
+        &:last-of-type {
+            padding-bottom: 0;
+        }
         p {
             line-height: 1.5;
             margin-bottom: 15px;
@@ -1029,6 +1047,20 @@
     position: relative;
 }
 
+.tooltipster-sidetip {
+    .tooltipster-box {
+        border-color: $blue-bg;
+        background: $blue-bg;
+    }
+    .tooltipster-arrow {
+        display: none !important;
+    }
+    .tooltipster-content {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+}
+
 #range {
     -webkit-appearance: none; width: 100%;
 }
@@ -1079,6 +1111,10 @@
     left: 50%;
     transform: translate(-50%, 0);
 }
+
+
+
+
 
 @keyframes Spin {
     from {

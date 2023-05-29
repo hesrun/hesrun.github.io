@@ -1,4 +1,8 @@
-@media screen and (max-width:1500px){
+@media screen and (max-width:1366px){
+    .lot-bids-buttons {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
 
 @media screen and (max-width:1200px){
@@ -306,14 +310,15 @@
         &__brand {
             font-size: 15px;
         }
-        &__price {
-            padding: 0;
-            background: none;
-            line-height: 1;
+        &__name {
+            
         }
-        &__bids-count {
-            margin-left: auto;
+        &__bids {
+            gap: 10px;
+            flex-direction: column;
+            align-items: flex-start;
         }
+
         &__upper-image {
             transition: all 0.1s;
         }
@@ -406,18 +411,27 @@
         display: flex;
     }
     .lot-values {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
         &__item {
+            span {
+                font-size: 12px;
+            }
             strong {
                 font-size: 18px;
             }
         }
     }
-    .lot-bids-buttons {
-        grid-template-columns: 1fr auto;
-        grid-gap: 15px;
-        .dropdown {
-            grid-column: 2 span;
+    .lot-bitcoin {
+        grid-column: 2 span;
+        margin: 0;
+        br {
+            display: none;
         }
+    }
+    .lot-bids-buttons {
+        gap: 15px;
     }
     /* ------------------------------ participation ----------------------------- */
     .steps-list {

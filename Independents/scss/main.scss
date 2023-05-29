@@ -434,6 +434,8 @@ blockquote {
 }
 .lot-item {
     $root: &;
+    display: flex;
+    flex-direction: column;
     &_load {
         #{$root}__image {
             pointer-events: none;
@@ -465,6 +467,11 @@ blockquote {
                 z-index: 3;
             }
         }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
     }
     &__body {
         position: relative;
@@ -507,24 +514,29 @@ blockquote {
     }
     &__name {
         font-size: 13px;
-        margin-top: 5px;
+        margin: 6px 0 15px;
     }
     &__bids {
-        margin-top: 15px;
+        margin-top: auto;
     }
     &__price {
-        font-size: 14px;
-        display: inline-block;
+        span {
+            font-size: 12px;
+        }
+    }
+    &__price-value {
+        margin-top: 4px;
         font-weight: 700;
-        line-height: 35px;
-        background: var(--grey-bg);
-        padding: 0 30px;
+        font-size: 18px;
     }
     &__bids {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        gap: 15px;
     }
     &__bids-count {
+        display: none;
         font-size: 13px;
         margin-left: 30px;
         &:hover {
@@ -760,29 +772,51 @@ blockquote {
     
 }
 .lot-values {
+    display: flex;
+    align-items: center;
+    gap: 50px;
     &__item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        span {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
         strong {
             font-family: var(--america);
-            font-size: 24px;
+            font-size: 30px;
         }
     }
-    &__bids {
-        border: 1px var(--grey-line) solid;
-        font-size: 12px;
-        padding: 5px 10px;
-    }
+}
+.lot-bitcoin {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.lot-bids {
+    font-weight: 500;
+    align-self: center;
+    font-size: 15px;
+    white-space: nowrap;
 }
 .lot-bids-buttons {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr auto;
-    grid-gap: 30px;
-    &__no-premium {
-        display: block;
-        margin-top: 10px;
-        font-weight: 500;
+    gap: 10%;
+    &__visit {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+        align-items: center;
+    }
+    &__other {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 15px;
     }
 }
 .lot-video {
@@ -1043,7 +1077,5 @@ blockquote {
         border-top: 1px var(--grey-line) solid;
     }
 }
-
-
 /* ------------------------------- responsive ------------------------------- */
 @import 'responsive';

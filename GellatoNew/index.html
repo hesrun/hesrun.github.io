@@ -379,7 +379,8 @@
         
     </header>
 
-    <section class="main-banner swiper">
+    <!-- баннер слайдер -->
+    <section style="display: none"  class="main-banner swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img src="img/index/land-banner.jpg" alt="">
@@ -392,6 +393,11 @@
             </div>
         </div>
         <div class="swiper-pagination"></div>
+    </section>
+    <!-- баннер с видео или картинкой -->
+    <section  class="main-banner">
+        <video src="video/car-video.mp4" controls="false" loop></video>
+        <!-- <img src="img/index/land-banner.jpg" alt=""> -->
     </section>
 
     <div class="land-grey-bg">
@@ -1001,7 +1007,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        var banner = new Swiper(".main-banner", {
+        var banner = new Swiper(".main-banner.swiper", {
             pagination: {
                 el: ".swiper-pagination",
             },

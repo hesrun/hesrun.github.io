@@ -371,6 +371,51 @@
         }
     }
 
+    /* ----------------------------- sell-your-watch-dealers ---------------------------- */
+    .sell-watch-dealers {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        &__info {
+            gap: 30px;
+        }
+    }
+    .earning-calculate {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        &__card {
+            color: #fff;
+            background: $blue-bg;
+            padding: 30px;
+            border-radius: 15px;
+        }
+    }
+    .sell-watch-benefits {
+        gap: 30px;
+    }
+    .highlights-catalog {
+        gap: 30px;
+        overflow: auto;
+        &__item {
+            flex: 0 0 auto;
+            width: calc(20% - 36px);
+            min-width: 200px;
+        }
+    }
+    .compare-sales-option {
+        &__table {
+            width: 160%;
+            tbody {
+                th {
+                    writing-mode: vertical-rl;
+                    text-orientation: mixed;
+                    width: 80px;
+                    position: sticky;
+                    left: 0px;
+                    background: #fff;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 820px) {
@@ -605,6 +650,9 @@
                 object-fit: cover;
             }
         }
+        &__tools-btn {
+            display: none;
+        }
         &__info-col {
             padding: 30px;
         }
@@ -615,6 +663,16 @@
             font-size: 22px;
             margin: 45px 0 30px;
         }
+    }
+    .estimator-review {
+        &__info {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+        &__price {
+            text-align: left;
+        }
+        
     }
     /* ---------------------------------- live ---------------------------------- */
     .live-auction {
@@ -1185,6 +1243,39 @@
                 margin-top: 15px;
                 line-height: 1.4;
             }
+        }
+    }
+
+    /* ----------------------------- sell-your-watch-dealers ---------------------------- */
+    .sell-watch-dealers {
+        &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    .earning-calculate {
+        &__percents {
+            grid-template-columns: 1fr;
+            > div {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 15px;
+                align-items: center;
+                .c-button {
+                    grid-column: 2 span;
+                }
+            }
+        }
+        &__percent {
+            + div {
+                margin: 0;
+            }
+        }   
+    }
+    .compare-sales-option {
+        &__table {
+            width: 200%;
         }
     }
 
@@ -1792,17 +1883,19 @@
         &__name {
             flex-direction: column-reverse;
             align-items: flex-start;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            border-bottom: 1px $grey-line solid;
+            padding-bottom: 30px;
             .c-button {
                 width: 100%;
             }
             h1 {
                 font-size: 22px;
-                margin-top: 30px;
+                margin-top: 0px;
             }
         }
         &__bids-info {
-            grid-gap: 5px 0;
+            grid-gap: 10px 0;
             margin-bottom: 30px;
             hr {
                 margin: 5px 0;
@@ -1816,19 +1909,29 @@
         &__bids {
             margin: 30px 0;
         }
+
+        &__bids-history {
+            font-size: 13px;
+        }
     
         &__other-links {
-            display: grid;
-            grid-template-rows: 1fr;
-            gap: 15px 0;
-            padding: 20px 0px;
+            grid-template-columns: 1fr;
+        }
+        &__premium {
             text-align: center;
             a {
+                line-height: 1.5;
+                display: block;
                 margin: 0px;
                 font-size: 13px;
             }
             span {
                 font-size: 13px;
+            }
+        }
+        &__payment {
+            .c-button {
+                width: 100%;
             }
         }
         &__prams-title {
@@ -1852,6 +1955,13 @@
                 width: auto;
                 padding: 30px 0 15px;
             }
+        }
+    }
+    .estimator-review {
+        margin: 30px 0;
+        padding-bottom: 30px;
+        &__value {
+            font-size: 15px;
         }
     }
 
@@ -2308,6 +2418,9 @@
             margin-bottom: 0px;
         }
     }
+
+    
+    
 
     /* --------------------------------- global --------------------------------- */
     .article-text {

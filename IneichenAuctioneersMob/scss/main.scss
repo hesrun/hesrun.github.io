@@ -877,7 +877,7 @@ h1,h2,h3,h4,h5 {
         border-bottom: 1px $grey-line solid;
         display: grid;
         gap: 15px 0;
-        div {
+        div:not(.question-btn) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -889,18 +889,6 @@ h1,h2,h3,h4,h5 {
         strong {
             font-weight: 500;
         }
-        a {
-            color: #fff;
-            background: $blue;
-            padding: 5px 15px;
-            border-radius: 10px;
-            font-size: 13px;
-            text-decoration: none;
-            transition: all 0.2s;
-            &:active {
-                transform: scale(0.8);
-            }
-        }
         hr {
             margin: 2.5px -20px;
             border:none;
@@ -908,6 +896,18 @@ h1,h2,h3,h4,h5 {
             background: $grey-light;
         }
 
+    }
+    &__bids-history {
+        color: #fff;
+        background: $blue;
+        padding: 5px 15px;
+        border-radius: 10px;
+        font-size: 13px;
+        text-decoration: none;
+        transition: all 0.2s;
+        &:active {
+            transform: scale(0.8);
+        }
     }
     &__bids-form {
         padding: 20px 20px;
@@ -948,6 +948,46 @@ h1,h2,h3,h4,h5 {
     }
     &__result {
         border-bottom: 1px $grey-line solid;
+    }
+}
+
+.estimator-review {
+    padding: 20px;
+    border-bottom: 1px $grey-line solid;
+    padding-bottom: 20px;
+    &__info {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+    &__text {
+        font-size: 14px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    &__price {
+        span {
+            color: $grey;
+            font-size: 13px;
+        }
+    }
+    &__value {
+        color: $blue;
+        line-height: 30px;
+        font-size: 15px;
+    }
+}
+.user-data {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &__name {
+        font-weight: bold;
+    }
+    &__spec {
+        margin-top: 4px;
+        font-size: 12px;
+        max-width: 130px;
     }
 }
 

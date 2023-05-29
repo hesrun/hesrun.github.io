@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.6/swiper-bundle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/css/tooltipster.bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
 </head>
@@ -73,43 +74,59 @@
                 
                 <div class="live-lot__value">
                     <div>
-                        <span>Estimate</span>
-                        <strong class="blue-text">CHF 15 000 / CHF 20 000</strong>
+                        <span>
+                            This lot has a reserve price
+                            <div class="question-btn tooltip" title="Reserve price is the minimum price for which an item will sell. If the reserve price is not met, the item will not be sold. <br/><br/>
+                            In order to protect the bidder experience, Ineichen doesn’t reveal reserve prices on the website, however in the item description Ineichen specifies if an item has a reserve or not.
+                            ">
+                                <i class="mdi mdi-help-circle-outline"></i>
+                            </div>
+                        </span>
                     </div>
                     <div>
                         <span>Starting bid</span>
                         <strong class="brown-text">CHF 20 000</strong>
                     </div>
                     <div>
-                        <span>Fixed price</span>
-                        <strong class="blue-text">CHF 2 000</strong>
+                        <span>Time left</span>
+                        <strong class="blue-text">2 days 20:23:21</strong>
+                    </div>
+                    <div>
+                        <span>Total bids</span>
+                        <a class="live-lot__bids-history"  id="OpenBidHistory">2 bids</a>
                     </div>
                     <div>
                         <span class="black-text">
                             No buyer's premium
+                            <div class="question-btn tooltip" title="Reserve price is the minimum price for which an item will sell. If the reserve price is not met, the item will not be sold. <br/><br/>
+                            In order to protect the bidder experience, Ineichen doesn’t reveal reserve prices on the website, however in the item description Ineichen specifies if an item has a reserve or not.
+                            ">
+                                <i class="mdi mdi-help-circle-outline"></i>
+                            </div>
                         </span>
                     </div>
-                    <hr>
+                    <!-- <div>
+                        <span>Estimate</span>
+                        <strong class="blue-text">CHF 15 000 / CHF 20 000</strong>
+                    </div> -->
+                    
+                    <!-- <div>
+                        <span>Fixed price</span>
+                        <strong class="blue-text">CHF 2 000</strong>
+                    </div> -->
+                    
+                    <!-- <hr>
                     <div>
                         <span>Current bid</span>
                         <strong class="blue-text">CHF 15 000</strong>
-                    </div>
-                    <div>
+                    </div> -->
+                    <!-- <div>
                         <span>Winning bidder</span>
                         <strong class="blue-text">
                             <span class="flag-icon flag-icon-ng"></span>
                             Artemy, 34
                         </strong>
-                    </div>
-                    <div>
-                        <span>Total bids</span>
-                        <a id="OpenBidHistory">2 bids</a>
-                    </div>
-                    <div>
-                        <span>Time left</span>
-                        <strong class="blue-text">2 days 20:23:21</strong>
-                    </div>
-                    
+                    </div> -->
                 </div>
                 <div class="live-lot__bids-form">
                     <div class="btn btn_disabled btn_select btn_full btn_white btn_outline">
@@ -142,7 +159,28 @@
                         Remove from favorites
                     </a>
                 </div>
-                
+                <div class="estimator-review">
+                    <div class="estimator-review__text">
+                        When it comes to watch design as art, Gérald Genta is by far the first to be mentioned. Some call him the Picasso of watch design, which underlines his status, but isn’t relevant in terms of style. His influence, his touch on this design is obvious to me. Gérald Genta can be concise, as with the Royal Oak, the Nautilus, or the Seamaster Titanium, but he can also be overly baroque. This lot convincingly demonstrates this facet of his talent, even though the watch was produced when the master had already left the brand he founded. Interest in this lot is also heightened by its incredible rarity. Among the unique specimens, as most models of the Grande Sonnerie series were produced, there are only a few that are equipped with a manual winding caliber.
+                    </div>
+                    <div class="estimator-review__info">
+                        <div class="user-data">
+                            <div class="user-data__ava">
+                                <img src="img/product/image 46.jpg" alt="">
+                            </div>
+                            <div class="user-data__info">
+                                <div class="user-data__name">Alex Kutkovoy</div>
+                                <div class="user-data__spec">More than 10 years editor in Revolution</div>
+                            </div>
+                        </div>
+                        <div class="estimator-review__price">
+                            <span>Estimate price:</span>
+                            <div class="estimator-review__value">
+                                CHF 20 000 — CHF 30 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="live-lot__specifications">
                     <div class="title">Specification</div>
                     <table>
@@ -373,7 +411,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/js/tooltipster.bundle.min.js"></script>
     <script>
+        $('.tooltip').tooltipster({
+            delay: 0,
+            maxWidth: 200,
+            contentAsHTML: true,
+            trigger: 'click'
+        });
         const swiper = new Swiper('.swiper', {
             speed: 400
         });
