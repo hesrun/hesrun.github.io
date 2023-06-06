@@ -4767,7 +4767,6 @@ select:-webkit-autofill:focus {
   background: url(../img/sell-watch/Arrow.svg);
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: calc(100% - 70px);
   margin-right: 30px;
 }
 .sell-your-watch-steps__num span {
@@ -4804,6 +4803,14 @@ select:-webkit-autofill:focus {
 .sell-your-watch-steps__instruct .mdi {
   color: gray;
   font-size: 15px;
+}
+.sell-your-watch-steps__novat {
+  display: inline-block;
+  margin-top: 15px;
+  border: 2px #1C2473 solid;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 5px;
 }
 
 .sell-your-watch-form {
@@ -4848,11 +4855,8 @@ select:-webkit-autofill:focus {
   display: flex;
   align-items: center;
 }
-.sell-watch-dealers__img {
-  border-radius: 15px;
-  overflow: hidden;
-}
 .sell-watch-dealers__img img {
+  border-radius: 15px;
   width: 100%;
   vertical-align: middle;
 }
@@ -4976,8 +4980,26 @@ select:-webkit-autofill:focus {
 
 .sell-watch-benefits {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 45px;
+  overflow: auto;
+}
+.sell-watch-benefits::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.sell-watch-benefits::-webkit-scrollbar-thumb {
+  background: #1C2473;
+}
+.sell-watch-benefits::-webkit-scrollbar-track {
+  background: white;
+}
+.sell-watch-benefits {
+  scrollbar-face-color: #1C2473;
+  scrollbar-track-color: white;
+}
+.sell-watch-benefits__item {
+  min-width: 150px;
 }
 .sell-watch-benefits__img {
   width: 100%;
@@ -4994,10 +5016,29 @@ select:-webkit-autofill:focus {
   line-height: 1.4;
 }
 
+.highlights-catalog-text {
+  margin-top: -10px;
+  margin-bottom: 40px;
+}
+
 .highlights-catalog {
   display: flex;
   gap: 45px;
   overflow: auto;
+}
+.highlights-catalog::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.highlights-catalog::-webkit-scrollbar-thumb {
+  background: #1C2473;
+}
+.highlights-catalog::-webkit-scrollbar-track {
+  background: white;
+}
+.highlights-catalog {
+  scrollbar-face-color: #1C2473;
+  scrollbar-track-color: white;
 }
 .highlights-catalog__item {
   flex: 0 0 auto;
@@ -5076,6 +5117,20 @@ select:-webkit-autofill:focus {
 
 .compare-sales-option {
   overflow: auto;
+}
+.compare-sales-option::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.compare-sales-option::-webkit-scrollbar-thumb {
+  background: #1C2473;
+}
+.compare-sales-option::-webkit-scrollbar-track {
+  background: white;
+}
+.compare-sales-option {
+  scrollbar-face-color: #1C2473;
+  scrollbar-track-color: white;
 }
 .compare-sales-option__table {
   border-collapse: collapse;
@@ -8415,8 +8470,10 @@ select:-webkit-autofill:focus {
     grid-column: 2 span;
   }
   .sell-watch-benefits {
-    grid-template-columns: 1fr 1fr;
     gap: 30px 15px;
+  }
+  .sell-watch-benefits__item {
+    min-width: 200px;
   }
   .sell-watch-benefits__title {
     font-size: 16px;
@@ -9524,6 +9581,9 @@ select:-webkit-autofill:focus {
   .sell-your-watch-steps {
     scrollbar-face-color: #1C2473;
     scrollbar-track-color: white;
+  }
+  .sell-your-watch-steps__num {
+    background-size: calc(100% - 70px);
   }
   .sell-your-watch-form {
     padding: 15px;

@@ -1283,8 +1283,10 @@
         
     }
     .sell-watch-benefits {
-        grid-template-columns: 1fr 1fr;
         gap: 30px 15px;
+        &__item {
+            min-width: 200px;
+        }
         &__title {
             font-size: 16px;
             margin: 15px 0;
@@ -2471,6 +2473,9 @@
         overflow: auto;
         padding-bottom: 15px;
         @include scrollbars(4px, $blue-bg, white);
+        &__num {
+            background-size: calc(100% - 70px);
+        }
     }
     .sell-your-watch-form {
         padding: 15px;
