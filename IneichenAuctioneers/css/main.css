@@ -44,6 +44,7 @@ body.app {
 
 h1, h2, h3, h4, h5 {
   font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
 }
 
 strong {
@@ -335,6 +336,25 @@ select:-webkit-autofill:focus {
 /* ----------------------------------- ui ----------------------------------- */
 .container {
   padding: 0 150px;
+}
+
+.loading {
+  position: relative;
+}
+.loading:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px #1C2473 solid;
+  border-left-color: transparent;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  animation: 0.5s Spin infinite linear;
+  border-radius: 50%;
 }
 
 .question-btn {
@@ -4898,32 +4918,46 @@ select:-webkit-autofill:focus {
   background: #1C2473;
   padding: 30px;
   border-radius: 15px;
+  font-size: 12px;
 }
 .earning-calculate__form {
+  margin: 10px 0 30px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
 .earning-calculate__input {
+  font-family: "GT America Extended", sans-serif;
   outline: none;
-  height: 34px;
+  font-size: 25px;
+  height: 45px;
   flex: 1 1 auto;
   background: none;
   border: none;
-  border-bottom: 2px white solid;
+  border: 1px white solid;
+  border-radius: 8px;
   color: white;
+  padding: 0 10px;
+  width: 100%;
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
 }
 .earning-calculate__input.placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.3);
 }
 .earning-calculate__input:-moz-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.3);
 }
 .earning-calculate__input::-moz-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.3);
 }
 .earning-calculate__input::-webkit-input-placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.3);
+}
+.earning-calculate__input::-webkit-outer-spin-button, .earning-calculate__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .earning-calculate__currency {
   cursor: pointer;
@@ -4935,8 +4969,12 @@ select:-webkit-autofill:focus {
 .earning-calculate__currency option {
   color: black;
 }
+.earning-calculate__title {
+  font-family: "GT America Extended", sans-serif;
+  font-size: 15px;
+}
 .earning-calculate__earn {
-  margin: 40px 0;
+  margin: 0 0 10px;
   font-family: "GT America Extended", sans-serif;
 }
 .earning-calculate__earn b {
@@ -4951,6 +4989,9 @@ select:-webkit-autofill:focus {
 }
 .earning-calculate__info {
   align-self: center;
+}
+.earning-calculate__info > h2 {
+  margin-bottom: 20px;
 }
 .earning-calculate__percents {
   display: grid;
@@ -4969,7 +5010,7 @@ select:-webkit-autofill:focus {
   font-weight: 300;
 }
 .earning-calculate__percent + div {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.3;
   margin: 10px 0 0;
 }
@@ -5016,9 +5057,11 @@ select:-webkit-autofill:focus {
   line-height: 1.4;
 }
 
-.highlights-catalog-text {
-  margin-top: -10px;
-  margin-bottom: 40px;
+.highlights-catalog-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .highlights-catalog {
@@ -5117,6 +5160,8 @@ select:-webkit-autofill:focus {
 
 .compare-sales-option {
   overflow: auto;
+  padding-top: 35px;
+  margin-top: -35px;
 }
 .compare-sales-option::-webkit-scrollbar {
   width: 4px;
@@ -5132,12 +5177,19 @@ select:-webkit-autofill:focus {
   scrollbar-face-color: #1C2473;
   scrollbar-track-color: white;
 }
+.compare-sales-option__sticker {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+}
 .compare-sales-option__table {
   border-collapse: collapse;
 }
 .compare-sales-option__table thead th {
   padding: 25px 30px;
   border-left: 1px #E1E1E1 solid;
+  position: relative;
 }
 .compare-sales-option__table thead th:first-child {
   border: none;
@@ -5463,18 +5515,22 @@ select:-webkit-autofill:focus {
   display: block;
 }
 .upload-files_new .upload-files__image {
-  border-radius: 10px;
+  border-radius: 0px;
+  border: 1px #e1e1e1 solid;
   overflow: hidden;
   width: 100%;
   height: auto;
+}
+.upload-files_new .upload-files__image img {
+  vertical-align: middle;
 }
 .upload-files_new .upload-files__remove {
   font-size: 16px;
   line-height: 26px;
   width: 26px;
   height: 26px;
-  right: -13px;
-  top: -13px;
+  right: 0px;
+  top: 0px;
   position: absolute;
   border: 1px #E1E1E1 solid;
   background: white;
@@ -8480,13 +8536,11 @@ select:-webkit-autofill:focus {
     margin: 15px 0;
   }
   .earning-calculate__percents {
-    grid-template-columns: 1fr;
+    gap: 15px;
   }
   .earning-calculate__percents > div {
-    display: grid;
-    grid-template-columns: auto 1fr;
     gap: 15px;
-    align-items: center;
+    text-align: center;
   }
   .earning-calculate__percents > div .c-button {
     grid-column: 2 span;
@@ -8498,10 +8552,8 @@ select:-webkit-autofill:focus {
     font-size: 32px;
   }
   .earning-calculate__percent + div {
-    margin: 0;
-  }
-  .earning-calculate__percent + div br {
-    display: none;
+    font-size: 12px;
+    margin: 10px 0 0 0;
   }
   .earning-calculate__buttons {
     margin-top: 30px;
@@ -8510,6 +8562,14 @@ select:-webkit-autofill:focus {
   }
   .earning-calculate__buttons .c-button:first-child {
     grid-column: 2 span;
+  }
+  .highlights-catalog-head {
+    margin-bottom: 30px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .highlights-catalog-head .title {
+    margin-bottom: 0px;
   }
   .compare-sales-option__table {
     width: 250%;
@@ -8520,6 +8580,9 @@ select:-webkit-autofill:focus {
     padding-right: 15px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .compare-sales-option__sticker {
+    transform: translate(50%, -50%) scale(0.6);
   }
 }
 @media screen and (max-width: 520px) {

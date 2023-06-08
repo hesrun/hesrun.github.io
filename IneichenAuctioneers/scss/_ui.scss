@@ -1,6 +1,24 @@
 .container {
     padding: 0 150px;
 }
+.loading {
+    position: relative;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: 3px $blue-bg solid;
+        border-left-color: transparent;
+        left: 50%;
+        top: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        animation: 0.5s Spin infinite linear;
+        border-radius: 50%;
+    }
+}
 .question-btn {
     display: inline-block;
     text-decoration: none;
@@ -327,7 +345,6 @@
         transform: scale(0.95);
     }
 }
-
 .c-field {
     $root: &;
     position: relative;

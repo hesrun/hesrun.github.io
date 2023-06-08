@@ -1294,12 +1294,10 @@
     }
     .earning-calculate {
         &__percents {
-            grid-template-columns: 1fr;
+            gap: 15px;
             > div {
-                display: grid;
-                grid-template-columns: auto 1fr;
                 gap: 15px;
-                align-items: center;
+                text-align: center;
                 .c-button {
                     grid-column: 2 span;
                 }
@@ -1313,10 +1311,8 @@
         &__percent {
             font-size: 32px;
             & + div {
-                margin: 0;
-                br {
-                    display: none;
-                }
+                font-size: 12px;
+                margin: 10px 0 0 0;
             }
             
         }
@@ -1329,7 +1325,14 @@
             }
         }
     }
-    
+    .highlights-catalog-head {
+        margin-bottom: 30px;
+        flex-direction: column;
+        gap: 15px;
+        .title {
+            margin-bottom: 0px;
+        }
+    }
     .compare-sales-option {
         &__table {
             width: 250%;
@@ -1342,6 +1345,9 @@
                     padding-right: 15px;
                 }
             }
+        }
+        &__sticker {
+            transform: translate(50%, -50%) scale(0.6);
         }
     }
 
