@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img src="svg/head-logo.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <div class="container">
+
+            <div class="land-section land-section_half">
+                <h2 class="title">Sell your watch fast & with higher profit</h2>
+                <div class="sell-watch-dealers">
+                    <div class="sell-watch-dealers__img">
+                        <img src="img/sell-watch/art-3.jpg" alt="">
+                    </div>
+                    <div class="sell-watch-dealers__info">
+                        <div class="sell-watch-dealers__text">
+                            <h3>Sell your watches at auction</h3>
+                            <p>Ineichen has been Switzerland's top auction house for the sale and purchase of the finest collectible watches since 1973, and we have a <b>unique sales concept</b> exclusively for <b>private clients</b>. Our team will work with you to <b>sell your watches at auctions - stress-free</b> and at the <b>best price.</b></p>
+                            <a class="c-button c-button_medium c-button_blue c-button_filled">Submit my watch(es)</a>
+                        </div>
+                        <div class="sell-watch-dealers__connect">
+                            <h3>Quick submit</h3>
+                            <div class="sell-watch-dealers__connetct-btns">
+                                <a href="" class="c-button c-button_full c-button_grey c-button_outline c-button_medium c-button_icon-left" style="color: #2DAB0E">
+                                    <img class="mdi" src="img/sell-watch/whatsapp.svg" alt="">
+                                    WhatsApp
+                                </a>
+                                <a href="" class="c-button c-button_full c-button_grey c-button_outline c-button_medium c-button_icon-left" style="color: #0088CC">
+                                    <img class="mdi" src="img/sell-watch/telegram.svg" alt="">
+                                    Telegram
+                                </a>
+                            </div>
+                            <small>Get an estimation within 1 hour</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="land-section land-section_half">
+                <div class="title">How it works</div>
+                <div class="sell-your-watch-steps">
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num">
+                            <span class="blue-bg">1</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Submit watch(es)</h3>
+                        <p><b>Send us</b> photos of the watches you want to sell. <b>We'll assess</b> them and decide if they're <b>suitable</b> for the auction.</p>
+                    </div>
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num">
+                            <span class="blue-bg">2</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Send watches to us</h3>
+                        <p><b>Send</b> your watches <b>to our Zurich</b> address for examination, evaluation, and pricing.</p>
+                        <a href="" class="sell-your-watch-steps__instruct">
+                            <i class="mdi mdi-file-document-outline"></i>
+                            Instructions for sending the watch
+                        </a>
+                    </div>
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num">
+                            <span class="blue-bg">3</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Listing</h3>
+                        <p>We take <b>professional photos</b> and highlight the watch's unique characteristics.</p>
+                    </div>
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num">
+                            <span class="blue-bg">4</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title">Auction</h3>
+                        <p>During the <b>two-week auction</b>, we'll determine the <b>winner</b>, handle <b></b>, and arrange <b>delivery</b> to the new owner.</p>
+                        <span class="sell-your-watch-steps__novat">No VAT charge</span>
+                    </div>
+                    <div class="sell-your-watch-steps__item">
+                        <div class="sell-your-watch-steps__num no-arr">
+                            <span class="green-bg">5</span>
+                        </div>
+                        <h3 class="sell-your-watch-steps__title green-text">Receive payment</h3>
+                        <p>You'll <b>receive payment</b> from Ineichen after deducting a commission based on the sale price.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="land-section land-section_half">
+                <div class="title">Calculate your earnings:</div>
+                <div class="earning-calculate">
+                    <div class="earning-calculate__card">
+                        <span class="earning-calculate__title">Enter selling price here</span>
+                        <div class="earning-calculate__form">
+                            <input type="number" placeholder="100 000" class="earning-calculate__input">
+                            <select class="earning-calculate__currency" name="" id="">
+                                <option value="">CHF</option>
+                                <option value="">CHF</option>
+                                <option value="">CHF</option>
+                            </select>
+                        </div>
+                        <span class="earning-calculate__title">You earn:</span>
+                        <div class="earning-calculate__earn">
+                            <b class="earning-calculate__earn-zero">0 CHF</b>
+                            <b><span class="countTo" data-from="0" data-to="90000"></span> CHF</b>
+                        </div>
+                        No exceptions, no hidden fees
+                    </div>
+                    <div class="earning-calculate__info">
+                        <h2>Simple & fair comission model:</h2>
+                        <div class="earning-calculate__percents">
+                            <div>
+                                <div class="earning-calculate__percent">
+                                    <span class="countTo" data-from="0" data-to="10"></span> %
+                                </div>
+                                <div>
+                                    Selling price above <br> CHF 150 000
+                                </div>
+                            </div>
+                            <div>
+                                <div class="earning-calculate__percent">
+                                    <span class="countTo" data-from="0" data-to="15"></span>%
+                                </div>
+                                <div>
+                                    Selling price between <br>
+                                    CHF 50 000 - 150 000
+                                </div>
+                            </div>
+                            <div>
+                                <div class="earning-calculate__percent">
+                                    <span class="countTo" data-from="0" data-to="20">20</span>%
+                                </div>
+                                <div>
+                                    Selling price under <br>
+                                    CHF 50 000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="earning-calculate__buttons">
+                            <a class="c-button c-button_full c-button_medium c-button_blue c-button_filled">Submit my watch(es)</a>
+                            <a href="" class="earning-calculate__messenger c-button c-button_full c-button_grey c-button_outline c-button_medium c-button_icon-left" style="color: #2DAB0E">
+                                <img class="mdi" src="img/sell-watch/whatsapp.svg" alt="">
+                                Sumbit via <br>
+                                WhatsApp
+                            </a>
+                            <a href="" class="earning-calculate__messenger c-button c-button_full c-button_grey c-button_outline c-button_medium c-button_icon-left" style="color: #0088CC">
+                                <img class="mdi" src="img/sell-watch/telegram.svg" alt="">
+                                Submit via <br>
+                                Telegram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="land-section land-section_half">
+                <div class="title">Compare your profit:</div>
+                <div class="compare-sales-option">
+                    <table class="compare-sales-option__table compare-sales-option__table_private">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>
+                                    Ineichen <br>
+                                    Auctioneers
+                                    <img class="compare-sales-option__sticker" src="img/sell-watch/sticker.svg" alt="">
+                                </th>
+                                <th>
+                                    Phillips
+                                </th>
+                                <th>
+                                    Sotheby's
+                                </th>
+                                <th>
+                                    Christie's
+                                </th>
+                                <th>
+                                    Monaco Legends
+                                </th>
+                                <th>
+                                    Koller
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Seller’s Commission
+                                </th>
+                                <td>
+                                    <h4>15%</h4>
+                                </td>
+                                <td>
+                                    <h4>6%</h4>
+                                </td>
+                                <td>
+                                    <h4>10%</h4>
+                                </td>
+                                <td>
+                                    <h4>5%</h4>
+                                </td>
+                                <td>
+                                    <h4>6%</h4>
+                                </td>
+                                <td>
+                                    <h4>8%</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Buyer’s Premium
+                                </th>
+                                <td>
+                                    <h4>0%</h4>
+                                </td>
+                                <td>
+                                    <h4>27%</h4>
+                                </td>
+                                <td>
+                                    <h4>25%</h4>
+                                </td>
+                                <td>
+                                    <h4>26%</h4>
+                                </td>
+                                <td>
+                                    <h4>26%</h4>
+                                </td>
+                                <td>
+                                    <h4>22%</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    You earn:
+                                </th>
+                                <td>
+                                    <h4 class="green-text">42 500 CHF</h4>
+                                </td>
+                                <td>
+                                    <h4>33 500 CHF</h4>
+                                </td>
+                                <td>
+                                    <h4>32 500 CHF</h4>
+                                </td>
+                                <td>
+                                    <h4>34 500 CHF</h4>
+                                </td>
+                                <td>
+                                    <h4>34 500 CHF</h4>
+                                </td>
+                                <td>
+                                    <h4>35 000 CHF</h4>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="land-section land-section_half">
+                <div class="title">Benefits</div>
+                <div class="sell-watch-benefits">
+                    <div class="sell-watch-benefits__item">
+                        <img src="img/sell-watch/benefit-1.jpg" alt="" class="sell-watch-benefits__img">
+                        <h3 class="sell-watch-benefits__title">Higher profit potential</h3>
+                        <div class="sell-watch-benefits__text">
+                            Auction is your chance to sell watches at higher prices than on Chrono24 or other platforms
+                        </div>
+                    </div>
+                    <div class="sell-watch-benefits__item">
+                        <img src="img/sell-watch/benefit-2.jpg" alt="" class="sell-watch-benefits__img">
+                        <h3 class="sell-watch-benefits__title">Quick & convenient process</h3>
+                        <div class="sell-watch-benefits__text">
+                            Online auctions last for 14 days, with a buy-out ratio reaching 90%
+                        </div>
+                    </div>
+                    <div class="sell-watch-benefits__item">
+                        <img src="img/sell-watch/benefit-3.jpg" alt="" class="sell-watch-benefits__img">
+                        <h3 class="sell-watch-benefits__title">Extensive audience reach</h3>
+                        <div class="sell-watch-benefits__text">
+                            Benefit from a wide network of collectors and enthusiasts (15k+). Ensure a fair and competitive price for rare, valuable, and vintage watches.
+                        </div>
+                    </div>
+                    <div class="sell-watch-benefits__item">
+                        <img src="img/sell-watch/benefit-4.jpg" alt="" class="sell-watch-benefits__img">
+                        <h3 class="sell-watch-benefits__title">Trust & expertise
+                            since 1973</h3>
+                        <div class="sell-watch-benefits__text">
+                            Ineichen Auctioneers is a trusted auction house with a long-standing history of excellence since 1973.
+                            Our skilled watchmakers thoroughly inspect every watch for authenticity, operability, and defects before auction.
+                        </div>
+                    </div>
+                    <div class="sell-watch-benefits__item">
+                        <img src="img/sell-watch/benefit-5.jpg" alt="" class="sell-watch-benefits__img">
+                        <h3 class="sell-watch-benefits__title">Dedicated manager support</h3>
+                        <div class="sell-watch-benefits__text">
+                            Get in touch with a dedicated manager who will assist you throughout the selling process.
+                        </div>
+                    </div>
+                </div>
+            </div>   
+
+            <div class="land-section land-section_half">
+                <h2 class="title">Why sell with us?</h2>
+                <div class="sell-watch-dealers">
+                    <div class="sell-watch-dealers__img">
+                        <img src="img/sell-watch/art-1.jpg" alt="">
+                    </div>
+                    <div class="sell-watch-dealers__info">
+                        <div class="sell-watch-dealers__priors">
+                            <div>
+                                <h4>FAST & HIGH PROFIT</h4>
+                                <ul>
+                                    <li>Premium auction sales <b>above market value</b>.</li>
+                                    <li><b>Lowest</b> auction house commission: 10-20%.</li>
+                                    <li>Just <b>2 weeks</b> until the sale begins!</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>full trust</h4>
+                                <ul>
+                                    <li>No buyer's premium</li>
+                                    <li>We are trusted (Swiss-based)</li>
+                                    <li>Expertise in the field</li>
+                                    <li>Engaging auction system: bidding, excitement, and opportunities for great deals</li>
+                                    <li>Comprehensive pre-sale preparation and service</li>
+                                    <li>Acceptance of cryptocurrency</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>FULL SERVICE</h4>
+                                <ul>
+                                    <p>
+                                        We meticulously examine your watch, take <b>high-quality photos</b>, and provide a detailed description. We <b>set prices</b> based on your preferences. <br><br>
+                                        After listing, we handle buyer interactions for a seamless experience, while you <b>receive your payment</b>.
+                                    </p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="land-section land-section_half">
+                <div class="highlights-catalog-head">
+                    <div class="title">
+                        Consignment highlights
+                    </div>
+                    <span><b>Extensive participation</b> from watch collectors drives the buy-out ratio to <b>as high as 90%.</b></span>
+                </div>
+                <div class="highlights-catalog">
+                    <a href="" class="highlights-catalog__item">
+                        <div class="highlights-catalog__info">
+                            <div class="highlights-catalog__img">
+                                <img src="img/sell-watch/image 10.jpg" alt="">
+                            </div>
+                            <div class="highlights-catalog__brand">F.P.Journe</div>
+                            <div class="highlights-catalog__name">Octa Zodiaque</div>
+                        </div>
+                        <div class="highlights-catalog__prices">
+                            <div>
+                                <span>Starting price:</span>
+                                <b>CHF 80 000</b>
+                            </div>
+                            <div>
+                                <span>Sold for: </span>
+                                <b class="green-text">CHF 124 000</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="highlights-catalog__item">
+                        <div class="highlights-catalog__info">
+                            <div class="highlights-catalog__img">
+                                <img src="img/sell-watch/image 11.jpg" alt="">
+                            </div>
+                            <div class="highlights-catalog__brand">Rolex</div>
+                            <div class="highlights-catalog__name">Daytona Ref.6263 "Big Red"</div>
+                        </div>
+                        <div class="highlights-catalog__prices">
+                            <div>
+                                <span>Starting price:</span>
+                                <b>CHF 40 000</b>
+                            </div>
+                            <div>
+                                <span>Sold for: </span>
+                                <b class="green-text">CHF 72 000</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="highlights-catalog__item">
+                        <div class="highlights-catalog__info">
+                            <div class="highlights-catalog__img">
+                                <img src="img/sell-watch/image 12.jpg" alt="">
+                            </div>
+                            <div class="highlights-catalog__brand">Audemars Piguet</div>
+                            <div class="highlights-catalog__name">Platinum Perpetual Calendar</div>
+                        </div>
+                        <div class="highlights-catalog__prices">
+                            <div>
+                                <span>Starting price:</span>
+                                <b>CHF 120 000</b>
+                            </div>
+                            <div>
+                                <span>Sold for: </span>
+                                <b class="green-text">CHF 300 000</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="highlights-catalog__item">
+                        <div class="highlights-catalog__info">
+                            <div class="highlights-catalog__img">
+                                <img src="img/sell-watch/image 13.jpg" alt="">
+                            </div>
+                            <div class="highlights-catalog__brand">Breguet</div>
+                            <div class="highlights-catalog__name">Perpetual Calendar Minute Repeater</div>
+                        </div>
+                        <div class="highlights-catalog__prices">
+                            <div>
+                                <span>Starting price:</span>
+                                <b>CHF 100.000</b>
+                            </div>
+                            <div>
+                                <span>Sold for: </span>
+                                <b class="green-text">CHF 160 000</b>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="" class="highlights-catalog__item">
+                        <div class="highlights-catalog__info">
+                            <div class="highlights-catalog__img">
+                                <img src="img/sell-watch/image 14.jpg" alt="">
+                            </div>
+                            <div class="highlights-catalog__brand">Audemars Piguet</div>
+                            <div class="highlights-catalog__name">Royal Oak Grande Complication</div>
+                        </div>
+                        <div class="highlights-catalog__prices">
+                            <div>
+                                <span>Starting price:</span>
+                                <b>CHF 300 000</b>
+                            </div>
+                            <div>
+                                <span>Sold for: </span>
+                                <b class="green-text">CHF 505 000</b>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="land-section land-section_half">
+                <h2 class="title">Watch dealers, sell fast and maximize profits!</h2>
+                <div class="sell-watch-dealers">
+                    <div class="sell-watch-dealers__img">
+                        <img src="img/sell-watch/art-2.jpg" alt="">
+                    </div>
+                    <div class="sell-watch-dealers__info sell-watch-dealers__info_center">
+                        <div class="sell-watch-dealers__text">
+                            <ul>
+                                <li>Fast estimate & decision</li>
+                                <li>Reserved pricing option</li>
+                                <li>Higher profit compared to direct sales</li>
+                                <li>Quick payment</li>
+                                <li>Support</li>
+                            </ul>
+                        </div>
+                        <div class="sell-watch-dealers__connect">
+                            <div class="sell-watch-dealers__connetct-btns">
+                                <a class="c-button c-button_medium c-button_full c-button_blue c-button_filled">Submit my watch(es)</a>
+                                <a href="" class="c-button c-button_full c-button_grey c-button_outline c-button_medium c-button_icon-left" style="color: #2DAB0E">
+                                    <img class="mdi" src="img/sell-watch/whatsapp.svg" alt="">
+                                    WhatsApp
+                                </a>
+                                <a href="" class="c-button c-button_full c-button_grey c-button_outline c-button_medium c-button_icon-left" style="color: #0088CC">
+                                    <img class="mdi" src="img/sell-watch/telegram.svg" alt="">
+                                    Telegram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top-line">
+                <div class="footer__nav">
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Sell Watches</strong>
+                        <a class="footer__nav-link" href="">Auction</a>
+                        <a class="footer__nav-link" href="">Consign</a>
+                        <a class="footer__nav-link" href="">Direct sale </a>
+                        <a class="footer__nav-link" href="">Free Appraisal</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Corporate</strong>
+                        <a class="footer__nav-link" href="">About Ineichen</a>
+                        <a class="footer__nav-link" href="">Ineichen Auctioneer </a>
+                        <a class="footer__nav-link" href="">Terms & Conditions </a>
+                        <a class="footer__nav-link" href="">Cookie policy </a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Support</strong>
+                        <a class="footer__nav-link" href="">FAQ</a>
+                        <a class="footer__nav-link" href="">T&C</a>
+                        <a class="footer__nav-link" href="">User protection</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Social Channels</strong>
+                        <a class="footer__nav-link" href="">Instagram</a>
+                        <a class="footer__nav-link" href="">Youtube</a>
+                        <a class="footer__nav-link" href="">Facebook</a>
+                        <a class="footer__nav-link" href="">Telegram</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    +41 44 298 11 44 <br>
+                    info@ineichen.com <br>
+                    Stadthausquai 11-13, Zürich <br>
+                    Tue-Fri - 10:00-17:30 Sat - 10:00-16:00 
+                </div>
+            </div>
+            <div class="footer__bottom-line">
+                <a class="footer__logo" href="">
+                    <img src="svg/footer-logo.svg" alt="">
+                </a>
+                <a class="footer__lang" href="">
+                    English <i class="mdi mdi-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="Consign" class="modal modal-small modal-small_3x">
+        <div class="modal-small__title">Offer your watches</div>
+        <div class="modal-small__body">
+            <div class="drop-zone">
+                <input id="DropZone" type="file" disabled>
+                <label for="DropZone" class="drop-zone__label">
+                    <img class="drop-zone__empty" src="img/sell-watch/image-preview.svg" alt="">
+                    <span>Drop your documents here, or click to browse</span>
+                    <span class="grey-text">up to 10MB each.</span>
+                    <span class="red-text">Only 10 images</span>
+                </label>
+                
+            </div>
+            <div class="upload-files upload-files_new">
+                <div class="upload-files__item loading">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-img-clean.svg" alt="">
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+                <div class="upload-files__item">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-img-clean.svg" alt="">
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+                <div class="upload-files__item">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-img-clean.svg" alt="">
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+                <div class="upload-files__item">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-img-clean.svg" alt="">
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+                <div class="upload-files__item">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-img-clean.svg" alt="">
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+                <div class="upload-files__item">
+                    <div class="upload-files__image">
+                        <img src="img/icons/scan-img-clean.svg" alt="">
+                    </div>
+                    <div class="upload-files__remove">
+                        <i class="mdi mdi-close"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Name</label>
+            </div>
+            <div class="c-field">
+                <input type="text" class="c-field__input">
+                <label class="c-field__label">Contact phone</label>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Continue</a>
+            <div class="quick-estimation-contacts">
+                <h5>Or use quick estimation:</h5>
+                <div class="quick-estimation-contacts__btns">
+                    <a href="" class="c-button c-button_full c-button_grey c-button_outline c-button_medium c-button_icon-left" style="color: #2DAB0E">
+                        <img class="mdi" src="img/sell-watch/whatsapp.svg" alt="">
+                        WhatsApp
+                    </a>
+                    <a href="" class="c-button c-button_full c-button_grey c-button_outline c-button_medium c-button_icon-left" style="color: #0088CC">
+                        <img class="mdi" src="img/sell-watch/telegram.svg" alt="">
+                        Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js
+    "></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('.countTo').countTo();
+        $('#Consign').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+        });
+    </script>
+</body>
+</html>
