@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="header__burger burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="header__nav">
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Auctions
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Upcomming auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Past auctions
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Condition of sale
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Services
+                </a>
+                <div class="header__sub-nav">
+                    <a href="" class="header__sub-nav-link">
+                        Sell your watch
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Sell on auction
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                    <a href="" class="header__sub-nav-link">
+                        Collection managment
+                        <i class="mdi mdi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header__nav-item">
+                <a href="" class="header__nav-link">
+                    Contacts
+                </a>
+            </div>
+        </div>
+        <a href="" class="header__logo">
+            <img src="svg/head-logo.svg" alt="">
+        </a>
+        <div class="header__buttons">
+            <div class="c-dropdown header__currency">
+                <a href="" class="c-dropdown__button header__currency-btn">
+                    <span class="flag-icon flag-icon-ch"></span>
+                    <strong>CHF</strong>
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-ch"></span>
+                            CHF
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-us"></span>
+                            USD
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            <span class="flag-icon flag-icon-eu"></span>
+                            EUR
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a href="" id="SearchOpen" class="header__button">
+                <i class="mdi mdi-magnify"></i>
+            </a>
+            <a href="" class="header__button">
+                <i class="mdi mdi-heart-outline"></i>
+                <small>3</small>
+            </a>
+            <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    <i class="mdi mdi-account-outline"></i>
+                    <span>EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i></span>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_right">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="container">
+                <div class="header__search-form">
+                    <input type="text" placeholder=" Search for a specific lot">
+                    <a href="" id="SearchClose">
+                        <i class="mdi mdi-close"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__aside">
+            <div class="mobile-menu__body">
+                <div class="mobile-menu__nav">
+                    <a href="" class="mobile-menu__link">Auctions</a>
+                    <a href="" class="mobile-menu__link mobile-menu__link_sub">
+                        Services
+                        <i class="mdi mdi-chevron-down"></i>
+                    </a>
+                    <div class="mobile-menu__sub-nav">
+                        <a href="" class="mobile-menu__link">Sell watch</a>
+                        <a href="" class="mobile-menu__link">Consign watch</a>
+                        <a href="" class="mobile-menu__link">Collector Service</a>
+                    </div>
+                    <a href="" class="mobile-menu__link">Contacts</a>
+                </div>
+                <div class="mobile-menu__select">
+                    <select name="" id="">
+                        <option value="">EUR</option>
+                        <option value="">USD</option>
+                    </select>
+                    <i class="mdi mdi-chevron-down"></i>
+                </div>
+            </div>
+            <div class="mobile-menu__footer">
+                <div class="c-dropdown">
+                <a href="#" class="c-dropdown__button account-drop">
+                    EblanVasilevic2008@gmail.com <i class="mdi mdi-chevron-down"></i>
+                </a>
+                <div class="c-dropdown__list c-dropdown__list_position-top">
+                    <div class="c-dropdown__scroll">
+                        <a href="" class="c-dropdown__link">
+                            Profile
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            My Bids
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Payment
+                        </a>
+                        <a href="" class="c-dropdown__link">
+                            Invoices
+                        </a>
+                        <a href="" class="c-dropdown__link grey-text">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="content">
+        <section class="land-section land-section_half">
+            <div class="container">
+                <div class="private-sales-head">
+                    <div>
+                        <h2 class="title">Past auctions</h2>
+                        <p>Ineichen has been Switzerland's top auction house for the sale and purchase of the finest collectible watches since 1973, and we have a unique sales concept exclusively for watch dealers. Our team will work with you to sell your watches at auctions - stress-free and at the best price.</p>
+                    </div>
+                    <div class="private-sales-head__contact">
+                        <h3>Sell your watch here:</h3>
+                        <div class="private-sales-head__btns">
+                            <a href="" class="c-button c-button_whatsapp c-button_small">WhatsApp</a>
+                            <a href="" class="c-button c-button_telegram c-button_small">Telegram</a>
+                            <a href="" class="c-button c-button_grey c-button_small c-button_icon-left">
+                                <i class="mdi mdi-format-list-bulleted"></i>
+                                Fill the quick form
+                            </a>
+                        </div>
+                        <small>Send to us photos of the watch & get an estimation within 1 hour</small>
+                    </div>
+                </div>
+                <div class="private-filters">
+                    <div class="private-filters__head">
+                        <div class="private-filters__open">
+                            <button id="filtersOpen" class="c-button c-button_full c-button_grey c-button_icon-left">
+                                <i class="mdi mdi-tune-vertical"></i>
+                                Filters
+                                <i class="mdi mdi-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="private-filters__sorting">
+                            Sort by: 
+                        </div>
+                    </div>
+                    <div class="private-filters__body">
+                        <div class="private-filters__btns">
+                            <button data-filtr-btn="1" class="c-button c-button_full c-button_grey">
+                                Brands
+                                <i class="mdi mdi-chevron-down"></i>
+                            </button>
+                            <button data-filtr-btn="2" class="c-button c-button_full c-button_grey">
+                                Price
+                                <i class="mdi mdi-chevron-down"></i>
+                            </button>
+                            <button data-filtr-btn="3" class="c-button c-button_full c-button_grey">
+                                Complications
+                                <i class="mdi mdi-chevron-down"></i>
+                            </button>
+                            <button data-filtr-btn="4" class="c-button c-button_full c-button_grey">
+                                Year
+                                <i class="mdi mdi-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="private-filters__blocks">
+                            <div data-filtr-block="1" class="private-filters__item">
+                                <div class="private-filters__checks">
+                                    <div class="private-filters__name">Brands</div>
+                                    <div class="private-filters__checks-list">
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            0 A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            1 A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            2 A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            3 A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                        <label class="c-chekbox" for="a-lange-sogne">
+                                            <input type="checkbox" name="brands" id="a-lange-sogne">
+                                            A. Lange & Sohne
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-filtr-block="2" class="private-filters__item">
+                                <div class="private-filters__checks">
+                                    <div class="private-filters__name">Complications</div>
+                                    <div class="private-filters__checks-list">
+                                        <label class="c-chekbox" for="AlarmСlock">
+                                            <input type="checkbox" name="brands" id="AlarmСlock">
+                                            Alarm clock
+                                        </label>
+                                        <label class="c-chekbox" for="Chronograph">
+                                            <input type="checkbox" name="brands" id="Chronograph">
+                                            Chronograph
+                                        </label>
+                                        <label class="c-chekbox" for="Date">
+                                            <input type="checkbox" name="brands" id="Date">
+                                            Date
+                                        </label>
+                                        <label class="c-chekbox" for="AlarmСlock">
+                                            <input type="checkbox" name="brands" id="AlarmСlock">
+                                            Alarm clock
+                                        </label>
+                                        <label class="c-chekbox" for="Chronograph">
+                                            <input type="checkbox" name="brands" id="Chronograph">
+                                            Chronograph
+                                        </label>
+                                        <label class="c-chekbox" for="Date">
+                                            <input type="checkbox" name="brands" id="Date">
+                                            Date
+                                        </label>
+                                        <label class="c-chekbox" for="AlarmСlock">
+                                            <input type="checkbox" name="brands" id="AlarmСlock">
+                                            Alarm clock
+                                        </label>
+                                        <label class="c-chekbox" for="Chronograph">
+                                            <input type="checkbox" name="brands" id="Chronograph">
+                                            Chronograph
+                                        </label>
+                                        <label class="c-chekbox" for="Date">
+                                            <input type="checkbox" name="brands" id="Date">
+                                            Date
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-filtr-block="3" class="private-filters__item">
+                                <div class="private-filters__item-range">
+                                    <div class="private-filters__checks">
+                                        <div class="private-filters__name">Year</div>
+                                        <div class="private-filters__checks-list">
+                                            <label class="c-chekbox" for="y-2000">
+                                                <input type="checkbox" name="brands" id="y-2000">
+                                                2000
+                                            </label>
+                                            <label class="c-chekbox" for="y-2010">
+                                                <input type="checkbox" name="brands" id="y-2010">
+                                                2010 - 2020
+                                            </label>
+                                            <label class="c-chekbox" for="y-2000">
+                                                <input type="checkbox" name="brands" id="y-2000">
+                                                2000 - 2010
+                                            </label>
+                                            <label class="c-chekbox" for="y-2000">
+                                                <input type="checkbox" name="brands" id="y-2000">
+                                                2000
+                                            </label>
+                                            <label class="c-chekbox" for="y-2010">
+                                                <input type="checkbox" name="brands" id="y-2010">
+                                                2010 - 2020
+                                            </label>
+                                            <label class="c-chekbox" for="y-2000">
+                                                <input type="checkbox" name="brands" id="y-2000">
+                                                2000 - 2010
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="private-filters__slider">
+                                        <div class="private-filters__name">Specify:</div>
+                                        <div id="yearSlider" class="c-range"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-filtr-block="4" class="private-filters__item">
+                                <div class="private-filters__item-range">
+                                    <div class="private-filters__checks">
+                                        <div class="private-filters__name">Price, CHF</div>
+                                        <div class="private-filters__checks-list">
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="private-filters__slider">
+                                        <div class="private-filters__name">Specify:</div>
+                                        <div id="priceSlider" class="c-range"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="land-section land-section_half land-section_grey">
+            <div class="container">
+                <div class="private-catalog">
+                    <div class="private-product-item">
+                        <a href="#" class="private-product-item__image">
+                            <img src="img/private-sales/image 10.jpg" alt="">
+                        </a>
+                        <div class="private-product-item__info">
+                            <h3 class="private-product-item__brand">F.P.Journe</h3>
+                            <div class="private-product-item__name">Octa Zodiaque</div>
+                            <div class="private-product-item__price">CHF 80 000</div>
+                            <button class="private-product-item__favorite">
+                                <i class="mdi mdi-heart-outline"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="private-product-item">
+                        <a href="#" class="private-product-item__image">
+                            <img src="img/private-sales/image 11.jpg" alt="">
+                        </a>
+                        <div class="private-product-item__info">
+                            <h3 class="private-product-item__brand">F.P.Journe</h3>
+                            <div class="private-product-item__name">Octa Zodiaque</div>
+                            <div class="private-product-item__price">CHF 80 000</div>
+                            <button class="private-product-item__favorite">
+                                <i class="mdi mdi-heart-outline"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="private-product-item">
+                        <a href="#" class="private-product-item__image">
+                            <img src="img/private-sales/image 12.jpg" alt="">
+                        </a>
+                        <div class="private-product-item__info">
+                            <h3 class="private-product-item__brand">F.P.Journe</h3>
+                            <div class="private-product-item__name">Octa Zodiaque</div>
+                            <div class="private-product-item__price">CHF 80 000</div>
+                            <button class="private-product-item__favorite">
+                                <i class="mdi mdi-heart-outline"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="private-product-item">
+                        <a href="#" class="private-product-item__image">
+                            <img src="img/private-sales/image 13.jpg" alt="">
+                        </a>
+                        <div class="private-product-item__info">
+                            <h3 class="private-product-item__brand">F.P.Journe</h3>
+                            <div class="private-product-item__name">Octa Zodiaque</div>
+                            <div class="private-product-item__price">CHF 80 000</div>
+                            <button class="private-product-item__favorite">
+                                <i class="mdi mdi-heart-outline"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="private-product-item">
+                        <a href="#" class="private-product-item__image">
+                            <img src="img/private-sales/image 10.jpg" alt="">
+                        </a>
+                        <div class="private-product-item__info">
+                            <h3 class="private-product-item__brand">F.P.Journe</h3>
+                            <div class="private-product-item__name">Octa Zodiaque</div>
+                            <div class="private-product-item__price">CHF 80 000</div>
+                            <button class="private-product-item__favorite">
+                                <i class="mdi mdi-heart-outline"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="private-product-item">
+                        <a href="#" class="private-product-item__image">
+                            <img src="img/private-sales/image 11.jpg" alt="">
+                        </a>
+                        <div class="private-product-item__info">
+                            <h3 class="private-product-item__brand">F.P.Journe</h3>
+                            <div class="private-product-item__name">Octa Zodiaque</div>
+                            <div class="private-product-item__price">CHF 80 000</div>
+                            <button class="private-product-item__favorite">
+                                <i class="mdi mdi-heart-outline"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="private-product-item">
+                        <a href="#" class="private-product-item__image">
+                            <img src="img/private-sales/image 12.jpg" alt="">
+                        </a>
+                        <div class="private-product-item__info">
+                            <h3 class="private-product-item__brand">F.P.Journe</h3>
+                            <div class="private-product-item__name">Octa Zodiaque</div>
+                            <div class="private-product-item__price">CHF 80 000</div>
+                            <button class="private-product-item__favorite">
+                                <i class="mdi mdi-heart-outline"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="private-product-item">
+                        <a href="#" class="private-product-item__image">
+                            <img src="img/private-sales/image 13.jpg" alt="">
+                        </a>
+                        <div class="private-product-item__info">
+                            <h3 class="private-product-item__brand">F.P.Journe</h3>
+                            <div class="private-product-item__name">Octa Zodiaque</div>
+                            <div class="private-product-item__price">CHF 80 000</div>
+                            <button class="private-product-item__favorite">
+                                <i class="mdi mdi-heart-outline"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-more-items">
+                    <a href="" class="c-button c-button_grey c-button_small c-button_icon-left">
+                        <i class="mdi mdi-layers-triple-outline"></i>
+                        Show more
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top-line">
+                <div class="footer__nav">
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Sell Watches</strong>
+                        <a class="footer__nav-link" href="">Auction</a>
+                        <a class="footer__nav-link" href="">Consign</a>
+                        <a class="footer__nav-link" href="">Direct sale </a>
+                        <a class="footer__nav-link" href="">Free Appraisal</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Corporate</strong>
+                        <a class="footer__nav-link" href="">About Ineichen</a>
+                        <a class="footer__nav-link" href="">Ineichen Auctioneer </a>
+                        <a class="footer__nav-link" href="">Terms & Conditions </a>
+                        <a class="footer__nav-link" href="">Cookie policy </a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Support</strong>
+                        <a class="footer__nav-link" href="">FAQ</a>
+                        <a class="footer__nav-link" href="">T&C</a>
+                        <a class="footer__nav-link" href="">User protection</a>
+                    </div>
+                    <div class="footer__nav-item">
+                        <strong class="footer__nav-title">Social Channels</strong>
+                        <a class="footer__nav-link" href="">Instagram</a>
+                        <a class="footer__nav-link" href="">Youtube</a>
+                        <a class="footer__nav-link" href="">Facebook</a>
+                        <a class="footer__nav-link" href="">Telegram</a>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    +41 44 298 11 44 <br>
+                    info@ineichen.com <br>
+                    Stadthausquai 11-13, Zürich <br>
+                    Tue-Fri - 10:00-17:30 Sat - 10:00-16:00 
+                </div>
+            </div>
+            <div class="footer__bottom-line">
+                <a class="footer__logo" href="">
+                    <img src="svg/footer-logo.svg" alt="">
+                </a>
+                <a class="footer__lang" href="">
+                    English <i class="mdi mdi-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var yearSlider = document.getElementById('yearSlider');
+        var priceSlider = document.getElementById('priceSlider');
+
+        noUiSlider.create(yearSlider, {
+            start: [1200, 2023],
+            connect: true,
+            step: 1,
+            tooltips: [
+                wNumb({decimals: 0}),
+                wNumb({decimals: 0}),
+            ],
+            decimals: 5,
+            pips: {
+                mode: 'range',
+                density: 25
+            },
+            range: {
+                'min': 1200,
+                'max': 2023
+            }
+        });
+        noUiSlider.create(priceSlider, {
+            start: [00, 1000000],
+            connect: true,
+            step: 1000,
+            tooltips: [
+                wNumb({
+                    decimals: 0,
+                    suffix: ' CHF'
+                }),
+                wNumb({
+                    decimals: 0,
+                    suffix: ' CHF'
+                }),
+            ],
+            decimals: 5,
+            pips: {
+                mode: 'range',
+                density: 25
+            },
+            range: {
+                'min': 0,
+                'max': 1000000
+            }
+        });
+
+        let filtBtn;
+        let filtBlock;
+        
+        $('#filtersOpen').click(function(){
+           $(this).toggleClass('c-button_active');
+           $('.private-filters__body').slideToggle(300);
+        })
+
+        $('[data-filtr-btn]').click(function(){
+
+            filtBtn = $(this).attr('data-filtr-btn');
+
+            if ($(this).hasClass('c-button_active')) {
+                $(this).removeClass('c-button_active')
+            } else {
+                $('[data-filtr-btn]').removeClass('c-button_active')
+                $(this).addClass('c-button_active')
+                
+            }
+
+            if ($('[data-filtr-block='+filtBtn+']').is(":hidden")) {
+                $('[data-filtr-block]').slideUp(300);
+                $('[data-filtr-block='+filtBtn+']').slideDown(300);
+                
+            } else {
+                $('[data-filtr-block='+filtBtn+']').slideUp(300);
+            }
+        })
+
+        $('.private-product-item__favorite').click(function(){
+            $(this).toggleClass('private-product-item__favorite_active').find('.mdi').toggleClass('red-text mdi-heart-outline mdi-heart');
+        })
+
+        
+    </script>
+</body>
+</html>
