@@ -10,7 +10,10 @@
         gap: 15px;
     }
 }
-
+.catalog-products-count {
+    margin-bottom: 24px;
+    font-weight: 500;
+}
 .private-catalog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -43,7 +46,6 @@
     }
     &__info {
         position: relative;
-        font-family: $america;
         font-weight: 500;
     }
     &__brand {
@@ -55,6 +57,7 @@
     }
     &__price {
         margin-top: 8px;
+        font-family: $america;
     }
     &__favorite {
         position: absolute;
@@ -73,7 +76,7 @@
 
 .private-filters {
     $root: &;
-    margin-top: 30px;
+    margin-top: 60px;
     &__item {
         display: none;
     }
@@ -95,6 +98,13 @@
     }
     &__sorting {
         grid-column: 4;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 15px;
+    }
+    &__sorting-lbl {
+        font-weight: 500;
     }
     &__body {
         display: none;

@@ -210,31 +210,45 @@
                 <div class="private-filters">
                     <div class="private-filters__head">
                         <div class="private-filters__open">
-                            <button id="filtersOpen" class="c-button c-button_full c-button_grey c-button_icon-left">
+                            <button id="filtersOpen" class="c-button c-button_full c-button_grey c-button_icon-left c-button_drop">
                                 <i class="mdi mdi-tune-vertical"></i>
                                 Filters
                                 <i class="mdi mdi-chevron-down"></i>
                             </button>
                         </div>
                         <div class="private-filters__sorting">
-                            Sort by: 
+                            <div class="private-filters__sorting-lbl">Sort by:</div>
+                            <div class="c-dropdown product__bids-select">
+                                <a href="" class="c-dropdown__button c-button c-button_drop c-button_grey">
+                                    Price descdending
+                                    <i class="mdi mdi-chevron-down"></i>
+                                </a>
+                                <div class="c-dropdown__list">
+                                    <div class="c-dropdown__scroll">
+                                        <a href="" class="c-dropdown__link">Price descdending</a>
+                                        <a href="" class="c-dropdown__link">Price incresment</a>
+                                        <a href="" class="c-dropdown__link">A-Z</a>
+                                        <a href="" class="c-dropdown__link">Alphabetically</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="private-filters__body">
                         <div class="private-filters__btns">
-                            <button data-filtr-btn="1" class="c-button c-button_full c-button_grey">
+                            <button data-filtr-btn="1" class="c-button c-button_full c-button_drop c-button_grey">
                                 Brands
                                 <i class="mdi mdi-chevron-down"></i>
                             </button>
-                            <button data-filtr-btn="2" class="c-button c-button_full c-button_grey">
+                            <button data-filtr-btn="2" class="c-button c-button_full c-button_drop c-button_grey">
                                 Price
                                 <i class="mdi mdi-chevron-down"></i>
                             </button>
-                            <button data-filtr-btn="3" class="c-button c-button_full c-button_grey">
+                            <button data-filtr-btn="3" class="c-button c-button_full c-button_drop c-button_grey">
                                 Complications
                                 <i class="mdi mdi-chevron-down"></i>
                             </button>
-                            <button data-filtr-btn="4" class="c-button c-button_full c-button_grey">
+                            <button data-filtr-btn="4" class="c-button c-button_full c-button_drop c-button_grey">
                                 Year
                                 <i class="mdi mdi-chevron-down"></i>
                             </button>
@@ -431,6 +445,9 @@
         </section>
         <section class="land-section land-section_half land-section_grey">
             <div class="container">
+                <div class="catalog-products-count">
+                    35 watches
+                </div>
                 <div class="private-catalog">
                     <div class="private-product-item">
                         <a href="#" class="private-product-item__image">
@@ -684,6 +701,10 @@
             $(this).toggleClass('private-product-item__favorite_active').find('.mdi').toggleClass('red-text mdi-heart-outline mdi-heart');
         })
 
+        $('.sort-select__current').click(function(){
+            $(this).parents('.sort-select').toggleClass('sort-select_active');
+            $(this).next().slideToggle();
+        })
         
     </script>
 </body>
