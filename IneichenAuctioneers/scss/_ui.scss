@@ -54,7 +54,7 @@
     border: none;
     background: none;
     border: none;
-    height: 52px;
+    height: 45px;
     border-radius: 15px;
     padding: 0 24px;
     font-size: 15px;
@@ -73,13 +73,9 @@
     .mdi {
         font-size: 18px;
     }
-    &_drop {
-        position: relative;
-        padding-right: 45px;
-        .mdi-chevron-down {
-            position: absolute;
-            right: 15px;
-        }
+    .mdi-chevron-down {
+        margin-left: auto;
+        padding-left: 15px;
     }
     &_america {
         font-family: $america;
@@ -145,7 +141,7 @@
     }
     &_grey {
         color: black;
-        border: 1px $grey-line solid;
+        border: 1px $grey-btn solid;
         background: white;
         &:hover {
             border-color: $brown-bg;
@@ -153,10 +149,10 @@
         }
         &#{$root}_filled {
             color: #fff;
-            background: $grey-text;
+            background: $grey-btn;
             &:hover {
-                background: darken($grey-text,5);
-                border-color: darken($grey-text,5);
+                background: darken($grey-btn,5);
+                border-color: darken($grey-btn,5);
             }
         }
         &#{$root}_active {
@@ -311,23 +307,23 @@
     }
     /* ---------------------------------- sizes --------------------------------- */
     &_medium {
-        height: 50px;
-        min-width: 50px;
+        height: 40px;
+        min-width: 40px;
         border-radius: 12px;
         font-size: 15px;
         border-width: 1px;
         padding: 0 20px;
     }
     &_small {
-        height: 40px;
-        min-width: 40px;
+        height: 35px;
+        min-width: 35px;
         border-radius: 14px;
         font-size: 15px;
         border-width: 1px;
     }
     &_mini {
-        height: 25px;
-        min-width: 25px;
+        height: 30px;
+        min-width: 30px;
         padding: 0 10px;
         border-radius: 8px;
         font-size: 13px;
@@ -560,7 +556,7 @@
         width: 20px;
         height: 20px;
         appearance: none;
-        border: 1px black solid;
+        border: 1px $grey-btn solid;
         cursor: pointer;
         &:before {
             content: "";
