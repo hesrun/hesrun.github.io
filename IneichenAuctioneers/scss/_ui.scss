@@ -91,6 +91,13 @@
         justify-content: space-between;
     }
     /* ---------------------------------- colors --------------------------------- */
+    &_clear {
+        color: $blue-bg;
+        &:hover {
+            background: rgba($blue-bg, 0.05);
+            
+        }
+    }
     &_blue {
         color: $blue-bg;
         border: 2px $blue-bg solid;
@@ -548,6 +555,9 @@
     cursor: pointer;
     &:hover {
         color: $blue-text;
+    }
+    &:has(input:checked) {
+        color: $brown-bg;
     }
     input {
         position: absolute;
