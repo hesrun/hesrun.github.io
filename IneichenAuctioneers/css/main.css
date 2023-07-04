@@ -2282,6 +2282,7 @@ select:-webkit-autofill:focus {
 }
 
 .auction-teaser {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -2292,6 +2293,7 @@ select:-webkit-autofill:focus {
   background-size: cover;
   color: inherit;
   text-decoration: none;
+  overflow: hidden;
   transition: transform 0.3s;
 }
 .auction-teaser:hover {
@@ -2299,6 +2301,22 @@ select:-webkit-autofill:focus {
 }
 .auction-teaser_single {
   grid-column: 2 span;
+}
+.auction-teaser__image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.auction-teaser__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .auction-teaser__name {
   margin: auto 0;
@@ -7547,6 +7565,7 @@ select:-webkit-autofill:focus {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 50px;
 }
 .product__add-favorite {
   cursor: pointer;
@@ -7789,28 +7808,28 @@ select:-webkit-autofill:focus {
   font-size: 12px;
 }
 
-.private-benefit .estimator-review {
+.estimator-review {
   margin: 45px 0;
   border-bottom: 1px #e6e6e6 solid;
   padding-bottom: 45px;
 }
-.private-benefit .estimator-review__info {
+.estimator-review__info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
 }
-.private-benefit .estimator-review__text {
+.estimator-review__text {
   margin-bottom: 30px;
   line-height: 1.5;
 }
-.private-benefit .estimator-review__price {
+.estimator-review__price {
   text-align: right;
 }
-.private-benefit .estimator-review__price span {
+.estimator-review__price span {
   color: #676767;
 }
-.private-benefit .estimator-review__value {
+.estimator-review__value {
   color: #1C2473;
   font-family: "GT America Extended", sans-serif;
   line-height: 30px;
@@ -7884,6 +7903,50 @@ select:-webkit-autofill:focus {
   opacity: 0.7;
 }
 
+/* ------------------------------ fitting-modal ----------------------------- */
+.fitting-modal {
+  display: flex;
+  text-align: center;
+  position: relative;
+  height: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+.fitting-modal__watch {
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+.fitting-modal__hand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-52%, -50%);
+}
+
+.fitting-mobile__title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-family: "GT America Extended", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.fitting-mobile__title .mdi {
+  font-size: 24px;
+}
+.fitting-mobile__info {
+  max-width: 400px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.fitting-mobile__qr {
+  width: 70px;
+}
+
+/* ----------------------------- service-modal ----------------------------- */
 .service-modal h3 {
   margin: 45px 0 20px;
 }
@@ -7962,46 +8025,117 @@ select:-webkit-autofill:focus {
   max-width: 100%;
 }
 
-.fitting-modal {
+/* ------------------------------- trade-modal ------------------------------ */
+.trade-modal {
   display: flex;
-  text-align: center;
-  position: relative;
-  height: 500px;
-  margin: auto;
-  overflow: hidden;
+  gap: 50px;
 }
-.fitting-modal__watch {
-  margin: auto;
-  position: relative;
-  z-index: 2;
+.trade-modal__form {
+  width: 500px;
+  margin-top: 105px;
 }
-.fitting-modal__hand {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-52%, -50%);
+.trade-modal__offer-price {
+  margin-top: -80px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #1C2473;
+  font-family: "GT America Extended", sans-serif;
+}
+.trade-modal__form-btns {
+  margin: 45px 0 0;
+  display: grid;
+  gap: 30px;
+}
+.trade-modal__messengers {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+.trade-modal__messengers strong {
+  font-size: 13px;
+  font-family: "GT America Extended", sans-serif;
+}
+.trade-modal__note {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+  align-items: center;
+}
+.trade-modal__note .mdi {
+  opacity: 0.5;
+  font-size: 32px;
 }
 
-.fitting-mobile__title {
-  display: flex;
-  gap: 15px;
-  align-items: center;
+.trade-modal-watch {
+  width: 300px;
+  position: relative;
+}
+.trade-modal-watch:first-child {
+  margin-right: 100px;
+}
+.trade-modal-watch + .trade-modal-watch:after {
+  position: absolute;
+  bottom: 130px;
+  left: -140px;
+  content: url(../img/product/private/arrow-right-circle.svg);
+}
+.trade-modal-watch__image {
+  border: 1px #e6e6e6 solid;
+  border-radius: 15px;
+}
+.trade-modal-watch__image img {
+  vertical-align: middle;
+  width: 100%;
+  border-radius: 15px;
+}
+.trade-modal-watch__title {
+  min-height: 100px;
   font-family: "GT America Extended", sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-.fitting-mobile__title .mdi {
   font-size: 24px;
 }
-.fitting-mobile__info {
-  max-width: 400px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
+.trade-modal-watch__title span {
+  display: block;
+  font-size: 16px;
 }
-.fitting-mobile__qr {
-  width: 70px;
+.trade-modal-watch__clip input {
+  display: none;
+}
+.trade-modal-watch__clip-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  border: 1px #e6e6e6 solid;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+}
+.trade-modal-watch__clip-info {
+  margin: auto 0;
+}
+.trade-modal-watch__clip-info > .mdi {
+  font-size: 32px;
+  color: #676767;
+}
+.trade-modal-watch__clip-info span {
+  margin-top: 10px;
+  display: block;
+  font-size: 13px;
+}
+
+/* ------------------------------- thank-modal ------------------------------ */
+.thank-modal {
+  max-width: 450px;
+  display: grid;
+  gap: 15px;
+}
+.thank-modal__logo {
+  width: 140px;
+  position: absolute;
+  bottom: 40px;
 }
 
 @media screen and (max-width: 1366px) {
@@ -8596,7 +8730,7 @@ select:-webkit-autofill:focus {
     padding: 20px;
   }
   .product__gallery-col {
-    padding-top: 72px;
+    padding: 72px 0 0 0;
     position: relative;
   }
   .product__gallery-col .slick-slide {
@@ -8605,8 +8739,12 @@ select:-webkit-autofill:focus {
   .product__gallery-col .slick-slide img {
     height: 100%;
   }
+  .product__gallery {
+    grid-template-columns: 1fr;
+  }
   .product__video {
     padding: 0px;
+    border-radius: 0px;
   }
   .product__video iframe {
     position: static;
@@ -8619,6 +8757,9 @@ select:-webkit-autofill:focus {
     display: flex;
     align-items: center;
     transform: translateX(-50%);
+  }
+  .product__image-link {
+    border-radius: 0px;
   }
   .product__image-link img {
     height: 70vh;
@@ -9811,6 +9952,9 @@ select:-webkit-autofill:focus {
   .product__name h1 {
     font-size: 22px;
     margin-top: 0px;
+  }
+  .product__info-head {
+    margin-bottom: 0px;
   }
   .product__bids-info {
     grid-gap: 10px 0;

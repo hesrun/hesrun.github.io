@@ -637,7 +637,7 @@
             padding: 20px;
         }
         &__gallery-col {
-            padding-top: 72px;
+            padding: 72px 0 0 0;
             position: relative;
             .slick-slide {
                 height: 100vw;
@@ -646,8 +646,12 @@
                 }
             }
         }
+        &__gallery {
+            grid-template-columns: 1fr;
+        }
         &__video {
             padding: 0px;
+            border-radius: 0px;
             iframe {
                 position: static;
             }
@@ -662,6 +666,7 @@
             transform: translateX(-50%);
         }
         &__image-link {
+            border-radius: 0px;
             img {
                 height: 70vh;
                 object-fit: cover;
@@ -1995,6 +2000,9 @@
                 font-size: 22px;
                 margin-top: 0px;
             }
+        }
+        &__info-head {
+            margin-bottom: 0px;
         }
         &__bids-info {
             grid-gap: 10px 0;

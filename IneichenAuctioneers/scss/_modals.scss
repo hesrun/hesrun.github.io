@@ -1,0 +1,240 @@
+/* ------------------------------ fitting-modal ----------------------------- */
+.fitting-modal {
+    display: flex;
+    text-align: center;
+    position: relative;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+    &__watch {
+        margin: auto;
+        position: relative;
+        z-index: 2;
+    }
+    &__hand {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-52%,-50%);
+    }
+}
+.fitting-mobile {
+    &__title {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        font-family: $america;
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 15px;
+        .mdi {
+            font-size: 24px;
+        }
+    }
+    &__info {
+        max-width: 400px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    &__qr {
+        width: 70px;
+    }
+}
+/* ----------------------------- service-modal ----------------------------- */
+.service-modal {
+    h3 {
+        margin: 45px 0 20px;
+    }
+    &__check-list {
+        display: grid;
+        gap: 10px;
+        margin: 20px 0 35px;
+        list-style: none;
+        li {
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            &:before {
+                font-size: 20px;
+                color: $brown-text;
+            }
+        }
+    }
+    &__shipp {
+        margin-top: 40px;
+        p {
+            padding-left: 11.5%;
+        }
+    }
+}
+.compare-photo {
+    max-width: 560px;
+    img {
+        vertical-align: middle;
+    }
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        font-family: $america;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    &__pagination {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    &__pagination-item {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        font-weight: 500;
+        border: 1px $brown-bg solid;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        border: 1px $grey-line solid;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: all 0.3s;
+        span {
+            max-width: 0;
+            overflow: hidden;
+            padding-left: 0px;
+            transition: max-width 0.3s;
+        }
+        &_active {
+            width: 150px;
+            border-color: $brown-bg;
+            color: $brown-text;
+            span {
+                padding-left: 5px;
+                max-width: 100%;
+            }
+        }
+    }
+}
+/* ------------------------------- trade-modal ------------------------------ */
+.trade-modal {
+    display: flex;
+    gap: 50px;
+    &__form {
+        width: 500px;
+        margin-top: 105px;
+    }
+    &__offer-price {
+        margin-top: -80px;
+        font-weight: 500;
+        font-size: 24px;
+        color: $blue-text;
+        font-family: $america;
+    }
+    &__form-btns {
+        margin: 45px 0 0;
+        display: grid;
+        gap: 30px;
+    }
+    &__messengers {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+        strong {
+            font-size: 13px;
+            font-family: $america;
+        }
+    }
+    &__note {
+        margin-top: 30px;
+        display: flex;
+        gap: 15px;
+        font-size: 12px;
+        align-items: center;
+        .mdi {
+            opacity: 0.5;
+            font-size: 32px;
+        }
+    }
+}
+
+.trade-modal-watch {
+    width: 300px;
+    position: relative;
+    &:first-child {
+        margin-right: 100px;
+    }
+    & + & {
+        &:after {
+            position: absolute;
+            bottom: 130px;
+            left: -140px;
+            content: url(../img/product/private/arrow-right-circle.svg);
+        }
+    }
+    &__image {
+        border: 1px $grey-line solid;
+        border-radius: 15px;
+        img {
+            vertical-align: middle;
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+    &__title {
+        min-height: 100px;
+        font-family: $america;
+        font-weight: 500;
+        font-size: 24px;
+        span {
+            display: block;
+            font-size: 16px;
+        }
+    }
+    &__clip {
+        input {
+            display: none;
+        }
+    }
+    &__clip-label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        border: 1px $grey-line solid;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+    &__clip-info {
+        margin: auto 0;
+        > .mdi {
+            font-size: 32px;
+            color: $grey-text;
+        }
+        span {
+            margin-top: 10px;
+            display: block;
+            font-size: 13px;
+        }
+    }
+    
+}
+
+/* ------------------------------- thank-modal ------------------------------ */
+
+.thank-modal {
+    max-width: 450px;
+    display: grid;
+    gap: 15px;
+    &__logo {
+        width: 140px;
+        position: absolute;
+        bottom: 40px;
+    }
+}
