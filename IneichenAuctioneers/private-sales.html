@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
@@ -328,6 +329,39 @@
                                 </div>
                             </div>
                             <div data-filtr-block="2" class="private-filters__item">
+                                <div class="private-filters__item-range">
+                                    <div class="private-filters__checks">
+                                        <div class="private-filters__name">Price, CHF</div>
+                                        <div class="private-filters__checks-list">
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                            <label class="c-chekbox" for="price-1000">
+                                                <input type="checkbox" name="brands" id="price-1000">
+                                                10 000 - 25 000
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="private-filters__slider">
+                                        <div class="private-filters__name">Specify:</div>
+                                        <div id="priceSlider" class="c-range"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-filtr-block="3" class="private-filters__item">
                                 <div class="private-filters__checks">
                                     <div class="private-filters__name">Complications</div>
                                     <div class="private-filters__checks-list">
@@ -370,7 +404,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div data-filtr-block="3" class="private-filters__item">
+                            <div data-filtr-block="4" class="private-filters__item">
                                 <div class="private-filters__item-range">
                                     <div class="private-filters__checks">
                                         <div class="private-filters__name">Year</div>
@@ -404,39 +438,6 @@
                                     <div class="private-filters__slider">
                                         <div class="private-filters__name">Specify:</div>
                                         <div id="yearSlider" class="c-range"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div data-filtr-block="4" class="private-filters__item">
-                                <div class="private-filters__item-range">
-                                    <div class="private-filters__checks">
-                                        <div class="private-filters__name">Price, CHF</div>
-                                        <div class="private-filters__checks-list">
-                                            <label class="c-chekbox" for="price-1000">
-                                                <input type="checkbox" name="brands" id="price-1000">
-                                                10 000 - 25 000
-                                            </label>
-                                            <label class="c-chekbox" for="price-1000">
-                                                <input type="checkbox" name="brands" id="price-1000">
-                                                10 000 - 25 000
-                                            </label>
-                                            <label class="c-chekbox" for="price-1000">
-                                                <input type="checkbox" name="brands" id="price-1000">
-                                                10 000 - 25 000
-                                            </label>
-                                            <label class="c-chekbox" for="price-1000">
-                                                <input type="checkbox" name="brands" id="price-1000">
-                                                10 000 - 25 000
-                                            </label>
-                                            <label class="c-chekbox" for="price-1000">
-                                                <input type="checkbox" name="brands" id="price-1000">
-                                                10 000 - 25 000
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="private-filters__slider">
-                                        <div class="private-filters__name">Specify:</div>
-                                        <div id="priceSlider" class="c-range"></div>
                                     </div>
                                 </div>
                             </div>
@@ -573,7 +574,6 @@
                 
             </div>
         </section>
-        
     </main>
 
     <footer class="footer">
@@ -644,14 +644,237 @@
         </div>
     </footer>
 
+    <div id="Filter" class="modal modal-small modal-small_fs">
+        <div class="modal-small__scroll">
+            <div class="modal-small__title">
+                Filter
+            </div>
+            <div class="modal-small__body">
+                <div class="modal-filters">
+                    <button class="modal-filters__btn">
+                        Brands
+                        <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <div class="private-filters__item">
+                        <div class="private-filters__checks">
+                            <div class="private-filters__name">Brands</div>
+                            <div class="private-filters__checks-list">
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    0 A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    1 A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    2 A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    3 A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                                <label class="c-chekbox" for="a-lange-sogne">
+                                    <input type="checkbox" name="brands" id="a-lange-sogne">
+                                    A. Lange &amp; Sohne
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="modal-filters__btn c-button_active">
+                        Price
+                        <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <div class="private-filters__item">
+                        <div class="private-filters__item-range">
+                            <div class="private-filters__checks">
+                                <div class="private-filters__name">Price, CHF</div>
+                                <div class="private-filters__checks-list">
+                                    <label class="c-chekbox" for="price-1000">
+                                        <input type="checkbox" name="brands" id="price-1000">
+                                        10 000 - 25 000
+                                    </label>
+                                    <label class="c-chekbox" for="price-1000">
+                                        <input type="checkbox" name="brands" id="price-1000">
+                                        10 000 - 25 000
+                                    </label>
+                                    <label class="c-chekbox" for="price-1000">
+                                        <input type="checkbox" name="brands" id="price-1000">
+                                        10 000 - 25 000
+                                    </label>
+                                    <label class="c-chekbox" for="price-1000">
+                                        <input type="checkbox" name="brands" id="price-1000">
+                                        10 000 - 25 000
+                                    </label>
+                                    <label class="c-chekbox" for="price-1000">
+                                        <input type="checkbox" name="brands" id="price-1000">
+                                        10 000 - 25 000
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="private-filters__slider">
+                                <div class="private-filters__name">Specify:</div>
+                                <div id="priceSliderM" class="c-range"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="modal-filters__btn">
+                        Complications
+                        <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <div class="private-filters__item">
+                        <div class="private-filters__checks">
+                            <div class="private-filters__name">Complications</div>
+                            <div class="private-filters__checks-list">
+                                <label class="c-chekbox" for="AlarmСlock">
+                                    <input type="checkbox" name="brands" id="AlarmСlock">
+                                    Alarm clock
+                                </label>
+                                <label class="c-chekbox" for="Chronograph">
+                                    <input type="checkbox" name="brands" id="Chronograph">
+                                    Chronograph
+                                </label>
+                                <label class="c-chekbox" for="Date">
+                                    <input type="checkbox" name="brands" id="Date">
+                                    Date
+                                </label>
+                                <label class="c-chekbox" for="AlarmСlock">
+                                    <input type="checkbox" name="brands" id="AlarmСlock">
+                                    Alarm clock
+                                </label>
+                                <label class="c-chekbox" for="Chronograph">
+                                    <input type="checkbox" name="brands" id="Chronograph">
+                                    Chronograph
+                                </label>
+                                <label class="c-chekbox" for="Date">
+                                    <input type="checkbox" name="brands" id="Date">
+                                    Date
+                                </label>
+                                <label class="c-chekbox" for="AlarmСlock">
+                                    <input type="checkbox" name="brands" id="AlarmСlock">
+                                    Alarm clock
+                                </label>
+                                <label class="c-chekbox" for="Chronograph">
+                                    <input type="checkbox" name="brands" id="Chronograph">
+                                    Chronograph
+                                </label>
+                                <label class="c-chekbox" for="Date">
+                                    <input type="checkbox" name="brands" id="Date">
+                                    Date
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="modal-filters__btn">
+                        Year
+                        <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <div class="private-filters__item">
+                        <div class="private-filters__item-range">
+                            <div class="private-filters__checks">
+                                <div class="private-filters__name">Year</div>
+                                <div class="private-filters__checks-list">
+                                    <label class="c-chekbox" for="y-2000">
+                                        <input type="checkbox" name="brands" id="y-2000">
+                                        2000
+                                    </label>
+                                    <label class="c-chekbox" for="y-2010">
+                                        <input type="checkbox" name="brands" id="y-2010">
+                                        2010 - 2020
+                                    </label>
+                                    <label class="c-chekbox" for="y-2000">
+                                        <input type="checkbox" name="brands" id="y-2000">
+                                        2000 - 2010
+                                    </label>
+                                    <label class="c-chekbox" for="y-2000">
+                                        <input type="checkbox" name="brands" id="y-2000">
+                                        2000
+                                    </label>
+                                    <label class="c-chekbox" for="y-2010">
+                                        <input type="checkbox" name="brands" id="y-2010">
+                                        2010 - 2020
+                                    </label>
+                                    <label class="c-chekbox" for="y-2000">
+                                        <input type="checkbox" name="brands" id="y-2000">
+                                        2000 - 2010
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="private-filters__slider">
+                                <div class="private-filters__name">Specify:</div>
+                                <div id="yearSliderM" class="c-range"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-small__btns">
+                <button class="c-button c-button_green c-button_filled">Apply</button>
+                <button class="c-button c-button_grey">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
         var yearSlider = document.getElementById('yearSlider');
         var priceSlider = document.getElementById('priceSlider');
+        var yearSliderM = document.getElementById('yearSliderM');
+        var priceSliderM = document.getElementById('priceSliderM');
 
         noUiSlider.create(yearSlider, {
             start: [1200, 2023],
@@ -696,43 +919,102 @@
             }
         });
 
-        let filtBtn;
-        let filtBlock;
+        noUiSlider.create(yearSliderM, {
+            start: [1200, 2023],
+            connect: true,
+            step: 1,
+            tooltips: [
+                wNumb({decimals: 0}),
+                wNumb({decimals: 0}),
+            ],
+            decimals: 5,
+            pips: {
+                mode: 'range',
+                density: 25
+            },
+            range: {
+                'min': 1200,
+                'max': 2023
+            }
+        });
+        noUiSlider.create(priceSliderM, {
+            start: [00, 1000000],
+            connect: true,
+            step: 1000,
+            tooltips: [
+                wNumb({
+                    decimals: 0,
+                }),
+                wNumb({
+                    decimals: 0,
+                }),
+            ],
+            decimals: 5,
+            pips: {
+                mode: 'range',
+                density: 25
+            },
+            range: {
+                'min': 0,
+                'max': 1000000
+            }
+        });
+
         
-        $('#filtersOpen').click(function(){
-           $(this).toggleClass('c-button_active');
-           $('.private-filters__body').slideToggle(300);
-        })
 
-        $('[data-filtr-btn]').click(function(){
+        if (window.matchMedia("(max-width: 820px)").matches) {
+            $('#filtersOpen').click(function(){
+                $("#Filter").modal({
+                    closeExisting: false,
+                    escapeClose: false,
+                    closeClass: 'mdi mdi-close',
+                    closeText: ''
+                });
+            })
+            $('.modal-filters__btn').click(function(){
+                $(this).next().slideToggle(300);
+            })
+        } else {
+            let filtBtn;
+            let filtBlock;
 
-            filtBtn = $(this).attr('data-filtr-btn');
+            $('#filtersOpen').click(function(){
+            $(this).toggleClass('c-button_active');
+            $('.private-filters__body').slideToggle(300);
+            })
 
-            if ($(this).hasClass('c-button_active')) {
-                $(this).removeClass('c-button_active')
-            } else {
-                $('[data-filtr-btn]').removeClass('c-button_active')
-                $(this).addClass('c-button_active')
-                
-            }
+            $('[data-filtr-btn]').click(function(){
 
-            if ($('[data-filtr-block='+filtBtn+']').is(":hidden")) {
-                $('[data-filtr-block]').slideUp(300);
-                $('[data-filtr-block='+filtBtn+']').slideDown(300);
-                
-            } else {
-                $('[data-filtr-block='+filtBtn+']').slideUp(300);
-            }
-        })
+                filtBtn = $(this).attr('data-filtr-btn');
 
-        $('.private-product-item__favorite').click(function(){
-            $(this).toggleClass('private-product-item__favorite_active').find('.mdi').toggleClass('red-text mdi-heart-outline mdi-heart');
-        })
+                if ($(this).hasClass('c-button_active')) {
+                    $(this).removeClass('c-button_active')
+                } else {
+                    $('[data-filtr-btn]').removeClass('c-button_active')
+                    $(this).addClass('c-button_active')
+                    
+                }
 
-        $('.sort-select__current').click(function(){
-            $(this).parents('.sort-select').toggleClass('sort-select_active');
-            $(this).next().slideToggle();
-        })
+                if ($('[data-filtr-block='+filtBtn+']').is(":hidden")) {
+                    $('[data-filtr-block]').slideUp(300);
+                    $('[data-filtr-block='+filtBtn+']').slideDown(300);
+                    
+                } else {
+                    $('[data-filtr-block='+filtBtn+']').slideUp(300);
+                }
+            })
+
+            $('.private-product-item__favorite').click(function(){
+                $(this).toggleClass('private-product-item__favorite_active').find('.mdi').toggleClass('red-text mdi-heart-outline mdi-heart');
+            })
+
+            $('.sort-select__current').click(function(){
+                $(this).parents('.sort-select').toggleClass('sort-select_active');
+                $(this).next().slideToggle();
+            })
+        }
+
+        
         
     </script>
 </body>

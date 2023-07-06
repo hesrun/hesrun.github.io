@@ -123,12 +123,6 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* --------------------------------- product -------------------------------- */
-    .product {
-        padding: 30px;
-        gap: 0 30px;
-    }
-
     /* ---------------------------------- live ---------------------------------- */
     .live-auction {
         grid-template-columns: 1fr 1fr;
@@ -625,77 +619,6 @@
             }
         }
     }
-    /* --------------------------------- product -------------------------------- */
-    .product {
-        display: block;
-        padding: 0px;
-        &__header {
-            position: fixed;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            padding: 20px;
-        }
-        &__gallery-col {
-            padding: 72px 0 0 0;
-            position: relative;
-            .slick-slide {
-                height: 100vw;
-                img {
-                    height: 100%;
-                }
-            }
-        }
-        &__gallery {
-            grid-template-columns: 1fr;
-        }
-        &__video {
-            padding: 0px;
-            border-radius: 0px;
-            iframe {
-                position: static;
-            }
-        }
-        &__gallery-swipe {
-            left: 50%;
-            bottom: 50px;
-            position: absolute;
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            transform: translateX(-50%);
-        }
-        &__image-link {
-            border-radius: 0px;
-            img {
-                height: 70vh;
-                object-fit: cover;
-            }
-        }
-        &__tools-btn {
-            display: none;
-        }
-        &__info-col {
-            padding: 30px;
-        }
-        &__bids {
-            grid-template-columns: 1fr;
-        }
-        &__prams-title {
-            font-size: 22px;
-            margin: 45px 0 30px;
-        }
-    }
-    .estimator-review {
-        &__info {
-            flex-direction: column-reverse;
-            align-items: flex-start;
-        }
-        &__price {
-            text-align: left;
-        }
-        
-    }
     /* ---------------------------------- live ---------------------------------- */
     .live-auction {
         display: block;
@@ -857,7 +780,7 @@
     /* --------------------------------- footer --------------------------------- */
 
     .footer {
-        //margin-top: 30px;
+        margin-top: 30px;
     }
 
     /* --------------------------------- modals --------------------------------- */
@@ -1952,175 +1875,6 @@
         }
     }
 
-    /* --------------------------------- product -------------------------------- */
-    .product {
-        &__num {
-            font-size: 12px;
-            span {
-                width: 32px;
-                height: 32px;
-                line-height: 32px;
-            }
-            
-        }
-        &__gallery-swipe {
-            bottom: 30px;
-        }
-        &__nav-link {
-            width: 32px;
-            height: 32px;
-            line-height: 30px;
-            font-size: 18px;
-            &_loading {
-                &:before {
-                    margin-top: 5px;
-                }
-            }
-        }
-        &__close {
-            margin-left: 15px;
-            width: 32px;
-            height: 32px;
-            line-height: 32px;
-            font-size: 24px;
-        }
-        &__info-col {
-            padding: 30px 20px 0px;
-        }
-        &__name {
-            flex-direction: column-reverse;
-            align-items: flex-start;
-            margin-bottom: 25px;
-            border-bottom: 1px $grey-line solid;
-            padding-bottom: 30px;
-            .c-button {
-                width: 100%;
-            }
-            h1 {
-                font-size: 22px;
-                margin-top: 0px;
-            }
-        }
-        &__info-head {
-            margin-bottom: 0px;
-        }
-        &__bids-info {
-            grid-gap: 10px 0;
-            margin-bottom: 30px;
-            hr {
-                margin: 5px 0;
-            }
-        }
-        &__bids-info-item {
-            strong {
-                font-size: 15px;
-            }
-        }
-        &__bids {
-            margin: 30px 0;
-        }
-
-        &__bids-history {
-            font-size: 13px;
-        }
-    
-        &__other-links {
-            grid-template-columns: 1fr;
-        }
-        &__premium {
-            text-align: center;
-            a {
-                line-height: 1.5;
-                display: block;
-                margin: 0px;
-                font-size: 13px;
-            }
-            span {
-                font-size: 13px;
-            }
-        }
-        &__payment {
-            .c-button {
-                width: 100%;
-            }
-        }
-        &__prams-title {
-            margin: 30px 0 15px;
-        }
-        &__params {
-            display: block;
-            tr {
-                display: block;
-                &:first-child {
-                    td {
-                        padding-top: 0;
-                    }
-                }
-            }
-            td {
-                display: block;
-                padding: 0px;
-            }
-            td:first-child {
-                width: auto;
-                padding: 30px 0 15px;
-            }
-        }
-    }
-    .estimator-review {
-        margin: 30px 0;
-        padding-bottom: 30px;
-        &__value {
-            font-size: 15px;
-        }
-    }
-
-    .consultant-info {
-        $root: &;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        line-height: 20px;
-        &_vertical {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            #{$root}__messangers {
-                margin: 0 0 0 0px;
-            }
-        }
-        &__name {
-            margin-left: 20px;
-        }
-        &__contacts {
-            margin: 0 0 10px 82px;
-            grid-column: 2 span;
-        }
-        &__messangers {
-            margin: 0 0 0 82px;
-            grid-column: 2 span;
-            img {
-                vertical-align: middle;
-                margin-right: 5px;
-            }
-        }
-        b {
-            display: block;
-        }
-    }
-
-    .bids-history-table {
-        th {
-            padding-bottom: 20px;
-            font-size: 13px;
-        }
-        td {
-            font-size: 13px;
-            padding: 5px 15px 5px 0;
-        }
-        .flag-icon {
-            margin-right: 5px;
-        }
-    }
     /* ---------------------------------- live ---------------------------------- */
     .live-auction {
         &__col-head {
@@ -2734,9 +2488,15 @@
         }
         &__title {
             font-size: 18px;
+            padding-right: 30px;
         }
         &__body {
             padding: 30px 0;
+        }
+        &__footer {
+            .c-button {
+                max-width: 100%;
+            }
         }
         &_full {
             padding: 0px;
@@ -2757,6 +2517,21 @@
             }
             a.close-modal {
                 position: fixed;
+            }
+        }
+        &__scroll {
+            #{$root}__title {
+                padding-bottom: 20px;
+            }
+            #{$root}__footer {
+                padding-top: 20px;
+            }
+            #{$root}__btns {
+                padding-top: 20px;
+            }
+            #{$root}__body {
+                margin-right: -20px;
+                padding-right: 20px;
             }
         }
     }

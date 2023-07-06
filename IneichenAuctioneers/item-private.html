@@ -324,6 +324,7 @@
     </div>
 
     <div id="fitting" class="modal modal-small modal-small_fs">
+        <video id="videoStream" autoplay muted defaultmuted loop playsinline></video>
         <div class="modal-small__title">
             Audemars Piguet
             <span class="modal-small__subtitle">Royal Oak Grande Complication   </span>
@@ -346,6 +347,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 
     <div id="tradeIn" class="modal modal-small modal-small_fs">
@@ -556,33 +558,33 @@
             closeText: ''
         });
         
-        $("#tradeIn").modal({
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
+        // $("#tradeIn").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
 
-        $("#makeOffer").modal({
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
+        // $("#makeOffer").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
 
-        $("#sellMyItem").modal({
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
+        // $("#sellMyItem").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
 
-        $("#thank").modal({
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
+        // $("#thank").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
 
         
 
@@ -645,6 +647,44 @@
                 offset_top: 100
             });
         }
+
+        const constraints = {
+            audio: false,
+            video: {
+                width: {
+                    min: 320,
+                },
+                height: {
+                    min: 200,
+                },
+                facingMode: 'environment'
+            }
+        };
+        const video = document.querySelector("#videoStream");
+
+        // $('#fitting').on($.modal.OPEN, function(event, modal) {
+        //     navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
+        //         video.srcObject = mediaStream;
+        //         video.onloadedmetadata = () => {
+        //             video.play();
+        //         };
+        //     })
+        //     .catch((err) => {
+        //         // always check for errors at the end.
+        //         console.error(`${err.name}: ${err.message}`);
+        //     });
+        // });
+
+        navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
+            video.srcObject = mediaStream;
+            video.onloadedmetadata = () => {
+                video.play();
+            };
+        })
+        .catch((err) => {
+            // always check for errors at the end.
+            console.error(`${err.name}: ${err.message}`);
+        });
 
         
 
