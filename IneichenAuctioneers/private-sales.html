@@ -208,34 +208,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <hr>
-            <div class="container">
                 <div class="private-filters">
-                    <div class="private-filters__head">
-                        <div class="private-filters__open">
-                            <button id="filtersOpen" class="c-button c-button_full c-button_grey c-button_icon-left">
-                                <i class="mdi mdi-tune-vertical"></i>
-                                Filters
-                                <i class="mdi mdi-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div class="private-filters__sorting">
-                            <div class="c-dropdown c-dropdown_full">
-                                <a href="" class="c-dropdown__button c-button c-button_full c-button_grey">
-                                    Price descdending
-                                    <i class="mdi mdi-chevron-down"></i>
-                                </a>
-                                <div class="c-dropdown__list">
-                                    <div class="c-dropdown__scroll">
-                                        <a href="" class="c-dropdown__link">Price descdending</a>
-                                        <a href="" class="c-dropdown__link">Price incresment</a>
-                                        <a href="" class="c-dropdown__link">A-Z</a>
-                                        <a href="" class="c-dropdown__link">Alphabetically</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="private-filters__open">
+                        <button id="filtersOpen" class="c-button c-button_full c-button_grey c-button_icon-left">
+                            <i class="mdi mdi-tune-vertical"></i>
+                            Filters
+                            <i class="mdi mdi-chevron-down"></i>
+                        </button>
                     </div>
                     <div class="private-filters__body">
                         <div class="private-filters__btns">
@@ -448,8 +427,25 @@
         </section>
         <section class="land-section land-section_half land-section_grey">
             <div class="container">
-                <div class="catalog-products-count">
-                    35 watches
+                <div class="catalog-products-header">
+                    <div class="catalog-products-header__count">
+                        35 watches
+                    </div>
+                    <div class="catalog-sorting">
+                        <b>Sort by:</b>
+                        <div class="catalog-sorting__select">
+                            <div class="catalog-sorting__current">
+                                Price descdending
+                                <span class="mdi mdi-chevron-down"></span>
+                            </div>
+                            <div class="catalog-sorting__options">
+                                <a href="" class="catalog-sorting__option">Price descdending</a>
+                                <a href="" class="catalog-sorting__option">Price incresment</a>
+                                <a href="" class="catalog-sorting__option">A-Z</a>
+                                <a href="" class="catalog-sorting__option">Alphabetically</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="private-catalog">
                     <div class="private-product-item">
@@ -651,13 +647,12 @@
             </div>
             <div class="modal-small__body">
                 <div class="modal-filters">
-                    <button class="modal-filters__btn">
+                    <button class="modal-filters__button c-button c-button_full c-button c-button_grey">
                         Brands
                         <i class="mdi mdi-chevron-down"></i>
                     </button>
                     <div class="private-filters__item">
                         <div class="private-filters__checks">
-                            <div class="private-filters__name">Brands</div>
                             <div class="private-filters__checks-list">
                                 <label class="c-chekbox" for="a-lange-sogne">
                                     <input type="checkbox" name="brands" id="a-lange-sogne">
@@ -726,14 +721,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="modal-filters__btn c-button_active">
+                    <button class="modal-filters__button c-button c-button_full c-button c-button_grey">
                         Price
                         <i class="mdi mdi-chevron-down"></i>
                     </button>
                     <div class="private-filters__item">
                         <div class="private-filters__item-range">
                             <div class="private-filters__checks">
-                                <div class="private-filters__name">Price, CHF</div>
                                 <div class="private-filters__checks-list">
                                     <label class="c-chekbox" for="price-1000">
                                         <input type="checkbox" name="brands" id="price-1000">
@@ -758,19 +752,16 @@
                                 </div>
                             </div>
                             <div class="private-filters__slider">
-                                <div class="private-filters__name">Specify:</div>
                                 <div id="priceSliderM" class="c-range"></div>
                             </div>
                         </div>
                     </div>
-
-                    <button class="modal-filters__btn">
+                    <button class="modal-filters__button c-button c-button_full c-button c-button_grey">
                         Complications
                         <i class="mdi mdi-chevron-down"></i>
                     </button>
                     <div class="private-filters__item">
                         <div class="private-filters__checks">
-                            <div class="private-filters__name">Complications</div>
                             <div class="private-filters__checks-list">
                                 <label class="c-chekbox" for="AlarmСlock">
                                     <input type="checkbox" name="brands" id="AlarmСlock">
@@ -811,15 +802,13 @@
                             </div>
                         </div>
                     </div>
-
-                    <button class="modal-filters__btn">
+                    <button class="modal-filters__button c-button c-button_full c-button c-button_grey">
                         Year
                         <i class="mdi mdi-chevron-down"></i>
                     </button>
                     <div class="private-filters__item">
                         <div class="private-filters__item-range">
                             <div class="private-filters__checks">
-                                <div class="private-filters__name">Year</div>
                                 <div class="private-filters__checks-list">
                                     <label class="c-chekbox" for="y-2000">
                                         <input type="checkbox" name="brands" id="y-2000">
@@ -848,7 +837,6 @@
                                 </div>
                             </div>
                             <div class="private-filters__slider">
-                                <div class="private-filters__name">Specify:</div>
                                 <div id="yearSliderM" class="c-range"></div>
                             </div>
                         </div>
@@ -856,10 +844,8 @@
                 </div>
             </div>
             <div class="modal-small__btns">
-                <button class="c-button c-button_green c-button_filled">Apply</button>
-                <button class="c-button c-button_grey">
-                    Close
-                </button>
+                <button class="c-button c-button_full c-button_blue c-button_filled">Apply</button>
+                <button class="c-button c-button_full c-button_blue">Clear filter</button>
             </div>
         </div>
     </div>
@@ -871,6 +857,11 @@
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
+
+        $('.catalog-sorting__current').click(function(){
+            $(this).toggleClass('catalog-sorting__current_active').next().fadeToggle(100);
+        })
+
         var yearSlider = document.getElementById('yearSlider');
         var priceSlider = document.getElementById('priceSlider');
         var yearSliderM = document.getElementById('yearSliderM');
@@ -971,22 +962,17 @@
                     closeText: ''
                 });
             })
-            $('.modal-filters__btn').click(function(){
+            $('.modal-filters__button').click(function(){
                 $(this).next().slideToggle(300);
             })
         } else {
+
+            
             let filtBtn;
             let filtBlock;
 
-            $('#filtersOpen').click(function(){
-            $(this).toggleClass('c-button_active');
-            $('.private-filters__body').slideToggle(300);
-            })
-
             $('[data-filtr-btn]').click(function(){
-
                 filtBtn = $(this).attr('data-filtr-btn');
-
                 if ($(this).hasClass('c-button_active')) {
                     $(this).removeClass('c-button_active')
                 } else {
@@ -994,7 +980,6 @@
                     $(this).addClass('c-button_active')
                     
                 }
-
                 if ($('[data-filtr-block='+filtBtn+']').is(":hidden")) {
                     $('[data-filtr-block]').slideUp(300);
                     $('[data-filtr-block='+filtBtn+']').slideDown(300);
@@ -1003,16 +988,13 @@
                     $('[data-filtr-block='+filtBtn+']').slideUp(300);
                 }
             })
-
-            $('.private-product-item__favorite').click(function(){
-                $(this).toggleClass('private-product-item__favorite_active').find('.mdi').toggleClass('red-text mdi-heart-outline mdi-heart');
-            })
-
-            $('.sort-select__current').click(function(){
-                $(this).parents('.sort-select').toggleClass('sort-select_active');
-                $(this).next().slideToggle();
-            })
         }
+
+        
+
+        $('.private-product-item__favorite').click(function(){
+            $(this).toggleClass('private-product-item__favorite_active').find('.mdi').toggleClass('red-text mdi-heart-outline mdi-heart');
+        })
 
         
         
