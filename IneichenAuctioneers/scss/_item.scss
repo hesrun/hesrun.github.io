@@ -274,7 +274,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 15px;
+        color: black;
+        text-decoration: none;
+        &:hover {
+            color: $brown-text;
+        }
         .mdi {
             font-size: 22px;
         }
@@ -596,9 +601,18 @@
         &__video {
             padding: 0px;
             border-radius: 0px;
-            iframe {
-                position: static;
+            video {
+                margin-top: 45px;
+                height: calc(100% - 45px);
+                border-radius: 0px;
+                object-fit: cover;
             }
+        }
+        &__video-controls {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            background: black;
         }
         &__gallery-swipe {
             left: 50%;

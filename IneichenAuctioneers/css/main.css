@@ -1010,6 +1010,13 @@ select:-webkit-autofill:focus {
   top: auto;
   bottom: calc(100% + 10px);
 }
+.c-dropdown__list .c-button {
+  display: flex;
+  margin-top: 10px;
+}
+.c-dropdown__list .c-button:first-child {
+  margin-top: 0;
+}
 .c-dropdown__scroll {
   max-height: 300px;
   padding-right: 10px;
@@ -7874,7 +7881,12 @@ select:-webkit-autofill:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
+  color: black;
+  text-decoration: none;
+}
+.product__private-payment:hover {
+  color: #BD9E5E;
 }
 .product__private-payment .mdi {
   font-size: 22px;
@@ -8179,8 +8191,18 @@ select:-webkit-autofill:focus {
     padding: 0px;
     border-radius: 0px;
   }
-  .product__video iframe {
-    position: static;
+  .product__video video {
+    margin-top: 45px;
+    height: calc(100% - 45px);
+    border-radius: 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .product__video-controls {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background: black;
   }
   .product__gallery-swipe {
     left: 50%;
