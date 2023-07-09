@@ -65,12 +65,28 @@
         display: block;
         border-radius: 15px;
         overflow: hidden;
-        img {
+        position: relative;
+        > img {
             width: 100%;
             vertical-align: middle;
         }
         &:not(&_half) {
             grid-column: 2 span;
+        }
+    }
+    &__fit-btn {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        font-family: $america;
+        font-weight: 500;
+        font-size: 14px;
+        gap: 10px;
+        color: black;
+        &:hover {
+            opacity: 0.6;
         }
     }
     &__header {
@@ -398,6 +414,11 @@
         align-items: center;
         gap: 25px;
         font-weight: 500;
+        text-decoration: none;
+        color: black;
+        &:hover {
+            color: $brown-text;
+        }
         span {
             display: block;
             font-weight: 400;
@@ -413,6 +434,7 @@
         gap: 30px;
     }
     &__card-image {
+        flex: 0 0 auto;
         width: 110px;
         text-align: center;
     }
@@ -424,6 +446,13 @@
         }
         p {
             font-size: 12px;
+        }
+        a {
+            font-weight: 500;
+            text-decoration: none;
+            &:hover {
+                color: $brown-text;
+            }
         }
     }
 }
@@ -526,7 +555,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1240px) {
     .product {
         padding: 0px;
         gap: 0 30px;

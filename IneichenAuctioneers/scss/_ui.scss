@@ -26,26 +26,45 @@
     cursor: pointer;
 }
 .c-alert {
+    display: flex;
+    justify-content: center;
     margin: 30px 0;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 12px;
-    line-height: 1.3;
+    padding: 8px 15px;
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 20px;
+    gap: 10px;
     &_red {
-        background: rgba($red-text, 0.3);
-        color: $red-text
+        border: 1px $alert-red solid;
+        color: $alert-red
     }
     &_blue {
-        background: rgba($blue-text, 0.3);
+        border: 1px $blue-text solid;
         color: $blue-text
     }
     &_grey {
-        background: rgba($grey-text, 0.3);
+        border: 1px $grey-text solid;
         color: $grey-text
     }
     &_brown {
-        background: rgba($brown-text, 0.3);
+        border: 1px $brown-text solid;
         color: $brown-text
+    }
+    &_salad {
+        border: 1px $alert-salad solid;
+        color: $alert-salad
+    }
+    &_orange {
+        border: 1px $alert-orange solid;
+        color: $alert-orange
+    }
+    &_green {
+        border: 1px $alert-green solid;
+        color: $alert-green
+    }
+    .mdi {
+        font-size: 20px;
+        line-height: 20px;
     }
 }
 .c-button {
@@ -1086,16 +1105,31 @@
     a.close-modal {
         right: 20px;
         top: 20px;
+        font-size: 0px;
         color: black;
-        font-size: 32px;
         text-indent: 0;
         background: none;
         opacity: 0.4;
         transition: all 0.5s;
+
         &:hover {
             opacity: 1;
             color: $blue-text;
         }
+        &:before {
+            display: inline-block;
+            font: normal normal normal 24px/1 "Material Design Icons";
+            font-size: inherit;
+            text-rendering: auto;
+            line-height: inherit;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        &:before {
+            font-size: 32px;
+            content: "\F0156";
+        }
+        
     }
 
     &__scroll {
