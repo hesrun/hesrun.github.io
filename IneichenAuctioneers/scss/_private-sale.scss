@@ -152,8 +152,27 @@
 .private-filters {
     $root: &;
     margin-top: 45px;
+    margin-bottom: 24px;
     &__open {
         display: none;
+    }
+    &__clear {
+        cursor: pointer;
+        margin-top: 16px;
+        font-size: 15px;
+        appearance: none;
+        border: none;
+        background: none;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 500;
+        gap: 8px;
+        .mdi {
+            font-size: 22px;
+        }
+        &:hover {
+            color: $brown-text;
+        }
     }
     &__item {
         display: none;
@@ -169,6 +188,7 @@
     }
     &__btns {
         margin-top: 24px;
+        
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 24px;
@@ -191,6 +211,7 @@
         font-weight: 500;
     }
 }
+
 
 @keyframes like {
     0% {

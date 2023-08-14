@@ -190,6 +190,11 @@
 
     <main class="content">
         <div class="container">
+            <div class="n-tabs n-tabs_line">
+                <a href="" class="n-tabs__item n-tabs__item_active">For traiders</a>
+                <a href="" class="n-tabs__item">For private clients</a>
+                <a href="" class="n-tabs__item">Private sales</a>
+            </div>
             <div class="land-section land-section_half">
                 <h2 class="title">Watch dealers, sell fast and maximize profits!</h2>
                 <div class="sell-watch-dealers">
@@ -786,6 +791,11 @@
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
     <script>
+        $('.n-tabs__item').click(function(){
+            $('.n-tabs__item').removeClass('n-tabs__item_active');
+            $(this).addClass('n-tabs__item_active');
+            return false;
+        })
         $('.countTo').countTo();
         $('#Consign').modal({
                 fadeDuration: 100,

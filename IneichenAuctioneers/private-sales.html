@@ -188,7 +188,7 @@
     </div>
 
     <main class="content">
-        <section class="land-section land-section_half">
+        <section class="land-section land-section_half land-section_clear">
             <div class="container">
                 <div class="private-sales-head">
                     <div>
@@ -421,7 +421,17 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="private-filters__clear">
+                            <i class="mdi mdi-close"></i>
+                            Clear filters
+                        </button>
                     </div>
+                </div>
+                <div class="n-tabs">
+                    <a href="" class="n-tabs__item n-tabs__item_active">On auction sale (35)</a>
+                    <a href="" class="n-tabs__item">On private sales (56)</a>
+                    <a href="" class="n-tabs__item">Sold on auctions (57) </a>
+                    <a href="" class="n-tabs__item">Sold on private sales (12)</a>
                 </div>
             </div>
         </section>
@@ -994,6 +1004,12 @@
 
         $('.private-product-item__favorite').click(function(){
             $(this).toggleClass('private-product-item__favorite_active').find('.mdi').toggleClass('red-text mdi-heart-outline mdi-heart');
+        })
+
+        $('.n-tabs__item').click(function(){
+            $('.n-tabs__item').removeClass('n-tabs__item_active');
+            $(this).addClass('n-tabs__item_active');
+            return false;
         })
 
         
