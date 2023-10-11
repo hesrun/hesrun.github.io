@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.1.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/4.2.8/css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="product">
+        <div class="product__gallery-col">
+            <div class="product__gallery-swipe">
+                <i class="mdi mdi-chevron-left"></i>
+                Swipe photos
+                <i class="mdi mdi-chevron-right"></i>
+            </div>
+            <div class="product__gallery">
+                <a href="img/product/private/img.png" data-fancybox="gallery" class="product__image-link">
+                    <img src="img/product/private/img.png" alt="">
+                    <!-- <div class="product__fit-btn">
+                        Wear on hand
+                        <img src="img/product/private/fit-hand-ico.svg" alt="">
+                    </div> -->
+                </a>
+                <div class="product__video">
+                    <video id="ProductVideo" poster="img/product/img.jpg"
+                        src="https://ineichen.com/upload/iblock/c1f/9f56othriskp0ht1zrirg9alldxsxtob.mp4#t=0.1">
+                    </video>
+                    <div class="product__video-controls">
+                        <button class="mdi mdi-play-circle-outline"></button>
+                        <button class="mdi mdi-pause"></button>
+                        <button class="mdi mdi-fullscreen"></button>
+                    </div>
+                </div>
+                <a href="img/product/private/img-1.png" data-fancybox="gallery" class="product__image-link">
+                    <img src="img/product/private/img-1.png" alt="">
+                </a>
+                <a href="img/product/private/img-2.png" data-fancybox="gallery" class="product__image-link product__image-link_half">
+                    <img src="img/product/private/img-2.png" alt="">
+                </a>
+                <a href="img/product/private/img-3.png" data-fancybox="gallery" class="product__image-link product__image-link_half">
+                    <img src="img/product/private/img-3.png" alt="">
+                </a>
+                <a href="img/product/private/img-4.png" data-fancybox="gallery" class="product__image-link product__image-link_half">
+                    <img src="img/product/private/img-4.png" alt="">
+                </a>
+                <a href="img/product/private/img-5.png" data-fancybox="gallery" class="product__image-link product__image-link_half">
+                    <img src="img/product/private/img-5.png" alt="">
+                </a>
+            </div>
+
+        </div>
+        <div class="product__info-col">
+            <div class="product__header">
+                <div class="product__nav">
+                    <a href="" class="product__nav-link">
+                        <i class="mdi mdi-chevron-left"></i>
+                    </a>
+                    <a href="" class="product__nav-link product__nav-link_loading">
+                        <i class="mdi mdi-chevron-right"></i>
+                    </a>
+                </div>
+                <a href="#" class="product__close">
+                    <i class="mdi mdi-close"></i>
+                </a>
+            </div>
+            <div class="product__info">
+                <div class="product__info-head">
+                    <div class="product__name">
+                        <h1 class="product__brand">Audemars Piguet</h1>
+                        <h2 class="product__model">Royal Oak Grande Complication</h2>
+                    </div>
+                    <div class="product__tools-btn">
+                        <a href="" class="tooltip c-button c-button_outline c-button_medium c-button_blue c-button_icon tooltipstered">
+                            <i class="mdi mdi-credit-card-outline"></i>
+                        </a>
+                        <a href="" id="addToFav" class="tooltip c-button c-button_outline c-button_medium c-button_blue c-button_icon tooltipstered">
+                            <i class="mdi mdi-heart-outline"></i>
+                        </a>
+                        <a href="" class="tooltip c-button c-button_outline c-button_medium c-button_blue c-button_icon tooltipstered">
+                            <i class="mdi mdi-bell-outline"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="product-reserve-info">
+                    <img src="img/product/private/hammer-hand.svg" alt="">
+                    <div>
+                        <h3>This watch was featured at the "Gerald Genta" auction</h3>
+                        <div class="product-reserve-info__prices">
+                            <div>
+                                <span>Starting bid</span>
+                                <strong>CHF 40 000</strong>
+                            </div>
+                            <div>
+                                <span>Hammer price</span>
+                                <strong>CHF 38 000</strong>
+                            </div>
+                            <div>
+                                <span>Bidders</span>
+                                <strong>5</strong>
+                            </div>
+                            <div>
+                                <span>Total bids:</span>
+                                <strong>10</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product__private-btns">
+                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Order & buy the same watch</a>
+                    <div>
+                        <a rel="modal:open" href="#tradeIn" class="c-button c-button_clear">Trade-in</a>
+                        <a rel="modal:open" href="#makeOffer"  href="" class="c-button c-button_clear">Make an offer</a>
+                        <a rel="modal:open" href="#sellMyItem" class="c-button c-button_clear">Sell my item</a>
+                    </div>
+                </div>
+                <div class="product__private-contacts">
+                    <div class="c-dropdown">
+                        <a href="" class="c-dropdown__button c-button c-button_full c-button_grey c-button_small c-button_icon-left">
+                            <i class="mdi mdi-headset"></i>
+                            Contact advisor
+                        </a>
+                        <div class="c-dropdown__list">
+                            <div class="c-dropdown__scroll">
+                                <a href="" class="c-button c-button_whatsapp c-button_medium">WhatsApp</a>
+                                <a href="" class="c-button c-button_telegram c-button_medium">Telegram</a>
+                                <a href="" class="c-button c-button_grey c-button_medium">Phone</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a rel="modal:open" href="#paymentMethods" class="product__private-payment">
+                        <i class="mdi mdi-credit-card-outline"></i>
+                        <div>Payment methods <b>(we accept CRYPTO)</b></div>
+                    </a>
+                </div>
+                <div class="estimator-review">
+                    <div class="estimator-review__text">
+                        When it comes to watch design as art, Gérald Genta is by far the first to be mentioned. Some call him the Picasso of watch design, which underlines his status, but isn’t relevant in terms of style. His influence, his touch on this design is obvious to me. Gérald Genta can be concise, as with the Royal Oak, the Nautilus, or the Seamaster Titanium, but he can also be overly baroque. This lot convincingly demonstrates this facet of his talent, even though the watch was produced when the master had already left the brand he founded. Interest in this lot is also heightened by its incredible rarity. Among the unique specimens, as most models of the Grande Sonnerie series were produced, there are only a few that are equipped with a manual winding caliber.
+                    </div>
+                    <div class="estimator-review__info">
+                        <div class="user-data">
+                            <div class="user-data__ava">
+                                <img src="img/product/image 46.jpg" alt="">
+                            </div>
+                            <div class="user-data__info">
+                                <div class="user-data__name">Alex Kutkovoy</div>
+                                <div class="user-data__spec">More than 10 years editor in Revolution</div>
+                            </div>
+                        </div>
+                        <div class="estimator-review__price">
+                            <span>Estimate price:</span>
+                            <div class="estimator-review__value">
+                                <strong>CHF 20 000 — CHF 30 000</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="product__prams-title">Specification</h3>
+                <table class="product__params">
+                    <tr>
+                        <td>Case</td>
+                        <td>Yellow gold case with partially translucent dark blue enamel painting and guillochage on the
+                            back, decorated bezel</td>
+                    </tr>
+                    <tr>
+                        <td>Dial</td>
+                        <td>White enamel dial with Arabic numerals, Breguet hands, winding hole between 1 and 2 o'clock,
+                            signed "Poitevin a L´Orient"</td>
+                    </tr>
+                    <tr>
+                        <td>Movement</td>
+                        <td>Gold-plated spindle pocket watch movement with chain and fusee, openworked and engraved
+                            balance cock, blued screws, signed "Poitevin a L'Orient"</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>42mm</td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td>ca.1820-1840</td>
+                    </tr>
+                </table>
+                <h3 class="product__prams-title">Condition report</h3>
+                <table class="product__params">
+                    <tr>
+                        <td>Case</td>
+                        <td>Yellow gold case with partially translucent dark blue enamel painting and guillochage on the
+                            back, decorated bezel</td>
+                    </tr>
+                    <tr>
+                        <td>Dial</td>
+                        <td>White enamel dial with Arabic numerals, Breguet hands, winding hole between 1 and 2 o'clock,
+                            signed "Poitevin a L´Orient"</td>
+                    </tr>
+                    <tr>
+                        <td>Movement</td>
+                        <td>Gold-plated spindle pocket watch movement with chain and fusee, openworked and engraved
+                            balance cock, blued screws, signed "Poitevin a L'Orient"</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>42mm</td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td>ca.1820-1840</td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="paymentMethods" class="modal modal-small">
+        <div class="modal-small__title">Payment methods</div>
+        <div class="modal-small__body">
+            <div class="payment-methods-info">
+                <b>At our Boutique:</b> <br>
+                Cash (CHF, EUR, USD) or credit cards payments, except Postcard <br><br>
+                <b>Bank Wire Transfer:</b> <br>
+                CHF, EUR, USD Account <br><br>
+                <b>Online credit cards payment:</b> <br>
+                Visa or Mastercard <br><br>
+                We accept credit card payments with Visa or Mastercard. To receive the link for online payment, please contact us <a href="info@ineichen.com">info@ineichen.com</a> <br><br>
+                * A fee of 2.75% will be charged: <br> <br>
+                - When paying online with Visa or Mastercard credit cards <br>
+                - When paying with American Express card at the boutique <br><br>
+                <b>Cryptocurrencies:</b> <br><br>
+                Buy your next watch with cryptocurrency including Bitcoin and Ethereum. <br><br>
+                Use our partner platforms Utrust & Bitpay which give you a wide variety of coins to choose from. <br><br>
+                If you wish to pay with Cryptocurrencies: <br><br>
+                1) Sign up to Utrust or Bitpay <br>
+                2) Contact mk@ineichenzurich.com and an invoice will be sent to your email with a qrcode or link to Utrust or Bitpay directly
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_grey c-button_full">Thank you</a>
+        </div>
+    </div>
+
+    <div id="serviceModal-1" class="modal modal-small modal-small_2x">
+        <div class="modal-small__title">Additional 1-Year Ineichen Warranty</div>
+        <div class="modal-small__body">
+            <div class="service-modal">
+                <p>
+                    The watch received pre-sale servicing from Ineichen specialists. <br>
+                    <b>1-year warranty on movement and accuracy guaranteed</b> <br><br>
+                    Exclusions: no warranty on the water resistance, case, strap and glass
+                </p>
+                <h3>Provided services: </h3>
+                <ul class="service-modal__check-list">
+                    <li class="mdi mdi-check-outline">Case cleaning</li>
+                    <li class="mdi mdi-check-outline">Case & Bracelet polishing</li>
+                    <li class="mdi mdi-check-outline">Battery replacement</li>
+                    <li class="mdi mdi-check-outline">Movement fine adjustment for optimal accuracy</li>
+                </ul>
+                <div class="compare-photo">
+                    <div class="compare-photo__title">
+                        <span>Before</span>
+                        <span>After</span>
+                    </div>
+                    <div class="compare-photo__slider">
+                        <div class="compare-photo__slide">
+                            <img src="img/product/private/compare.jpg" alt="">
+                            <img src="img/product/private/compare.jpg" alt="">
+                        </div>
+                        <div class="compare-photo__slide">
+                            <img src="img/product/private/compare.jpg" alt="">
+                            <img src="img/product/private/compare.jpg" alt="">
+                        </div>
+                        <div class="compare-photo__slide">
+                            <img src="img/product/private/compare.jpg" alt="">
+                            <img src="img/product/private/compare.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="compare-photo__pagination">
+                        <div data-slide="1" class="compare-photo__pagination-item compare-photo__pagination-item_active">
+                            1 <span>- Case</span>
+                        </div>
+                        <div data-slide="2" class="compare-photo__pagination-item">
+                            2 <span>- Belt</span>
+                        </div>
+                        <div data-slide="3" class="compare-photo__pagination-item">
+                            3 <span>- Back</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_grey c-button_full">Thank you</a>
+        </div>
+        <div class="private-modal-icon private-modal-icon_awards">
+            <img src="img/product/private/modal-award.svg" alt="">
+        </div>
+    </div>
+
+    <div id="serviceModal-2" class="modal modal-small modal-small_2x">
+        <div class="modal-small__title">Full Service Option</div>
+        <div class="modal-small__body">
+            <div class="service-modal">
+                <p>
+                    Ineichen offers a “Full Service” option. <b>You can request</b> after-sales service for the watch from Ineichen experts and receive an additional <b>one-year warranty</b> for the service.
+                </p>
+                <h3>Post-Sale Service</h3>
+                <ul class="service-modal__check-list">
+                    <li class="mdi mdi-check-outline">Post-sale servicing by Ineichen specialists</li>
+                    <li class="mdi mdi-check-outline">Gaskets replaced</li>
+                    <li class="mdi mdi-check-outline">Complete movement disassembly, cleaning, and oil replacement</li>
+                    <li class="mdi mdi-check-outline">Precise reassembly and fine adjustment of the movement</li>
+                    <li class="mdi mdi-check-outline">Cleaning and polishing of the strap and case</li>
+                    <li class="mdi mdi-check-outline">1-year warranty on movement and accuracy guaranteed</li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_grey c-button_full">Thank you</a>
+        </div>
+        <div class="private-modal-icon private-modal-icon_watch">
+            <img src="img/product/private/modal-watch.svg" alt="">
+        </div>
+    </div>
+
+    <div id="shipping" class="modal modal-small modal-small_2x">
+        <div class="modal-small__title">International Shipping</div>
+        <div class="modal-small__body">
+            <div class="service-modal">
+                <p>
+                    The Buyer is responsible for shipping and paying the cost of shipping. <br><br>
+                    We work together with Tibbett+Britten Unique AG can warmly recommend their service.
+                </p>
+                <h3>Provided services: </h3>
+                <p>After a live auction or an online auction, you can pick up your purchase at
+                    <b>Stadthausquai 11, Zürich.</b>
+                </p>
+                <ul class="service-modal__notes-list">
+                    <li>
+                        <span class="mdi mdi-alert-circle-outline"></span>
+                        Please note: Since Ineichen is a VAT-registered business, we must charge VAT on the items that we sell in Switzerland. The buyers who choose to collect their item(s) at our office in Switzerland, will be additionally charged 7.7% VAT on the hammer price of the purchased item(s).
+                    </li>
+                    <li>
+                        <span class="mdi mdi-alert-circle-outline"></span>
+                        Please note: Clients who are living abroad will need to have their passport present so we can fill in the tax refund document to have the 7.7% VAT reimbursed.
+                    </li>
+                </ul>
+                <h3>International shipping</h3>
+                <p>If the buyer is unable to pick up the purchased item(s), Ineichen offers to arrange delivery by a shipping company at the buyer's risk and expense.</p>
+                <ul class="service-modal__notes-list">
+                    <li>
+                        <span class="mdi mdi-alert-circle-outline"></span>
+                        Please note: The buyer is responsible for paying the shipping cost and contacting the shipping company.
+                    </li>
+                </ul>
+                <p>For transportation to other parts of the world, please contact the shipping company we’re working with and get a shipping quote:</p>
+                <div class="service-modal__shipp">
+                    <img src="img/product/private/shipp.png" alt="">
+                    <p>
+                        Freight West <br>
+                        P.O. Box <br>
+                        8058 Zurich-Airport <br>
+                        Phone: +41 44 804 20 00 <br>
+                        Fax: +41 44 804 20 09 <br>
+                        E-mail: info@tbunique.ch
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_grey c-button_full">Thank you</a>
+        </div>
+        <div class="private-modal-icon private-modal-icon_truck">
+            <img src="img/product/private/modal-truck.svg" alt="">
+        </div>
+    </div>
+
+    <div id="guarantee" class="modal modal-small modal-small_2x">
+        <div class="modal-small__title">Authenticity Guarantee</div>
+        <div class="modal-small__body">
+            <div class="service-modal service-modal_width">
+                <p>All lots are offered for sale in the condition which they are in at the time of sale.</p>
+                <p>All our watches are fully inspected and fully authenticated by our in-house watchmakers, and we ensure they meet our high condition standards.</p>
+                <p>We provide a lifetime authenticity guarantee to the buyer, that the lot is not a “counterfeit”. For these purposes, a “counterfeit” means a lot that in Ineichen’s reasonable opinion is an imitation created to deceive as to authorship, origin, date, age, period, culture or source, where the correct description of such matters is not reflected by the description in the catalogue.</p>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_grey c-button_full">Thank you</a>
+        </div>
+        <div class="private-modal-icon private-modal-icon_watch">
+            <img src="img/product/private/modal-shield.svg" alt="">
+        </div>
+    </div>
+
+    <div id="tax" class="modal modal-small modal-small_2x">
+        <div class="modal-small__title">VAT Details</div>
+        <div class="modal-small__body">
+            <div class="service-modal service-modal_width">
+                <p>All import duties, VAT and taxes are NOT included in the price that’s displayed in our website. Swiss VAT at the standard rate of 7.7% will be added to the total invoice amount for customers in Switzerland.</p>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <a href="" class="c-button c-button_grey c-button_full">Thank you</a>
+        </div>
+        <div class="private-modal-icon private-modal-icon_watch">
+            <img src="img/product/private/modal-tax.svg" alt="">
+        </div>
+    </div>
+
+    <div id="fitting" class="modal modal-small modal-small_fs">
+        <video id="videoStream" autoplay muted defaultmuted loop playsinline></video>
+        <div class="modal-small__scroll">
+            <div class="modal-small__title">
+                Audemars Piguet
+                <span class="modal-small__subtitle">Royal Oak Grande Complication   </span>
+            </div>
+            <div class="modal-small__body">
+                <div class="fitting-modal">
+                    <img class="fitting-modal__hand" src="img/product/private/hand.svg" alt="">
+                    <img class="fitting-modal__watch" src="img/product/private/watch-on-hand.png" alt="">
+                </div>
+            </div>
+            <div class="modal-small__footer">
+                <div class="fitting-mobile">
+                    <div class="fitting-mobile__title">
+                        <span class="mdi mdi-cube-outline"></span>
+                        AR view on mobile
+                    </div>
+                    <div class="fitting-mobile__info">
+                        <img class="fitting-mobile__qr" src="img/product/private/qr.png" alt="">
+                        You can try the watch on your hand using a mobile phone. Just scan the QR code from the screen
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tradeIn" class="modal modal-small modal-small_fs">
+        <div class="modal-small__scroll">
+            <div class="modal-small__title">
+                Trade-in
+            </div>
+            <div class="modal-small__body">
+                <div class="trade-modal trade-modal_3cols">
+                    <div class="trade-modal-watch">
+                        <div class="trade-modal-watch__title">
+                            Audemars Piguet
+                            <span>Royal Oak Grande Complication</span>
+                        </div>
+                        <div class="trade-modal-watch__image">
+                            <img src="img/product/private/trade.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="trade-modal-watch">
+                        <div class="trade-modal-watch__title">
+                            Offer your watch
+                            <span>Upload photos</span>
+                        </div>
+                        <div class="trade-modal-watch__clip">
+                            <input type="file" name="" id="clipFile">
+                            <label class="trade-modal-watch__clip-label" for="clipFile">
+                                <div class="upload-files upload-files_new trade-modal-watch__files">
+                                    <div class="upload-files__item loading">
+                                        <div class="upload-files__image">
+                                            <img src="img/icons/scan-img-clean.svg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="upload-files__item">
+                                        <div class="upload-files__image">
+                                            <img src="img/product/private/trade.jpg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="upload-files__item">
+                                        <div class="upload-files__image">
+                                            <img src="img/icons/scan-img-clean.svg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="upload-files__item">
+                                        <div class="upload-files__image">
+                                            <img src="img/icons/scan-img-clean.svg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="upload-files__item">
+                                        <div class="upload-files__image">
+                                            <img src="img/icons/scan-img-clean.svg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="upload-files__item">
+                                        <div class="upload-files__image">
+                                            <img src="img/icons/scan-img-clean.svg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="upload-files__item">
+                                        <div class="upload-files__image">
+                                            <img src="img/icons/scan-img-clean.svg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="upload-files__item">
+                                        <div class="upload-files__image">
+                                            <img src="img/icons/scan-img-clean.svg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                    <div class="upload-files__item">
+                                        <div class="upload-files__image">
+                                            <img src="img/icons/scan-img-clean.svg" alt="">
+                                        </div>
+                                        <div class="upload-files__remove">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="display: none" class="trade-modal-watch__clip-info">
+                                    <img src="img/product/private/arrow-down-circle.svg" alt="">
+                                    <span>
+                                        Drop your images here, or click to browse
+                                        up to 5MB each (png, jpg, jpeg)
+                                    </span>
+                                </div>
+                                <a class="c-button c-button_grey c-button_small c-button_icon-left c-button_full">
+                                    <i class="mdi mdi-magnify"></i>
+                                    Browse...
+                                </a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="trade-modal__form">
+                        <div class="c-field">
+                            <input type="text" class="c-field__input">
+                            <label class="c-field__label">Name</label>
+                        </div>
+                        <div class="c-field">
+                            <input type="tel" class="c-field__input">
+                            <label class="c-field__label">E-mail</label>
+                        </div>
+                        <div class="c-field">
+                            <input type="tel" class="c-field__input">
+                            <label class="c-field__label">Contact phone</label>
+                        </div>
+                        <div class="trade-modal__form-btns">
+                            <a href="" class="c-button c-button_blue c-button_filled c-button_full">Continue</a>
+                            <div class="trade-modal__messengers">
+                                <strong>
+                                    Or user quick estimation:
+                                </strong>
+                                <a href="" class="c-button c-button_whatsapp c-button_small">WhatsApp</a>
+                                <a href="" class="c-button c-button_telegram c-button_small">Telegram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="makeOffer" class="modal modal-small modal-small_fs">
+        <div class="modal-small__scroll">
+            <div class="modal-small__title">
+                Make an offer
+            </div>
+            <div class="modal-small__body">
+                <div class="trade-modal">
+                    <div class="trade-modal-watch">
+                        <div class="trade-modal-watch__title">
+                            Audemars Piguet
+                            <span>Royal Oak Grande Complication</span>
+                        </div>
+                        <div class="trade-modal-watch__image">
+                            <img src="img/product/private/trade.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="trade-modal__form">
+                        <div class="trade-modal__offer-price">CHF 250 000</div>
+                        <div class="c-field">
+                            <input type="text" class="c-field__input">
+                            <label class="c-field__label">Your offer, CHF</label>
+                        </div>
+                        <div class="c-alert c-alert_green">
+                            <span class="mdi mdi-thumb-up-outline"></span> Strong offer
+                        </div>
+                        <div class="c-alert c-alert_salad">
+                            <span class="mdi mdi-thumb-up-outline"></span> Possible
+                        </div>
+                        <div class="c-alert c-alert_orange">
+                            <span class="mdi mdi-thumb-down-outline"></span> Unlikely
+                        </div>
+                        <div class="c-alert c-alert_red">
+                            <span class="mdi mdi-thumb-down-outline"></span> Rejected
+                        </div>
+                        <div class="c-field">
+                            <input type="text" class="c-field__input">
+                            <label class="c-field__label">Name</label>
+                        </div>
+                        <div class="c-field">
+                            <input type="tel" class="c-field__input">
+                            <label class="c-field__label">Contact phone</label>
+                        </div>
+                        <div class="trade-modal__form-btns">
+                            <a href="" class="c-button c-button_blue c-button_filled c-button_full">Continue</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sellMyItem" class="modal modal-small modal-small_fs">
+        <div class="modal-small__scroll">
+            <div class="modal-small__title">
+                Sell my item
+            </div>
+            <div class="modal-small__body">
+                <div class="trade-modal">
+                    <div class="trade-modal-watch">
+                        <div class="trade-modal-watch__title">
+                            Offer your watch
+                            <span>Upload photos</span>
+                        </div>
+                        <div class="trade-modal-watch__clip">
+                            <input type="file" name="" id="clipFile">
+                            <label class="trade-modal-watch__clip-label trade-modal-watch__clip-label_hover" for="clipFile">
+                                <div class="trade-modal-watch__clip-info">
+                                    <img src="img/product/private/arrow-down-circle.svg" alt="">
+                                    <span>
+                                        Drop your images here, or click to browse
+                                        up to 5MB each (png, jpg, jpeg)
+                                    </span>
+                                </div>
+                                <a class="c-button c-button_grey c-button_small c-button_icon-left c-button_full">
+                                    <i class="mdi mdi-magnify"></i>
+                                    Browse...
+                                </a>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="trade-modal__form">
+                        <div class="c-field">
+                            <input type="text" class="c-field__input">
+                            <label class="c-field__label">Name</label>
+                        </div>
+                        <div class="c-field">
+                            <input type="tel" class="c-field__input">
+                            <label class="c-field__label">Contact phone</label>
+                        </div>
+                        <div class="trade-modal__form-btns">
+                            <a href="" class="c-button c-button_blue c-button_filled c-button_full">Continue</a>
+                            <div class="trade-modal__messengers">
+                                <strong>
+                                    Or user quick estimation:
+                                </strong>
+                                <a href="" class="c-button c-button_whatsapp c-button_small">WhatsApp</a>
+                                <a href="" class="c-button c-button_telegram c-button_small">Telegram</a>
+                            </div>
+                        </div>
+                        <div class="trade-modal__note">
+                            <span class="mdi mdi-information-outline"></span>
+                            You can offer a similar model and we will put it up for sale in this section, at an estimated cost or at the one you want
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="thank" class="modal modal-small modal-small_fs">
+        <div class="modal-small__scroll">
+            <div class="modal-small__title">
+                Thank you
+            </div>
+            <div class="modal-small__body">
+                <div class="thank-modal">
+                    <p>Your message has been received by Ineichen consultant. 
+                        We will contact you shortly.</p>
+                    <a href="" class="c-button c-button_blue c-button_filled c-button_full">Continue</a>
+                    <img class="thank-modal__logo" src="svg/head-logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <script src="js/beforeafter.min.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+
+
+        // $("#fitting").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+        
+        // $("#tradeIn").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+
+        // $("#makeOffer").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+
+        // $("#sellMyItem").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+
+        // $("#thank").modal({
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+
+        
+
+        
+        
+
+        $('.compare-photo__slide').beforeAfter({
+            movable:true,
+            clickMove:true,
+            alwaysShow:true,
+            position: 50,
+            opacity: 0.4,
+            activeOpacity: 1,
+            hoverOpacity: 0.8,
+        });
+
+        $('#serviceModal-1').on($.modal.BEFORE_BLOCK, function(event, modal) {
+            $('.compare-photo__slider').slick({
+                draggable: false,
+                arrows: false,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear'
+            });
+        });
+
+        
+
+        $('.compare-photo__pagination-item').click(function(){
+            $('.compare-photo__pagination-item').removeClass('compare-photo__pagination-item_active');
+            $(this).addClass('compare-photo__pagination-item_active');
+        })
+
+        $('[data-slide]').click(function(e) {
+            let slideno = $(this).data('slide');
+            $('.compare-photo__slider').slick('slickGoTo', slideno - 1);
+        });
+
+        $('.product__add-favorite').click(function(){
+            $(this).toggleClass('product__add-favorite_active').find('.mdi').toggleClass('red-text mdi-heart-outline mdi-heart');
+        })
+
+        let collapseState = true;
+
+        $('.product__description-btn').click(function(){
+            $('.product__description-collapse').toggleClass('product__description-collapse_active');
+            if (collapseState) {
+                $('.product__description-btn').html('Close...')
+                collapseState = false;
+            } else {
+                $('.product__description-btn').html('Read more...')
+                collapseState = true;
+            }
+            return false;
+        })
+
+
+        if (window.matchMedia("(max-width: 900px)").matches) {
+            $('.product__gallery').slick({
+                arrows: false,
+            });
+        } else {
+            $(".product__info").stick_in_parent({
+                offset_top: 100
+            });
+        }
+
+        const constraints = {
+            audio: false,
+            video: {
+                width: {
+                    min: 320,
+                },
+                height: {
+                    min: 200,
+                },
+                facingMode: 'environment'
+            }
+        };
+        const video = document.querySelector("#videoStream");
+
+        // $('#fitting').on($.modal.OPEN, function(event, modal) {
+        //     navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
+        //         video.srcObject = mediaStream;
+        //         video.onloadedmetadata = () => {
+        //             video.play();
+        //         };
+        //     })
+        //     .catch((err) => {
+        //         // always check for errors at the end.
+        //         console.error(`${err.name}: ${err.message}`);
+        //     });
+        // });
+
+        navigator.mediaDevices.getUserMedia(constraints).then((mediaStream) => {
+            video.srcObject = mediaStream;
+            video.onloadedmetadata = () => {
+                video.play();
+            };
+        })
+        .catch((err) => {
+            // always check for errors at the end.
+            console.error(`${err.name}: ${err.message}`);
+        });
+
+        
+
+    </script>
+</body>
+
+</html>

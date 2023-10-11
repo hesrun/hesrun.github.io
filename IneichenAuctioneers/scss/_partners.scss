@@ -1,0 +1,32 @@
+.partners-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 80px;
+    &__item-name {
+        margin: 30px 0;
+    }
+    &__item-text {
+        margin-bottom: 15px;
+    }
+    &__item-tel {
+        display: block;
+        color: black;
+        text-decoration: none;
+    }
+    &__item-mail {
+        margin-top: 5px;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .partners-list {
+        gap: 50px;
+        &__item-name {
+            margin: 15px 0;
+        }
+        &__item-image {
+            max-width: 150px;
+        }
+    }
+}

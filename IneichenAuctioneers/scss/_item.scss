@@ -210,7 +210,6 @@
         align-items: center;
         gap: 15px;
     }
-
     &__description {
         margin: 50px 0;
         display: grid;
@@ -222,7 +221,7 @@
         overflow: hidden;
         max-height: 100%;
         &_active {
-            max-height: 145px;
+            max-height: 155px;
         }
     }
     &__description-btn {
@@ -230,7 +229,6 @@
         color: $blue-bg;
         font-weight: 500;
     }
-
     &__private-price {
         margin: 30px 0;
         display: grid;
@@ -251,7 +249,6 @@
     &__private-price-vat {
         font-size: 12px;
     }
-
     &__reserved-status {
         margin: 30px 0;
         display: flex;
@@ -265,15 +262,13 @@
             text-transform: uppercase;
             font-weight: 500;
             border-radius: 15px;
-            padding: 0 8px;
+            padding: 0 12px;
             line-height: 25px;
         }
         div {
             font-size: 12px;
         }
     }
-
-
     &__private-btns {
         margin: 30px 0;
         display: grid;
@@ -306,7 +301,6 @@
             font-size: 22px;
         }
     }
-
     &__bids-info {
         display: grid;
         grid-template-columns: 1fr;
@@ -320,7 +314,6 @@
             opacity: 0.5;
         }
     }
-
     &__bids-info-item {
         min-height: 30px;
         display: flex;
@@ -341,7 +334,6 @@
             font-family: $america;
         }
     }
-
     &__bidder {
         font-weight: 500;
         line-height: 30px;
@@ -349,16 +341,15 @@
             text-transform: capitalize;
         }
     }
-
-
     &__bids {
         margin: 45px 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 15px;
     }
-
-
+    &__bids-btns-2x {
+        grid-column: 2 span;
+    }
     &__bids-history {
         font-family: $america;
         color: $blue-text;
@@ -374,7 +365,6 @@
             color: white;
         }
     }
-
     &__other-links {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -396,7 +386,6 @@
             }
         }
     }
-
     &__prams-title {
         font-size: 28px;
         margin: 45px 0 30px;
@@ -424,6 +413,43 @@
     }
     .article-text {
         max-width: 100%;
+    }
+}
+
+.product-reserve-info {
+    border-top: 1px $grey-line solid;
+    border-bottom: 1px $grey-line solid;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 45px;
+    padding: 30px 0;
+    margin: 45px 0;
+    > div {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        max-width: 100%;
+    }
+    p {
+        margin: 15px 0;
+    }
+    &__prices {
+        margin-top: auto;
+        gap: 30px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        span {
+            font-size: 12px;
+            color: $grey-text;
+        }
+        strong {
+            display: block;
+            color: $blue-text;
+            font-family: $america;
+            font-size: 18px;
+        }
     }
 }
 
@@ -501,6 +527,7 @@
     &__price {
         text-align: right;
         span {
+            font-size: 12px;
             color: $grey-text;
         }
     }
@@ -676,6 +703,9 @@
         &__bids {
             grid-template-columns: 1fr;
         }
+        &__bids-btns-2x {
+            grid-column: 1;
+        }
         &__prams-title {
             font-size: 22px;
             margin: 45px 0 30px;
@@ -821,6 +851,24 @@
                 width: auto;
                 padding: 30px 0 15px;
             }
+        }
+    }
+    .product-reserve-info {
+        gap: 0;
+        grid-template-columns: 1fr;
+        padding: 15px 0;
+        margin: 30px 0;
+        h3 {
+            font-size: 16px;
+        }
+        img {
+            display: none;
+        }
+        &__prices {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 15px;
+            gap: 15px 15%;
         }
     }
     .private-benefits {

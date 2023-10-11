@@ -86,6 +86,14 @@
                 <div class="product__bids-info">
                     <div class="product__bids-info-item">
                         <span>
+                            Modal text 
+                            <div id="modalTextOpen" class="question-btn">
+                                <i class="mdi mdi-help-circle-outline"></i>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="product__bids-info-item">
+                        <span>
                             This lot has a reserve price
                             <div class="question-btn tooltip" title="Reserve price is the minimum price for which an item will sell. If the reserve price is not met, the item will not be sold. <br/><br/>
                             In order to protect the bidder experience, Ineichen doesn’t reveal reserve prices on the website, however in the item description Ineichen specifies if an item has a reserve or not.
@@ -116,35 +124,55 @@
                             </div>
                         </span>
                     </div>
-                    <!-- <div class="product__bids-info-item">
-                        <span>Increment</span>
-                        <strong class="blue-text"> CHF 500</strong>
-                    </div> -->
-                    <!-- <div class="product__bids-info-item">
+                    <div class="product__bids-info-item">
                         <span>Every new bid</span>
                         <strong class="blue-text">+ 60 min</strong>
-                    </div> -->
-                    <!-- <hr>
+                    </div>
+                    <hr>
                     <div class="product__bids-info-item">
                         <span>Starting bid</span>
                         <strong class="blue-text">CHF 23 000</strong>
-                    </div> -->
-                    <!-- <div class="product__bids-info-item">
+                    </div>
+                    <div class="product__bids-info-item">
                         <span>Winning bidder</span>
                         <div class="product__bidder">
                             <span class="flag-icon flag-icon-ch"></span>
                             <span class="blue-text">UserName</span>
                         </div>
-                    </div> -->
+                    </div>
+                    <div class="product__bids-info-item">
+                        <span>Every new bid</span>
+                        <strong class="blue-text">+ 60 min</strong>
+                    </div>
                     
                     
                     
                 </div>
+                <div class="product-reserve-info">
+                    <img src="img/product/private/hammer-hand.svg" alt="">
+                    <div>
+                        <h3>Reserve price not met!</h3>
+                        <p>A reserve price has been established for this lot (what is it?). Your current bid is below the reserve price, preventing you from winning the auction. To secure victory, you must raise your bid to meet the reserve price.</p>
+                        <div class="product-reserve-info__prices">
+                            <div>
+                                <span>Reserve price:</span>
+                                <strong>CHF 40 000</strong>
+                            </div>
+                            <div>
+                                <span>You current bid:</span>
+                                <strong>CHF 38 000</strong>
+                            </div>
+                            <div>
+                                <span>Need to increase by:</span>
+                                <strong>CHF 2 000</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="product__bids">
+                    <a href="" class="product__bids-btns-2x c-button c-button_blue c-button_filled c-button_full">Reach the reserve price</a>
                     <a href="" class="c-button c-button_blue c-button_filled c-button_full">Register to bid</a>
                     <a href="#" id="BuyItNowOpen" class="c-button c-button_blue c-button_full">Buy now for CHF 30 000</a>
-                </div>
-                <div class="product__bids">
                     <div class="c-dropdown product__bids-select">
                         <a href=""
                             class="c-dropdown__button c-button c-button_blue c-button_filled c-button_full">
@@ -388,6 +416,31 @@
         </div>
     </div>
 
+    <div id="freeportModal" class="modal modal-small">
+        <div class="modal-small__title">Swiss Freeports</div>
+        <div class="modal-small__body">
+            <article class="article-text">
+                <h4>Why we use Swiss Freeports</h4>
+                <p>Freeports are privately run warehouses, in which goods can be stored without triggering the payment of customs duty and VAT.</p>
+                <p>VAT and customs duty are only payable at the destination country when the goods leave the freeport.</p>
+                <p>On top of that, freeports offer a high degree of security and privacy.</p>
+                <p>Switzerland has a long tradition in customs warehouses, going back as far as 1888 when the Geneva Freeport was founded.</p>
+                <p>Freeports, or duty-free warehouses, are part of the Swiss customs territory and are supervised by the Swiss Customs Administration.</p>
+                <p>Ineichen Auctioneers stores some of the goods at the Zurich Freeport. Please note, that if you have won a lot that is stored at the Zurich Freeport, you are responsible for paying costs associated with customs clearance, Swiss VAT, and shipping costs (where applicable). Please read the information below to learn more.</p>
+                <h4>What is Zurich Freeport</h4>
+                <p>Zurich Freeport is a secure area where goods can be imported and stored without paying customs duties. Customs duty becomes payable only when the goods, enter the domestic market of Switzerland – and none are payable if they are re-exported outside the Swiss customs territory.  </p>
+                <p>If your item is located at the Zurich Freeport, you can choose from three options:</p>
+                <ul>
+                    <li>Worldwide shipping from the Zurich Freeport. Please be aware that you will be charged shipping costs on top of the payment of items. </li>
+                    <li>Pick up from Zurich Freeport. Please be aware that you will be additionally charged customs clearance fees and Swiss VAT (7.7%) </li>
+                    <li>Pick up from our office in Zurich. Please be aware that you will be additionally charged shipping cost, Swiss VAT (7.7%) and customs clearance fees</li>
+                </ul>
+                <h4>Shipping from a remote warehouse</h4>
+                <p>In case the item is located in a remote warehouse outside Switzerland, we will ship it to the Zurich Freeport. The shipping will take some time, depending on the location of the remote warehouse.</p>
+                <p>Once the item has been delivered to the Zurich Freeport, it will be shipped to the buyer. Please see the “Zurich Freeport” section above to learn more.</p>
+            </article>
+        </div>
+    </div>
     <div id="paymentMethods" class="modal modal-small">
         <div class="modal-small__title">Payment methods</div>
         <div class="modal-small__body">
@@ -411,7 +464,6 @@
             </div>
         </div>
     </div>
-
     <div id="BuyItNow" class="modal modal-small">
         <div class="modal-small__title">Bui It Now</div>
         <div class="modal-small__body">
@@ -425,7 +477,6 @@
             <a href="" class="c-button c-button_green c-button_filled c-button_full c-button_medium">Buy this Lot</a>
         </div>
     </div>
-
     <div id="BidsTable" class="modal modal-small">
         <div class="modal-small__title">Bid increments table</div>
         <div class="modal-small__body">
@@ -497,7 +548,6 @@
             <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
         </div>
     </div>
-
     <div id="BidsHistoryTable" class="modal modal-small modal-small_2x">
         <div class="modal-small__title">Bidders for lot №3</div>
         <div class="modal-small__body">
@@ -551,7 +601,6 @@
             <a href="" class="c-button c-button_blue c-button_outline c-button_full c-button_medium">Close</a>
         </div>
     </div>
-
     <div id="Rules" class="modal modal-small modal-small_2x">
         <div class="modal-small__title">How to Bid</div>
         <div class="modal-small__body">
@@ -648,6 +697,54 @@
             <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Close</a>
         </div>
     </div>
+    <div id="BidConfirmMAX" class="modal modal-small">
+        <div class="modal-small__title">Confirm your maximum bid</div>
+        <div class="modal-small__body">
+            <div class="bid-confirm-modal">
+                <div class="bid-confirm-modal__price">
+                    <strong>CHF  1'500.- </strong>
+                    <span>No buyer's premium will be charged</span>
+                </div>
+                <p>
+                    By confirming this bid, you also acknowledge that you have read <br> and accepted the <a href="">Conditions of the sale</a>.
+                </p> 
+                <p>
+                    During the online bidding, we will place incremental bids on <br> your behalf, starting at the lowest increment, without <br> exceeding your maximum bid.
+                </p>
+                <div class="bid-confirm-modal__alert">
+                    To secure your bid, a $100 deposit will be charged from your card. This deposit will be refunded if you do not win the auction or credited as payment if you are the winning bidder.
+                </div>
+                <div class="bid-confirm-modal__payment credit-cards">
+                    <div class="credit-cards__list">
+                        <div class="credit-cards__list-item">
+                            <div class="credit-cards__type">
+                                <i class="mdi mdi-credit-card"></i>
+                            </div>
+                            <div class="credit-cards__num">
+                                <div class="credit-cards__stars">****</div>
+                                <div class="credit-cards__stars">****</div>
+                                <div class="credit-cards__stars">****</div>
+                                <div>1234</div>
+                            </div>
+                            <div class="credit-cards__date">
+                                12 / 24
+                            </div>
+                            <i class="credit-cards__arrow mdi mdi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bid-confirm-modal__image">
+                    <img src="img/product/private/modal-hammer.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="modal-small__footer">
+            <div class="modal-small__btns">
+                <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Confirm bid</a>
+                <a href="" class="c-button c-button_clear c-button_medium">Cancel bid</a>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
@@ -674,6 +771,20 @@
             $(this).fadeOut();
         })
 
+        
+        $('#modalTextOpen').click(function () {
+            $('#freeportModal').modal({
+                fadeDuration: 100,
+                closeExisting: false,
+                escapeClose: false,
+                closeClass: 'mdi mdi-close',
+                closeText: ''
+            });
+            return false;
+        })
+        
+        
+
         $('#paymentMethodsOpen').click(function () {
             $('#paymentMethods').modal({
                 fadeDuration: 100,
@@ -684,7 +795,7 @@
             });
             return false;
         })
-
+    
         $('#BuyItNowOpen').click(function () {
             $('#BuyItNow').modal({
                 fadeDuration: 100,
@@ -695,8 +806,7 @@
             });
             return false;
         })
-
-
+        
         $('#BidsHistoryOpen').click(function () {
             $('#BidsHistoryTable').modal({
                 fadeDuration: 100,
@@ -718,6 +828,7 @@
             });
             return false;
         })
+        
         $('#RulesOpen').click(function () {
             $('#Rules').modal({
                 fadeDuration: 100,
@@ -728,6 +839,15 @@
             });
             return false;
         })
+
+        
+        $('#BidConfirmMAX').modal({
+            fadeDuration: 100,
+            closeExisting: false,
+            escapeClose: false,
+            closeClass: 'mdi mdi-close',
+            closeText: ''
+        });
 
 
         if (window.matchMedia("(max-width: 900px)").matches) {

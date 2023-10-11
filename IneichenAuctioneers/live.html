@@ -440,21 +440,45 @@
     <div id="BidConfirmMAX" class="modal modal-small">
         <div class="modal-small__title">Confirm your maximum bid</div>
         <div class="modal-small__body">
-            <div class="first-bid-confirm">
-                <strong>CHF  1'500.- </strong>
-                <span>excl. 24% Premium</span>
+            <div class="bid-confirm-modal">
+                <div class="bid-confirm-modal__price">
+                    <strong>CHF  1'500.- </strong>
+                    <span>No buyer's premium will be charged</span>
+                </div>
+                <p>
+                    By confirming this bid, you also acknowledge that you have read <br> and accepted the <a href="">Conditions of the sale</a>.
+                </p> 
+                <p>
+                    During the online bidding, we will place incremental bids on <br> your behalf, starting at the lowest increment, without <br> exceeding your maximum bid.
+                </p>
+                <div class="bid-confirm-modal__alert">
+                    To secure your bid, a $100 deposit will be charged from your card. This deposit will be refunded if you do not win the auction or credited as payment if you are the winning bidder.
+                </div>
+                <div class="bid-confirm-modal__payment credit-cards">
+                    <div class="credit-cards__list">
+                        <div class="credit-cards__list-item">
+                            <div class="credit-cards__type">
+                                <i class="mdi mdi-credit-card"></i>
+                            </div>
+                            <div class="credit-cards__num">
+                                <div class="credit-cards__stars">****</div>
+                                <div class="credit-cards__stars">****</div>
+                                <div class="credit-cards__stars">****</div>
+                                <div>1234</div>
+                            </div>
+                            <div class="credit-cards__date">
+                                12 / 24
+                            </div>
+                            <i class="credit-cards__arrow mdi mdi-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>
-                During the online bidding we will execute incremental bids on your behalf beginning at the lowest increment, without going higher than your maximum bid. 
-            </p> 
-            <p>
-                If you get outbid by another client you’ll be notified via email or push notifications so you could increase your bid mannually.
-            </p>
         </div>
         <div class="modal-small__footer">
             <div class="modal-small__btns">
-                <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Confirm</a>
-                <a href="" class="c-button c-button_blue c-button_full c-button_medium">Cancel</a>
+                <a href="" class="c-button c-button_blue c-button_filled c-button_full c-button_medium">Confirm bid</a>
+                <a href="" class="c-button c-button_clear c-button_medium">Cancel bid</a>
             </div>
         </div>
     </div>
@@ -482,9 +506,11 @@
     <div id="BidConfirmPremium" class="modal modal-small">
         <div class="modal-small__title">Confirm your current bid</div>
         <div class="modal-small__body">
-            <div class="first-bid-confirm">
-                <strong>CHF  1'500.- </strong>
-                <span>excl. 24% Premium</span>
+            <div class="bid-confirm-modal">
+                <div class="bid-confirm-modal__price">
+                    <strong>CHF  1'500.- </strong>
+                    <span>No buyer's premium will be charged</span>
+                </div>
             </div>
             <label class="c-chekbox" for="BidConfirmAuction">
                 <input type="checkbox" name="BidConfirm" id="BidConfirmAuction">
@@ -513,20 +539,21 @@
             closeClass: 'mdi mdi-close',
             closeText: ''
         });
-        $('#BidConfirm').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
-        $('#BidConfirmPremium').modal({
-            fadeDuration: 100,
-            closeExisting: false,
-            escapeClose: false,
-            closeClass: 'mdi mdi-close',
-            closeText: ''
-        });
+        // $('#BidConfirm').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+        // $('#BidConfirmPremium').modal({
+        //     fadeDuration: 100,
+        //     closeExisting: false,
+        //     escapeClose: false,
+        //     closeClass: 'mdi mdi-close',
+        //     closeText: ''
+        // });
+
         if (window.matchMedia("(max-width: 768px)").matches) {
             
         } else {

@@ -82,42 +82,7 @@
             }
         }
     }
-    /* ---------------------------------- index --------------------------------- */
-
-    .services-list {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px 30px;
-        &__item:nth-child(1){
-            grid-column: 1 / span 2;
-        }
-    }
-    .auctions-list {
-        gap: 50px 30px;
-    }
-    .press-logo-grid {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        &__item {
-            border-right: 1px $grey-line solid;
-            border-bottom: 1px $grey-line solid;
-            &:nth-child(n + 7) {
-                border-bottom: 1px $grey-line solid;
-            }
-            &:nth-child(6n) {
-                border-right: 1px $grey-line solid;
-            }
-            &:nth-child(n + 11) {
-                border-bottom: none;
-            }
-            &:nth-child(2n) {
-                border-right: none;
-            }
-        }
-    }
-    .our-team {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
+    
     /* --------------------------------- auction -------------------------------- */
     .lots-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -459,37 +424,7 @@
             max-width: 400px;
         }
     }
-    /* ---------------------------------- index --------------------------------- */
-    .video-hero {
-        height: auto;
-    }
-    .services-list {
-        grid-template-columns: 1fr;
-        gap: 30px 0px;
-        &__item {
-            height: 200px;
-        }
-        &__item:nth-child(1){
-            grid-column: 1 / span 1;
-        }
-        &__image {
-            width: 60%;
-            padding: 30px 0;
-        }
-    }
-    .auctions-teasers-grid {
-        grid-template-columns: 1fr;
-    }
-    .auction-teaser {
-        min-height: 40vw;
-        &_single {
-            grid-column: 1;
-        }
-    }
-    .ineichen-statistic {
-        grid-template-columns: 1fr;
-        gap: 30px 15px;
-    }
+    
     /* ---------------------------------- blog ---------------------------------- */
     .blog-grid {
         grid-template-columns: 1fr 1fr;
@@ -1479,65 +1414,7 @@
         
     }
 
-    /* ---------------------------------- index --------------------------------- */
-    .auctions-teasers-grid {
-        gap: 15px;
-    }
-    .auction-teaser {
-        padding: 15px;
-        min-height: 50vw;
-        &_single {
-            grid-column: 1;
-        }
-        &__name {
-            font-size: 18px;
-            max-width: 60%;
-        }
-        &__date {
-            font-size: 12px;
-        }
-        &__tags {
-            span {
-                font-size: 12px;
-                padding: 5px 10px;
-            }
-        }
-    }
-    .world-records {
-        .owl-carousel .owl-nav button.owl-prev {
-            left: -15px;
-        }
-        .owl-carousel .owl-nav button.owl-next {
-            right: -15px;
-        }
-        &__item {
-            padding: 10px 15px 0;
-        }
-    }
-    .ineichen-statistic {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        &__btns {
-            grid-template-columns: auto auto;
-            gap: 15px;
-        }
-        &__counts {
-            grid-template-columns: 1fr;
-            align-items: center;
-            padding: 10px 0;
-            div {
-                display: grid;
-                grid-template-columns: 4fr 5fr;
-                padding: 5px 15px; 
-                text-align: right;
-                text-align: left;
-                gap: 15px;
-                b {
-                    text-align: right;
-                }
-            }
-        }
-    }
+
     /* ------------------------------ auctions-list ----------------------------- */
     .auctions-filter {
         &__buttons {
@@ -2482,57 +2359,42 @@
         width: 100%;
         border-radius: 0px;
         height: 100%;
-        padding: 20px;
         overflow: auto;
         a.close-modal {
             top: 15px;
+            right: 10px;
         }
         &__title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-size: 18px;
-            padding-right: 30px;
+            padding: 20px 40px 20px 15px;
         }
         &__body {
-            padding: 30px 0;
+            padding: 15px;
         }
         &__footer {
+            padding: 15px;
             .c-button {
                 max-width: 100%;
+                white-space: nowrap;
             }
         }
         &_full {
             padding: 0px;
             #{$root}__title {
-                padding: 20px;
                 position: sticky;
                 top: 0px;
                 background: #fff;
             }
-            #{$root}__body {
-                padding: 20px;
-            }
             #{$root}__footer {
-                padding: 20px;
                 position: sticky;
                 bottom: 0px;
                 background: #fff;
             }
             a.close-modal {
                 position: fixed;
-            }
-        }
-        &__scroll {
-            #{$root}__title {
-                padding-bottom: 20px;
-            }
-            #{$root}__footer {
-                padding-top: 20px;
-            }
-            #{$root}__btns {
-                padding-top: 20px;
-            }
-            #{$root}__body {
-                margin-right: -20px;
-                padding-right: 20px;
             }
         }
     }

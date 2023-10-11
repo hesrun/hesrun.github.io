@@ -145,7 +145,7 @@
     gap: 50px;
     &__form {
         width: 500px;
-        margin-top: 105px;
+        align-self: end;
     }
     &__offer-price {
         margin-top: -80px;
@@ -160,7 +160,7 @@
         gap: 30px;
     }
     &__messengers {
-        margin-top: 40px;
+        margin-top: 15px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 15px;
@@ -182,7 +182,7 @@
     }
 }
 .trade-modal-watch {
-    width: 300px;
+    width: 330px;
     flex: 0 0 auto;
     position: relative;
     &:first-child {
@@ -191,10 +191,16 @@
     & + & {
         &:after {
             position: absolute;
-            bottom: 130px;
+            bottom: 150px;
             left: -95px;
             content: url(../img/product/private/arrow-right-circle.svg);
         }
+    }
+    &__files {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-bottom: auto;
+        gap: 15px;
     }
     &__image {
         border: 1px $grey-line solid;
@@ -224,11 +230,17 @@
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        height: 350px;
-        border: 1px $grey-line solid;
+        height: 383px;
+        border: 2px $grey-line solid;
         border-radius: 15px;
         padding: 15px;
         text-align: center;
+        &_hover {
+            border-color: $brown-bg;
+            border-style: dashed;
+            background: rgba($brown-bg, 0.1);
+        }
+
     }
     &__clip-info {
         margin: auto 0;
@@ -265,6 +277,36 @@
         padding: 0 50px 0 0;
     }
 }
+
+/* ----------------------------- product modals ----------------------------- */
+.bid-confirm-modal {
+    &__image {
+        position: absolute;
+        right: 0px;
+        bottom: 40px;
+    }
+    &__price {
+        margin-bottom: 30px;
+        strong {
+            font-family: $america;
+            color: $blue-text;
+            font-size: 35px;
+            font-weight: 500;
+            display: block;
+        }
+    }
+    &__alert {
+        margin: 30px 0;
+        color: $red-text;
+        border: 2px $red-text dashed;
+        max-width: 460px;
+        padding: 5px 10px;
+    }
+    &__payment {
+        max-width: 460px;
+    }
+}
+
 
 #videoStream {
     background: #ccc;
@@ -306,7 +348,6 @@
         }
     }
 }
-
 @media screen and (max-width: 1000px) {
     .private-modal-icon {
         display: none;
@@ -354,8 +395,13 @@
             margin-bottom: 30px;
         }
     }
+    /* ----------------------------- product modals ----------------------------- */
+    .bid-confirm-modal {
+        &__image {
+            display: none;
+        }
+    }
 }
-
 @media screen and (max-width: 520px) {
     /* ------------------------- private products modals ------------------------ */
     .service-modal {

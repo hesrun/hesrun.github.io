@@ -10,7 +10,11 @@
     }
     small {
         display: block;
-        margin: 40px 0 25px;
+        font-size: 15px;
+        margin: 26px 0 25px;
+    }
+    h3 {
+        margin-top: 11px;
     }
 }
 .catalog-products-header {
@@ -83,7 +87,7 @@
 .private-catalog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 48px 24px;
+    gap: 48px 5px;
 }
 .show-more-items {
     margin-top: 30px;
@@ -92,14 +96,24 @@
     gap: 48px 24px;
 }
 .private-product-item {
+    $root: &;
+    position: relative;
+    &:hover {
+        #{$root}__favorite {
+            opacity: 1;
+        }
+    }
     &__image {
         display: block;
         overflow: hidden;
         border-radius: 15px;
         margin-bottom: 15px;
         position: relative;
+        aspect-ratio: 4/6;
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             vertical-align: middle;
             transition: all 0.3s;
             & + img {
@@ -116,6 +130,38 @@
                 opacity: 1;
                 transform: scale(1)
             }
+        }
+        &_load:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            background: #ccc;
+            opacity: 1;
+            z-index: 1;
+            transition: opacity 1s;
+            pointer-events: none
+        }
+        &_load:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -30px 0 0 -30px;
+            width: 60px;
+            height: 60px;
+            border: 3px #fff solid;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            border-radius: 50%;
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 1s;
+            animation: 1s Spin infinite linear;
+            pointer-events: none
         }
     }
     &__info {
@@ -136,17 +182,8 @@
     }
     &__favorite {
         position: absolute;
-        cursor: pointer;
-        right: 0px;
-        top: 0px;
-        appearance: none;
-        border: none;
-        font-size: 24px;
-        color: rgba(black,0.6);
-        background: none;
-        &_active {
-            animation: 0.5s like both;
-        }
+        bottom: auto;
+        top: 75%;
     }
 }
 .private-filters {
@@ -212,19 +249,6 @@
     }
 }
 
-
-@keyframes like {
-    0% {
-        transform: scale(1);
-    }
-    30% {
-        transform: scale(1.3);
-    }
-    60% {
-        transform: scale(1);
-    }
-}
-
 @media screen and (max-width: 1024px) {
     .private-catalog {
         grid-template-columns: repeat(3, 1fr);
@@ -277,7 +301,7 @@
     .private-sales-head {
         &__btns {
             grid-template-columns: 1fr 1fr;
-            .c-button:last-child {
+            .c-button_grey:last-child {
                 grid-column: 2 span;
             }
         }
